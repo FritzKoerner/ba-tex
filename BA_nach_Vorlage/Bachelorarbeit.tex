@@ -1,0 +1,259 @@
+% ======================================================================
+% Meta-Informationen
+% ----------------------------------------------------------------------
+% Zentrale Dokumentinformationen (z. B. Titel, Autor:in, Matrikelnummer)
+% werden in der Datei _Meta.tex definiert und anschließend global
+% im gesamten Dokument verfügbar gemacht.
+% ======================================================================
+\input{_Meta}
+
+
+% ======================================================================
+% Dokumentklasse und grundlegende Layout-Einstellungen
+% ----------------------------------------------------------------------
+% Diese Vorlage basiert auf der KOMA-Script-Klasse "scrreprt".
+% Die Option "draft" sollte ausschließlich während der Bearbeitung
+% verwendet und für die finale Abgabe deaktiviert werden.
+% ======================================================================
+\documentclass[
+	12pt,                  % Grundschriftgröße
+	DIV=10,                % Satzspiegel (KOMA-Script-Berechnung)
+	ngerman,               % Deutsche Sprache (Umlaute, Silbentrennung)
+	a4paper,               % Papierformat
+	oneside,               % Einseitiges Dokument
+	titlepage,             % Separate Titelseite
+	parskip=half,          % Halber Zeilenabstand zwischen Absätzen
+	headings=normal,       % Reduzierte Überschriftengröße
+	numbers=withendperiod, % Punkt nach Kapitel-/Abschnittsnummern
+	listof=totoc,          % Verzeichnisse im Inhaltsverzeichnis
+	bibliography=totoc,    % Literaturverzeichnis im Inhaltsverzeichnis
+	index=totoc,           % Index im Inhaltsverzeichnis
+	captions=tableheading, % Tabellenbeschriftung oberhalb
+	final                  % Dokumentstatus (final/draft)
+]{scrreprt}
+
+
+% ======================================================================
+% Benötigte Packages
+% ----------------------------------------------------------------------
+% Alle zusätzlichen Pakete werden in die Datei Packages.tex ausgelagert,
+% um die Hauptdatei übersichtlich und wartbar zu halten.
+% ======================================================================
+\input{Packages}
+
+
+% Keine erzwungene vertikale Ausdehnung der Seiten
+\raggedbottom
+
+
+% Kein Absatzeinzug (auch nicht nach mathematischen Umgebungen)
+\AtBeginDocument{%
+  \setlength{\parindent}{0pt}
+}
+
+
+% ======================================================================
+% Definition für Anhangsabschnitte
+% ----------------------------------------------------------------------
+% Erstellt einen neuen Anhangsabschnitt (A, B, C, ...), setzt die
+% Medienzähler zurück und sorgt für korrekte Einträge im Anhangsverzeichnis.
+% ======================================================================
+\makeatletter
+\newcommand{\appsection}[1]{%
+  \clearpage
+  \refstepcounter{section}%
+  \setcounter{figure}{0}%
+  \chapter*{\thesection\quad #1}%
+  \addcontentsline{loah}{anhang}{\protect\numberline{\thesection}#1}%
+}
+\makeatother
+
+
+% ======================================================================
+% Index- und Abkürzungsverzeichnis aktivieren
+% ----------------------------------------------------------------------
+% Beispiel für die Index-Erstellung:
+% makeindex Masterarbeit.nlo -s nomencl.ist -o Masterarbeit.nls
+% ======================================================================
+\makeindex
+\makenomenclature
+
+
+% ======================================================================
+% Kopf- und Fußzeilen, Seitenränder etc.
+% ----------------------------------------------------------------------
+% Definition des Seitenstils in einer separaten Datei.
+% ======================================================================
+\input{Seitenstil}
+
+
+% Eigene Silbentrennungsregeln
+\include{Silbentrennung}
+
+
+% ======================================================================
+% Dokumentbeginn
+% ----------------------------------------------------------------------
+% Der eigentliche Inhalt beginnt hier. Kapitel und Seiten werden in
+% separate Dateien ausgelagert und an dieser Stelle eingebunden.
+% ======================================================================
+\begin{document}
+
+
+% Nummerierung bis einschließlich subsubsection aktivieren
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+% ======================================================================
+% Deckblatt (ohne Kopf- und Fußzeilen)
+% ======================================================================
+\begingroup
+  \pagestyle{empty}
+  \include{Deckblatt}
+\endgroup
+
+
+% ======================================================================
+% Abstract / Zusammenfassung
+% ----------------------------------------------------------------------
+% Ohne Kopfzeile, Fußzeile mit Seitenzahl bleibt erhalten.
+% ======================================================================
+\begingroup
+  \pagestyle{empty}
+  \include{Inhalt/Abstract}
+\endgroup
+
+
+% Ab hier gilt wieder der reguläre Seitenstil
+\pagestyle{scrheadings}
+
+
+% ======================================================================
+% Römische Seitennummerierung für Vorspann
+% ======================================================================
+\pagenumbering{Roman}
+
+
+% ======================================================================
+% Inhaltsverzeichnis
+% ======================================================================
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+\tableofcontents
+
+
+% ======================================================================
+% Abbildungs- und Tabellenverzeichnisse
+% ======================================================================
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
+
+
+% ======================================================================
+% Formelverzeichnis
+% ======================================================================
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Formelverzeichnis}
+\listofformeln
+
+
+% ======================================================================
+% Abkürzungsverzeichnis
+% ======================================================================
+\input{Inhalt/Glossar}
+\begingroup
+  \setlength{\parskip}{0pt}
+  \printnomenclature
+\endgroup
+\label{sec:Glossar}
+\cleardoublepage
+
+
+% ======================================================================
+% Arabische Seitennummerierung für den Hauptteil
+% ======================================================================
+\clearpage
+\pagenumbering{arabic}
+
+
+% ======================================================================
+% Hauptinhalt
+% ======================================================================
+\include{Inhalt/Einleitung}
+\include{Inhalt/Fachliche Grundlagen}
+\include{Inhalt/Stand der Forschung}
+\include{Inhalt/Methodik}
+\include{Inhalt/Ergebnisse}
+\include{Inhalt/Diskussion}
+\include{Inhalt/Fazit und Ausblick}
+
+
+% ======================================================================
+% Anhang
+% ======================================================================
+\pagenumbering{Roman}
+\chapter*{Anhang}
+\setcounter{page}{7}
+\addcontentsline{toc}{chapter}{Anhang}
+\markboth{Anhang}{Anhang}
+
+\listofanhang
+\markboth{Anhang}{Anhang}
+
+
+% Abbildungen, Tabellen und Algorithmen im Anhang
+% → nicht in den regulären Verzeichnissen aufführen
+\captionsetup[figure]{list=no}
+\captionsetup[table]{list=no}
+\captionsetup[algocf]{}
+
+
+% Abschnittszählung im Anhang: A, B, C, ...
+\setcounter{section}{0}
+\renewcommand*{\thesection}{\Alph{section}}
+
+
+% Gemeinsame Nummerierung für Medien im Anhang: A1, A2, ...
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{\thesection\arabic{figure}}
+
+\makeatletter
+\let\c@table\c@figure
+\let\c@algocf\c@figure
+\renewcommand{\thetable}{\thefigure}
+\renewcommand{\thealgocf}{\thefigure}
+\makeatother
+
+\include{Inhalt/Anhang}
+
+
+% ======================================================================
+% Literaturverzeichnis
+% ----------------------------------------------------------------------
+% Erstellt mit biblatex aus der zugehörigen Datenbank.
+% ======================================================================
+\printbibliography
+
+
+% ======================================================================
+% Selbstständigkeitserklärung
+% ======================================================================
+\include{Inhalt/Erklaerung}
+
+
+% ======================================================================
+% Optionaler Index
+% ======================================================================
+% \printindex
+
+\end{document}

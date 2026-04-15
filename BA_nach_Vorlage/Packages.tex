@@ -1,0 +1,270 @@
+% ======================================================================
+% Encoding, Sprache, Schriften
+% ======================================================================
+\usepackage[utf8]{inputenc} % Bei aktuellem LaTeX oft entbehrlich, aber kompatibel.
+\usepackage[T1]{fontenc}    % T1-Font-Encoding für korrekte Trennung/Umlaute.
+\usepackage[ngerman,shorthands=off]{babel} % Deutsch + Deaktivierung von babel-shorthands.
+\usepackage{csquotes}       % Kontextabhängige Anführungszeichen (empfohlen mit biblatex).
+
+% Serifenschrift (Times-ähnlich) für Fließtext und Mathematik
+\usepackage{newtxtext,newtxmath}
+
+% Sans-Serif für Überschriften/Titel (Arial-Ersatz: Arimo)
+\usepackage[sfdefault,scaled=0.95]{arimo}
+\renewcommand{\familydefault}{\rmdefault} % Fließtext bleibt serif (Times-ähnlich).
+
+% Einheitliche Abstände für Display-Matheumgebungen
+\AtBeginDocument{%
+  % Formeln als eigener Absatz (typisch mit Leerzeile davor/danach)
+  \setlength{\abovedisplayskip}{10pt plus 4pt minus 5pt}%
+  \setlength{\belowdisplayskip}{10pt plus 4pt minus 5pt}%
+  % Formeln „kurz“ nach Einleitung im Fließtext (z. B. „… wie folgt:“)
+  \setlength{\abovedisplayshortskip}{6pt plus 3pt minus 3pt}%
+  \setlength{\belowdisplayshortskip}{6pt plus 3pt minus 3pt}%
+  % Zeilenabstand innerhalb von align-Umgebungen
+  \setlength{\jot}{2pt}%
+}
+
+% ======================================================================
+% Überschriften (titlesec): Kapitel-/Abschnittsdesign
+% ======================================================================
+\usepackage{titlesec}
+
+% Kapitel: 14 pt, Sans-Serif fett
+\titleformat{\chapter}[hang]
+  {\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}
+  {\thechapter}{1em}{}
+\titleformat{name=\chapter,numberless}[hang]
+  {\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}{}{0pt}{}
+\titlespacing*{name=\chapter,numberless}{0pt}{2pt}{10pt}
+
+% Section/Subsection: 12 pt, Sans-Serif fett
+\titleformat{\section}[hang]
+  {\sffamily\bfseries\fontsize{12pt}{14pt}\selectfont}
+  {\thesection}{1em}{}
+\titleformat{\subsection}[hang]
+  {\sffamily\bfseries\fontsize{12pt}{14pt}\selectfont}
+  {\thesubsection}{1em}{}
+
+% Subsubsection: 12 pt, Sans-Serif normal
+\titleformat{\subsubsection}[hang]
+  {\sffamily\fontsize{12pt}{14pt}\selectfont}
+  {\thesubsubsection}{1em}{}
+
+% ======================================================================
+% Kopf- und Fußzeilen (KOMA-Script)
+% ======================================================================
+\usepackage[
+  automark,          % Automatische Marken (Kapitel/Abschnitt) setzen
+  headsepline,       % Linie unter der Kopfzeile
+  plainheadsepline,  % Linie auch auf plain-Seiten
+  ilines,            % Innenliegende Linienführung
+  headwidth=text     % Kopfzeile auf Textbreite
+]{scrlayer-scrpage}
+
+% ======================================================================
+% Grafiken
+% ======================================================================
+\usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{wrapfig}
+\graphicspath{{Bilder/}} % Standardsuchpfad für Grafiken
+
+% ======================================================================
+% Mathematik & Symbole
+% ======================================================================
+\usepackage{amsmath,amsfonts}
+\let\openbox\relax % resolve clash: newtxmath already defines \openbox
+\usepackage{amsthm}
+\usepackage{dsfont}
+\usepackage{nicefrac}
+
+% ======================================================================
+% Index & Nomenklatur (Abkürzungsverzeichnis)
+% ======================================================================
+\usepackage{makeidx}
+\usepackage[intoc]{nomencl} % Nomenklatur ins Inhaltsverzeichnis aufnehmen
+\let\abbrev\nomenclature
+\renewcommand{\nomname}{Abkürzungsverzeichnis}
+\setlength{\nomlabelwidth}{.25\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomitemsep}{-\parsep}
+
+% ======================================================================
+% Tabellen: Zeilenabstände
+% ======================================================================
+\usepackage{setspace}
+\AtBeginEnvironment{tabular}{\singlespacing} % Tabellen stets einzeilig setzen
+\renewcommand{\arraystretch}{1.0}            % Zeilenhöhe innerhalb von Tabellen
+
+% ======================================================================
+% Sonstige Pakete
+% ======================================================================
+\usepackage{rotating}
+\usepackage{float} % [H] nur sparsam verwenden (Layout kann „festkleben“).
+
+% ======================================================================
+% Quellcode (listings)
+% ======================================================================
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Farbdefinitionen für Listings-Stil
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Standardstil für Quellcode-Blöcke
+\lstdefinestyle{mystyle}{
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen}\itshape,
+  keywordstyle=\bfseries,
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\ttfamily,
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
+}
+\lstset{style=mystyle}
+
+% Monospace-Schrift (Courier) für Listings
+\usepackage{courier}
+
+% Wörtliche Zitate: kursiv (für längere Zitatblöcke)
+\newenvironment{quoteitalic}{\begin{quote}\itshape}{\end{quote}}
+
+% ======================================================================
+% Verzeichnisse (tocloft): Abbildungen, Tabellen, Formeln, Anhang
+% ======================================================================
+\usepackage{tocloft}
+
+% Einzüge in Abbildungs- und Tabellenverzeichnis entfernen
+\setlength{\cftfigindent}{0pt}
+\setlength{\cfttabindent}{0pt}
+
+% Titelabstände der Verzeichnisse (wie bei nummerlosen Kapiteln: 2pt/10pt)
+\setlength{\cftbeforetoctitleskip}{2pt}
+\setlength{\cftaftertoctitleskip}{10pt}
+\setlength{\cftbeforeloftitleskip}{2pt}
+\setlength{\cftafterloftitleskip}{10pt}
+\setlength{\cftbeforelottitleskip}{2pt}
+\setlength{\cftafterlottitleskip}{10pt}
+
+% Eigenes Formelverzeichnis
+\newlistof{formeln}{loe}{Formelverzeichnis}
+\setlength{\cftbeforeloetitleskip}{2pt}
+\setlength{\cftafterloetitleskip}{10pt}
+\renewcommand{\cftformelnpresnum}{}
+\renewcommand{\cftformelnaftersnum}{\enspace}
+\setlength{\cftformelnnumwidth}{2.25em}
+
+% Hilfsmakro: Formel in das Formelverzeichnis eintragen
+\newcommand{\eqcaption}[1]{%
+  \addcontentsline{loe}{formeln}{\protect\numberline{\theequation}#1}%
+}
+
+% Überschriftenschrift der Verzeichnisse (analog Kapitelstil)
+\renewcommand{\cfttoctitlefont}{\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}
+\renewcommand{\cftloftitlefont}{\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}
+\renewcommand{\cftlottitlefont}{\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}
+\renewcommand{\cftloetitlefont}{\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}
+
+% Anhangsverzeichnis
+\newlistof{anhang}{loah}{Anhangsverzeichnis}
+\setlength{\cftbeforeloahtitleskip}{2pt}
+\setlength{\cftafterloahtitleskip}{10pt}
+\renewcommand{\cftanhangpresnum}{Anhang~}
+\renewcommand{\cftanhangaftersnum}{\enspace}
+\setlength{\cftanhangnumwidth}{7em}
+\renewcommand{\cftloahtitlefont}{\sffamily\bfseries\fontsize{14pt}{16pt}\selectfont}
+
+% ======================================================================
+% Hyperref & PDF-Metadaten
+% ======================================================================
+\usepackage[
+  bookmarks,
+  bookmarksopen=true,
+  pdftitle={\titel},
+  pdfauthor={\autor},
+  pdfcreator={\autor},
+  pdfsubject={\titel},
+  pdfkeywords={\titel},
+  colorlinks=true,
+  linkcolor=black, anchorcolor=black, citecolor=black,
+  filecolor=black, menucolor=black, urlcolor=black,
+  plainpages=false, pdfpagelabels, hypertexnames=false, linktocpage
+]{hyperref}
+\usepackage{url}
+
+% ======================================================================
+% Bibliographie (biblatex, APA)
+% ======================================================================
+\usepackage[
+  backend=biber,
+  style=apa,
+  sorting=nyt,
+  natbib=false,
+  maxcitenames=2,
+  maxbibnames=20
+]{biblatex}
+\DeclareLanguageMapping{ngerman}{ngerman-apa}
+\addbibresource{quellen.bib}
+
+% APA-Layout: Hängender Einzug und Abstand zwischen Einträgen
+\setlength{\bibhang}{1.27cm}
+\setlength{\bibitemsep}{\baselineskip}
+
+% ======================================================================
+% Captions & Float-Abstände
+% ======================================================================
+\usepackage[font={bf,small},labelfont=bf,justification=centering]{caption}
+
+% Abstände zwischen Objekt und Beschriftung (moderat kompakt)
+\captionsetup{skip=6pt, belowskip=0pt}
+\captionsetup[table]{skip=4pt}
+
+% Abstände rund um Floats (kompakt, aber layoutstabil)
+\setlength{\textfloatsep}{10pt plus 2pt minus 4pt} % Float oben/unten auf Seite
+\setlength{\intextsep}{8pt plus 2pt minus 3pt}     % Float im Textfluss ([h]/[H])
+\setlength{\floatsep}{8pt plus 2pt minus 3pt}      % Zwischen zwei Floats
+
+\DeclareCaptionLabelFormat{anhangnonum}{#1}
+
+% ======================================================================
+% Tabellen & Layout-Helfer
+% ======================================================================
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{ragged2e}
+\usepackage{lscape}
+\usepackage{booktabs}
+\usepackage{supertabular}
+\usepackage[table,xcdraw]{xcolor}
+\newcolumntype{w}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% Listen und Fußnoten in Tabellen
+\usepackage{paralist}
+\usepackage{tablefootnote}
+
+% ======================================================================
+% Algorithmen
+% ======================================================================
+\usepackage[linesnumbered,ruled]{algorithm2e}
+\SetKwInput{KwInput}{Input}
+\SetKwInput{KwOutput}{Output}
+
+% ======================================================================
+% Hinweis zur Layoutstabilität
+% ----------------------------------------------------------------------
+% Keine Neu-Definition von figure/table/equation-Umgebungen, da dies
+% Abstände und Nummerierungen unerwartet beeinflussen kann.
+% ======================================================================

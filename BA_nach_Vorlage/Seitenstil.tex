@@ -1,0 +1,128 @@
+% ======================================================================
+% Zeilenabstand und Absatzlayout
+% ======================================================================
+\setstretch{1.5} % 1,5-zeiliger Zeilenabstand im Fließtext
+\AtBeginDocument{%
+  \setlength{\parindent}{0pt}% kein Absatzeinzug
+  \setlength{\parskip}{4pt plus 1pt minus 1pt}% Abstand zwischen Absätzen (leicht flexibel)
+}
+
+
+% ======================================================================
+% Seitenränder (geometry)
+% ======================================================================
+\usepackage{geometry}
+\geometry{paper=a4paper,left=30mm,right=25mm,top=25mm,bottom=15mm}
+
+% Alternative Rand-Einstellungen (nur bei Bedarf verwenden)
+% \geometry{paper=a4paper,left=35mm,right=25mm,top=25mm,bottom=25mm}
+
+
+% ======================================================================
+% Kopf- und Fußzeilen (scrlayer-scrpage)
+% ----------------------------------------------------------------------
+% Zentraler Seitenstil: Kopfzeile mit Headmark und Seitenzahl,
+% Fußzeile vollständig leer.
+% ======================================================================
+\clearpairofpagestyles
+
+% Kopfzeile: innen/links Headmark (kursiv), außen/rechts Seitenzahl
+\ihead[\textit{\headmark}]{\textit{\headmark}}
+\ohead[\pagemark]{\pagemark}
+
+% Fußzeile deaktivieren
+\lefoot{}\cefoot{}\refoot{}
+\lofoot{}\cofoot{}\rofoot{}
+
+% Schrift im Kopf: normal (nicht smallcaps o. ä.)
+\renewcommand{\headfont}{\normalfont}
+
+% Abmessungen/Abstände der Kopf- und Fußbereiche
+\setlength{\headheight}{8mm}
+\setlength{\headsep}{4mm}
+\setlength{\footskip}{8mm}
+
+% Kapitelanfangsseiten (plain) an den Standard-Seitenstil anpassen
+% Hinweis: Nach dem Laden von scrlayer-scrpage ausführen.
+\makeatletter
+\let\ps@plain\ps@scrheadings
+\makeatother
+
+% Kopfbreite exakt auf Textbreite setzen
+\AtBeginDocument{\KOMAoptions{headwidth=text}}
+
+
+% ======================================================================
+% Kapitelstart: vertikaler Abstand (KOMA-Script)
+% ----------------------------------------------------------------------
+% Schiebt die Kapitelüberschrift näher an den oberen Rand.
+% Vorsicht: Zu große negative Werte können Layout-Probleme verursachen.
+% ======================================================================
+\renewcommand*\chapterheadstartvskip{\vspace*{-1.0cm}}
+
+
+% ======================================================================
+% Typografie: Satzzeichenabstände
+% ----------------------------------------------------------------------
+% Aktiviert „französischen Abstand“: einheitliche Abstände nach Satzzeichen.
+% ======================================================================
+\frenchspacing
+
+
+% ======================================================================
+% Schusterjungen und Hurenkinder vermeiden (Witwen/Waisen)
+% ======================================================================
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+
+
+% ======================================================================
+% Quellcode-Ausgabe (listings): Grundlayout
+% ======================================================================
+
+% Beispiel-Optionen (bei Bedarf aktivieren/anpassen)
+% \lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, breaklines=true}
+% \lstset{emph={square}, emphstyle=\color{red}, emph={[2]root,base}, emphstyle={[2]\color{blue}}}
+
+% Hintergrundfarbe für Listings
+\definecolor{gray}{rgb}{0.9,0.9,0.9}
+
+% Standard-Listing-Einstellungen
+\lstset{
+  basicstyle=\small\ttfamily,language={[LaTeX]TeX},
+  numbersep=5mm,
+  numbers=left,
+  numberstyle=\tiny,
+  breaklines=true,
+  framexleftmargin=8mm,
+  xleftmargin=8mm,
+  backgroundcolor=\color{gray},
+  captionpos=b
+}
+
+
+% ======================================================================
+% Fußnoten: fortlaufende Nummerierung über Kapitel hinweg
+% ======================================================================
+\counterwithout{footnote}{chapter}
+
+
+% ======================================================================
+% Theorem-Umgebungen
+% ======================================================================
+\newtheorem{definition}{Definition}
+
+
+% ======================================================================
+% Abstände um Überschriften (titlesec)
+% ----------------------------------------------------------------------
+% Format: \titlespacing*{<Befehl>}{<linker Einzug>}{<Abstand davor>}{<Abstand danach>}
+% ======================================================================
+\titlespacing*{\chapter}{0pt}{-5pt}{12pt}
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\titlespacing*{\subsection}{0pt}{10pt}{4pt}
+\titlespacing*{\subsubsection}{0pt}{8pt}{4pt}
+
+% Nummerlose Kapitel (z. B. Abstract) separat definieren
+\titlespacing*{name=\chapter,numberless}{0pt}{2pt}{10pt}

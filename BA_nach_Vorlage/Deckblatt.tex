@@ -1,0 +1,92 @@
+% ======================================================================
+% Deckblatt
+% ----------------------------------------------------------------------
+% Gestaltung der Titelseite ohne Kopf- und Fußzeilen.
+% Enthält Logo, institutionelle Angaben, Titel der Arbeit sowie
+% persönliche Angaben der Autorin / des Autors.
+% ======================================================================
+
+\thispagestyle{empty}
+\begin{titlepage}
+
+% ======================================================================
+% Farbdefinition
+% ----------------------------------------------------------------------
+% Definiert einen mittleren Grauton für dezente Hervorhebungen
+% (z. B. Betreuer:innen, persönliche Angaben).
+% ======================================================================
+\definecolor{mittelgrau}{gray}{0.4}
+
+
+% ======================================================================
+% Logo (oben links)
+% ----------------------------------------------------------------------
+% Einbindung des Universitätslogos mit fester Breite.
+% ======================================================================
+\noindent\includegraphics[width=0.4\textwidth]{Bilder/Uni-L.png}
+\vspace{0.8ex}
+
+
+% ======================================================================
+% Institutionelle Angaben (links unter dem Logo)
+% ----------------------------------------------------------------------
+% Fakultät, Institut, Fachgebiet sowie Erst- und Zweitbetreuung.
+% Betreuer:innen werden kursiv und in Graustufe dargestellt.
+% ======================================================================
+{\raggedright
+\fakultaet\\[0.6ex]
+\institut\\[0.6ex]
+\fachgebiet\\[0.6ex]
+{\itshape \textcolor{mittelgrau}{\erstbetreuer} \\[0.6ex]
+\textcolor{mittelgrau}{\zweitbetreuer}}\par
+}
+
+
+% ======================================================================
+% Vertikaler Abstand zum Mittelblock
+% ======================================================================
+\vspace{28mm}
+
+
+% ======================================================================
+% Mittelblock
+% ----------------------------------------------------------------------
+% Enthält Thema, Titel der Arbeit sowie Art der Arbeit,
+% angestrebten akademischen Grad und Studiengang.
+% ======================================================================
+\begin{center}
+  Thema\\[1.2ex]
+  {\large\textit{\titel}}\\[4.2ex]
+  \art\ zur Erlangung des akademischen Grades\\
+  \grad\ -- \textit{\studiengang}
+\end{center}
+
+\vfill
+
+
+% ======================================================================
+% Fußbereich: Persönliche Angaben (unten links)
+% ----------------------------------------------------------------------
+% Name, Matrikelnummer, Kontaktdaten und Anschrift der Autorin /
+% des Autors, tabellarisch ausgerichtet.
+% ======================================================================
+\begin{tabular}{@{}l l}
+  vorgelegt von:   & \textcolor{mittelgrau}{\textit{\autor}} \\ [2.4ex]
+  Matrikelnummer: & \textcolor{mittelgrau}{\textit{\matrikelnr}} \\ [2.4ex]
+  E-Mail-Adresse: & \textcolor{mittelgrau}{\textit{\email}} \\ [2.4ex]
+  Telefonnummer:  & \textcolor{mittelgrau}{\textit{\telefonnummer}} \\ [2.4ex]
+  Anschrift:      & \textcolor{mittelgrau}{\textit{\strasse}} \\ [0.6ex]
+                  & \textcolor{mittelgrau}{\textit{\ortplz}}
+\end{tabular}
+
+
+% ======================================================================
+% Abgabedatum
+% ----------------------------------------------------------------------
+% Ort und Datum der Einreichung am unteren Seitenrand.
+% ======================================================================
+\vspace{8mm}
+
+\noindent \ort, den \textcolor{mittelgrau}{\eingereicht}
+
+\end{titlepage}

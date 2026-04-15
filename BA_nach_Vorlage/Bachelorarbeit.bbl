@@ -1,0 +1,2337 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/apasortcite//global/global}
+    \entry{amendolaDroneLandingReinforcement2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=abb2413b27bbe7a4be945ccacebc923e}{%
+           family={Amendola},
+           familyi={A\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31f671b099b3d9082acd512acee142c1}{%
+           family={Cenkeramaddi},
+           familyi={C\bibinitperiod},
+           given={Linga\bibnamedelima Reddy},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7c9f78665de866a6f4d15ba927000b7}{%
+           family={Jha},
+           familyi={J\bibinitperiod},
+           given={Ajit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{94b64ad5b72f7897156bb8c349ba5cda}
+      \strng{fullhash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \strng{bibnamehash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \strng{authorbibnamehash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \strng{authornamehash}{94b64ad5b72f7897156bb8c349ba5cda}
+      \strng{authorfullhash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Unmanned aerial vehicles, and special multirotor drones, have shown great relevance in a plethora of missions that require high affordance, field of view, and precision. Their limited payload capacity and autonomy make its landing a crucial task. Despite many attempts in the literature to address drone landing, challenges and open gaps still exist. Reinforcement Learning has gained notoriety in a variety of control problems, with recent proposals for drone landing applications. This work aims to present a systematic literature review on works employing Deep Reinforcement Learning for multirotor drone landing in both static and dynamic platforms. It also revisits Reinforcement Learning Algorithms, the main frameworks and simulators adopted for specific landing operations. The comprehensive analysis performed on reviewed works revealed that there are important untackled challenges when it comes to wind disturbances, unpredictability of moving landing targets, sensor latency, and sim-to-real gap. Finally, we present our critical analysis of how recent state-of-the-art deep learning concepts can be combined with reinforcement learning to leverage the latter in addressing the open gaps in future works.}
+      \field{issn}{2687-7813}
+      \field{journaltitle}{IEEE Open Journal of Intelligent Transportation Systems}
+      \field{shorttitle}{Drone {{Landing}} and {{Reinforcement Learning}}}
+      \field{title}{Drone {{Landing}} and {{Reinforcement Learning}}: {{State-of-Art}}, {{Challenges}} and {{Opportunities}}}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{520\bibrangedash 539}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/OJITS.2024.3444487
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/WK55RAGU/Amendola et al. - 2024 - Drone Landing and Reinforcement Learning State-of-Art, Challenges and Opportunities.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10637701
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10637701
+      \endverb
+      \keyw{autonomous landing,Autonomous systems,Classification algorithms,Deep reinforcement learning,drones,Drones,Heuristic algorithms,overview,Q-learning,Reinforcement learning,Vehicle dynamics}
+    \endentry
+    \entry{calvinIPCC2023Climate2023}{report}{}
+      \name{author}{85}{}{%
+        {{un=0,uniquepart=base,hash=3a199d2c5300b48b1da4168691cbf005}{%
+           family={Calvin},
+           familyi={C\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c21c342ce8565cddc4391cc17436e31}{%
+           family={Dasgupta},
+           familyi={D\bibinitperiod},
+           given={Dipak},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1254a8caf087e6e9aca95dd5dedc6ed1}{%
+           family={Krinner},
+           familyi={K\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cf03d71432b1fd4b985005bf5b58b2f}{%
+           family={Mukherji},
+           familyi={M\bibinitperiod},
+           given={Aditi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=793f1d27b385b71e14373d21acb122c6}{%
+           family={Thorne},
+           familyi={T\bibinitperiod},
+           given={Peter\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb3a2cfa3e0242f625821030cf98d465}{%
+           family={Trisos},
+           familyi={T\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44fea44855c3faa16ced74e69f734588}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d560ab526f9506639a533231207c3d74}{%
+           family={Aldunce},
+           familyi={A\bibinitperiod},
+           given={Paulina},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2663c825f3f499e2f1419e781663b086}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Ko},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6584c09da824150af788216e867615b9}{%
+           family={Blanco},
+           familyi={B\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f28e782f752606caa13299de03b1016}{%
+           family={Cheung},
+           familyi={C\bibinitperiod},
+           given={William\bibnamedelima W.L.},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dad1fcf9dd8221d7104ca7551b046030}{%
+           family={Connors},
+           familyi={C\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=94cdd2e56d01527f34af1909b8371285}{%
+           family={Denton},
+           familyi={D\bibinitperiod},
+           given={Fatima},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4f3471f18bddecd22d8f1b7c30652d1}{%
+           family={Diongue-Niang},
+           familyi={D\bibinithyphendelim N\bibinitperiod},
+           given={Aïda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbeac2b1c0e5786b17dd2a468ad00861}{%
+           family={Dodman},
+           familyi={D\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74e2d1949381ad32f9c36f9dcbd5640d}{%
+           family={Garschagen},
+           familyi={G\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41f991bcd266b94ba4c46f88d74262ce}{%
+           family={Geden},
+           familyi={G\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=234aca0494dba0f90c54c00fac42e0f2}{%
+           family={Hayward},
+           familyi={H\bibinitperiod},
+           given={Bronwyn},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d43f7eab4b625cffd243b3f2141e092c}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ffbf5c97427e8c8ce8d3a10f8e28e2}{%
+           family={Jotzo},
+           familyi={J\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a40901f8d7366b3fa546a2dd9de68261}{%
+           family={Krug},
+           familyi={K\bibinitperiod},
+           given={Thelma},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e94fabf8cf90c4213936c4417f00dfa}{%
+           family={Lasco},
+           familyi={L\bibinitperiod},
+           given={Rodel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0396f926bc483c7efd2bfa8496b9d0cd}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Yune-Yi},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6353363baf7fef1e2b7e6e86d6c23588}{%
+           family={Masson-Delmotte},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Valérie},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02eb3024d6710ed3470891c3bf973e59}{%
+           family={Meinshausen},
+           familyi={M\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0968dd47b0917c4b83fafd94b57559ec}{%
+           family={Mintenbeck},
+           familyi={M\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=518a58ab8f1411555735a8c9aecaf0eb}{%
+           family={Mokssit},
+           familyi={M\bibinitperiod},
+           given={Abdalah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12ca96007ba0a31dec29e5f71d1709a2}{%
+           family={Otto},
+           familyi={O\bibinitperiod},
+           given={Friederike\bibnamedelima E.L.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c7340bd91af5be2a5e84e28ea1d926b3}{%
+           family={Pathak},
+           familyi={P\bibinitperiod},
+           given={Minal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ae39f4e939829bc4d7209716abab828}{%
+           family={Pirani},
+           familyi={P\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d2550325e999b73531189f4823357e4}{%
+           family={Poloczanska},
+           familyi={P\bibinitperiod},
+           given={Elvira},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b498e89d5f1cbed9caae7a7979360c97}{%
+           family={Pörtner},
+           familyi={P\bibinitperiod},
+           given={Hans-Otto},
+           giveni={H\bibinithyphendelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ee0808d9cd85d8bc20e0e267becf852}{%
+           family={Revi},
+           familyi={R\bibinitperiod},
+           given={Aromar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96fb61799f7e89d8eca3fe29d05330ee}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Debra\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7585dc3b9097678e1165003690a1db58}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Joyashree},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd1bd9cc281b868886654cb9e54542b1}{%
+           family={Ruane},
+           familyi={R\bibinitperiod},
+           given={Alex\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25de426179ed606806fdbe7201af6999}{%
+           family={Skea},
+           familyi={S\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3252cd2f8e141a64cf7ce9a00657372}{%
+           family={Shukla},
+           familyi={S\bibinitperiod},
+           given={Priyadarshi\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87818ac293b08611f612c6d37eb73e19}{%
+           family={Slade},
+           familyi={S\bibinitperiod},
+           given={Raphael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436c84d68503f6bb6f6dc610f5534a49}{%
+           family={Slangen},
+           familyi={S\bibinitperiod},
+           given={Aimée},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a256dc20dec1084ab98550ad44acd24c}{%
+           family={Sokona},
+           familyi={S\bibinitperiod},
+           given={Youba},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acb63b53329dd473d3ee08e4f7c7a6e1}{%
+           family={Sörensson},
+           familyi={S\bibinitperiod},
+           given={Anna\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afad00fe4ef771772cf5365ecd0a05df}{%
+           family={Tignor},
+           familyi={T\bibinitperiod},
+           given={Melinda},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d241f1c9c4c1e3a3b920431254922034}{%
+           family={Van\bibnamedelima Vuuren},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Detlef},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce98f1bdf13ec40a66d9384d0e3bcb5d}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Yi-Ming},
+           giveni={Y\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14628fc093898da0013b9ad40a0c9a29}{%
+           family={Winkler},
+           familyi={W\bibinitperiod},
+           given={Harald},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=913d3b0d5757aad7955d4332563274ea}{%
+           family={Zhai},
+           familyi={Z\bibinitperiod},
+           given={Panmao},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b643a715d62dddbcd620da1a94d41ae2}{%
+           family={Zommers},
+           familyi={Z\bibinitperiod},
+           given={Zinta},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b37bff65e41d36a5ae8801a18062794f}{%
+           family={Hourcade},
+           familyi={H\bibinitperiod},
+           given={Jean-Charles},
+           giveni={J\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40478f465de8533b3f69ab839ebc0f21}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Francis\bibnamedelima X.},
+           giveni={F\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1963f77e3ed129507b040bffcdc863f}{%
+           family={Pachauri},
+           familyi={P\bibinitperiod},
+           given={Shonali},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86f60ca0c7aa92b8b655209fa162b5b7}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Nicholas\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f397569e151d604155511bff0b0c478}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Chandni},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19535692d22a8d782724d9231367a3d8}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Adelle},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=006437fc666b19a3f58fba2ddf028cea}{%
+           family={Totin},
+           familyi={T\bibinitperiod},
+           given={Edmond},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29934da19598d722877990ffce5e4568}{%
+           family={Alegría},
+           familyi={A\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=332fd813ef497de3dd07c103ec793ee0}{%
+           family={Armour},
+           familyi={A\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e2e62ccb2728c7f6bfcd3c9a6213f2c}{%
+           family={Bednar-Friedl},
+           familyi={B\bibinithyphendelim F\bibinitperiod},
+           given={Birgit},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=267cba09b82e70468736a15310b07b28}{%
+           family={Blok},
+           familyi={B\bibinitperiod},
+           given={Kornelis},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa1e4b630bcb779fac485a43e2ea4007}{%
+           family={Cissé},
+           familyi={C\bibinitperiod},
+           given={Guéladio},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0d34fdd1d6f7792eb8d50ad9161ee5c}{%
+           family={Dentener},
+           familyi={D\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48b10c88569733cc0fcfef6d8f32fe54}{%
+           family={Eriksen},
+           familyi={E\bibinitperiod},
+           given={Siri},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a54ad50cc099354d97f432329db01f16}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf6c4c9c2ead387c482f0ae958cc0f3a}{%
+           family={Garner},
+           familyi={G\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d45d8f0e7c3f721d67333f4f9298ad1e}{%
+           family={Guivarch},
+           familyi={G\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a06b4da48bfb134a9a86f816e83f46b0}{%
+           family={Haasnoot},
+           familyi={H\bibinitperiod},
+           given={Marjolijn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aaf8ae1951d35612603516a9bc3ab761}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Gerrit},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fe16fbbecaea4df68970c639f79ced1}{%
+           family={Hauser},
+           familyi={H\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0e83b570b176c6b30bec95bdf928878}{%
+           family={Hawkins},
+           familyi={H\bibinitperiod},
+           given={Ed},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a075f2abab9a33ed3edd026a2b2d9fe}{%
+           family={Hermans},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e618b134dbff3bba80ddd9fabd643839}{%
+           family={Kopp},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8bbe2adeefee14a2425d17c4b73df7d}{%
+           family={Leprince-Ringuet},
+           familyi={L\bibinithyphendelim R\bibinitperiod},
+           given={Noëmie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2601359c181da1989151ced3f1361273}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Jared},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e74934da31b3463a03eb0d483fe9ce3}{%
+           family={Ley},
+           familyi={L\bibinitperiod},
+           given={Debora},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=918294d6b9e5ddf501975f831456a945}{%
+           family={Ludden},
+           familyi={L\bibinitperiod},
+           given={Chloé},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43e1ef1419caadbbfdf4c9383b357c25}{%
+           family={Niamir},
+           familyi={N\bibinitperiod},
+           given={Leila},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b61dc6176a4e0bb72ca95ea5cd64f67}{%
+           family={Nicholls},
+           familyi={N\bibinitperiod},
+           given={Zebedee},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41e96bafb88a15b1a976f40b8085d499}{%
+           family={Some},
+           familyi={S\bibinitperiod},
+           given={Shreya},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=262ab00443f9165b2ff9c53a0248232c}{%
+           family={Szopa},
+           familyi={S\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b9dd853959e0ca14a977cd6c384a82e}{%
+           family={Trewin},
+           familyi={T\bibinitperiod},
+           given={Blair},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08a4ae6d743de5b20707e1d2a25af86d}{%
+           family={Van\bibnamedelimb Der\bibnamedelima Wijst},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Kaj-Ivar},
+           giveni={K\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d30a96c4077557cc6424ffb5d95380f0}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Gundula},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edbc63a33eaf560138b72c66185f451f}{%
+           family={Witting},
+           familyi={W\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7753994155935ad6927f214e90adf12b}{%
+           family={Birt},
+           familyi={B\bibinitperiod},
+           given={Arlene},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3d7b0fc9c160b7a09c1dcbe362068d2}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Meeyoung},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{38}{}{%
+        {{hash=3aa7f5e1cb3212632a19e326b9acedbf}{%
+           family={Arias},
+           familyi={A\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1e90f0236bb4b8425bd7297ad8461eab}{%
+           family={Bustamante},
+           familyi={B\bibinitperiod},
+           given={Mercedes},
+           giveni={M\bibinitperiod}}}%
+        {{hash=19ef0eb12330bc21022b743cd6ceb4bd}{%
+           family={Elgizouli},
+           familyi={E\bibinitperiod},
+           given={Ismail},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3f5bfe8bde6919836ed8d43e504a9f89}{%
+           family={Flato},
+           familyi={F\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3932996dbad0784adf625b0e87ddf414}{%
+           family={Howden},
+           familyi={H\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be107c95b5c960dff91a22e4d0e3b862}{%
+           family={Méndez-Vallejo},
+           familyi={M\bibinithyphendelim V\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4d8413633fe26cb565f32a1ebbdd185d}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Joy\bibnamedelima Jacqueline},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0ee296c9e510c7d631e9d90be5dd0d5b}{%
+           family={Pichs-Madruga},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Ramón},
+           giveni={R\bibinitperiod}}}%
+        {{hash=abeef2282813fe950975af1b125b28d1}{%
+           family={Rose},
+           familyi={R\bibinitperiod},
+           given={Steven\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=c3e63fc6ef7d9e40a7c3c2c47ceed8fa}{%
+           family={Saheb},
+           familyi={S\bibinitperiod},
+           given={Yamina},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ee3326c54bc96e655de5b3e60ea719c7}{%
+           family={Sánchez\bibnamedelima Rodríguez},
+           familyi={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=77047cdd68b814a7652cf4bdd2f7fcae}{%
+           family={Ürge-Vorsatz},
+           familyi={Ü\bibinithyphendelim V\bibinitperiod},
+           given={Diana},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d42ab4de7c1047c00fbb41489f14e15c}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Cunde},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b8b64c2730279432632c44c6aab39581}{%
+           family={Yassaa},
+           familyi={Y\bibinitperiod},
+           given={Noureddine},
+           giveni={N\bibinitperiod}}}%
+        {{hash=44fea44855c3faa16ced74e69f734588}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b8fa38441a5c2839e745b638723c5e56}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jinmi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1cd52501212e47ea99a83e77821565e9}{%
+           family={Haites},
+           familyi={H\bibinitperiod},
+           given={Erik\bibnamedelima F.},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=d2e07b972220087e15c5e7a92599ff5c}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Yonghun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ec1bdf8ace86d1cb2bf66f75bd95d42b}{%
+           family={Stavins},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7753994155935ad6927f214e90adf12b}{%
+           family={Birt},
+           familyi={B\bibinitperiod},
+           given={Arlene},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d3d7b0fc9c160b7a09c1dcbe362068d2}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Meeyoung},
+           giveni={M\bibinitperiod}}}%
+        {{hash=974c055e948588eb37e409b35da621f9}{%
+           family={Orendain},
+           familyi={O\bibinitperiod},
+           given={Dan\bibnamedelimb Jezreel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=43b46743580b42df08fe99a9faf3446e}{%
+           family={Ignon},
+           familyi={I\bibinitperiod},
+           given={Lance},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2085c416ab1988b40d8db37963a1c5b2}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Semin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dd524c7dc1bcc53723b5b4fc18f6157d}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Youngin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dcc75bdb1247d0d0a860d83f236bd9c3}{%
+           family={Reisinger},
+           familyi={R\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=164a6dbc99ccdbe2cd07b6cfc8855344}{%
+           family={Cammaramo},
+           familyi={C\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0e4cc9c2245348b69aca6d7f26b3930f}{%
+           family={Fischlin},
+           familyi={F\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0c56aace0924386a6de41eaaa81ac81f}{%
+           family={Fuglestvedt},
+           familyi={F\bibinitperiod},
+           given={Jan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=aaf8ae1951d35612603516a9bc3ab761}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Gerrit},
+           giveni={G\bibinitperiod}}}%
+        {{hash=918294d6b9e5ddf501975f831456a945}{%
+           family={Ludden},
+           familyi={L\bibinitperiod},
+           given={Chloé},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6353363baf7fef1e2b7e6e86d6c23588}{%
+           family={Masson-Delmotte},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Valérie},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ffc8c2e1710f55b31e6896a0b89270c9}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={J.B.\bibnamedelimi Robin},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=0968dd47b0917c4b83fafd94b57559ec}{%
+           family={Mintenbeck},
+           familyi={M\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2ae39f4e939829bc4d7209716abab828}{%
+           family={Pirani},
+           familyi={P\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4d2550325e999b73531189f4823357e4}{%
+           family={Poloczanska},
+           familyi={P\bibinitperiod},
+           given={Elvira},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d8bbe2adeefee14a2425d17c4b73df7d}{%
+           family={Leprince-Ringuet},
+           familyi={L\bibinithyphendelim R\bibinitperiod},
+           given={Noëmie},
+           giveni={N\bibinitperiod}}}%
+        {{hash=068447ee26859629ebd5a35075df8d5f}{%
+           family={Péan},
+           familyi={P\bibinitperiod},
+           given={Clotilde},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=14bd5bacfec2818b7404cf0fcb4ed61e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hoesung},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Intergovernmental Panel on Climate Change (IPCC)}%
+      }
+      \strng{namehash}{bed8c0b52a3e49c5ce6ee8e79396f29d}
+      \strng{fullhash}{983c1b6a3dcff34dd47b099a4ccfe232}
+      \strng{bibnamehash}{7005542db139a097e79494a38b04d7fe}
+      \strng{authorbibnamehash}{7005542db139a097e79494a38b04d7fe}
+      \strng{authornamehash}{bed8c0b52a3e49c5ce6ee8e79396f29d}
+      \strng{authorfullhash}{983c1b6a3dcff34dd47b099a4ccfe232}
+      \strng{editorbibnamehash}{23a9bc212b26e7eafee39f6a29cec773}
+      \strng{editornamehash}{08e4c8d287aa843d1f1ffade7e0f4407}
+      \strng{editorfullhash}{eb0ed336be9fe477585cdc6e585afe10}
+      \strng{nameabibnamehash}{14bd5bacfec2818b7404cf0fcb4ed61e}
+      \strng{nameanamehash}{14bd5bacfec2818b7404cf0fcb4ed61e}
+      \strng{nameafullhash}{14bd5bacfec2818b7404cf0fcb4ed61e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The Synthesis Report (SYR) is a stand-alone synthesis of the most policy-relevant evidence from the scientific, technical, and socio-economic literature assessed in the Sixth Assessment Report (AR6) of the Intergovernmental Panel on Climate Change (IPCC). The SYR distils and integrates the main findings of the three reports of the Working Groups of the IPCC during the AR6, and the three AR6 Special Reports into a concise document. It consists of a Summary for Policymakers and a longer report.}
+      \field{day}{25}
+      \field{edition}{First}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{nameatype}{collaborator}
+      \field{shorttitle}{{{IPCC}}, 2023}
+      \field{title}{{{IPCC}}, 2023: {{Climate Change}} 2023: {{Synthesis Report}}. {{Contribution}} of {{Working Groups I}}, {{II}} and {{III}} to the {{Sixth Assessment Report}} of the {{Intergovernmental Panel}} on {{Climate Change}} [{{Core Writing Team}}, {{H}}. {{Lee}} and {{J}}. {{Romero}} (Eds.)]. {{IPCC}}, {{Geneva}}, {{Switzerland}}.}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.59327/IPCC/AR6-9789291691647
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/WNS6BA3V/Calvin et al. - 2023 - IPCC, 2023 Climate Change 2023 Synthesis Report. Contribution of Working Groups I, II and III to t.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/syr/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/syr/
+      \endverb
+    \endentry
+    \entry{ClimateChangeTrends}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Climate {{Change Trends}} and {{Impacts}} on {{California Agriculture}}: {{A Detailed Review}} | {{MDPI}}}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/Z9CN5CPG/25.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2073-4395/8/3/25#Conclusions
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2073-4395/8/3/25#Conclusions
+      \endverb
+    \endentry
+    \entry{hultgrenImpactsClimateChange2025}{article}{}
+      \name{author}{16}{}{%
+        {{un=0,uniquepart=base,hash=c98b376966766c3e05ce404c21e8e956}{%
+           family={Hultgren},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=018534f758197968a8b7506e5afd1259}{%
+           family={Carleton},
+           familyi={C\bibinitperiod},
+           given={Tamma},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f16ab0909021bc30b4563eb4d6956894}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddf1a569443a33deeb8808221e29ab9e}{%
+           family={Gergel},
+           familyi={G\bibinitperiod},
+           given={Diana\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=23e2201fd0a08bee5f8f929d238f6472}{%
+           family={Greenstone},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1936129a2f4d64b1c5f6439712cc2c45}{%
+           family={Houser},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ea5cf7eb9e01013d277e8a0c5855194}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebc18fbce5ee96bcbbb0264c8a8fd5ff}{%
+           family={Jina},
+           familyi={J\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4391c3436abcd53bbd7c83a3a5021ceb}{%
+           family={Kopp},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1b333d88068a34b4a627d09a530cb9a}{%
+           family={Malevich},
+           familyi={M\bibinitperiod},
+           given={Steven\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddafad0766e37d7ca74b8821a07bad4f}{%
+           family={McCusker},
+           familyi={M\bibinitperiod},
+           given={Kelly\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0ef2ba6f58b285d3cf625c2262ed9ae}{%
+           family={Mayer},
+           familyi={M\bibinitperiod},
+           given={Terin},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd1f35afadd7e7fc3eb3ee53771b943e}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={Ishan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67d7b2fbad3cb18760ce34cb797c49e3}{%
+           family={Rising},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=020712cb80f8a098be3293e9f042c195}{%
+           family={Rode},
+           familyi={R\bibinitperiod},
+           given={Ashwin},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d66da39b62cada70c9632ce3c2fc395}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Jiacan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{6b1fc5bc2532bb41de7eda2418951151}
+      \strng{fullhash}{4dbdf1a940413681ef1ca309f22325aa}
+      \strng{bibnamehash}{4dbdf1a940413681ef1ca309f22325aa}
+      \strng{authorbibnamehash}{4dbdf1a940413681ef1ca309f22325aa}
+      \strng{authornamehash}{6b1fc5bc2532bb41de7eda2418951151}
+      \strng{authorfullhash}{4dbdf1a940413681ef1ca309f22325aa}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Climate change threatens global food systems1, but the extent to which adaptation will reduce losses remains unknown and controversial2. Even within the well-studied context of US agriculture, some analyses argue that adaptation will be widespread and climate damages small3,4, whereas others conclude that adaptation will be limited and losses severe5,6. Scenario-based analyses indicate that adaptation should have notable consequences on global agricultural productivity7–9, but there has been no systematic study of how extensively real-world producers actually adapt at the global scale. Here we empirically estimate the impact of global producer adaptations using longitudinal data on six staple crops spanning 12,658 regions, capturing two-thirds of global crop calories. We estimate that global production declines 5.5~×\,1014\,kcal annually per 1 °C global mean surface temperature (GMST) rise (120\,kcal per person per day or 4.4\% of recommended consumption per 1 °C; P\,{$<$}\,0.001). We project that adaptation and income growth alleviate 23\% of global losses in 2050 and 34\% at the end of the century (6\% and 12\%, respectively; moderate-emissions scenario), but substantial residual losses remain for all staples except rice. In contrast to analyses of other outcomes that project the greatest damages to the global poor10,11, we find that global impacts are dominated by losses to modern-day breadbaskets with favourable climates and limited present adaptation, although~losses in low-income~regions losses are also substantial. These results indicate a scale of innovation, cropland expansion or further adaptation that might be necessary to ensure food security in a changing climate.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{8068}
+      \field{title}{Impacts of Climate Change on Global Agriculture Accounting for Adaptation}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{642}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{644\bibrangedash 652}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1038/s41586-025-09085-w
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41586-025-09085-w
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41586-025-09085-w
+      \endverb
+      \keyw{Agriculture,Climate-change adaptation,Climate-change impacts,Environmental economics,Interdisciplinary studies}
+    \endentry
+    \entry{jafari-shahbazzadehPrecisionLandingTechniques2025}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=86f0875db7e0639a5b4fd6c4cc533ed1}{%
+           family={Jafari-Shahbazzadeh},
+           familyi={J\bibinithyphendelim S\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f409ec2e9b7cd24f91d12661409508b0}{%
+           family={Binesh},
+           familyi={B\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{fullhash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{bibnamehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{authorbibnamehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{authornamehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{authorfullhash}{48cd93c110c46a61ff394681c13ec540}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Precision drone landing technology has emerged as a critical area of research, offering transformative potential across industries such as logistics, search and rescue, environmental monitoring, and autonomous transportation. This review paper provides a comprehensive analysis of vision-based systems for precise drone landings, focusing on the integration of advanced computer vision algorithms, sensor fusion, and robust control strategies. Vision-based systems, when combined with state-of-the-art sensors like GPS, IMU, and LiDAR, can significantly enhance landing accuracy, robustness, and reliability in complex scenarios. The paper reviews the challenges associated with real-time processing, including efficient object detection, tracking, and depth estimation, particularly in varying environmental conditions such as low light and cluttered surroundings. Additionally, it explores the importance of precise state estimation for ensuring safe and reliable landings. Key issues such as the integration of multiple sensor modalities, optimization of algorithms for real-time decision-making, and the development of reliable control systems to handle uncertainties and external disturbances are thoroughly examined. The paper concludes by outlining potential future research directions aimed at addressing the remaining challenges in precision landing technology, with the ultimate goal of enabling safer, more efficient, and scalable drone operations across diverse use cases.}
+      \field{day}{1}
+      \field{issn}{2364-1835}
+      \field{journaltitle}{Iranian Journal of Science and Technology, Transactions of Mechanical Engineering}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{5}
+      \field{shortjournal}{Iran J Sci Technol Trans Mech Eng}
+      \field{shorttitle}{Precision {{Landing Techniques}} for {{Drones}}}
+      \field{title}{Precision {{Landing Techniques}} for {{Drones}}: {{A Comprehensive Review}}}
+      \field{urlday}{4}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{49}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1959\bibrangedash 1986}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s40997-025-00878-y
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/W5TFLSP5/Jafari-Shahbazzadeh and Binesh - 2025 - Precision Landing Techniques for Drones A Comprehensive Review.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s40997-025-00878-y
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s40997-025-00878-y
+      \endverb
+      \keyw{Autonomous systems,Drone precision landing,UAV,Vision-based systems}
+    \endentry
+    \entry{nationsWhatClimateChange}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d661e9167bd3a268ea03a3ee152926c}{%
+           family={Nations},
+           familyi={N\bibinitperiod},
+           given={United},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {United Nations}%
+      }
+      \list{publisher}{1}{%
+        {United Nations}%
+      }
+      \strng{namehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{fullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{bibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorbibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authornamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorfullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Climate change refers to long-term shifts in temperatures and weather patterns. Such shifts can be natural, due to changes in the sun’s activity or large volcanic eruptions. But since the 1800s, human activities have been the main driver of climate change, primarily due to the burning of fossil fuels like coal, oil and gas.}
+      \field{langid}{english}
+      \field{title}{What {{Is Climate Change}}?}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/KHQMAMZV/what-is-climate-change.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.un.org/en/climatechange/what-is-climate-change
+      \endverb
+      \verb{url}
+      \verb https://www.un.org/en/climatechange/what-is-climate-change
+      \endverb
+    \endentry
+    \entry{katze}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef776916f007fe0e64736c2c0a01ed51}{%
+           family={u/unknown},
+           familyi={u\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{fullhash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{bibnamehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{authorbibnamehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{authornamehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{authorfullhash}{ef776916f007fe0e64736c2c0a01ed51}
+      \field{sortinit}{u}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Beitrag auf Reddit (Subreddit r/aww)}
+      \field{title}{Happy Birthday}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.reddit.com/r/aww/comments/fvk44k/happy_birthday/
+      \endverb
+      \verb{url}
+      \verb https://www.reddit.com/r/aww/comments/fvk44k/happy_birthday/
+      \endverb
+    \endentry
+    \entry{WhatClimateChange2022}{online}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Climate change is a long-term change in the average weather patterns that have come to define Earth’s local, regional and global climates. These changes have}
+      \field{day}{15}
+      \field{hour}{22}
+      \field{langid}{american}
+      \field{minute}{38}
+      \field{month}{6}
+      \field{second}{19}
+      \field{shorttitle}{What {{Is Climate Change}}?}
+      \field{timezone}{-04\bibtzminsep 00}
+      \field{title}{What {{Is Climate Change}}? - {{NASA Science}}}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/RLGCL3SC/what-is-climate-change.html
+      \endverb
+      \verb{urlraw}
+      \verb https://science.nasa.gov/climate-change/what-is-climate-change/
+      \endverb
+      \verb{url}
+      \verb https://science.nasa.gov/climate-change/what-is-climate-change/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{nyt/global//global/global}
+    \entry{amendolaDroneLandingReinforcement2024}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=abb2413b27bbe7a4be945ccacebc923e}{%
+           family={Amendola},
+           familyi={A\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=31f671b099b3d9082acd512acee142c1}{%
+           family={Cenkeramaddi},
+           familyi={C\bibinitperiod},
+           given={Linga\bibnamedelima Reddy},
+           giveni={L\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b7c9f78665de866a6f4d15ba927000b7}{%
+           family={Jha},
+           familyi={J\bibinitperiod},
+           given={Ajit},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{94b64ad5b72f7897156bb8c349ba5cda}
+      \strng{fullhash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \strng{bibnamehash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \strng{authorbibnamehash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \strng{authornamehash}{94b64ad5b72f7897156bb8c349ba5cda}
+      \strng{authorfullhash}{aabbcfee45f5cba8ba05c7ad0740253a}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Unmanned aerial vehicles, and special multirotor drones, have shown great relevance in a plethora of missions that require high affordance, field of view, and precision. Their limited payload capacity and autonomy make its landing a crucial task. Despite many attempts in the literature to address drone landing, challenges and open gaps still exist. Reinforcement Learning has gained notoriety in a variety of control problems, with recent proposals for drone landing applications. This work aims to present a systematic literature review on works employing Deep Reinforcement Learning for multirotor drone landing in both static and dynamic platforms. It also revisits Reinforcement Learning Algorithms, the main frameworks and simulators adopted for specific landing operations. The comprehensive analysis performed on reviewed works revealed that there are important untackled challenges when it comes to wind disturbances, unpredictability of moving landing targets, sensor latency, and sim-to-real gap. Finally, we present our critical analysis of how recent state-of-the-art deep learning concepts can be combined with reinforcement learning to leverage the latter in addressing the open gaps in future works.}
+      \field{issn}{2687-7813}
+      \field{journaltitle}{IEEE Open Journal of Intelligent Transportation Systems}
+      \field{shorttitle}{Drone {{Landing}} and {{Reinforcement Learning}}}
+      \field{title}{Drone {{Landing}} and {{Reinforcement Learning}}: {{State-of-Art}}, {{Challenges}} and {{Opportunities}}}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{volume}{5}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{520\bibrangedash 539}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1109/OJITS.2024.3444487
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/WK55RAGU/Amendola et al. - 2024 - Drone Landing and Reinforcement Learning State-of-Art, Challenges and Opportunities.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/10637701
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/10637701
+      \endverb
+      \keyw{autonomous landing,Autonomous systems,Classification algorithms,Deep reinforcement learning,drones,Drones,Heuristic algorithms,overview,Q-learning,Reinforcement learning,Vehicle dynamics}
+    \endentry
+    \entry{calvinIPCC2023Climate2023}{report}{}
+      \name{author}{85}{}{%
+        {{un=0,uniquepart=base,hash=3a199d2c5300b48b1da4168691cbf005}{%
+           family={Calvin},
+           familyi={C\bibinitperiod},
+           given={Katherine},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c21c342ce8565cddc4391cc17436e31}{%
+           family={Dasgupta},
+           familyi={D\bibinitperiod},
+           given={Dipak},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1254a8caf087e6e9aca95dd5dedc6ed1}{%
+           family={Krinner},
+           familyi={K\bibinitperiod},
+           given={Gerhard},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2cf03d71432b1fd4b985005bf5b58b2f}{%
+           family={Mukherji},
+           familyi={M\bibinitperiod},
+           given={Aditi},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=793f1d27b385b71e14373d21acb122c6}{%
+           family={Thorne},
+           familyi={T\bibinitperiod},
+           given={Peter\bibnamedelima W.},
+           giveni={P\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=eb3a2cfa3e0242f625821030cf98d465}{%
+           family={Trisos},
+           familyi={T\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44fea44855c3faa16ced74e69f734588}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d560ab526f9506639a533231207c3d74}{%
+           family={Aldunce},
+           familyi={A\bibinitperiod},
+           given={Paulina},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2663c825f3f499e2f1419e781663b086}{%
+           family={Barrett},
+           familyi={B\bibinitperiod},
+           given={Ko},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6584c09da824150af788216e867615b9}{%
+           family={Blanco},
+           familyi={B\bibinitperiod},
+           given={Gabriel},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f28e782f752606caa13299de03b1016}{%
+           family={Cheung},
+           familyi={C\bibinitperiod},
+           given={William\bibnamedelima W.L.},
+           giveni={W\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dad1fcf9dd8221d7104ca7551b046030}{%
+           family={Connors},
+           familyi={C\bibinitperiod},
+           given={Sarah},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=94cdd2e56d01527f34af1909b8371285}{%
+           family={Denton},
+           familyi={D\bibinitperiod},
+           given={Fatima},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c4f3471f18bddecd22d8f1b7c30652d1}{%
+           family={Diongue-Niang},
+           familyi={D\bibinithyphendelim N\bibinitperiod},
+           given={Aïda},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bbeac2b1c0e5786b17dd2a468ad00861}{%
+           family={Dodman},
+           familyi={D\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=74e2d1949381ad32f9c36f9dcbd5640d}{%
+           family={Garschagen},
+           familyi={G\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41f991bcd266b94ba4c46f88d74262ce}{%
+           family={Geden},
+           familyi={G\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=234aca0494dba0f90c54c00fac42e0f2}{%
+           family={Hayward},
+           familyi={H\bibinitperiod},
+           given={Bronwyn},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d43f7eab4b625cffd243b3f2141e092c}{%
+           family={Jones},
+           familyi={J\bibinitperiod},
+           given={Christopher},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e8ffbf5c97427e8c8ce8d3a10f8e28e2}{%
+           family={Jotzo},
+           familyi={J\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a40901f8d7366b3fa546a2dd9de68261}{%
+           family={Krug},
+           familyi={K\bibinitperiod},
+           given={Thelma},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0e94fabf8cf90c4213936c4417f00dfa}{%
+           family={Lasco},
+           familyi={L\bibinitperiod},
+           given={Rodel},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0396f926bc483c7efd2bfa8496b9d0cd}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Yune-Yi},
+           giveni={Y\bibinithyphendelim Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6353363baf7fef1e2b7e6e86d6c23588}{%
+           family={Masson-Delmotte},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Valérie},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=02eb3024d6710ed3470891c3bf973e59}{%
+           family={Meinshausen},
+           familyi={M\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0968dd47b0917c4b83fafd94b57559ec}{%
+           family={Mintenbeck},
+           familyi={M\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=518a58ab8f1411555735a8c9aecaf0eb}{%
+           family={Mokssit},
+           familyi={M\bibinitperiod},
+           given={Abdalah},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=12ca96007ba0a31dec29e5f71d1709a2}{%
+           family={Otto},
+           familyi={O\bibinitperiod},
+           given={Friederike\bibnamedelima E.L.},
+           giveni={F\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c7340bd91af5be2a5e84e28ea1d926b3}{%
+           family={Pathak},
+           familyi={P\bibinitperiod},
+           given={Minal},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ae39f4e939829bc4d7209716abab828}{%
+           family={Pirani},
+           familyi={P\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4d2550325e999b73531189f4823357e4}{%
+           family={Poloczanska},
+           familyi={P\bibinitperiod},
+           given={Elvira},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b498e89d5f1cbed9caae7a7979360c97}{%
+           family={Pörtner},
+           familyi={P\bibinitperiod},
+           given={Hans-Otto},
+           giveni={H\bibinithyphendelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ee0808d9cd85d8bc20e0e267becf852}{%
+           family={Revi},
+           familyi={R\bibinitperiod},
+           given={Aromar},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=96fb61799f7e89d8eca3fe29d05330ee}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Debra\bibnamedelima C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7585dc3b9097678e1165003690a1db58}{%
+           family={Roy},
+           familyi={R\bibinitperiod},
+           given={Joyashree},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd1bd9cc281b868886654cb9e54542b1}{%
+           family={Ruane},
+           familyi={R\bibinitperiod},
+           given={Alex\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=25de426179ed606806fdbe7201af6999}{%
+           family={Skea},
+           familyi={S\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b3252cd2f8e141a64cf7ce9a00657372}{%
+           family={Shukla},
+           familyi={S\bibinitperiod},
+           given={Priyadarshi\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=87818ac293b08611f612c6d37eb73e19}{%
+           family={Slade},
+           familyi={S\bibinitperiod},
+           given={Raphael},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=436c84d68503f6bb6f6dc610f5534a49}{%
+           family={Slangen},
+           familyi={S\bibinitperiod},
+           given={Aimée},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a256dc20dec1084ab98550ad44acd24c}{%
+           family={Sokona},
+           familyi={S\bibinitperiod},
+           given={Youba},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=acb63b53329dd473d3ee08e4f7c7a6e1}{%
+           family={Sörensson},
+           familyi={S\bibinitperiod},
+           given={Anna\bibnamedelima A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=afad00fe4ef771772cf5365ecd0a05df}{%
+           family={Tignor},
+           familyi={T\bibinitperiod},
+           given={Melinda},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d241f1c9c4c1e3a3b920431254922034}{%
+           family={Van\bibnamedelima Vuuren},
+           familyi={V\bibinitperiod\bibinitdelim V\bibinitperiod},
+           given={Detlef},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce98f1bdf13ec40a66d9384d0e3bcb5d}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Yi-Ming},
+           giveni={Y\bibinithyphendelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=14628fc093898da0013b9ad40a0c9a29}{%
+           family={Winkler},
+           familyi={W\bibinitperiod},
+           given={Harald},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=913d3b0d5757aad7955d4332563274ea}{%
+           family={Zhai},
+           familyi={Z\bibinitperiod},
+           given={Panmao},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b643a715d62dddbcd620da1a94d41ae2}{%
+           family={Zommers},
+           familyi={Z\bibinitperiod},
+           given={Zinta},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b37bff65e41d36a5ae8801a18062794f}{%
+           family={Hourcade},
+           familyi={H\bibinitperiod},
+           given={Jean-Charles},
+           giveni={J\bibinithyphendelim C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40478f465de8533b3f69ab839ebc0f21}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Francis\bibnamedelima X.},
+           giveni={F\bibinitperiod\bibinitdelim X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c1963f77e3ed129507b040bffcdc863f}{%
+           family={Pachauri},
+           familyi={P\bibinitperiod},
+           given={Shonali},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=86f60ca0c7aa92b8b655209fa162b5b7}{%
+           family={Simpson},
+           familyi={S\bibinitperiod},
+           given={Nicholas\bibnamedelima P.},
+           giveni={N\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f397569e151d604155511bff0b0c478}{%
+           family={Singh},
+           familyi={S\bibinitperiod},
+           given={Chandni},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=19535692d22a8d782724d9231367a3d8}{%
+           family={Thomas},
+           familyi={T\bibinitperiod},
+           given={Adelle},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=006437fc666b19a3f58fba2ddf028cea}{%
+           family={Totin},
+           familyi={T\bibinitperiod},
+           given={Edmond},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=29934da19598d722877990ffce5e4568}{%
+           family={Alegría},
+           familyi={A\bibinitperiod},
+           given={Andrés},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=332fd813ef497de3dd07c103ec793ee0}{%
+           family={Armour},
+           familyi={A\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6e2e62ccb2728c7f6bfcd3c9a6213f2c}{%
+           family={Bednar-Friedl},
+           familyi={B\bibinithyphendelim F\bibinitperiod},
+           given={Birgit},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=267cba09b82e70468736a15310b07b28}{%
+           family={Blok},
+           familyi={B\bibinitperiod},
+           given={Kornelis},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fa1e4b630bcb779fac485a43e2ea4007}{%
+           family={Cissé},
+           familyi={C\bibinitperiod},
+           given={Guéladio},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e0d34fdd1d6f7792eb8d50ad9161ee5c}{%
+           family={Dentener},
+           familyi={D\bibinitperiod},
+           given={Frank},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=48b10c88569733cc0fcfef6d8f32fe54}{%
+           family={Eriksen},
+           familyi={E\bibinitperiod},
+           given={Siri},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a54ad50cc099354d97f432329db01f16}{%
+           family={Fischer},
+           familyi={F\bibinitperiod},
+           given={Erich},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bf6c4c9c2ead387c482f0ae958cc0f3a}{%
+           family={Garner},
+           familyi={G\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d45d8f0e7c3f721d67333f4f9298ad1e}{%
+           family={Guivarch},
+           familyi={G\bibinitperiod},
+           given={Céline},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a06b4da48bfb134a9a86f816e83f46b0}{%
+           family={Haasnoot},
+           familyi={H\bibinitperiod},
+           given={Marjolijn},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aaf8ae1951d35612603516a9bc3ab761}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Gerrit},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9fe16fbbecaea4df68970c639f79ced1}{%
+           family={Hauser},
+           familyi={H\bibinitperiod},
+           given={Mathias},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0e83b570b176c6b30bec95bdf928878}{%
+           family={Hawkins},
+           familyi={H\bibinitperiod},
+           given={Ed},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7a075f2abab9a33ed3edd026a2b2d9fe}{%
+           family={Hermans},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e618b134dbff3bba80ddd9fabd643839}{%
+           family={Kopp},
+           familyi={K\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d8bbe2adeefee14a2425d17c4b73df7d}{%
+           family={Leprince-Ringuet},
+           familyi={L\bibinithyphendelim R\bibinitperiod},
+           given={Noëmie},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2601359c181da1989151ced3f1361273}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Jared},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8e74934da31b3463a03eb0d483fe9ce3}{%
+           family={Ley},
+           familyi={L\bibinitperiod},
+           given={Debora},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=918294d6b9e5ddf501975f831456a945}{%
+           family={Ludden},
+           familyi={L\bibinitperiod},
+           given={Chloé},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=43e1ef1419caadbbfdf4c9383b357c25}{%
+           family={Niamir},
+           familyi={N\bibinitperiod},
+           given={Leila},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8b61dc6176a4e0bb72ca95ea5cd64f67}{%
+           family={Nicholls},
+           familyi={N\bibinitperiod},
+           given={Zebedee},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=41e96bafb88a15b1a976f40b8085d499}{%
+           family={Some},
+           familyi={S\bibinitperiod},
+           given={Shreya},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=262ab00443f9165b2ff9c53a0248232c}{%
+           family={Szopa},
+           familyi={S\bibinitperiod},
+           given={Sophie},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0b9dd853959e0ca14a977cd6c384a82e}{%
+           family={Trewin},
+           familyi={T\bibinitperiod},
+           given={Blair},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=08a4ae6d743de5b20707e1d2a25af86d}{%
+           family={Van\bibnamedelimb Der\bibnamedelima Wijst},
+           familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Kaj-Ivar},
+           giveni={K\bibinithyphendelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d30a96c4077557cc6424ffb5d95380f0}{%
+           family={Winter},
+           familyi={W\bibinitperiod},
+           given={Gundula},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=edbc63a33eaf560138b72c66185f451f}{%
+           family={Witting},
+           familyi={W\bibinitperiod},
+           given={Maximilian},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7753994155935ad6927f214e90adf12b}{%
+           family={Birt},
+           familyi={B\bibinitperiod},
+           given={Arlene},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d3d7b0fc9c160b7a09c1dcbe362068d2}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Meeyoung},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{38}{}{%
+        {{hash=3aa7f5e1cb3212632a19e326b9acedbf}{%
+           family={Arias},
+           familyi={A\bibinitperiod},
+           given={Paola},
+           giveni={P\bibinitperiod}}}%
+        {{hash=1e90f0236bb4b8425bd7297ad8461eab}{%
+           family={Bustamante},
+           familyi={B\bibinitperiod},
+           given={Mercedes},
+           giveni={M\bibinitperiod}}}%
+        {{hash=19ef0eb12330bc21022b743cd6ceb4bd}{%
+           family={Elgizouli},
+           familyi={E\bibinitperiod},
+           given={Ismail},
+           giveni={I\bibinitperiod}}}%
+        {{hash=3f5bfe8bde6919836ed8d43e504a9f89}{%
+           family={Flato},
+           familyi={F\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+        {{hash=3932996dbad0784adf625b0e87ddf414}{%
+           family={Howden},
+           familyi={H\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+        {{hash=be107c95b5c960dff91a22e4d0e3b862}{%
+           family={Méndez-Vallejo},
+           familyi={M\bibinithyphendelim V\bibinitperiod},
+           given={Carlos},
+           giveni={C\bibinitperiod}}}%
+        {{hash=4d8413633fe26cb565f32a1ebbdd185d}{%
+           family={Pereira},
+           familyi={P\bibinitperiod},
+           given={Joy\bibnamedelima Jacqueline},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=0ee296c9e510c7d631e9d90be5dd0d5b}{%
+           family={Pichs-Madruga},
+           familyi={P\bibinithyphendelim M\bibinitperiod},
+           given={Ramón},
+           giveni={R\bibinitperiod}}}%
+        {{hash=abeef2282813fe950975af1b125b28d1}{%
+           family={Rose},
+           familyi={R\bibinitperiod},
+           given={Steven\bibnamedelima K.},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=c3e63fc6ef7d9e40a7c3c2c47ceed8fa}{%
+           family={Saheb},
+           familyi={S\bibinitperiod},
+           given={Yamina},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ee3326c54bc96e655de5b3e60ea719c7}{%
+           family={Sánchez\bibnamedelima Rodríguez},
+           familyi={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={Roberto},
+           giveni={R\bibinitperiod}}}%
+        {{hash=77047cdd68b814a7652cf4bdd2f7fcae}{%
+           family={Ürge-Vorsatz},
+           familyi={Ü\bibinithyphendelim V\bibinitperiod},
+           given={Diana},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d42ab4de7c1047c00fbb41489f14e15c}{%
+           family={Xiao},
+           familyi={X\bibinitperiod},
+           given={Cunde},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b8b64c2730279432632c44c6aab39581}{%
+           family={Yassaa},
+           familyi={Y\bibinitperiod},
+           given={Noureddine},
+           giveni={N\bibinitperiod}}}%
+        {{hash=44fea44855c3faa16ced74e69f734588}{%
+           family={Romero},
+           familyi={R\bibinitperiod},
+           given={José},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b8fa38441a5c2839e745b638723c5e56}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jinmi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=1cd52501212e47ea99a83e77821565e9}{%
+           family={Haites},
+           familyi={H\bibinitperiod},
+           given={Erik\bibnamedelima F.},
+           giveni={E\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=d2e07b972220087e15c5e7a92599ff5c}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Yonghun},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=ec1bdf8ace86d1cb2bf66f75bd95d42b}{%
+           family={Stavins},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=7753994155935ad6927f214e90adf12b}{%
+           family={Birt},
+           familyi={B\bibinitperiod},
+           given={Arlene},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d3d7b0fc9c160b7a09c1dcbe362068d2}{%
+           family={Ha},
+           familyi={H\bibinitperiod},
+           given={Meeyoung},
+           giveni={M\bibinitperiod}}}%
+        {{hash=974c055e948588eb37e409b35da621f9}{%
+           family={Orendain},
+           familyi={O\bibinitperiod},
+           given={Dan\bibnamedelimb Jezreel\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=43b46743580b42df08fe99a9faf3446e}{%
+           family={Ignon},
+           familyi={I\bibinitperiod},
+           given={Lance},
+           giveni={L\bibinitperiod}}}%
+        {{hash=2085c416ab1988b40d8db37963a1c5b2}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Semin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=dd524c7dc1bcc53723b5b4fc18f6157d}{%
+           family={Park},
+           familyi={P\bibinitperiod},
+           given={Youngin},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=dcc75bdb1247d0d0a860d83f236bd9c3}{%
+           family={Reisinger},
+           familyi={R\bibinitperiod},
+           given={Andy},
+           giveni={A\bibinitperiod}}}%
+        {{hash=164a6dbc99ccdbe2cd07b6cfc8855344}{%
+           family={Cammaramo},
+           familyi={C\bibinitperiod},
+           given={Diego},
+           giveni={D\bibinitperiod}}}%
+        {{hash=0e4cc9c2245348b69aca6d7f26b3930f}{%
+           family={Fischlin},
+           familyi={F\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0c56aace0924386a6de41eaaa81ac81f}{%
+           family={Fuglestvedt},
+           familyi={F\bibinitperiod},
+           given={Jan\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=aaf8ae1951d35612603516a9bc3ab761}{%
+           family={Hansen},
+           familyi={H\bibinitperiod},
+           given={Gerrit},
+           giveni={G\bibinitperiod}}}%
+        {{hash=918294d6b9e5ddf501975f831456a945}{%
+           family={Ludden},
+           familyi={L\bibinitperiod},
+           given={Chloé},
+           giveni={C\bibinitperiod}}}%
+        {{hash=6353363baf7fef1e2b7e6e86d6c23588}{%
+           family={Masson-Delmotte},
+           familyi={M\bibinithyphendelim D\bibinitperiod},
+           given={Valérie},
+           giveni={V\bibinitperiod}}}%
+        {{hash=ffc8c2e1710f55b31e6896a0b89270c9}{%
+           family={Matthews},
+           familyi={M\bibinitperiod},
+           given={J.B.\bibnamedelimi Robin},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=0968dd47b0917c4b83fafd94b57559ec}{%
+           family={Mintenbeck},
+           familyi={M\bibinitperiod},
+           given={Katja},
+           giveni={K\bibinitperiod}}}%
+        {{hash=2ae39f4e939829bc4d7209716abab828}{%
+           family={Pirani},
+           familyi={P\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=4d2550325e999b73531189f4823357e4}{%
+           family={Poloczanska},
+           familyi={P\bibinitperiod},
+           given={Elvira},
+           giveni={E\bibinitperiod}}}%
+        {{hash=d8bbe2adeefee14a2425d17c4b73df7d}{%
+           family={Leprince-Ringuet},
+           familyi={L\bibinithyphendelim R\bibinitperiod},
+           given={Noëmie},
+           giveni={N\bibinitperiod}}}%
+        {{hash=068447ee26859629ebd5a35075df8d5f}{%
+           family={Péan},
+           familyi={P\bibinitperiod},
+           given={Clotilde},
+           giveni={C\bibinitperiod}}}%
+      }
+      \name{namea}{1}{}{%
+        {{hash=14bd5bacfec2818b7404cf0fcb4ed61e}{%
+           family={Lee},
+           familyi={L\bibinitperiod},
+           given={Hoesung},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Intergovernmental Panel on Climate Change (IPCC)}%
+      }
+      \strng{namehash}{bed8c0b52a3e49c5ce6ee8e79396f29d}
+      \strng{fullhash}{983c1b6a3dcff34dd47b099a4ccfe232}
+      \strng{bibnamehash}{7005542db139a097e79494a38b04d7fe}
+      \strng{authorbibnamehash}{7005542db139a097e79494a38b04d7fe}
+      \strng{authornamehash}{bed8c0b52a3e49c5ce6ee8e79396f29d}
+      \strng{authorfullhash}{983c1b6a3dcff34dd47b099a4ccfe232}
+      \strng{editorbibnamehash}{23a9bc212b26e7eafee39f6a29cec773}
+      \strng{editornamehash}{08e4c8d287aa843d1f1ffade7e0f4407}
+      \strng{editorfullhash}{eb0ed336be9fe477585cdc6e585afe10}
+      \strng{nameabibnamehash}{14bd5bacfec2818b7404cf0fcb4ed61e}
+      \strng{nameanamehash}{14bd5bacfec2818b7404cf0fcb4ed61e}
+      \strng{nameafullhash}{14bd5bacfec2818b7404cf0fcb4ed61e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The Synthesis Report (SYR) is a stand-alone synthesis of the most policy-relevant evidence from the scientific, technical, and socio-economic literature assessed in the Sixth Assessment Report (AR6) of the Intergovernmental Panel on Climate Change (IPCC). The SYR distils and integrates the main findings of the three reports of the Working Groups of the IPCC during the AR6, and the three AR6 Special Reports into a concise document. It consists of a Summary for Policymakers and a longer report.}
+      \field{day}{25}
+      \field{edition}{First}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{nameatype}{collaborator}
+      \field{shorttitle}{{{IPCC}}, 2023}
+      \field{title}{{{IPCC}}, 2023: {{Climate Change}} 2023: {{Synthesis Report}}. {{Contribution}} of {{Working Groups I}}, {{II}} and {{III}} to the {{Sixth Assessment Report}} of the {{Intergovernmental Panel}} on {{Climate Change}} [{{Core Writing Team}}, {{H}}. {{Lee}} and {{J}}. {{Romero}} (Eds.)]. {{IPCC}}, {{Geneva}}, {{Switzerland}}.}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.59327/IPCC/AR6-9789291691647
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/WNS6BA3V/Calvin et al. - 2023 - IPCC, 2023 Climate Change 2023 Synthesis Report. Contribution of Working Groups I, II and III to t.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.ipcc.ch/report/ar6/syr/
+      \endverb
+      \verb{url}
+      \verb https://www.ipcc.ch/report/ar6/syr/
+      \endverb
+    \endentry
+    \entry{ClimateChangeTrends}{online}{}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labeldatesource}{nodate}
+      \field{labeltitlesource}{title}
+      \field{title}{Climate {{Change Trends}} and {{Impacts}} on {{California Agriculture}}: {{A Detailed Review}} | {{MDPI}}}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/Z9CN5CPG/25.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2073-4395/8/3/25#Conclusions
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2073-4395/8/3/25#Conclusions
+      \endverb
+    \endentry
+    \entry{hultgrenImpactsClimateChange2025}{article}{}
+      \name{author}{16}{}{%
+        {{un=0,uniquepart=base,hash=c98b376966766c3e05ce404c21e8e956}{%
+           family={Hultgren},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=018534f758197968a8b7506e5afd1259}{%
+           family={Carleton},
+           familyi={C\bibinitperiod},
+           given={Tamma},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f16ab0909021bc30b4563eb4d6956894}{%
+           family={Delgado},
+           familyi={D\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddf1a569443a33deeb8808221e29ab9e}{%
+           family={Gergel},
+           familyi={G\bibinitperiod},
+           given={Diana\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=23e2201fd0a08bee5f8f929d238f6472}{%
+           family={Greenstone},
+           familyi={G\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1936129a2f4d64b1c5f6439712cc2c45}{%
+           family={Houser},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ea5cf7eb9e01013d277e8a0c5855194}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={Solomon},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ebc18fbce5ee96bcbbb0264c8a8fd5ff}{%
+           family={Jina},
+           familyi={J\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4391c3436abcd53bbd7c83a3a5021ceb}{%
+           family={Kopp},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima E.},
+           giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d1b333d88068a34b4a627d09a530cb9a}{%
+           family={Malevich},
+           familyi={M\bibinitperiod},
+           given={Steven\bibnamedelima B.},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ddafad0766e37d7ca74b8821a07bad4f}{%
+           family={McCusker},
+           familyi={M\bibinitperiod},
+           given={Kelly\bibnamedelima E.},
+           giveni={K\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f0ef2ba6f58b285d3cf625c2262ed9ae}{%
+           family={Mayer},
+           familyi={M\bibinitperiod},
+           given={Terin},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fd1f35afadd7e7fc3eb3ee53771b943e}{%
+           family={Nath},
+           familyi={N\bibinitperiod},
+           given={Ishan},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67d7b2fbad3cb18760ce34cb797c49e3}{%
+           family={Rising},
+           familyi={R\bibinitperiod},
+           given={James},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=020712cb80f8a098be3293e9f042c195}{%
+           family={Rode},
+           familyi={R\bibinitperiod},
+           given={Ashwin},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d66da39b62cada70c9632ce3c2fc395}{%
+           family={Yuan},
+           familyi={Y\bibinitperiod},
+           given={Jiacan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{6b1fc5bc2532bb41de7eda2418951151}
+      \strng{fullhash}{4dbdf1a940413681ef1ca309f22325aa}
+      \strng{bibnamehash}{4dbdf1a940413681ef1ca309f22325aa}
+      \strng{authorbibnamehash}{4dbdf1a940413681ef1ca309f22325aa}
+      \strng{authornamehash}{6b1fc5bc2532bb41de7eda2418951151}
+      \strng{authorfullhash}{4dbdf1a940413681ef1ca309f22325aa}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Climate change threatens global food systems1, but the extent to which adaptation will reduce losses remains unknown and controversial2. Even within the well-studied context of US agriculture, some analyses argue that adaptation will be widespread and climate damages small3,4, whereas others conclude that adaptation will be limited and losses severe5,6. Scenario-based analyses indicate that adaptation should have notable consequences on global agricultural productivity7–9, but there has been no systematic study of how extensively real-world producers actually adapt at the global scale. Here we empirically estimate the impact of global producer adaptations using longitudinal data on six staple crops spanning 12,658 regions, capturing two-thirds of global crop calories. We estimate that global production declines 5.5~×\,1014\,kcal annually per 1 °C global mean surface temperature (GMST) rise (120\,kcal per person per day or 4.4\% of recommended consumption per 1 °C; P\,{$<$}\,0.001). We project that adaptation and income growth alleviate 23\% of global losses in 2050 and 34\% at the end of the century (6\% and 12\%, respectively; moderate-emissions scenario), but substantial residual losses remain for all staples except rice. In contrast to analyses of other outcomes that project the greatest damages to the global poor10,11, we find that global impacts are dominated by losses to modern-day breadbaskets with favourable climates and limited present adaptation, although~losses in low-income~regions losses are also substantial. These results indicate a scale of innovation, cropland expansion or further adaptation that might be necessary to ensure food security in a changing climate.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{8068}
+      \field{title}{Impacts of Climate Change on Global Agriculture Accounting for Adaptation}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{642}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{644\bibrangedash 652}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1038/s41586-025-09085-w
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/s41586-025-09085-w
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/s41586-025-09085-w
+      \endverb
+      \keyw{Agriculture,Climate-change adaptation,Climate-change impacts,Environmental economics,Interdisciplinary studies}
+    \endentry
+    \entry{jafari-shahbazzadehPrecisionLandingTechniques2025}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=86f0875db7e0639a5b4fd6c4cc533ed1}{%
+           family={Jafari-Shahbazzadeh},
+           familyi={J\bibinithyphendelim S\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f409ec2e9b7cd24f91d12661409508b0}{%
+           family={Binesh},
+           familyi={B\bibinitperiod},
+           given={Alireza},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{fullhash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{bibnamehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{authorbibnamehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{authornamehash}{48cd93c110c46a61ff394681c13ec540}
+      \strng{authorfullhash}{48cd93c110c46a61ff394681c13ec540}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Precision drone landing technology has emerged as a critical area of research, offering transformative potential across industries such as logistics, search and rescue, environmental monitoring, and autonomous transportation. This review paper provides a comprehensive analysis of vision-based systems for precise drone landings, focusing on the integration of advanced computer vision algorithms, sensor fusion, and robust control strategies. Vision-based systems, when combined with state-of-the-art sensors like GPS, IMU, and LiDAR, can significantly enhance landing accuracy, robustness, and reliability in complex scenarios. The paper reviews the challenges associated with real-time processing, including efficient object detection, tracking, and depth estimation, particularly in varying environmental conditions such as low light and cluttered surroundings. Additionally, it explores the importance of precise state estimation for ensuring safe and reliable landings. Key issues such as the integration of multiple sensor modalities, optimization of algorithms for real-time decision-making, and the development of reliable control systems to handle uncertainties and external disturbances are thoroughly examined. The paper concludes by outlining potential future research directions aimed at addressing the remaining challenges in precision landing technology, with the ultimate goal of enabling safer, more efficient, and scalable drone operations across diverse use cases.}
+      \field{day}{1}
+      \field{issn}{2364-1835}
+      \field{journaltitle}{Iranian Journal of Science and Technology, Transactions of Mechanical Engineering}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{5}
+      \field{shortjournal}{Iran J Sci Technol Trans Mech Eng}
+      \field{shorttitle}{Precision {{Landing Techniques}} for {{Drones}}}
+      \field{title}{Precision {{Landing Techniques}} for {{Drones}}: {{A Comprehensive Review}}}
+      \field{urlday}{4}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{volume}{49}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1959\bibrangedash 1986}
+      \range{pages}{28}
+      \verb{doi}
+      \verb 10.1007/s40997-025-00878-y
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/W5TFLSP5/Jafari-Shahbazzadeh and Binesh - 2025 - Precision Landing Techniques for Drones A Comprehensive Review.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s40997-025-00878-y
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s40997-025-00878-y
+      \endverb
+      \keyw{Autonomous systems,Drone precision landing,UAV,Vision-based systems}
+    \endentry
+    \entry{nationsWhatClimateChange}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2d661e9167bd3a268ea03a3ee152926c}{%
+           family={Nations},
+           familyi={N\bibinitperiod},
+           given={United},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {United Nations}%
+      }
+      \list{publisher}{1}{%
+        {United Nations}%
+      }
+      \strng{namehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{fullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{bibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorbibnamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authornamehash}{2d661e9167bd3a268ea03a3ee152926c}
+      \strng{authorfullhash}{2d661e9167bd3a268ea03a3ee152926c}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Climate change refers to long-term shifts in temperatures and weather patterns. Such shifts can be natural, due to changes in the sun’s activity or large volcanic eruptions. But since the 1800s, human activities have been the main driver of climate change, primarily due to the burning of fossil fuels like coal, oil and gas.}
+      \field{langid}{english}
+      \field{title}{What {{Is Climate Change}}?}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/KHQMAMZV/what-is-climate-change.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.un.org/en/climatechange/what-is-climate-change
+      \endverb
+      \verb{url}
+      \verb https://www.un.org/en/climatechange/what-is-climate-change
+      \endverb
+    \endentry
+    \entry{katze}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=ef776916f007fe0e64736c2c0a01ed51}{%
+           family={u/unknown},
+           familyi={u\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{fullhash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{bibnamehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{authorbibnamehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{authornamehash}{ef776916f007fe0e64736c2c0a01ed51}
+      \strng{authorfullhash}{ef776916f007fe0e64736c2c0a01ed51}
+      \field{sortinit}{u}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Beitrag auf Reddit (Subreddit r/aww)}
+      \field{title}{Happy Birthday}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.reddit.com/r/aww/comments/fvk44k/happy_birthday/
+      \endverb
+      \verb{url}
+      \verb https://www.reddit.com/r/aww/comments/fvk44k/happy_birthday/
+      \endverb
+    \endentry
+    \entry{WhatClimateChange2022}{online}{}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Climate change is a long-term change in the average weather patterns that have come to define Earth’s local, regional and global climates. These changes have}
+      \field{day}{15}
+      \field{hour}{22}
+      \field{langid}{american}
+      \field{minute}{38}
+      \field{month}{6}
+      \field{second}{19}
+      \field{shorttitle}{What {{Is Climate Change}}?}
+      \field{timezone}{-04\bibtzminsep 00}
+      \field{title}{What {{Is Climate Change}}? - {{NASA Science}}}
+      \field{urlday}{30}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/RLGCL3SC/what-is-climate-change.html
+      \endverb
+      \verb{urlraw}
+      \verb https://science.nasa.gov/climate-change/what-is-climate-change/
+      \endverb
+      \verb{url}
+      \verb https://science.nasa.gov/climate-change/what-is-climate-change/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
