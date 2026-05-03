@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  15 APR 2026 15:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  3 MAY 2026 17:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -927,10 +927,7 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'apa.dbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/apa.dbx
-File: apa.dbx 2023/03/20 v9.17 APA biblatex style data model
-)
+Package biblatex Info: ... file 'authoryear.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@afterword=\count370
@@ -969,48 +966,38 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedshortauthor=\count403
 \c@shorteditor=\count404
 \c@savedshorteditor=\count405
-\c@narrator=\count406
-\c@savednarrator=\count407
-\c@execproducer=\count408
-\c@savedexecproducer=\count409
-\c@execdirector=\count410
-\c@savedexecdirector=\count411
-\c@with=\count412
-\c@savedwith=\count413
-\c@labelname=\count414
-\c@savedlabelname=\count415
-\c@institution=\count416
-\c@savedinstitution=\count417
-\c@lista=\count418
-\c@savedlista=\count419
-\c@listb=\count420
-\c@savedlistb=\count421
-\c@listc=\count422
-\c@savedlistc=\count423
-\c@listd=\count424
-\c@savedlistd=\count425
-\c@liste=\count426
-\c@savedliste=\count427
-\c@listf=\count428
-\c@savedlistf=\count429
-\c@location=\count430
-\c@savedlocation=\count431
-\c@organization=\count432
-\c@savedorganization=\count433
-\c@origlocation=\count434
-\c@savedoriglocation=\count435
-\c@origpublisher=\count436
-\c@savedorigpublisher=\count437
-\c@publisher=\count438
-\c@savedpublisher=\count439
-\c@language=\count440
-\c@savedlanguage=\count441
-\c@origlanguage=\count442
-\c@savedoriglanguage=\count443
-\c@citation=\count444
-\c@savedcitation=\count445
-\c@pageref=\count446
-\c@savedpageref=\count447
+\c@labelname=\count406
+\c@savedlabelname=\count407
+\c@institution=\count408
+\c@savedinstitution=\count409
+\c@lista=\count410
+\c@savedlista=\count411
+\c@listb=\count412
+\c@savedlistb=\count413
+\c@listc=\count414
+\c@savedlistc=\count415
+\c@listd=\count416
+\c@savedlistd=\count417
+\c@liste=\count418
+\c@savedliste=\count419
+\c@listf=\count420
+\c@savedlistf=\count421
+\c@location=\count422
+\c@savedlocation=\count423
+\c@organization=\count424
+\c@savedorganization=\count425
+\c@origlocation=\count426
+\c@savedoriglocation=\count427
+\c@origpublisher=\count428
+\c@savedorigpublisher=\count429
+\c@publisher=\count430
+\c@savedpublisher=\count431
+\c@language=\count432
+\c@savedlanguage=\count433
+\c@origlanguage=\count434
+\c@savedoriglanguage=\count435
+\c@pageref=\count436
+\c@savedpageref=\count437
 \shorthandwidth=\skip132
 \shortjournalwidth=\skip133
 \shortserieswidth=\skip134
@@ -1034,55 +1021,40 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count448
-\c@textcitetotal=\count449
-\c@textcitemaxnames=\count450
-\c@biburlbigbreakpenalty=\count451
-\c@biburlbreakpenalty=\count452
-\c@biburlnumpenalty=\count453
-\c@biburlucpenalty=\count454
-\c@biburllcpenalty=\count455
+\c@textcitecount=\count438
+\c@textcitetotal=\count439
+\c@textcitemaxnames=\count440
+\c@biburlbigbreakpenalty=\count441
+\c@biburlbreakpenalty=\count442
+\c@biburlnumpenalty=\count443
+\c@biburlucpenalty=\count444
+\c@biburllcpenalty=\count445
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count456
+\c@smartand=\count446
 )
-Package biblatex Info: Trying to load bibliography style 'apa'...
-Package biblatex Info: ... file 'apa.bbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/apa.bbx
-File: apa.bbx 2023/03/20 v9.17 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count457
-\c@bbx:relatedtotal=\count458
-)
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already defined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already defined, overwriting.
-)
-Package biblatex Info: Trying to load citation style 'apa'...
-Package biblatex Info: ... file 'apa.cbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/apa.cbx
-File: apa.cbx 2023/03/20 v9.17 APA biblatex citation style
-Package biblatex Info: Delimiter 'nameyeardelim' in context '' already defined, overwriting.
-Package biblatex Info: Delimiter 'andothersdelim' in context '' already defined, overwriting.
-Package biblatex Info: Redefining '\fullcite'.
-Package biblatex Info: Redefining '\citeauthor'.
-Package biblatex Info: Redefining '\citeyear'.
+\c@bbx:relatedcount=\count447
+\c@bbx:relatedtotal=\count448
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
-Package biblatex Info: Redefining '\cites'.
 Package biblatex Info: Redefining '\parencite'.
-Package biblatex Info: Redefining '\parencites'.
 Package biblatex Info: Redefining '\footcite'.
-Package biblatex Info: Redefining '\footcites'.
 Package biblatex Info: Redefining '\footcitetext'.
-Package biblatex Info: Redefining '\footcitetexts'.
 Package biblatex Info: Redefining '\smartcite'.
-Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Redefining '\textcite'.
 Package biblatex Info: Redefining '\textcites'.
 )
@@ -1115,8 +1087,8 @@ Package caption Info: KOMA-Script document class detected.
  (/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
 File: caption-koma.sto 2023/09/08 v2.0e Adaption of the caption package to the KOMA-Script document classes (AR)
 ))
-\c@caption@flags=\count459
-\c@continuedfloat=\count460
+\c@caption@flags=\count449
+\c@continuedfloat=\count450
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -1131,20 +1103,20 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTright=\skip147
 \LTpre=\skip148
 \LTpost=\skip149
-\LTchunksize=\count461
+\LTchunksize=\count451
 \LTcapwidth=\dimen264
 \LT@head=\box65
 \LT@firsthead=\box66
 \LT@foot=\box67
 \LT@lastfoot=\box68
 \LT@gbox=\box69
-\LT@cols=\count462
-\LT@rows=\count463
-\c@LT@tables=\count464
-\c@LT@chunks=\count465
+\LT@cols=\count452
+\LT@rows=\count453
+\c@LT@tables=\count454
+\c@LT@chunks=\count455
 \LT@p@ftn=\toks43
 )
-Class scrreprt Info: longtable captions redefined on input line 246.
+Class scrreprt Info: longtable captions redefined on input line 245.
  (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen265
@@ -1184,16 +1156,16 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen274
 \cmidrulekern=\dimen275
 \defaultaddspace=\dimen276
-\@cmidla=\count466
-\@cmidlb=\count467
+\@cmidla=\count456
+\@cmidlb=\count457
 \@aboverulesep=\dimen277
 \@belowrulesep=\dimen278
-\@thisruleclass=\count468
-\@lastruleclass=\count469
+\@thisruleclass=\count458
+\@lastruleclass=\count459
 \@thisrulewidth=\dimen279
 ) (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count470
+\c@tracingst=\count460
 \ST@wd=\dimen280
 \ST@rightskip=\skip166
 \ST@leftskip=\skip167
@@ -1212,14 +1184,14 @@ Package: supertabular 2020/02/02 v4.1g the supertabular environment
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 \everycr=\toks45
 \minrowclearance=\skip169
-\rownum=\count471
+\rownum=\count461
 )
 
 LaTeX Warning: Package "xcolor" has already been loaded: ignoring load-time
 (LaTeX)        option "xcdraw".
 
 
-Package array Warning: Column w is already defined on input line 252.
+Package array Warning: Column w is already defined on input line 251.
 
 (/usr/share/texlive/texmf-dist/tex/latex/paralist/paralist.sty
 Package: paralist 2017/01/22 v2.7 Extended list environments
@@ -1236,21 +1208,21 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
  (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count472
-\calc@Bcount=\count473
+\calc@Acount=\count462
+\calc@Bcount=\count463
 \calc@Adimen=\dimen290
 \calc@Bdimen=\dimen291
 \calc@Askip=\skip174
 \calc@Bskip=\skip175
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count474
+\calc@Ccount=\count464
 \calc@Cskip=\skip176
 ) (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
 Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 ))) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count475
+\c@AlgoLine=\count465
 \algocf@hangindent=\skip177
  (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
@@ -1287,9 +1259,9 @@ Package: relsize 2013/03/29 ver 4.1
 \algoheightrule=\skip193
 \algotitleheightruledefault=\skip194
 \algotitleheightrule=\skip195
-\c@algocfline=\count476
-\c@algocfproc=\count477
-\c@algocf=\count478
+\c@algocfline=\count466
+\c@algocfproc=\count467
+\c@algocf=\count468
 \algocf@algoframe=\box79
 \algocf@algobox=\box80
 ))
@@ -1307,9 +1279,9 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count479
-\Gm@cntv=\count480
-\c@Gm@tempcnt=\count481
+\Gm@cnth=\count469
+\Gm@cntv=\count470
+\c@Gm@tempcnt=\count471
 \Gm@bindingoffset=\dimen298
 \Gm@wd@mp=\dimen299
 \Gm@odd@mp=\dimen300
@@ -1340,7 +1312,7 @@ File: lstlang3.sty 2023/02/27 1.9 listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-\c@definition=\count482
+\c@definition=\count472
 )
 
 LaTeX Warning: \include should only be used after \begin{document} on input line 91.
@@ -1399,16 +1371,16 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
 LaTeX Font Info:    ... okay on input line 100.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count483
+\scratchcounter=\count473
 \scratchdimen=\dimen306
 \scratchbox=\box81
-\nofMPsegments=\count484
-\nofMParguments=\count485
+\nofMPsegments=\count474
+\nofMParguments=\count475
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count486
+\MPscratchCnt=\count476
 \MPscratchDim=\dimen307
-\MPnumerator=\count487
-\makeMPintoPDFobject=\count488
+\MPnumerator=\count477
+\makeMPintoPDFobject=\count478
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1416,8 +1388,8 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@mv@tabular=\count489
-\c@mv@boldtabular=\count490
+\c@mv@tabular=\count479
+\c@mv@boldtabular=\count480
 LaTeX Info: Command `\dddot' is already robust on input line 100.
 LaTeX Info: Command `\ddddot' is already robust on input line 100.
 
@@ -1433,7 +1405,7 @@ Package scrlayer-scrpage Warning: Very small foot height detected!
 (scrlayer-scrpage)                option `singlespacing=true'
 (scrlayer-scrpage)                to avoid this warning.
 
-\c@lstlisting=\count491
+\c@lstlisting=\count481
 Package hyperref Info: Link coloring ON on input line 100.
 (./Bachelorarbeit.out) (./Bachelorarbeit.out)
 \@outlinefile=\write6
@@ -1451,38 +1423,22 @@ Class scrreprt Info: loading recommended package `bookmark'.
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
-\BKM@id=\count492
+\BKM@id=\count482
 ))
-Package biblatex Info: Trying to load language 'ngerman' -> 'ngerman-apa'...
-Package biblatex Info: ... file 'ngerman-apa.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/ngerman-apa.lbx
-File: ngerman-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
 Package biblatex Info: Trying to load language 'ngerman'...
 Package biblatex Info: ... file 'ngerman.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
 File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'german' -> 'german-apa'...
-Package biblatex Info: ... file 'german-apa.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/german-apa.lbx
-File: german-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)))
-Package biblatex Info: Trying to load language 'ngerman'...
-Package biblatex Info: ... file 'ngerman.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
-File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'german' -> 'german-apa'...
-Package biblatex Info: ... file 'german-apa.lbx' found.
- (/usr/share/texlive/texmf-dist/tex/latex/biblatex-apa/german-apa.lbx
-File: german-apa.lbx 2023/03/20 v9.17 APA biblatex localisation
+)
 Package biblatex Info: Trying to load language 'german'...
 Package biblatex Info: ... file 'german.lbx' found.
  (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
 File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-))))
+))
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1620,7 +1576,7 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{21.74998pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 28.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 29.
 
 [1
 
@@ -1703,13 +1659,18 @@ File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 5.
- [1
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--11
+
+ []
+
+[1
 
 
 
 
 
-{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]) [2]
+{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [2] [3]) [4]
 \openout2 = `"Inhalt/Fachliche Grundlagen.aux"'.
 
  (./Inhalt/Fachliche Grundlagen.tex
@@ -1725,16 +1686,32 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 5.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 5.
-) [3
+
+Overfull \hbox (6.97186pt too wide) in paragraph at lines 20--21
+[]\T1/ntxtlf/m/n/12 Die In-ter-ak-ti-on zwi-schen Agent und Um-ge-bung er-folgt in dis-kre-ten Zeit-schrit-ten $\OML/ntxmi/m/it/12 t \U/ntxmia/m/it/12 = \OT1/minntx/m/n/12 0\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 1\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 2\OML/ntxmi/m/it/12 ; [] $\T1/ntxtlf/m/n/12 .
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./Bilder/mdp_agent_environment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Bilder/mdp_agent_environment.pdf, id=211, 398.99063pt x 248.42813pt>
+File: Bilder/mdp_agent_environment.pdf Graphic file (type pdf)
+<use Bilder/mdp_agent_environment.pdf>
+Package pdftex.def Info: Bilder/mdp_agent_environment.pdf  used on input line 28.
+(pdftex.def)             Requested size: 286.65883pt x 178.49283pt.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 29.
+[5
 
 
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [6 <./Bilder/mdp_agent_environment.pdf>]
+Overfull \hbox (20.8258pt too wide) in paragraph at lines 73--75
+\T1/ntxtlf/m/n/12 TD-Verfahren bil-den die Grund-la-ge der meis-ten mo-der-nen Reinforcement-Learning-Algorithmen:
+ []
+
+[7] [8]) [9]
 \openout2 = `"Inhalt/Stand der Forschung.aux"'.
 
  (./Inhalt/Stand der Forschung.tex
@@ -1750,7 +1727,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [4
+) [10
 
 
 
@@ -1771,7 +1748,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [5
+) [11
 
 
 
@@ -1792,9 +1769,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 18.
-) [6
+) [12
 
 
 
@@ -1815,12 +1790,12 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/katze.jpg, id=167, 638.385pt x 740.7675pt>
+<Bilder/katze.jpg, id=299, 638.385pt x 740.7675pt>
 File: Bilder/katze.jpg Graphic file (type jpg)
 <use Bilder/katze.jpg>
 Package pdftex.def Info: Bilder/katze.jpg  used on input line 10.
 (pdftex.def)             Requested size: 220.50887pt x 255.87024pt.
-) [7
+) [13
 
 
 
@@ -1841,7 +1816,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [8
+) [14
 
 
 
@@ -1902,11 +1877,26 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-[9
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 245.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 245.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [9
 
 
 
-] [10]
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}] [10]
+Overfull \hbox (1.98267pt too wide) in paragraph at lines 246--246
+\T1/ntxtlf/m/n/12 Stig Pe-ter-sen, Charles Be-at-tie, Amir Sa-dik, Io-an-nis An-to-no-glou, He-len King, Dharshan
+ []
+
+[11]
+Overfull \hbox (3.83664pt too wide) in paragraph at lines 246--246
+\T1/ntxtlf/m/n/12 ^^R  Mul-ti-pur-po-se UAV for Search and Res-cue Ope-ra-ti-ons in Moun-tain Avalan-che Events^^P.
+ []
+
+[12] [13]
 \openout2 = `Inhalt/Erklaerung.aux'.
 
  (./Inhalt/Erklaerung.tex
@@ -1922,12 +1912,10 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 16.
-) [11
+) [14
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}]
+]
 
 Package caption Warning: Unused \captionsetup[table] on input line 217.
 See the caption package documentation for explanation.
@@ -1948,18 +1936,18 @@ Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36041 strings out of 474222
- 663555 string characters out of 5748733
+ 35615 strings out of 474222
+ 656541 string characters out of 5748733
  1941975 words of memory out of 5000000
- 57566 multiletter control sequences out of 15000+600000
- 605175 words of font info for 95 fonts, out of 8000000 for 9000
+ 57080 multiletter control sequences out of 15000+600000
+ 616875 words of font info for 130 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
- 108i,20n,131p,10960b,7353s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (21 pages, 428110 bytes).
+ 108i,20n,125p,10960b,3064s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on Bachelorarbeit.pdf (30 pages, 834290 bytes).
 PDF statistics:
- 384 PDF objects out of 1000 (max. 8388607)
- 333 compressed objects within 4 object streams
- 70 named destinations out of 1000 (max. 500000)
- 275 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 633 PDF objects out of 1000 (max. 8388607)
+ 556 compressed objects within 6 object streams
+ 116 named destinations out of 1000 (max. 500000)
+ 352 words of extra memory for PDF output out of 10000 (max. 10000000)
 

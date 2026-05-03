@@ -6,29 +6,38 @@
 \contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{VI}{chapter*.6}%
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.7}%
 \contentsline {section}{\numberline {1.1}Motivation und Problemstellung}{1}{section.8}%
-\contentsline {section}{\numberline {1.2}Zielstellung}{2}{section.9}%
-\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{2}{section.10}%
-\contentsline {chapter}{\numberline {2}Fachliche Grundlagen}{3}{chapter.11}%
-\contentsline {chapter}{\numberline {3}Stand der Forschung}{4}{chapter.13}%
-\contentsline {chapter}{\numberline {4}Methodik}{5}{chapter.14}%
-\contentsline {section}{\numberline {4.1}Literaturrecherche}{5}{section.15}%
-\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{5}{section.16}%
-\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{5}{section.17}%
-\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{5}{section.18}%
-\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{5}{subsection.19}%
-\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{5}{section.20}%
-\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{5}{section.21}%
-\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{5}{subsection.22}%
-\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{5}{subsection.23}%
-\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{5}{subsection.24}%
-\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{5}{section.25}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{6}{chapter.26}%
-\contentsline {chapter}{\numberline {6}Diskussion}{7}{chapter.28}%
-\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{7}{section.29}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{8}{chapter.31}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{8}{section.32}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{8}{section.33}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{8}{section.34}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.35}%
-\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.39}%
-\contentsline {chapter}{\nonumberline Erklärung}{XI}{chapter*.40}%
+\contentsline {section}{\numberline {1.2}Zielstellung}{3}{section.9}%
+\contentsline {section}{\numberline {1.3}Aufbau der Arbeit}{4}{section.14}%
+\contentsline {chapter}{\numberline {2}Fachliche Grundlagen}{5}{chapter.15}%
+\contentsline {section}{\numberline {2.1}Reinforcement Learning}{5}{section.16}%
+\contentsline {subsection}{\numberline {2.1.1}Allgemein}{5}{subsection.17}%
+\contentsline {subsection}{\numberline {2.1.2}Markov Decision Process}{5}{subsection.18}%
+\contentsline {section}{\numberline {2.2}Lösungen von MDPs}{6}{section.22}%
+\contentsline {subsection}{\numberline {2.2.1}Dynamische Programmierung}{6}{subsection.23}%
+\contentsline {subsection}{\numberline {2.2.2}Monte-Carlo- und Temporal-Difference-Verfahren}{7}{subsection.25}%
+\contentsline {subsection}{\numberline {2.2.3}Funktionsapproximation}{8}{subsection.27}%
+\contentsline {subsection}{\numberline {2.2.4}Policy-Gradient-Methoden}{8}{subsection.28}%
+\contentsline {subsection}{\numberline {2.2.5}Clipped Surrogate Objective}{8}{subsection.30}%
+\contentsline {chapter}{\numberline {3}Stand der Forschung}{10}{chapter.32}%
+\contentsline {chapter}{\numberline {4}Methodik}{11}{chapter.33}%
+\contentsline {section}{\numberline {4.1}Literaturrecherche}{11}{section.34}%
+\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{11}{section.35}%
+\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{11}{section.36}%
+\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{11}{section.37}%
+\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{11}{subsection.38}%
+\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{11}{section.39}%
+\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{11}{section.40}%
+\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{11}{subsection.41}%
+\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{11}{subsection.42}%
+\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{11}{subsection.43}%
+\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{11}{section.44}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{12}{chapter.45}%
+\contentsline {chapter}{\numberline {6}Diskussion}{13}{chapter.47}%
+\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{13}{section.48}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{14}{chapter.50}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{14}{section.51}%
+\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{14}{section.52}%
+\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{14}{section.53}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.54}%
+\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.58}%
+\contentsline {chapter}{\nonumberline Erklärung}{XIV}{chapter*.59}%
