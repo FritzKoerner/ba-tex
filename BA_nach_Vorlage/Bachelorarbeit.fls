@@ -572,11 +572,6 @@ OUTPUT Inhalt/Einleitung.aux
 INPUT ./Inhalt/Einleitung.tex
 INPUT ./Inhalt/Einleitung.tex
 INPUT Inhalt/Einleitung.tex
-INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
-INPUT /usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT ./Inhalt/Fachliche Grundlagen.tex
 INPUT ./Inhalt/Fachliche Grundlagen.tex
 OUTPUT Inhalt/Fachliche Grundlagen.aux
@@ -657,6 +652,11 @@ OUTPUT Inhalt/Stand der Forschung.aux
 INPUT ./Inhalt/Stand der Forschung.tex
 INPUT ./Inhalt/Stand der Forschung.tex
 INPUT Inhalt/Stand der Forschung.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
+INPUT /usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT ./Inhalt/Methodik.tex
 INPUT ./Inhalt/Methodik.tex
 OUTPUT Inhalt/Methodik.aux

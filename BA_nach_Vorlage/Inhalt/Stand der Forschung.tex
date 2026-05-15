@@ -1,2 +1,62 @@
 \chapter{Stand der Forschung}
 \label{cha:Stand der Forschung}
+
+Bisherige Arbeiten zum autonomen Landen von Drohnen lassen sich in zwei grundlegende Kategorien einteilen: traditionelle und bildbasierte Methoden.
+Traditionelle Methoden stützen sich auf Signale externer Infrastruktur wie GNSS-Satelliten oder Funkbaken, um Position und Lage der Drohne zu bestimmen.
+Bildbasierte Methoden hingegen nutzen Kameradaten zur Wahrnehmung der Umgebung und lassen sich weiter unterteilen in markerbasierte Systeme, die definierte
+visuelle Referenzpunkte zur Lokalisierung verwenden, und markerfreie Systeme, die adäquate Landezonen eigenständig aus Bilddaten ableiten und somit keine
+zusätzliche Bodeninfrastruktur erfordern. Diese Einteilung orientiert sich an der Taxonomie von \textcite{arafatVisionBasedNavigationTechniques2023}.
+
+Orthogonal zur Sensorik lassen sich Ansätze danach unterscheiden, welche Teilaufgaben des Guidance, Navigation and Control (GNC) \autocite{kanellakisSurveyComputerVision2017} sie adressieren und wie diese zusammenwirken. Modulare Methoden zerlegen das Problem in getrennte Komponenten wie Obstacle Detection, Pose-Estimation oder Path-Planning, die als aufeinanderfolgende Stufen einer Pipeline gelöst werden \autocite{kanellakisSurveyComputerVision2017, wangVisionBasedDeepReinforcement2024}. End-to-End-Methoden hingegen bilden Sensorinput direkt auf Steuerkommandos ab, ohne solche expliziten Zwischenstufen \autocite{wangVisionBasedDeepReinforcement2024}.
+
+GPS ist die verbreitetste Methode zur Positionsbestimmung von Drohnen: Ein einzelnes GNSS-Modul liefert eine Genauigkeit von 5–10\,m und bildet die Grundlage für Missionsplanung und -ausführung \autocite{jarrayaGnssdeniedUnmannedAerial2025}. Dass autonomes Landen bei bekannter Relativposition grundsätzlich beherrschbar ist, zeigen \textcite{voosNonlinearTrackingLanding2010} mittels nichtlinearer Regelung auf stationären und beweglichen Zielen. Die zentrale Herausforderung liegt somit nicht im Regelungsentwurf, sondern in der Genauigkeit der zugrunde liegenden Positionsdaten.
+
+In der Praxis erreicht GPS-basierte Landung jedoch nur Meter-Genauigkeit. \textcite{patrikGNSSbasedNavigationSystems2019} berichten von einer durchschnittlichen Landeabweichung von 1,11\,m; auch beim Open-Source-Autopiloten PX4 beträgt die GPS-basierte Landegenauigkeit mehrere Meter \autocite{meierPX4NodebasedMultithreaded2015, wubbenAccurateLandingUnmanned2019}, sodass für höhere Präzision zusätzliche Sensoren erforderlich sind \autocite{PrecisionLanding}. Die Positionsgenauigkeit lässt sich zwar durch RTK-Korrekturen auf Zentimeter-Niveau steigern, \textcite{tavasciReliabilityRealTimeKinematic2024} berichten zentimetergenaue Echtzeit-Navigation unter idealen Bedingungen. Jedoch in schwierigen GNSS-Umgebungen, etwa bei Signalabschattung durch Vegetation oder Gebäude, fällt die Genauigkeit auf Meter-Niveau zurück. Gerade in Agrarumgebungen mit Baumkronen und Laubdächern sind solche Bedingungen typisch.
+
+GNSS bleibt damit als robuste Grobpositionierung unverzichtbar, weist jedoch für Präzisionslandung in strukturierten Umgebungen fundamentale Limitationen auf: Die Genauigkeit reicht nicht für das Landen zwischen Baumreihen oder Weinreben mit einem typischen Reihenabstand von 1,5–2\,m, und GPS liefert keinerlei Umgebungswahrnehmung somit bleiben Veränderungen der Umgebung, Hindernisse oder beengte Platzverhältnisse unerkannt.
+
+Bildbasierte Landesysteme mit visuellen Markern bieten eine deutlich höhere Präzision als rein GNSS-gestützte Methoden. So erreicht das ArUco-basierte System von \textcite{wubbenAccurateLandingUnmanned2019} durch deterministische Bildverarbeitung eine durchschnittliche Landeabweichung von 11\,cm bei zuverlässiger Markerdetektion aus bis zu 30\,m Höhe. Solche klassischen Ansätze setzen jedoch voraus, dass die Markererkennung unter allen Betriebsbedingungen robust funktioniert — eine Annahme, die bei Verdeckung, wechselnden Lichtverhältnissen oder beschädigten Markern nicht gegeben ist.
+
+Reinforcement Learning bietet hier einen konzeptionellen Vorteil: Statt auf handspezifizierte Detektionsalgorithmen angewiesen zu sein, lernt ein RL-Agent eine End-to-End-Steuerung direkt aus Bilddaten und kann dabei implizit Robustheit gegenüber visuellen Störungen erwerben. \textcite{polvaraSimtoRealQuadrotorLanding2020} demonstrieren diesen Ansatz erstmals für die autonome Landung: Ihr System nutzt sequentielle Deep-Q-Networks mit einer Divide-and-Conquer-Strategie, die den Landeprozess in Marker-Ausrichtung und vertikalen Abstieg unterteilt. Ausschließlich in Simulation mit Domain Randomization trainiert, erreicht das System eine mit klassischen AR-Trackern und menschlichen Piloten vergleichbare Leistung. Der Robustheitsvorteil zeigt sich unter erschwerten Bedingungen: Bei verrauschten Markertexturen erzielt das RL-System noch eine Erfolgsrate von 51\,\%, während ein konventioneller AR-Tracker vollständig versagt — allerdings ist auch dieser Wert für sicherheitskritische Anwendungen unzureichend. \textcite{ladoszAutonomousLandingMoving2024} erweitern den Ansatz auf bewegliche Landeplattformen mit kontinuierlichem Aktionsraum. In der Simulation erreicht ihr System Erfolgsraten von bis zu 97,4\,\% bei einer Landeabweichung von 0,52\,m.
+
+Trotz dieser Fortschritte weisen markerbasierte Systeme grundlegende Einschränkungen auf, die unabhängig von der gewählten Steuerungsmethode gelten: Sie setzen vorplatzierte visuelle Infrastruktur am Landeziel voraus, was ihren Einsatz auf vordefinierte Orte begrenzt und in unbekannten Umgebungen unpraktikabel macht. Hinzu kommen methodische Limitationen der RL-basierten Ansätze: Beide Systeme wurden in vereinfachten Simulationsumgebungen ohne Hindernisse trainiert, und der Transfer in die reale Welt geht mit deutlichen Leistungseinbußen einher — \textcite{ladoszAutonomousLandingMoving2024} berichten einen Rückgang der Erfolgsrate von 97,4\,\% auf rund 70\,\% \autocite[vgl. auch][]{polvaraSimtoRealQuadrotorLanding2020}. Diese Limitationen motivieren die Entwicklung markerfreier Systeme, die Landezonen eigenständig aus Bilddaten ableiten und keine zusätzliche Bodeninfrastruktur erfordern.
+
+\begin{itemize}
+    \item Taxonomie Sensoren
+    \item bisherige Arbeiten zum autonomen Landen von Drohnen können in traditionele und bildbasierte Methoden geteilt werden
+    \item des weiteren kann unterschieden werden in Systeme welche Landing Site Detection (Mapping), Path-Planning und Navigation als Teilziele haben und End-To-End Lösungen welche in Echtzeit gegeben eines Zustands Flugmanöver einleiten
+    \item traditionele Methoden:
+          \begin{itemize}
+              \item benutzen und GPS oder Radio Signale zur autonomen Steuerung von Drohnen \autocite{arafatVisionBasedNavigationTechniques2023}
+              \item GPS Sensoren bieten verlässliche Zustands und Positionsdaten
+          \end{itemize}
+    \item bild-basierte Methoden:
+          \begin{itemize}
+              \item können noch einmal unterschieden werden in markerbasierte und markerfreie Systeme
+              \item markerbasierte systeme nutzen Referenzpunkte zur Landing-Site Detection, welche generell hohe Präzision zeigten \autocite{arafatVisionBasedNavigationTechniques2023}
+              \item markerlose Systeme ermitteln adäquate Landezonen selbständig anhand von Bilddaten, und benötigen somit keine zusätzliche Infrastruktur oder manuelle Intervention \autocite{arafatVisionBasedNavigationTechniques2023}
+          \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item Taxonomie Aufgaben
+    \item weitere Unterscheidung ob und wie Guidance, Navigation and Control umgesetzt werden
+    \item Pre-Planning Methods utilize methods such Mapping, Perception and Path-Planning \autocite{kanellakisSurveyComputerVision2017}
+    \item End-to-End Methods directly map Preceptions to Control \autocite{wangVisionBasedDeepReinforcement2024}
+    \item Different Approaches that utilize Mapping, Obstacle Detection, Kind of Target Tracking, Path-Planning, Exploration, Pose-Estimation. These Methods an be pre-planned or End-to-End (dynamic) Methods
+\end{itemize}
+
+\begin{itemize}
+    \item Taxonomie Aufgaben
+    \item Orthogonal zur Sensorik lassen sich Ansätze danach unterscheiden, welche Teilaufgaben des Guidance, Navigation and Control (GNC) sie adressieren und ob diese modular oder End-to-End gelöst werden
+    \item Modulare Methoden im Bereich der UAV-Navigation zerlegen das Problem in GNC-Teilaufgaben wie Obstacle Detection, Pose-Estimation oder Path-Planning, die als getrennte Komponenten einer Pipeline gelöst werden \autocite{kanellakisSurveyComputerVision2017, wangVisionBasedDeepReinforcement2024}.
+    \item End-to-End-Methoden bilden Sensorinput direkt auf Steuerkommandos ab, ohne explizite Zwischenstufen \autocite{wangVisionBasedDeepReinforcement2024}
+\end{itemize}
+
+\begin{itemize}
+    \item GPS ist die verbreitetste Methode zur Positionsbestimmung von Drohnen. Ein einzelnes GNSS-Modul liefert eine Genauigkeit von 5–10\,m und bildet die Grundlage für Missionsplanung und -ausführung \autocite{jarrayaGnssdeniedUnmannedAerial2025}.
+    \item Dass autonomes Landen bei bekannter Relativposition grundsätzlich beherrschbar ist, zeigen Voos et al. mittels nichtlinearer Regelung auf stationären und beweglichen Zielen \autocite{voosNonlinearTrackingLanding2010}. Die zentrale Herausforderung liegt somit nicht im Regelungsentwurf, sondern in der Genauigkeit der zugrunde liegenden Positionsdaten.
+    \item In der Praxis erreicht GPS-basierte Landung jedoch nur Meter-Genauigkeit. Patrik et al. berichten von einer durchschnittlichen Landeabweichung von 1,11\,m \autocite{patrikGNSSbasedNavigationSystems2019}; auch beim Open-Source-Autopiloten PX4 beträgt die GPS-basierte Landegenauigkeit mehrere Meter \autocite{meierPX4NodebasedMultithreaded2015, wubbenAccurateLandingUnmanned2019}, für höhere Präzision sind zusätzliche Sensoren erforderlich \autocite{PrecisionLanding}.
+    \item Die Positionsgenauigkeit lässt sich durch RTK-Korrekturen auf Zentimeter-Niveau steigern. Tavasci et al. berichten zentimetergenaue Echtzeit-Navigation unter idealen Bedingungen, wobei die Genauigkeit in schwierigen GNSS-Umgebungen — etwa bei Signalabschattung durch Vegetation oder Gebäude — auf Meter-Niveau abfällt \autocite{tavasciReliabilityRealTimeKinematic2024}. Gerade in Agrarumgebungen mit Baumkronen und Laubdächern sind solche Bedingungen typisch.
+    \item GNSS bleibt als robuste Grobpositionierung unverzichtbar, weist jedoch für Präzisionslandung in strukturierten Umgebungen fundamentale Limitationen auf: Die Genauigkeit reicht nicht für das Landen zwischen Baumreihen oder Weinreben (Reihenabstand typischerweise 1,5–2\,m), und GPS liefert keinerlei Umgebungswahrnehmung — Veränderungen der Umgebung, Hindernisse oder beengte Platzverhältnisse bleiben unerkannt.
+\end{itemize}
