@@ -24,25 +24,26 @@
 \contentsline {section}{\numberline {3.3}Markerbasierte bildgestützte Methoden}{10}{section.35}%
 \contentsline {section}{\numberline {3.4}Markerfreie bildgestützte Methoden}{11}{section.36}%
 \contentsline {section}{\numberline {3.5}Tiefenbildbasierte Hindernisvermeidung}{12}{section.37}%
-\contentsline {chapter}{\numberline {4}Methodik}{16}{chapter.38}%
-\contentsline {section}{\numberline {4.1}Literaturrecherche}{16}{section.39}%
-\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{16}{section.40}%
-\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{16}{section.41}%
-\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{16}{section.42}%
-\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{16}{subsection.43}%
-\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{16}{section.44}%
-\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{16}{section.45}%
-\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{16}{subsection.46}%
-\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{16}{subsection.47}%
-\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{16}{subsection.48}%
-\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{16}{section.49}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{17}{chapter.50}%
-\contentsline {chapter}{\numberline {6}Diskussion}{18}{chapter.52}%
-\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{18}{section.53}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{19}{chapter.55}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{19}{section.56}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{19}{section.57}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{19}{section.58}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.59}%
-\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.63}%
-\contentsline {chapter}{\nonumberline Erklärung}{XVI}{chapter*.64}%
+\contentsline {section}{\numberline {3.6}Steuerungsarchitekturen im Reinforcement Learning}{14}{section.38}%
+\contentsline {chapter}{\numberline {4}Methodik}{17}{chapter.39}%
+\contentsline {section}{\numberline {4.1}Literaturrecherche}{17}{section.40}%
+\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{17}{section.41}%
+\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{17}{section.42}%
+\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{17}{section.43}%
+\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{17}{subsection.44}%
+\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{17}{section.45}%
+\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{17}{section.46}%
+\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{17}{subsection.47}%
+\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{17}{subsection.48}%
+\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{17}{subsection.49}%
+\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{17}{section.50}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{18}{chapter.51}%
+\contentsline {chapter}{\numberline {6}Diskussion}{19}{chapter.53}%
+\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{19}{section.54}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{20}{chapter.56}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{20}{section.57}%
+\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{20}{section.58}%
+\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{20}{section.59}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.60}%
+\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.64}%
+\contentsline {chapter}{\nonumberline Erklärung}{XVI}{chapter*.65}%

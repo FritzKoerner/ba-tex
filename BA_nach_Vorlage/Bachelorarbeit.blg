@@ -1,18 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Bachelorarbeit.blg'
-[81] biber:340> INFO - === Sa Mai 16, 2026, 15:48:50
-[95] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
-[159] Biber.pm:979> INFO - Found 39 citekeys in bib section 0
-[170] Biber.pm:4419> INFO - Processing section 0
-[179] Biber.pm:4610> INFO - Looking for bibtex file 'quellen.bib' for section 0
-[188] bibtex.pm:1713> INFO - LaTeX decoding ...
-[276] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
-[912] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[912] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[912] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[912] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[984] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
-[1062] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
-[1063] Biber.pm:131> WARN - Duplicate entry key: 'wubbenAccurateLandingUnmanned2019' in file 'quellen.bib', skipping ...
-[1063] Biber.pm:131> WARN - I didn't find a database entry for 'katze' (section 0)
-[1063] Biber.pm:133> INFO - WARNINGS: 2
+[74] biber:340> INFO - === Sa Mai 16, 2026, 16:23:03
+[89] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
+[152] Biber.pm:979> INFO - Found 42 citekeys in bib section 0
+[164] Biber.pm:4419> INFO - Processing section 0
+[173] Biber.pm:4610> INFO - Looking for bibtex file 'quellen.bib' for section 0
+[181] bibtex.pm:1713> INFO - LaTeX decoding ...
+[266] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
+[866] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[867] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[867] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[867] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[939] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
+[1006] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
+[1006] Biber.pm:131> WARN - Duplicate entry key: 'wubbenAccurateLandingUnmanned2019' in file 'quellen.bib', skipping ...
+[1006] Biber.pm:131> WARN - I didn't find a database entry for 'esserActionSpaceDesign2024' (section 0)
+[1006] Biber.pm:131> WARN - I didn't find a database entry for 'kaufmannBenchmarkComparisonLearned2022' (section 0)
+[1006] Biber.pm:131> WARN - I didn't find a database entry for 'aljalboutRoleActionSpace2024' (section 0)
+[1006] Biber.pm:131> WARN - I didn't find a database entry for 'katze' (section 0)
+[1007] Biber.pm:133> INFO - WARNINGS: 5
