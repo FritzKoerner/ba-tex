@@ -652,11 +652,6 @@ OUTPUT Inhalt/Stand der Forschung.aux
 INPUT ./Inhalt/Stand der Forschung.tex
 INPUT ./Inhalt/Stand der Forschung.tex
 INPUT Inhalt/Stand der Forschung.tex
-INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-INPUT /usr/share/texmf/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
-INPUT /usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT ./Inhalt/Methodik.tex
 INPUT ./Inhalt/Methodik.tex
 OUTPUT Inhalt/Methodik.aux
@@ -700,6 +695,7 @@ INPUT ./Bilder/katze.jpg
 INPUT ./Bilder/katze.jpg
 INPUT ./Bilder/katze.jpg
 INPUT ./Bilder/katze.jpg
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
@@ -758,7 +754,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.p
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
-INPUT /usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb

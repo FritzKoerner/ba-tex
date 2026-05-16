@@ -19,25 +19,30 @@
 \contentsline {subsection}{\numberline {2.2.4}Policy-Gradient-Methoden}{7}{subsection.28}%
 \contentsline {subsection}{\numberline {2.2.5}Clipped Surrogate Objective}{7}{subsection.30}%
 \contentsline {chapter}{\numberline {3}Stand der Forschung}{9}{chapter.32}%
-\contentsline {chapter}{\numberline {4}Methodik}{14}{chapter.33}%
-\contentsline {section}{\numberline {4.1}Literaturrecherche}{14}{section.34}%
-\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{14}{section.35}%
-\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{14}{section.36}%
-\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{14}{section.37}%
-\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{14}{subsection.38}%
-\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{14}{section.39}%
-\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{14}{section.40}%
-\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{14}{subsection.41}%
-\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{14}{subsection.42}%
-\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{14}{subsection.43}%
-\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{14}{section.44}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{15}{chapter.45}%
-\contentsline {chapter}{\numberline {6}Diskussion}{16}{chapter.47}%
-\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{16}{section.48}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{17}{chapter.50}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{17}{section.51}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{17}{section.52}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{17}{section.53}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.54}%
-\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.58}%
-\contentsline {chapter}{\nonumberline Erklärung}{XV}{chapter*.59}%
+\contentsline {section}{\numberline {3.1}Taxonomie der Ansätze}{9}{section.33}%
+\contentsline {section}{\numberline {3.2}GNSS-basierte Methoden}{9}{section.34}%
+\contentsline {section}{\numberline {3.3}Markerbasierte bildgestützte Methoden}{10}{section.35}%
+\contentsline {section}{\numberline {3.4}Markerfreie bildgestützte Methoden}{11}{section.36}%
+\contentsline {section}{\numberline {3.5}Tiefenbildbasierte Hindernisvermeidung}{12}{section.37}%
+\contentsline {chapter}{\numberline {4}Methodik}{16}{chapter.38}%
+\contentsline {section}{\numberline {4.1}Literaturrecherche}{16}{section.39}%
+\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{16}{section.40}%
+\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{16}{section.41}%
+\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{16}{section.42}%
+\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{16}{subsection.43}%
+\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{16}{section.44}%
+\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{16}{section.45}%
+\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{16}{subsection.46}%
+\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{16}{subsection.47}%
+\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{16}{subsection.48}%
+\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{16}{section.49}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{17}{chapter.50}%
+\contentsline {chapter}{\numberline {6}Diskussion}{18}{chapter.52}%
+\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{18}{section.53}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{19}{chapter.55}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{19}{section.56}%
+\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{19}{section.57}%
+\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{19}{section.58}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.59}%
+\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.63}%
+\contentsline {chapter}{\nonumberline Erklärung}{XVI}{chapter*.64}%

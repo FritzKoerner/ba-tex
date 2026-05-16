@@ -146,6 +146,73 @@
       \endverb
       \keyw{computer vision,drone,localization,mapping,navigation,obstacle avoidance,path planning,unmanned aerial vehicle}
     \endentry
+    \entry{bartolomeiAutonomousEmergencyLanding2022}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=6d32bbe0bffb37cc564df8adb6c87702}{%
+           family={Bartolomei},
+           familyi={B\bibinitperiod},
+           given={Luca},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8faf80dc57bf0d800f3837ed33a507b3}{%
+           family={Kompis},
+           familyi={K\bibinitperiod},
+           given={Yves},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8060ec2dd02eb198cf7c54ef058a7bc}{%
+           family={Teixeira},
+           familyi={T\bibinitperiod},
+           given={Lucas},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e84e124e9acc0dc145b98331a5433504}{%
+           family={Chli},
+           familyi={C\bibinitperiod},
+           given={Margarita},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{af68198d7c125cac6c27d3113acd50c5}
+      \strng{fullhash}{4f0f781df581cc4fd10e64694c90e1f3}
+      \strng{bibnamehash}{4f0f781df581cc4fd10e64694c90e1f3}
+      \strng{authorbibnamehash}{4f0f781df581cc4fd10e64694c90e1f3}
+      \strng{authornamehash}{af68198d7c125cac6c27d3113acd50c5}
+      \strng{authorfullhash}{4f0f781df581cc4fd10e64694c90e1f3}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work presents a pipeline for autonomous emergency landing for multicopters, such as rotary wing Unmanned Aerial Vehicles (UAVs), using deep Reinforcement Learning (RL). Mechanical malfunctions, strong winds, sudden battery life drops (e.g, due to cold weather), failure in localization or GPS jamming are not uncommon and all constitute emergency situations that require a UAV to abort its mission early and land as quickly as possible in the immediate vicinity. To this end, it is crucial for a UAV that is deployed in real missions to be able to detect a safe landing spot efficiently and proceed to land autonomously, avoiding damage to both its integrity and the surroundings. Driven by the advances in semantic segmentation and depth completion using machine learning, the proposed architecture uses deep RL to infer actions from semantic and depth information, flying the robot towards secure areas, while respecting safety constraints. Thanks to our robust training strategy and the choice of these mid-level representations as input to the RL agent, we show that our policy can directly transfer to the real world, without the need for any additional fine-tuning. In a series of challenging experiments both in simulation and with a real platform, we demonstrate that our planner guides a rotorcraft UAV to a safe landing spot up to 1.5 times faster and with double success rate than the state of the art (including a commercially available solution), paving the way towards realistically deployable UAVs.}
+      \field{booktitle}{2022 {{IEEE}}/{{RSJ International Conference}} on {{Intelligent Robots}} and {{Systems}} ({{IROS}})}
+      \field{eventtitle}{2022 {{IEEE}}/{{RSJ International Conference}} on {{Intelligent Robots}} and {{Systems}} ({{IROS}})}
+      \field{issn}{2153-0866}
+      \field{month}{10}
+      \field{title}{Autonomous {{Emergency Landing}} for {{Multicopters}} Using {{Deep Reinforcement Learning}}}
+      \field{urlday}{18}
+      \field{urlmonth}{12}
+      \field{urlyear}{2025}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{3392\bibrangedash 3399}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/IROS47612.2022.9981152
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/F85Q3N52/Bartolomei et al. - 2022 - Autonomous Emergency Landing for Multicopters using Deep Reinforcement Learning.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/document/9981152
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/document/9981152
+      \endverb
+      \keyw{Deep learning,Location awareness,Pipelines,READ,Semantic segmentation,Semantics,Training,Wind}
+    \endentry
     \entry{bassoDigitalAgricultureDesign2020}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=1b737673b1d43ce19ff89b57c62bc4b5}{%
@@ -1786,6 +1853,75 @@
       \endverb
       \keyw{Aerospace engineering,Computer science,Electrical and electronic engineering,Mechanical engineering,model-free,on policy,READ,Reinforcement learning,vision-based navigation}
     \endentry
+    \entry{kimMonocularVisionbasedAutonomous2022}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=7beb6096a07ed11e6db1ae7b7c747ef2}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Minwoo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=daba575c19b1151e5f26e1d29f8cbf8d}{%
+           family={Kim},
+           familyi={K\bibinitperiod},
+           given={Jongyun},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c169c4012b1a07804c398b432b84a070}{%
+           family={Jung},
+           familyi={J\bibinitperiod},
+           given={Minjae},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8ac82f9b804cb256cf7513d39c72b78a}{%
+           family={Oh},
+           familyi={O\bibinitperiod},
+           given={Hyondong},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f9c3ddb239e2f05272d1cc613cd38d7f}
+      \strng{fullhash}{a9321a2f1c0c9903bd6149c3dded854f}
+      \strng{bibnamehash}{a9321a2f1c0c9903bd6149c3dded854f}
+      \strng{authorbibnamehash}{a9321a2f1c0c9903bd6149c3dded854f}
+      \strng{authornamehash}{f9c3ddb239e2f05272d1cc613cd38d7f}
+      \strng{authorfullhash}{a9321a2f1c0c9903bd6149c3dded854f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper proposes an obstacle avoidance strategy for small multi-rotor drones with a monocular camera using deep reinforcement learning. The proposed method is composed of two steps: depth estimation and navigation decision making. For the depth estimation step, a pre-trained depth estimation algorithm based on the convolutional neural network is used. On the navigation decision making step, a dueling double deep Q-network is employed with a well-designed reward function. The network is trained using the robot operating system and Gazebo simulation environment. To validate the performance and robustness of the proposed approach, simulations and real experiments have been carried out using a Parrot Bebop2 drone in various complex indoor environments. We demonstrate that the proposed algorithm successfully travels along the narrow corridors with the texture free walls, people, and boxes.}
+      \field{day}{15}
+      \field{issn}{0957-4174}
+      \field{journaltitle}{Expert Systems with Applications}
+      \field{month}{7}
+      \field{shortjournal}{Expert Systems with Applications}
+      \field{title}{Towards Monocular Vision-Based Autonomous Flight through Deep Reinforcement Learning}
+      \field{urlday}{16}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{198}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{116742}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.eswa.2022.116742
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/YR62IAUL/Kim et al. - 2022 - Towards monocular vision-based autonomous flight through deep reinforcement learning.pdf;/home/fritz-sfl/Zotero/storage/FQ6M26LP/S0957417422002111.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0957417422002111
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0957417422002111
+      \endverb
+      \keyw{Deep reinforcement learning,Depth estimation,Navigation decision making,Obstacle avoidance,Q-learning,Vision-based}
+    \endentry
     \entry{ladoszAutonomousLandingMoving2024}{article}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=2827480ca41e7f708e07a8e8bfc42928}{%
@@ -2358,6 +2494,83 @@
       \verb https://journalofbigdata.springeropen.com/articles/10.1186/s40537-019-0214-3
       \endverb
     \endentry
+    \entry{peterTornadoDroneBioinspiredDRLbased2024}{online}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8150c9a712f165704a9daa7ad9bae1db}{%
+           family={Peter},
+           familyi={P\bibinitperiod},
+           given={Robinroy},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=350403ec6d9340cbe352b7be7b7f730b}{%
+           family={Ratnabala},
+           familyi={R\bibinitperiod},
+           given={Lavanya},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d77b93368f0e0588a9f59a2ac2352b72}{%
+           family={Aschu},
+           familyi={A\bibinitperiod},
+           given={Demetros},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=080fee261d02a2f588db68a1c0fab6dd}{%
+           family={Fedoseev},
+           familyi={F\bibinitperiod},
+           given={Aleksey},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e23b3abfd33a98ced0a697b187c9e0a9}{%
+           family={Tsetserukou},
+           familyi={T\bibinitperiod},
+           given={Dzmitry},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bc0270b632d415a77c89e5c26f31dea2}
+      \strng{fullhash}{e06a0fe73fd9a35ae60a9abc234f2e36}
+      \strng{bibnamehash}{e06a0fe73fd9a35ae60a9abc234f2e36}
+      \strng{authorbibnamehash}{e06a0fe73fd9a35ae60a9abc234f2e36}
+      \strng{authornamehash}{bc0270b632d415a77c89e5c26f31dea2}
+      \strng{authorfullhash}{e06a0fe73fd9a35ae60a9abc234f2e36}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Autonomous drone navigation faces a critical challenge in achieving accurate landings on dynamic platforms, especially under unpredictable conditions such as wind turbulence. Our research introduces TornadoDrone, a novel Deep Reinforcement Learning (DRL) model that adopts bio-inspired mechanisms to adapt to wind forces, mirroring the natural adaptability seen in birds. This model, unlike traditional approaches, derives its adaptability from indirect cues such as changes in position and velocity, rather than direct wind force measurements. TornadoDrone was rigorously trained in the gym-pybullet-drone simulator, which closely replicates the complexities of wind dynamics in the real world. Through extensive testing with Crazyflie 2.1 drones in both simulated and real windy conditions, TornadoDrone demonstrated a high performance in maintaining high-precision landing accuracy on moving platforms, surpassing conventional control methods such as PID controllers with Extended Kalman Filters. The study not only highlights the potential of DRL to tackle complex aerodynamic challenges but also paves the way for advanced autonomous systems that can adapt to environmental changes in real-time. The success of TornadoDrone signifies a leap forward in drone technology, particularly for critical applications such as surveillance and emergency response, where reliability and precision are paramount.}
+      \field{day}{25}
+      \field{eprintclass}{cs}
+      \field{eprinttype}{arXiv}
+      \field{month}{6}
+      \field{pubstate}{prepublished}
+      \field{shorttitle}{{{TornadoDrone}}}
+      \field{title}{{{TornadoDrone}}: {{Bio-inspired DRL-based Drone Landing}} on {{6D Platform}} with {{Wind Force Disturbances}}}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{version}{2}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2406.16164
+      \endverb
+      \verb{eprint}
+      \verb 2406.16164
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/HHA5FPBB/Peter et al. - 2024 - TornadoDrone Bio-inspired DRL-based Drone Landing on 6D Platform with Wind Force Disturbances.pdf;/home/fritz-sfl/Zotero/storage/RTCKKH77/2406.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2406.16164
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2406.16164
+      \endverb
+      \keyw{Computer Science - Multiagent Systems,Computer Science - Robotics}
+    \endentry
     \entry{polvaraSimtoRealQuadrotorLanding2020}{article}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=b360b23acd87fff10fc427972887a90e}{%
@@ -2644,6 +2857,84 @@
       \verb https://arxiv.org/abs/1707.06347
       \endverb
     \endentry
+    \entry{semerikovVisionBasedAutonomousUAV2025}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=8912470463458c48f484008352f42104}{%
+           family={Semerikov},
+           familyi={S\bibinitperiod},
+           given={Serhiy\bibnamedelima O.},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1f7b4d7536b9694d4c42d34ba801a34e}{%
+           family={Nechypurenko},
+           familyi={N\bibinitperiod},
+           given={Pavlo\bibnamedelima P.},
+           giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c3e55f5854168c12fa29b3b2635793a3}{%
+           family={Vakaliuk},
+           familyi={V\bibinitperiod},
+           given={Tetiana\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb2cde699ae9ecc65af8a57912dc3366}{%
+           family={Mintii},
+           familyi={M\bibinitperiod},
+           given={Iryna\bibnamedelima S.},
+           giveni={I\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=df88715dd5fb5a60b921247f72c19f16}{%
+           family={Kolhatin},
+           familyi={K\bibinitperiod},
+           given={Andrii\bibnamedelima O.},
+           giveni={A\bibinitperiod\bibinitdelim O\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b464b2d2afff65256ad033bb41466dba}
+      \strng{fullhash}{bd3f4ba3f0dd25304519c9743548d837}
+      \strng{bibnamehash}{bd3f4ba3f0dd25304519c9743548d837}
+      \strng{authorbibnamehash}{bd3f4ba3f0dd25304519c9743548d837}
+      \strng{authornamehash}{b464b2d2afff65256ad033bb41466dba}
+      \strng{authorfullhash}{bd3f4ba3f0dd25304519c9743548d837}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Autonomous landing capabilities are critical for unmanned aerial vehicles (UAVs) operating in challenging environments, yet remain among UAV operations’ most technically demanding aspects. This paper presents a comprehensive review of vision-based autonomous landing systems for UAVs, emphasising fiducial marker-based approaches. After systematically examining 143 papers published between 2018 and 2025, we critically analyse the evolution from traditional landing methods to advanced vision-based systems and evaluate their performance across diverse operational conditions. The review provides detailed analyses of marker design considerations, detection algorithms, performance metrics, and the impact of environmental factors like illumination, weather, and terrain on landing accuracy. We explore hardware implementation challenges, comparing FPGA, SoC, and GPU-based solutions for real-time vision processing on resource-constrained platforms. The integration of artificial intelligence accelerators and multi-sensor fusion approaches is examined, with quantitative comparisons of landing accuracy improvements across different methodologies. Contemporary trends, including swarm-based collaborative landing systems, self-reconfiguring markers, and machine learning-based adaptation to different environments, are discussed alongside regulatory frameworks and safety considerations. Real-world industrial implementations and technology transfer challenges are analysed to bridge the gap between academic research and commercial applications. This systematic review targets researchers, engineers, and stakeholders developing autonomous UAV landing systems for diverse applications, including emergency response, logistics, inspection, and environmental monitoring.}
+      \field{day}{28}
+      \field{issn}{1573-0409}
+      \field{journaltitle}{Journal of Intelligent \& Robotic Systems}
+      \field{langid}{english}
+      \field{month}{10}
+      \field{number}{4}
+      \field{shortjournal}{J Intell Robot Syst}
+      \field{shorttitle}{Vision-{{Based Autonomous UAV Landing}}}
+      \field{title}{Vision-{{Based Autonomous UAV Landing}}: {{A Comprehensive Review}} of {{Technologies}}, {{Techniques}}, and {{Applications}}}
+      \field{urlday}{5}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{111}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{115}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1007/s10846-025-02314-4
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/BBMMSJZS/Semerikov et al. - 2025 - Vision-Based Autonomous UAV Landing A Comprehensive Review of Technologies, Techniques, and Applica.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10846-025-02314-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10846-025-02314-4
+      \endverb
+      \keyw{Autonomous landing,Computer vision,Deep learning,Edge computing,Embedded AI,Fiducial markers,Marker detection,Multi-sensor fusion,UAV,Vision-based navigation}
+    \endentry
     \entry{suttonReinforcementLearningIntroduction2020}{book}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=eb920e5277d3d5fd0903f3cd41e11871}{%
@@ -2755,38 +3046,6 @@
       \verb https://www.mdpi.com/1424-8220/24/18/6096
       \endverb
       \keyw{autonomous infrastructure inspection,drone navigation,GNSS-denied environment,low-cost GNSS board,RTK}
-    \endentry
-    \entry{katze}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=ef776916f007fe0e64736c2c0a01ed51}{%
-           family={u/unknown},
-           familyi={u\bibinitperiod}}}%
-      }
-      \strng{namehash}{ef776916f007fe0e64736c2c0a01ed51}
-      \strng{fullhash}{ef776916f007fe0e64736c2c0a01ed51}
-      \strng{bibnamehash}{ef776916f007fe0e64736c2c0a01ed51}
-      \strng{authorbibnamehash}{ef776916f007fe0e64736c2c0a01ed51}
-      \strng{authornamehash}{ef776916f007fe0e64736c2c0a01ed51}
-      \strng{authorfullhash}{ef776916f007fe0e64736c2c0a01ed51}
-      \field{sortinit}{u}
-      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Beitrag auf Reddit (Subreddit r/aww)}
-      \field{title}{Happy Birthday}
-      \field{urlday}{4}
-      \field{urlmonth}{12}
-      \field{urlyear}{2025}
-      \field{year}{2022}
-      \field{urldateera}{ce}
-      \verb{urlraw}
-      \verb https://www.reddit.com/r/aww/comments/fvk44k/happy_birthday/
-      \endverb
-      \verb{url}
-      \verb https://www.reddit.com/r/aww/comments/fvk44k/happy_birthday/
-      \endverb
     \endentry
     \entry{undeExpandingRoleMultirotor2025}{article}{}
       \name{author}{6}{}{%
@@ -3118,7 +3377,146 @@
       \endverb
       \keyw{ArduSim,ArUco marker,autonomous landing,UAV,vision-based}
     \endentry
+    \entry{xuNavRLLearningSafe2024}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=11d1c9268542d7e0bbc08658b6b04090}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Zhefan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8ad51f77654bade6e3723bf7f5b34a4}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Xinming},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=aef21f11678a4678ec94ef67b460ae1b}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Haoyu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e72d52b2089730b44cd99532b16a7abc}{%
+           family={Jin},
+           familyi={J\bibinitperiod},
+           given={Hanyu},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=44b049925d8a735bdf8ed5f8cc28b160}{%
+           family={Shimada},
+           familyi={S\bibinitperiod},
+           given={Kenji},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{04b2d3f8907a68f0b4812d90b661e5d5}
+      \strng{fullhash}{9f2f11ac00d4b8da61ef596370a752de}
+      \strng{bibnamehash}{9f2f11ac00d4b8da61ef596370a752de}
+      \strng{authorbibnamehash}{9f2f11ac00d4b8da61ef596370a752de}
+      \strng{authornamehash}{04b2d3f8907a68f0b4812d90b661e5d5}
+      \strng{authorfullhash}{9f2f11ac00d4b8da61ef596370a752de}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{eprintclass}{cs.RO}
+      \field{eprinttype}{arxiv}
+      \field{journaltitle}{arXiv preprint}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{title}{{{NavRL}}: Learning Safe Flight in Dynamic Environments}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2409.15634
+      \endverb
+      \verb{eprint}
+      \verb 2409.15634
+      \endverb
+    \endentry
+    \entry{yangMonocularVisionSLAMBased2018}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=30dbf96c2effbc0427e80f15e466813e}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Tao},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3077566162e58d96e7a3dd6febc27825}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Peiqi},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7f31ac04d6d06aa7bee7fb254cb8e916}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Huiming},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcdd73174e26b44169c10e9083e72469}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Jing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1016f45114ced473595a89e1864b0333}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Zhi},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {publisher}%
+      }
+      \strng{namehash}{8220b372773b47c555d46d9d26ff6fb5}
+      \strng{fullhash}{da44645fdda0ade965bc1d3def33e5b7}
+      \strng{bibnamehash}{da44645fdda0ade965bc1d3def33e5b7}
+      \strng{authorbibnamehash}{da44645fdda0ade965bc1d3def33e5b7}
+      \strng{authornamehash}{8220b372773b47c555d46d9d26ff6fb5}
+      \strng{authorfullhash}{da44645fdda0ade965bc1d3def33e5b7}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{With the popularization and wide application of drones in military and civilian fields, the safety of drones must be considered. At present, the failu...}
+      \field{day}{15}
+      \field{issn}{2079-9292}
+      \field{journaltitle}{Electronics}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{5}
+      \field{title}{Monocular {{Vision SLAM-Based UAV Autonomous Landing}} in {{Emergencies}} and {{Unknown Environments}}}
+      \field{urlday}{7}
+      \field{urlmonth}{2}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.3390/electronics7050073
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/2RQYQIG2/Yang et al. - 2018 - Monocular Vision SLAM-Based UAV Autonomous Landing in Emergencies and Unknown Environments.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/2079-9292/7/5/73
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/2079-9292/7/5/73
+      \endverb
+      \keyw{autonomous landing area selection,monocular visual SLAM,UAV automatic landing}
+    \endentry
   \enddatalist
+  \missing{katze}
 \endrefsection
 \endinput
 
