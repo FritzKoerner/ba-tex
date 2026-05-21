@@ -17,33 +17,38 @@
 \contentsline {subsection}{\numberline {2.2.2}Monte-Carlo- und Temporal-Difference-Verfahren}{6}{subsection.25}%
 \contentsline {subsection}{\numberline {2.2.3}Funktionsapproximation}{7}{subsection.27}%
 \contentsline {subsection}{\numberline {2.2.4}Policy-Gradient-Methoden}{7}{subsection.28}%
-\contentsline {subsection}{\numberline {2.2.5}Clipped Surrogate Objective}{7}{subsection.30}%
-\contentsline {chapter}{\numberline {3}Stand der Forschung}{9}{chapter.32}%
-\contentsline {section}{\numberline {3.1}Taxonomie der Ansätze}{9}{section.33}%
-\contentsline {section}{\numberline {3.2}GNSS-basierte Methoden}{9}{section.34}%
-\contentsline {section}{\numberline {3.3}Markerbasierte bildgestützte Methoden}{10}{section.35}%
-\contentsline {section}{\numberline {3.4}Markerfreie bildgestützte Methoden}{11}{section.36}%
-\contentsline {section}{\numberline {3.5}Tiefenbildbasierte Hindernisvermeidung}{12}{section.37}%
-\contentsline {section}{\numberline {3.6}Steuerungsarchitekturen im Reinforcement Learning}{14}{section.38}%
-\contentsline {chapter}{\numberline {4}Methodik}{17}{chapter.39}%
-\contentsline {section}{\numberline {4.1}Literaturrecherche}{17}{section.40}%
-\contentsline {section}{\numberline {4.2}Expert:inneninterviews}{17}{section.41}%
-\contentsline {section}{\numberline {4.3}Systematische Planung des Modellentwicklungsprozesses}{17}{section.42}%
-\contentsline {section}{\numberline {4.4}Konzeptualisierung der Felddatenerfassung}{17}{section.43}%
-\contentsline {subsection}{\numberline {4.4.1}Aufnahmen aus verschiedenen Perspektiven}{17}{subsection.44}%
-\contentsline {section}{\numberline {4.5}Erhebung der Bilddaten}{17}{section.45}%
-\contentsline {section}{\numberline {4.6}Vorbereitung der Daten}{17}{section.46}%
-\contentsline {subsection}{\numberline {4.6.1}Datenkennzeichnung}{17}{subsection.47}%
-\contentsline {subsection}{\numberline {4.6.2}Datenaufteilung}{17}{subsection.48}%
-\contentsline {subsection}{\numberline {4.6.3}Datenaufbereitung}{17}{subsection.49}%
-\contentsline {section}{\numberline {4.7}Entwicklung und Implementierung}{17}{section.50}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{18}{chapter.51}%
-\contentsline {chapter}{\numberline {6}Diskussion}{19}{chapter.53}%
-\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{19}{section.54}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{20}{chapter.56}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{20}{section.57}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{20}{section.58}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{20}{section.59}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.60}%
-\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.64}%
-\contentsline {chapter}{\nonumberline Erklärung}{XVI}{chapter*.65}%
+\contentsline {subsection}{\numberline {2.2.5}Proximal Policy Optimization}{7}{subsection.30}%
+\contentsline {chapter}{\numberline {3}Stand der Forschung}{10}{chapter.34}%
+\contentsline {section}{\numberline {3.1}Taxonomie der Ansätze}{10}{section.35}%
+\contentsline {section}{\numberline {3.2}GNSS-basierte Methoden}{10}{section.36}%
+\contentsline {section}{\numberline {3.3}Markerbasierte bildgestützte Methoden}{11}{section.37}%
+\contentsline {section}{\numberline {3.4}Markerfreie bildgestützte Methoden}{12}{section.38}%
+\contentsline {section}{\numberline {3.5}Tiefenbildbasierte Hindernisvermeidung}{13}{section.39}%
+\contentsline {section}{\numberline {3.6}Steuerungsarchitekturen im Reinforcement Learning}{15}{section.40}%
+\contentsline {chapter}{\numberline {4}Methodik}{18}{chapter.41}%
+\contentsline {section}{\numberline {4.1}Formulierung als Markov-Entscheidungsprozess}{18}{section.42}%
+\contentsline {subsection}{\numberline {4.1.1}Zustandsraum}{18}{subsection.43}%
+\contentsline {subsection}{\numberline {4.1.2}Aktionsraum}{19}{subsection.48}%
+\contentsline {subsection}{\numberline {4.1.3}Übergangsmodell}{19}{subsection.52}%
+\contentsline {subsection}{\numberline {4.1.4}Belohnungsfunktion}{20}{subsection.53}%
+\contentsline {section}{\numberline {4.2}Trainingsverfahren}{21}{section.60}%
+\contentsline {subsection}{\numberline {4.2.1}Proximal Policy Optimization}{21}{subsection.61}%
+\contentsline {subsubsection}{\numberline {4.2.1.1}Hyperparameter}{21}{subsubsection.62}%
+\contentsline {section}{\numberline {4.3}Trainingsumgebung}{22}{section.64}%
+\contentsline {subsection}{\numberline {4.3.1}Physiksimulator}{22}{subsection.65}%
+\contentsline {subsection}{\numberline {4.3.2}Drohnenmodell}{23}{subsection.66}%
+\contentsline {subsection}{\numberline {4.3.3}Korridorgeometrie}{23}{subsection.67}%
+\contentsline {subsection}{\numberline {4.3.4}Hindernisse}{23}{subsection.69}%
+\contentsline {subsection}{\numberline {4.3.5}Verarbeitungspipeline}{25}{subsection.70}%
+\contentsline {subsection}{\numberline {4.3.6}Terminierung}{25}{subsection.72}%
+\contentsline {subsection}{\numberline {4.3.7}Curriculum}{26}{subsection.73}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{27}{chapter.74}%
+\contentsline {chapter}{\numberline {6}Diskussion}{28}{chapter.76}%
+\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{28}{section.77}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{29}{chapter.79}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{29}{section.80}%
+\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{29}{section.81}%
+\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{29}{section.82}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.83}%
+\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.87}%
+\contentsline {chapter}{\nonumberline Erklärung}{XVII}{chapter*.88}%

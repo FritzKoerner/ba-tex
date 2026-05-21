@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 210"
+     font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8752f6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8752f6" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5698f9" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#5698f9" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a340" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#e8a340" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60aa64" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#60aa64" stop-opacity="0.06"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 7" refX="10" refY="3.5"
+      markerWidth="10" markerHeight="7" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="780" height="210" fill="#fafafa" rx="4"/>
+  <rect x="12" y="19" width="125" height="50" rx="5" fill="url(#gb)" stroke="#5698f9" stroke-width="1.6"/><text x="74.5" y="39" text-anchor="middle" font-size="14" fill="#2a5a9a" font-weight="600">Actor-Netz</text><text x="74.5" y="53" text-anchor="middle" font-size="9.5" fill="#2a5a9a">μ, log σ</text><line x1="137" y1="44" x2="182" y2="44" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="190" y="24" width="155" height="40" rx="5" fill="url(#gp)" stroke="#8752f6" stroke-width="1.4"/><text x="267.5" y="41" text-anchor="middle" font-size="13" fill="#4a2a8a" font-weight="600">Gauss-Stichprobe</text><text x="267.5" y="54" text-anchor="middle" font-size="9.5" fill="#888">N(μ, σ²) → tanh</text><line x1="345" y1="44" x2="390" y2="44" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="398" y="24" width="95" height="40" rx="5" fill="url(#go)" stroke="#e8a340" stroke-width="1.4"/><text x="445.5" y="42" text-anchor="middle" font-size="14" fill="#8a6420" font-weight="600">a</text><text x="453.5" y="45" text-anchor="middle" font-size="9.5" fill="#8a6420" font-weight="600">t</text><text x="445.5" y="55" text-anchor="middle" font-size="9.5" fill="#888">∈ [−1, 1]⁴</text><line x1="445.5" y1="64" x2="445.5" y2="127" stroke="#888" stroke-width="1.2"/><line x1="445.5" y1="127" x2="445.5" y2="135" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="100" y="135" width="140" height="40" rx="5" fill="url(#gp)" stroke="#8752f6" stroke-width="1.4"/><text x="170.0" y="152" text-anchor="middle" font-size="13" fill="#4a2a8a" font-weight="600">Skalierung</text><text x="170.0" y="165" text-anchor="middle" font-size="9.5" fill="#888">×(1, 1, 2) m;  ×180°</text><text x="170.0" y="189" text-anchor="middle" font-size="9" fill="#aaa" font-style="italic">→ p_soll, ψ_soll</text><line x1="240" y1="155" x2="295" y2="155" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="303" y="135" width="145" height="40" rx="5" fill="url(#gg)" stroke="#60aa64" stroke-width="1.6"/><text x="375.5" y="152" text-anchor="middle" font-size="13" fill="#3a6a3e" font-weight="600">PID-Regler</text><text x="375.5" y="165" text-anchor="middle" font-size="9.5" fill="#3a6a3e">kaskadierend</text><line x1="448" y1="155" x2="495" y2="155" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="503" y="135" width="145" height="40" rx="5" fill="url(#gg)" stroke="#60aa64" stroke-width="1.6"/><text x="575.5" y="152" text-anchor="middle" font-size="13" fill="#3a6a3e" font-weight="600">Physiksimulator</text><text x="575.5" y="165" text-anchor="middle" font-size="9.5" fill="#3a6a3e">300 × Δt = 3,0 s</text><line x1="648" y1="155" x2="693" y2="155" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="701" y="135" width="65" height="40" rx="5" fill="url(#gp)" stroke="#8752f6" stroke-width="1.4"/><text x="733.5" y="153" text-anchor="middle" font-size="13" fill="#4a2a8a" font-weight="600">s</text><text x="739.5" y="156" text-anchor="middle" font-size="9" fill="#4a2a8a" font-weight="600">t+1</text><text x="733.5" y="167" text-anchor="middle" font-size="9.5" fill="#888">, r</text><line x1="303" y1="125" x2="303" y2="120" stroke="#bbb" stroke-width="0.8"/><line x1="303" y1="120" x2="648" y2="120" stroke="#bbb" stroke-width="0.8"/><line x1="648" y1="120" x2="648" y2="125" stroke="#bbb" stroke-width="0.8"/><text x="475.5" y="116" text-anchor="middle" font-size="9" fill="#aaa">Entscheidungsintervall (300 Substeps)</text>
+</svg>

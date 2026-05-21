@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 128"
+     font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8752f6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#8752f6" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5698f9" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#5698f9" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="go" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8a340" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#e8a340" stop-opacity="0.06"/>
+    </linearGradient>
+    <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#60aa64" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#60aa64" stop-opacity="0.06"/>
+    </linearGradient>
+    <marker id="arr" viewBox="0 0 10 7" refX="10" refY="3.5"
+      markerWidth="10" markerHeight="7" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
+    </marker>
+  </defs>
+  <rect width="780" height="128" fill="#fafafa" rx="4"/>
+  <rect x="12" y="16" width="108" height="36" rx="5" fill="url(#gp)" stroke="#8752f6" stroke-width="1.4"/><text x="66.0" y="31" text-anchor="middle" font-size="12" fill="#4a2a8a" font-weight="600">Tiefenbild</text><text x="66.0" y="44" text-anchor="middle" font-size="9.5" fill="#888">64×64, [0, 1]</text><rect x="12" y="76" width="108" height="36" rx="5" fill="url(#gp)" stroke="#8752f6" stroke-width="1.4"/><text x="66.0" y="91" text-anchor="middle" font-size="12" fill="#4a2a8a" font-weight="600">Zustandsvektor</text><text x="66.0" y="104" text-anchor="middle" font-size="9.5" fill="#888">17-dim, normalisiert</text><line x1="120" y1="34" x2="145" y2="34" stroke="#888" stroke-width="1.2"/><line x1="120" y1="94" x2="145" y2="94" stroke="#888" stroke-width="1.2"/><line x1="145" y1="34" x2="145" y2="94" stroke="#888" stroke-width="1.2"/><line x1="145" y1="64" x2="163" y2="64" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="171" y="41" width="108" height="46" rx="5" fill="url(#gb)" stroke="#5698f9" stroke-width="1.6"/><text x="225.0" y="60" text-anchor="middle" font-size="13" fill="#2a5a9a" font-weight="600">Actor-Netz</text><text x="225.0" y="74" text-anchor="middle" font-size="9.5" fill="#2a5a9a">CNN + MLP</text><line x1="279" y1="64" x2="297" y2="64" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="305" y="47" width="48" height="34" rx="5" fill="url(#go)" stroke="#e8a340" stroke-width="1.4"/><text x="329.0" y="62" text-anchor="middle" font-size="14" fill="#8a6420" font-weight="600">a</text><text x="337.0" y="65" text-anchor="middle" font-size="9" fill="#8a6420" font-weight="600">t</text><text x="329.0" y="76" text-anchor="middle" font-size="9.5" fill="#888">[−1, 1]</text><line x1="353" y1="64" x2="371" y2="64" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="379" y="46" width="76" height="36" rx="5" fill="url(#gp)" stroke="#8752f6" stroke-width="1.4"/><text x="417.0" y="61" text-anchor="middle" font-size="11.5" fill="#4a2a8a" font-weight="600">Skalierung</text><text x="417.0" y="74" text-anchor="middle" font-size="9.5" fill="#888">p_soll, ψ_soll</text><line x1="455" y1="64" x2="473" y2="64" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="481" y="46" width="84" height="36" rx="5" fill="url(#gg)" stroke="#60aa64" stroke-width="1.6"/><text x="523.0" y="61" text-anchor="middle" font-size="12" fill="#3a6a3e" font-weight="600">PID-Regler</text><text x="523.0" y="74" text-anchor="middle" font-size="9.5" fill="#3a6a3e">kaskadierend</text><line x1="565" y1="64" x2="583" y2="64" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><rect x="591" y="46" width="100" height="36" rx="5" fill="url(#gg)" stroke="#60aa64" stroke-width="1.6"/><text x="641.0" y="61" text-anchor="middle" font-size="12" fill="#3a6a3e" font-weight="600">Simulator</text><text x="641.0" y="74" text-anchor="middle" font-size="9.5" fill="#3a6a3e">300 × Δt = 3,0 s</text><line x1="691" y1="64" x2="706" y2="64" stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/><text x="723" y="63" text-anchor="middle" font-size="13" fill="#4a2a8a" font-weight="600">s</text><text x="730" y="66" text-anchor="middle" font-size="9" fill="#4a2a8a" font-weight="600">t+1</text><text x="723" y="76" text-anchor="middle" font-size="9.5" fill="#888">, r</text>
+</svg>

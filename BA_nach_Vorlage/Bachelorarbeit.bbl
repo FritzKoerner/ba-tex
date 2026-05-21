@@ -1055,6 +1055,96 @@
       \verb https://www.mdpi.com/2073-4395/8/3/25#Conclusions
       \endverb
     \endentry
+    \entry{cobbePhrasicPolicyGradient2021}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=c9355eeb51a7665fc3d58f45e210fbf6}{%
+           family={Cobbe},
+           familyi={C\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e4edc142b0564cbbb1cf93a401e4434}{%
+           family={Hilton},
+           familyi={H\bibinitperiod},
+           given={Jacob},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=be38507da6ab98e7ac01ac2c6b7e13eb}{%
+           family={Klimov},
+           familyi={K\bibinitperiod},
+           given={Oleg},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{45858a0ae98644e6c6bc549ac1a2cfa3}
+      \strng{fullhash}{d34783d1424829ba1057d443b4b26392}
+      \strng{bibnamehash}{d34783d1424829ba1057d443b4b26392}
+      \strng{authorbibnamehash}{d34783d1424829ba1057d443b4b26392}
+      \strng{authornamehash}{45858a0ae98644e6c6bc549ac1a2cfa3}
+      \strng{authorfullhash}{d34783d1424829ba1057d443b4b26392}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 38th {{International Conference}} on {{Machine Learning}}}
+      \field{series}{Proceedings of {{Machine Learning Research}}}
+      \field{title}{Phasic {{Policy Gradient}}}
+      \field{volume}{139}
+      \field{year}{2021}
+      \field{pages}{2020\bibrangedash 2027}
+      \range{pages}{8}
+    \endentry
+    \entry{coumansPybulletPythonModule2016}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cb5d8e1abc8f025ae375181f1fa6aa94}{%
+           family={Coumans},
+           familyi={C\bibinitperiod},
+           given={Erwin},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4e894fab619f8dd9d682b92cc981bf43}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Yunfei},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{0906d7c6225b74c0d4b0cc1970130529}
+      \strng{fullhash}{0906d7c6225b74c0d4b0cc1970130529}
+      \strng{bibnamehash}{0906d7c6225b74c0d4b0cc1970130529}
+      \strng{authorbibnamehash}{0906d7c6225b74c0d4b0cc1970130529}
+      \strng{authornamehash}{0906d7c6225b74c0d4b0cc1970130529}
+      \strng{authorfullhash}{0906d7c6225b74c0d4b0cc1970130529}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{PyBullet, a Python Module for Physics Simulation for Games, Robotics and Machine Learning}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2016--2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://pybullet.org
+      \endverb
+      \verb{url}
+      \verb http://pybullet.org
+      \endverb
+    \endentry
     \entry{duckettAgriculturalRoboticsFuture2018}{online}{}
       \name{author}{30}{}{%
         {{un=0,uniquepart=base,hash=44f7f2de4fcf39874fdaea11b04e77a3}{%
@@ -1318,6 +1408,38 @@
       \endverb
       \keyw{Agriculture and state,Alternative agriculture,Environmental aspects,Food crops}
     \endentry
+    \entry{xianGenesisUniversalGenerative2024}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8969fa8f9d6b9baaf92decd339725d53}{%
+           family={{Genesis Authors}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8969fa8f9d6b9baaf92decd339725d53}
+      \strng{fullhash}{8969fa8f9d6b9baaf92decd339725d53}
+      \strng{bibnamehash}{8969fa8f9d6b9baaf92decd339725d53}
+      \strng{authorbibnamehash}{8969fa8f9d6b9baaf92decd339725d53}
+      \strng{authornamehash}{8969fa8f9d6b9baaf92decd339725d53}
+      \strng{authorfullhash}{8969fa8f9d6b9baaf92decd339725d53}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Genesis: A Generative and Universal Physics Engine for Robotics and Beyond}
+      \field{urlday}{20}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/Genesis-Embodied-AI/Genesis
+      \endverb
+      \verb{url}
+      \verb https://github.com/Genesis-Embodied-AI/Genesis
+      \endverb
+    \endentry
     \entry{guebsi2024drones}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=8081651ace36b75dd1a59c6eb2e473fe}{%
@@ -1364,6 +1486,63 @@
       \endverb
       \verb{file}
       \verb /home/fritz-sfl/Zotero/storage/RZ75LXEZ/Guebsi et al. - 2024 - Drones in precision agriculture a comprehensive review of applications, technologies, and challenge.pdf
+      \endverb
+    \endentry
+    \entry{haarnojaOffPolicyMaximumEntropy2017}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=45b14f55dd7ae28cb6cb2e23e4a168b9}{%
+           family={Haarnoja},
+           familyi={H\bibinitperiod},
+           given={Tuomas},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=519033a7338e5ef684c77d4d04748a4a}{%
+           family={Zhou},
+           familyi={Z\bibinitperiod},
+           given={Aurick},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{fullhash}{951e86110020d3107317b3e819f3d92d}
+      \strng{bibnamehash}{951e86110020d3107317b3e819f3d92d}
+      \strng{authorbibnamehash}{951e86110020d3107317b3e819f3d92d}
+      \strng{authornamehash}{b8c131de85c5000ff50df59a4d062227}
+      \strng{authorfullhash}{951e86110020d3107317b3e819f3d92d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 35th {{International Conference}} on {{Machine Learning}}}
+      \field{series}{Proceedings of {{Machine Learning Research}}}
+      \field{title}{Off-{{Policy Maximum Entropy Deep Reinforcement Learning}} with a {{Stochastic Actor}}}
+      \field{volume}{80}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{pages}{1861\bibrangedash 1870}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v80/haarnoja18b.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v80/haarnoja18b.html
       \endverb
     \endentry
     \entry{hodgeDeepReinforcementLearning2021}{article}{}
@@ -1922,6 +2101,43 @@
       \endverb
       \keyw{Deep reinforcement learning,Depth estimation,Navigation decision making,Obstacle avoidance,Q-learning,Vision-based}
     \endentry
+    \entry{koenigDesignUseParadigms2004}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=b36ad28302103ee23f9d095ae271054f}{%
+           family={Koenig},
+           familyi={K\bibinitperiod},
+           given={Nathan},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=315c4166fc1f7cb66324a7f0d82827cd}{%
+           family={Howard},
+           familyi={H\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{fullhash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{bibnamehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{authorbibnamehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{authornamehash}{956b19be78deabb0cea6aa73f05590c0}
+      \strng{authorfullhash}{956b19be78deabb0cea6aa73f05590c0}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)}
+      \field{title}{Design and Use Paradigms for Gazebo, an Open-Source Multi-Robot Simulator}
+      \field{volume}{3}
+      \field{year}{2004}
+      \field{pages}{2149\bibrangedash 2154}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/IROS.2004.1389727
+      \endverb
+    \endentry
     \entry{ladoszAutonomousLandingMoving2024}{article}{}
       \name{author}{5}{}{%
         {{un=0,uniquepart=base,hash=2827480ca41e7f708e07a8e8bfc42928}{%
@@ -2076,6 +2292,97 @@
       \endverb
       \verb{url}
       \verb https://www.science.org/doi/10.1126/scirobotics.abg5810
+      \endverb
+    \endentry
+    \entry{makoviychukIsaacGymHigh2021}{inproceedings}{}
+      \name{author}{11}{}{%
+        {{un=0,uniquepart=base,hash=b2920c1e5c13f9f9448bc7ad484b44ed}{%
+           family={Makoviychuk},
+           familyi={M\bibinitperiod},
+           given={Viktor},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c79f4bf18afd74edcff18e424cbe8b5c}{%
+           family={Wawrzyniak},
+           familyi={W\bibinitperiod},
+           given={Lukasz},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e1374704b8aacb6fd5dbb0413f159238}{%
+           family={Guo},
+           familyi={G\bibinitperiod},
+           given={Yunrong},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c8e642dcd0c155ed924ff41ccffb368f}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Michelle},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b097d7c793249b8202873b12d4f1a21f}{%
+           family={Storey},
+           familyi={S\bibinitperiod},
+           given={Kier},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb9fad16d2ae65ef730edb579c4636cf}{%
+           family={Macklin},
+           familyi={M\bibinitperiod},
+           given={Miles},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93c4a2b776cc893ccb2f86e35e82fcd7}{%
+           family={Hoeller},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ac29b212261fe3d27e4d51cf14a990e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Nikita},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c924448369e4049193582589341c8dd4}{%
+           family={Allshire},
+           familyi={A\bibinitperiod},
+           given={Arthur},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=91f71111407c735a209311b2c093f258}{%
+           family={Handa},
+           familyi={H\bibinitperiod},
+           given={Ankur},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9b4967bfd381d8966b90b8ccb8ad1540}{%
+           family={State},
+           familyi={S\bibinitperiod},
+           given={Gavriel},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3bd11ba81deac891dcfa9d6856758035}
+      \strng{fullhash}{ca0df8635c2896a001992cd24fac60c2}
+      \strng{bibnamehash}{ca0df8635c2896a001992cd24fac60c2}
+      \strng{authorbibnamehash}{ca0df8635c2896a001992cd24fac60c2}
+      \strng{authornamehash}{3bd11ba81deac891dcfa9d6856758035}
+      \strng{authorfullhash}{ca0df8635c2896a001992cd24fac60c2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)}
+      \field{title}{Isaac Gym: High Performance GPU-Based Physics Simulation for Robot Learning}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://openreview.net/forum?id=fgFBtYgJQX_
+      \endverb
+      \verb{url}
+      \verb https://openreview.net/forum?id=fgFBtYgJQX_
       \endverb
     \endentry
     \entry{mashoriRemoteSensingUAVs2026}{article}{}
@@ -2246,8 +2553,89 @@
       \verb http://ieeexplore.ieee.org/document/7140074/
       \endverb
     \endentry
+    \entry{mnihAsynchronousMethodsDeep2016}{online}{}
+      \name{author}{8}{ul=2}{%
+        {{un=0,uniquepart=base,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
+           family={Mnih},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db6afdf70ea61bf8ed973a75b90ff818}{%
+           family={Badia},
+           familyi={B\bibinitperiod},
+           given={Adrià\bibnamedelima Puigdomènech},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9e80f4779b032f68a6106e1424345450}{%
+           family={Mirza},
+           familyi={M\bibinitperiod},
+           given={Mehdi},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dfca94b0427da7f9088af596e23b46c0}{%
+           family={Graves},
+           familyi={G\bibinitperiod},
+           given={Alex},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2a321a868e44d49baf52b5e2d816fb71}{%
+           family={Lillicrap},
+           familyi={L\bibinitperiod},
+           given={Timothy\bibnamedelima P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b63b9b2d91f6ba1b1739563edc0432ab}{%
+           family={Harley},
+           familyi={H\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=89dbd30410c2085cd059f32c57d4593e}{%
+           family={Silver},
+           familyi={S\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=481308b301166b521c74fde6566e97e6}{%
+           family={Kavukcuoglu},
+           familyi={K\bibinitperiod},
+           given={Koray},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{720d3e12e18ccd830e708e04ef703276}
+      \strng{fullhash}{e067addbfefbaf06a859610fa608b21e}
+      \strng{bibnamehash}{e067addbfefbaf06a859610fa608b21e}
+      \strng{authorbibnamehash}{e067addbfefbaf06a859610fa608b21e}
+      \strng{authornamehash}{720d3e12e18ccd830e708e04ef703276}
+      \strng{authorfullhash}{e067addbfefbaf06a859610fa608b21e}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{16}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{title}{Asynchronous {{Methods}} for {{Deep Reinforcement Learning}}}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \verb{eprint}
+      \verb 1602.01783
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1602.01783
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1602.01783
+      \endverb
+    \endentry
     \entry{mnihHumanlevelControlDeep2015}{article}{}
-      \name{author}{19}{}{%
+      \name{author}{19}{ul=2}{%
         {{un=0,uniquepart=base,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
            family={Mnih},
            familyi={M\bibinitperiod},
@@ -2366,11 +2754,11 @@
       \list{publisher}{1}{%
         {Nature Publishing Group}%
       }
-      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{namehash}{89d8ce0a1075e76fee7b82aecc72eb47}
       \strng{fullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{bibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{authorbibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
-      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
+      \strng{authornamehash}{89d8ce0a1075e76fee7b82aecc72eb47}
       \strng{authorfullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
@@ -2736,6 +3124,120 @@
       \verb https://www.sciencedirect.com/science/article/pii/S138912862030116X
       \endverb
       \keyw{Precision agriculture (PA),Remote sensing (RS),Unmanned aerial vehicle (UAV)}
+    \endentry
+    \entry{rudinLearningWalkMinutes2022}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=5ac29b212261fe3d27e4d51cf14a990e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Nikita},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93c4a2b776cc893ccb2f86e35e82fcd7}{%
+           family={Hoeller},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=60cbc78a7a7379afdab68a90e478f9da}{%
+           family={Reist},
+           familyi={R\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=164607f9daa616a03bed0e2bf6531a8d}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{5f8eebe34c472dc01f89b4339c3789c8}
+      \strng{fullhash}{7b30bae853adb350379ddd4bf62c03e2}
+      \strng{bibnamehash}{7b30bae853adb350379ddd4bf62c03e2}
+      \strng{authorbibnamehash}{7b30bae853adb350379ddd4bf62c03e2}
+      \strng{authornamehash}{5f8eebe34c472dc01f89b4339c3789c8}
+      \strng{authorfullhash}{7b30bae853adb350379ddd4bf62c03e2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 5th {{Conference}} on {{Robot Learning}}}
+      \field{series}{Proceedings of {{Machine Learning Research}}}
+      \field{title}{Learning to {{Walk}} in {{Minutes Using Massively Parallel Deep Reinforcement Learning}}}
+      \field{volume}{164}
+      \field{year}{2022}
+      \field{pages}{91\bibrangedash 100}
+      \range{pages}{10}
+    \endentry
+    \entry{schulmanTrustRegionPolicy2015}{inproceedings}{}
+      \name{author}{5}{ul=2}{%
+        {{un=0,uniquepart=base,hash=3e09bd2a25d237ebdaed560a07c0451e}{%
+           family={Schulman},
+           familyi={S\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c9545da54b33744da25943cdf66eadac}{%
+           family={Levine},
+           familyi={L\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a901fd78fe1108cfa7d11129644967c7}{%
+           family={Moritz},
+           familyi={M\bibinitperiod},
+           given={Philipp},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8a36116840c7ee55901618c95fd08a58}{%
+           family={Jordan},
+           familyi={J\bibinitperiod},
+           given={Michael\bibnamedelima I.},
+           giveni={M\bibinitperiod\bibinitdelim I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e28d4ee199593959d8c29980a64f1974}{%
+           family={Abbeel},
+           familyi={A\bibinitperiod},
+           given={Pieter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {PMLR}%
+      }
+      \strng{namehash}{4290bc9e05fb16d946cdb7a6a222296e}
+      \strng{fullhash}{945251de1d41bc2767a541a8148f51da}
+      \strng{bibnamehash}{945251de1d41bc2767a541a8148f51da}
+      \strng{authorbibnamehash}{945251de1d41bc2767a541a8148f51da}
+      \strng{authornamehash}{4290bc9e05fb16d946cdb7a6a222296e}
+      \strng{authorfullhash}{945251de1d41bc2767a541a8148f51da}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 32nd {{International Conference}} on {{Machine Learning}} ({{ICML}})}
+      \field{langid}{english}
+      \field{series}{Proceedings of Machine Learning Research}
+      \field{title}{Trust {{Region Policy Optimization}}}
+      \field{volume}{37}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{pages}{1889\bibrangedash 1897}
+      \range{pages}{9}
+      \verb{urlraw}
+      \verb https://proceedings.mlr.press/v37/schulman15.html
+      \endverb
+      \verb{url}
+      \verb https://proceedings.mlr.press/v37/schulman15.html
+      \endverb
     \endentry
     \entry{schulmanHighDimensionalContinuousControl2016}{inproceedings}{}
       \name{author}{5}{ul=2}{%

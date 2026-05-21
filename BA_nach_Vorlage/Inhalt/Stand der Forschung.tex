@@ -63,6 +63,15 @@ Die Wahl der Abstraktionsebene beeinflusst die Lernperformance substanziell: \te
 Speziell für Quadrotoren bestätigen \textcite{kaufmannBenchmarkComparisonLearned2022}, dass Geschwindigkeitskommandos schneller konvergieren als direktes Body-Rate-Thrust-Control. % REVIEW: Kaufmann et al. 2022 (ICRA) — Quelle lesen und bestätigen
 \textcite{aljalboutRoleActionSpace2024} zeigen zudem, dass höherrangige Aktionsräume einen besseren Sim-to-Real-Transfer ermöglichen, da der Low-Level-Regler Hardware-Abweichungen kompensiert. % REVIEW: Aljalbout et al. 2024 — Quelle lesen und bestätigen
 
+Neben der Steuerungsarchitektur hat sich PPO als dominierender Trainingsalgorithmus für
+RL-basierte Drohnensteuerung etabliert. Sowohl
+\textcite{bartolomeiAutonomousEmergencyLanding2022}
+(Abschnitt~\ref{sec:markerfrei}) als auch \textcite{xuNavRLLearningSafe2024}
+(Abschnitt~\ref{sec:tiefenbild-oa}) setzen PPO als Trainingsalgorithmus ein.
+\textcite{kaufmannChampionlevelDroneRacing2023} demonstrieren den bislang
+eindrucksvollsten Einsatz: Ihr mit PPO in Simulation trainiertes System schlägt im
+physischen Drohnenrennen drei menschliche Weltmeister in direkten Kopf-an-Kopf-Rennen.
+
 Die vorliegende Arbeit folgt dem hierarchischen Paradigma: Der RL-Agent gibt eine Zielposition vor, die ein kaskadierender PID-Regler (Position $\rightarrow$ Geschwindigkeit $\rightarrow$ Lage $\rightarrow$ Drehzahl) in Motorkommandos umsetzt. Die Ausgabe des Agenten bleibt dadurch interpretierbar, der PID-Regler kann unabhängig vom RL-Training auf die Zielplattform abgestimmt werden, und die Lernkomplexität reduziert sich auf die Frage, \emph{wohin} die Drohne fliegen soll.
 
 Zusammenfassend zeigt der Stand der Forschung drei wiederkehrende Limitationen RL-basierter Landesysteme: Erstens operieren die meisten Ansätze mit diskreten Aktionsräumen \autocite{polvaraSimtoRealQuadrotorLanding2020, bartolomeiAutonomousEmergencyLanding2022} oder vereinfachen den vertikalen Abstieg auf regelbasierte Steuerung — lediglich \textcite{ladoszAutonomousLandingMoving2024} setzen einen kontinuierlichen Aktionsraum mit Vertikalkontrolle ein, beschränken sich jedoch auf hindernisfreie Innenräume. Zweitens trainiert keine der betrachteten Arbeiten in Umgebungen mit Hindernissen, wie sie bei einer Landung zwischen Weinreben oder Baumreihen auftreten. Drittens bleibt der Sim-to-Real-Transfer eine offene Herausforderung: Die Erfolgsraten sinken systematisch beim Übergang in die reale Welt — von 89\,\% auf 61\,\% \autocite{polvaraSimtoRealQuadrotorLanding2020}, von 97,4\,\% auf rund 70\,\% \autocite{ladoszAutonomousLandingMoving2024} —, und reale Experimente stützen sich auf Hilfsmittel wie Vicon-Lokalisierung \autocite{peterTornadoDroneBioinspiredDRLbased2024} oder gezieltes Fine-Tuning \autocite{bartolomeiAutonomousEmergencyLanding2022}, die unter Einsatzbedingungen nicht verfügbar sind.

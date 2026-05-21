@@ -94,13 +94,72 @@ wobei $\mu$ die Zustandsbesuchsverteilung unter $\pi$ bezeichnet. Der entscheide
 
 In der Praxis wird der Policy-Gradient-Ansatz häufig als \emph{Actor-Critic-Architektur} umgesetzt: Ein \emph{Actor}-Netz repräsentiert die Strategie $\pi(\cdot \mid \cdot, \boldsymbol{\theta})$, ein \emph{Critic}-Netz schätzt eine Wert-Funktion $\hat v(\cdot, \mathbf{w})$. Die Wertschätzung des Critics dient als Referenzniveau, das die Varianz der Gradientenschätzung reduziert, ohne sie zu verzerren.
 
-\subsection{Clipped Surrogate Objective}
+\subsection{Proximal Policy Optimization}
 \label{subsec:ppo_clip}
 
-Eine moderne und in der Praxis weit verbreitete Variante des Policy-Gradient-Ansatzes ist \emph{Proximal Policy Optimization} (PPO) \autocite{schulmanProximalPolicyOptimization2017}. PPO adressiert eine zentrale Instabilität einfacher Policy-Gradient-Verfahren: Ein zu großer Gradientenschritt in $\boldsymbol{\theta}$ kann die neue Strategie so weit von der bisherigen Strategie entfernen, dass nachfolgende Aktualisierungen nicht mehr aussagekräftig sind oder die Strategie kollabiert. 
-PPO optimiert eine Variante der Standard-Policy-Gradient-Zielfunktion:
+Eine moderne und in der Praxis weit verbreitete Variante des Policy-Gradient-Ansatzes ist \emph{Proximal Policy Optimization} (PPO) \autocite{schulmanProximalPolicyOptimization2017}, ein Actor-Critic-Verfahren, das die Trainingsstabilität von Trust-Region-Methoden erreicht und dabei wesentlich einfacher zu implementieren ist.
+
+Zu große Strategieänderungen pro Optimierungsschritt können Policy-Gradient-Verfahren
+destabilisieren, da die gesammelten Trajektorien für die veränderte Strategie nicht mehr
+repräsentativ sind \autocite{schulmanProximalPolicyOptimization2017}. Trust-Region-Methoden
+wie TRPO \autocite{schulmanTrustRegionPolicy2015} begrenzen daher die KL-Divergenz
+zwischen aufeinanderfolgenden Strategien, erfordern dafür jedoch Approximationen zweiter
+Ordnung. PPO erzielt eine vergleichbare Stabilisierung allein durch eine geklippte
+Zielfunktion:
 \begin{equation} \label{eq:ppo_clip}
-    L^{\mathrm{CLIP}}(\boldsymbol{\theta}) = \hat{\mathbb{E}}_t\!\left[\min\!\left(r_t(\boldsymbol{\theta})\,\hat A_t,\; \mathrm{clip}\!\left(r_t(\boldsymbol{\theta}),\, 1-\varepsilon,\, 1+\varepsilon\right) \hat A_t \right)\right],
+    L^{\mathrm{CLIP}}(\boldsymbol{\theta}) = \hat{\mathbb{E}}_t\!\left[
+        \min\!\left(
+            r_t(\boldsymbol{\theta})\,\hat{A}_t,\;
+            \mathrm{clip}\!\left(r_t(\boldsymbol{\theta}),\, 1-\varepsilon,\,
+            1+\varepsilon\right) \hat{A}_t
+        \right)
+    \right],
 \end{equation}
-mit dem Wahrscheinlichkeitsverhältnis $r_t(\boldsymbol{\theta}) = \pi_{\boldsymbol{\theta}}(a_t \mid s_t) / \pi_{\boldsymbol{\theta}_{\mathrm{alt}}}(a_t \mid s_t)$ und einem Vorteilsschätzer $\hat A_t$, der in der Regel per \emph{Generalized Advantage Estimation} \autocite{schulmanHighDimensionalContinuousControl2016} berechnet wird. Das pessimistische Clipping auf das Intervall $[1-\varepsilon,\, 1+\varepsilon]$ begrenzt die effektive Schrittweite und stabilisiert so das Training.
-PPO bietet eine robuste und einfache Alternative zu anderen Policy-Gradient-Methoden und zeigt trotzdem herausragende empirische Ergebnisse \autocite{schulmanProximalPolicyOptimization2017}.
+wobei $r_t(\boldsymbol{\theta}) = \pi_{\boldsymbol{\theta}}(a_t \mid s_t)\,/\,
+\pi_{\boldsymbol{\theta}_{\mathrm{alt}}}(a_t \mid s_t)$ das
+Wahrscheinlichkeitsverhältnis zwischen neuer und alter Strategie ist, $\hat{A}_t$ der
+Vorteilsschätzer und $\varepsilon$ die Clipping-Grenze.
+Das Clipping bewirkt \emph{pessimistische} Updates: Verbessert eine Strategieänderung
+das Objective, wird der Anreiz bei $r_t > 1 + \varepsilon$ gekappt; verschlechtert sie
+es, greift die Minimumbildung und die Korrektur bleibt uneingeschränkt
+(Abbildung~\ref{fig:ppo_clip}). So werden zu große Schritte in Richtung guter
+Erfahrungen gebremst, während schlechte Aktionen voll korrigiert werden.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\linewidth]{Bilder/ppo_clipping.pdf}
+    \caption{$L^{\mathrm{CLIP}}$ als Funktion des
+    Wahrscheinlichkeitsverhältnisses~$r$. Links ($\hat{A}_t > 0$): der Anreiz wird bei
+    $1 + \varepsilon$ gekappt. Rechts ($\hat{A}_t < 0$): die Korrektur bleibt
+    uneingeschränkt (nach \autocite{schulmanProximalPolicyOptimization2017}, Fig.~1).}
+    \label{fig:ppo_clip}
+\end{figure}
+
+Das vollständige PPO-Objective kombiniert das Clipping mit zwei weiteren Termen:
+\begin{equation} \label{eq:ppo_full}
+    L(\boldsymbol{\theta}) =
+    L^{\mathrm{CLIP}}(\boldsymbol{\theta})
+    - c_1\, L^{VF}(\boldsymbol{\theta})
+    + c_2\, H\!\left[\pi_{\boldsymbol{\theta}}\right]\!(s_t),
+\end{equation}
+wobei $L^{VF} = (V_{\boldsymbol{\theta}}(s_t) - V_t^{\mathrm{targ}})^2$ der quadratische
+Fehler der Wertfunktionsschätzung des Critics ist und
+$H[\pi_{\boldsymbol{\theta}}]$ einen Entropie-Bonus bezeichnet, der vorzeitige
+Konvergenz der Aktionsverteilung verhindert. Ohne diesen Term kann die
+Standardabweichung gegen null konvergieren (\emph{Std-Collapse}), was die Strategie
+irreversibel auf eine deterministische Aktion festlegt.
+
+Für die Schätzung des Vorteils~$\hat{A}_t$ wird \emph{Generalized Advantage Estimation}
+(GAE) \autocite{schulmanHighDimensionalContinuousControl2016} eingesetzt, das über den
+Parameter~$\lambda$ einen Kompromiss zwischen Bias und Varianz der Vorteilsschätzung
+steuert.
+
+\textcite{schulmanProximalPolicyOptimization2017} evaluieren PPO auf zwei
+Benchmark-Suiten: In den MuJoCo-Continuous-Control-Benchmarks übertrifft PPO die
+Vergleichsverfahren TRPO \autocite{schulmanTrustRegionPolicy2015} und A2C
+\autocite{mnihAsynchronousMethodsDeep2016} auf nahezu allen Umgebungen. In der Arcade
+Learning Environment zeigt PPO ebenfalls kompetitive Ergebnisse und gewinnt 30 von 49
+Spielen nach durchschnittlicher Episodenbelohnung über das gesamte Training
+\autocite{schulmanProximalPolicyOptimization2017}. Der Clipping-Mechanismus erzeugt dabei
+ein stabiles Konvergenzverhalten, das die Robustheit von Trust-Region-Algorithmen
+erreicht, ohne deren Implementierungskomplexität zu erfordern.
