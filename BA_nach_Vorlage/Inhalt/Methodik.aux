@@ -25,37 +25,45 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Belohnungsfunktion}{20}{subsection.53}\protected@file@percent }
 \newlabel{subsec:meth_belohnung}{{4.1.4}{20}{Belohnungsfunktion}{subsection.53}{}}
 \newlabel{eq:meth_reward}{{4.7}{20}{Belohnungsfunktion}{equation.54}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Trainingsverfahren}{21}{section.60}\protected@file@percent }
-\newlabel{sec:meth_trainingsverfahren}{{4.2}{21}{Trainingsverfahren}{section.60}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Proximal Policy Optimization}{21}{subsection.61}\protected@file@percent }
-\newlabel{subsec:meth_ppo}{{4.2.1}{21}{Proximal Policy Optimization}{subsection.61}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.2.1.1}Hyperparameter}{21}{subsubsection.62}\protected@file@percent }
-\newlabel{subsubsec:meth_hyperparams}{{4.2.1.1}{21}{Hyperparameter}{subsubsection.62}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{22}{table.caption.63}\protected@file@percent }
-\newlabel{tab:meth_ppo_hyperparams}{{4.2}{22}{PPO-Hyperparameter der vorliegenden Arbeit}{table.caption.63}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Trainingsumgebung}{22}{section.64}\protected@file@percent }
-\newlabel{sec:meth_trainingsumgebung}{{4.3}{22}{Trainingsumgebung}{section.64}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Physiksimulator}{22}{subsection.65}\protected@file@percent }
-\newlabel{subsec:meth_simulator}{{4.3.1}{22}{Physiksimulator}{subsection.65}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}Drohnenmodell}{23}{subsection.66}\protected@file@percent }
-\newlabel{subsec:meth_drohne}{{4.3.2}{23}{Drohnenmodell}{subsection.66}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.3}Korridorgeometrie}{23}{subsection.67}\protected@file@percent }
-\newlabel{subsec:meth_korridor}{{4.3.3}{23}{Korridorgeometrie}{subsection.67}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.4}Hindernisse}{23}{subsection.69}\protected@file@percent }
-\newlabel{subsec:meth_hindernisse}{{4.3.4}{23}{Hindernisse}{subsection.69}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{24}{figure.caption.68}\protected@file@percent }
-\newlabel{fig:meth_corridor}{{4.1}{24}{Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen}{figure.caption.68}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.5}Verarbeitungspipeline}{25}{subsection.70}\protected@file@percent }
-\newlabel{subsec:meth_pipeline}{{4.3.5}{25}{Verarbeitungspipeline}{subsection.70}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach Skalierung steuert ein kaskadierender PID-Regler die Drohne über 300~Simulationsschritte.}}{25}{figure.caption.71}\protected@file@percent }
-\newlabel{fig:meth_pipeline}{{4.2}{25}{Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach Skalierung steuert ein kaskadierender PID-Regler die Drohne über 300~Simulationsschritte}{figure.caption.71}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.6}Terminierung}{25}{subsection.72}\protected@file@percent }
-\newlabel{subsec:meth_terminierung}{{4.3.6}{25}{Terminierung}{subsection.72}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.7}Curriculum}{26}{subsection.73}\protected@file@percent }
-\newlabel{subsec:meth_curriculum}{{4.3.7}{26}{Curriculum}{subsection.73}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Netzwerkarchitektur}{21}{section.60}\protected@file@percent }
+\newlabel{sec:meth_architektur}{{4.2}{21}{Netzwerkarchitektur}{section.60}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Trainingsverfahren}{21}{section.62}\protected@file@percent }
+\newlabel{sec:meth_trainingsverfahren}{{4.3}{21}{Trainingsverfahren}{section.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}Proximal Policy Optimization}{21}{subsection.63}\protected@file@percent }
+\newlabel{subsec:meth_ppo}{{4.3.1}{21}{Proximal Policy Optimization}{subsection.63}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben.}}{22}{figure.caption.61}\protected@file@percent }
+\newlabel{fig:meth_architecture}{{4.1}{22}{Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben}{figure.caption.61}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.1}Aktionsverteilung und Tanh-Squashing}{22}{subsubsection.64}\protected@file@percent }
+\newlabel{subsubsec:meth_tanh_squashing}{{4.3.1.1}{22}{Aktionsverteilung und Tanh-Squashing}{subsubsection.64}{}}
+\newlabel{eq:meth_tanh_squashing}{{4.13}{23}{Aktionsverteilung und Tanh-Squashing}{equation.65}{}}
+\newlabel{eq:meth_tanh_logprob}{{4.14}{23}{Aktionsverteilung und Tanh-Squashing}{equation.66}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.3.1.2}Hyperparameter}{23}{subsubsection.67}\protected@file@percent }
+\newlabel{subsubsec:meth_hyperparams}{{4.3.1.2}{23}{Hyperparameter}{subsubsection.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{23}{table.caption.68}\protected@file@percent }
+\newlabel{tab:meth_ppo_hyperparams}{{4.2}{23}{PPO-Hyperparameter der vorliegenden Arbeit}{table.caption.68}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Trainingsumgebung}{24}{section.69}\protected@file@percent }
+\newlabel{sec:meth_trainingsumgebung}{{4.4}{24}{Trainingsumgebung}{section.69}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Physiksimulator}{24}{subsection.70}\protected@file@percent }
+\newlabel{subsec:meth_simulator}{{4.4.1}{24}{Physiksimulator}{subsection.70}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.2}Drohnenmodell}{25}{subsection.71}\protected@file@percent }
+\newlabel{subsec:meth_drohne}{{4.4.2}{25}{Drohnenmodell}{subsection.71}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.3}Korridorgeometrie}{25}{subsection.72}\protected@file@percent }
+\newlabel{subsec:meth_korridor}{{4.4.3}{25}{Korridorgeometrie}{subsection.72}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.4}Hindernisse}{25}{subsection.74}\protected@file@percent }
+\newlabel{subsec:meth_hindernisse}{{4.4.4}{25}{Hindernisse}{subsection.74}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{26}{figure.caption.73}\protected@file@percent }
+\newlabel{fig:meth_corridor}{{4.2}{26}{Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen}{figure.caption.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.5}Verarbeitungspipeline}{26}{subsection.75}\protected@file@percent }
+\newlabel{subsec:meth_pipeline}{{4.4.5}{26}{Verarbeitungspipeline}{subsection.75}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach Skalierung steuert ein kaskadierender PID-Regler die Drohne über 300~Simulationsschritte.}}{27}{figure.caption.76}\protected@file@percent }
+\newlabel{fig:meth_pipeline}{{4.3}{27}{Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach Skalierung steuert ein kaskadierender PID-Regler die Drohne über 300~Simulationsschritte}{figure.caption.76}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.6}Terminierung}{27}{subsection.77}\protected@file@percent }
+\newlabel{subsec:meth_terminierung}{{4.4.6}{27}{Terminierung}{subsection.77}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.7}Curriculum}{27}{subsection.78}\protected@file@percent }
+\newlabel{subsec:meth_curriculum}{{4.4.7}{27}{Curriculum}{subsection.78}{}}
 \@setckpt{Inhalt/Methodik}{
-\setcounter{page}{27}
-\setcounter{equation}{12}
+\setcounter{page}{28}
+\setcounter{equation}{14}
 \setcounter{enumi}{4}
 \setcounter{enumii}{0}
 \setcounter{enumiii}{0}
@@ -64,12 +72,12 @@
 \setcounter{mpfootnote}{0}
 \setcounter{part}{0}
 \setcounter{chapter}{4}
-\setcounter{section}{3}
+\setcounter{section}{4}
 \setcounter{subsection}{7}
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{2}
+\setcounter{figure}{3}
 \setcounter{table}{2}
 \setcounter{parentequation}{0}
 \setcounter{r@tfl@t}{0}
@@ -94,7 +102,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{99}
+\setcounter{instcount}{100}
 \setcounter{maxnames}{2}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

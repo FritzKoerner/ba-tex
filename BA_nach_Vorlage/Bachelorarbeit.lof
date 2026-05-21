@@ -5,11 +5,12 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces $L^{\mathrm {CLIP}}$ als Funktion des Wahrscheinlichkeitsverhältnisses~$r$. Links ($\hat {A}_t > 0$): der Anreiz wird bei $1 + \varepsilon $ gekappt. Rechts ($\hat {A}_t < 0$): die Korrektur bleibt uneingeschränkt (nach \blx@tocontentsinit {0}\autocite {schulmanProximalPolicyOptimization2017}, Fig.~1).}}{8}{figure.caption.32}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{24}{figure.caption.68}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach Skalierung steuert ein kaskadierender PID-Regler die Drohne über 300~Simulationsschritte.}}{25}{figure.caption.71}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben.}}{22}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{26}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach Skalierung steuert ein kaskadierender PID-Regler die Drohne über 300~Simulationsschritte.}}{27}{figure.caption.76}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Caption}}{28}{figure.caption.78}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Caption}}{29}{figure.caption.83}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

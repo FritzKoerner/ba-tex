@@ -2456,14 +2456,15 @@
     <bcf:citekey order="76" intorder="1">rudinLearningWalkMinutes2022</bcf:citekey>
     <bcf:citekey order="77" intorder="1">cobbePhrasicPolicyGradient2021</bcf:citekey>
     <bcf:citekey order="78" intorder="1">rudinLearningWalkMinutes2022</bcf:citekey>
-    <bcf:citekey order="79" intorder="1">schulmanProximalPolicyOptimization2017</bcf:citekey>
-    <bcf:citekey order="80" intorder="1">schulmanHighDimensionalContinuousControl2016</bcf:citekey>
-    <bcf:citekey order="81" intorder="1">xianGenesisUniversalGenerative2024</bcf:citekey>
-    <bcf:citekey order="82" intorder="1">koenigDesignUseParadigms2004</bcf:citekey>
-    <bcf:citekey order="83" intorder="1">coumansPybulletPythonModule2016</bcf:citekey>
-    <bcf:citekey order="84" intorder="1">makoviychukIsaacGymHigh2021</bcf:citekey>
-    <bcf:citekey order="85" intorder="1">katze</bcf:citekey>
+    <bcf:citekey order="79" intorder="1">haarnojaOffPolicyMaximumEntropy2017</bcf:citekey>
+    <bcf:citekey order="80" intorder="1">schulmanProximalPolicyOptimization2017</bcf:citekey>
+    <bcf:citekey order="81" intorder="1">schulmanHighDimensionalContinuousControl2016</bcf:citekey>
+    <bcf:citekey order="82" intorder="1">xianGenesisUniversalGenerative2024</bcf:citekey>
+    <bcf:citekey order="83" intorder="1">koenigDesignUseParadigms2004</bcf:citekey>
+    <bcf:citekey order="84" intorder="1">coumansPybulletPythonModule2016</bcf:citekey>
+    <bcf:citekey order="85" intorder="1">makoviychukIsaacGymHigh2021</bcf:citekey>
     <bcf:citekey order="86" intorder="1">katze</bcf:citekey>
+    <bcf:citekey order="87" intorder="1">katze</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

@@ -31,24 +31,26 @@
 \contentsline {subsection}{\numberline {4.1.2}Aktionsraum}{19}{subsection.48}%
 \contentsline {subsection}{\numberline {4.1.3}Übergangsmodell}{19}{subsection.52}%
 \contentsline {subsection}{\numberline {4.1.4}Belohnungsfunktion}{20}{subsection.53}%
-\contentsline {section}{\numberline {4.2}Trainingsverfahren}{21}{section.60}%
-\contentsline {subsection}{\numberline {4.2.1}Proximal Policy Optimization}{21}{subsection.61}%
-\contentsline {subsubsection}{\numberline {4.2.1.1}Hyperparameter}{21}{subsubsection.62}%
-\contentsline {section}{\numberline {4.3}Trainingsumgebung}{22}{section.64}%
-\contentsline {subsection}{\numberline {4.3.1}Physiksimulator}{22}{subsection.65}%
-\contentsline {subsection}{\numberline {4.3.2}Drohnenmodell}{23}{subsection.66}%
-\contentsline {subsection}{\numberline {4.3.3}Korridorgeometrie}{23}{subsection.67}%
-\contentsline {subsection}{\numberline {4.3.4}Hindernisse}{23}{subsection.69}%
-\contentsline {subsection}{\numberline {4.3.5}Verarbeitungspipeline}{25}{subsection.70}%
-\contentsline {subsection}{\numberline {4.3.6}Terminierung}{25}{subsection.72}%
-\contentsline {subsection}{\numberline {4.3.7}Curriculum}{26}{subsection.73}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{27}{chapter.74}%
-\contentsline {chapter}{\numberline {6}Diskussion}{28}{chapter.76}%
-\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{28}{section.77}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{29}{chapter.79}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{29}{section.80}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{29}{section.81}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{29}{section.82}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.83}%
-\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.87}%
-\contentsline {chapter}{\nonumberline Erklärung}{XVII}{chapter*.88}%
+\contentsline {section}{\numberline {4.2}Netzwerkarchitektur}{21}{section.60}%
+\contentsline {section}{\numberline {4.3}Trainingsverfahren}{21}{section.62}%
+\contentsline {subsection}{\numberline {4.3.1}Proximal Policy Optimization}{21}{subsection.63}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}Aktionsverteilung und Tanh-Squashing}{22}{subsubsection.64}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}Hyperparameter}{23}{subsubsection.67}%
+\contentsline {section}{\numberline {4.4}Trainingsumgebung}{24}{section.69}%
+\contentsline {subsection}{\numberline {4.4.1}Physiksimulator}{24}{subsection.70}%
+\contentsline {subsection}{\numberline {4.4.2}Drohnenmodell}{25}{subsection.71}%
+\contentsline {subsection}{\numberline {4.4.3}Korridorgeometrie}{25}{subsection.72}%
+\contentsline {subsection}{\numberline {4.4.4}Hindernisse}{25}{subsection.74}%
+\contentsline {subsection}{\numberline {4.4.5}Verarbeitungspipeline}{26}{subsection.75}%
+\contentsline {subsection}{\numberline {4.4.6}Terminierung}{27}{subsection.77}%
+\contentsline {subsection}{\numberline {4.4.7}Curriculum}{27}{subsection.78}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{28}{chapter.79}%
+\contentsline {chapter}{\numberline {6}Diskussion}{29}{chapter.81}%
+\contentsline {section}{\numberline {6.1}Interpretation der Ergebnisse}{29}{section.82}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{30}{chapter.84}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{30}{section.85}%
+\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{30}{section.86}%
+\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{30}{section.87}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.88}%
+\contentsline {chapter}{\nonumberline Literatur}{IX}{chapter*.92}%
+\contentsline {chapter}{\nonumberline Erklärung}{XVII}{chapter*.93}%

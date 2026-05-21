@@ -1,22 +1,22 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Bachelorarbeit.blg'
-[99] biber:340> INFO - === Do Mai 21, 2026, 14:12:58
-[118] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
-[223] Biber.pm:979> INFO - Found 51 citekeys in bib section 0
-[239] Biber.pm:4419> INFO - Processing section 0
-[252] Biber.pm:4610> INFO - Looking for bibtex file 'quellen.bib' for section 0
-[262] bibtex.pm:1713> INFO - LaTeX decoding ...
-[386] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
-[1540] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1540] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1540] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[1540] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[1669] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
-[1769] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
-[1769] Biber.pm:131> WARN - Duplicate entry key: 'wubbenAccurateLandingUnmanned2019' in file 'quellen.bib', skipping ...
-[1769] Biber.pm:131> WARN - legacy year field '2016--2021' in entry 'coumansPybulletPythonModule2016' is not an integer - this will probably not sort properly.
-[1770] Biber.pm:131> WARN - I didn't find a database entry for 'esserActionSpaceDesign2024' (section 0)
-[1770] Biber.pm:131> WARN - I didn't find a database entry for 'kaufmannBenchmarkComparisonLearned2022' (section 0)
-[1770] Biber.pm:131> WARN - I didn't find a database entry for 'aljalboutRoleActionSpace2024' (section 0)
-[1770] Biber.pm:131> WARN - I didn't find a database entry for 'katze' (section 0)
-[1770] Biber.pm:133> INFO - WARNINGS: 6
+[80] biber:340> INFO - === Do Mai 21, 2026, 18:43:31
+[96] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
+[180] Biber.pm:979> INFO - Found 51 citekeys in bib section 0
+[193] Biber.pm:4419> INFO - Processing section 0
+[204] Biber.pm:4610> INFO - Looking for bibtex file 'quellen.bib' for section 0
+[213] bibtex.pm:1713> INFO - LaTeX decoding ...
+[316] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
+[1230] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1230] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1230] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[1230] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[1329] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
+[1409] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
+[1409] Biber.pm:131> WARN - Duplicate entry key: 'wubbenAccurateLandingUnmanned2019' in file 'quellen.bib', skipping ...
+[1409] Biber.pm:131> WARN - legacy year field '2016--2021' in entry 'coumansPybulletPythonModule2016' is not an integer - this will probably not sort properly.
+[1409] Biber.pm:131> WARN - I didn't find a database entry for 'esserActionSpaceDesign2024' (section 0)
+[1409] Biber.pm:131> WARN - I didn't find a database entry for 'kaufmannBenchmarkComparisonLearned2022' (section 0)
+[1409] Biber.pm:131> WARN - I didn't find a database entry for 'aljalboutRoleActionSpace2024' (section 0)
+[1409] Biber.pm:131> WARN - I didn't find a database entry for 'katze' (section 0)
+[1409] Biber.pm:133> INFO - WARNINGS: 6

@@ -182,6 +182,48 @@ Der Erfolgsbonus wird bei Erreichen des Landeziels vergeben:
   \end{cases}
 \end{equation}
 
+\section{Netzwerkarchitektur}
+\label{sec:meth_architektur}
+
+PPO verwendet eine Actor-Critic-Architektur
+(vgl.\ Abschnitt~\ref{subsec:ppo_clip}), in der zwei Netzwerke parallel
+trainiert werden: Der \emph{Actor}~$\pi_\theta$ gibt eine stochastische
+Strategie aus, der \emph{Critic}~$V_\phi$ schätzt die State-Value-Funktion zur
+Berechnung des Vorteilsschätzers.
+
+Der CNN-Encoder besteht aus drei Faltungsschichten mit aufsteigender Kanalzahl
+(32, 64, 128), abnehmenden Kernelgrößen ($8 \times 8$, $4 \times 4$,
+$3 \times 3$) und Schrittweiten (4, 2, 1). Nach jeder Faltungsschicht folgt
+eine Batch-Normalisierung und eine ELU-Aktivierung. Ein abschließendes Global
+Max Pooling reduziert jede der 128~Feature-Maps auf einen Skalar und erzeugt so
+einen 128-dimensionalen Merkmalsvektor unabhängig von der räumlichen Auflösung
+der Eingabe. Der Zustandsvektor durchläuft vor der Konkatenation eine laufende
+empirische Normalisierung, die Mittelwert und Varianz über alle bisherigen
+Beobachtungen schätzt und die heterogenen physikalischen Größen auf einheitliche
+Skala bringt. Der resultierende Vektor aus CNN-Merkmalen und normalisiertem
+Zustand wird an die MLP-Köpfe von Actor und Critic weitergegeben, die jeweils
+aus drei vollvernetzten Schichten mit 128~Neuronen und ELU-Aktivierung bestehen.
+Actor und Critic teilen sich den CNN-Encoder; die MLP-Köpfe werden getrennt
+trainiert. Der Actor gibt pro Aktionsdimension einen Mittelwert~$\mu$ und eine
+lernbare Log-Standardabweichung $\log\sigma$ aus und parametrisiert damit eine
+Tanh-Gaußverteilung, deren Motivation und Formulierung in
+Abschnitt~\ref{subsubsec:meth_tanh_squashing} erläutert werden. Der Critic
+gibt einen skalaren State-Value $V(s_t)$ aus.
+Abbildung~\ref{fig:meth_architecture} zeigt die vollständige Architektur mit
+allen Schichten.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{Bilder/architecture.pdf}
+    \caption{Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten
+    CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und
+    abschließendem Global Max Pooling). Der resultierende 128-dimensionale
+    Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor
+    konkateniert und an die getrennten MLP-Köpfe von Actor und Critic
+    weitergegeben.}
+    \label{fig:meth_architecture}
+\end{figure}
+
 \section{Trainingsverfahren}
 \label{sec:meth_trainingsverfahren}
 
@@ -220,6 +262,44 @@ Neuere PPO-Varianten wie Phasic Policy Gradient
 \autocite{cobbePhrasicPolicyGradient2021} wurden nicht evaluiert, da die verwendete
 Trainingsumgebung rsl-rl \autocite{rudinLearningWalkMinutes2022} ausschließlich die
 Standard-PPO-Implementierung bereitstellt.
+
+\subsubsection{Aktionsverteilung und Tanh-Squashing}
+\label{subsubsec:meth_tanh_squashing}
+
+Der Actor parametrisiert eine Gaußverteilung über einem unbeschränkten
+Hilfsraum: Für jede Aktionsdimension~$i$ wird ein Rohwert
+$u_i \sim \mathcal{N}(\mu_i, \sigma_i^2)$ gesampelt, wobei~$\mu_i$ und
+$\log\sigma_i$ Netzausgaben sind. Der Aktionsraum ist jedoch auf $[-1,1]^4$
+beschränkt (vgl.\ Abschnitt~\ref{subsec:meth_aktionsraum}). Ein naives
+Clipping $a_i = \mathrm{clip}(u_i, -1, 1)$ würde die Aktionswerte korrekt
+begrenzen, die zugehörige Log-Wahrscheinlichkeit jedoch weiterhin auf dem
+unbeschnittenen Wert~$u_i$ berechnen. Da PPO das Verhältnis
+$r_t(\theta) = \pi_\theta(\mathbf{a}_t \mid s_t) \,/\,
+\pi_{\theta_{\mathrm{alt}}}(\mathbf{a}_t \mid s_t)$ zur Gradientenschätzung
+nutzt (vgl.\ Abschnitt~\ref{subsec:ppo_clip}), führt diese Diskrepanz
+zwischen ausgeführter und bewerteter Aktion zu verzerrten Gradienten.
+
+Statt Clipping wird daher eine invertierbare, differenzierbare Transformation
+verwendet~\autocite{haarnojaOffPolicyMaximumEntropy2017}:
+\begin{equation} \label{eq:meth_tanh_squashing}
+  a_i = \tanh(u_i).
+\end{equation}
+Die zugehörige Log-Wahrscheinlichkeit ergibt sich über die
+Substitutionsregel für Wahrscheinlichkeitsdichten (Change of Variables):
+\begin{equation} \label{eq:meth_tanh_logprob}
+  \log\pi(\mathbf{a} \mid s)
+  = \log\mathcal{N}(\mathbf{u} \mid \boldsymbol{\mu}, \boldsymbol{\sigma}^2)
+  - \sum_{i=1}^{4} \log\!\bigl(1 - \tanh^2(u_i)\bigr).
+\end{equation}
+Der Korrekturterm~$-\sum_i \log(1 - \tanh^2(u_i))$ ist die
+Log-Jacobi-Determinante der Tanh-Transformation und stellt sicher, dass die
+Dichte im transformierten Raum korrekt normiert bleibt.
+
+Zusätzlich erzwingt ein Floor $\log\sigma_i \geq -2{,}0$
+($\sigma_i \geq 0{,}135$) eine Mindestexploration. Ohne diesen Floor kann PPO
+die Standardabweichung gegen null treiben, was in der Log-Wahrscheinlichkeit zu
+numerischen Instabilitäten führt und die Strategie irreversibel kollabieren
+lässt.
 
 \subsubsection{Hyperparameter}
 \label{subsubsec:meth_hyperparams}
@@ -263,7 +343,8 @@ Strategien. Aufgabenspezifisch angepasst wurden ferner die Rollout-Länge~$T$ �
 bei 3\,s Entscheidungsintervall ergeben 180\,s Rollout-Dauer — sowie die Anzahl
 paralleler Umgebungen $N = 256$, begrenzt durch den GPU-Speicher der verwendeten
 NVIDIA~A30 (24\,GB). Der Entropie-Koeffizient~$c_2 = 0{,}003$ wurde bewusst niedrig
-gewählt, da die Tanh-Verteilung (s.\,u.) empfindlich auf hohe Entropie-Anreize reagiert;
+gewählt, da die Tanh-Verteilung
+(vgl.\ Abschnitt~\ref{subsubsec:meth_tanh_squashing}) empfindlich auf hohe Entropie-Anreize reagiert;
 $c_2 \geq 0{,}01$ führte in Pilotexperimenten zu instabilem Training.
 
 \section{Trainingsumgebung}
@@ -374,18 +455,10 @@ Sensorik bis zur physikalischen Ausführung. Das normalisierte
 Tiefenbild~$\mathbf{D}_t$ und der skalierte
 Zustandsvektor~$\mathbf{o}_t$
 (vgl.\ Abschnitt~\ref{subsec:meth_zustandsraum}) werden als
-\texttt{TensorDict} gebündelt und dem Actor-Netz übergeben. Dieses besteht aus
-einem CNN, das das Tiefenbild zu einem latenten Vektor komprimiert, und einem
-nachgeschalteten MLP, das den latenten Vektor mit dem Zustandsvektor
-konkateniert. Actor und Critic teilen sich den CNN-Encoder.
-
-Das Actor-Netz gibt pro Aktionsdimension einen Mittelwert~$\mu$ und eine
-Log-Standardabweichung $\log\sigma$ aus. Die Aktion wird aus
-$\mathcal{N}(\mu, \sigma^2)$ gesampelt und durch die Tanh-Funktion auf
-$[-1,1]$ begrenzt, wobei die Log-Wahrscheinlichkeit über die
-Jacobi-Determinante korrigiert wird. Die resultierende Aktion wird gemäß
-Abschnitt~\ref{subsec:meth_aktionsraum} in Sollposition und Sollgierwinkel
-skaliert und vom kaskadierenden PID-Regler
+\texttt{TensorDict} gebündelt und der Actor-Critic-Architektur übergeben
+(vgl.\ Abschnitt~\ref{sec:meth_architektur}). Die vom Actor gesampelte Aktion
+wird gemäß Abschnitt~\ref{subsec:meth_aktionsraum} in Sollposition und
+Sollgierwinkel skaliert und vom kaskadierenden PID-Regler
 (vgl.\ Abschnitt~\ref{subsec:meth_uebergangsmodell}) über das
 Entscheidungsintervall in Motordrehzahlen umgesetzt.
 
