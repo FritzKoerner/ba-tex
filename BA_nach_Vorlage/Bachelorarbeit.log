@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  23 MAY 2026 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  23 MAY 2026 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1795,74 +1795,244 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 12.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
 
-pdfTeX warning: pdflatex (file ./Bilder/pipeline.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/pipeline.pdf, id=499, 587.19376pt x 96.36pt>
-File: Bilder/pipeline.pdf Graphic file (type pdf)
-<use Bilder/pipeline.pdf>
-Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 28.
-(pdftex.def)             Requested size: 441.01773pt x 72.37125pt.
+Overfull \hbox (5.59299pt too wide) in paragraph at lines 22--34
+\T1/ntxtlf/m/n/12 und Ter-mi-nie-rungs-be-din-gun-gen. Ab-schnitt [][]4.3[][] be-schreibt die CNN-MLP-Netzwerkarchitektur,
+ []
+
+
+Overfull \hbox (25.00272pt too wide) in paragraph at lines 22--34
+\T1/ntxtlf/m/n/12 schnitt [][]4.6[][]), dem Trai-nings-pro-zess (Ab-schnitt [][]4.7[][]) und dem Eva-lua-ti-ons-pro-to-koll (Ab-schnitt [][]4.8[][]). 
+ []
+
+
+./Inhalt/Methodik.tex:51: Package titlesec Error: No format for this command.
+
+See the titlesec package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \paragraph{Wahrnehmung.}
+                             
+If you (re)set the class of a sectioning command, you may
+you may need to (re)define its format with \titleformat
+
+./Inhalt/Methodik.tex:51: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.51 \paragraph{Wahrnehmung.}
+                             
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Inhalt/Methodik.tex:51: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.51 \paragraph{Wahrnehmung.}
+                             
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./Inhalt/Methodik.tex:51: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.51 \paragraph{Wahrnehmung.}
+                             
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Inhalt/Methodik.tex:51: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.51 \paragraph{Wahrnehmung.}
+                             
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
 [18
 
 
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./Bilder/pipeline.pdf>]
+]
+
+./Inhalt/Methodik.tex:62: Package titlesec Error: No format for this command.
+
+See the titlesec package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 \paragraph{Entscheidung.}
+                              
+If you (re)set the class of a sectioning command, you may
+you may need to (re)define its format with \titleformat
+
+./Inhalt/Methodik.tex:62: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.62 \paragraph{Entscheidung.}
+                              
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Inhalt/Methodik.tex:62: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.62 \paragraph{Entscheidung.}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./Inhalt/Methodik.tex:62: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.62 \paragraph{Entscheidung.}
+                              
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Inhalt/Methodik.tex:62: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.62 \paragraph{Entscheidung.}
+                              
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+./Inhalt/Methodik.tex:73: Package titlesec Error: No format for this command.
+
+See the titlesec package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.73 \paragraph{Ausf√ºhrung.}
+                             
+If you (re)set the class of a sectioning command, you may
+you may need to (re)define its format with \titleformat
+
+./Inhalt/Methodik.tex:73: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.73 \paragraph{Ausf√ºhrung.}
+                             
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Inhalt/Methodik.tex:73: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.73 \paragraph{Ausf√ºhrung.}
+                             
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./Inhalt/Methodik.tex:73: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.73 \paragraph{Ausf√ºhrung.}
+                             
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Inhalt/Methodik.tex:73: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.73 \paragraph{Ausf√ºhrung.}
+                             
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+
+pdfTeX warning: pdflatex (file ./Bilder/pipeline.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Bilder/pipeline.pdf, id=514, 587.19376pt x 96.36pt>
+File: Bilder/pipeline.pdf Graphic file (type pdf)
+<use Bilder/pipeline.pdf>
+Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 84.
+(pdftex.def)             Requested size: 441.01773pt x 72.37125pt.
+[19 <./Bilder/pipeline.pdf>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 74.
+(Font)              scaled to size 10.95pt on input line 130.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 107.
+(Font)              scaled to size 8.8pt on input line 163.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 107.
- [19]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 171.
+(Font)              scaled to size 6.6pt on input line 163.
+ [20] [21]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 227.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 171.
- [20]
-Overfull \hbox (7.49359pt too wide) in paragraph at lines 220--223
+(Font)              scaled to size 12.0pt on input line 227.
+ [22{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+Overfull \hbox (7.49359pt too wide) in paragraph at lines 276--279
 \T1/ntxtlf/b/n/12 Absturz.\T1/ntxtlf/m/n/12 Die Ab-sturz-stra-fe wird bei Ver-let-zung ei-ner Ab-bruch-be-din-gung (vgl. Ab-schnitt [][]4.2.5[][])
  []
 
-[21{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [22]
+[23] [24]
 
 pdfTeX warning: pdflatex (file ./Bilder/architecture.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/architecture.pdf, id=613, 782.925pt x 199.49532pt>
+<Bilder/architecture.pdf, id=634, 782.925pt x 199.49532pt>
 File: Bilder/architecture.pdf Graphic file (type pdf)
 <use Bilder/architecture.pdf>
-Package pdftex.def Info: Bilder/architecture.pdf  used on input line 332.
+Package pdftex.def Info: Bilder/architecture.pdf  used on input line 388.
 (pdftex.def)             Requested size: 441.01773pt x 112.37411pt.
-[23] [24 <./Bilder/architecture.pdf>]
-Overfull \hbox (1.27885pt too wide) in paragraph at lines 399--401
+[25 <./Bilder/architecture.pdf>]
+Overfull \hbox (1.27885pt too wide) in paragraph at lines 455--457
 []\T1/ntxtlf/m/n/12 Statt Clip-ping wird da-her ei-ne in-ver-tier-ba-re, dif-fe-ren-zier-ba-re Trans-for-ma-ti-on ver-wen-det ([]Haar-
  []
 
 
-Overfull \hbox (32.50314pt too wide) in paragraph at lines 410--414
+Overfull \hbox (32.50314pt too wide) in paragraph at lines 466--470
 \T1/ntxtlf/m/n/12 Der Kor-rek-tur-term $\LMS/ntxsy/m/n/12 ^^@ [][] []π\OT1/minntx/m/n/12 1 \LMS/ntxsy/m/n/12 ^^@ [][]π\OML/ntxmi/m/it/12 u[]\LMS/ntxsy/m/n/12 ∫∫$ \T1/ntxtlf/m/n/12 ist die Log-Jacobi-Determinante der Tanh-Transformation
  []
 
-[25] [26]
-<Bilder/corridor_geometry.pdf, id=790, 346.69325pt x 292.20067pt>
+[26] [27]
+<Bilder/corridor_geometry.pdf, id=804, 346.69325pt x 292.20067pt>
 File: Bilder/corridor_geometry.pdf Graphic file (type pdf)
 <use Bilder/corridor_geometry.pdf>
-Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 527.
+Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 583.
 (pdftex.def)             Requested size: 374.86775pt x 315.95099pt.
 
-Overfull \hbox (35.45345pt too wide) in paragraph at lines 538--545
+Overfull \hbox (35.45345pt too wide) in paragraph at lines 594--601
 \T1/ntxtlf/m/n/12 Als Hin-der-nis-se die-nen sechs 3D-Objekte aus dem Goo-gle Scan-ned Ob-jects Da-ten-satz (GSO) ([]Downs
  []
 
-[27] [28 <./Bilder/corridor_geometry.pdf>]
+[28] [29 <./Bilder/corridor_geometry.pdf>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 622.
- [29] [30] [31]) [32]
+(Font)              scaled to size 10.95pt on input line 678.
+ [30] [31] [32]) [33]
 \openout2 = `Inhalt/Ergebnisse.aux'.
 
  (./Inhalt/Ergebnisse.tex
@@ -1878,7 +2048,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [33
+) [34
 
 
 
@@ -1899,12 +2069,12 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/katze.jpg, id=871, 638.385pt x 740.7675pt>
+<Bilder/katze.jpg, id=889, 638.385pt x 740.7675pt>
 File: Bilder/katze.jpg Graphic file (type jpg)
 <use Bilder/katze.jpg>
 Package pdftex.def Info: Bilder/katze.jpg  used on input line 10.
 (pdftex.def)             Requested size: 220.50887pt x 255.87024pt.
-) [34
+) [35
 
 
 
@@ -1925,146 +2095,11 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [35
+) [36
 
 
 
 
 ]
 
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-(./Bachelorarbeit.loah)
-\tf@loah=\write11
-\openout11 = `Bachelorarbeit.loah'.
-
- [7
-
-
-
-]
-\openout2 = `Inhalt/Anhang.aux'.
-
- (./Inhalt/Anhang.tex
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-) [8
-
-
-
-]
-chapter without number
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 245.
-[9
-
-
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [10] [11] [12]
-Overfull \hbox (1.98267pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 Stig Pe-ter-sen, Charles Be-at-tie, Amir Sa-dik, Io-an-nis An-to-no-glou, He-len King, Dharshan
- []
-
-[13]
-Overfull \hbox (0.10036pt too wide) in paragraph at lines 246--246
-[][]\T1/ntxtlf/m/n/12 Polvara, Ric-car-do, Mas-si-mi-lia-no Pa-ta-c-chio-la, Marc Han-hei-de und Ger-hard Neu-mann (25. Feb.
- []
-
-
-Overfull \hbox (55.5361pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 main Ran-do-mi-za-ti-on^^P. In: \T1/ntxtlf/m/it/12 Ro-bo-tics \T1/ntxtlf/m/n/12 9.1. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2218-6581. \T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / robotics9010008$[][]\T1/ntxtlf/m/n/12 .
- []
-
-
-Overfull \hbox (4.1798pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/sc/12 url\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 https : / / www . mdpi . com / 2218 -[] 6581 / 9 / 1 / 8$[][] \T1/ntxtlf/m/n/12 (be-sucht am 07.02.2026). 
- []
-
-[14] [15]
-Overfull \hbox (19.39218pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 ments^^P. In: \T1/ntxtlf/m/it/12 Elec-tro-nics \T1/ntxtlf/m/n/12 7.5. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2079-9292. \T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / electronics7050073$[][]\T1/ntxtlf/m/n/12 .
- []
-
-[16] [17]
-\openout2 = `Inhalt/Erklaerung.aux'.
-
- (./Inhalt/Erklaerung.tex
-chapter without number
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-) [18
-
-
-]
-
-Package caption Warning: Unused \captionsetup[figure] on input line 216.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[algocf] on input line 218.
-See the caption package documentation for explanation.
-
-(./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux) (./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux) (./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux) (./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux) (./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux) (./Inhalt/Erklaerung.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
-\openout1 = `Bachelorarbeit.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 36109 strings out of 474222
- 668976 string characters out of 5748733
- 1943975 words of memory out of 5000000
- 57459 multiletter control sequences out of 15000+600000
- 665632 words of font info for 206 fonts, out of 8000000 for 9000
- 1146 hyphenation exceptions out of 8191
- 108i,20n,125p,10960b,4026s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (56 pages, 1065484 bytes).
-PDF statistics:
- 1368 PDF objects out of 1440 (max. 8388607)
- 1196 compressed objects within 12 object streams
- 211 named destinations out of 1000 (max. 500000)
- 516 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Class scrreprt W

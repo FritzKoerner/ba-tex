@@ -1,35 +1,91 @@
 \chapter{Methodik}
 \label{cha:Methodik}
 
+Dieses Kapitel beschreibt das entwickelte System zur autonomen Drohnenlandung
+mit Hindernisvermeidung. Die in Abschnitt~\ref{sec:architektur} motivierte
+hierarchische Steuerungsarchitektur bildet den Ausgangspunkt: Ein
+RL-Agent trifft Navigationsentscheidungen auf hoher Abstraktionsebene, während
+ein kaskadierender PID-Regler diese in Motorkommandos umsetzt. Die Aufgabe
+wird als Markov-Entscheidungsprozess formuliert
+(vgl.\ Abschnitt~\ref{subsec:mdp}), in dem der Agent aus Tiefenbildern und
+einem Zustandsvektor eine Zielposition ableitet. Dieses bewusst
+minimalistische Sensorset, bestehend aus einer einzelnen Tiefenkamera und
+Eigenlageschätzung, folgt dem in Abschnitt~\ref{sec:architektur}
+identifizierten Trend, algorithmische Komplexität anstelle zusätzlicher
+Hardware einzusetzen.
+
+Training und Evaluation finden vollständig in Simulation statt. Der
+GPU-parallelisierte Physiksimulator Genesis erzeugt die für PPO benötigten
+großen Rollout-Batches aus bis zu 256~gleichzeitigen Umgebungsinstanzen.
+Ein Sim-to-Real-Transfer liegt außerhalb des Rahmens dieser Arbeit.
+
+Abschnitt~\ref{sec:meth_ueberblick} gibt zunächst einen Überblick über die
+Systemarchitektur. Anschließend formalisiert
+Abschnitt~\ref{sec:meth_mdp} die Aufgabe als MDP mit Zustands-, Aktionsraum,
+Belohnungsfunktion und Terminierungsbedingungen.
+Abschnitt~\ref{sec:meth_architektur} beschreibt die
+CNN-MLP-Netzwerkarchitektur, Abschnitt~\ref{sec:meth_algorithmus} den
+PPO-Algorithmus einschließlich der Tanh-Aktionsverteilung.
+Die physische Trainingsumgebung wird in Abschnitt~\ref{sec:meth_trainingsumgebung}
+vorgestellt, gefolgt vom PID-Regler
+(Abschnitt~\ref{subsec:meth_pid}), dem Trainingsprozess
+(Abschnitt~\ref{sec:meth_trainingsprozess}) und dem Evaluationsprotokoll
+(Abschnitt~\ref{sec:meth_evaluation}).
+
 \section{Systemüberblick}
 \label{sec:meth_ueberblick}
 
-Abbildung~\ref{fig:meth_pipeline} zeigt den vollständigen Datenfluss von der
-Sensorik bis zur physikalischen Ausführung. Das normalisierte
-Tiefenbild~$\mathbf{D}_t$ und der skalierte
-Zustandsvektor~$\mathbf{o}_t$
-(vgl.\ Abschnitt~\ref{subsec:meth_zustandsraum}) werden als
-\texttt{TensorDict} gebündelt und der Actor-Critic-Architektur übergeben
-(vgl.\ Abschnitt~\ref{sec:meth_architektur}). Die vom Actor gesampelte Aktion
-wird gemäß Abschnitt~\ref{subsec:meth_aktionsraum} in Sollposition und
-Sollgierwinkel skaliert und vom kaskadierenden PID-Regler
-(vgl.\ Abschnitt~\ref{subsec:meth_pid}) über das
-Entscheidungsintervall in Motordrehzahlen umgesetzt.
+Das System gliedert sich in zwei Steuerungsebenen
+(Abbildung~\ref{fig:meth_pipeline}): Auf der oberen Ebene trifft ein
+RL-Agent alle $3{,}0$\,s eine Navigationsentscheidung. Auf der unteren Ebene
+setzt ein kaskadierender PID-Regler diese Entscheidung mit 100\,Hz in
+Motordrehzahlen um und stabilisiert die Drohne zwischen zwei
+Entscheidungszeitpunkten. Das vergleichsweise lange Entscheidungsintervall
+ist eine bewusste Designentscheidung: Es stellt sicher, dass die Drohne
+zwischen zwei Entscheidungen zur Ruhe kommt und das Tiefenbild aus einer
+stabilen Fluglage aufgenommen wird, verhindert, dass der PID-Regler durch
+zu häufig wechselnde Sollwerte destabilisiert wird, und reduziert die
+Lernkomplexität, da der Agent weniger Entscheidungen pro Episode treffen
+muss.
 
-Sowohl das Tiefenbild als auch der Zustandsvektor werden direkt und
-unverrauscht aus der Simulation erhoben. In einer realen Anwendung wären die
-Tiefenbilder durch Sensorrauschen, Reflexionen und Ausfälle beeinflusst, und
-die Zustandsinformationen müssten aus verrauschten IMU- und GPS-Messungen
-geschätzt werden. Diese Idealisierung begrenzt die unmittelbare
-Übertragbarkeit der trainierten Strategie auf reale Hardware.
+\paragraph{Wahrnehmung.}
+Der Agent erhält zwei Eingaben: einen normalisierten Zustandsvektor
+$\mathbf{o}_t \in \mathbb{R}^{17}$, der die relative Position zum Ziel,
+die Orientierung sowie Linear- und Winkelgeschwindigkeit kodiert
+(vgl.\ Abschnitt~\ref{subsec:meth_zustandsraum}), und ein normalisiertes
+Tiefenbild $\mathbf{D}_t \in [0,1]^{64 \times 64}$ einer vertikal nach
+unten gerichteten Kamera mit $90^{\circ}$~Sichtfeld. Der Zustandsvektor
+liefert die Eigenwahrnehmung der Drohne, das Tiefenbild die einzige
+Information über Hindernisse. Beide Größen werden direkt und unverrauscht
+aus der Simulation erhoben.
+
+\paragraph{Entscheidung.}
+Zustandsvektor und Tiefenbild werden der Actor-Critic-Architektur
+übergeben (vgl.\ Abschnitt~\ref{sec:meth_architektur}). Ein geteilter
+CNN-Encoder extrahiert Hindernismerkmale aus dem Tiefenbild; der
+resultierende Merkmalsvektor wird mit dem normalisierten Zustandsvektor
+konkateniert und an die MLP-Köpfe von Actor und Critic weitergegeben. Der
+Actor sampelt eine vierdimensionale Aktion
+$\mathbf{a}_t \in [-1, 1]^4$, die in einen Positionsversatz und einen
+Sollgierwinkel skaliert wird
+(vgl.\ Abschnitt~\ref{subsec:meth_aktionsraum}).
+
+\paragraph{Ausführung.}
+Der kaskadierende PID-Regler
+(vgl.\ Abschnitt~\ref{subsec:meth_pid}) übernimmt die skalierten
+Sollwerte und regelt die Drohne über 300~Simulationsschritte
+($3{,}0$\,s) zum Sollzustand. Anschließend erhebt die Simulation den
+neuen Zustand, und der Zyklus beginnt erneut. Der Agent muss somit
+ausschließlich lernen, \emph{wohin} die Drohne fliegen soll; die
+Flugstabilisierung übernimmt der Regler.
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{Bilder/pipeline.pdf}
-    \caption{Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem
-    Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach
-    Skalierung steuert ein kaskadierender PID-Regler die Drohne über
-    300~Simulationsschritte.}
+    \caption{Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent
+    (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und
+    gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über
+    300~Simulationsschritte in Motordrehzahlen um.}
     \label{fig:meth_pipeline}
 \end{figure}
 
