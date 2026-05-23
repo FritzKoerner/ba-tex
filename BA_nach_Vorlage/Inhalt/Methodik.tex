@@ -1,6 +1,39 @@
 \chapter{Methodik}
 \label{cha:Methodik}
 
+\section{Systemüberblick}
+\label{sec:meth_ueberblick}
+
+Abbildung~\ref{fig:meth_pipeline} zeigt den vollständigen Datenfluss von der
+Sensorik bis zur physikalischen Ausführung. Das normalisierte
+Tiefenbild~$\mathbf{D}_t$ und der skalierte
+Zustandsvektor~$\mathbf{o}_t$
+(vgl.\ Abschnitt~\ref{subsec:meth_zustandsraum}) werden als
+\texttt{TensorDict} gebündelt und der Actor-Critic-Architektur übergeben
+(vgl.\ Abschnitt~\ref{sec:meth_architektur}). Die vom Actor gesampelte Aktion
+wird gemäß Abschnitt~\ref{subsec:meth_aktionsraum} in Sollposition und
+Sollgierwinkel skaliert und vom kaskadierenden PID-Regler
+(vgl.\ Abschnitt~\ref{subsec:meth_pid}) über das
+Entscheidungsintervall in Motordrehzahlen umgesetzt.
+
+Sowohl das Tiefenbild als auch der Zustandsvektor werden direkt und
+unverrauscht aus der Simulation erhoben. In einer realen Anwendung wären die
+Tiefenbilder durch Sensorrauschen, Reflexionen und Ausfälle beeinflusst, und
+die Zustandsinformationen müssten aus verrauschten IMU- und GPS-Messungen
+geschätzt werden. Diese Idealisierung begrenzt die unmittelbare
+Übertragbarkeit der trainierten Strategie auf reale Hardware.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\linewidth]{Bilder/pipeline.pdf}
+    \caption{Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem
+    Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach
+    Skalierung steuert ein kaskadierender PID-Regler die Drohne über
+    300~Simulationsschritte.}
+    \label{fig:meth_pipeline}
+\end{figure}
+
+%% ==========================================================================
 \section{Formulierung als Markov-Entscheidungsprozess}
 \label{sec:meth_mdp}
 
@@ -101,7 +134,7 @@ Sollgierwinkel fest:
 Die Sollwerte $(\mathbf{p}_{\mathrm{soll}}, \psi_{\mathrm{soll}})$ werden
 nicht direkt an die Motoren übergeben, sondern von einem kaskadierenden
 PID-Regler in Motordrehzahlen umgesetzt
-(vgl.\ Abschnitt~\ref{subsec:meth_uebergangsmodell}). Diese Entkopplung
+(vgl.\ Abschnitt~\ref{subsec:meth_pid}). Diese Entkopplung
 reduziert den Aktionsraum von vier Motordrehzahlen auf vier semantisch
 interpretierbare Navigationskommandos.
 
@@ -119,8 +152,29 @@ Sollzustand $(\mathbf{p}_{\mathrm{soll}}, \psi_{\mathrm{soll}})$.
 \subsection{Belohnungsfunktion}
 \label{subsec:meth_belohnung}
 
-Die Belohnungsstruktur kombiniert dichte Belohnungssignale mit spärlichen terminalen
-Signalen, sie setzt sich als gewichtete Summe aus fünf Komponenten zusammen:
+Eine zentrale Herausforderung beim Einsatz von Deep Reinforcement Learning
+in der Robotik liegt in der Spärlichkeit der Belohnungssignale: Der Agent muss
+große Zustands- und Aktionsräume explorieren, erhält jedoch nur selten
+informatives Feedback~\autocite{polvaraSimtoRealQuadrotorLanding2020}.
+Die Belohnungsfunktion kombiniert daher dichte Signale, die den Fortschritt
+zur Zielerreichung messen, mit spärlichen terminalen Signalen, die das
+eigentliche Ziel kodieren. Die Fortschrittskomponente ist dabei als
+potentialbasiertes Reward Shaping im Sinne von
+\textcite{ngPolicyInvarianceReward1999} konstruiert ($\Phi(s) = -d(s)$);
+die übrigen dichten Komponenten weichen bewusst davon ab, da in
+Vorversuchen eine rein potentialbasierte Belohnungsfunktion zu
+langsamerer Konvergenz führte.
+
+Für die Aufgabe des autonomen Landens mit Hindernisvermeidung wurden folgende
+Entwurfsprinzipien berücksichtigt:
+\begin{itemize}
+    \item Die Drohne soll sicher fliegen und Hindernisse meiden.
+    \item Die Drohne soll den kürzesten Weg zum Ziel nehmen.
+    \item Die Drohne muss in der Nähe des Ziels zum Stillstand kommen.
+\end{itemize}
+
+\noindent Die resultierende Belohnungsfunktion setzt sich als gewichtete Summe
+aus fünf Komponenten zusammen:
 \begin{equation} \label{eq:meth_reward}
   r_t =\;
     w_{\mathrm{prog}}\, r_{\mathrm{prog}}
@@ -129,28 +183,31 @@ Signalen, sie setzt sich als gewichtete Summe aus fünf Komponenten zusammen:
   + w_{\mathrm{crash}}\, r_{\mathrm{crash}}
   + w_{\mathrm{erf}}\, r_{\mathrm{erf}}
 \end{equation}
+Dabei wird jede Komponente am Übergang $(s_t, a_t, s_{t+1})$ berechnet;
+$d_t = \lVert\mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_t\rVert$ bezeichnet den
+euklidischen Abstand zum Ziel vor und $d_{t+1}$ den Abstand nach Ausführung
+der Aktion.
 
-
-\noindent\textbf{Fortschritt} ($w_{\mathrm{prog}} = 1{,}0$).\enspace
+\noindent\textbf{Fortschritt.}\enspace
 Die Fortschrittsbelohnung misst die Annäherung an das Ziel zwischen zwei
 aufeinanderfolgenden Zeitschritten:
 \begin{equation}
   r_{\mathrm{prog}} = d_t - d_{t+1}.
 \end{equation}
-Dabei bezeichnet $d_t = \lVert\mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_t\rVert$
-den euklidischen Abstand zum Ziel.
 Ein positiver Wert zeigt an, dass sich die Drohne dem Ziel genähert hat.
+Bei direktem Abstieg zum Ziel beträgt $r_{\mathrm{prog}} \approx 2{,}0$
+pro Zeitschritt.
 
-\noindent\textbf{Nähe} ($w_{\mathrm{nah}} = 2{,}0$).\enspace
-Die Nähebelohnung liefert ein exponentiell ansteigendes Signal, pro Zeitschritt im Nahbereich
-des Ziels:
+\noindent\textbf{Nähe.}\enspace
+Die Nähebelohnung liefert ein exponentiell ansteigendes Signal, das in der Nähe
+des Ziels signifikant wird:
 \begin{equation}
   r_{\mathrm{nah}} = \exp(-d_{t+1}).
 \end{equation}
-Bei Abständen über ca.\ 3\,m ist $r_{\mathrm{nah}} \approx 0$; am Ziel nähert
-sich der Wert~$1$.
+Bei Abständen über ca.\ 5\,m ist $r_{\mathrm{nah}}$ vernachlässigbar ($< 0{,}01$); am Ziel nähert
+sich der Wert~$1$. Die Komponente belohnt das Verbleiben in der Nähe des Ziels.
 
-\noindent\textbf{Hindernisproximität} ($w_{\mathrm{prox}} = -0{,}2$).\enspace
+\noindent\textbf{Hindernisproximität.}\enspace
 Die Hindernisproximität bestraft das Eindringen in einen Sicherheitsradius
 $d_{\mathrm{s}} = 3{,}0$\,m um Hindernisse:
 \begin{equation}
@@ -158,9 +215,9 @@ $d_{\mathrm{s}} = 3{,}0$\,m um Hindernisse:
 \end{equation}
 wobei $d_{\mathrm{min}}$ den minimalen Abstand zur achsenparallelen
 Begrenzungsbox (AABB) des nächsten Hindernisses bezeichnet. Die Strafe steigt
-linear mit abnehmendem Abstand.
+linear mit abnehmendem Abstand. Der Sicherheitsradius wurde empirisch ermittelt.
 
-\noindent\textbf{Absturz} ($w_{\mathrm{crash}} = -10{,}0$).\enspace
+\noindent\textbf{Absturz.}\enspace
 Die Absturzstrafe wird bei Verletzung einer Abbruchbedingung
 (vgl.\ Abschnitt~\ref{subsec:meth_terminierung}) ausgelöst:
 \begin{equation}
@@ -172,7 +229,7 @@ Die Absturzstrafe wird bei Verletzung einer Abbruchbedingung
   \end{cases}
 \end{equation}
 
-\noindent\textbf{Erfolg} ($w_{\mathrm{erf}} = 20{,}0$).\enspace
+\noindent\textbf{Erfolg.}\enspace
 Der Erfolgsbonus wird bei Erreichen des Landeziels vergeben:
 \begin{equation}
   r_{\mathrm{erf}} =
@@ -182,6 +239,64 @@ Der Erfolgsbonus wird bei Erreichen des Landeziels vergeben:
   \end{cases}
 \end{equation}
 
+
+Die Gewichte wurden experimentell in mehreren Trainingsdurchläufen
+abgestimmt. Eine zu hohe Gewichtung der Hindernisproximität und der
+Absturzstrafe führt zu einer stagnierenden Policy: Da Annäherung an das Ziel
+und erfolgreiche Landungen zu Beginn des Trainings selten und zufällig
+auftreten, dominieren die negativen Belohnungen, und der Agent lernt, auf der
+Stelle zu schweben statt abzusteigen. Erst eine Abschwächung dieser Strafen
+ermöglicht exploratives Verhalten. Umgekehrt mussten Fortschritt und Nähe
+gegenüber der Erfolgsbelohnung ausbalanciert werden, damit der Agent nicht
+dauerhaftes Fliegen gegenüber dem Beenden der Episode bevorzugt. Auf eine
+explizite Timeout-Strafe wurde bewusst verzichtet: Ohne eine
+Zeitbeobachtung im Zustandsvektor kann der Critic den Episodenabbruch
+nicht antizipieren, was ohne Anpassung des PPO-Algorithmus zu schlechterer
+Performance führt~\autocite{rudinLearningWalkMinutes2022}.
+
+\noindent Tabelle~\ref{tab:reward_weights} fasst die gewählten Gewichte zusammen.
+
+\begin{table}[ht]
+  \centering
+  \caption{Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}
+  \label{tab:reward_weights}
+  \begin{tabular}{l c r}
+    \toprule
+    Komponente & Symbol & Gewicht \\
+    \midrule
+    Fortschritt          & $w_{\mathrm{prog}}$  & $1{,}0$   \\
+    Nähe                 & $w_{\mathrm{nah}}$   & $2{,}0$   \\
+    Hindernisproximität  & $w_{\mathrm{prox}}$  & $-0{,}2$  \\
+    Absturz              & $w_{\mathrm{crash}}$ & $-10{,}0$ \\
+    Erfolg               & $w_{\mathrm{erf}}$   & $20{,}0$  \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\subsection{Terminierung}
+\label{subsec:meth_terminierung}
+
+Eine Episode endet, wenn eine der folgenden Bedingungen eintritt:
+
+\noindent\textbf{Erfolg.}\enspace Die Drohne verbleibt über die gesamte Dauer
+eines Entscheidungsschritts ($3{,}0$\,s) innerhalb eines Radius von $0{,}5$\,m
+um das Landeziel.
+
+\noindent\textbf{Absturz.}\enspace Mindestens eine der folgenden Bedingungen
+ist erfüllt:
+\begin{itemize}
+  \item Flughöhe $z < 0{,}2$\,m (Bodenkollision),
+  \item Neigung $> 60^{\circ}$ in Roll oder Pitch (Kontrollverlust),
+  \item AABB-Abstand zum nächsten Hindernis $< 0{,}3$\,m (Hinderniskollision),
+  \item Verlassen des Korridors (Bounding-Box-Prüfung auf allen Achsen).
+\end{itemize}
+
+\noindent\textbf{Timeout.}\enspace Die maximale Episodenlänge von
+$T_{\max} = 20$ Entscheidungsschritten ($60$\,s) ist erreicht. Timeouts werden
+im Vorteilsschätzer als nicht-terminale Übergänge behandelt, sodass die
+Wertfunktion den erwarteten Ertrag über die Episode hinaus approximiert.
+
+%% ==========================================================================
 \section{Netzwerkarchitektur}
 \label{sec:meth_architektur}
 
@@ -224,8 +339,9 @@ allen Schichten.
     \label{fig:meth_architecture}
 \end{figure}
 
-\section{Trainingsverfahren}
-\label{sec:meth_trainingsverfahren}
+%% ==========================================================================
+\section{Algorithmus}
+\label{sec:meth_algorithmus}
 
 \subsection{Proximal Policy Optimization}
 \label{subsec:meth_ppo}
@@ -244,7 +360,7 @@ Anwendungsfeld der Drohnensteuerung hat sich PPO als Standardverfahren etabliert
 \textcite{bartolomeiAutonomousEmergencyLanding2022} und
 \textcite{xuNavRLLearningSafe2024} als auch
 \textcite{kaufmannChampionlevelDroneRacing2023} setzen PPO ein
-(vgl.\ Abschnitt~\ref{sec:architektur}). 
+(vgl.\ Abschnitt~\ref{sec:architektur}).
 PPO passt zudem architektonisch zum gewählten
 Trainingssetup: Als On-Policy-Verfahren verarbeitet es die gesammelten Daten direkt und
 verwirft sie nach dem Update. Off-Policy-Verfahren wie SAC
@@ -254,10 +370,11 @@ abtastet. Ihre höhere Sample-Effizienz setzt zudem voraus, dass die Datensammlu
 Engpass ist. Bei GPU-paralleler Simulation mit hunderten bis tausenden Umgebungen ist
 jedoch der Gradientenupdate der Engpass; die geringere Sample-Effizienz von
 On-Policy-Methoden wird durch den Datendurchsatz mehr als kompensiert
-\autocite{rudinLearningWalkMinutes2022}. Zudem würde ein Replay Buffer Transitionen aus
-früheren Curriculum-Stufen enthalten (vgl.\
-Abschnitt~\ref{subsec:meth_curriculum}), die für die aktuelle Stufe nicht mehr
-repräsentativ sind.
+\autocite{rudinLearningWalkMinutes2022}.
+%Zudem würde ein Replay Buffer Transitionen aus
+%früheren Curriculum-Stufen enthalten (vgl.\
+%Abschnitt~\ref{subsec:meth_curriculum}), die für die aktuelle Stufe nicht mehr
+%repräsentativ sind.
 Neuere PPO-Varianten wie Phasic Policy Gradient
 \autocite{cobbePhrasicPolicyGradient2021} wurden nicht evaluiert, da die verwendete
 Trainingsumgebung rsl-rl \autocite{rudinLearningWalkMinutes2022} ausschließlich die
@@ -318,15 +435,11 @@ Tabelle~\ref{tab:meth_ppo_hyperparams} fasst die PPO-Hyperparameter zusammen.
 Clipping $\varepsilon$      & $0{,}2$ \\
 Diskontierung $\gamma$      & $0{,}99$ \\
 GAE $\lambda$               & $0{,}95$ \\
-Lernrate $\alpha$           & $5 \times 10^{-4}$ \\
 Lern-Epochen $K$            & $5$ \\
 Mini-Batches $M$            & $4$ \\
 $c_1$ (Value-Loss)          & $1{,}0$ \\
 $c_2$ (Entropie)            & $0{,}003$ \\
 Gradient-Clipping           & $1{,}0$ \\
-Schritte pro Env $T$        & $60$ \\
-Parallele Envs $N$          & $256$ \\
-Optimizer                   & Adam \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -337,16 +450,12 @@ Gradient-Clipping entsprechen den von
 in den MuJoCo-Benchmarks als robust über verschiedene Aufgaben erwiesen haben.
 Der GAE-Parameter $\lambda = 0{,}95$ folgt der Empfehlung von
 \textcite{schulmanHighDimensionalContinuousControl2016} als Kompromiss zwischen Bias und
-Varianz. Die Lernrate $\alpha = 5 \times 10^{-4}$ wurde experimentell bestimmt:
-Kleinere Werte führten zu sehr langsamer Konvergenz, größere zu kollabierenden
-Strategien. Aufgabenspezifisch angepasst wurden ferner die Rollout-Länge~$T$ — 60~Entscheidungen
-bei 3\,s Entscheidungsintervall ergeben 180\,s Rollout-Dauer — sowie die Anzahl
-paralleler Umgebungen $N = 256$, begrenzt durch den GPU-Speicher der verwendeten
-NVIDIA~A30 (24\,GB). Der Entropie-Koeffizient~$c_2 = 0{,}003$ wurde bewusst niedrig
+Varianz. Der Entropie-Koeffizient~$c_2 = 0{,}003$ wurde bewusst niedrig
 gewählt, da die Tanh-Verteilung
 (vgl.\ Abschnitt~\ref{subsubsec:meth_tanh_squashing}) empfindlich auf hohe Entropie-Anreize reagiert;
 $c_2 \geq 0{,}01$ führte in Pilotexperimenten zu instabilem Training.
 
+%% ==========================================================================
 \section{Trainingsumgebung}
 \label{sec:meth_trainingsumgebung}
 
@@ -357,7 +466,7 @@ Das Training eines RL-Agenten vorliegende Aufgabe erfordert einen
 Physiksimulator, der drei zentrale Anforderungen erfüllt:
 (1)~GPU-parallelisierte Ausführung hunderter Umgebungsinstanzen, um die von PPO
 benötigten großen Rollout-Batches effizient zu erzeugen
-(vgl.\ Abschnitt~\ref{sec:meth_trainingsverfahren});
+(vgl.\ Abschnitt~\ref{sec:meth_algorithmus});
 (2)~simulierte Tiefenkameras, da der Agent Tiefenbilder als Beobachtung erhält;
 (3)~Import beliebiger 3D-Objekte, um realitätsnahe Hindernisszenarien zu
 konstruieren.
@@ -427,7 +536,7 @@ bei $z \approx 2$\,m und $z \approx 7$\,m
 \label{subsec:meth_hindernisse}
 
 Als Hindernisse dienen sechs 3D-Objekte aus dem Google Scanned Objects
-Datensatz~(GSO): eine Tasse, ein Teddybär, ein Spielzeugdinosaurier, ein
+Datensatz~(GSO)~\autocite{downsGoogleScannedObjects2022}: eine Tasse, ein Teddybär, ein Spielzeugdinosaurier, ein
 Spielzeugbus, ein Spielzeugnashorn und ein Schuh. Jedes Objekt wird um den
 Faktor~$21$ bis~$63$ skaliert, sodass seine horizontale Ausdehnung mindestens
 $2$\,m beträgt und damit die gesamte $y$-Breite des Korridors abdeckt. Objekte,
@@ -447,68 +556,224 @@ Aufeinanderfolgende Schichten wechseln die Seite, sodass die Drohne einen
 Slalomkurs fliegen muss. Die Startseite ($+x$ oder $-x$) wird pro Episode
 zufällig gewählt.
 
-\subsection{Verarbeitungspipeline}
-\label{subsec:meth_pipeline}
+%\subsection{Curriculum}
+%\label{subsec:meth_curriculum}
+%
+%Das Training folgt einem zweistufigen Curriculum. In der ersten Phase
+%(Iterationen~$0$ bis~$300$, entsprechend 18\,060~Entscheidungsschritten) sind
+%die Hindernisse deaktiviert, sodass der Agent zunächst den reinen Abstieg zum
+%Ziel erlernt. Die Korridorgrenzen sind von Beginn an aktiv. In der zweiten
+%Phase werden die Hindernisse bei jedem Episodenreset zufällig platziert und der
+%Agent muss sowohl die Navigation zum Ziel als auch die Hindernisvermeidung
+%bewältigen.
 
-Abbildung~\ref{fig:meth_pipeline} zeigt den vollständigen Datenfluss von der
-Sensorik bis zur physikalischen Ausführung. Das normalisierte
-Tiefenbild~$\mathbf{D}_t$ und der skalierte
-Zustandsvektor~$\mathbf{o}_t$
-(vgl.\ Abschnitt~\ref{subsec:meth_zustandsraum}) werden als
-\texttt{TensorDict} gebündelt und der Actor-Critic-Architektur übergeben
-(vgl.\ Abschnitt~\ref{sec:meth_architektur}). Die vom Actor gesampelte Aktion
-wird gemäß Abschnitt~\ref{subsec:meth_aktionsraum} in Sollposition und
-Sollgierwinkel skaliert und vom kaskadierenden PID-Regler
-(vgl.\ Abschnitt~\ref{subsec:meth_uebergangsmodell}) über das
-Entscheidungsintervall in Motordrehzahlen umgesetzt.
+%% ==========================================================================
+\section{Kaskadierender PID-Regler}
+\label{subsec:meth_pid}
 
-Sowohl das Tiefenbild als auch der Zustandsvektor werden direkt und
-unverrauscht aus der Simulation erhoben. In einer realen Anwendung wären die
-Tiefenbilder durch Sensorrauschen, Reflexionen und Ausfälle beeinflusst, und
-die Zustandsinformationen müssten aus verrauschten IMU- und GPS-Messungen
-geschätzt werden. Diese Idealisierung begrenzt die unmittelbare
-Übertragbarkeit der trainierten Strategie auf reale Hardware.
+Wie in Abschnitt~\ref{sec:architektur} dargelegt, folgt die vorliegende
+Arbeit einer hierarchischen Steuerungsarchitektur: Der RL-Agent gibt
+Sollposition und Sollgierwinkel vor, ein nachgeschalteter Regler setzt
+diese in Motordrehzahlen um. Der Regler ist als dreistufige PID-Kaskade
+aufgebaut:
 
-\begin{figure}[ht]
-    \centering
-    \includegraphics[width=\linewidth]{Bilder/pipeline.pdf}
-    \caption{Verarbeitungspipeline: Tiefenbild und Zustandsvektor werden dem
-    Actor-Netz (CNN~+~MLP) übergeben, das eine Aktion sampelt. Nach
-    Skalierung steuert ein kaskadierender PID-Regler die Drohne über
-    300~Simulationsschritte.}
-    \label{fig:meth_pipeline}
-\end{figure}
+\begin{enumerate}
+  \item \textbf{Positionsregler} (äußere Schleife): Vergleicht die
+    Sollposition mit der aktuellen Position und gibt
+    Sollgeschwindigkeiten aus, begrenzt auf 5\,m/s horizontal und
+    3\,m/s vertikal.
+  \item \textbf{Geschwindigkeitsregler} (mittlere Schleife): Wandelt
+    Geschwindigkeitsfehler in ein Schubkommando sowie gewünschte
+    Roll- und Nickwinkel um, begrenzt auf $\pm 30^{\circ}$.
+  \item \textbf{Lageregler} (innere Schleife): Regelt Roll, Nick und
+    Gier auf die gewünschten Winkel und gibt Korrektursignale an den
+    Motormischer.
+\end{enumerate}
 
-\subsection{Terminierung}
-\label{subsec:meth_terminierung}
+\noindent Der Motormischer addiert die vier Korrektursignale (Schub,
+Roll, Nick, Gier) zur Schwebedrehzahl
+1789\,RPM und verteilt sie auf die vier Motoren. Der Agent muss somit ausschließlich
+die Navigationsstrategie erlernen, nicht die Flugdynamik. Der Regler wurde eigens für diese Simulationsumgebung
+entwickelt und seine Parameter manuell abgestimmt
+(Tabelle~\ref{tab:app_pid_gains}). Ein etablierter
+Flugreglerstack wie PX4 stand im verwendeten Simulator nicht zur
+Verfügung.
 
-Eine Episode endet, wenn eine der folgenden Bedingungen eintritt:
+%% ==========================================================================
+\section{Trainingsprozess}
+\label{sec:meth_trainingsprozess}
 
-\noindent\textbf{Erfolg.}\enspace Die Drohne verbleibt über die gesamte Dauer
-eines Entscheidungsschritts ($3{,}0$\,s) innerhalb eines Radius von $0{,}5$\,m
-um das Landeziel.
+Tabelle~\ref{tab:meth_training} fasst die Trainingsparameter zusammen.
 
-\noindent\textbf{Absturz.}\enspace Mindestens eine der folgenden Bedingungen
-ist erfüllt:
-\begin{itemize}
-  \item Flughöhe $z < 0{,}2$\,m (Bodenkollision),
-  \item Neigung $> 60^{\circ}$ in Roll oder Pitch (Kontrollverlust),
-  \item AABB-Abstand zum nächsten Hindernis $< 0{,}3$\,m (Hinderniskollision),
-  \item Verlassen des Korridors (Bounding-Box-Prüfung auf allen Achsen).
-\end{itemize}
+\begin{table}[ht]
+\centering
+\caption{Trainingsparameter.}
+\label{tab:meth_training}
+\small
+\begin{tabular}{l l}
+\toprule
+\textbf{Parameter} & \textbf{Wert} \\
+\midrule
+Parallele Umgebungen $N$        & $256$ \\
+Schritte pro Umgebung $T$      & $60$ \\
+Batch-Größe $N \times T$       & $15\,360$ \\
+Lernrate $\alpha$               & $5 \times 10^{-4}$ \\
+Optimizer                       & Adam \\
+Trainingsiterationen            & \textit{TODO} \\
+GPU                             & NVIDIA A30 (24\,GB) \\
+Trainingszeit (Wallclock)       & \textit{TODO} \\
+Checkpoint-Intervall            & $100$ Iterationen \\
+\bottomrule
+\end{tabular}
+\end{table}
 
-\noindent\textbf{Timeout.}\enspace Die maximale Episodenlänge von
-$T_{\max} = 20$ Entscheidungsschritten ($60$\,s) ist erreicht. Timeouts werden
-im Vorteilsschätzer als nicht-terminale Übergänge behandelt, sodass die
-Wertfunktion den erwarteten Ertrag über die Episode hinaus approximiert.
+Das Training wird auf dem HPC-Cluster der Universität Leipzig durchgeführt.
+Als GPU dient eine NVIDIA~A30 (Ampere-Architektur, 24\,GB VRAM). Die
+A30~wurde gegenüber der alternativ verfügbaren NVIDIA~V100 (Volta) gewählt,
+da der Batch-Renderer für die Tiefenkamera eine GPU mit Compute
+Capability~$\geq 7{,}5$ (Turing oder neuer) voraussetzt. Auf der V100 steht
+lediglich der langsamere Rasterizer-Pfad zur Verfügung, der die
+Tiefenbilder seriell pro Umgebung rendert.
 
-\subsection{Curriculum}
-\label{subsec:meth_curriculum}
+Die Anzahl paralleler Umgebungen $N = 256$ ist durch den GPU-Speicher
+begrenzt. Die Rollout-Länge $T = 60$~Entscheidungsschritte bei $3{,}0$\,s
+Entscheidungsintervall
+(vgl.\ Abschnitt~\ref{subsec:meth_uebergangsmodell}) ergibt eine
+Rollout-Dauer von $180$\,s, die drei vollständige Episoden
+($T_{\max} = 60$\,s) umfassen kann. Pro Iteration sammelt der Agent damit
+$N \times T = 15\,360$ Transitionen, die in $M = 4$ Mini-Batches
+à~$3\,840$~Transitionen aufgeteilt und $K = 5$ Epochen lang optimiert
+werden.
 
-Das Training folgt einem zweistufigen Curriculum. In der ersten Phase
-(Iterationen~$0$ bis~$300$, entsprechend 18\,060~Entscheidungsschritten) sind
-die Hindernisse deaktiviert, sodass der Agent zunächst den reinen Abstieg zum
-Ziel erlernt. Die Korridorgrenzen sind von Beginn an aktiv. In der zweiten
-Phase werden die Hindernisse bei jedem Episodenreset zufällig platziert und der
-Agent muss sowohl die Navigation zum Ziel als auch die Hindernisvermeidung
-bewältigen.
+Die Lernrate $\alpha = 5 \times 10^{-4}$ wurde experimentell bestimmt:
+Kleinere Werte führten zu langsamer Konvergenz, größere zu kollabierenden
+Strategien.
+
+Zu Beginn jeder Trainingsausführung werden die Episodenlängen der
+$N$~Umgebungen zufällig initialisiert, sodass die Episodenenden über die
+Umgebungen hinweg zeitlich versetzt auftreten. Ohne diese Dekorrelation
+würden alle Umgebungen synchron zurückgesetzt, was innerhalb eines Rollouts
+zu korrelierten Transitionsblöcken führt und die Varianz der
+Gradientenschätzung erhöht~\autocite{rudinLearningWalkMinutes2022}.
+
+Der Agent wird über \textit{TODO}~Iterationen trainiert, was
+$\textit{TODO} \times 15\,360 = \textit{TODO}$ gesammelten Transitionen
+entspricht. Alle 100~Iterationen wird ein Checkpoint gespeichert.
+%Das zweistufige Curriculum
+%(vgl.\ Abschnitt~\ref{subsec:meth_curriculum}) schaltet nach
+%Iteration~$300$ die Hindernisse hinzu; die verbleibenden Iterationen
+%dienen dem Erlernen der Hindernisvermeidung.
+Die Wallclock-Trainingszeit beträgt \textit{TODO} auf der genannten Hardware.
+
+%% ==========================================================================
+\section{Evaluation}
+\label{sec:meth_evaluation}
+
+% --- ENTWURF — zur Diskussion ---
+
+Die Evaluation untersucht die Leistungsfähigkeit der trainierten Strategie
+anhand zweier Versuchsreihen mit jeweils 1\,000~Episoden und vergleicht
+sie mit einem klassischen Pfadplanungsverfahren. Die erste Versuchsreihe
+verwendet die Trainingsumgebung mit zuvor unbekannten Hindernisformen;
+die zweite eine photogrammetrisch erfasste Agrarumgebung.
+
+\subsection{Evaluationsmetriken}
+\label{subsec:meth_metriken}
+
+Jede Episode wird anhand der folgenden Metriken bewertet. Alle Metriken
+werden mit 95\,\%-Bootstrap-Konfidenzintervallen
+versehen~\autocite{efronIntroductionBootstrap1994}: Aus den $n = 1\,000$
+Episodenergebnissen werden $B = 10\,000$ Stichproben mit Zurücklegen
+gezogen; für jede Stichprobe wird die jeweilige Metrik berechnet. Die
+Grenzen des Konfidenzintervalls ergeben sich als das $2{,}5$\,\%- und
+$97{,}5$\,\%-Perzentil der Bootstrap-Verteilung (Perzentilmethode).
+
+\noindent\textbf{Erfolgsrate.}\enspace
+Anteil der Episoden, in denen die Drohne das Landeziel innerhalb des
+Zielradius ($0{,}5$\,m) erreicht, ohne eine Abbruchbedingung
+(vgl.\ Abschnitt~\ref{subsec:meth_terminierung}) auszulösen und innerhalb
+des Zeitlimits von $60$\,s.
+
+\noindent\textbf{Fehlermodusverteilung.}\enspace
+Jede fehlgeschlagene Episode wird einer von vier Kategorien zugeordnet:
+Hinderniskollision, Bodenkollision, Verlassen des Korridors
+(nur~Versuchsreihe~1) oder Timeout. Die Verteilung gibt Aufschluss
+darüber, \emph{warum} die Strategie versagt, nicht nur \emph{ob}.
+
+\noindent\textbf{Landezeit.}\enspace
+Zeit vom Episodenbeginn bis zur erfolgreichen Landung, berechnet
+ausschließlich über erfolgreiche Episoden. Die Landezeit wird als Median
+mit Interquartilsabstand (IQR) angegeben, da die Verteilung typischerweise
+rechtsschief ist: Die Mehrzahl der Episoden endet schnell, während
+vereinzelte Episoden mit ungünstigen Hinderniskonfigurationen deutlich
+länger dauern. Der Median ist gegenüber solchen Ausreißern robuster als
+der Mittelwert.
+
+\noindent\textbf{Minimaler Hindernisabstand.}\enspace
+Der kleinste AABB-Abstand zwischen Drohne und einem Hindernis, gemessen
+über den gesamten Episodenverlauf. Angegeben werden der Mittelwert über
+alle Episoden sowie das globale Minimum. Diese Metrik quantifiziert die
+Sicherheitsmargen der Strategie und ist auch für erfolgreiche Episoden
+aussagekräftig: Ein niedriger mittlerer Mindestabstand deutet auf eine
+riskante Flugweise hin, selbst wenn keine Kollision auftritt.
+
+\noindent\textbf{Pfadeffizienz.}\enspace
+Das Verhältnis der tatsächlichen Trajektorienlänge zur euklidischen
+Distanz zwischen Startposition und Landeziel:
+\begin{equation} \label{eq:meth_path_efficiency}
+  \eta_{\mathrm{Pfad}} = \frac{\sum_{t=0}^{T-1} \lVert \mathbf{p}_{t+1} - \mathbf{p}_t \rVert}
+  {\lVert \mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_0 \rVert}.
+\end{equation}
+Ein Wert von $\eta_{\mathrm{Pfad}} = 1{,}0$ entspricht einem direkten
+Pfad; höhere Werte zeigen Umwege an. Die Pfadeffizienz wird nur über
+erfolgreiche Episoden berechnet und als Median mit IQR angegeben.
+
+\noindent\textbf{Rechenzeit pro Episode.}\enspace
+Die Summe aller Inferenzzeiten innerhalb einer erfolgreichen Episode,
+gemessen auf identischer Hardware für die RL-Strategie und den
+Pfadplaner. Für die RL-Strategie entspricht jede Inferenz einem
+einzelnen Forward-Pass durch das CNN-MLP-Netzwerk; die Messung erfolgt
+nach GPU-Synchronisation, um asynchrone Kernelausführung nicht zu
+unterschätzen. Die Metrik verbindet den Rechenaufwand pro
+Entscheidungsschritt mit der Anzahl benötigter Schritte: Ein Verfahren,
+das pro Schritt schneller rechnet und zugleich weniger Schritte bis zur
+Landung benötigt, erzielt eine niedrigere Gesamtrechenzeit. Die Angabe
+erfolgt als Median mit Interquartilsabstand über alle erfolgreichen
+Episoden.
+
+\subsection{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}
+\label{subsec:meth_versuch1}
+
+Die erste Versuchsreihe prüft, ob die trainierte Strategie auf
+Hindernisformen generalisiert, die während des TraiDurnings nicht gesehen
+wurden. Die Korridorgeometrie, die Spawnverteilung, das Landeziel und das
+Zeitlimit bleiben identisch zur Trainingsumgebung
+(vgl.\ Abschnitt~\ref{subsec:meth_korridor}). Einzig die sechs
+Hindernisobjekte werden durch sechs zuvor unbekannte 3D-Objekte aus
+demselben Google Scanned Objects Datensatz ersetzt. Die Ersatzobjekte
+werden so skaliert, dass ihre horizontale Ausdehnung derjenigen der
+Trainingsobjekte entspricht. Die Platzierungslogik (erzwungener Slalom,
+alternierende Seiten) bleibt unverändert. Die Drohne muss ihre
+Ausweichstrategie somit rein auf Basis der Tiefenbilder auf unbekannte
+Geometrien übertragen.
+
+Als Vergleichsverfahren dient ein reaktiver Pfadplaner, der dieselben
+simulierten Tiefenbilder als Eingabe erhält. Beide Verfahren werden unter
+identischen Bedingungen — gleiche Hinderniskonfigurationen, gleiche
+Startpositionen — evaluiert und anhand aller in
+Abschnitt~\ref{subsec:meth_metriken} definierten Metriken verglichen.
+
+\subsection{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}
+\label{subsec:meth_versuch2}
+
+Die zweite Versuchsreihe untersucht den Transfer der trainierten
+Strategie in eine photogrammetrisch erfasste Weinbergumgebung. Im
+Gegensatz zu Versuchsreihe~1 entfällt der Korridorbegrenzungsrahmen:
+Die Drohne operiert in einem offenen 3D-Scan eines realen Weinbergs, in
+dem die Rebreihen und das natürliche Terrain die einzigen Hindernisse
+bilden. Der Spawnbereich wird gegenüber der Trainingsumgebung
+erweitert (variablere Höhe und größerer horizontaler Versatz), und das
+Landeziel wird zufällig innerhalb des befahrbaren Bereichs gewählt.
+Die Evaluation erfolgt mit denselben Metriken und demselben
+Konfidenzintervallverfahren aus Abschnitt~\ref{subsec:meth_metriken};
+als Vergleichsverfahren dient derselbe Pfadplaner wie in Versuchsreihe~1.

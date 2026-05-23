@@ -3,10 +3,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$.}}{18}{table.caption.46}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{23}{table.caption.68}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$.}}{19}{table.caption.48}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}}{22}{table.caption.62}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{26}{table.caption.72}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{29}{table.caption.84}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnis der Testdaten des EN-CNN}}{28}{table.caption.80}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Ergebnis der Testdaten des EN-CNN}}{33}{table.caption.91}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
