@@ -729,7 +729,7 @@ Die Wallclock-Trainingszeit beträgt \textit{TODO} auf der genannten Hardware.
 
 Die Evaluation untersucht die Leistungsfähigkeit der trainierten Strategie
 anhand zweier Versuchsreihen mit jeweils 1\,000~Episoden und vergleicht
-sie mit einem klassischen Pfadplanungsverfahren. Die erste Versuchsreihe
+sie mit einem RRT*-Pfadplaner. Die erste Versuchsreihe
 verwendet die Trainingsumgebung mit zuvor unbekannten Hindernisformen;
 die zweite eine photogrammetrisch erfasste Agrarumgebung.
 
@@ -813,10 +813,14 @@ alternierende Seiten) bleibt unverändert. Die Drohne muss ihre
 Ausweichstrategie somit rein auf Basis der Tiefenbilder auf unbekannte
 Geometrien übertragen.
 
-Als Vergleichsverfahren dient ein reaktiver Pfadplaner, der dieselben
-simulierten Tiefenbilder als Eingabe erhält. Beide Verfahren werden unter
-identischen Bedingungen — gleiche Hinderniskonfigurationen, gleiche
-Startpositionen — evaluiert und anhand aller in
+Als Vergleichsverfahren dient ein RRT*-Pfadplaner, der auf der
+vollständigen Kollisionsgeometrie der Umgebung operiert: Ihm stehen die
+exakten Positionen und Ausdehnungen aller Hindernisse zur Verfügung. Der
+RL-Agent hingegen erhält ausschließlich ein lokales Tiefenbild und den
+propriozeptiven Zustandsvektor. Die Leistungsdifferenz zwischen beiden
+Verfahren quantifiziert daher den Preis eingeschränkter Sensorik, nicht
+den Preis der lernbasierten Methode. Beide Verfahren werden unter
+identischen Bedingungen evaluiert und anhand aller in
 Abschnitt~\ref{subsec:meth_metriken} definierten Metriken verglichen.
 
 \subsection{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}
@@ -832,4 +836,5 @@ erweitert (variablere Höhe und größerer horizontaler Versatz), und das
 Landeziel wird zufällig innerhalb des befahrbaren Bereichs gewählt.
 Die Evaluation erfolgt mit denselben Metriken und demselben
 Konfidenzintervallverfahren aus Abschnitt~\ref{subsec:meth_metriken};
-als Vergleichsverfahren dient derselbe Pfadplaner wie in Versuchsreihe~1.
+als Vergleichsverfahren dient derselbe RRT*-Pfadplaner wie in
+Versuchsreihe~1.

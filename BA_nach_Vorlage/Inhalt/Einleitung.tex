@@ -20,19 +20,19 @@ Trotz der Fortschritte in einzelnen Ansätzen bringt das autonome Landen in nat�
 
 \section{Zielstellung}
 
-Ziel der Arbeit ist die Entwicklung einer Reinforcement-Learning-Pipeline, welche es einer Drohne ermöglicht, anhand von Bild- und GPS-Daten autonom zu landen. Das System soll sicherstellen, dass eine Drohne an einem beliebigen Punkt sicher in einer agrarwirtschaftlichen Umgebung landen kann.
+Ziel der Arbeit ist die Entwicklung einer Reinforcement-Learning-Pipeline, die eine autonome Drohne befähigt, mithilfe lokaler Tiefensensorik in einer hindernisreichen Umgebung sicher zu landen. Das System kombiniert einen propriozeptiven Zustandsvektor mit tiefenbildbasierter Umgebungswahrnehmung, um Hindernisse während des Landevorgangs zu erkennen und ihnen auszuweichen. Die Leistungsfähigkeit des trainierten Agenten wird anhand einer abstrakten Trainingsumgebung evaluiert und anschließend im Zero-Shot-Transfer auf eine Umgebung mit realistischer Vegetationsstruktur getestet.
 
 Dadurch ergeben sich folgende Fragestellungen:
 
 \minisec{Hauptfragestellung}
-Wie lässt sich ein Reinforcement-Learning-basierter Ansatz konzipieren, der eine autonome Drohne befähigt, an einer beliebigen, vorgegebenen Weltkoordinate sicher zu landen?
+Inwiefern kann ein Reinforcement-Learning-basierter Ansatz eine autonome Drohne befähigen, mithilfe lokaler Tiefensensorik in hindernisreichen Umgebungen sicher zu landen?
 
 \minisec{Nebenfragestellungen}
 \begin{enumerate}
-	\item Inwiefern ist eine ausschließlich bildbasierte Wahrnehmung für die autonome Landung mittels Reinforcement Learning ausreichend?
-	\item Welchen Einfluss haben statische Hindernisse im Landebereich auf die Erfolgsrate des trainierten Agenten?
-	\item Wie verhält sich die Leistungsfähigkeit des trainierten Agenten beim Transfer in eine photorealistische Simulationsumgebung?
-	\item Inwiefern kann die Integration semantischer Segmentierung in die Beobachtungsrepräsentation die Landeperformance verbessern?
+	\item Wie leistungsfähig ist der trainierte Agent in der Trainingsumgebung, und welche Faktoren begrenzen die Erfolgsrate?
+	\item In welchem Maß lässt sich die erlernte Navigationsleistung auf eine geometrisch verschiedenartige Umgebung mit realistischer Vegetationsstruktur übertragen?
+	\item Welche Leistungslücke besteht zwischen einem lernbasierten Agenten mit lokaler Sensorik und einem Pfadplaner mit vollständiger Umgebungsinformation?
+	\item Welchen Beitrag leisten die einzelnen Beobachtungskomponenten, insbesondere die visuelle Tiefenwahrnehmung und der propriozeptive Zustandsvektor, zur Navigationsleistung des Agenten?
 \end{enumerate}
 
 \section{Aufbau der Arbeit}

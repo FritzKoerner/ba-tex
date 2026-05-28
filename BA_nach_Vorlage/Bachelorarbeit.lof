@@ -1,0 +1,15 @@
+\babel@toc {ngerman}{}\relax 
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Interaktion zwischen Agent und Umgebung in einem MDP (nach \blx@tocontentsinit {0}\cite {suttonReinforcementLearningIntroduction2020}, S.~48).}}{5}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces $L^{\mathrm {CLIP}}$ als Funktion des Wahrscheinlichkeitsverhältnisses~$r$. Links ($\hat {A}_t > 0$): der Anreiz wird bei $1 + \varepsilon $ gekappt. Rechts ($\hat {A}_t < 0$): die Korrektur bleibt uneingeschränkt (nach \blx@tocontentsinit {0}\autocite {schulmanProximalPolicyOptimization2017}, Fig.~1).}}{8}{figure.caption.32}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um.}}{19}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben.}}{25}{figure.caption.68}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{29}{figure.caption.80}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
