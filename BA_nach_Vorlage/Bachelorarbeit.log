@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  28 MAY 2026 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  28 MAY 2026 22:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2586,7 +2586,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 
 
 
-]
+] [41]
 
 Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              Note: KOMA-Script does use styles for commands like
@@ -2730,18 +2730,18 @@ Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35961 strings out of 474222
- 666684 string characters out of 5748733
+ 35962 strings out of 474222
+ 666691 string characters out of 5748733
  1943975 words of memory out of 5000000
  57313 multiletter control sequences out of 15000+600000
  665632 words of font info for 206 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,20n,125p,10960b,2820s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (59 pages, 1025350 bytes).
+Output written on Bachelorarbeit.pdf (60 pages, 1027813 bytes).
 PDF statistics:
- 1359 PDF objects out of 1440 (max. 8388607)
- 1185 compressed objects within 12 object streams
- 241 named destinations out of 1000 (max. 500000)
+ 1363 PDF objects out of 1440 (max. 8388607)
+ 1188 compressed objects within 12 object streams
+ 242 named destinations out of 1000 (max. 500000)
  663 words of extra memory for PDF output out of 10000 (max. 10000000)
 
