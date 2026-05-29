@@ -1,3 +1,106 @@
+\appsection{Ergänzende Trainingsverläufe}
+\label{app:training_curves}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/training/Train_mean_episode_length.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_close_raw.pdf}
+    \caption[Episodenlänge und Näherungsbelohnung]{Mittlere Episodenlänge
+    (links) und Näherungsbelohnung (rechts). Die Episodenlänge gibt die Anzahl
+    der Entscheidungsschritte pro Episode an. Die Näherungsbelohnung steigt mit
+    abnehmender Distanz zum Ziel. Geglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:rew_eplen_close}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_obstacle_proximity_raw.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Policy_mean_std.pdf}
+    \caption[Hindernisabstandsstrafe und Standardabweichung der
+    Policy]{Hindernisabstandsstrafe (links) und mittlere Standardabweichung
+    der Aktionsverteilung (rechts). Geglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:rew_prox_std}
+\end{figure}
+
+
+\appsection{Phase-1-Evaluationsmetriken}
+\label{app:phase1_metrics}
+
+\begin{table}[H]
+  \centering
+  \caption[Phase-1-Ergebnisse des RL-Agenten]{Phase-1-Ergebnisse des
+  RL-Agenten ($1\,000$~Episoden, Checkpoint~400, ungesehene Hindernisse).
+  Konfidenzintervalle: 95\,\%-Bootstrap (Perzentilmethode, $B = 10\,000$).
+  Landezeit, Pfadeffizienz und Rechenzeit beziehen sich ausschließlich auf
+  erfolgreiche Episoden ($n = 710$).}
+  \label{tab:phase1_results}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r}
+    \toprule
+    \textbf{Metrik} & \textbf{Wert} & \textbf{95\,\%-KI / IQR} \\
+    \midrule
+    Erfolgsrate                       & 71,0\,\%          & [68,2;\; 73,8] \\
+    \addlinespace
+    Hinderniskollision                & 28,8\,\% (288)    & [26,0;\; 31,6] \\
+    Verlassen des Korridors           & 0,2\,\% (2)       & [0,0;\; 0,5] \\
+    Bodenkollision                    & 0,0\,\% (0)       & — \\
+    Timeout                           & 0,0\,\% (0)       & — \\
+    \addlinespace
+    Landezeit (Median)                & 30,0\,s            & IQR [27,0;\; 36,0] \\
+    Pfadeffizienz (Median)            & 1,19               & IQR [1,13;\; 1,25] \\
+    Min.\ Hindernisabstand (Mittel)   & 0,52\,m            & [0,50;\; 0,54] \\
+    Min.\ Hindernisabstand (global)\textsuperscript{*}   & 0,00\,m            & — \\
+    Rechenzeit/Episode (Median)       & 0,21\,ms           & IQR [0,19;\; 0,25] \\
+    \bottomrule
+  \end{tabular}
+
+  \smallskip
+  \textsuperscript{*}Stammt aus Episoden, die mit Kollision endeten (Distanz~$= 0$ bei Kontakt).
+\end{table}
+
+
+\appsection{Phase-2-Evaluationsmetriken}
+\label{app:phase2_metrics}
+
+\begin{table}[H]
+  \centering
+  \caption[Phase-2-Ergebnisse des RL-Agenten]{Phase-2-Ergebnisse des
+  RL-Agenten ($1\,000$~Episoden, Checkpoint~400, Weinberg-Transfer,
+  Erfolgsradius $0{,}5$\,m).
+  Konfidenzintervalle: 95\,\%-Bootstrap (Perzentilmethode, $B = 10\,000$).
+  Landezeit, Pfadeffizienz und Rechenzeit beziehen sich ausschließlich auf
+  erfolgreiche Episoden ($n = 104$).}
+  \label{tab:phase2_results}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r}
+    \toprule
+    \textbf{Metrik} & \textbf{Wert} & \textbf{95\,\%-KI / IQR} \\
+    \midrule
+    Erfolgsrate                       & 10,4\,\%          & [8,5;\; 12,4] \\
+    \addlinespace
+    Terrain-Kollision                 & 15,9\,\% (159)    & [13,6;\; 18,2] \\
+    Timeout                           & 73,7\,\% (737)    & [71,0;\; 76,4] \\
+    Bodenkollision                    & \multicolumn{2}{c}{entfällt (kein fester Bodenkollisions-Check)} \\
+    Verlassen des Korridors           & \multicolumn{2}{c}{entfällt (kein Korridorbegrenzungsrahmen)} \\
+    \addlinespace
+    Landezeit (Median)                & 36,0\,s            & IQR [33,0;\; 36,0] \\
+    Pfadeffizienz (Median)            & 1,07               & IQR [1,05;\; 1,09] \\
+    Finale Zieldistanz (Median)       & 1,19\,m            & — \\
+    Min.\ Terrain-Abstand (Mittel)    & 1,02\,m            & [0,98;\; 1,06] \\
+    Min.\ Terrain-Abstand (global)\textsuperscript{*}    & 0,00\,m            & — \\
+    Rechenzeit/Episode (Median)       & 0,25\,ms           & IQR [0,23;\; 0,27] \\
+    \bottomrule
+  \end{tabular}
+
+  \smallskip
+  \textsuperscript{*}Stammt aus Episoden, die mit Terrain-Kollision endeten (Distanz~$= 0$ bei Kontakt).
+\end{table}
+
+
 \appsection{PID-Reglerparameter}
 \label{app:pid}
 

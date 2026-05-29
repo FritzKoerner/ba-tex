@@ -8,77 +8,74 @@
 \newlabel{cha:Methodik}{{4}{18}{Methodik}{chapter.41}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Systemüberblick}{18}{section.42}\protected@file@percent }
 \newlabel{sec:meth_ueberblick}{{4.1}{18}{Systemüberblick}{section.42}{}}
-\@writefile{toc}{\contentsline {paragraph}{Wahrnehmung.}{19}{paragraph*.43}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Entscheidung.}{19}{paragraph*.44}\protected@file@percent }
-\@writefile{toc}{\contentsline {paragraph}{Ausführung.}{19}{paragraph*.45}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um.}}{19}{figure.caption.46}\protected@file@percent }
-\newlabel{fig:meth_pipeline}{{4.1}{19}{Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um}{figure.caption.46}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Formulierung als Markov-Entscheidungsprozess}{20}{section.47}\protected@file@percent }
-\newlabel{sec:meth_mdp}{{4.2}{20}{Formulierung als Markov-Entscheidungsprozess}{section.47}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Zustandsraum}{20}{subsection.48}\protected@file@percent }
-\newlabel{subsec:meth_zustandsraum}{{4.2.1}{20}{Zustandsraum}{subsection.48}{}}
-\newlabel{eq:meth_state}{{4.1}{20}{Zustandsraum}{equation.49}{}}
-\newlabel{eq:meth_obs_vector}{{4.2}{20}{Zustandsraum}{equation.50}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf  {o}_t \in \mathbb  {R}^{17}$.}}{20}{table.caption.51}\protected@file@percent }
-\newlabel{tab:meth_obs}{{4.1}{20}{Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$}{table.caption.51}{}}
-\newlabel{eq:meth_depth}{{4.3}{21}{Zustandsraum}{equation.52}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Aktionsraum}{21}{subsection.53}\protected@file@percent }
-\newlabel{subsec:meth_aktionsraum}{{4.2.2}{21}{Aktionsraum}{subsection.53}{}}
-\newlabel{eq:meth_action}{{4.4}{21}{Aktionsraum}{equation.54}{}}
-\newlabel{eq:meth_target_pos}{{4.5}{21}{Aktionsraum}{equation.55}{}}
-\newlabel{eq:meth_target_yaw}{{4.6}{21}{Aktionsraum}{equation.56}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Übergangsmodell}{21}{subsection.57}\protected@file@percent }
-\newlabel{subsec:meth_uebergangsmodell}{{4.2.3}{21}{Übergangsmodell}{subsection.57}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Belohnungsfunktion}{22}{subsection.58}\protected@file@percent }
-\newlabel{subsec:meth_belohnung}{{4.2.4}{22}{Belohnungsfunktion}{subsection.58}{}}
-\newlabel{eq:meth_reward}{{4.7}{22}{Belohnungsfunktion}{equation.59}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}}{24}{table.caption.65}\protected@file@percent }
-\newlabel{tab:reward_weights}{{4.2}{24}{Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme}{table.caption.65}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Terminierung}{24}{subsection.66}\protected@file@percent }
-\newlabel{subsec:meth_terminierung}{{4.2.5}{24}{Terminierung}{subsection.66}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Netzwerkarchitektur}{24}{section.67}\protected@file@percent }
-\newlabel{sec:meth_architektur}{{4.3}{24}{Netzwerkarchitektur}{section.67}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben.}}{25}{figure.caption.68}\protected@file@percent }
-\newlabel{fig:meth_architecture}{{4.2}{25}{Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben}{figure.caption.68}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Algorithmus}{25}{section.69}\protected@file@percent }
-\newlabel{sec:meth_algorithmus}{{4.4}{25}{Algorithmus}{section.69}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Proximal Policy Optimization}{25}{subsection.70}\protected@file@percent }
-\newlabel{subsec:meth_ppo}{{4.4.1}{25}{Proximal Policy Optimization}{subsection.70}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.1}Aktionsverteilung und Tanh-Squashing}{26}{subsubsection.71}\protected@file@percent }
-\newlabel{subsubsec:meth_tanh_squashing}{{4.4.1.1}{26}{Aktionsverteilung und Tanh-Squashing}{subsubsection.71}{}}
-\newlabel{eq:meth_tanh_squashing}{{4.13}{26}{Aktionsverteilung und Tanh-Squashing}{equation.72}{}}
-\newlabel{eq:meth_tanh_logprob}{{4.14}{26}{Aktionsverteilung und Tanh-Squashing}{equation.73}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.2}Hyperparameter}{26}{subsubsection.74}\protected@file@percent }
-\newlabel{subsubsec:meth_hyperparams}{{4.4.1.2}{26}{Hyperparameter}{subsubsection.74}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{27}{table.caption.75}\protected@file@percent }
-\newlabel{tab:meth_ppo_hyperparams}{{4.3}{27}{PPO-Hyperparameter der vorliegenden Arbeit}{table.caption.75}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.5}Trainingsumgebung}{27}{section.76}\protected@file@percent }
-\newlabel{sec:meth_trainingsumgebung}{{4.5}{27}{Trainingsumgebung}{section.76}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Physiksimulator}{27}{subsection.77}\protected@file@percent }
-\newlabel{subsec:meth_simulator}{{4.5.1}{27}{Physiksimulator}{subsection.77}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Drohnenmodell}{28}{subsection.78}\protected@file@percent }
-\newlabel{subsec:meth_drohne}{{4.5.2}{28}{Drohnenmodell}{subsection.78}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Korridorgeometrie}{28}{subsection.79}\protected@file@percent }
-\newlabel{subsec:meth_korridor}{{4.5.3}{28}{Korridorgeometrie}{subsection.79}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Hindernisse}{28}{subsection.81}\protected@file@percent }
-\newlabel{subsec:meth_hindernisse}{{4.5.4}{28}{Hindernisse}{subsection.81}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{29}{figure.caption.80}\protected@file@percent }
-\newlabel{fig:meth_corridor}{{4.3}{29}{Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen}{figure.caption.80}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Kaskadierender PID-Regler}{29}{section.82}\protected@file@percent }
-\newlabel{subsec:meth_pid}{{4.6}{29}{Kaskadierender PID-Regler}{section.82}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Trainingsprozess}{30}{section.86}\protected@file@percent }
-\newlabel{sec:meth_trainingsprozess}{{4.7}{30}{Trainingsprozess}{section.86}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{30}{table.caption.87}\protected@file@percent }
-\newlabel{tab:meth_training}{{4.4}{30}{Trainingsparameter}{table.caption.87}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Evaluation}{31}{section.88}\protected@file@percent }
-\newlabel{sec:meth_evaluation}{{4.8}{31}{Evaluation}{section.88}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Evaluationsmetriken}{31}{subsection.89}\protected@file@percent }
-\newlabel{subsec:meth_metriken}{{4.8.1}{31}{Evaluationsmetriken}{subsection.89}{}}
-\newlabel{eq:meth_path_efficiency}{{4.15}{32}{Evaluationsmetriken}{equation.90}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{32}{subsection.91}\protected@file@percent }
-\newlabel{subsec:meth_versuch1}{{4.8.2}{32}{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{subsection.91}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.3}Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{33}{subsection.92}\protected@file@percent }
-\newlabel{subsec:meth_versuch2}{{4.8.3}{33}{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{subsection.92}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um.}}{19}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:meth_pipeline}{{4.1}{19}{Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um}{figure.caption.43}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Formulierung als Markov-Entscheidungsprozess}{19}{section.44}\protected@file@percent }
+\newlabel{sec:meth_mdp}{{4.2}{19}{Formulierung als Markov-Entscheidungsprozess}{section.44}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Zustandsraum}{20}{subsection.45}\protected@file@percent }
+\newlabel{subsec:meth_zustandsraum}{{4.2.1}{20}{Zustandsraum}{subsection.45}{}}
+\newlabel{eq:meth_state}{{4.1}{20}{Zustandsraum}{equation.46}{}}
+\newlabel{eq:meth_obs_vector}{{4.2}{20}{Zustandsraum}{equation.47}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf  {o}_t \in \mathbb  {R}^{17}$.}}{20}{table.caption.48}\protected@file@percent }
+\newlabel{tab:meth_obs}{{4.1}{20}{Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$}{table.caption.48}{}}
+\newlabel{eq:meth_depth}{{4.3}{20}{Zustandsraum}{equation.49}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.2}Aktionsraum}{21}{subsection.50}\protected@file@percent }
+\newlabel{subsec:meth_aktionsraum}{{4.2.2}{21}{Aktionsraum}{subsection.50}{}}
+\newlabel{eq:meth_action}{{4.4}{21}{Aktionsraum}{equation.51}{}}
+\newlabel{eq:meth_target_pos}{{4.5}{21}{Aktionsraum}{equation.52}{}}
+\newlabel{eq:meth_target_yaw}{{4.6}{21}{Aktionsraum}{equation.53}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.3}Übergangsmodell}{21}{subsection.54}\protected@file@percent }
+\newlabel{subsec:meth_uebergangsmodell}{{4.2.3}{21}{Übergangsmodell}{subsection.54}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.4}Belohnungsfunktion}{21}{subsection.55}\protected@file@percent }
+\newlabel{subsec:meth_belohnung}{{4.2.4}{21}{Belohnungsfunktion}{subsection.55}{}}
+\newlabel{eq:meth_reward}{{4.7}{22}{Belohnungsfunktion}{equation.56}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}}{23}{table.caption.62}\protected@file@percent }
+\newlabel{tab:reward_weights}{{4.2}{23}{Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme}{table.caption.62}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2.5}Terminierung}{24}{subsection.63}\protected@file@percent }
+\newlabel{subsec:meth_terminierung}{{4.2.5}{24}{Terminierung}{subsection.63}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Netzwerkarchitektur}{24}{section.64}\protected@file@percent }
+\newlabel{sec:meth_architektur}{{4.3}{24}{Netzwerkarchitektur}{section.64}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben.}}{25}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:meth_architecture}{{4.2}{25}{Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben}{figure.caption.65}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Algorithmus}{25}{section.66}\protected@file@percent }
+\newlabel{sec:meth_algorithmus}{{4.4}{25}{Algorithmus}{section.66}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4.1}Proximal Policy Optimization}{25}{subsection.67}\protected@file@percent }
+\newlabel{subsec:meth_ppo}{{4.4.1}{25}{Proximal Policy Optimization}{subsection.67}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.1}Aktionsverteilung und Tanh-Squashing}{26}{subsubsection.68}\protected@file@percent }
+\newlabel{subsubsec:meth_tanh_squashing}{{4.4.1.1}{26}{Aktionsverteilung und Tanh-Squashing}{subsubsection.68}{}}
+\newlabel{eq:meth_tanh_squashing}{{4.13}{26}{Aktionsverteilung und Tanh-Squashing}{equation.69}{}}
+\newlabel{eq:meth_tanh_logprob}{{4.14}{26}{Aktionsverteilung und Tanh-Squashing}{equation.70}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.4.1.2}Hyperparameter}{26}{subsubsection.71}\protected@file@percent }
+\newlabel{subsubsec:meth_hyperparams}{{4.4.1.2}{26}{Hyperparameter}{subsubsection.71}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{27}{table.caption.72}\protected@file@percent }
+\newlabel{tab:meth_ppo_hyperparams}{{4.3}{27}{PPO-Hyperparameter der vorliegenden Arbeit}{table.caption.72}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Trainingsumgebung}{27}{section.73}\protected@file@percent }
+\newlabel{sec:meth_trainingsumgebung}{{4.5}{27}{Trainingsumgebung}{section.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.1}Physiksimulator}{27}{subsection.74}\protected@file@percent }
+\newlabel{subsec:meth_simulator}{{4.5.1}{27}{Physiksimulator}{subsection.74}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Drohnenmodell}{28}{subsection.75}\protected@file@percent }
+\newlabel{subsec:meth_drohne}{{4.5.2}{28}{Drohnenmodell}{subsection.75}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Korridorgeometrie}{28}{subsection.76}\protected@file@percent }
+\newlabel{subsec:meth_korridor}{{4.5.3}{28}{Korridorgeometrie}{subsection.76}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Hindernisse}{28}{subsection.78}\protected@file@percent }
+\newlabel{subsec:meth_hindernisse}{{4.5.4}{28}{Hindernisse}{subsection.78}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{29}{figure.caption.77}\protected@file@percent }
+\newlabel{fig:meth_corridor}{{4.3}{29}{Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen}{figure.caption.77}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Kaskadierender PID-Regler}{29}{section.79}\protected@file@percent }
+\newlabel{subsec:meth_pid}{{4.6}{29}{Kaskadierender PID-Regler}{section.79}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Trainingsprozess}{30}{section.83}\protected@file@percent }
+\newlabel{sec:meth_trainingsprozess}{{4.7}{30}{Trainingsprozess}{section.83}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{30}{table.caption.84}\protected@file@percent }
+\newlabel{tab:meth_training}{{4.4}{30}{Trainingsparameter}{table.caption.84}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Evaluation}{31}{section.85}\protected@file@percent }
+\newlabel{sec:meth_evaluation}{{4.8}{31}{Evaluation}{section.85}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Evaluationsmetriken}{31}{subsection.86}\protected@file@percent }
+\newlabel{subsec:meth_metriken}{{4.8.1}{31}{Evaluationsmetriken}{subsection.86}{}}
+\newlabel{eq:meth_path_efficiency}{{4.15}{32}{Evaluationsmetriken}{equation.87}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{32}{subsection.88}\protected@file@percent }
+\newlabel{subsec:meth_versuch1}{{4.8.2}{32}{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{subsection.88}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.3}Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{33}{subsection.89}\protected@file@percent }
+\newlabel{subsec:meth_versuch2}{{4.8.3}{33}{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{subsection.89}{}}
 \@setckpt{Inhalt/Methodik}{
 \setcounter{page}{34}
 \setcounter{equation}{15}
@@ -120,7 +117,7 @@
 \setcounter{citetotal}{0}
 \setcounter{multicitecount}{0}
 \setcounter{multicitetotal}{0}
-\setcounter{instcount}{104}
+\setcounter{instcount}{106}
 \setcounter{maxnames}{2}
 \setcounter{minnames}{1}
 \setcounter{maxitems}{3}

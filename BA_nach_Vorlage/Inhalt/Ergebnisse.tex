@@ -1,20 +1,344 @@
 \chapter{Ergebnisse}
 \label{cha:Ergebnisse}
 
-Das sind die Ergebnisse:
+Dieses Kapitel präsentiert die experimentellen Ergebnisse des Korridornavigationsagenten. Abschnitt~\ref{sec:trainingsverhalten} beschreibt den Trainingsverlauf, Abschnitt~\ref{sec:phase1} und~\ref{sec:phase2} die Evaluationsergebnisse in der Korridorumgebung und im Weinberg-Transfer, und Abschnitt~\ref{sec:vergleich_rl_rrt} den Vergleich mit dem klassischen RRT-Planer.
+
+
+\section{Trainingsverhalten}
+\label{sec:trainingsverhalten}
+
+Das Training wurde mit 512 parallelen Umgebungen auf einer NVIDIA A30 GPU
+durchgeführt und erreichte einen durchschnittlichen Durchsatz von 341\,FPS.
+Der Trainingslauf umfasst 957~Iterationen und wurde nach 24~Stunden durch die
+GPU-Zeitbegrenzung des HPC-Clusters beendet.
+Abbildung~\ref{fig:reward_training} zeigt den Verlauf der kumulativen
+Belohnung.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/training/Train_mean_reward.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Policy_mean_std.pdf}
+    \caption[Kumulative Belohnung und Standardabweichung der
+    Aktionsverteilung]{Kumulative Belohnung (links) und mittlere
+    Standardabweichung der Aktionsverteilung (rechts) über 957
+    Trainingsiterationen. Der monotone Abfall der Standardabweichung zeigt
+    die Konvergenz zu einer deterministischen Strategie. Geglättet mit EMA
+    $\alpha = 0{,}9$, transparenter Hintergrund: Rohwerte.}
+    \label{fig:reward_training}
+\end{figure}
+
+Der Trainingsverlauf lässt sich in zwei Phasen unterteilen. In der ersten
+Phase (Iteration~0 bis~441) steigt die kumulative Belohnung kontinuierlich
+an. Der Agent löst dabei nacheinander zwei Teilaufgaben: Zunächst lernt er
+die Zielnavigation und den vertikalen Abstieg durch die Hindernisschichten,
+wobei die Absturzrate zunächst hoch bleibt
+(Abbildung~\ref{fig:rew_crash_success}, links). Ab circa Iteration~200
+erscheint erstmals die Erfolgsbelohnung
+(Abbildung~\ref{fig:rew_crash_success}, rechts), und gleichzeitig sinkt die
+Absturzrate. Die kumulative Belohnung überschreitet die Null-Grenze bei
+Iteration~203 und erreicht ihren Höchstwert von 24,8 bei Iteration~390.
+Die Standardabweichung der Aktionsverteilung
+(Abbildung~\ref{fig:reward_training}, rechts) fällt monoton von 0,99
+auf 0,15, was zeigt, dass die Strategie zu einer deterministischen
+Strategie konvergiert und nicht zufällig agiert. Die übrigen
+Belohnungskomponenten bestätigen den Lernfortschritt
+(Abbildungen~\ref{fig:rew_eplen_close} und~\ref{fig:rew_prox_std} im
+Anhang).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_crash_raw.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_success_raw.pdf}
+    \caption[Absturzstrafe und Erfolgsbelohnung]{Unskalierte Absturzstrafe
+    (links) und Erfolgsbelohnung (rechts). Die Absturzstrafe spiegelt die
+    Häufigkeit von Abstürzen pro Episode, die Erfolgsbelohnung die erreichte
+    Verweilzeit im Zielbereich. Geglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:rew_crash_success}
+\end{figure}
+
+Ab Iteration~442 bricht die kumulative Belohnung abrupt ein: Innerhalb einer
+einzigen Iteration fällt sie von 29,2 auf $-6{,}1$ .
+Die Standardabweichung der Aktionsverteilung bleibt dabei nahezu unverändert
+($0{,}193 \rightarrow 0{,}194$); der Kollaps betrifft die Mittelwerte der
+Strategie, nicht die Explorationsbreite. Ein Erholungsversuch um Iteration~600
+(Belohnung ${\sim}17$) bleibt instabil; bis zum Trainingsende pendelt die
+Belohnung um $-1$.
+
+Tabelle~\ref{tab:konvergenz} fasst die Laufzeiten zusammen. Der beste
+Checkpoint liegt bei Iteration~400 (10,4~Stunden Trainingszeit, kumulative
+Belohnung 23,0). Auf Basis des Belohnungsverlaufs wurde dieser Checkpoint für
+alle nachfolgenden Evaluierungen ausgewählt (\emph{Early Stopping}). Die
+verbleibenden 14~Stunden Trainingszeit (Iteration~400 bis~957) produzieren
+kein Modell, das die Leistung von Checkpoint~400 übertrifft.
 
 \begin{table}[H]
   \centering
+  \caption[Konvergenzgeschwindigkeit und Checkpoint-Selektion]{Konvergenzgeschwindigkeit und Checkpoint-Selektion (512 Umgebungen, NVIDIA A30, 341\,FPS).}
+  \label{tab:konvergenz}
+  \small
   \renewcommand{\arraystretch}{1.1}
-  \setlength{\arrayrulewidth}{0.4pt} % optional: Linienstärke
-  \begin{tabular}{|c|c|c|c|c|c|}
-    \hline
-    \rowcolor{black!10}
-    \textbf{Iteration} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} & \textbf{Loss} \\
-    \hline
-    15 & 0.9365 & 0.9367 & 0.9365 & 0.9361 & 0.2474 \\
-    \hline
+  \begin{tabular}{l r r r}
+    \toprule
+    \textbf{Checkpoint} & \textbf{Iteration} & \textbf{Laufzeit} & \textbf{Kum.\ Belohnung} \\
+    \midrule
+    Bestes Modell   & 400 & 10,4\,h & 23,0 \\
+    Post-Kollaps    & 900 & 22,6\,h & $-1{,}1$ \\
+    Trainingsende   & 957 & 24,0\,h & $-0{,}8$ \\
+    \bottomrule
   \end{tabular}
-  \caption[Ergebnis der Testdaten des EN-CNN]{Ergebnisse der Testdaten}
-  \label{tab:metrics_ceal}
 \end{table}
+
+
+\section{Phase 1: Korridornavigation}
+\label{sec:phase1}
+
+Versuchsreihe~1 (vgl.\ Abschnitt~\ref{subsec:meth_versuch1}) evaluiert die
+trainierte Strategie (Checkpoint~400) über 1\,000~Episoden in der
+Korridorumgebung mit zuvor ungesehenen Hindernisobjekten.
+
+Der Agent erreicht eine Erfolgsrate von 71,0\,\%. Die fehlgeschlagenen
+Episoden verteilen sich nahezu vollständig auf eine einzige Fehlerart:
+Hinderniskollisionen verursachen 28,8\,\% aller Episoden (288 von 1\,000).
+Die verbleibenden 0,2\,\% (2~Episoden) enden durch Verlassen des
+Korridorbegrenzungsrahmens. Bodenkollisionen und Timeouts treten nicht auf.
+Abbildung~\ref{fig:phase1_outcomes} zeigt die Ergebnisse.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/eval/phase1_outcomes.pdf}
+    \caption[Episodenergebnisse Phase~1]{Episodenergebnisse der
+    Phase-1-Evaluation (1\,000~Episoden). Fehlerbalken zeigen
+    95\,\%-Bootstrap-Konfidenzintervalle.}
+    \label{fig:phase1_outcomes}
+\end{figure}
+
+Tabelle~\ref{tab:phase1_results} im Anhang listet alle Metriken mit
+Konfidenzintervallen.
+
+Abbildung~\ref{fig:phase1_trajectories} zeigt drei exemplarische Trajektorien
+erfolgreicher Episoden. Das Flugverhalten lässt sich in zwei wiederkehrende
+Phasen unterteilen:
+
+\textbf{(1)~Vertikaler Abstieg bei freier Bahn.}\enspace
+In Abschnitten ohne Hindernisse, sowohl oberhalb der ersten als auch unterhalb
+der letzten Hindernisschicht, vollzieht der Agent einen annähernd vertikalen
+Abstieg in Richtung des Landeziels. Die mediane Pfadeffizienz von 1,19
+(Tabelle~\ref{tab:phase1_results}) bestätigt, dass die Trajektorien insgesamt
+nahe am direkten Pfad verlaufen.
+
+\textbf{(2)~Abbremsen und laterales Ausweichen.}\enspace
+In der Nähe eines Hindernisses verlangsamt der Agent den Abstieg und geht in ein
+Schweben über. Das Abbremsen erfolgt spät; die anschließenden horizontalen
+Ausweichmanöver verlaufen langsam und mit geringem Sicherheitsabstand
+(mittlerer Minimalabstand 0,52\,m, Tabelle~\ref{tab:phase1_results}).
+Über den gesamten Episodenverlauf treten zusätzlich Gierrotationen auf, die
+keinem erkennbaren navigatorischen Zweck dienen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.32\textwidth]{figures/eval/trajectory_ep1.pdf}%
+    \hfill
+    \includegraphics[width=0.32\textwidth]{figures/eval/trajectory_ep2.pdf}%
+    \hfill
+    \includegraphics[width=0.32\textwidth]{figures/eval/trajectory_ep3.pdf}
+    \caption[Exemplarische 3D-Trajektorien in Phase~1]{Exemplarische
+    3D-Trajektorien dreier erfolgreicher Episoden in der Korridorumgebung.
+    Die grauen Quader zeigen die achsenparallelen Begrenzungsboxen (AABB)
+    der Hindernisse. Grünes Dreieck: Startposition bei $z \approx 12$\,m,
+    roter Punkt: Landeziel bei $(0,\;0,\;1)$\,m.}
+    \label{fig:phase1_trajectories}
+\end{figure}
+
+\subsection{Nachuntersuchung: Oberflächenbasierte Kollisionserkennung}
+\label{subsec:phase1_mesh_contacts}
+
+Das knappe Passieren der Hindernisse bei gleichzeitig hoher Kollisionsrate
+legte nahe, dass die konservative AABB-Kollisionserkennung
+(vgl.\ Abschnitt~\ref{subsec:meth_hindernisse}) einen Teil der Fehlschläge
+verursacht. Um dies zu prüfen, wurde eine Nachuntersuchung mit 100~Episoden
+durchgeführt, in der die Kollisionserkennung durch die geometrisch exakte
+Oberflächenkollisionsprüfung des Simulators ersetzt wurde.
+
+Mit oberflächenbasierter Kontakterkennung steigt die Erfolgsrate auf 98,0\,\%
+(Tabelle~\ref{tab:phase1_mesh_contacts}). Ein erheblicher Anteil der unter der AABB-Metrik
+registrierten Kollisionen sind demnach Fehlalarme: Die Drohne durchfliegt die
+Begrenzungsbox, ohne die tatsächliche Objektoberfläche zu berühren.
+
+\begin{table}[H]
+  \centering
+  \caption[Vergleich AABB- und oberflächenbasierte Kollisionserkennung]{Vergleich
+  der Evaluationsergebnisse mit AABB-Distanz ($n = 1\,000$) und
+  oberflächenbasierter Kontakterkennung ($n = 100$).}
+  \label{tab:phase1_mesh_contacts}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r}
+    \toprule
+    \textbf{Metrik} & \textbf{AABB ($n = 1\,000$)} & \textbf{Oberfläche ($n = 100$)} \\
+    \midrule
+    Erfolgsrate                       & 71,0\,\%    & 98,0\,\% \\
+    Hinderniskollision                & 28,8\,\%    & 2,0\,\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\section{Phase 2: Weinberg-Transfer}
+\label{sec:phase2}
+
+Versuchsreihe~2 (vgl.\ Abschnitt~\ref{subsec:meth_versuch2}) evaluiert den
+Zero-Shot-Transfer der trainierten Strategie (Checkpoint~400) in die
+Weinbergumgebung über 1\,000~Episoden.
+
+Der Agent erreicht eine Erfolgsrate von 10,4\,\%.
+Die fehlgeschlagenen Episoden verteilen sich auf zwei Fehlerarten:
+Terrain-Kollisionen verursachen 15,9\,\% aller Episoden, Timeouts
+73,7\,\%. Abbildung~\ref{fig:phase2_outcomes} zeigt die Ergebnisse.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.65\textwidth]{figures/eval/phase2_outcomes.pdf}
+    \caption[Episodenergebnisse Phase~2]{Episodenergebnisse der
+    Phase-2-Evaluation (1\,000~Episoden, Zero-Shot-Transfer in die
+    Weinbergumgebung). Fehlerbalken zeigen
+    95\,\%-Bootstrap-Konfidenzintervalle.}
+    \label{fig:phase2_outcomes}
+\end{figure}
+
+Die dominante Fehlerart ist das Timeout: 73,7\,\% aller Episoden
+(737 von 1\,000) enden durch Überschreitung des Zeitlimits von 60\,s,
+ohne dass eine Kollision oder eine erfolgreiche Landung eintritt. Die
+mediane finale Zieldistanz über alle Episoden beträgt 1,19\,m
+(Tabelle~\ref{tab:phase2_results}). Von den 737~Timeout-Episoden
+befinden sich 440 (59,7\,\%) zum Zeitpunkt des Abbruchs innerhalb von
+1,5\,m zum Landeziel.
+
+Tabelle~\ref{tab:phase2_results} im Anhang listet alle Metriken mit
+Konfidenzintervallen.
+
+Das beobachtete Flugverhalten lässt sich in zwei wiederkehrende Muster
+unterteilen:
+
+\textbf{(1)~Direkter Abstieg bei freier Bahn.}\enspace
+Bei Szenarien ohne Vegetation zwischen Drohne und Landeziel vollzieht der
+Agent einen annähernd direkten Abstieg, vergleichbar mit Phase~1.
+
+\textbf{(2)~Schweben nahe dem Ziel ohne Konvergenz.}\enspace
+In der Mehrzahl der Fälle erreicht der Agent die Umgebung des Landeziels,
+verbleibt jedoch außerhalb des Erfolgsradius von 0,5\,m, teils schwebend
+über nahegelegener Vegetation, teils mit ineffektiven Korrekturbewegungen.
+Die Feinsteuerungsmanöver für die letzten Meter fehlen.
+
+\subsection{Sensitivitätsanalyse des Erfolgskriteriums}
+\label{subsec:phase2_relaxed}
+
+Der hohe Timeout-Anteil bei gleichzeitig geringer finaler Zieldistanz
+legte nahe, dass der strikte Erfolgsradius von 0,5\,m einen erheblichen
+Anteil der Fehlschläge verursacht. Um die Sensitivität der Erfolgsrate
+gegenüber dem Erfolgskriterium zu quantifizieren, wurde eine
+Nachuntersuchung mit 1\,000~Episoden und einem erweiterten Erfolgsradius
+von 1,5\,m durchgeführt.
+
+Mit dem erweiterten Erfolgsradius steigt die Erfolgsrate auf
+69,7\,\% (Tabelle~\ref{tab:phase2_relaxed}). Die
+Terrain-Kollisionsrate sinkt von 15,9\,\% auf 9,4\,\%, da ein Teil der
+zuvor als Timeout gewerteten Episoden nun frühzeitig als Erfolg beendet
+wird: Die Drohne verbringt weniger Zeit in der Nähe von Vegetation und
+ist dadurch einem geringeren Kollisionsrisiko ausgesetzt. Der
+Timeout-Anteil sinkt von 73,7\,\% auf 27,7\,\%.
+
+\begin{table}[H]
+  \centering
+  \caption[Sensitivitätsanalyse des Erfolgsradius in Phase~2]{Sensitivitätsanalyse
+  des Erfolgsradius~$r$ in der Weinbergumgebung ($n = 1\,000$~Episoden je
+  Bedingung). Alle übrigen Parameter bleiben identisch.}
+  \label{tab:phase2_relaxed}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r}
+    \toprule
+    \textbf{Metrik} & \textbf{$r = 0{,}5$\,m} & \textbf{$r = 1{,}5$\,m} \\
+    \midrule
+    Erfolgsrate           & 10,4\,\%    & 69,7\,\% \\
+    Terrain-Kollision     & 15,9\,\%    & 9,4\,\% \\
+    Timeout               & 73,7\,\%    & 27,7\,\% \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+\section{Vergleich RL vs.\ RRT-Connect}
+\label{sec:vergleich_rl_rrt}
+
+Dieser Abschnitt stellt die Ergebnisse des RL-Agenten und des
+RRT-Connect-Pfadplaners (vgl.\ Abschnitt~\ref{subsec:meth_versuch1})
+über beide Versuchsreihen gegenüber.
+Tabelle~\ref{tab:vergleich_rl_rrt} fasst alle Metriken zusammen.
+
+\begin{table}[H]
+  \centering
+  \caption[Vergleich RL-Agent und RRT-Connect]{Vergleich von RL-Agent und
+  RRT-Connect über beide Versuchsreihen ($n = 1\,000$~Episoden je
+  Bedingung).}
+  \label{tab:vergleich_rl_rrt}
+  \footnotesize
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{l r r r r}
+    \toprule
+    & \multicolumn{2}{c}{\textbf{Phase~1 (Korridor)}}
+    & \multicolumn{2}{c}{\textbf{Phase~2 (Weinberg)}} \\
+    \cmidrule(lr){2-3} \cmidrule(lr){4-5}
+    \textbf{Metrik}
+      & \textbf{RL} & \textbf{RRT}
+      & \textbf{RL} & \textbf{RRT} \\
+    \midrule
+    Erfolgsrate
+      & 71,0\,\%       & 82,0\,\%
+      & 10,4\,\%       & 85,7\,\% \\
+    \quad(relaxed $r = 1{,}5$\,m)
+      & \multicolumn{2}{c}{n.\,a.}
+      & 69,7\,\%       & 98,4\,\% \\
+    \addlinespace
+    Hindernis-/Terrain-Koll.
+      & 28,8\,\%       & 18,0\,\%
+      & 15,9\,\%       & 7,1\,\% \\
+    Timeout
+      & 0,0\,\%        & 0,0\,\%
+      & 73,7\,\%       & 7,9\,\% \\
+    \addlinespace
+    Landezeit (Median)
+      & 30,0\,s         & 42,0\,s
+      & 36,0\,s         & 42,0\,s \\
+    Pfadeffizienz (Median)
+      & 1,19            & 1,09
+      & 1,07            & 0,99 \\
+    Min.\ Abstand (Mittel)
+      & 0,52\,m         & 0,48\,m
+      & 1,02\,m         & 0,46\,m \\
+    Rechenzeit/Ep.\ (Median)
+      & 0,21\,ms        & 80,4\,ms
+      & 0,25\,ms        & 18,7\,ms \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+Der RRT-Planer übertrifft den RL-Agenten in der Erfolgsrate beider
+Umgebungen, wobei der Abstand im Weinberg deutlich größer ausfällt
+(85,7\,\% gegenüber 10,4\,\%). Im Korridor dominieren bei beiden
+Verfahren Hinderniskollisionen als Fehlerursache; im Weinberg hingegen
+scheitert der RL-Agent überwiegend an Timeouts (73,7\,\%), während der
+RRT-Planer diese auf 7,9\,\% begrenzt.
+
+Der RL-Agent landet in beiden Umgebungen schneller als der RRT-Planer
+(30,0\,s gegenüber 42,0\,s im Korridor). Die Pfadeffizienz ist
+hingegen beim RRT-Planer höher (1,09 gegenüber 1,19 im Korridor), da
+dieser den kürzesten kollisionsfreien Pfad vor Flugbeginn berechnet,
+während der RL-Agent reaktiv ausweicht und dadurch längere Trajektorien
+fliegt. Der deutlichste Unterschied zeigt sich in der Rechenzeit: Ein
+Forward-Pass des neuronalen Netzes benötigt 0,21\,ms, während
+RRT-Connect im Korridor 80,4\,ms pro Episode für die Pfadplanung
+benötigt. Detaillierte Metriken mit Konfidenzintervallen finden sich in
+den Anhangstabellen~\ref{tab:phase1_results}
+und~\ref{tab:phase2_results}.

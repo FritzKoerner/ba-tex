@@ -16,7 +16,7 @@ Hardware einzusetzen.
 
 Training und Evaluation finden vollständig in Simulation statt. Der
 GPU-parallelisierte Physiksimulator Genesis erzeugt die für PPO benötigten
-großen Rollout-Batches aus bis zu 256~gleichzeitigen Umgebungsinstanzen.
+großen Rollout-Batches aus bis zu 512~gleichzeitigen Umgebungsinstanzen.
 Ein Sim-to-Real-Transfer liegt außerhalb des Rahmens dieser Arbeit.
 
 Abschnitt~\ref{sec:meth_ueberblick} gibt zunächst einen Überblick über die
@@ -48,7 +48,7 @@ zu häufig wechselnde Sollwerte destabilisiert wird, und reduziert die
 Lernkomplexität, da der Agent weniger Entscheidungen pro Episode treffen
 muss.
 
-\paragraph{Wahrnehmung.}
+\textbf{Wahrnehmung.}
 Der Agent erhält zwei Eingaben: einen normalisierten Zustandsvektor
 $\mathbf{o}_t \in \mathbb{R}^{17}$, der die relative Position zum Ziel,
 die Orientierung sowie Linear- und Winkelgeschwindigkeit kodiert
@@ -59,7 +59,7 @@ liefert die Eigenwahrnehmung der Drohne, das Tiefenbild die einzige
 Information über Hindernisse. Beide Größen werden direkt und unverrauscht
 aus der Simulation erhoben.
 
-\paragraph{Entscheidung.}
+\textbf{Entscheidung.}
 Zustandsvektor und Tiefenbild werden der Actor-Critic-Architektur
 übergeben (vgl.\ Abschnitt~\ref{sec:meth_architektur}). Ein geteilter
 CNN-Encoder extrahiert Hindernismerkmale aus dem Tiefenbild; der
@@ -70,7 +70,7 @@ $\mathbf{a}_t \in [-1, 1]^4$, die in einen Positionsversatz und einen
 Sollgierwinkel skaliert wird
 (vgl.\ Abschnitt~\ref{subsec:meth_aktionsraum}).
 
-\paragraph{Ausführung.}
+\textbf{Ausführung.}
 Der kaskadierende PID-Regler
 (vgl.\ Abschnitt~\ref{subsec:meth_pid}) übernimmt die skalierten
 Sollwerte und regelt die Drohne über 300~Simulationsschritte
@@ -372,8 +372,10 @@ der Eingabe. Der Zustandsvektor durchläuft vor der Konkatenation eine laufende
 empirische Normalisierung, die Mittelwert und Varianz über alle bisherigen
 Beobachtungen schätzt und die heterogenen physikalischen Größen auf einheitliche
 Skala bringt. Der resultierende Vektor aus CNN-Merkmalen und normalisiertem
-Zustand wird an die MLP-Köpfe von Actor und Critic weitergegeben, die jeweils
-aus drei vollvernetzten Schichten mit 128~Neuronen und ELU-Aktivierung bestehen.
+Zustand wird an die MLP-Köpfe von Actor und Critic weitergegeben. Der
+Actor-Kopf besteht aus drei vollvernetzten Schichten mit je 64~Neuronen, der
+Critic-Kopf aus zwei Schichten mit je 32~Neuronen; beide verwenden
+ELU-Aktivierung.
 Actor und Critic teilen sich den CNN-Encoder; die MLP-Köpfe werden getrennt
 trainiert. Der Actor gibt pro Aktionsdimension einen Mittelwert~$\mu$ und eine
 lernbare Log-Standardabweichung $\log\sigma$ aus und parametrisiert damit eine
@@ -670,14 +672,14 @@ Tabelle~\ref{tab:meth_training} fasst die Trainingsparameter zusammen.
 \toprule
 \textbf{Parameter} & \textbf{Wert} \\
 \midrule
-Parallele Umgebungen $N$        & $256$ \\
+Parallele Umgebungen $N$        & $512$ \\
 Schritte pro Umgebung $T$      & $60$ \\
-Batch-Größe $N \times T$       & $15\,360$ \\
-Lernrate $\alpha$               & $5 \times 10^{-4}$ \\
+Batch-Größe $N \times T$       & $30\,720$ \\
+Lernrate $\alpha$               & $1 \times 10^{-3}$ \\
 Optimizer                       & Adam \\
-Trainingsiterationen            & \textit{TODO} \\
+Trainingsiterationen            & $1\,000$ \\
 GPU                             & NVIDIA A30 (24\,GB) \\
-Trainingszeit (Wallclock)       & \textit{TODO} \\
+Laufzeit                        & ${\sim}24$\,h \\
 Checkpoint-Intervall            & $100$ Iterationen \\
 \bottomrule
 \end{tabular}
@@ -691,17 +693,17 @@ Capability~$\geq 7{,}5$ (Turing oder neuer) voraussetzt. Auf der V100 steht
 lediglich der langsamere Rasterizer-Pfad zur Verfügung, der die
 Tiefenbilder seriell pro Umgebung rendert.
 
-Die Anzahl paralleler Umgebungen $N = 256$ ist durch den GPU-Speicher
+Die Anzahl paralleler Umgebungen $N = 512$ ist durch den GPU-Speicher
 begrenzt. Die Rollout-Länge $T = 60$~Entscheidungsschritte bei $3{,}0$\,s
 Entscheidungsintervall
 (vgl.\ Abschnitt~\ref{subsec:meth_uebergangsmodell}) ergibt eine
 Rollout-Dauer von $180$\,s, die drei vollständige Episoden
 ($T_{\max} = 60$\,s) umfassen kann. Pro Iteration sammelt der Agent damit
-$N \times T = 15\,360$ Transitionen, die in $M = 4$ Mini-Batches
-à~$3\,840$~Transitionen aufgeteilt und $K = 5$ Epochen lang optimiert
+$N \times T = 30\,720$ Transitionen, die in $M = 4$ Mini-Batches
+à~$7\,680$~Transitionen aufgeteilt und $K = 5$ Epochen lang optimiert
 werden.
 
-Die Lernrate $\alpha = 5 \times 10^{-4}$ wurde experimentell bestimmt:
+Die Lernrate $\alpha = 1 \times 10^{-3}$ wurde experimentell bestimmt:
 Kleinere Werte führten zu langsamer Konvergenz, größere zu kollabierenden
 Strategien.
 
@@ -712,14 +714,14 @@ würden alle Umgebungen synchron zurückgesetzt, was innerhalb eines Rollouts
 zu korrelierten Transitionsblöcken führt und die Varianz der
 Gradientenschätzung erhöht~\autocite{rudinLearningWalkMinutes2022}.
 
-Der Agent wird über \textit{TODO}~Iterationen trainiert, was
-$\textit{TODO} \times 15\,360 = \textit{TODO}$ gesammelten Transitionen
+Der Agent wird über $1\,000$~Iterationen trainiert, was
+$1\,000 \times 30\,720 = 30\,720\,000$ gesammelten Transitionen
 entspricht. Alle 100~Iterationen wird ein Checkpoint gespeichert.
 %Das zweistufige Curriculum
 %(vgl.\ Abschnitt~\ref{subsec:meth_curriculum}) schaltet nach
 %Iteration~$300$ die Hindernisse hinzu; die verbleibenden Iterationen
 %dienen dem Erlernen der Hindernisvermeidung.
-Die Wallclock-Trainingszeit beträgt \textit{TODO} auf der genannten Hardware.
+Die Laufzeit beträgt circa 24\,Stunden auf der genannten Hardware.
 
 %% ==========================================================================
 \section{Evaluation}
@@ -729,7 +731,7 @@ Die Wallclock-Trainingszeit beträgt \textit{TODO} auf der genannten Hardware.
 
 Die Evaluation untersucht die Leistungsfähigkeit der trainierten Strategie
 anhand zweier Versuchsreihen mit jeweils 1\,000~Episoden und vergleicht
-sie mit einem RRT*-Pfadplaner. Die erste Versuchsreihe
+sie mit einem RRT-Connect-Pfadplaner. Die erste Versuchsreihe
 verwendet die Trainingsumgebung mit zuvor unbekannten Hindernisformen;
 die zweite eine photogrammetrisch erfasste Agrarumgebung.
 
@@ -750,7 +752,7 @@ Zielradius ($0{,}5$\,m) erreicht, ohne eine Abbruchbedingung
 (vgl.\ Abschnitt~\ref{subsec:meth_terminierung}) auszulösen und innerhalb
 des Zeitlimits von $60$\,s.
 
-\noindent\textbf{Fehlermodusverteilung.}\enspace
+\noindent\textbf{Fehlerartenverteilung.}\enspace
 Jede fehlgeschlagene Episode wird einer von vier Kategorien zugeordnet:
 Hinderniskollision, Bodenkollision, Verlassen des Korridors
 (nur~Versuchsreihe~1) oder Timeout. Die Verteilung gibt Aufschluss
@@ -801,7 +803,7 @@ Episoden.
 \label{subsec:meth_versuch1}
 
 Die erste Versuchsreihe prüft, ob die trainierte Strategie auf
-Hindernisformen generalisiert, die während des TraiDurnings nicht gesehen
+Hindernisformen generalisiert, die während des Trainings nicht gesehen
 wurden. Die Korridorgeometrie, die Spawnverteilung, das Landeziel und das
 Zeitlimit bleiben identisch zur Trainingsumgebung
 (vgl.\ Abschnitt~\ref{subsec:meth_korridor}). Einzig die sechs
@@ -813,7 +815,7 @@ alternierende Seiten) bleibt unverändert. Die Drohne muss ihre
 Ausweichstrategie somit rein auf Basis der Tiefenbilder auf unbekannte
 Geometrien übertragen.
 
-Als Vergleichsverfahren dient ein RRT*-Pfadplaner, der auf der
+Als Vergleichsverfahren dient ein RRT-Connect-Pfadplaner, der auf der
 vollständigen Kollisionsgeometrie der Umgebung operiert: Ihm stehen die
 exakten Positionen und Ausdehnungen aller Hindernisse zur Verfügung. Der
 RL-Agent hingegen erhält ausschließlich ein lokales Tiefenbild und den
@@ -836,5 +838,5 @@ erweitert (variablere Höhe und größerer horizontaler Versatz), und das
 Landeziel wird zufällig innerhalb des befahrbaren Bereichs gewählt.
 Die Evaluation erfolgt mit denselben Metriken und demselben
 Konfidenzintervallverfahren aus Abschnitt~\ref{subsec:meth_metriken};
-als Vergleichsverfahren dient derselbe RRT*-Pfadplaner wie in
+als Vergleichsverfahren dient derselbe RRT-Connect-Pfadplaner wie in
 Versuchsreihe~1.

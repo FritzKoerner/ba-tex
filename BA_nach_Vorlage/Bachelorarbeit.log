@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  28 MAY 2026 22:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  29 MAY 2026 20:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1328,7 +1328,7 @@ File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 100.
- (./Bachelorarbeit.aux)
+ (./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux) (./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux) (./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux) (./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux) (./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux) (./Inhalt/Erklaerung.aux))
 \openout1 = `Bachelorarbeit.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 100.
@@ -1407,6 +1407,7 @@ Package scrlayer-scrpage Warning: Very small foot height detected!
 
 \c@lstlisting=\count481
 Package hyperref Info: Link coloring ON on input line 100.
+(./Bachelorarbeit.out) (./Bachelorarbeit.out)
 \@outlinefile=\write6
 \openout6 = `Bachelorarbeit.out'.
 
@@ -1418,7 +1419,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
 (scrreprt)           before \begin{document} on input line 100.
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
@@ -1456,6 +1457,13 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                chenDRQN3DObstacleAvoidance2021
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                esserActionSpaceDesign2024
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
@@ -1464,6 +1472,20 @@ Package biblatex Warning: The following entry could not be found
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
 (biblatex)                kaufmannBenchmarkComparisonLearned2022
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                moallaNoRepresentationNoTrust2024
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                randlovLearningDriveBicycle1998
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1584,10 +1606,9 @@ LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
 
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc}]
-No file Bachelorarbeit.toc.
-\tf@toc=\write7
-\openout7 = `Bachelorarbeit.toc'.
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc}] (./Bachelorarbeit.toc
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
 
 
 Package scrlayer-scrpage Warning: \footheight to low.
@@ -1598,34 +1619,41 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{21.74998pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 150.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 29.
 
 [1
 
 
 
 
-]
-No file Bachelorarbeit.lof.
+] [2])
+\tf@toc=\write7
+\openout7 = `Bachelorarbeit.toc'.
+
+ [3] (./Bachelorarbeit.lof
+Overfull \hbox (25.61505pt too wide) in paragraph at lines 10--10
+ \T1/ntxtlf/m/n/12 ren die Kor-rid-or-gren-zen, graue Fl‰-chen die sche-ma-ti-schen Hindernis-Begrenzungsboxen. []  
+ []
+
+)
 \tf@lof=\write8
 \openout8 = `Bachelorarbeit.lof'.
 
-[2
+ [4
 
 
-]
-No file Bachelorarbeit.lot.
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] (./Bachelorarbeit.lot)
 \tf@lot=\write9
 \openout9 = `Bachelorarbeit.lot'.
 
-[3
+ [5
 
 
 ] (./Bachelorarbeit.loe)
 \tf@loe=\write10
 \openout10 = `Bachelorarbeit.loe'.
 
- (./Inhalt/Glossar.tex) (./Bachelorarbeit.nls [4
+ (./Inhalt/Glossar.tex) (./Bachelorarbeit.nls [6
 
 
 ]
@@ -1640,7 +1668,7 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [5
+) [7
 
 ]
 \openout2 = `Inhalt/Einleitung.aux'.
@@ -1673,8 +1701,6 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--11
 
@@ -1708,12 +1734,9 @@ Overfull \hbox (6.97186pt too wide) in paragraph at lines 20--21
  []
 
 
-LaTeX Warning: Reference `fig:mdp_agent_environment' on page 4 undefined on input line 24.
-
-
 
 pdfTeX warning: pdflatex (file ./Bilder/mdp_agent_environment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/mdp_agent_environment.pdf, id=105, 398.99063pt x 248.42813pt>
+<Bilder/mdp_agent_environment.pdf, id=317, 398.99063pt x 248.42813pt>
 File: Bilder/mdp_agent_environment.pdf Graphic file (type pdf)
 <use Bilder/mdp_agent_environment.pdf>
 Package pdftex.def Info: Bilder/mdp_agent_environment.pdf  used on input line 28.
@@ -1725,21 +1748,18 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [5 <./Bilder/mdp_agent_environment.pdf>]
+] [5 <./Bilder/mdp_agent_environment.pdf>]
 Overfull \hbox (20.8258pt too wide) in paragraph at lines 73--75
 \T1/ntxtlf/m/n/12 TD-Verfahren bil-den die Grund-la-ge der meis-ten mo-der-nen Reinforcement-Learning-Algorithmen:
  []
 
 [6] [7]
-
-LaTeX Warning: Reference `fig:ppo_clip' on page 8 undefined on input line 125.
-
-<Bilder/ppo_clipping.pdf, id=186, 368.57701pt x 151.767pt>
+<Bilder/ppo_clipping.pdf, id=381, 368.57701pt x 151.767pt>
 File: Bilder/ppo_clipping.pdf Graphic file (type pdf)
 <use Bilder/ppo_clipping.pdf>
 Package pdftex.def Info: Bilder/ppo_clipping.pdf  used on input line 130.
 (pdftex.def)             Requested size: 374.86775pt x 154.3626pt.
-[8 <./Bilder/ppo_clipping.pdf>]) [9]
+ [8 <./Bilder/ppo_clipping.pdf>]) [9]
 \openout2 = `"Inhalt/Stand der Forschung.aux"'.
 
  (./Inhalt/Stand der Forschung.tex
@@ -1762,9 +1782,6 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 
 ] [11] [12] [13] [14]
 
-LaTeX Warning: Reference `sec:taxonomie' on page 15 undefined on input line 60.
-
-
 LaTeX Warning: Citation 'esserActionSpaceDesign2024' on page 15 undefined on input line 62.
 
 
@@ -1783,12 +1800,6 @@ Overfull \hbox (93.44499pt too wide) in paragraph at lines 62--65
 \T1/ntxtlf/m/n/12 keits-kom-man-dos schnel-ler kon-ver-gie-ren als di-rek-tes Body-Rate-Thrust-Control. []
  []
 
-
-LaTeX Warning: Reference `sec:markerfrei' on page 15 undefined on input line 69.
-
-
-LaTeX Warning: Reference `sec:tiefenbild-oa' on page 15 undefined on input line 70.
-
 [15] [16]) [17]
 \openout2 = `Inhalt/Methodik.aux'.
 
@@ -1806,102 +1817,14 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              that will remove this deprecated code.
 
 
-LaTeX Warning: Reference `sec:architektur' on page 18 undefined on input line 5.
-
-
-LaTeX Warning: Reference `subsec:mdp' on page 18 undefined on input line 10.
-
-
-LaTeX Warning: Reference `sec:architektur' on page 18 undefined on input line 13.
-
-
-LaTeX Warning: Reference `sec:meth_ueberblick' on page 18 undefined on input line 22.
-
-
-LaTeX Warning: Reference `sec:meth_mdp' on page 18 undefined on input line 24.
-
-
-LaTeX Warning: Reference `sec:meth_architektur' on page 18 undefined on input line 26.
-
-
-LaTeX Warning: Reference `sec:meth_algorithmus' on page 18 undefined on input line 27.
-
-
-LaTeX Warning: Reference `sec:meth_trainingsumgebung' on page 18 undefined on input line 29.
-
-
-LaTeX Warning: Reference `subsec:meth_pid' on page 18 undefined on input line 31.
-
-
-LaTeX Warning: Reference `sec:meth_trainingsprozess' on page 18 undefined on input line 32.
-
-
-LaTeX Warning: Reference `sec:meth_evaluation' on page 18 undefined on input line 33.
-
-
-Overfull \hbox (2.59299pt too wide) in paragraph at lines 22--34
-\T1/ntxtlf/m/n/12 und Ter-mi-nie-rungs-be-din-gun-gen. Ab-schnitt [] be-schreibt die CNN-MLP-Netzwerkarchitektur,
+Overfull \hbox (5.59299pt too wide) in paragraph at lines 22--34
+\T1/ntxtlf/m/n/12 und Ter-mi-nie-rungs-be-din-gun-gen. Ab-schnitt [][]4.3[][] be-schreibt die CNN-MLP-Netzwerkarchitektur,
  []
 
 
-LaTeX Warning: Reference `fig:meth_pipeline' on page 18 undefined on input line 39.
-
-
-./Inhalt/Methodik.tex:51: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.51 \paragraph{Wahrnehmung.}
-                             
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Methodik.tex:51: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.51 \paragraph{Wahrnehmung.}
-                             
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Methodik.tex:51: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.51 \paragraph{Wahrnehmung.}
-                             
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Methodik.tex:51: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.51 \paragraph{Wahrnehmung.}
-                             
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Methodik.tex:51: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.51 \paragraph{Wahrnehmung.}
-                             
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-LaTeX Warning: Reference `subsec:meth_zustandsraum' on page 18 undefined on input line 55.
+Overfull \hbox (25.00272pt too wide) in paragraph at lines 22--34
+\T1/ntxtlf/m/n/12 schnitt [][]4.6[][]), dem Trai-nings-pro-zess (Ab-schnitt [][]4.7[][]) und dem Eva-lua-ti-ons-pro-to-koll (Ab-schnitt [][]4.8[][]). 
+ []
 
 [18
 
@@ -1910,148 +1833,20 @@ LaTeX Warning: Reference `subsec:meth_zustandsraum' on page 18 undefined on inpu
 
 ]
 
-./Inhalt/Methodik.tex:62: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62 \paragraph{Entscheidung.}
-                              
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Methodik.tex:62: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.62 \paragraph{Entscheidung.}
-                              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Methodik.tex:62: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.62 \paragraph{Entscheidung.}
-                              
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Methodik.tex:62: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.62 \paragraph{Entscheidung.}
-                              
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Methodik.tex:62: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.62 \paragraph{Entscheidung.}
-                              
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-LaTeX Warning: Reference `sec:meth_architektur' on page 19 undefined on input line 64.
-
-
-LaTeX Warning: Reference `subsec:meth_aktionsraum' on page 19 undefined on input line 71.
-
-
-./Inhalt/Methodik.tex:73: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.73 \paragraph{Ausf√ºhrung.}
-                             
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Methodik.tex:73: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.73 \paragraph{Ausf√ºhrung.}
-                             
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Methodik.tex:73: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.73 \paragraph{Ausf√ºhrung.}
-                             
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Methodik.tex:73: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.73 \paragraph{Ausf√ºhrung.}
-                             
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Methodik.tex:73: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.73 \paragraph{Ausf√ºhrung.}
-                             
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-LaTeX Warning: Reference `subsec:meth_pid' on page 19 undefined on input line 75.
-
-
-
 pdfTeX warning: pdflatex (file ./Bilder/pipeline.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/pipeline.pdf, id=370, 587.19376pt x 96.36pt>
+<Bilder/pipeline.pdf, id=574, 587.19376pt x 96.36pt>
 File: Bilder/pipeline.pdf Graphic file (type pdf)
 <use Bilder/pipeline.pdf>
 Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 84.
 (pdftex.def)             Requested size: 441.01773pt x 72.37125pt.
-
-LaTeX Warning: Reference `subsec:mdp' on page 19 undefined on input line 98.
-
 [19 <./Bilder/pipeline.pdf>]
-
-LaTeX Warning: Reference `tab:meth_obs' on page 20 undefined on input line 121.
-
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 130.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 163.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.6pt on input line 163.
-[20]
-
-LaTeX Warning: Reference `subsec:meth_pid' on page 21 undefined on input line 193.
-
-[21]
+ [20] [21]
 LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 227.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
@@ -2059,124 +1854,40 @@ File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
 (Font)              scaled to size 12.0pt on input line 227.
  [22{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-
-LaTeX Warning: Reference `subsec:meth_terminierung' on page 23 undefined on input line 278.
-
-
-LaTeX Warning: Reference `tab:reward_weights' on page 23 undefined on input line 313.
+Overfull \hbox (7.49359pt too wide) in paragraph at lines 276--279
+\T1/ntxtlf/b/n/12 Absturz.\T1/ntxtlf/m/n/12 Die Ab-sturz-stra-fe wird bei Ver-let-zung ei-ner Ab-bruch-be-din-gung (vgl. Ab-schnitt [][]4.2.5[][])
+ []
 
 [23]
 
-LaTeX Warning: Reference `subsec:ppo_clip' on page 24 undefined on input line 360.
-
-
-LaTeX Warning: Reference `subsubsec:meth_tanh_squashing' on page 24 undefined on input line 381.
-
-
-LaTeX Warning: Reference `fig:meth_architecture' on page 24 undefined on input line 383.
-
-[24]
-
 pdfTeX warning: pdflatex (file ./Bilder/architecture.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/architecture.pdf, id=492, 782.925pt x 199.49532pt>
+<Bilder/architecture.pdf, id=687, 782.925pt x 199.49532pt>
 File: Bilder/architecture.pdf Graphic file (type pdf)
 <use Bilder/architecture.pdf>
-Package pdftex.def Info: Bilder/architecture.pdf  used on input line 388.
+Package pdftex.def Info: Bilder/architecture.pdf  used on input line 390.
 (pdftex.def)             Requested size: 441.01773pt x 112.37411pt.
-
-LaTeX Warning: Reference `subsec:ppo_clip' on page 25 undefined on input line 407.
-
-
-LaTeX Warning: Reference `subsec:meth_aktionsraum' on page 25 undefined on input line 412.
-
-
-LaTeX Warning: Reference `subsec:ppo_clip' on page 25 undefined on input line 412.
-
-
-LaTeX Warning: Reference `sec:architektur' on page 25 undefined on input line 419.
-
-[25 <./Bilder/architecture.pdf>]
-
-LaTeX Warning: Reference `subsec:meth_aktionsraum' on page 26 undefined on input line 446.
-
-
-LaTeX Warning: Reference `subsec:ppo_clip' on page 26 undefined on input line 452.
-
-
-Overfull \hbox (1.27885pt too wide) in paragraph at lines 455--457
+[24] [25 <./Bilder/architecture.pdf>]
+Overfull \hbox (1.27885pt too wide) in paragraph at lines 457--459
 []\T1/ntxtlf/m/n/12 Statt Clip-ping wird da-her ei-ne in-ver-tier-ba-re, dif-fe-ren-zier-ba-re Trans-for-ma-ti-on ver-wen-det ([]Haar-
  []
 
 
-Overfull \hbox (32.50314pt too wide) in paragraph at lines 466--470
+Overfull \hbox (32.50314pt too wide) in paragraph at lines 468--472
 \T1/ntxtlf/m/n/12 Der Kor-rek-tur-term $\LMS/ntxsy/m/n/12 ^^@ [][] []π\OT1/minntx/m/n/12 1 \LMS/ntxsy/m/n/12 ^^@ [][]π\OML/ntxmi/m/it/12 u[]\LMS/ntxsy/m/n/12 ∫∫$ \T1/ntxtlf/m/n/12 ist die Log-Jacobi-Determinante der Tanh-Transformation
  []
 
-
-LaTeX Warning: Reference `tab:meth_ppo_hyperparams' on page 26 undefined on input line 480.
-
-
-LaTeX Warning: Reference `subsubsec:meth_tanh_squashing' on page 26 undefined on input line 511.
-
-[26]
-
-LaTeX Warning: Reference `sec:meth_algorithmus' on page 27 undefined on input line 525.
-
-[27]
-
-LaTeX Warning: Reference `fig:meth_corridor' on page 28 undefined on input line 565.
-
-
-LaTeX Warning: Reference `subsec:meth_terminierung' on page 28 undefined on input line 567.
-
-
-LaTeX Warning: Reference `subsec:meth_hindernisse' on page 28 undefined on input line 579.
-
-<Bilder/corridor_geometry.pdf, id=660, 346.69325pt x 292.20067pt>
+[26] [27]
+<Bilder/corridor_geometry.pdf, id=865, 346.69325pt x 292.20067pt>
 File: Bilder/corridor_geometry.pdf Graphic file (type pdf)
 <use Bilder/corridor_geometry.pdf>
-Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 583.
+Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 585.
 (pdftex.def)             Requested size: 374.86775pt x 315.95099pt.
 
-Overfull \hbox (35.45345pt too wide) in paragraph at lines 594--601
+Overfull \hbox (35.45345pt too wide) in paragraph at lines 596--603
 \T1/ntxtlf/m/n/12 Als Hin-der-nis-se die-nen sechs 3D-Objekte aus dem Goo-gle Scan-ned Ob-jects Da-ten-satz (GSO) ([]Downs
  []
 
-
-LaTeX Warning: Reference `subsec:meth_belohnung' on page 28 undefined on input line 603.
-
-[28]
-
-LaTeX Warning: Reference `sec:architektur' on page 29 undefined on input line 630.
-
-[29 <./Bilder/corridor_geometry.pdf>]
-
-LaTeX Warning: Reference `tab:app_pid_gains' on page 30 undefined on input line 654.
-
-
-LaTeX Warning: Reference `tab:meth_training' on page 30 undefined on input line 662.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.95pt on input line 678.
-
-LaTeX Warning: Reference `subsec:meth_uebergangsmodell' on page 30 undefined on input line 697.
-
-[30]
-
-LaTeX Warning: Reference `subsec:meth_terminierung' on page 31 undefined on input line 750.
-
-[31]
-
-LaTeX Warning: Reference `subsec:meth_korridor' on page 32 undefined on input line 807.
-
-[32]
-
-LaTeX Warning: Reference `subsec:meth_metriken' on page 33 undefined on input line 824.
-
-
-LaTeX Warning: Reference `subsec:meth_metriken' on page 33 undefined on input line 838.
-
-) [33]
+[28] [29 <./Bilder/corridor_geometry.pdf>] [30] [31] [32]) [33]
 \openout2 = `Inhalt/Ergebnisse.aux'.
 
  (./Inhalt/Ergebnisse.tex
@@ -2192,12 +1903,65 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [34
+<Bilder/figures/training/Train_mean_reward.pdf, id=946, 520.86116pt x 342.0184pt>
+File: Bilder/figures/training/Train_mean_reward.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Train_mean_reward.pdf>
+Package pdftex.def Info: Bilder/figures/training/Train_mean_reward.pdf  used on input line 19.
+(pdftex.def)             Requested size: 211.68661pt x 139.00203pt.
+<Bilder/figures/training/Policy_mean_std.pdf, id=947, 515.12096pt x 342.0184pt>
+File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Policy_mean_std.pdf>
+Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on input line 21.
+(pdftex.def)             Requested size: 211.68661pt x 140.55202pt.
+<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=953, 520.86116pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_crash_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_crash_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_crash_raw.pdf  used on input line 51.
+(pdftex.def)             Requested size: 211.68661pt x 139.00203pt.
+<Bilder/figures/training/Episode_rew_success_raw.pdf, id=954, 511.60783pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_success_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_success_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_success_raw.pdf  used on input line 53.
+(pdftex.def)             Requested size: 211.68661pt x 141.51749pt.
+[34
 
 
 
 
-]
+ <./Bilder/figures/training/Train_mean_reward.pdf> <./Bilder/figures/training/Policy_mean_std.pdf>]
+<Bilder/figures/eval/phase1_outcomes.pdf, id=1041, 263.52515pt x 200.07372pt>
+File: Bilder/figures/eval/phase1_outcomes.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/phase1_outcomes.pdf>
+Package pdftex.def Info: Bilder/figures/eval/phase1_outcomes.pdf  used on input line 110.
+(pdftex.def)             Requested size: 286.65883pt x 217.65471pt.
+ [35 <./Bilder/figures/training/Episode_rew_crash_raw.pdf> <./Bilder/figures/training/Episode_rew_success_raw.pdf>]
+<Bilder/figures/eval/trajectory_ep1.pdf, id=1126, 459.6372pt x 475.57175pt>
+File: Bilder/figures/eval/trajectory_ep1.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/trajectory_ep1.pdf>
+Package pdftex.def Info: Bilder/figures/eval/trajectory_ep1.pdf  used on input line 141.
+(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
+<Bilder/figures/eval/trajectory_ep2.pdf, id=1127, 459.6372pt x 475.57175pt>
+File: Bilder/figures/eval/trajectory_ep2.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/trajectory_ep2.pdf>
+Package pdftex.def Info: Bilder/figures/eval/trajectory_ep2.pdf  used on input line 143.
+(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
+<Bilder/figures/eval/trajectory_ep3.pdf, id=1128, 459.6372pt x 475.57175pt>
+File: Bilder/figures/eval/trajectory_ep3.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/trajectory_ep3.pdf>
+Package pdftex.def Info: Bilder/figures/eval/trajectory_ep3.pdf  used on input line 145.
+(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
+ [36 <./Bilder/figures/eval/phase1_outcomes.pdf>]
+<Bilder/figures/eval/phase2_outcomes.pdf, id=1178, 263.52515pt x 200.07372pt>
+File: Bilder/figures/eval/phase2_outcomes.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/phase2_outcomes.pdf>
+Package pdftex.def Info: Bilder/figures/eval/phase2_outcomes.pdf  used on input line 202.
+(pdftex.def)             Requested size: 286.65883pt x 217.65471pt.
+ [37 <./Bilder/figures/eval/trajectory_ep1.pdf> <./Bilder/figures/eval/trajectory_ep2.pdf> <./Bilder/figures/eval/trajectory_ep3.pdf>] [38 <./Bilder/figures/eval/phase2_outcomes.pdf>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 286.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 290.
+) [39] [40]
 \openout2 = `Inhalt/Diskussion.aux'.
 
  (./Inhalt/Diskussion.tex
@@ -2214,358 +1978,21 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              that will remove this deprecated code.
 
 
-LaTeX Warning: Reference `cha:Ergebnisse' on page 35 undefined on input line 4.
+LaTeX Warning: Citation 'moallaNoRepresentationNoTrust2024' on page 41 undefined on input line 31.
 
 
-Overfull \hbox (45.64778pt too wide) in paragraph at lines 13--23
-\T1/ntxtlf/m/n/12 Sparse-Reward-Struktur zu-r¸ck-f¸h-ren: Die dich-ten Kom-po-nen-ten (\T1/ntxtlf/m/it/12 pro-gress\T1/ntxtlf/m/n/12 , \T1/ntxtlf/m/it/12 clo-se\T1/ntxtlf/m/n/12 , \T1/ntxtlf/m/it/12 obstacle_proximity\T1/ntxtlf/m/n/12 )
- []
+LaTeX Warning: Citation 'randlovLearningDriveBicycle1998' on page 41 undefined on input line 54.
 
-[35
+[41
 
 
 
 
 ]
 
-LaTeX Warning: Reference `sec:disk_nf1' on page 36 undefined on input line 100.
+LaTeX Warning: Citation 'chenDRQN3DObstacleAvoidance2021' on page 42 undefined on input line 92.
 
-[36]
-
-LaTeX Warning: Reference `subsec:meth_informationsasymmetrie' on page 37 undefined on input line 146.
-
-[37]
-
-./Inhalt/Diskussion.tex:214: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.214 \paragraph{Einzelner Seed.}
-                                 
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Diskussion.tex:214: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.214 \paragraph{Einzelner Seed.}
-                                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:214: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.214 \paragraph{Einzelner Seed.}
-                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Diskussion.tex:214: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.214 \paragraph{Einzelner Seed.}
-                                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:214: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.214 \paragraph{Einzelner Seed.}
-                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-Overfull \hbox (0.98488pt too wide) in paragraph at lines 215--221
-\T1/ntxtlf/m/n/12 Alle Er-geb-nis-se ba-sie-ren auf ei-nem ein-zi-gen Trai-nings-lauf. Die Bootstrap-Konfidenzintervalle
- []
-
-[38]
-
-./Inhalt/Diskussion.tex:222: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.222 \paragraph{Sim-to-Real Gap.}
-                                  
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Diskussion.tex:222: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.222 \paragraph{Sim-to-Real Gap.}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:222: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.222 \paragraph{Sim-to-Real Gap.}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Diskussion.tex:222: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.222 \paragraph{Sim-to-Real Gap.}
-                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:222: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.222 \paragraph{Sim-to-Real Gap.}
-                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-./Inhalt/Diskussion.tex:229: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.229 \paragraph{Reward Shaping.}
-                                 
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Diskussion.tex:229: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.229 \paragraph{Reward Shaping.}
-                                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:229: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.229 \paragraph{Reward Shaping.}
-                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Diskussion.tex:229: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.229 \paragraph{Reward Shaping.}
-                                 
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:229: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.229 \paragraph{Reward Shaping.}
-                                 
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-./Inhalt/Diskussion.tex:235: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.235 \paragraph{Feste Zielposition.}
-                                     
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Diskussion.tex:235: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.235 \paragraph{Feste Zielposition.}
-                                     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:235: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.235 \paragraph{Feste Zielposition.}
-                                     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Diskussion.tex:235: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.235 \paragraph{Feste Zielposition.}
-                                     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:235: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.235 \paragraph{Feste Zielposition.}
-                                     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-./Inhalt/Diskussion.tex:240: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.240 \paragraph{Statische Umgebung.}
-                                     
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Diskussion.tex:240: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.240 \paragraph{Statische Umgebung.}
-                                     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:240: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.240 \paragraph{Statische Umgebung.}
-                                     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Diskussion.tex:240: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.240 \paragraph{Statische Umgebung.}
-                                     
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:240: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.240 \paragraph{Statische Umgebung.}
-                                     
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-./Inhalt/Diskussion.tex:244: Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.244 \paragraph{Keine Feature-Visualisierung.}
-                                               
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-./Inhalt/Diskussion.tex:244: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.244 \paragraph{Keine Feature-Visualisierung.}
-                                               
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:244: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.244 \paragraph{Keine Feature-Visualisierung.}
-                                               
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./Inhalt/Diskussion.tex:244: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.244 \paragraph{Keine Feature-Visualisierung.}
-                                               
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./Inhalt/Diskussion.tex:244: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.244 \paragraph{Keine Feature-Visualisierung.}
-                                               
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-) [39]
+[42] [43] [44] [45] [46]) [47]
 \openout2 = `"Inhalt/Fazit und Ausblick.aux"'.
 
  (./Inhalt/Fazit und Ausblick.tex
@@ -2581,12 +2008,12 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [40
+) [48
 
 
 
 
-] [41]
+] [49]
 
 Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              Note: KOMA-Script does use styles for commands like
@@ -2621,8 +2048,74 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [8
+<Bilder/figures/training/Train_mean_episode_length.pdf, id=1451, 522.1472pt x 342.0184pt>
+File: Bilder/figures/training/Train_mean_episode_length.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Train_mean_episode_length.pdf>
+Package pdftex.def Info: Bilder/figures/training/Train_mean_episode_length.pdf  used on input line 6.
+(pdftex.def)             Requested size: 211.68661pt x 138.6576pt.
+<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1452, 504.58159pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_close_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_close_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_close_raw.pdf  used on input line 8.
+(pdftex.def)             Requested size: 211.68661pt x 143.48495pt.
+<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1453, 524.37428pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf  used on input line 18.
+(pdftex.def)             Requested size: 211.68661pt x 138.07309pt.
+File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Policy_mean_std.pdf>
+Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on input line 20.
+(pdftex.def)             Requested size: 211.68661pt x 140.55202pt.
+[8
 
+
+
+ <./Bilder/figures/training/Train_mean_episode_length.pdf> <./Bilder/figures/training/Episode_rew_close_raw.pdf> <./Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 55.
+[9
+
+
+]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[10
+
+
+]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+) [11
 
 
 ]
@@ -2631,117 +2124,4 @@ chapter without number
 Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              Note: KOMA-Script does use styles for commands like
 (scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 245.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 245.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [9
-
-
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}] [10] [11] [12]
-Overfull \hbox (1.98267pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 Stig Pe-ter-sen, Charles Be-at-tie, Amir Sa-dik, Io-an-nis An-to-no-glou, He-len King, Dharshan
- []
-
-[13]
-Overfull \hbox (0.10036pt too wide) in paragraph at lines 246--246
-[][]\T1/ntxtlf/m/n/12 Polvara, Ric-car-do, Mas-si-mi-lia-no Pa-ta-c-chio-la, Marc Han-hei-de und Ger-hard Neu-mann (25. Feb.
- []
-
-
-Overfull \hbox (55.5361pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 main Ran-do-mi-za-ti-on^^P. In: \T1/ntxtlf/m/it/12 Ro-bo-tics \T1/ntxtlf/m/n/12 9.1. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2218-6581. \T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / robotics9010008$[][]\T1/ntxtlf/m/n/12 .
- []
-
-
-Overfull \hbox (4.1798pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/sc/12 url\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 https : / / www . mdpi . com / 2218 -[] 6581 / 9 / 1 / 8$[][] \T1/ntxtlf/m/n/12 (be-sucht am 07.02.2026). 
- []
-
-[14] [15]
-Overfull \hbox (19.39218pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 ments^^P. In: \T1/ntxtlf/m/it/12 Elec-tro-nics \T1/ntxtlf/m/n/12 7.5. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2079-9292. \T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / electronics7050073$[][]\T1/ntxtlf/m/n/12 .
- []
-
-[16] [17]
-\openout2 = `Inhalt/Erklaerung.aux'.
-
- (./Inhalt/Erklaerung.tex
-chapter without number
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-) [18
-
-
-]
-
-Package caption Warning: Unused \captionsetup[figure] on input line 216.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[algocf] on input line 218.
-See the caption package documentation for explanation.
-
-(./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux) (./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux) (./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux) (./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux) (./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux) (./Inhalt/Erklaerung.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `Bachelorarbeit.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Bachelorarbeit.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Bachelorarbeit
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
-\openout1 = `Bachelorarbeit.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 35962 strings out of 474222
- 666691 string characters out of 5748733
- 1943975 words of memory out of 5000000
- 57313 multiletter control sequences out of 15000+600000
- 665632 words of font info for 206 fonts, out of 8000000 for 9000
- 1146 hyphenation exceptions out of 8191
- 108i,20n,125p,10960b,2820s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (60 pages, 1027813 bytes).
-PDF statistics:
- 1363 PDF objects out of 1440 (max. 8388607)
- 1188 compressed objects within 12 object streams
- 242 named destinations out of 1000 (max. 500000)
- 663 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+(scrreprt)              uses \@makechapterhead, but a completely di
