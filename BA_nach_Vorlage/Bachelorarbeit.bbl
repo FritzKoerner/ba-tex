@@ -3311,6 +3311,47 @@
       \endverb
       \keyw{Precision agriculture (PA),Remote sensing (RS),Unmanned aerial vehicle (UAV)}
     \endentry
+    \entry{randlovLearningDriveBicycle1998}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cfa4f94b0d1f13a8c6c0af5d0cd0c0d2}{%
+           family={Randlov},
+           familyi={R\bibinitperiod},
+           given={Jette},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ce4deec77675cad5e29df271fc76be0}{%
+           family={Alstrøm},
+           familyi={A\bibinitperiod},
+           given={Preben},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{fullhash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{bibnamehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{authorbibnamehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{authornamehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{authorfullhash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present and solve a real-world problem of learning to drive a bicycle. We solve the prob- lem by online reinforcement learning using the Sarsa(A)-algorithm. Then we solve the compos- ite problem of learning to balance a bicycle and then drive to 'It goal. In our approach the rein- forcement function is independent of the task the agent tries to learn to solve.}
+      \field{day}{1}
+      \field{journaltitle}{Proceedings of the 15th International Conference on Machine Learning}
+      \field{month}{1}
+      \field{pagetotal}{463}
+      \field{title}{Learning to {{Drive}} a {{Bicycle Using Reinforcement Learning}} and {{Shaping}}.}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{pages}{471}
+      \range{pages}{1}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/6SQR97C5/Randlov and Alstrøm - 1998 - Learning to Drive a Bicycle Using Reinforcement Learning and Shaping..pdf
+      \endverb
+    \endentry
     \entry{rudinLearningWalkMinutes2022}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=5ac29b212261fe3d27e4d51cf14a990e}{%
@@ -3955,6 +3996,65 @@
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Computer Science - Robotics}
     \endentry
+    \entry{whiteheadLearningPerceiveAct1991}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c8e8802cf436a681c5df2f9f1987bbaf}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={Steven\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=462fce8922fb76159172aca4abd82703}{%
+           family={Ballard},
+           familyi={B\bibinitperiod},
+           given={Dana\bibnamedelima H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{fullhash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{bibnamehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{authorbibnamehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{authornamehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{authorfullhash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article considers adaptive control architectures that integrate active sensory-motor systems with decision systems based on reinforcement learning. One unavoidable consequence of active perception is that the agent's internal representation often confounds external world states. We call this phoenomenon perceptual aliasingand show that it destabilizes existing reinforcement learning algorithms with respect to the optimal decision policy. We then describe a new decision system that overcomes these difficulties for a restricted class of decision problems. The system incorporates a perceptual subcycle within the overall decision cycle and uses a modified learning algorithm to suppress the effects of perceptual aliasing. The result is a control architecture that learns not only how to solve a task but also where to focus its visual attention in order to collect necessary sensory information.}
+      \field{day}{1}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{1}
+      \field{shortjournal}{Machine Learning}
+      \field{title}{Learning to {{Perceive}} and {{Act}} by {{Trial}} and {{Error}}}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{1991}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{45\bibrangedash 83}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1023/A:1022619109594
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/4XTWQG43/Whitehead and Ballard - 1991 - Learning to Perceive and Act by Trial and Error.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1022619109594
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1022619109594
+      \endverb
+      \keyw{deictic representations,hidden state,non-Markov decision problems,Reinforcement learning,sensory-motor integration}
+    \endentry
     \entry{WorldPopulationProspects}{online}{}
       \field{sortinit}{W}
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
@@ -4205,11 +4305,10 @@
     \endentry
   \enddatalist
   \missing{aljalboutRoleActionSpace2024}
-  \missing{chenDRQN3DObstacleAvoidance2021}
   \missing{esserActionSpaceDesign2024}
   \missing{kaufmannBenchmarkComparisonLearned2022}
   \missing{moallaNoRepresentationNoTrust2024}
-  \missing{randlovLearningDriveBicycle1998}
+  \missing{singlaMemorybasedDeepReinforcement2021}
 \endrefsection
 \endinput
 

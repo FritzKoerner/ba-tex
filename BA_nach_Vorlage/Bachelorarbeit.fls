@@ -858,6 +858,11 @@ OUTPUT Inhalt/Diskussion.aux
 INPUT ./Inhalt/Diskussion.tex
 INPUT ./Inhalt/Diskussion.tex
 INPUT Inhalt/Diskussion.tex
+INPUT ./Bilder/perceptual_aliasing/depth_comparison.pdf
+INPUT ./Bilder/perceptual_aliasing/depth_comparison.pdf
+INPUT ./Bilder/perceptual_aliasing/depth_comparison.pdf
+INPUT ./Bilder/perceptual_aliasing/depth_comparison.pdf
+INPUT ./Bilder/perceptual_aliasing/depth_comparison.pdf
 INPUT ./Inhalt/Fazit und Ausblick.tex
 INPUT ./Inhalt/Fazit und Ausblick.tex
 OUTPUT Inhalt/Fazit und Ausblick.aux

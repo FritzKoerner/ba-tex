@@ -60,25 +60,26 @@
 \contentsline {section}{\numberline {6.1}Leistungsfähigkeit in der Trainingsumgebung}{41}{section.107}%
 \contentsline {subsection}{\numberline {6.1.1}Trainingsverhalten und Konvergenz}{41}{subsection.108}%
 \contentsline {subsection}{\numberline {6.1.2}Dominante Fehlerart und Flugverhalten}{42}{subsection.109}%
-\contentsline {subsection}{\numberline {6.1.3}Perceptual Aliasing}{43}{subsection.110}%
-\contentsline {subsection}{\numberline {6.1.4}Beantwortung NF1}{43}{subsection.111}%
-\contentsline {section}{\numberline {6.2}Transferleistung auf den Weinberg}{44}{section.112}%
-\contentsline {subsection}{\numberline {6.2.1}Success-Drop und Failure-Mode-Shift}{44}{subsection.113}%
-\contentsline {subsection}{\numberline {6.2.2}Einordnung als Sim-to-Sim Transfer}{44}{subsection.114}%
-\contentsline {subsection}{\numberline {6.2.3}Perceptual Aliasing im Weinberg}{44}{subsection.115}%
-\contentsline {subsection}{\numberline {6.2.4}Beantwortung NF2}{45}{subsection.116}%
-\contentsline {section}{\numberline {6.3}Leistungslücke zum Pfadplaner}{45}{section.117}%
-\contentsline {subsection}{\numberline {6.3.1}Inferenzzeit und Echtzeitfähigkeit}{45}{subsection.118}%
-\contentsline {subsection}{\numberline {6.3.2}Landegeschwindigkeit}{45}{subsection.119}%
-\contentsline {subsection}{\numberline {6.3.3}Planungshorizont}{45}{subsection.120}%
-\contentsline {subsection}{\numberline {6.3.4}Beantwortung NF3}{45}{subsection.121}%
-\contentsline {section}{\numberline {6.4}Beitrag der Beobachtungskomponenten}{45}{section.122}%
-\contentsline {subsection}{\numberline {6.4.1}Beantwortung NF4}{46}{subsection.123}%
-\contentsline {section}{\numberline {6.5}Limitationen}{46}{section.124}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{48}{chapter.125}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{48}{section.126}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{48}{section.127}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{49}{section.128}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.129}%
-\contentsline {chapter}{\nonumberline Literatur}{XII}{chapter*.143}%
-\contentsline {chapter}{\nonumberline Erklärung}{XXI}{chapter*.144}%
+\contentsline {subsection}{\numberline {6.1.3}Beantwortung NF1}{42}{subsection.110}%
+\contentsline {section}{\numberline {6.2}Transferleistung auf den Weinberg}{43}{section.111}%
+\contentsline {subsection}{\numberline {6.2.1}Leistungsabfall und Verschiebung der Fehlerarten}{43}{subsection.112}%
+\contentsline {subsection}{\numberline {6.2.2}Einordnung als Sim-to-Sim Transfer}{43}{subsection.113}%
+\contentsline {subsection}{\numberline {6.2.3}Perceptual Aliasing als Erklärung für die Terrain-Kollisionen}{44}{subsection.114}%
+\contentsline {subsection}{\numberline {6.2.4}Beantwortung NF2}{46}{subsection.116}%
+\contentsline {section}{\numberline {6.3}Leistungslücke zum Pfadplaner}{46}{section.117}%
+\contentsline {subsection}{\numberline {6.3.1}Informationsasymmetrie und Erfolgsrate}{46}{subsection.118}%
+\contentsline {subsection}{\numberline {6.3.2}Landezeit und Rechenzeit}{46}{subsection.119}%
+\contentsline {subsection}{\numberline {6.3.3}Beantwortung NF3}{47}{subsection.120}%
+\contentsline {section}{\numberline {6.4}Beitrag der Beobachtungskomponenten}{47}{section.121}%
+\contentsline {subsection}{\numberline {6.4.1}Beantwortung NF4}{47}{subsection.122}%
+\contentsline {section}{\numberline {6.5}Limitationen}{48}{section.123}%
+\contentsline {subsection}{\numberline {6.5.1}Trainingssetup}{48}{subsection.124}%
+\contentsline {subsection}{\numberline {6.5.2}Sensorik und Architektur}{48}{subsection.125}%
+\contentsline {subsection}{\numberline {6.5.3}Umgebungsdiversität}{48}{subsection.126}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{49}{chapter.127}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{49}{section.128}%
+\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{49}{section.129}%
+\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{50}{section.130}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.131}%
+\contentsline {chapter}{\nonumberline Literatur}{XII}{chapter*.145}%
+\contentsline {chapter}{\nonumberline Erklärung}{XXI}{chapter*.146}%

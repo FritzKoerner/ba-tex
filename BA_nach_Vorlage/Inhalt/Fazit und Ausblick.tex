@@ -8,42 +8,81 @@ autonome Drohne befähigen kann, mithilfe lokaler Tiefensensorik in
 hindernisreichen Umgebungen sicher zu landen.
 
 Der trainierte Agent erreicht in der Korridorumgebung eine Erfolgsrate von
-% TODO: Erfolgsrate Phase 1 einfügen
-und erlernt eine reaktive Ausweichstrategie, bei der die eingeschränkte
-Vorausschau der nach unten gerichteten Tiefenkamera den limitierenden Faktor
-darstellt (NF1). Dass diese Strategie über die Trainingsumgebung hinaus
-trägt, zeigt die Evaluation auf unbekannten Hindernisformen und in der
-Weinbergumgebung: Die Erfolgsrate sinkt auf
-% TODO: Erfolgsraten einfügen
-, bleibt aber deutlich über Zufall. Der Transfer gelingt ohne Fine-Tuning,
-wird jedoch durch das Perceptual-Aliasing-Problem in der Landezone begrenzt,
-wo der Agent gelernt hat, das Tiefenbild zu ignorieren (NF2). Im Vergleich
-zum RRT-Connect-Pfadplaner, der auf vollständiger Umgebungsinformation operiert,
-fällt die Erfolgsrate des RL-Agenten geringer aus. Er kompensiert diese
-Lücke jedoch durch kürzere Landezeiten und Echtzeitfähigkeit (NF3). Die
-Ablation bestätigt, dass die Tiefenwahrnehmung den entscheidenden Beitrag
-zur Hindernisumgehung leistet: Ohne Tiefenbild ist der Agent zwar zum
-kontrollierten Abstieg fähig, aber nicht zum aktiven Ausweichen (NF4).
+71,0\,\% unter der konservativen AABB-Kollisionsmetrik und 98,0\,\% unter
+oberflächenbasierter Kontakterkennung. Er erlernt eine reaktive
+Ausweichstrategie, deren Leistungsgrenze durch den begrenzten Sensorhorizont,
+das Entscheidungsintervall und die schwache Gewichtung der Hindernisproximität
+bestimmt wird (NF1). Die erlernte Navigationsleistung lässt sich partiell auf
+die Weinbergumgebung übertragen: Die Erfolgsrate sinkt auf 10,4\,\%, wobei
+sich die dominante Fehlerart von Hinderniskollisionen zu Zeitüberschreitungen
+verschiebt. Bei erweitertem Erfolgsradius (1,5\,m) erreicht der Agent
+69,7\,\%, was zeigt, dass die Hindernisnavigation ohne Fine-Tuning
+generalisiert; die terminale Landephase scheitert an Perceptual Aliasing
+zwischen Boden- und Vegetationssignaturen im Tiefenbild (NF2). Die
+Leistungslücke zum privilegierten RRT-Connect-Planer beträgt
+11~Prozentpunkte im Korridor und 75~Prozentpunkte im Weinberg; unter
+oberflächenbasierter Kollisionserkennung verschwindet die Lücke im Korridor
+vollständig. Der RL-Agent kompensiert die geringere Erfolgsrate durch
+kürzere Landezeiten und eine um zwei Größenordnungen niedrigere
+Rechenzeit (NF3). Ohne Ablationsstudie lässt sich der individuelle Beitrag
+der Beobachtungskomponenten nicht quantifizieren; die qualitative Evidenz
+zeigt jedoch, dass das Tiefenbild die Hindernisumgehung ermöglicht, während
+der Zustandsvektor die Zielnavigation steuert (NF4).
 
-In der Gesamtschau zeigt die Arbeit, dass ein RL-Agent mit lokaler
-Tiefensensorik hindernisreiche Landemanöver unter kontrollierten
-Simulationsbedingungen erlernen kann. Die Methode bietet Echtzeitfähigkeit
-und implizite Feature-Extraktion, die das Perceptual-Aliasing-Problem ohne
-handcodierte Heuristiken adressiert. Dem stehen fehlende Interpretierbarkeit,
-Seed-Abhängigkeit und das Fehlen formaler Sicherheitsgarantien gegenüber.
+In der Gesamtschau zeigt die Arbeit, dass ein RL-Agent mit minimaler
+Sensorausstattung hindernisreiche Landemanöver unter kontrollierten
+Simulationsbedingungen erlernen kann. Unter fairer Kollisionsmetrik löst
+der Agent das Navigationsproblem im Korridor vergleichbar mit einem
+vollständig informierten Planer, bei Echtzeitfähigkeit und ohne explizite
+Umgebungsmodellierung. Die Grenzen des Ansatzes liegen im
+Umgebungstransfer: Perceptual Aliasing und fehlendes zeitliches Gedächtnis
+begrenzen die Leistung in geometrisch komplexeren Umgebungen.
 
 \section{Limitationen der Arbeit}
 
-Die zentralen Einschränkungen liegen im einzelnen Trainingsseed, der keine
-Aussage über die Trainingsvarianz erlaubt, im Sim-to-Real Gap durch perfekte
-Sensorik ohne Domain Randomization sowie im manuell abgestimmten Reward
-Shaping, dessen Gewichtung das Flugverhalten maßgeblich bestimmt.
+Die Ergebnisse basieren auf einem einzigen Trainingslauf, sodass die
+Trainingsvarianz nicht quantifiziert ist. Die manuell abgestimmten
+Belohnungsgewichte beeinflussen das Flugverhalten maßgeblich. Der Agent
+verarbeitet nur das aktuelle Tiefenbild ohne
+zeitliches Gedächtnis, was die Akkumulation von Strukturen außerhalb des
+Sichtfelds verhindert. Der individuelle Beitrag von Tiefenwahrnehmung und
+Zustandsvektor wurde nicht durch eine Ablationsstudie quantifiziert. Im
+Training ist das Landeziel identisch und alle Hindernisse statisch; die
+Simulation bietet perfekte Sensorik ohne Rauschen, Motorverzögerung oder
+Kommunikationslatenz, sodass die Ergebnisse nicht direkt auf reale Drohnen
+übertragbar sind.
 
 \section{Perspektiven für zukünftige Forschung}
 
-Eine Multi-Seed-Validierung würde die statistische Belastbarkeit der
-Ergebnisse erhöhen. Domain Randomization, insbesondere Sensorrauschen und
-Windstörungen, könnte den Transfer auf reale Hardware vorbereiten. Eine
-Grad-CAM-Analyse der CNN-Features würde erstmals direkte Evidenz über die
-gelernten Hindernisrepräsentationen liefern. Langfristig stellt der
-Sim-to-Real-Transfer den entscheidenden nächsten Schritt dar.
+\paragraph{Architekturerweiterungen.}
+Eine rekurrente Architektur (LSTM) oder ein Tiefenbild-Stapel würde dem
+Agenten zeitliches Gedächtnis verleihen und könnte das in
+Abschnitt~\ref{sec:disk_nf2} beschriebene Problem benachbarter
+Hindernisse außerhalb des Sichtfelds adressieren. Offen bleibt zudem der
+individuelle Beitrag beider Modalitäten; eine Ablationsstudie, in der ein
+Modell ohne Tiefenbild unter identischen Bedingungen trainiert wird, würde
+diesen quantifizieren. Ergänzend ließe eine Visualisierung der
+CNN-Aktivierungen mittels Grad-CAM direkte Rückschlüsse auf die gelernten
+Hindernisrepräsentationen zu.
+
+\paragraph{Trainingssetup.}
+Eine Multi-Seed-Validierung ist notwendig, um die statistische
+Belastbarkeit der Ergebnisse zu erhöhen. Darüber hinaus könnte eine
+systematische Optimierung der Belohnungsgewichte die manuelle Abstimmung
+ersetzen und den in Abschnitt~\ref{sec:disk_nf1} beschriebenen
+Schwebe-Anreiz gezielt adressieren.
+
+\paragraph{Umgebungsdiversität und Sim-to-Real-Transfer.}
+Domain Randomization, insbesondere Sensorrauschen, Windstörungen und
+variable Zielpositionen, könnte sowohl die Robustheit als auch den
+Transfer auf reale Hardware vorbereiten. Die Einführung dynamischer
+Hindernisse würde zudem prüfen, ob die reaktive, schrittweise
+Entscheidungsstruktur des RL-Agenten den in
+Abschnitt~\ref{sec:disk_nf3} beschriebenen prinzipiellen Vorteil
+gegenüber globaler Pfadplanung auch empirisch einlöst. Langfristig stellt
+der Sim-to-Real-Transfer den entscheidenden nächsten
+Schritt dar, um die unter kontrollierten Bedingungen gezeigte
+Leistungsfähigkeit in realen Einsatzszenarien zu validieren. Die
+vorliegende Arbeit liefert dafür eine Grundlage, indem sie zeigt, unter
+welchen Bedingungen lernbasierte Landung mit minimaler Sensorik gelingt
+und wo ihre Grenzen liegen.

@@ -298,7 +298,7 @@ Der Erfolgsbonus wird bei Erreichen des Landeziels vergeben:
 
 Die Gewichte wurden experimentell in mehreren Trainingsdurchläufen
 abgestimmt. Eine zu hohe Gewichtung der Hindernisproximität und der
-Absturzstrafe führt zu einer stagnierenden Policy: Da Annäherung an das Ziel
+Absturzstrafe führt zu einer stagnierenden Strategie: Da Annäherung an das Ziel
 und erfolgreiche Landungen zu Beginn des Trainings selten und zufällig
 auftreten, dominieren die negativen Belohnungen, und der Agent lernt, auf der
 Stelle zu schweben statt abzusteigen. Erst eine Abschwächung dieser Strafen
@@ -410,7 +410,7 @@ Objective und vollständige Zielfunktion in Abschnitt~\ref{subsec:ppo_clip} eing
 wurden.
 
 Die vorliegende Arbeit zielt auf einen kontinuierlichen Aktionsraum ab, in dem der Agent
-Zielpositionsoffsets und eine Gierrate ausgibt (vgl.\
+Zielpositionsoffsets und einen Sollgierwinkel ausgibt (vgl.\
 Abschnitt~\ref{subsec:meth_aktionsraum}). Wie in Abschnitt~\ref{subsec:ppo_clip} dargelegt,
 übertrifft PPO auf strukturell vergleichbaren kontinuierlichen Steuerungsaufgaben die
 Vergleichsverfahren TRPO und A2C. Auch im spezifischen
@@ -429,10 +429,6 @@ Engpass ist. Bei GPU-paralleler Simulation mit hunderten bis tausenden Umgebunge
 jedoch der Gradientenupdate der Engpass; die geringere Sample-Effizienz von
 On-Policy-Methoden wird durch den Datendurchsatz mehr als kompensiert
 \autocite{rudinLearningWalkMinutes2022}.
-%Zudem würde ein Replay Buffer Transitionen aus
-%früheren Curriculum-Stufen enthalten (vgl.\
-%Abschnitt~\ref{subsec:meth_curriculum}), die für die aktuelle Stufe nicht mehr
-%repräsentativ sind.
 Neuere PPO-Varianten wie Phasic Policy Gradient
 \autocite{cobbePhrasicPolicyGradient2021} wurden nicht evaluiert, da die verwendete
 Trainingsumgebung rsl-rl \autocite{rudinLearningWalkMinutes2022} ausschließlich die
@@ -520,7 +516,7 @@ $c_2 \geq 0{,}01$ führte in Pilotexperimenten zu instabilem Training.
 \subsection{Physiksimulator}
 \label{subsec:meth_simulator}
 
-Das Training eines RL-Agenten vorliegende Aufgabe erfordert einen
+Das Training eines RL-Agenten für die vorliegende Aufgabe erfordert einen
 Physiksimulator, der drei zentrale Anforderungen erfüllt:
 (1)~GPU-parallelisierte Ausführung hunderter Umgebungsinstanzen, um die von PPO
 benötigten großen Rollout-Batches effizient zu erzeugen
@@ -594,7 +590,7 @@ bei $z \approx 2$\,m und $z \approx 7$\,m
 \label{subsec:meth_hindernisse}
 
 Als Hindernisse dienen sechs 3D-Objekte aus dem Google Scanned Objects
-Datensatz~(GSO)~\autocite{downsGoogleScannedObjects2022}: eine Tasse, ein Teddybär, ein Spielzeugdinosaurier, ein
+Datensatz~(GSO)~\autocite{downsGoogleScannedObjects2022}: eine Tasse, ein Osterkorb, ein Spielzeugdinosaurier, ein
 Spielzeugbus, ein Spielzeugnashorn und ein Schuh. Jedes Objekt wird um den
 Faktor~$21$ bis~$63$ skaliert, sodass seine horizontale Ausdehnung mindestens
 $2$\,m beträgt und damit die gesamte $y$-Breite des Korridors abdeckt. Objekte,
@@ -613,17 +609,6 @@ der Korridormitte positioniert, mit einem Versatz von $0{,}6$ bis $1{,}2$\,m.
 Aufeinanderfolgende Schichten wechseln die Seite, sodass die Drohne einen
 Slalomkurs fliegen muss. Die Startseite ($+x$ oder $-x$) wird pro Episode
 zufällig gewählt.
-
-%\subsection{Curriculum}
-%\label{subsec:meth_curriculum}
-%
-%Das Training folgt einem zweistufigen Curriculum. In der ersten Phase
-%(Iterationen~$0$ bis~$300$, entsprechend 18\,060~Entscheidungsschritten) sind
-%die Hindernisse deaktiviert, sodass der Agent zunächst den reinen Abstieg zum
-%Ziel erlernt. Die Korridorgrenzen sind von Beginn an aktiv. In der zweiten
-%Phase werden die Hindernisse bei jedem Episodenreset zufällig platziert und der
-%Agent muss sowohl die Navigation zum Ziel als auch die Hindernisvermeidung
-%bewältigen.
 
 %% ==========================================================================
 \section{Kaskadierender PID-Regler}
@@ -727,8 +712,6 @@ Die Laufzeit beträgt circa 24\,Stunden auf der genannten Hardware.
 \section{Evaluation}
 \label{sec:meth_evaluation}
 
-% --- ENTWURF — zur Diskussion ---
-
 Die Evaluation untersucht die Leistungsfähigkeit der trainierten Strategie
 anhand zweier Versuchsreihen mit jeweils 1\,000~Episoden und vergleicht
 sie mit einem RRT-Connect-Pfadplaner. Die erste Versuchsreihe
@@ -755,7 +738,8 @@ des Zeitlimits von $60$\,s.
 \noindent\textbf{Fehlerartenverteilung.}\enspace
 Jede fehlgeschlagene Episode wird einer von vier Kategorien zugeordnet:
 Hinderniskollision, Bodenkollision, Verlassen des Korridors
-(nur~Versuchsreihe~1) oder Timeout. Die Verteilung gibt Aufschluss
+(nur~Versuchsreihe~1), Terrain-Kollision (nur~Versuchsreihe~2,
+vgl.\ Abschnitt~\ref{subsec:meth_versuch2}) oder Timeout. Die Verteilung gibt Aufschluss
 darüber, \emph{warum} die Strategie versagt, nicht nur \emph{ob}.
 
 \noindent\textbf{Landezeit.}\enspace
@@ -828,15 +812,48 @@ Abschnitt~\ref{subsec:meth_metriken} definierten Metriken verglichen.
 \subsection{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}
 \label{subsec:meth_versuch2}
 
-Die zweite Versuchsreihe untersucht den Transfer der trainierten
-Strategie in eine photogrammetrisch erfasste Weinbergumgebung. Im
-Gegensatz zu Versuchsreihe~1 entfällt der Korridorbegrenzungsrahmen:
-Die Drohne operiert in einem offenen 3D-Scan eines realen Weinbergs, in
-dem die Rebreihen und das natürliche Terrain die einzigen Hindernisse
-bilden. Der Spawnbereich wird gegenüber der Trainingsumgebung
-erweitert (variablere Höhe und größerer horizontaler Versatz), und das
-Landeziel wird zufällig innerhalb des befahrbaren Bereichs gewählt.
+Die zweite Versuchsreihe untersucht den Zero-Shot-Transfer der trainierten
+Strategie in eine photogrammetrisch erfasste Weinbergumgebung. Als
+Grundlage dient ein 3D-Scan eines realen Weinbergs (Eltville, Deutschland),
+der mit vierfacher Skalierung geladen wird, um eine dem Korridor
+vergleichbare räumliche Ausdehnung zu erreichen. Die Rebenreihen und das
+natürliche Terrain bilden die einzigen Hindernisse; ein
+Korridorbegrenzungsrahmen entfällt.
+
+Die Kollisionserkennung wird gegenüber der Trainingsumgebung angepasst:
+Aus dem Weinberg-Mesh wird vorab ein zweidimensionales Höhenraster
+berechnet, das die Geländehöhe an jedem Gitterpunkt speichert. Zur
+Laufzeit wird die Drohnenhöhe mit der interpolierten Geländehöhe unter
+ihr verglichen; unterschreitet der vertikale Abstand einen
+Sicherheitsabstand von $0{,}5$\,m, wird die Episode als
+Terrain-Kollision gewertet. Die übrigen Abbruchbedingungen
+(Kontrollverlust, Timeout) bleiben identisch; die AABB-basierte
+Hinderniskollision und die Korridorgrenzenprüfung aus
+Abschnitt~\ref{subsec:meth_terminierung} entfallen.
+
+Als Landeziele dienen 20~vordefinierte Positionen: 15~in den
+Bodenstreifen zwischen Rebenreihen und 5~auf offenem Gelände. Pro
+Episode wird eine Position zufällig gewählt. Die Mehrzahl der Ziele
+liegt damit in unmittelbarer Nähe von Vegetation; im Gegensatz zur
+Trainingsumgebung, in der die Landezone stets hindernisfrei ist, muss
+die Drohne hier in beengter Umgebung landen.
+Abbildung~\ref{fig:meth_vineyard_targets} zeigt die räumliche
+Verteilung der Zielpositionen auf dem Höhenraster. Die Drohne wird in
+variabler Höhe ($10$ bis $15$\,m) über dem Landeziel initialisiert.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{Bilder/vineyard_targets.pdf}
+    \caption[Zielpositionen in der Weinbergumgebung]{Draufsicht auf das
+    Höhenraster der Weinbergumgebung (4-fache Skalierung) mit den
+    20~vordefinierten Zielpositionen. Die diagonalen Strukturen
+    entsprechen den Rebenreihen; die Mehrzahl der Ziele liegt in den
+    Bodenstreifen dazwischen.}
+    \label{fig:meth_vineyard_targets}
+\end{figure}
+
 Die Evaluation erfolgt mit denselben Metriken und demselben
-Konfidenzintervallverfahren aus Abschnitt~\ref{subsec:meth_metriken};
-als Vergleichsverfahren dient derselbe RRT-Connect-Pfadplaner wie in
-Versuchsreihe~1.
+Konfidenzintervallverfahren aus Abschnitt~\ref{subsec:meth_metriken}.
+Als Vergleichsverfahren dient ein RRT-Connect-Pfadplaner, der auf
+demselben Höhenraster operiert und damit über vollständige
+Geländekenntnis verfügt.
