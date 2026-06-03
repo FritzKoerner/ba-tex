@@ -948,3 +948,69 @@
   file = {/home/fritz-sfl/Zotero/storage/VGVKTKMM/Singla et al. - 2018 - Memory-based Deep Reinforcement Learning for Obstacle Avoidance in UAV with Limited Environment Know.pdf}
 }
 
+@online{kaufmannBenchmarkComparisonLearned2022,
+  title = {A {{Benchmark Comparison}} of {{Learned Control Policies}} for {{Agile Quadrotor Flight}}},
+  author = {Kaufmann, Elia and Bauersfeld, Leonard and Scaramuzza, Davide},
+  date = {2022-02-22},
+  url = {https://arxiv.org/abs/2202.10796v1},
+  urldate = {2026-06-03},
+  abstract = {Quadrotors are highly nonlinear dynamical systems that require carefully tuned controllers to be pushed to their physical limits. Recently, learning-based control policies have been proposed for quadrotors, as they would potentially allow learning direct mappings from high-dimensional raw sensory observations to actions. Due to sample inefficiency, training such learned controllers on the real platform is impractical or even impossible. Training in simulation is attractive but requires to transfer policies between domains, which demands trained policies to be robust to such domain gap. In this work, we make two contributions: (i) we perform the first benchmark comparison of existing learned control policies for agile quadrotor flight and show that training a control policy that commands body-rates and thrust results in more robust sim-to-real transfer compared to a policy that directly specifies individual rotor thrusts, (ii) we demonstrate for the first time that such a control policy trained via deep reinforcement learning can control a quadrotor in real-world experiments at speeds over 45km/h.},
+  langid = {english},
+  organization = {arXiv.org},
+  file = {/home/fritz-sfl/Zotero/storage/6ALUWF95/Kaufmann et al. - 2022 - A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight.pdf}
+}
+
+@article{esserActionSpaceDesign,
+  title = {Action {{Space Design}} in {{Reinforcement Learning}} for {{Robot Motor Skills}}},
+  author = {Eßer, Julian and Margolis, Gabriel B and Urbann, Oliver and Kerner, Soren and Agrawal, Pulkit},
+  abstract = {Practitioners often rely on intuition to select action spaces for learning. The choice can substantially impact final performance even when choosing among configuration-space representations such as joint position, velocity, and torque commands. We examine action space selection considering a wheeledlegged robot, a quadruped robot, and a simulated suite of locomotion, manipulation, and control tasks. We analyze the mechanisms by which action space can improve performance and conclude that the action space can influence learning performance substantially in a task-dependent way. Moreover, we find that much of the practical impact of action space selection on learning dynamics can be explained by improved policy initialization and behavior between timesteps.},
+  langid = {english},
+  file = {/home/fritz-sfl/Zotero/storage/3NI26AEE/Eßer et al. - Action Space Design in Reinforcement Learning for Robot Motor Skills.pdf}
+}
+
+@inproceedings{martiniPositionAgnosticAutonomousNavigation2022,
+  title = {Position-{{Agnostic Autonomous Navigation}} in {{Vineyards}} with {{Deep Reinforcement Learning}}},
+  booktitle = {2022 {{IEEE}} 18th {{International Conference}} on {{Automation Science}} and {{Engineering}} ({{CASE}})},
+  author = {Martini, Mauro and Cerrato, Simone and Salvetti, Francesco and Angarano, Simone and Chiaberge, Marcello},
+  date = {2022-08},
+  pages = {477--484},
+  issn = {2161-8089},
+  doi = {10.1109/CASE49997.2022.9926582},
+  url = {https://ieeexplore.ieee.org/abstract/document/9926582},
+  urldate = {2026-06-03},
+  abstract = {Precision agriculture is rapidly attracting research to efficiently introduce automation and robotics solutions to support agricultural activities. Robotic navigation in vineyards and orchards offers competitive advantages in autonomously monitoring and easily accessing crops for harvesting, spraying and performing time-consuming necessary tasks. Nowadays, autonomous navigation algorithms exploit expensive sensors which also require heavy computational cost for data processing. Nonetheless, vineyard rows represent a challenging outdoor scenario where GPS and Visual Odometry techniques often struggle to provide reliable positioning information. In this work, we combine Edge AI with Deep Reinforcement Learning to propose a cutting-edge lightweight solution to tackle the problem of autonomous vineyard navigation with-out exploiting precise localization data and overcoming task-tailored algorithms with a flexible learning-based approach. We train an end-to-end sensorimotor agent which directly maps noisy depth images and position-agnostic robot state information to velocity commands and guides the robot to the end of a row, continuously adjusting its heading for a collision-free central trajectory. Our extensive experimentation in realistic simulated vineyards demonstrates the effectiveness of our solution and the generalization capabilities of our agent.},
+  eventtitle = {2022 {{IEEE}} 18th {{International Conference}} on {{Automation Science}} and {{Engineering}} ({{CASE}})},
+  keywords = {Agriculture,Automation,Navigation,Reinforcement learning,Robot sensing systems,Task analysis,Trajectory}
+}
+
+@article{weiVisionbasedNavigationUnmanned2025,
+  title = {Vision-Based Navigation of Unmanned Aerial Vehicles in Orchards: {{An}} Imitation Learning Approach},
+  shorttitle = {Vision-Based Navigation of Unmanned Aerial Vehicles in Orchards},
+  author = {Wei, Peng and Ragbir, Prabhash and Vougioukas, Stavros G. and Kong, Zhaodan},
+  date = {2025-11-01},
+  journaltitle = {Computers and Electronics in Agriculture},
+  shortjournal = {Computers and Electronics in Agriculture},
+  volume = {238},
+  pages = {110802},
+  issn = {0168-1699},
+  doi = {10.1016/j.compag.2025.110802},
+  url = {https://www.sciencedirect.com/science/article/pii/S0168169925009081},
+  urldate = {2026-06-03},
+  abstract = {Autonomous unmanned aerial vehicle (UAV) navigation in orchards presents significant challenges due to obstacles and GPS-deprived environments. In this work, we introduce a learning-based approach to achieve vision-based navigation of UAVs within orchard rows. Our method employs a variational autoencoder (VAE)-based controller, trained with an intervention-based learning framework that allows the UAV to learn a visuomotor policy from human experience. We validate our approach in real orchard environments with a custom-built quadrotor platform. Field experiments demonstrate that after only a few iterations of training, the proposed VAE-based controller can autonomously navigate the UAV based on a front-mounted camera stream. The controller exhibits strong obstacle avoidance performance, achieves longer flying distances with less human assistance, and outperforms existing algorithms. Furthermore, we show that the policy generalizes effectively to novel environments and maintains competitive performance across varying conditions and speeds. This research not only advances UAV autonomy but also holds significant potential for precision agriculture, improving efficiency in orchard monitoring and management.},
+  keywords = {Imitation learning,Orchard monitoring,Unmanned aerial vehicles,Vision-based navigation},
+  file = {/home/fritz-sfl/Zotero/storage/IFY6F78G/Wei et al. - 2025 - Vision-based navigation of unmanned aerial vehicles in orchards An imitation learning approach.pdf;/home/fritz-sfl/Zotero/storage/9N2JRXP4/S0168169925009081.html}
+}
+
+@online{tayarAutonomousUAVFlight2025,
+  title = {Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}: {{A Reinforcement Learning Approach}}},
+  shorttitle = {Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}},
+  author = {Tayar, Marco S. and family=Oliveira, given=Lucas K., prefix=de, useprefix=true and Tommaselli, Felipe Andrade G. and Negri, Juliano D. and Segreto, Thiago H. and Godoy, Ricardo V. and Becker, Marcelo},
+  date = {2025-08-22},
+  doi = {10.1109/LARS69345.2025.11273007},
+  url = {https://arxiv.org/abs/2508.16807v2},
+  urldate = {2026-06-03},
+  abstract = {Autonomous UAV inspection of confined industrial infrastructure, such as ventilation ducts, demands robust navigation policies where collisions are unacceptable. While Deep Reinforcement Learning (DRL) offers a powerful paradigm for developing such policies, it presents a critical trade-off between on-policy and off-policy algorithms. Off-policy methods promise high sample efficiency, a vital trait for minimizing costly and unsafe real-world fine-tuning. In contrast, on-policy methods often exhibit greater training stability, which is essential for reliable convergence in hazard-dense environments. This paper directly investigates this trade-off by comparing a leading on-policy algorithm, Proximal Policy Optimization (PPO), against an off-policy counterpart, Soft Actor-Critic (SAC), for precision flight in procedurally generated ducts within a high-fidelity simulator. Our results show that PPO consistently learned a stable, collision-free policy that completed the entire course. In contrast, SAC failed to find a complete solution, converging to a suboptimal policy that navigated only the initial segments before failure. This work provides evidence that for high-precision, safety-critical navigation tasks, the reliable convergence of a well-established on-policy method can be more decisive than the nominal sample efficiency of an off-policy algorithm.},
+  langid = {english},
+  organization = {arXiv.org},
+  file = {/home/fritz-sfl/Zotero/storage/7SLN6EHE/Tayar et al. - 2025 - Autonomous UAV Flight Navigation in Confined Spaces A Reinforcement Learning Approach.pdf}
+}

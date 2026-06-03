@@ -2081,7 +2081,7 @@
       \keyw{Obstacle avoidance,SLAM,Target tracking,UAVs,Visual servoing}
     \endentry
     \entry{kaufmannChampionlevelDroneRacing2023}{article}{}
-      \name{author}{6}{}{%
+      \name{author}{6}{ul=3}{%
         {{un=0,uniquepart=base,hash=67c97d80868fd6b133dedb6e929aac2d}{%
            family={Kaufmann},
            familyi={K\bibinitperiod},
@@ -2122,11 +2122,11 @@
       \list{publisher}{1}{%
         {Nature Publishing Group}%
       }
-      \strng{namehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{namehash}{40ab26662c78ef303820d4ae65ed1f86}
       \strng{fullhash}{eb00725943e3ee22432047acb9e69901}
       \strng{bibnamehash}{eb00725943e3ee22432047acb9e69901}
       \strng{authorbibnamehash}{eb00725943e3ee22432047acb9e69901}
-      \strng{authornamehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{authornamehash}{40ab26662c78ef303820d4ae65ed1f86}
       \strng{authorfullhash}{eb00725943e3ee22432047acb9e69901}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
@@ -2163,6 +2163,63 @@
       \verb https://www.nature.com/articles/s41586-023-06419-4
       \endverb
       \keyw{Aerospace engineering,Computer science,Electrical and electronic engineering,Mechanical engineering,model-free,on policy,READ,Reinforcement learning,vision-based navigation}
+    \endentry
+    \entry{kaufmannBenchmarkComparisonLearned2022}{online}{}
+      \name{author}{3}{ul=3}{%
+        {{un=0,uniquepart=base,hash=67c97d80868fd6b133dedb6e929aac2d}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Elia},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59afafcd8a1882db2ba4f6af81e0f01a}{%
+           family={Bauersfeld},
+           familyi={B\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{fullhash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{bibnamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authorbibnamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authornamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authorfullhash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quadrotors are highly nonlinear dynamical systems that require carefully tuned controllers to be pushed to their physical limits. Recently, learning-based control policies have been proposed for quadrotors, as they would potentially allow learning direct mappings from high-dimensional raw sensory observations to actions. Due to sample inefficiency, training such learned controllers on the real platform is impractical or even impossible. Training in simulation is attractive but requires to transfer policies between domains, which demands trained policies to be robust to such domain gap. In this work, we make two contributions: (i) we perform the first benchmark comparison of existing learned control policies for agile quadrotor flight and show that training a control policy that commands body-rates and thrust results in more robust sim-to-real transfer compared to a policy that directly specifies individual rotor thrusts, (ii) we demonstrate for the first time that such a control policy trained via deep reinforcement learning can control a quadrotor in real-world experiments at speeds over 45km/h.}
+      \field{day}{22}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{title}{A {{Benchmark Comparison}} of {{Learned Control Policies}} for {{Agile Quadrotor Flight}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/6ALUWF95/Kaufmann et al. - 2022 - A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2202.10796v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2202.10796v1
+      \endverb
     \endentry
     \entry{kimMonocularVisionbasedAutonomous2022}{article}{}
       \name{author}{4}{}{%
@@ -3776,6 +3833,93 @@
       \endverb
       \keyw{autonomous infrastructure inspection,drone navigation,GNSS-denied environment,low-cost GNSS board,RTK}
     \endentry
+    \entry{tayarAutonomousUAVFlight2025}{online}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=62a44bb866d529d3972b40754e54a589}{%
+           family={Tayar},
+           familyi={T\bibinitperiod},
+           given={Marco\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,useprefix=true,hash=e001473c6c3f72fde44c2320c958af08}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Lucas\bibnamedelima K.},
+           giveni={L\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=d56eefed3facc63124af015b5e21e546}{%
+           family={Tommaselli},
+           familyi={T\bibinitperiod},
+           given={Felipe\bibnamedelimb Andrade\bibnamedelima G.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58f3b313c30debe4b3aed4c6fb668055}{%
+           family={Negri},
+           familyi={N\bibinitperiod},
+           given={Juliano\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e459751a9f719ab64d72e78f14605db}{%
+           family={Segreto},
+           familyi={S\bibinitperiod},
+           given={Thiago\bibnamedelima H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c606c201e92d03bec752e02f62eb079}{%
+           family={Godoy},
+           familyi={G\bibinitperiod},
+           given={Ricardo\bibnamedelima V.},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fe1b21b57f44b0113a02acbaf8a2b52}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Marcelo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{c1ef95c2152f809664dcd7f27f363ef2}
+      \strng{fullhash}{c1009efd349a85f4224daaf8510a63ab}
+      \strng{bibnamehash}{c1009efd349a85f4224daaf8510a63ab}
+      \strng{authorbibnamehash}{c1009efd349a85f4224daaf8510a63ab}
+      \strng{authornamehash}{c1ef95c2152f809664dcd7f27f363ef2}
+      \strng{authorfullhash}{c1009efd349a85f4224daaf8510a63ab}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Autonomous UAV inspection of confined industrial infrastructure, such as ventilation ducts, demands robust navigation policies where collisions are unacceptable. While Deep Reinforcement Learning (DRL) offers a powerful paradigm for developing such policies, it presents a critical trade-off between on-policy and off-policy algorithms. Off-policy methods promise high sample efficiency, a vital trait for minimizing costly and unsafe real-world fine-tuning. In contrast, on-policy methods often exhibit greater training stability, which is essential for reliable convergence in hazard-dense environments. This paper directly investigates this trade-off by comparing a leading on-policy algorithm, Proximal Policy Optimization (PPO), against an off-policy counterpart, Soft Actor-Critic (SAC), for precision flight in procedurally generated ducts within a high-fidelity simulator. Our results show that PPO consistently learned a stable, collision-free policy that completed the entire course. In contrast, SAC failed to find a complete solution, converging to a suboptimal policy that navigated only the initial segments before failure. This work provides evidence that for high-precision, safety-critical navigation tasks, the reliable convergence of a well-established on-policy method can be more decisive than the nominal sample efficiency of an off-policy algorithm.}
+      \field{day}{22}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{shorttitle}{Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}}
+      \field{title}{Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}: {{A Reinforcement Learning Approach}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/LARS69345.2025.11273007
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/7SLN6EHE/Tayar et al. - 2025 - Autonomous UAV Flight Navigation in Confined Spaces A Reinforcement Learning Approach.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2508.16807v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2508.16807v2
+      \endverb
+    \endentry
     \entry{undeExpandingRoleMultirotor2025}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=5478be1c2ff33827fe7428a046e0ce14}{%
@@ -4304,11 +4448,11 @@
       \keyw{autonomous landing area selection,monocular visual SLAM,UAV automatic landing}
     \endentry
   \enddatalist
-  \missing{aljalboutRoleActionSpace2024}
   \missing{esserActionSpaceDesign2024}
-  \missing{kaufmannBenchmarkComparisonLearned2022}
+  \missing{martiniPositionAgnosticAutonomous2022}
   \missing{moallaNoRepresentationNoTrust2024}
   \missing{singlaMemorybasedDeepReinforcement2021}
+  \missing{weiVisionBasedNavigation2025}
 \endrefsection
 \endinput
 
