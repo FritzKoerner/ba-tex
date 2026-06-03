@@ -1202,4 +1202,1008 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \pl@lab=\toks46
 ) (/usr/share/texlive/texmf-dist/tex/latex/tablefootnote/tablefootnote.sty
 Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
- (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacr
+ (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count462
+\calc@Bcount=\count463
+\calc@Adimen=\dimen290
+\calc@Bdimen=\dimen291
+\calc@Askip=\skip174
+\calc@Bskip=\skip175
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count464
+\calc@Cskip=\skip176
+) (/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+))) (/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count465
+\algocf@hangindent=\skip177
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip178
+\skiplinenumber=\skip179
+\skiprule=\skip180
+\skiphlne=\skip181
+\skiptext=\skip182
+\skiplength=\skip183
+\algomargin=\skip184
+\skipalgocfslide=\skip185
+\algowidth=\dimen292
+\inoutsize=\dimen293
+\inoutindent=\dimen294
+\interspacetitleruled=\dimen295
+\interspacealgoruled=\dimen296
+\interspacetitleboxruled=\dimen297
+\algocf@ruledwidth=\skip186
+\algocf@inoutbox=\box73
+\algocf@inputbox=\box74
+\AlCapSkip=\skip187
+\AlCapHSkip=\skip188
+\algoskipindent=\skip189
+\algocf@nlbox=\box75
+\algocf@hangingbox=\box76
+\algocf@untilbox=\box77
+\algocf@skipuntil=\skip190
+\algocf@capbox=\box78
+\algocf@lcaptionbox=\skip191
+\algoheightruledefault=\skip192
+\algoheightrule=\skip193
+\algotitleheightruledefault=\skip194
+\algotitleheightrule=\skip195
+\c@algocfline=\count466
+\c@algocfproc=\count467
+\c@algocf=\count468
+\algocf@algoframe=\box79
+\algocf@algobox=\box80
+))
+\@indexfile=\write4
+\openout4 = `Bachelorarbeit.idx'.
+
+
+Writing index file Bachelorarbeit.idx
+\@nomenclaturefile=\write5
+\openout5 = `Bachelorarbeit.nlo'.
+
+Package nomencl Info: Writing nomenclature file Bachelorarbeit.nlo on input line 79.
+(./Seitenstil.tex (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count469
+\Gm@cntv=\count470
+\c@Gm@tempcnt=\count471
+\Gm@bindingoffset=\dimen298
+\Gm@wd@mp=\dimen299
+\Gm@odd@mp=\dimen300
+\Gm@even@mp=\dimen301
+\Gm@layoutwidth=\dimen302
+\Gm@layoutheight=\dimen303
+\Gm@layouthoffset=\dimen304
+\Gm@layoutvoffset=\dimen305
+\Gm@dimlist=\toks47
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2023/02/27 1.9 listings language file
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+)
+\c@definition=\count472
+)
+
+LaTeX Warning: \include should only be used after \begin{document} on input line 91.
+
+(./Silbentrennung.tex)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
+File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 100.
+ (./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux) (./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux) (./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux) (./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux) (./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux) (./Inhalt/Erklaerung.aux))
+\openout1 = `Bachelorarbeit.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 100.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd
+File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
+)
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 100.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
+File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
+)
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 100.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
+File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
+)
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 100.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
+File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
+)
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
+LaTeX Font Info:    ... okay on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count473
+\scratchdimen=\dimen306
+\scratchbox=\box81
+\nofMPsegments=\count474
+\nofMParguments=\count475
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count476
+\MPscratchDim=\dimen307
+\MPnumerator=\count477
+\makeMPintoPDFobject=\count478
+\everyMPtoPDFconversion=\toks49
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\c@mv@tabular=\count479
+\c@mv@boldtabular=\count480
+LaTeX Info: Command `\dddot' is already robust on input line 100.
+LaTeX Info: Command `\ddddot' is already robust on input line 100.
+
+
+Package scrlayer-scrpage Warning: Very small foot height detected!
+(scrlayer-scrpage)                Using scrlayer-scrpage the foot height
+(scrlayer-scrpage)                should be at least \baselineskip, which is
+(scrlayer-scrpage)                21.75pt currently.
+(scrlayer-scrpage)                But foot height is currently 18.125pt only.
+(scrlayer-scrpage)                You may use
+(scrlayer-scrpage)                typearea option `footheight=21.75pt'
+(scrlayer-scrpage)                or load package `scrlayer-scrpage' with
+(scrlayer-scrpage)                option `singlespacing=true'
+(scrlayer-scrpage)                to avoid this warning.
+
+\c@lstlisting=\count481
+Package hyperref Info: Link coloring ON on input line 100.
+(./Bachelorarbeit.out) (./Bachelorarbeit.out)
+\@outlinefile=\write6
+\openout6 = `Bachelorarbeit.out'.
+
+Class scrreprt Info: loading recommended package `bookmark'.
+(scrreprt)           Using `bookmark' together with `hyperref' is recommended,
+(scrreprt)           because of handling of possible bookmark level gaps.
+(scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
+(scrreprt)           `bookmarkpackage=false' before \begin{document} and
+(scrreprt)           you can avoid this message adding:
+(scrreprt)             \usepackage{bookmark}
+(scrreprt)           before \begin{document} on input line 100.
+ (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+\BKM@id=\count482
+))
+Package biblatex Info: Trying to load language 'ngerman'...
+Package biblatex Info: ... file 'ngerman.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
+File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load language 'german'...
+Package biblatex Info: ... file 'german.lbx' found.
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
+File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
+))
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `Bachelorarbeit.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'Bachelorarbeit.bbl' found.
+ (./Bachelorarbeit.bbl)
+Package biblatex Info: Reference section=0 on input line 100.
+Package biblatex Info: Reference segment=0 on input line 100.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 731.23584pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=441.01773pt
+* \textheight=731.23584pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-41.0131pt
+* \headheight=22.76219pt
+* \headsep=11.38109pt
+* \topskip=12.0pt
+* \footskip=22.76219pt
+* \marginparwidth=59.7508pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\openout2 = `Deckblatt.aux'.
+
+(./Deckblatt.tex
+<Bilder/Uni-L.png, id=4, 301.94406pt x 142.51643pt>
+File: Bilder/Uni-L.png Graphic file (type png)
+<use Bilder/Uni-L.png>
+Package pdftex.def Info: Bilder/Uni-L.png  used on input line 26.
+(pdftex.def)             Requested size: 176.40439pt x 83.26195pt.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 12.0pt on input line 40.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.4pt on input line 59.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 14.4pt on input line 59.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1minntx.fd
+File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./Bilder/Uni-L.png>])
+\openout2 = `Inhalt/Abstract.aux'.
+
+ (./Inhalt/Abstract.tex
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+LaTeX Font Info:    Trying to load font information for T1+Arimo-TLF on input line 1.
+(/usr/share/texlive/texmf-dist/tex/latex/arimo/T1Arimo-TLF.fd
+File: T1Arimo-TLF.fd 2017/01/04 (autoinst) Font definitions for T1/Arimo-TLF.
+)
+LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
+(Font)              scaled to size 11.39996pt on input line 1.
+LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
+(Font)              scaled to size 11.39996pt on input line 1.
+LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
+(Font)              scaled to size 13.29996pt on input line 1.
+) [2
+
+
+
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc}] (./Bachelorarbeit.toc
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
+
+
+Package scrlayer-scrpage Warning: \footheight to low.
+(scrlayer-scrpage)                At least 21.74998pt needed,
+(scrlayer-scrpage)                but only 18.125pt found.
+(scrlayer-scrpage)                I'll enlarge \footheight, for further
+(scrlayer-scrpage)                processing, but you should do this yourself,
+(scrlayer-scrpage)                e.g., using
+(scrlayer-scrpage)                  \setlength{\footheight}{21.74998pt}
+(scrlayer-scrpage)                in your preamble.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 29.
+
+[1
+
+
+
+
+] [2])
+\tf@toc=\write7
+\openout7 = `Bachelorarbeit.toc'.
+
+ [3] (./Bachelorarbeit.lof
+Overfull \hbox (25.61505pt too wide) in paragraph at lines 10--10
+ \T1/ntxtlf/m/n/12 ren die Kor-rid-or-gren-zen, graue Flä-chen die sche-ma-ti-schen Hindernis-Begrenzungsboxen. []  
+ []
+
+)
+\tf@lof=\write8
+\openout8 = `Bachelorarbeit.lof'.
+
+ [4
+
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] (./Bachelorarbeit.lot
+Overfull \hbox (0.78583pt too wide) in paragraph at lines 5--5
+ [][] []\T1/ntxtlf/m/n/12 Vergleich lern-ba-sier-ter Sys-te-me zur au-to-no-men Droh-nen-na-vi-ga-ti-on und -landung. 
+ []
+
+)
+\tf@lot=\write9
+\openout9 = `Bachelorarbeit.lot'.
+
+ [5
+
+
+] (./Bachelorarbeit.loe)
+\tf@loe=\write10
+\openout10 = `Bachelorarbeit.loe'.
+
+ (./Inhalt/Glossar.tex) (./Bachelorarbeit.nls [6
+
+
+]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+) [7
+
+]
+\openout2 = `Inhalt/Einleitung.aux'.
+
+ (./Inhalt/Einleitung.tex
+chapter 1.
+
+Class scrreprt Warning: \float@addtolists detected!
+(scrreprt)              Implementation of \float@addtolist became
+(scrreprt)              deprecated in KOMA-Script v3.01 2008/11/14 and
+(scrreprt)              has been replaced by several more flexible
+(scrreprt)              features of package `tocbasic`.
+(scrreprt)              Since Version 3.12 support for deprecated
+(scrreprt)              \float@addtolist interface has been
+(scrreprt)              restricted to only some of the KOMA-Script
+(scrreprt)              features and been removed from others.
+(scrreprt)              Loading of package `scrhack' may help to
+(scrreprt)              avoid this warning, if you are using a
+(scrreprt)              a package that still implements the
+(scrreprt)              deprecated \float@addtolist interface.
+
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[1
+
+
+
+
+
+]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/sc' will be
+(Font)              scaled to size 12.0pt on input line 31.
+) [2] [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}]
+\openout2 = `"Inhalt/Fachliche Grundlagen.aux"'.
+
+ (./Inhalt/Fachliche Grundlagen.tex
+chapter 2.
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+
+Overfull \hbox (6.97186pt too wide) in paragraph at lines 24--25
+[]\T1/ntxtlf/m/n/12 Die In-ter-ak-ti-on zwi-schen Agent und Um-ge-bung er-folgt in dis-kre-ten Zeit-schrit-ten $\OML/ntxmi/m/it/12 t \U/ntxmia/m/it/12 = \OT1/minntx/m/n/12 0\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 1\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 2\OML/ntxmi/m/it/12 ; [] $\T1/ntxtlf/m/n/12 .
+ []
+
+
+
+pdfTeX warning: pdflatex (file ./Bilder/mdp_agent_environment.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Bilder/mdp_agent_environment.pdf, id=335, 398.99063pt x 248.42813pt>
+File: Bilder/mdp_agent_environment.pdf Graphic file (type pdf)
+<use Bilder/mdp_agent_environment.pdf>
+Package pdftex.def Info: Bilder/mdp_agent_environment.pdf  used on input line 32.
+(pdftex.def)             Requested size: 286.65883pt x 178.49283pt.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.95pt on input line 33.
+[4
+
+
+
+
+] [5 <./Bilder/mdp_agent_environment.pdf>] [6]
+Overfull \hbox (20.8258pt too wide) in paragraph at lines 79--81
+\T1/ntxtlf/m/n/12 TD-Verfahren bil-den die Grund-la-ge der meis-ten mo-der-nen Reinforcement-Learning-Algorithmen:
+ []
+
+[7]
+<Bilder/ppo_clipping.pdf, id=399, 368.57701pt x 151.767pt>
+File: Bilder/ppo_clipping.pdf Graphic file (type pdf)
+<use Bilder/ppo_clipping.pdf>
+Package pdftex.def Info: Bilder/ppo_clipping.pdf  used on input line 136.
+(pdftex.def)             Requested size: 374.86775pt x 154.3626pt.
+ [8]
+Overfull \hbox (28.755pt too wide) in paragraph at lines 173--174
+\T1/ntxtlf/b/sc/12 fi-ka-ti-on). Kein Soft-max, kein FC-Klassifikationskopf, kei-ne Aktivierungsfunktions-
+ []
+
+
+Overfull \hbox (92.77971pt too wide) in paragraph at lines 173--174
+\T1/ntxtlf/b/sc/12 Details. Quel-len: Le-Cun, Ben-gio, Hin-ton 2015 (Na-ture ``De-ep lear-ning'', doi:10.1038/nature14539)
+ []
+
+) [9 <./Bilder/ppo_clipping.pdf>] [10]
+\openout2 = `"Inhalt/Stand der Forschung.aux"'.
+
+ (./Inhalt/Stand der Forschung.tex
+chapter 3.
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[11
+
+
+
+
+] [12] [13]
+Overfull \hbox (3.16182pt too wide) in paragraph at lines 35--36
+\T1/ntxtlf/m/n/12 inspirierte DRL-Framework über-trifft ei-ne kon-ven-tio-nel-le PID-Regler-Baseline (Proportional-
+ []
+
+[14] [15] [16] [17]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
+(Font)              scaled to size 10.95pt on input line 67.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.0pt on input line 69.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 7.3pt on input line 75.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.5pt on input line 75.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.0pt on input line 92.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.2pt on input line 93.
+ [18]) [19]
+\openout2 = `Inhalt/Methodik.aux'.
+
+ (./Inhalt/Methodik.tex
+chapter 4.
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+
+Overfull \hbox (0.13284pt too wide) in paragraph at lines 17--21
+\T1/ntxtlf/m/n/12 Rollout-Batches aus bis zu 512 gleich-zei-ti-gen Um-ge-bungs-in-stan-zen. Ein Sim-to-Real-Transfer
+ []
+
+
+Overfull \hbox (5.59299pt too wide) in paragraph at lines 22--34
+\T1/ntxtlf/m/n/12 und Ter-mi-nie-rungs-be-din-gun-gen. Ab-schnitt [][]4.3[][] be-schreibt die CNN-MLP-Netzwerkarchitektur,
+ []
+
+
+Overfull \hbox (25.00272pt too wide) in paragraph at lines 22--34
+\T1/ntxtlf/m/n/12 schnitt [][]4.6[][]), dem Trai-nings-pro-zess (Ab-schnitt [][]4.7[][]) und dem Eva-lua-ti-ons-pro-to-koll (Ab-schnitt [][]4.8[][]). 
+ []
+
+[20
+
+
+
+
+]
+
+pdfTeX warning: pdflatex (file ./Bilder/pipeline.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Bilder/pipeline.pdf, id=627, 587.19376pt x 96.36pt>
+File: Bilder/pipeline.pdf Graphic file (type pdf)
+<use Bilder/pipeline.pdf>
+Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 87.
+(pdftex.def)             Requested size: 441.01773pt x 72.37125pt.
+[21 <./Bilder/pipeline.pdf>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.95pt on input line 133.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 166.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 166.
+ [22] [23]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 230.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 230.
+ [24{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+Overfull \hbox (7.49359pt too wide) in paragraph at lines 279--282
+\T1/ntxtlf/b/n/12 Absturz.\T1/ntxtlf/m/n/12 Die Ab-sturz-stra-fe wird bei Ver-let-zung ei-ner Ab-bruch-be-din-gung (vgl. Ab-schnitt [][]4.2.5[][])
+ []
+
+[25] [26]
+
+pdfTeX warning: pdflatex (file ./Bilder/architecture.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Bilder/architecture.pdf, id=743, 782.925pt x 199.49532pt>
+File: Bilder/architecture.pdf Graphic file (type pdf)
+<use Bilder/architecture.pdf>
+Package pdftex.def Info: Bilder/architecture.pdf  used on input line 395.
+(pdftex.def)             Requested size: 441.01773pt x 112.37411pt.
+[27 <./Bilder/architecture.pdf>]
+Overfull \hbox (1.27885pt too wide) in paragraph at lines 458--460
+[]\T1/ntxtlf/m/n/12 Statt Clip-ping wird da-her ei-ne in-ver-tier-ba-re, dif-fe-ren-zier-ba-re Trans-for-ma-ti-on ver-wen-det ([]Haar-
+ []
+
+
+Overfull \hbox (32.50314pt too wide) in paragraph at lines 469--473
+\T1/ntxtlf/m/n/12 Der Kor-rek-tur-term $\LMS/ntxsy/m/n/12 ^^@ [][] []¹\OT1/minntx/m/n/12 1 \LMS/ntxsy/m/n/12 ^^@ [][]¹\OML/ntxmi/m/it/12 u[]\LMS/ntxsy/m/n/12 ºº$ \T1/ntxtlf/m/n/12 ist die Log-Jacobi-Determinante der Tanh-Transformation
+ []
+
+[28] [29]
+<Bilder/corridor_geometry.pdf, id=917, 346.69325pt x 292.20067pt>
+File: Bilder/corridor_geometry.pdf Graphic file (type pdf)
+<use Bilder/corridor_geometry.pdf>
+Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 586.
+(pdftex.def)             Requested size: 374.86775pt x 315.95099pt.
+
+Overfull \hbox (35.45345pt too wide) in paragraph at lines 597--604
+\T1/ntxtlf/m/n/12 Als Hin-der-nis-se die-nen sechs 3D-Objekte aus dem Goo-gle Scan-ned Ob-jects Da-ten-satz (GSO) ([]Downs
+ []
+
+[30] [31 <./Bilder/corridor_geometry.pdf>] [32] [33] [34]
+Overfull \hbox (13.80922pt too wide) in paragraph at lines 833--843
+[]\T1/ntxtlf/m/n/12 Die Kol-li-si-ons-er-ken-nung wird ge-gen-über der Trai-nings-um-ge-bung an-ge-passt: Aus dem Weinberg-
+ []
+
+[35]
+<Bilder/vineyard_targets.pdf, id=997, 454.4552pt x 423.02669pt>
+File: Bilder/vineyard_targets.pdf Graphic file (type pdf)
+<use Bilder/vineyard_targets.pdf>
+Package pdftex.def Info: Bilder/vineyard_targets.pdf  used on input line 856.
+(pdftex.def)             Requested size: 330.76329pt x 307.89677pt.
+) [36 <./Bilder/vineyard_targets.pdf>]
+\openout2 = `Inhalt/Ergebnisse.aux'.
+
+ (./Inhalt/Ergebnisse.tex
+chapter 5.
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+<Bilder/figures/training/Train_mean_reward.pdf, id=1058, 520.86116pt x 342.0184pt>
+File: Bilder/figures/training/Train_mean_reward.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Train_mean_reward.pdf>
+Package pdftex.def Info: Bilder/figures/training/Train_mean_reward.pdf  used on input line 19.
+(pdftex.def)             Requested size: 211.68661pt x 139.00203pt.
+<Bilder/figures/training/Policy_mean_std.pdf, id=1059, 515.12096pt x 342.0184pt>
+File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Policy_mean_std.pdf>
+Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on input line 21.
+(pdftex.def)             Requested size: 211.68661pt x 140.55202pt.
+<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=1065, 520.86116pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_crash_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_crash_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_crash_raw.pdf  used on input line 51.
+(pdftex.def)             Requested size: 211.68661pt x 139.00203pt.
+<Bilder/figures/training/Episode_rew_success_raw.pdf, id=1066, 511.60783pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_success_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_success_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_success_raw.pdf  used on input line 53.
+(pdftex.def)             Requested size: 211.68661pt x 141.51749pt.
+[37
+
+
+
+
+ <./Bilder/figures/training/Train_mean_reward.pdf> <./Bilder/figures/training/Policy_mean_std.pdf>]
+<Bilder/figures/eval/phase1_outcomes.pdf, id=1151, 263.52515pt x 200.07372pt>
+File: Bilder/figures/eval/phase1_outcomes.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/phase1_outcomes.pdf>
+Package pdftex.def Info: Bilder/figures/eval/phase1_outcomes.pdf  used on input line 110.
+(pdftex.def)             Requested size: 286.65883pt x 217.65471pt.
+ [38 <./Bilder/figures/training/Episode_rew_crash_raw.pdf> <./Bilder/figures/training/Episode_rew_success_raw.pdf>]
+<Bilder/figures/eval/trajectory_ep1.pdf, id=1237, 459.6372pt x 475.57175pt>
+File: Bilder/figures/eval/trajectory_ep1.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/trajectory_ep1.pdf>
+Package pdftex.def Info: Bilder/figures/eval/trajectory_ep1.pdf  used on input line 141.
+(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
+<Bilder/figures/eval/trajectory_ep2.pdf, id=1238, 459.6372pt x 475.57175pt>
+File: Bilder/figures/eval/trajectory_ep2.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/trajectory_ep2.pdf>
+Package pdftex.def Info: Bilder/figures/eval/trajectory_ep2.pdf  used on input line 143.
+(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
+<Bilder/figures/eval/trajectory_ep3.pdf, id=1239, 459.6372pt x 475.57175pt>
+File: Bilder/figures/eval/trajectory_ep3.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/trajectory_ep3.pdf>
+Package pdftex.def Info: Bilder/figures/eval/trajectory_ep3.pdf  used on input line 145.
+(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
+ [39 <./Bilder/figures/eval/phase1_outcomes.pdf>]
+<Bilder/figures/eval/phase2_outcomes.pdf, id=1289, 263.52515pt x 200.07372pt>
+File: Bilder/figures/eval/phase2_outcomes.pdf Graphic file (type pdf)
+<use Bilder/figures/eval/phase2_outcomes.pdf>
+Package pdftex.def Info: Bilder/figures/eval/phase2_outcomes.pdf  used on input line 202.
+(pdftex.def)             Requested size: 286.65883pt x 217.65471pt.
+ [40 <./Bilder/figures/eval/trajectory_ep1.pdf> <./Bilder/figures/eval/trajectory_ep2.pdf> <./Bilder/figures/eval/trajectory_ep3.pdf>] [41 <./Bilder/figures/eval/phase2_outcomes.pdf>]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 10.0pt on input line 290.
+) [42] [43]
+\openout2 = `Inhalt/Diskussion.aux'.
+
+ (./Inhalt/Diskussion.tex
+chapter 6.
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[44
+
+
+
+
+]
+Overfull \hbox (19.80084pt too wide) in paragraph at lines 71--94
+\T1/ntxtlf/m/n/12 Bo-den-kol-li-sio-nen tre-ten nicht auf. Mit ober-flä-chen-ba-sier-ter Kol-li-si-ons-er-ken-nung (Ab-schnitt [][]5.2.1[][])
+ []
+
+[45] [46]
+<Bilder/perceptual_aliasing/depth_comparison.pdf, id=1533, 572.73152pt x 578.28847pt>
+File: Bilder/perceptual_aliasing/depth_comparison.pdf Graphic file (type pdf)
+<use Bilder/perceptual_aliasing/depth_comparison.pdf>
+Package pdftex.def Info: Bilder/perceptual_aliasing/depth_comparison.pdf  used on input line 190.
+(pdftex.def)             Requested size: 374.86775pt x 378.50375pt.
+ [47] [48 <./Bilder/perceptual_aliasing/depth_comparison.pdf>] [49]
+Overfull \hbox (34.10481pt too wide) in paragraph at lines 282--294
+\T1/ntxtlf/m/n/12 Alle Er-geb-nis-se ba-sie-ren auf ei-nem ein-zi-gen Trai-nings-lauf (Seed). Die Bootstrap-Konfidenzintervalle
+ []
+
+) [50] [51]
+\openout2 = `"Inhalt/Fazit und Ausblick.aux"'.
+
+ (./Inhalt/Fazit und Ausblick.tex
+chapter 7.
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[52
+
+
+
+
+]) [53] [54]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+(./Bachelorarbeit.loah)
+\tf@loah=\write11
+\openout11 = `Bachelorarbeit.loah'.
+
+ [7
+
+
+
+]
+\openout2 = `Inhalt/Anhang.aux'.
+
+ (./Inhalt/Anhang.tex
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+<Bilder/figures/training/Train_mean_episode_length.pdf, id=1642, 522.1472pt x 342.0184pt>
+File: Bilder/figures/training/Train_mean_episode_length.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Train_mean_episode_length.pdf>
+Package pdftex.def Info: Bilder/figures/training/Train_mean_episode_length.pdf  used on input line 6.
+(pdftex.def)             Requested size: 211.68661pt x 138.6576pt.
+<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1643, 504.58159pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_close_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_close_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_close_raw.pdf  used on input line 8.
+(pdftex.def)             Requested size: 211.68661pt x 143.48495pt.
+<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1644, 524.37428pt x 342.0184pt>
+File: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>
+Package pdftex.def Info: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf  used on input line 18.
+(pdftex.def)             Requested size: 211.68661pt x 138.07309pt.
+File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
+<use Bilder/figures/training/Policy_mean_std.pdf>
+Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on input line 20.
+(pdftex.def)             Requested size: 211.68661pt x 140.55202pt.
+[8
+
+
+
+ <./Bilder/figures/training/Train_mean_episode_length.pdf> <./Bilder/figures/training/Episode_rew_close_raw.pdf> <./Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[9
+
+
+]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+[10
+
+
+]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+) [11
+
+
+]
+chapter without number
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
+(Font)              scaled to size 12.0pt on input line 245.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 245.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [12
+
+
+
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}] [13] [14] [15] [16]
+Overfull \hbox (1.98267pt too wide) in paragraph at lines 246--246
+\T1/ntxtlf/m/n/12 Stig Pe-ter-sen, Charles Be-at-tie, Amir Sa-dik, Io-an-nis An-to-no-glou, He-len King, Dharshan
+ []
+
+
+Overfull \hbox (0.10036pt too wide) in paragraph at lines 246--246
+[][]\T1/ntxtlf/m/n/12 Polvara, Ric-car-do, Mas-si-mi-lia-no Pa-ta-c-chio-la, Marc Han-hei-de und Ger-hard Neu-mann (25. Feb.
+ []
+
+
+Overfull \hbox (55.5361pt too wide) in paragraph at lines 246--246
+\T1/ntxtlf/m/n/12 main Ran-do-mi-za-ti-on^^P. In: \T1/ntxtlf/m/it/12 Ro-bo-tics \T1/ntxtlf/m/n/12 9.1. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2218-6581. \T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / robotics9010008$[][]\T1/ntxtlf/m/n/12 .
+ []
+
+
+Overfull \hbox (4.1798pt too wide) in paragraph at lines 246--246
+\T1/ntxtlf/m/sc/12 url\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 https : / / www . mdpi . com / 2218 -[] 6581 / 9 / 1 / 8$[][] \T1/ntxtlf/m/n/12 (be-sucht am 07.02.2026). 
+ []
+
+[17] [18] [19]
+Overfull \hbox (19.9172pt too wide) in paragraph at lines 246--246
+\T1/pcr/m/n/12 www . sciencedirect . com / science / article / pii / S0168169925009081$[][]
+ []
+
+[20]
+Overfull \hbox (19.39218pt too wide) in paragraph at lines 246--246
+\T1/ntxtlf/m/n/12 ments^^P. In: \T1/ntxtlf/m/it/12 Elec-tro-nics \T1/ntxtlf/m/n/12 7.5. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2079-9292. \T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / electronics7050073$[][]\T1/ntxtlf/m/n/12 .
+ []
+
+[21]
+\openout2 = `Inhalt/Erklaerung.aux'.
+
+ (./Inhalt/Erklaerung.tex
+chapter without number
+
+Class scrreprt Warning: Redefinition of \@makechapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makechapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makechapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+) [22
+
+
+]
+
+Package caption Warning: Unused \captionsetup[algocf] on input line 218.
+See the caption package documentation for explanation.
+
+(./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux) (./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux) (./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux) (./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux) (./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux) (./Inhalt/Erklaerung.aux))
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
+\openout1 = `Bachelorarbeit.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 36529 strings out of 474222
+ 681487 string characters out of 5748733
+ 1949975 words of memory out of 5000000
+ 57798 multiletter control sequences out of 15000+600000
+ 722475 words of font info for 305 fonts, out of 8000000 for 9000
+ 1146 hyphenation exceptions out of 8191
+ 108i,20n,125p,10960b,4026s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/tex-gyre/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on Bachelorarbeit.pdf (79 pages, 2489487 bytes).
+PDF statistics:
+ 2364 PDF objects out of 2487 (max. 8388607)
+ 1657 compressed objects within 17 object streams
+ 282 named destinations out of 1000 (max. 500000)
+ 733 words of extra memory for PDF output out of 10000 (max. 10000000)
+
