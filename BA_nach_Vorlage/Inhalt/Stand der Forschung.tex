@@ -45,14 +45,14 @@ Dass Deep Reinforcement Learning auch unter dynamischen Umgebungsbedingungen eff
 
 Gemeinsam zeigen diese Arbeiten, dass tiefenbildbasierte lernende Systeme Hindernisse zuverlässig vermeiden können, unabhängig davon ob die Tiefeninformation direkt gemessen \autocite{loquercioLearningHighspeedFlight2021, xuNavRLLearningSafe2024} oder aus RGB-Bildern geschätzt wird \autocite{kimMonocularVisionbasedAutonomous2022}. Allerdings testen alle genannten Systeme in strukturierten Innenräumen oder Waldumgebungen; Evaluationen in landwirtschaftlichen Umgebungen mit Rebzeilen, niedrigen Baumkronen oder dichter Bodenvegetation fehlen.
 
-Vereinzelte Arbeiten adressieren die Navigation in landwirtschaftlichen Umgebungen gezielt. \textcite{weiVisionBasedNavigation2025} demonstrieren ein lernbasiertes UAV-System für die autonome Navigation durch Obstplantagen-Reihen: Ein VAE-Controller, trainiert mittels Imitation Learning aus Expertendemonstrationen, steuert einen Quadrotor auf Basis einer front-montierten RGB-Kamera kollisionsfrei zwischen Baumreihen. Das System generalisiert auf ungesehene Umgebungen und kommt ohne GPS aus, beschränkt sich jedoch auf horizontale Reihennavigation. Für Weinberge zeigen \textcite{martiniPositionAgnosticAutonomous2022}, dass ein DRL-Agent auf Basis von Tiefenbildern ohne Positionsinformation durch simulierte Rebzeilen navigieren kann, allerdings mit einem Bodenroboter statt einer Drohne. Beide Arbeiten bestätigen, dass Vegetation in landwirtschaftlichen Umgebungen eine eigenständige Navigationsherausforderung darstellt, die durch lernbasierte Ansätze mit minimaler Sensorik adressiert werden kann. Keine der Arbeiten behandelt jedoch die vertikale Landung zwischen Vegetationsstrukturen, die eine kombinierte Hindernisvermeidung und Präzisionspositionierung erfordert.
+Vereinzelte Arbeiten adressieren die Navigation in landwirtschaftlichen Umgebungen gezielt. \textcite{weiVisionbasedNavigationUnmanned2025} demonstrieren ein lernbasiertes UAV-System für die autonome Navigation durch Obstplantagen-Reihen: Ein VAE-Controller, trainiert mittels Imitation Learning aus Expertendemonstrationen, steuert einen Quadrotor auf Basis einer front-montierten RGB-Kamera kollisionsfrei zwischen Baumreihen. Das System generalisiert auf ungesehene Umgebungen und kommt ohne GPS aus, beschränkt sich jedoch auf horizontale Reihennavigation. Für Weinberge zeigen \textcite{martiniPositionAgnosticAutonomousNavigation2022}, dass ein DRL-Agent auf Basis von Tiefenbildern ohne Positionsinformation durch simulierte Rebzeilen navigieren kann, allerdings mit einem Bodenroboter statt einer Drohne. Beide Arbeiten bestätigen, dass Vegetation in landwirtschaftlichen Umgebungen eine eigenständige Navigationsherausforderung darstellt, die durch lernbasierte Ansätze mit minimaler Sensorik adressiert werden kann. Keine der Arbeiten behandelt jedoch die vertikale Landung zwischen Vegetationsstrukturen, die eine kombinierte Hindernisvermeidung und Präzisionspositionierung erfordert.
 
 \section{Reinforcement Learning für Drohnensteuerung}
 \label{sec:architektur}
 
 Über die Wahl der Sensorik hinaus beeinflusst die Steuerungsarchitektur die Leistungsfähigkeit lernbasierter Drohnensysteme maßgeblich, insbesondere der Aktionsraum und die Abstraktionsebene der Regelung. Die in den Abschnitten~\ref{sec:landen} und~\ref{sec:tiefenbild-oa} betrachteten Arbeiten lassen sich auch entlang dieser Dimension einordnen: End-to-End-Systeme wie \autocite{polvaraSimtoRealQuadrotorLanding2020, kimMonocularVisionbasedAutonomous2022, ladoszAutonomousLandingMoving2024} erzeugen Bewegungskommandos direkt aus Sensorinput, während hierarchische Ansätze wie \autocite{loquercioLearningHighspeedFlight2021, bartolomeiAutonomousEmergencyLanding2022} die Policy-Ausgabe an einen nachgeschalteten Regler delegieren. \textcite{xuNavRLLearningSafe2024} kombinieren beide Paradigmen, indem sie eine PPO-Policy mit einem regelbasierten Safety Shield ergänzen.
 
-Die Wahl der Abstraktionsebene beeinflusst die Lernperformance substanziell: \textcite{esserActionSpaceDesign2024} zeigen in einer systematischen Studie über verschiedene Roboterplattformen und Aufgaben, dass der optimale Aktionsraum stark aufgabenabhängig ist und unterschiedliche Abstraktionsebenen zu deutlich verschiedenem Explorationsverhalten und finaler Performance führen. Speziell für Quadrotoren vergleichen \textcite{kaufmannBenchmarkComparisonLearned2022} drei Abstraktionsebenen: Geschwindigkeitskommandos, kollektiven Schub mit Drehraten sowie direkte Einzelmotorschübe. Die mittlere Ebene (Schub und Drehraten) erweist sich als beste Balance zwischen Agilität und Transferrobustheit; die höchste Abstraktion (Geschwindigkeit) schränkt die Manövrierfähigkeit ein, während die niedrigste (Einzelmotorschub) zu latenzempfindlich für den Realtransfer ist.
+Die Wahl der Abstraktionsebene beeinflusst die Lernperformance substanziell: \textcite{esserActionSpaceDesign} zeigen in einer systematischen Studie über verschiedene Roboterplattformen und Aufgaben, dass der optimale Aktionsraum stark aufgabenabhängig ist und unterschiedliche Abstraktionsebenen zu deutlich verschiedenem Explorationsverhalten und finaler Performance führen. Speziell für Quadrotoren vergleichen \textcite{kaufmannBenchmarkComparisonLearned2022} drei Abstraktionsebenen: Geschwindigkeitskommandos, kollektiven Schub mit Drehraten sowie direkte Einzelmotorschübe. Die mittlere Ebene (Schub und Drehraten) erweist sich als beste Balance zwischen Agilität und Transferrobustheit; die höchste Abstraktion (Geschwindigkeit) schränkt die Manövrierfähigkeit ein, während die niedrigste (Einzelmotorschub) zu latenzempfindlich für den Realtransfer ist.
 
 Neben der Steuerungsarchitektur hat sich PPO als verbreiteter Trainingsalgorithmus für RL-basierte Drohnensteuerung etabliert. Als Policy-Gradient-Verfahren eignet sich PPO für die kontinuierlichen Aktionsräume der Drohnensteuerung (vgl.\ Abschnitt~\ref{subsec:ppo_clip}). Da Reinforcement Learning grundsätzlich große Datenmengen benötigt, hat sich GPU-parallele Simulation als effektiver Ansatz etabliert: \textcite{rudinLearningWalkMinutes2022} zeigen, dass massiv-parallele Simulation mit hunderten bis tausenden Umgebungsinstanzen die Trainingszeit drastisch reduziert und schnellere Konvergenz ermöglicht. PPO eignet sich als On-Policy-Verfahren für dieses Paradigma, da es die parallel erzeugten Daten direkt verarbeitet und keinen Replay Buffer benötigt. Obwohl Off-Policy-Verfahren wie SAC eine höhere Sample-Effizienz bieten, zeigen \textcite{tayarAutonomousUAVFlight2025}, dass PPO bei sicherheitskritischen Präzisionsaufgaben in beengten Räumen zuverlässiger konvergiert als SAC. In den in diesem Kapitel betrachteten Arbeiten setzen \textcite{bartolomeiAutonomousEmergencyLanding2022}, \textcite{xuNavRLLearningSafe2024} und \textcite{kaufmannBenchmarkComparisonLearned2022} PPO ein; \textcite{kaufmannChampionlevelDroneRacing2023} demonstrieren den bislang eindrucksvollsten Einsatz, bei dem ein ausschließlich in Simulation trainiertes System drei menschliche Weltmeister im physischen Drohnenrennen schlägt.
 
@@ -64,7 +64,7 @@ Tabelle~\ref{tab:vergleich-sdf} stellt die in diesem Kapitel betrachteten Arbeit
 
 \begin{table}[htbp]
 \centering
-\caption{Vergleich der betrachteten Arbeiten zur autonomen Drohnennavigation und -landung. \emph{Hind.}: aktive Hindernisvermeidung; \emph{Landung}: Präzisionslandung als Teil der Aufgabe.}
+\caption{Vergleich lernbasierter Systeme zur autonomen Drohnennavigation und -landung. Die Spalten \emph{Hind.} und \emph{Landung} kennzeichnen, ob das System aktive Hindernisvermeidung bzw.\ Präzisionslandung adressiert.}
 \label{tab:vergleich-sdf}
 \footnotesize
 \setlength{\tabcolsep}{4pt}
@@ -75,24 +75,23 @@ Arbeit & Sensorik & Methode & Akt.-raum & Hind. & Umgebung & Landung \\
 \textcite{polvaraSimtoRealQuadrotorLanding2020} & Mono RGB & DQN & diskret & -- & Indoor & $\checkmark$ \\
 \textcite{ladoszAutonomousLandingMoving2024} & Mono RGB, IMU & DrQv2 & kont. & -- & Indoor & $\checkmark$ \\
 \textcite{yangMonocularVisionSLAMBased2018} & Mono RGB & SLAM & -- & $\checkmark$ & Outdoor & $\checkmark$ \\
-\textcite{bartolomeiAutonomousEmergencyLanding2022} & Mono RGB\textsuperscript{a} & PPO & diskret & $\checkmark$ & Outdoor & $\checkmark$ \\
+\textcite{bartolomeiAutonomousEmergencyLanding2022} & Tiefe, Semantik & PPO & diskret & $\checkmark$ & Outdoor & $\checkmark$ \\
 \textcite{peterTornadoDroneBioinspiredDRLbased2024} & Vicon, IMU & TD3 & kont. & -- & Indoor & $\checkmark$ \\
 \addlinespace
 \textcite{loquercioLearningHighspeedFlight2021} & Stereo Tiefe, IMU & IL & kont. & $\checkmark$ & Outdoor & -- \\
-\textcite{kimMonocularVisionbasedAutonomous2022} & Mono RGB\textsuperscript{b} & DQN & diskret & $\checkmark$ & Indoor & -- \\
+\textcite{kimMonocularVisionbasedAutonomous2022} & Mono RGB, Tiefe & DQN & diskret & $\checkmark$ & Indoor & -- \\
 \textcite{xuNavRLLearningSafe2024} & Tiefe, Zustand & PPO & kont. & $\checkmark$ & Indoor & -- \\
-\textcite{weiVisionBasedNavigation2025} & Mono RGB & IL & kont. & $\checkmark$ & Agrar & -- \\
-\textcite{martiniPositionAgnosticAutonomous2022}\textsuperscript{c} & Tiefe & SAC & kont. & $\checkmark$ & Agrar & -- \\
+\textcite{weiVisionbasedNavigationUnmanned2025} & Mono RGB & IL & kont. & $\checkmark$ & Agrar & -- \\
+\textcite{martiniPositionAgnosticAutonomousNavigation2022}\textsuperscript{a} & Tiefe & SAC & kont. & $\checkmark$ & Agrar & -- \\
 \addlinespace
-Eigene Arbeit & Tiefe, Zustand & PPO & kont. & $\checkmark$ & Agrar & $\checkmark$ \\
+Eigene Arbeit\textsuperscript{b} & Tiefe, Zustand & PPO & kont. & $\checkmark$ & Agrar & $\checkmark$ \\
 \bottomrule
 \end{tabular}
 
 \smallskip
 {\scriptsize
-\textsuperscript{a} Eingabe: abgeleitete Tiefen- und Segmentierungsbilder. \quad
-\textsuperscript{b} Eingabe: aus RGB geschätzte Tiefenbilder. \quad
-\textsuperscript{c} Bodenroboter (UGV).
+\textsuperscript{a} Bodenroboter (UGV). \quad
+\textsuperscript{b} Training in abstrakter Korridorumgebung; Evaluation in simuliertem Weinberg (Sim-to-Sim).
 }
 \end{table}
 
