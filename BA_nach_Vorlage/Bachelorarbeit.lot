@@ -2,17 +2,17 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Vergleich der betrachteten Arbeiten zur autonomen Drohnennavigation und -landung. \emph {Hind.}: aktive Hindernisvermeidung; \emph {Landung}: Präzisionslandung als Teil der Aufgabe.}}{17}{table.caption.38}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Vergleich lernbasierter Systeme zur autonomen Drohnennavigation und -landung. Die Spalten \emph {Hind.} und \emph {Landung} kennzeichnen, ob das System aktive Hindernisvermeidung bzw.\ Präzisionslandung adressiert.}}{18}{table.caption.37}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$.}}{21}{table.caption.46}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}}{24}{table.caption.60}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{28}{table.caption.70}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{31}{table.caption.82}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$.}}{22}{table.caption.45}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}}{25}{table.caption.59}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces PPO-Hyperparameter der vorliegenden Arbeit.}}{29}{table.caption.69}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{32}{table.caption.81}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Konvergenzgeschwindigkeit und Checkpoint-Selektion}}{37}{table.caption.93}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Vergleich AABB- und oberflächenbasierte Kollisionserkennung}}{39}{table.caption.98}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Sensitivitätsanalyse des Erfolgsradius in Phase~2}}{41}{table.caption.102}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Vergleich RL-Agent und RRT-Connect}}{41}{table.caption.104}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Konvergenzgeschwindigkeit und Checkpoint-Selektion}}{38}{table.caption.92}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Vergleich AABB- und oberflächenbasierte Kollisionserkennung}}{40}{table.caption.97}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Sensitivitätsanalyse des Erfolgsradius in Phase~2}}{42}{table.caption.101}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Vergleich RL-Agent und RRT-Connect}}{42}{table.caption.103}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

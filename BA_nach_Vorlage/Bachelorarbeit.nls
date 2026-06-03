@@ -1,6 +1,19 @@
 
 \begin{thenomenclature} 
 \nomgroup{A}
+  \item [{AABB}]\begingroup Axis-Aligned Bounding Box\nomeqref {0.0}\nompageref{VI}
+  \item [{CNN}]\begingroup Convolutional Neural Network\nomeqref {0.0}\nompageref{VI}
+  \item [{GNSS}]\begingroup Global Navigation Satellite System\nomeqref {0.0}\nompageref{VI}
+  \item [{GPU}]\begingroup Graphics Processing Unit\nomeqref {0.0}\nompageref{VI}
+  \item [{GSO}]\begingroup Google Scanned Objects\nomeqref {0.0}\nompageref{VI}
+  \item [{HPC}]\begingroup High-Performance Computing\nomeqref {0.0}\nompageref{VI}
+  \item [{IMU}]\begingroup Inertial Measurement Unit\nomeqref {0.0}\nompageref{VI}
+  \item [{MDP}]\begingroup Markov Decision Process\nomeqref {0.0}\nompageref{VI}
   \item [{ML}]\begingroup Machine Learning\nomeqref {0.0}\nompageref{VI}
+  \item [{MLP}]\begingroup Multilayer Perceptron\nomeqref {0.0}\nompageref{VI}
+  \item [{PID}]\begingroup Proportional-Integral-Derivative\nomeqref {0.0}\nompageref{VI}
+  \item [{PPO}]\begingroup Proximal Policy Optimization\nomeqref {0.0}\nompageref{VI}
+  \item [{RL}]\begingroup Reinforcement Learning\nomeqref {0.0}\nompageref{VI}
+  \item [{URDF}]\begingroup Unified Robot Description Format\nomeqref {0.0}\nompageref{VI}
 
 \end{thenomenclature}

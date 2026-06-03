@@ -15,7 +15,7 @@ identifizierten Trend, algorithmische Komplexität anstelle zusätzlicher
 Hardware einzusetzen.
 
 Training und Evaluation finden vollständig in Simulation statt. Der
-GPU-parallelisierte Physiksimulator Genesis erzeugt die für PPO benötigten
+GPU-parallelisierte (Graphics Processing Unit) Physiksimulator Genesis erzeugt die für PPO benötigten
 großen Rollout-Batches aus bis zu 512~gleichzeitigen Umgebungsinstanzen.
 Ein Sim-to-Real-Transfer liegt außerhalb des Rahmens dieser Arbeit.
 
@@ -46,7 +46,10 @@ zwischen zwei Entscheidungen zur Ruhe kommt und das Tiefenbild aus einer
 stabilen Fluglage aufgenommen wird, verhindert, dass der PID-Regler durch
 zu häufig wechselnde Sollwerte destabilisiert wird, und reduziert die
 Lernkomplexität, da der Agent weniger Entscheidungen pro Episode treffen
-muss.
+muss. Empirisch bestätigte sich diese Wahl: Bei kürzeren Intervallen
+(1,0\,s und darunter) war die Drohne zwischen Entscheidungen nicht
+vollständig stabilisiert, was zu deutlich langsamerer Konvergenz oder
+ausbleibendem Lernerfolg führte.
 
 \textbf{Wahrnehmung.}
 Der Agent erhält zwei Eingaben: einen normalisierten Zustandsvektor
@@ -64,8 +67,8 @@ Zustandsvektor und Tiefenbild werden der Actor-Critic-Architektur
 übergeben (vgl.\ Abschnitt~\ref{sec:meth_architektur}). Ein geteilter
 CNN-Encoder extrahiert Hindernismerkmale aus dem Tiefenbild; der
 resultierende Merkmalsvektor wird mit dem normalisierten Zustandsvektor
-konkateniert und an die MLP-Köpfe von Actor und Critic weitergegeben. Der
-Actor sampelt eine vierdimensionale Aktion
+konkateniert und an die MLP-Köpfe (Multilayer Perceptron) von Actor und
+Critic weitergegeben. Der Actor sampelt eine vierdimensionale Aktion
 $\mathbf{a}_t \in [-1, 1]^4$, die in einen Positionsversatz und einen
 Sollgierwinkel skaliert wird
 (vgl.\ Abschnitt~\ref{subsec:meth_aktionsraum}).
@@ -336,7 +339,9 @@ Eine Episode endet, wenn eine der folgenden Bedingungen eintritt:
 
 \noindent\textbf{Erfolg.}\enspace Die Drohne verbleibt über die gesamte Dauer
 eines Entscheidungsschritts ($3{,}0$\,s) innerhalb eines Radius von $0{,}5$\,m
-um das Landeziel.
+um das Landeziel. Der Radius wurde bewusst eng gewählt, um eine hohe
+Landegenauigkeit zu erzwingen, die den beengten Platzverhältnissen
+einer Landung zwischen Rebzeilen entspricht.
 
 \noindent\textbf{Absturz.}\enspace Mindestens eine der folgenden Bedingungen
 ist erfüllt:
@@ -530,7 +535,7 @@ Die vorliegende Arbeit verwendet Genesis
 quelloffenen Physiksimulator für Robotik. Genesis erfüllt alle drei definierten
 Anforderungen: Der Simulator führt bis zu 4096~Umgebungen GPU-parallel aus,
 stellt Tiefenkameras über eine Batch-Rendering-Pipeline bereit, importiert
-beliebige 3D-Meshes (u.\,a.\ URDF, OBJ) und bietet eine durchgängige
+beliebige 3D-Meshes (u.\,a.\ URDF (Unified Robot Description Format), OBJ) und bietet eine durchgängige
 Python-API. Genesis zeichnet sich durch eine geringere Einstiegskomplexität aus:
 Die Installation beschränkt sich auf ein einzelnes Python-Paket, und die API
 erfordert keine herstellerspezifische Toolchain.
@@ -602,6 +607,10 @@ Für die Kollisionserkennung und die Hindernisproximität
 Begrenzungsbox (AABB) jedes Objekts herangezogen. Diese konservative
 Approximation umschließt das gesamte Mesh vollständig, sodass die Drohne
 bereits vor Berührung der tatsächlichen Oberfläche als kollidiert gilt.
+Eine oberflächenbasierte Kollisionsprüfung auf der tatsächlichen
+Objektgeometrie wäre exakter, erhöht jedoch den Rechenaufwand pro
+Simulationsschritt erheblich und war bei 512~parallelen Umgebungen im
+Training nicht praktikabel.
 
 Die Platzierung folgt einem erzwungenen Slalom entlang der $x$-Achse: In jeder
 der zwei Hindernisschichten wird ein zufällig gewähltes Objekt auf einer Seite
@@ -670,7 +679,7 @@ Checkpoint-Intervall            & $100$ Iterationen \\
 \end{tabular}
 \end{table}
 
-Das Training wird auf dem HPC-Cluster der Universität Leipzig durchgeführt.
+Das Training wird auf dem HPC-Cluster (High-Performance Computing) der Universität Leipzig durchgeführt.
 Als GPU dient eine NVIDIA~A30 (Ampere-Architektur, 24\,GB VRAM). Die
 A30~wurde gegenüber der alternativ verfügbaren NVIDIA~V100 (Volta) gewählt,
 da der Batch-Renderer für die Tiefenkamera eine GPU mit Compute
@@ -690,7 +699,11 @@ werden.
 
 Die Lernrate $\alpha = 1 \times 10^{-3}$ wurde experimentell bestimmt:
 Kleinere Werte führten zu langsamer Konvergenz, größere zu kollabierenden
-Strategien.
+Strategien. Die Lernrate wird über den gesamten Trainingsverlauf
+konstant gehalten. Alternativen (Cosine Decay, Linear Decay sowie die adaptive
+KL-Penalty-Variante nach \textcite{schulmanProximalPolicyOptimization2017})
+wurden in Vorexperimenten getestet, zeigten jedoch keine Verbesserung
+gegenüber der konstanten Rate.
 
 Zu Beginn jeder Trainingsausführung werden die Episodenlängen der
 $N$~Umgebungen zufällig initialisiert, sodass die Episodenenden über die
@@ -810,8 +823,9 @@ Abschnitt~\ref{subsec:meth_metriken} definierten Metriken verglichen.
 
 Die zweite Versuchsreihe untersucht den Zero-Shot-Transfer der trainierten
 Strategie in eine photogrammetrisch erfasste Weinbergumgebung. Als
-Grundlage dient ein 3D-Scan eines realen Weinbergs (Eltville, Deutschland),
-der mit vierfacher Skalierung geladen wird, um eine dem Korridor
+Grundlage dient ein photogrammetrisches 3D-Modell eines realen Weinbergs
+(Eltville, Deutschland), das von der betreuenden Forschungsgruppe
+bereitgestellt wurde. Das Modell wird mit vierfacher Skalierung geladen, um eine dem Korridor
 vergleichbare räumliche Ausdehnung zu erreichen. Die Rebenreihen und das
 natürliche Terrain bilden die einzigen Hindernisse; ein
 Korridorbegrenzungsrahmen entfällt.

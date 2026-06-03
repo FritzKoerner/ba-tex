@@ -1,10 +1,14 @@
 \chapter{Fachliche Grundlagen}
 \label{cha:Fachliche Grundlagen}
 
+\todo{Kapiteleinleitung schreiben: kurzer Überblick, welche Grundlagen behandelt werden (RL, CNN, AABB) und warum.}
+
 \section{Reinforcement Learning}
 \label{sec:reinforcement_learning}
 
 Die folgenden Grundlagen basieren auf \cite{suttonReinforcementLearningIntroduction2020}.
+
+\todo{Unterabschnitt ``Allgemein'' überarbeiten: Entweder in den MDP-Abschnitt einarbeiten (redundant mit MDP-Intro) oder zu einem echten Kurzüberblick über den RL-Abschnitt ausbauen.}
 
 \subsection{Allgemein}
 \label{subsec:rl_allgemein}
@@ -45,6 +49,8 @@ Das Ziel des Agenten besteht darin, durch Interaktion mit der Umgebung eine Stra
 
 Welche Verfahren zur Bestimmung einer optimalen Strategie geeignet sind, hängt maßgeblich von der Formulierung des Reinforcement-Learning-Problems ab. Die klassische Theorie liefert exakte Lösungen ausschließlich für endliche MDPs mit vollständig bekanntem Übergangsmodell; ihre Grundideen lassen sich jedoch auf komplexere Problemklassen verallgemeinern.
 Dieser Abschnitt behandelt die Lösung von MDPs. Eingeführt werden zunächst tabellarische Verfahren, anschließend Funktionsapproximation und schließlich Policy-Gradient-Methoden, die in das Verfahren der \emph{Proximal Policy Optimization} (PPO) münden.
+
+\todo{DP-Abschnitt kürzen: Wertfunktions-Definitionen ($v_\pi$, $q_\pi$, $v_*$) behalten (werden für PPO gebraucht), aber Bellman-Optimalitätsgleichung und Gleichungssystem-Herleitung straffen. Der Abschnitt ist am weitesten vom eigentlichen System entfernt.}
 
 \subsection{Dynamische Programmierung}
 \label{subsec:dp}
@@ -163,3 +169,7 @@ Spielen nach durchschnittlicher Episodenbelohnung über das gesamte Training
 \autocite{schulmanProximalPolicyOptimization2017}. Der Clipping-Mechanismus erzeugt dabei
 ein stabiles Konvergenzverhalten, das die Robustheit von Trust-Region-Algorithmen
 erreicht, ohne deren Implementierungskomplexität zu erfordern.
+
+\todo{Neuer Abschnitt: Convolutional Neural Networks (~0,5--0,75 Seiten). CNN ist Wahrnehmungsmodul, nicht Kernthema -- entsprechend knapp halten. Inhalt: (1) CNN als Architektur für räumliche Daten (ein Satz), (2) Faltung + Filter + Feature Maps (Kernidee), (3) Pooling (Dimensionsreduktion, ein Satz), (4) hierarchische Merkmalsextraktion durch gestapelte Schichten, (5) Abschluss: CNN als Feature-Extractor für nachgeschaltete Netze (nicht Klassifikation). Kein Softmax, kein FC-Klassifikationskopf, keine Aktivierungsfunktions-Details. Quellen: LeCun, Bengio, Hinton 2015 (Nature ``Deep learning'', doi:10.1038/nature14539) -- muss noch in quellen.bib ergänzt werden. Hornik 1989 (bereits vorhanden) für universelle Approximation. Mnih 2015 (bereits vorhanden) als Brücke CNN+RL.}
+
+\todo{Neuer Abschnitt: Achsenparallele Begrenzungsboxen / AABB (~0,5 Seiten). Inhalt: Definition, konservative Eigenschaft (überdeckt Objekt vollständig), ggf. Skizze. Wird 16$\times$ in Methodik/Ergebnisse/Diskussion verwendet; die AABB-vs-Mesh-Diskrepanz (71\,\% vs. 98\,\%) ist ein Kernergebnis.}

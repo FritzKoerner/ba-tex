@@ -1,1 +1,14 @@
+\nomenclatureentry{aAABB@[{AABB}]\begingroup Axis-Aligned Bounding Box\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aCNN@[{CNN}]\begingroup Convolutional Neural Network\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aGNSS@[{GNSS}]\begingroup Global Navigation Satellite System\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aGPU@[{GPU}]\begingroup Graphics Processing Unit\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aGSO@[{GSO}]\begingroup Google Scanned Objects\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aHPC@[{HPC}]\begingroup High-Performance Computing\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aIMU@[{IMU}]\begingroup Inertial Measurement Unit\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aMDP@[{MDP}]\begingroup Markov Decision Process\nomeqref {0.0}|nompageref}{VI}
 \nomenclatureentry{aML@[{ML}]\begingroup Machine Learning\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aMLP@[{MLP}]\begingroup Multilayer Perceptron\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aPID@[{PID}]\begingroup Proportional-Integral-Derivative\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aPPO@[{PPO}]\begingroup Proximal Policy Optimization\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aRL@[{RL}]\begingroup Reinforcement Learning\nomeqref {0.0}|nompageref}{VI}
+\nomenclatureentry{aURDF@[{URDF}]\begingroup Unified Robot Description Format\nomeqref {0.0}|nompageref}{VI}

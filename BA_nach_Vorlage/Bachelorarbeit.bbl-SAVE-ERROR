@@ -1145,6 +1145,100 @@
       \verb http://pybullet.org
       \endverb
     \endentry
+    \entry{downsGoogleScannedObjects2022}{online}{}
+      \name{author}{8}{}{%
+        {{un=0,uniquepart=base,hash=c08573983ab9e24c21e302143b9f9b3d}{%
+           family={Downs},
+           familyi={D\bibinitperiod},
+           given={Laura},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3a178b054595c3391c09b7a0a45f9842}{%
+           family={Francis},
+           familyi={F\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=005f9b71551c82f8bd8e071a6caf07bd}{%
+           family={Koenig},
+           familyi={K\bibinitperiod},
+           given={Nate},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e68ba37dbc0194ee1f99591406f4c0c}{%
+           family={Kinman},
+           familyi={K\bibinitperiod},
+           given={Brandon},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a161938f3c57203a6606f121e30c08c}{%
+           family={Hickman},
+           familyi={H\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e2a3c4786b32700acb4df6b46311b1f1}{%
+           family={Reymann},
+           familyi={R\bibinitperiod},
+           given={Krista},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=63b034aefbebef08bf7c3d493c807bea}{%
+           family={McHugh},
+           familyi={M\bibinitperiod},
+           given={Thomas\bibnamedelima B.},
+           giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8051922e7bd286f884bfbd1023ef62f5}{%
+           family={Vanhoucke},
+           familyi={V\bibinitperiod},
+           given={Vincent},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{3f6a0556882eac063d0981cb3c74e698}
+      \strng{fullhash}{2926d031428de9afec3ecdd35b1ccbf1}
+      \strng{bibnamehash}{2926d031428de9afec3ecdd35b1ccbf1}
+      \strng{authorbibnamehash}{2926d031428de9afec3ecdd35b1ccbf1}
+      \strng{authornamehash}{3f6a0556882eac063d0981cb3c74e698}
+      \strng{authorfullhash}{2926d031428de9afec3ecdd35b1ccbf1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Interactive 3D simulations have enabled breakthroughs in robotics and computer vision, but simulating the broad diversity of environments needed for deep learning requires large corpora of photo-realistic 3D object models. To address this need, we present Google Scanned Objects, an open-source collection of over one thousand 3D-scanned household items released under a Creative Commons license; these models are preprocessed for use in Ignition Gazebo and the Bullet simulation platforms, but are easily adaptable to other simulators. We describe our object scanning and curation pipeline, then provide statistics about the contents of the dataset and its usage. We hope that the diversity, quality, and flexibility of Google Scanned Objects will lead to advances in interactive simulation, synthetic perception, and robotic learning.}
+      \field{day}{25}
+      \field{eprintclass}{cs.RO}
+      \field{eprinttype}{arXiv}
+      \field{month}{4}
+      \field{pubstate}{prepublished}
+      \field{shorttitle}{Google {{Scanned Objects}}}
+      \field{title}{Google {{Scanned Objects}}: {{A High-Quality Dataset}} of {{3D Scanned Household Items}}}
+      \field{urlday}{23}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2204.11918
+      \endverb
+      \verb{eprint}
+      \verb 2204.11918
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/W9NPLMZ2/Downs et al. - 2022 - Google Scanned Objects A High-Quality Dataset of 3D Scanned Household Items.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2204.11918
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2204.11918
+      \endverb
+      \keyw{Computer Science - Graphics,Computer Science - Robotics}
+    \endentry
     \entry{duckettAgriculturalRoboticsFuture2018}{online}{}
       \name{author}{30}{}{%
         {{un=0,uniquepart=base,hash=44f7f2de4fcf39874fdaea11b04e77a3}{%
@@ -1370,6 +1464,95 @@
       \verb http://arxiv.org/abs/1806.06762
       \endverb
       \keyw{Computer Science - Robotics}
+    \endentry
+    \entry{efronIntroductionBootstrap1994}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=5470455fc7dceb3ccf6db38cb22a113d}{%
+           family={Efron},
+           familyi={E\bibinitperiod},
+           given={Bradley},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=678c48302939b4b85d5ad2d85319617a}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert\bibnamedelima J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Chapman \& Hall/CRC}%
+      }
+      \strng{namehash}{5c03685c9f7f37796bba48432d40df61}
+      \strng{fullhash}{5c03685c9f7f37796bba48432d40df61}
+      \strng{bibnamehash}{5c03685c9f7f37796bba48432d40df61}
+      \strng{authorbibnamehash}{5c03685c9f7f37796bba48432d40df61}
+      \strng{authornamehash}{5c03685c9f7f37796bba48432d40df61}
+      \strng{authorfullhash}{5c03685c9f7f37796bba48432d40df61}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-412-04231-7}
+      \field{note}{noch lesen}
+      \field{title}{An Introduction to the Bootstrap}
+      \field{year}{1994}
+    \endentry
+    \entry{esserActionSpaceDesign}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f659fd5c5b2cf96655f46b9e0128dd16}{%
+           family={Eßer},
+           familyi={E\bibinitperiod},
+           given={Julian},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a0edb8f5af63cb010ebf3764b3cb92f3}{%
+           family={Margolis},
+           familyi={M\bibinitperiod},
+           given={Gabriel\bibnamedelima B},
+           giveni={G\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e0625d38fe1a6af00bbb609f156af00}{%
+           family={Urbann},
+           familyi={U\bibinitperiod},
+           given={Oliver},
+           giveni={O\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b41944ebad3ae92045b2fb566549cdbc}{%
+           family={Kerner},
+           familyi={K\bibinitperiod},
+           given={Soren},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=8386009211558835d056bfe419103c76}{%
+           family={Agrawal},
+           familyi={A\bibinitperiod},
+           given={Pulkit},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d20f416cf32e4f76292afcade6a62c35}
+      \strng{fullhash}{294882c993693e8e3c2149a0e45255ac}
+      \strng{bibnamehash}{294882c993693e8e3c2149a0e45255ac}
+      \strng{authorbibnamehash}{294882c993693e8e3c2149a0e45255ac}
+      \strng{authornamehash}{d20f416cf32e4f76292afcade6a62c35}
+      \strng{authorfullhash}{294882c993693e8e3c2149a0e45255ac}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Practitioners often rely on intuition to select action spaces for learning. The choice can substantially impact final performance even when choosing among configuration-space representations such as joint position, velocity, and torque commands. We examine action space selection considering a wheeledlegged robot, a quadruped robot, and a simulated suite of locomotion, manipulation, and control tasks. We analyze the mechanisms by which action space can improve performance and conclude that the action space can influence learning performance substantially in a task-dependent way. Moreover, we find that much of the practical impact of action space selection on learning dynamics can be explained by improved policy initialization and behavior between timesteps.}
+      \field{langid}{english}
+      \field{title}{Action {{Space Design}} in {{Reinforcement Learning}} for {{Robot Motor Skills}}}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/3NI26AEE/Eßer et al. - Action Space Design in Reinforcement Learning for Robot Motor Skills.pdf
+      \endverb
     \endentry
     \entry{foodandagricultureorganizationoftheunitednationsFutureFoodAgriculture2017}{book}{}
       \name{editor}{1}{}{%
@@ -1949,7 +2132,7 @@
       \keyw{Obstacle avoidance,SLAM,Target tracking,UAVs,Visual servoing}
     \endentry
     \entry{kaufmannChampionlevelDroneRacing2023}{article}{}
-      \name{author}{6}{}{%
+      \name{author}{6}{ul=3}{%
         {{un=0,uniquepart=base,hash=67c97d80868fd6b133dedb6e929aac2d}{%
            family={Kaufmann},
            familyi={K\bibinitperiod},
@@ -1990,11 +2173,11 @@
       \list{publisher}{1}{%
         {Nature Publishing Group}%
       }
-      \strng{namehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{namehash}{40ab26662c78ef303820d4ae65ed1f86}
       \strng{fullhash}{eb00725943e3ee22432047acb9e69901}
       \strng{bibnamehash}{eb00725943e3ee22432047acb9e69901}
       \strng{authorbibnamehash}{eb00725943e3ee22432047acb9e69901}
-      \strng{authornamehash}{92409b57e303bc9e6aa9740c5b8df0de}
+      \strng{authornamehash}{40ab26662c78ef303820d4ae65ed1f86}
       \strng{authorfullhash}{eb00725943e3ee22432047acb9e69901}
       \field{sortinit}{K}
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
@@ -2031,6 +2214,63 @@
       \verb https://www.nature.com/articles/s41586-023-06419-4
       \endverb
       \keyw{Aerospace engineering,Computer science,Electrical and electronic engineering,Mechanical engineering,model-free,on policy,READ,Reinforcement learning,vision-based navigation}
+    \endentry
+    \entry{kaufmannBenchmarkComparisonLearned2022}{online}{}
+      \name{author}{3}{ul=3}{%
+        {{un=0,uniquepart=base,hash=67c97d80868fd6b133dedb6e929aac2d}{%
+           family={Kaufmann},
+           familyi={K\bibinitperiod},
+           given={Elia},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59afafcd8a1882db2ba4f6af81e0f01a}{%
+           family={Bauersfeld},
+           familyi={B\bibinitperiod},
+           given={Leonard},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=dac21ab4ede215439fcc6b051be53a11}{%
+           family={Scaramuzza},
+           familyi={S\bibinitperiod},
+           given={Davide},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{fullhash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{bibnamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authorbibnamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authornamehash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \strng{authorfullhash}{09154f81ab94b9eb9011a2aeb6f13d5a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Quadrotors are highly nonlinear dynamical systems that require carefully tuned controllers to be pushed to their physical limits. Recently, learning-based control policies have been proposed for quadrotors, as they would potentially allow learning direct mappings from high-dimensional raw sensory observations to actions. Due to sample inefficiency, training such learned controllers on the real platform is impractical or even impossible. Training in simulation is attractive but requires to transfer policies between domains, which demands trained policies to be robust to such domain gap. In this work, we make two contributions: (i) we perform the first benchmark comparison of existing learned control policies for agile quadrotor flight and show that training a control policy that commands body-rates and thrust results in more robust sim-to-real transfer compared to a policy that directly specifies individual rotor thrusts, (ii) we demonstrate for the first time that such a control policy trained via deep reinforcement learning can control a quadrotor in real-world experiments at speeds over 45km/h.}
+      \field{day}{22}
+      \field{langid}{english}
+      \field{month}{2}
+      \field{title}{A {{Benchmark Comparison}} of {{Learned Control Policies}} for {{Agile Quadrotor Flight}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/6ALUWF95/Kaufmann et al. - 2022 - A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2202.10796v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2202.10796v1
+      \endverb
     \endentry
     \entry{kimMonocularVisionbasedAutonomous2022}{article}{}
       \name{author}{4}{}{%
@@ -2384,6 +2624,76 @@
       \verb{url}
       \verb https://openreview.net/forum?id=fgFBtYgJQX_
       \endverb
+    \endentry
+    \entry{martiniPositionAgnosticAutonomousNavigation2022}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=c24fc688d3651d07dbd18cd81f0b1a99}{%
+           family={Martini},
+           familyi={M\bibinitperiod},
+           given={Mauro},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bd54abfc38baa619d312602fcd213dd9}{%
+           family={Cerrato},
+           familyi={C\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=873a5e4889aba3981136a9fc2d1955f6}{%
+           family={Salvetti},
+           familyi={S\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f7bffa8769427b890dd59a6a996396a}{%
+           family={Angarano},
+           familyi={A\bibinitperiod},
+           given={Simone},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=387a1f8b4c5989acc0a87e7c915fb8d8}{%
+           family={Chiaberge},
+           familyi={C\bibinitperiod},
+           given={Marcello},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d136ca4b506b7d5bcac375e88d5402c5}
+      \strng{fullhash}{36803ba49dd63a20c776586e1c38a9bd}
+      \strng{bibnamehash}{36803ba49dd63a20c776586e1c38a9bd}
+      \strng{authorbibnamehash}{36803ba49dd63a20c776586e1c38a9bd}
+      \strng{authornamehash}{d136ca4b506b7d5bcac375e88d5402c5}
+      \strng{authorfullhash}{36803ba49dd63a20c776586e1c38a9bd}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Precision agriculture is rapidly attracting research to efficiently introduce automation and robotics solutions to support agricultural activities. Robotic navigation in vineyards and orchards offers competitive advantages in autonomously monitoring and easily accessing crops for harvesting, spraying and performing time-consuming necessary tasks. Nowadays, autonomous navigation algorithms exploit expensive sensors which also require heavy computational cost for data processing. Nonetheless, vineyard rows represent a challenging outdoor scenario where GPS and Visual Odometry techniques often struggle to provide reliable positioning information. In this work, we combine Edge AI with Deep Reinforcement Learning to propose a cutting-edge lightweight solution to tackle the problem of autonomous vineyard navigation with-out exploiting precise localization data and overcoming task-tailored algorithms with a flexible learning-based approach. We train an end-to-end sensorimotor agent which directly maps noisy depth images and position-agnostic robot state information to velocity commands and guides the robot to the end of a row, continuously adjusting its heading for a collision-free central trajectory. Our extensive experimentation in realistic simulated vineyards demonstrates the effectiveness of our solution and the generalization capabilities of our agent.}
+      \field{booktitle}{2022 {{IEEE}} 18th {{International Conference}} on {{Automation Science}} and {{Engineering}} ({{CASE}})}
+      \field{eventtitle}{2022 {{IEEE}} 18th {{International Conference}} on {{Automation Science}} and {{Engineering}} ({{CASE}})}
+      \field{issn}{2161-8089}
+      \field{month}{8}
+      \field{title}{Position-{{Agnostic Autonomous Navigation}} in {{Vineyards}} with {{Deep Reinforcement Learning}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{477\bibrangedash 484}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/CASE49997.2022.9926582
+      \endverb
+      \verb{urlraw}
+      \verb https://ieeexplore.ieee.org/abstract/document/9926582
+      \endverb
+      \verb{url}
+      \verb https://ieeexplore.ieee.org/abstract/document/9926582
+      \endverb
+      \keyw{Agriculture,Automation,Navigation,Reinforcement learning,Robot sensing systems,Task analysis,Trajectory}
     \endentry
     \entry{mashoriRemoteSensingUAVs2026}{article}{}
       \name{author}{9}{}{%
@@ -2796,6 +3106,57 @@
       \endverb
       \keyw{Computer science}
     \endentry
+    \entry{moallaNoRepresentationNo}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f701e0d41900a34dfdf2a9e51698dde7}{%
+           family={Moalla},
+           familyi={M\bibinitperiod},
+           given={Skander},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c89bb5388b2749a3eeb110f7345d8fb}{%
+           family={Miele},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53ed64b3d984e2a3141c6ad64c81eda8}{%
+           family={Pyatko},
+           familyi={P\bibinitperiod},
+           given={Daniil},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7045b009b04d57bd2e19b5dfa0864d4f}{%
+           family={Pascanu},
+           familyi={P\bibinitperiod},
+           given={Razvan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2adc0c92c308f233c731321d55efe58f}{%
+           family={Gulcehre},
+           familyi={G\bibinitperiod},
+           given={Caglar},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c87e25e25a2cd9965e03edcbf09ebc84}
+      \strng{fullhash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \strng{bibnamehash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \strng{authorbibnamehash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \strng{authornamehash}{c87e25e25a2cd9965e03edcbf09ebc84}
+      \strng{authorfullhash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reinforcement learning (RL) is inherently rife with non-stationarity since the states and rewards the agent observes during training depend on its changing policy. Therefore, networks in deep RL must be capable of adapting to new observations and fitting new targets. However, previous works have observed that networks trained under non-stationarity exhibit an inability to continue learning, termed loss of plasticity, and eventually a collapse in performance. For off-policy deep value-based RL methods, this phenomenon has been correlated with a decrease in representation rank and the ability to fit random targets, termed capacity loss. Although this correlation has generally been attributed to neural network learning under non-stationarity, the connection to representation dynamics has not been carefully studied in on-policy policy optimization methods. In this work, we empirically study representation dynamics in Proximal Policy Optimization (PPO) on the Atari and MuJoCo environments, revealing that PPO agents are also affected by feature rank deterioration and capacity loss. We show that this is aggravated by stronger non-stationarity, ultimately driving the actor’s performance to collapse, regardless of the performance of the critic. We ask why the trust region, specific to methods like PPO, cannot alleviate or prevent the collapse and find a connection between representation collapse and the degradation of the trust region, one exacerbating the other. Finally, we present Proximal Feature Optimization (PFO), a novel auxiliary loss that, along with other interventions, shows that regularizing the representation dynamics mitigates the performance collapse of PPO agents. Code and run histories are available at https://github.com/CLAIRE-Labo/no-representation-no-trust.}
+      \field{langid}{english}
+      \field{title}{No {{Representation}}, {{No Trust}}: {{Connecting Representation}}, {{Collapse}}, and {{Trust Issues}} in {{PPO}}}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/YWV6XI96/Moalla et al. - No Representation, No Trust Connecting Representation, Collapse, and Trust Issues in PPO.pdf
+      \endverb
+    \endentry
     \entry{ngPolicyInvarianceReward1999}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=49e889356ff39df159461bc2895c7e16}{%
@@ -3179,6 +3540,47 @@
       \endverb
       \keyw{Precision agriculture (PA),Remote sensing (RS),Unmanned aerial vehicle (UAV)}
     \endentry
+    \entry{randlovLearningDriveBicycle1998}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=cfa4f94b0d1f13a8c6c0af5d0cd0c0d2}{%
+           family={Randlov},
+           familyi={R\bibinitperiod},
+           given={Jette},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0ce4deec77675cad5e29df271fc76be0}{%
+           family={Alstrøm},
+           familyi={A\bibinitperiod},
+           given={Preben},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{fullhash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{bibnamehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{authorbibnamehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{authornamehash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \strng{authorfullhash}{1aabfcb8d590546cdd66bbd9e7021193}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We present and solve a real-world problem of learning to drive a bicycle. We solve the prob- lem by online reinforcement learning using the Sarsa(A)-algorithm. Then we solve the compos- ite problem of learning to balance a bicycle and then drive to 'It goal. In our approach the rein- forcement function is independent of the task the agent tries to learn to solve.}
+      \field{day}{1}
+      \field{journaltitle}{Proceedings of the 15th International Conference on Machine Learning}
+      \field{month}{1}
+      \field{pagetotal}{463}
+      \field{title}{Learning to {{Drive}} a {{Bicycle Using Reinforcement Learning}} and {{Shaping}}.}
+      \field{year}{1998}
+      \field{dateera}{ce}
+      \field{pages}{471}
+      \range{pages}{1}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/6SQR97C5/Randlov and Alstrøm - 1998 - Learning to Drive a Bicycle Using Reinforcement Learning and Shaping..pdf
+      \endverb
+    \endentry
     \entry{rudinLearningWalkMinutes2022}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=5ac29b212261fe3d27e4d51cf14a990e}{%
@@ -3491,6 +3893,63 @@
       \endverb
       \keyw{Autonomous landing,Computer vision,Deep learning,Edge computing,Embedded AI,Fiducial markers,Marker detection,Multi-sensor fusion,UAV,Vision-based navigation}
     \endentry
+    \entry{singlaMemorybasedDeepReinforcement2018}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=341fdc38a89792d4db4af7f482fd86c3}{%
+           family={Singla},
+           familyi={S\bibinitperiod},
+           given={Abhik},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67e63ee3781c1ed2811dbf9aead49461}{%
+           family={Padakandla},
+           familyi={P\bibinitperiod},
+           given={Sindhu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28ce21b29d3236824f36bf3f2877629b}{%
+           family={Bhatnagar},
+           familyi={B\bibinitperiod},
+           given={Shalabh},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{0c2ceac68df745a35afb123a5917077c}
+      \strng{fullhash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \strng{bibnamehash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \strng{authorbibnamehash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \strng{authornamehash}{0c2ceac68df745a35afb123a5917077c}
+      \strng{authorfullhash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents our method for enabling a UAV quadrotor, equipped with a monocular camera, to autonomously avoid collisions with obstacles in unstructured and unknown indoor environments. When compared to obstacle avoidance in ground vehicular robots, UAV navigation brings in additional challenges because the UAV motion is no more constrained to a well-defined indoor ground or street environment. Horizontal structures in indoor and outdoor environments like decorative items, furnishings, ceiling fans, sign-boards, tree branches etc., also become relevant obstacles unlike those for ground vehicular robots. Thus, methods of obstacle avoidance developed for ground robots are clearly inadequate for UAV navigation. Current control methods using monocular images for UAV obstacle avoidance are heavily dependent on environment information. These controllers do not fully retain and utilize the extensively available information about the ambient environment for decision making. We propose a deep reinforcement learning based method for UAV obstacle avoidance (OA) and autonomous exploration which is capable of doing exactly the same. The crucial idea in our method is the concept of partial observability and how UAVs can retain relevant information about the environment structure to make better future navigation decisions. Our OA technique uses recurrent neural networks with temporal attention and provides better results compared to prior works in terms of distance covered during navigation without collisions. In addition, our technique has a high inference rate (a key factor in robotic applications) and is energy-efficient as it minimizes oscillatory motion of UAV and reduces power wastage.}
+      \field{day}{8}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Memory-Based {{Deep Reinforcement Learning}} for {{Obstacle Avoidance}} in {{UAV}} with {{Limited Environment Knowledge}}}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/VGVKTKMM/Singla et al. - 2018 - Memory-based Deep Reinforcement Learning for Obstacle Avoidance in UAV with Limited Environment Know.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1811.03307v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1811.03307v1
+      \endverb
+    \endentry
     \entry{suttonReinforcementLearningIntroduction2020}{book}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=eb920e5277d3d5fd0903f3cd41e11871}{%
@@ -3602,6 +4061,93 @@
       \verb https://www.mdpi.com/1424-8220/24/18/6096
       \endverb
       \keyw{autonomous infrastructure inspection,drone navigation,GNSS-denied environment,low-cost GNSS board,RTK}
+    \endentry
+    \entry{tayarAutonomousUAVFlight2025}{online}{}
+      \name{author}{7}{}{%
+        {{un=0,uniquepart=base,hash=62a44bb866d529d3972b40754e54a589}{%
+           family={Tayar},
+           familyi={T\bibinitperiod},
+           given={Marco\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,useprefix=true,hash=e001473c6c3f72fde44c2320c958af08}{%
+           family={Oliveira},
+           familyi={O\bibinitperiod},
+           given={Lucas\bibnamedelima K.},
+           giveni={L\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+        {{un=0,uniquepart=base,hash=d56eefed3facc63124af015b5e21e546}{%
+           family={Tommaselli},
+           familyi={T\bibinitperiod},
+           given={Felipe\bibnamedelimb Andrade\bibnamedelima G.},
+           giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=58f3b313c30debe4b3aed4c6fb668055}{%
+           family={Negri},
+           familyi={N\bibinitperiod},
+           given={Juliano\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1e459751a9f719ab64d72e78f14605db}{%
+           family={Segreto},
+           familyi={S\bibinitperiod},
+           given={Thiago\bibnamedelima H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5c606c201e92d03bec752e02f62eb079}{%
+           family={Godoy},
+           familyi={G\bibinitperiod},
+           given={Ricardo\bibnamedelima V.},
+           giveni={R\bibinitperiod\bibinitdelim V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2fe1b21b57f44b0113a02acbaf8a2b52}{%
+           family={Becker},
+           familyi={B\bibinitperiod},
+           given={Marcelo},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{c1ef95c2152f809664dcd7f27f363ef2}
+      \strng{fullhash}{c1009efd349a85f4224daaf8510a63ab}
+      \strng{bibnamehash}{c1009efd349a85f4224daaf8510a63ab}
+      \strng{authorbibnamehash}{c1009efd349a85f4224daaf8510a63ab}
+      \strng{authornamehash}{c1ef95c2152f809664dcd7f27f363ef2}
+      \strng{authorfullhash}{c1009efd349a85f4224daaf8510a63ab}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Autonomous UAV inspection of confined industrial infrastructure, such as ventilation ducts, demands robust navigation policies where collisions are unacceptable. While Deep Reinforcement Learning (DRL) offers a powerful paradigm for developing such policies, it presents a critical trade-off between on-policy and off-policy algorithms. Off-policy methods promise high sample efficiency, a vital trait for minimizing costly and unsafe real-world fine-tuning. In contrast, on-policy methods often exhibit greater training stability, which is essential for reliable convergence in hazard-dense environments. This paper directly investigates this trade-off by comparing a leading on-policy algorithm, Proximal Policy Optimization (PPO), against an off-policy counterpart, Soft Actor-Critic (SAC), for precision flight in procedurally generated ducts within a high-fidelity simulator. Our results show that PPO consistently learned a stable, collision-free policy that completed the entire course. In contrast, SAC failed to find a complete solution, converging to a suboptimal policy that navigated only the initial segments before failure. This work provides evidence that for high-precision, safety-critical navigation tasks, the reliable convergence of a well-established on-policy method can be more decisive than the nominal sample efficiency of an off-policy algorithm.}
+      \field{day}{22}
+      \field{langid}{english}
+      \field{month}{8}
+      \field{shorttitle}{Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}}
+      \field{title}{Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}: {{A Reinforcement Learning Approach}}}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1109/LARS69345.2025.11273007
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/7SLN6EHE/Tayar et al. - 2025 - Autonomous UAV Flight Navigation in Confined Spaces A Reinforcement Learning Approach.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2508.16807v2
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2508.16807v2
+      \endverb
     \endentry
     \entry{undeExpandingRoleMultirotor2025}{article}{}
       \name{author}{6}{}{%
@@ -3822,6 +4368,135 @@
       \verb http://arxiv.org/abs/2412.06313
       \endverb
       \keyw{Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Computer Science - Robotics}
+    \endentry
+    \entry{weiVisionbasedNavigationUnmanned2025}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=faec69506d8386dc804a3a8c807ababa}{%
+           family={Wei},
+           familyi={W\bibinitperiod},
+           given={Peng},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=646711f4a804494255aa5ac01c26d5f1}{%
+           family={Ragbir},
+           familyi={R\bibinitperiod},
+           given={Prabhash},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1efcb251a719846be2a7893b6d5a634c}{%
+           family={Vougioukas},
+           familyi={V\bibinitperiod},
+           given={Stavros\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c7cac2e6282b0f79049c8f0f73cbec24}{%
+           family={Kong},
+           familyi={K\bibinitperiod},
+           given={Zhaodan},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{922c1a0d259b981506f75f1dce7c4120}
+      \strng{fullhash}{3f16f2f0070f35afe96fe687b9988efc}
+      \strng{bibnamehash}{3f16f2f0070f35afe96fe687b9988efc}
+      \strng{authorbibnamehash}{3f16f2f0070f35afe96fe687b9988efc}
+      \strng{authornamehash}{922c1a0d259b981506f75f1dce7c4120}
+      \strng{authorfullhash}{3f16f2f0070f35afe96fe687b9988efc}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Autonomous unmanned aerial vehicle (UAV) navigation in orchards presents significant challenges due to obstacles and GPS-deprived environments. In this work, we introduce a learning-based approach to achieve vision-based navigation of UAVs within orchard rows. Our method employs a variational autoencoder (VAE)-based controller, trained with an intervention-based learning framework that allows the UAV to learn a visuomotor policy from human experience. We validate our approach in real orchard environments with a custom-built quadrotor platform. Field experiments demonstrate that after only a few iterations of training, the proposed VAE-based controller can autonomously navigate the UAV based on a front-mounted camera stream. The controller exhibits strong obstacle avoidance performance, achieves longer flying distances with less human assistance, and outperforms existing algorithms. Furthermore, we show that the policy generalizes effectively to novel environments and maintains competitive performance across varying conditions and speeds. This research not only advances UAV autonomy but also holds significant potential for precision agriculture, improving efficiency in orchard monitoring and management.}
+      \field{day}{1}
+      \field{issn}{0168-1699}
+      \field{journaltitle}{Computers and Electronics in Agriculture}
+      \field{month}{11}
+      \field{shortjournal}{Computers and Electronics in Agriculture}
+      \field{shorttitle}{Vision-Based Navigation of Unmanned Aerial Vehicles in Orchards}
+      \field{title}{Vision-Based Navigation of Unmanned Aerial Vehicles in Orchards: {{An}} Imitation Learning Approach}
+      \field{urlday}{3}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{238}
+      \field{year}{2025}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{110802}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.compag.2025.110802
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/IFY6F78G/Wei et al. - 2025 - Vision-based navigation of unmanned aerial vehicles in orchards An imitation learning approach.pdf;/home/fritz-sfl/Zotero/storage/9N2JRXP4/S0168169925009081.html
+      \endverb
+      \verb{urlraw}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168169925009081
+      \endverb
+      \verb{url}
+      \verb https://www.sciencedirect.com/science/article/pii/S0168169925009081
+      \endverb
+      \keyw{Imitation learning,Orchard monitoring,Unmanned aerial vehicles,Vision-based navigation}
+    \endentry
+    \entry{whiteheadLearningPerceiveAct1991}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c8e8802cf436a681c5df2f9f1987bbaf}{%
+           family={Whitehead},
+           familyi={W\bibinitperiod},
+           given={Steven\bibnamedelima D.},
+           giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=462fce8922fb76159172aca4abd82703}{%
+           family={Ballard},
+           familyi={B\bibinitperiod},
+           given={Dana\bibnamedelima H.},
+           giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{fullhash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{bibnamehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{authorbibnamehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{authornamehash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \strng{authorfullhash}{2b78cbf2e5f0c1d474896e2fed1cbc89}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This article considers adaptive control architectures that integrate active sensory-motor systems with decision systems based on reinforcement learning. One unavoidable consequence of active perception is that the agent's internal representation often confounds external world states. We call this phoenomenon perceptual aliasingand show that it destabilizes existing reinforcement learning algorithms with respect to the optimal decision policy. We then describe a new decision system that overcomes these difficulties for a restricted class of decision problems. The system incorporates a perceptual subcycle within the overall decision cycle and uses a modified learning algorithm to suppress the effects of perceptual aliasing. The result is a control architecture that learns not only how to solve a task but also where to focus its visual attention in order to collect necessary sensory information.}
+      \field{day}{1}
+      \field{issn}{1573-0565}
+      \field{journaltitle}{Machine Learning}
+      \field{langid}{english}
+      \field{month}{7}
+      \field{number}{1}
+      \field{shortjournal}{Machine Learning}
+      \field{title}{Learning to {{Perceive}} and {{Act}} by {{Trial}} and {{Error}}}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{volume}{7}
+      \field{year}{1991}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{45\bibrangedash 83}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1023/A:1022619109594
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/4XTWQG43/Whitehead and Ballard - 1991 - Learning to Perceive and Act by Trial and Error.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/A:1022619109594
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/A:1022619109594
+      \endverb
+      \keyw{deictic representations,hidden state,non-Markov decision problems,Reinforcement learning,sensory-motor integration}
     \endentry
     \entry{WorldPopulationProspects}{online}{}
       \field{sortinit}{W}
@@ -4072,9 +4747,6 @@
       \keyw{autonomous landing area selection,monocular visual SLAM,UAV automatic landing}
     \endentry
   \enddatalist
-  \missing{aljalboutRoleActionSpace2024}
-  \missing{esserActionSpaceDesign2024}
-  \missing{kaufmannBenchmarkComparisonLearned2022}
 \endrefsection
 \endinput
 

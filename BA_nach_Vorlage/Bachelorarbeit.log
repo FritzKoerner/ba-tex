@@ -1,40 +1,31 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  3 JUN 2026 13:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  3 JUN 2026 16:58
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**Bachelorarbeit.tex
-(./Bachelorarbeit.tex
+**/home/fritz-sfl/Bachelorarbeit/tex/BA_nach_Vorlage/Bachelorarbeit.tex
+(/home/fritz-sfl/Bachelorarbeit/tex/BA_nach_Vorlage/Bachelorarbeit.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (./_Meta.tex) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrreprt.cls
 Document Class: scrreprt 2023/07/07 v3.41 KOMA-Script document class (report)
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrkbase.sty
-Package: scrkbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
-Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent 
-basics and keyval usage)
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrkbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile.sty
 Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
 Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlogo.sty
 Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
 Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
-Already applied: [0000/00/00] Usage of raw or classic option list on input line
- 368.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 368.
+)) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2023/07/07 v3.41 KOMA-Script package (handling toc-files)
 \scr@dte@tocline@numberwidth=\skip48
 \scr@dte@tocline@numbox=\box51
@@ -60,14 +51,10 @@ Class scrreprt Info: You've used standard option `final'.
 (scrreprt)           If you'd like to set the option with \KOMAoptions,
 (scrreprt)           you'd have to use `draft=false' there
 (scrreprt)           instead of `final', too.
-Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 2688.
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
-File: scrsize12pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (12pt
-)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
+Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input line 2688.
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (12pt)
+) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/typearea.sty
 Package: typearea 2023/07/07 v3.41 KOMA-Script package (type area)
 \ta@bcor=\skip49
 \ta@div=\count187
@@ -158,41 +145,30 @@ Package tocbasic Info: omitting babel extension for `lot'
 \c@table=\count196
 Class scrreprt Info: Redefining `\numberline' on input line 7428.
 \bibindent=\dimen140
-)
-(./Packages.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+) (./Packages.tex (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2024/01/07 v24.1 The Babel package
 \babel@savecnt=\count197
 \U@D=\dimen141
 \l@unhyphenated=\language89
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count198
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
-Language: ngerman 2024/01/19 v2.14 German support for babel (post-1996 orthogra
-phy)
-
-(/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
-Language: ngermanb 2024/01/19 v2.14 German support for babel (post-1996 orthogr
-aphy)
-)))
-(/usr/share/texlive/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2024/01/19 v2.14 German support for babel (post-1996 orthography)
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2024/01/19 v2.14 German support for babel (post-1996 orthography)
+))) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/de/babel-ngerman.tex
 Package babel Info: Importing font and identification data for ngerman
 (babel)             from babel-de.ini. Reported on input line 11.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2022-09-14 v5.2n context-sensitive quotations (JAW)
-
-(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count199
 )
@@ -203,48 +179,34 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \csq@maxlvl=\count270
 \csq@tshold=\count271
 \csq@ltx@everypar=\toks20
-
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2022-09-14 v5.2n csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-
-(/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
 File: csquotes.cfg 
-))
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxtext.sty
-Package: newtxtext 2024/01/11 v1.737(Michael Sharpe) latex and unicode latex su
-pport for TeXGyreTermesX
-
-`newtxtext' v1.737, 2024/01/11 Text macros taking advantage of TeXGyre Termes a
-nd its extensions (msharpe)
-(/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty
-(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxtext.sty
+Package: newtxtext 2024/01/11 v1.737(Michael Sharpe) latex and unicode latex support for TeXGyreTermesX
+ `newtxtext' v1.737, 2024/01/11 Text macros taking advantage of TeXGyre Termes and its extensions (msharpe) (/usr/share/texlive/texmf-dist/tex/latex/xpatch/xpatch.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2024-01-22 L3 programming layer (loader) 
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count272
 \l__pdf_internal_box=\box53
 ))
 Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
-
-(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
 Package: xparse 2023-10-10 L3 Experimental document command parser
-))
-(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 274.
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
 Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
 Package xcolor Info: Model `RGB' extended on input line 1366.
@@ -254,45 +216,34 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
-)
-(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+ (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks21
 \XKV@tempa@toks=\toks22
 )
 \XKV@depth=\count273
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
 \xs_counta=\count274
 \xs_countb=\count275
 )
 Package: xstring 2023/08/22 v1.86 String manipulations (CT)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
+) (/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 LaTeX Font Info:    Setting ntxLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTLF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxOsF sub-encoding to TS1/0 on input line 24.
 LaTeX Font Info:    Setting ntxTOsF sub-encoding to TS1/0 on input line 24.
-
-(/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
+ (/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
 \ntx@tmpcnta=\count276
 \ntx@cnt=\count277
-
-(/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/fontaxes/fontaxes.sty
 Package: fontaxes 2020/07/21 v1.0e Font selection axes
 LaTeX Info: Redefining \upshape on input line 29.
 LaTeX Info: Redefining \itshape on input line 31.
@@ -320,29 +271,23 @@ LaTeX Info: Redefining \textulc on input line 49.
 \tx@dimBB=\dimen154
 \tx@dimC=\dimen155
 LaTeX Info: Redefining \oldstylenums on input line 893.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/newtx/newtxmath.sty
 Package: newtxmath 2023/11/05 v1.732
-
-`newtxmath' v1.732, 2023/11/05 Math macros based originally on txfonts (msharpe
-) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+ `newtxmath' v1.732, 2023/11/05 Math macros based originally on txfonts (msharpe) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip65
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks23
 \ex@=\dimen156
-))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen157
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count278
@@ -392,13 +337,11 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/centernot.sty
 Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
 )
 \tx@cntz=\count290
-
-(/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
+ (/usr/share/texlive/texmf-dist/tex/generic/kastrup/binhex.tex)
 \tx@Isdigit=\count291
 \tx@IsAlNum=\count292
 \tx@tA=\toks28
@@ -472,20 +415,17 @@ Now handling font encoding LMX ...
 ... no UTF-8 mapping file for font encoding LMX
 LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 643.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 6
-43.
+(Font)              `largesymbols' in the math version `normal' on input line 643.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 643.
 LaTeX Font Info:    Encoding `OMX' has changed to `LMX' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 643
-.
+(Font)              `largesymbols' in the math version `bold' on input line 643.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/cmex/m/n --> LMX/ntxexx/m/n on input line 643.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  LMX/ntxexx/m/n --> LMX/ntxexx/b/n on input line 644.
 \symlargesymbolsTXA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
-
 (Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 658.
 \tx@sbptoks=\toks30
 LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 881.
@@ -505,29 +445,22 @@ LaTeX Font Info:    Redeclaring math accent \vec on input line 2044.
 LaTeX Info: Redefining \Bbbk on input line 2834.
 LaTeX Info: Redefining \not on input line 2982.
 ) (/usr/share/texlive/texmf-dist/tex/latex/arimo/arimo.sty
-Package: arimo 2022/09/28 (Bob Tennent) Supports Arimo fonts for all LaTeX engi
-nes.
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
+Package: arimo 2022/09/28 (Bob Tennent) Supports Arimo fonts for all LaTeX engines.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T1+minntx on input line
- 112.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/t1minntx.fd
+LaTeX Font Info:    Trying to load font information for T1+minntx on input line 112.
+ (/usr/share/texlive/texmf-dist/tex/latex/newtx/t1minntx.fd
 File: t1minntx.fd 2023/09/09 v1.1 font definition file for T1/minntx
 )))
 
 Class scrreprt Warning: Usage of package `titlesec' together
 (scrreprt)              with a KOMA-Script class is not recommended.
 (scrreprt)              I'd suggest to use KOMA-Script features
-(scrreprt)              like \setkomafont, \RedeclareSectionCommand, \sectionli
-nesformat
+(scrreprt)              like \setkomafont, \RedeclareSectionCommand, \sectionlinesformat
 (scrreprt)              and several others to re-configure section
 (scrreprt)              headings.
 (scrreprt)              Nevertheless, using requested
@@ -566,14 +499,10 @@ Package titlesec Warning: Non standard sectioning command \subparagraph
 (titlesec)                detected. Using default spacing and no format.
 
 ) (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
-Package: scrlayer-scrpage 2023/07/07 v3.41 KOMA-Script package (end user interf
-ace for scrlayer)
-
-(/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer.sty
-Package: scrlayer 2023/07/07 v3.41 KOMA-Script package (defining layers and pag
-e styles)
-Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 218
-3.
+Package: scrlayer-scrpage 2023/07/07 v3.41 KOMA-Script package (end user interface for scrlayer)
+ (/usr/share/texlive/texmf-dist/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 2023/07/07 v3.41 KOMA-Script package (defining layers and page styles)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2183.
 )
 Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
 (scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
@@ -607,32 +536,24 @@ Package scrlayer-scrpage Warning: It seems that package `titlesec' is used
 1: section
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen170
 \Gin@req@width=\dimen171
-)
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
-
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
-Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
--ends (calc, etex, pgfmath)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
-
-(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \collectedbox=\box57
 )
@@ -641,8 +562,7 @@ Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
 \tc@urx=\dimen174
 \tc@ury=\dimen175
 Package trimclip Info: Using driver 'tc-pdftex.def'.
-
-(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen176
@@ -653,27 +573,23 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pheight=\dimen181
 \adjbox@pdepth=\dimen182
 \adjbox@ptotalheight=\dimen183
-
-(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
 \c@checkoddpage=\count293
-)
-(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box58
 \sift@deathcycles=\count294
 \@vwid@loff=\dimen184
 \@vwid@roff=\dimen185
-))
-(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen186
 \WF@size=\dimen187
 \c@WF@wrappedlines=\count295
 \WF@box=\box59
 \WF@everypar=\toks32
 Package: wrapfig 2003/01/31  v 3.6
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup8
 \symAMSb=\mathgroup9
@@ -683,8 +599,7 @@ LaTeX Font Info:    Redeclaring math delimiter \llcorner on input line 76.
 LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 77.
 LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
 LaTeX Font Info:    Redeclaring math symbol \lozenge on input line 142.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
 \thm@style=\toks33
 \thm@bodyfont=\toks34
@@ -698,47 +613,39 @@ Package: amsthm 2020/05/29 v2.20.6
 LaTeX Info: Redefining \textsquare on input line 427.
 )
 Class scrreprt Info: amsthm's \deferred@thm@head patched.
-
-(/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/dsfont.sty
 Package: dsfont 1995/08/01 v0.1 Double stroke roman fonts
-)
-(/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/units/nicefrac.sty
 Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip73
 \L@UnitsRaiseTextstyle=\skip74
 \L@UnitsRaiseScriptstyle=\skip75
-)
-(/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
-)
-(/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/nomencl/nomencl.sty
 Package: nomencl 2021/11/10 v5.6 Nomenclature package
 Package tocbasic Info: setting babel extension for `nlo' on input line 187.
 Package tocbasic Info: setting babel extension for `nls' on input line 188.
 \nomlabelwidth=\dimen188
 \nom@tempdim=\dimen189
 \nomitemsep=\skip76
-)
-(/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \c@r@tfl@t=\count296
 \rotFPtop=\skip77
 \rotFPbot=\skip78
 \rot@float@box=\box60
 \rot@mess@toks=\toks39
-)
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count297
 \float@exts=\toks40
 \float@box=\box61
 \@float@everytoks=\toks41
 \@floatcapt=\box62
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count298
 \lst@gtempboxa=\box63
 \lst@token=\toks42
@@ -751,19 +658,16 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \lst@newlines=\count302
 \lst@lineno=\count303
 \lst@maxwidth=\dimen193
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 \c@lstnumber=\count304
 \lst@skipnumbers=\count305
 \lst@framebox=\box64
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2020/03/25 PSNFSS-v9.3 (WaS) 
 )
 
@@ -841,49 +745,35 @@ Package tocloft Info: The document has chapter divisions on input line 51.
 \c@loahdepth=\count311
 \cftbeforeloahtitleskip=\skip121
 \cftafterloahtitleskip=\skip122
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-))
-(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count312
@@ -891,18 +781,15 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 \@linkdim=\dimen194
 \Hy@linkcounter=\count313
 \Hy@pagecounter=\count314
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count315
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -923,20 +810,16 @@ Package hyperref Info: Backreferencing OFF on input line 4199.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
 \c@Hy@tempcnt=\count316
-
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
 \XeTeXLinkMargin=\dimen195
-
-(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
-Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
-)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count317
 \Field@Width=\dimen196
@@ -948,8 +831,7 @@ Package hyperref Info: backreferencing OFF on input line 6078.
 Package hyperref Info: Link coloring ON on input line 6081.
 Package hyperref Info: Link coloring with OCG OFF on input line 6088.
 Package hyperref Info: PDF/A mode OFF on input line 6093.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
@@ -958,37 +840,28 @@ package with kernel methods
 \c@Hfootnote=\count320
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
-
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
-Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
-kage
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
 with kernel methods
 )
 \Fld@listcount=\count321
 \c@bookmark@seq@number=\count322
-
-(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
-Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-85.
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip123
-)
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
-
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count323
-
-(/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
+ (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
 \c@tabx@nest=\count324
@@ -1050,8 +923,7 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \c@mincompwidth=\count369
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-dm.def
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
@@ -1142,14 +1014,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \localshorteditorwidth=\skip145
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 File: blx-compat.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \c@textcitecount=\count438
 \c@textcitetotal=\count439
@@ -1167,21 +1037,18 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load bibliography style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
 File: authoryear.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count447
 \c@bbx:relatedtotal=\count448
 ))
 Package biblatex Info: Trying to load citation style 'authoryear'...
 Package biblatex Info: ... file 'authoryear.cbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
 File: authoryear.cbx 2023/03/05 v3.19 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -1193,8 +1060,7 @@ Package biblatex Info: Redefining '\textcites'.
 )
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 )
 Package biblatex Info: Input encoding 'utf8' detected.
@@ -1203,14 +1069,11 @@ Package biblatex Info: ... and expl3
 (biblatex)             2024-01-22 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-case-expl3.sty
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-))
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@tempdima=\dimen198
 \captionmargin=\dimen199
@@ -1221,10 +1084,8 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@parindent=\dimen260
 \caption@hangindent=\dimen261
 Package caption Info: KOMA-Script document class detected.
-
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
-File: caption-koma.sto 2023/09/08 v2.0e Adaption of the caption package to the 
-KOMA-Script document classes (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption-koma.sto
+File: caption-koma.sto 2023/09/08 v2.0e Adaption of the caption package to the KOMA-Script document classes (AR)
 ))
 \c@caption@flags=\count449
 \c@continuedfloat=\count450
@@ -1236,8 +1097,7 @@ Package caption Info: KOMA-Script scrextend package detected.
 \caption@addmargin@hsize=\dimen262
 \caption@addmargin@linewidth=\dimen263
 Package caption Info: wrapfig package is loaded.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LTleft=\skip146
 \LTright=\skip147
@@ -1257,8 +1117,7 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LT@p@ftn=\toks43
 )
 Class scrreprt Info: longtable captions redefined on input line 245.
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen265
 \ar@mcellbox=\box70
@@ -1267,8 +1126,7 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 \extratabsurround=\skip150
 \backup@length=\skip151
 \ar@cellbox=\box71
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip152
 \RaggedLeftLeftskip=\skip153
@@ -1284,11 +1142,9 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \RaggedLeftParindent=\skip163
 \RaggedRightParindent=\skip164
 \JustifyingParindent=\skip165
-)
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen267
 \lightrulewidth=\dimen268
@@ -1307,8 +1163,7 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count458
 \@lastruleclass=\count459
 \@thisrulewidth=\dimen279
-)
-(/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
 \c@tracingst=\count460
 \ST@wd=\dimen280
@@ -1325,8 +1180,7 @@ Package: supertabular 2020/02/02 v4.1g the supertabular environment
 \ST@toadd=\dimen288
 \ST@dimen=\dimen289
 \ST@pbox=\box72
-)
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
 Package: colortbl 2022/06/20 v1.0f Color table columns (DPC)
 \everycr=\toks45
 \minrowclearance=\skip169
@@ -1346,1335 +1200,6 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plitemsep=\skip172
 \plparsep=\skip173
 \pl@lab=\toks46
-)
-(/usr/share/texlive/texmf-dist/tex/latex/tablefootnote/tablefootnote.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/tablefootnote/tablefootnote.sty
 Package: tablefootnote 2014/01/26 v1.1c Table foot notes (HMM)
-
-(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
-Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/xifthen/xifthen.sty
-Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count462
-\calc@Bcount=\count463
-\calc@Adimen=\dimen290
-\calc@Bdimen=\dimen291
-\calc@Askip=\skip174
-\calc@Bskip=\skip175
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count464
-\calc@Cskip=\skip176
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
-Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
-)))
-(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
-Package: algorithm2e 2017/07/18 v5.2 algorithms environments
-\c@AlgoLine=\count465
-\algocf@hangindent=\skip177
-
-(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
-Package: relsize 2013/03/29 ver 4.1
-)
-\skiptotal=\skip178
-\skiplinenumber=\skip179
-\skiprule=\skip180
-\skiphlne=\skip181
-\skiptext=\skip182
-\skiplength=\skip183
-\algomargin=\skip184
-\skipalgocfslide=\skip185
-\algowidth=\dimen292
-\inoutsize=\dimen293
-\inoutindent=\dimen294
-\interspacetitleruled=\dimen295
-\interspacealgoruled=\dimen296
-\interspacetitleboxruled=\dimen297
-\algocf@ruledwidth=\skip186
-\algocf@inoutbox=\box73
-\algocf@inputbox=\box74
-\AlCapSkip=\skip187
-\AlCapHSkip=\skip188
-\algoskipindent=\skip189
-\algocf@nlbox=\box75
-\algocf@hangingbox=\box76
-\algocf@untilbox=\box77
-\algocf@skipuntil=\skip190
-\algocf@capbox=\box78
-\algocf@lcaptionbox=\skip191
-\algoheightruledefault=\skip192
-\algoheightrule=\skip193
-\algotitleheightruledefault=\skip194
-\algotitleheightrule=\skip195
-\c@algocfline=\count466
-\c@algocfproc=\count467
-\c@algocf=\count468
-\algocf@algoframe=\box79
-\algocf@algobox=\box80
-))
-\@indexfile=\write4
-\openout4 = `Bachelorarbeit.idx'.
-
-
-Writing index file Bachelorarbeit.idx
-\@nomenclaturefile=\write5
-\openout5 = `Bachelorarbeit.nlo'.
-
-Package nomencl Info: Writing nomenclature file Bachelorarbeit.nlo on input lin
-e 79.
-(./Seitenstil.tex
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
-
-(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
-Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-)
-\Gm@cnth=\count469
-\Gm@cntv=\count470
-\c@Gm@tempcnt=\count471
-\Gm@bindingoffset=\dimen298
-\Gm@wd@mp=\dimen299
-\Gm@odd@mp=\dimen300
-\Gm@even@mp=\dimen301
-\Gm@layoutwidth=\dimen302
-\Gm@layoutheight=\dimen303
-\Gm@layouthoffset=\dimen304
-\Gm@layoutvoffset=\dimen305
-\Gm@dimlist=\toks47
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
-File: lstlang2.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
-File: lstlang3.sty 2023/02/27 1.9 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
-)
-\c@definition=\count472
-)
-
-LaTeX Warning: \include should only be used after \begin{document} on input lin
-e 91.
-
-(./Silbentrennung.tex)
-Package csquotes Info: Checking for multilingual support...
-Package csquotes Info: ... found 'babel' package.
-Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'ngerman'.
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
- 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
-File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
-)
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 100.
-
-(./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux)
-(./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux)
-(./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux)
-(./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux)
-(./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux)
-(./Inhalt/Erklaerung.aux))
-\openout1 = `Bachelorarbeit.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 100.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd
-File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
-)
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 100.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
-File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
-)
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 100.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmsntxsy.fd
-File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
-)
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 100.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/lmxntxexx.fd
-File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
-)
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 100.
-LaTeX Font Info:    ... okay on input line 100.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count473
-\scratchdimen=\dimen306
-\scratchbox=\box81
-\nofMPsegments=\count474
-\nofMParguments=\count475
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count476
-\MPscratchDim=\dimen307
-\MPnumerator=\count477
-\makeMPintoPDFobject=\count478
-\everyMPtoPDFconversion=\toks49
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
-Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
-\c@mv@tabular=\count479
-\c@mv@boldtabular=\count480
-LaTeX Info: Command `\dddot' is already robust on input line 100.
-LaTeX Info: Command `\ddddot' is already robust on input line 100.
-
-
-Package scrlayer-scrpage Warning: Very small foot height detected!
-(scrlayer-scrpage)                Using scrlayer-scrpage the foot height
-(scrlayer-scrpage)                should be at least \baselineskip, which is
-(scrlayer-scrpage)                21.75pt currently.
-(scrlayer-scrpage)                But foot height is currently 18.125pt only.
-(scrlayer-scrpage)                You may use
-(scrlayer-scrpage)                typearea option `footheight=21.75pt'
-(scrlayer-scrpage)                or load package `scrlayer-scrpage' with
-(scrlayer-scrpage)                option `singlespacing=true'
-(scrlayer-scrpage)                to avoid this warning.
-
-\c@lstlisting=\count481
-Package hyperref Info: Link coloring ON on input line 100.
-(./Bachelorarbeit.out) (./Bachelorarbeit.out)
-\@outlinefile=\write6
-\openout6 = `Bachelorarbeit.out'.
-
-Class scrreprt Info: loading recommended package `bookmark'.
-(scrreprt)           Using `bookmark' together with `hyperref' is recommended,
-(scrreprt)           because of handling of possible bookmark level gaps.
-(scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
-(scrreprt)           `bookmarkpackage=false' before \begin{document} and
-(scrreprt)           you can avoid this message adding:
-(scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 100.
-
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
-Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
-
-(/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
-File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
-)
-\BKM@id=\count482
-))
-Package biblatex Info: Trying to load language 'ngerman'...
-Package biblatex Info: ... file 'ngerman.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/ngerman.lbx
-File: ngerman.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)
-Package biblatex Info: Trying to load language 'german'...
-Package biblatex Info: ... file 'german.lbx' found.
-
-(/usr/share/texlive/texmf-dist/tex/latex/biblatex/lbx/german.lbx
-File: german.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-))
-Package biblatex Info: Input encoding 'utf8' detected.
-Package biblatex Info: Automatic encoding selection.
-(biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `Bachelorarbeit.bcf'.
-
-Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Bachelorarbeit.bbl' found.
-
-(./Bachelorarbeit.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                moallaNoRepresentationNoTrust2024
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                singlaMemorybasedDeepReinforcement2021
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
-Package biblatex Info: Reference section=0 on input line 100.
-Package biblatex Info: Reference segment=0 on input line 100.
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: longtable package is loaded.
- (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
-Package caption Info: supertabular package is loaded.
-Package caption Info: End \AtBeginDocument code.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(85.35826pt, 441.01773pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 731.23584pt, 42.67912pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=441.01773pt
-* \textheight=731.23584pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-41.0131pt
-* \headheight=22.76219pt
-* \headsep=11.38109pt
-* \topskip=12.0pt
-* \footskip=22.76219pt
-* \marginparwidth=59.7508pt
-* \marginparsep=12.8401pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-\openout2 = `Deckblatt.aux'.
-
-(./Deckblatt.tex
-<Bilder/Uni-L.png, id=4, 301.94406pt x 142.51643pt>
-File: Bilder/Uni-L.png Graphic file (type png)
-<use Bilder/Uni-L.png>
-Package pdftex.def Info: Bilder/Uni-L.png  used on input line 26.
-(pdftex.def)             Requested size: 176.40439pt x 83.26195pt.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 40.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 59.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 14.4pt on input line 59.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
-e 73.
- (/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1minntx.fd
-File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
-)
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-73.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
-File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
-)
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-73.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
-File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
-)
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-73.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
-File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
-st/fonts/enc/dvips/newtx/ntx-ec-tlf.enc} <./Bilder/Uni-L.png>])
-\openout2 = `Inhalt/Abstract.aux'.
-
- (./Inhalt/Abstract.tex
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-LaTeX Font Info:    Trying to load font information for T1+Arimo-TLF on input l
-ine 1.
-(/usr/share/texlive/texmf-dist/tex/latex/arimo/T1Arimo-TLF.fd
-File: T1Arimo-TLF.fd 2017/01/04 (autoinst) Font definitions for T1/Arimo-TLF.
-)
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/m/n' will be
-(Font)              scaled to size 11.39996pt on input line 1.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 11.39996pt on input line 1.
-LaTeX Font Info:    Font shape `T1/Arimo-TLF/b/n' will be
-(Font)              scaled to size 13.29996pt on input line 1.
-) [2
-
-
-
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc}] (./Bachel
-orarbeit.toc
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.0pt on input line 2.
-
-
-Package scrlayer-scrpage Warning: \footheight to low.
-(scrlayer-scrpage)                At least 21.74998pt needed,
-(scrlayer-scrpage)                but only 18.125pt found.
-(scrlayer-scrpage)                I'll enlarge \footheight, for further
-(scrlayer-scrpage)                processing, but you should do this yourself,
-(scrlayer-scrpage)                e.g., using
-(scrlayer-scrpage)                  \setlength{\footheight}{21.74998pt}
-(scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 29
-.
-
-[1
-
-
-
-
-] [2])
-\tf@toc=\write7
-\openout7 = `Bachelorarbeit.toc'.
-
- [3] (./Bachelorarbeit.lof
-Overfull \hbox (25.61505pt too wide) in paragraph at lines 10--10
- \T1/ntxtlf/m/n/12 ren die Kor-rid-or-gren-zen, graue Fl‰-chen die sche-ma-ti-s
-chen Hindernis-Begrenzungsboxen. []  
- []
-
-)
-\tf@lof=\write8
-\openout8 = `Bachelorarbeit.lof'.
-
- [4
-
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
-(./Bachelorarbeit.lot)
-\tf@lot=\write9
-\openout9 = `Bachelorarbeit.lot'.
-
- [5
-
-
-] (./Bachelorarbeit.loe)
-\tf@loe=\write10
-\openout10 = `Bachelorarbeit.loe'.
-
- (./Inhalt/Glossar.tex)
-(./Bachelorarbeit.nls [6
-
-
-]
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-) [7
-
-]
-\openout2 = `Inhalt/Einleitung.aux'.
-
- (./Inhalt/Einleitung.tex
-chapter 1.
-
-Class scrreprt Warning: \float@addtolists detected!
-(scrreprt)              Implementation of \float@addtolist became
-(scrreprt)              deprecated in KOMA-Script v3.01 2008/11/14 and
-(scrreprt)              has been replaced by several more flexible
-(scrreprt)              features of package `tocbasic`.
-(scrreprt)              Since Version 3.12 support for deprecated
-(scrreprt)              \float@addtolist interface has been
-(scrreprt)              restricted to only some of the KOMA-Script
-(scrreprt)              features and been removed from others.
-(scrreprt)              Loading of package `scrhack' may help to
-(scrreprt)              avoid this warning, if you are using a
-(scrreprt)              a package that still implements the
-(scrreprt)              deprecated \float@addtolist interface.
-
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--11
-
- []
-
-[1
-
-
-
-
-
-] [2]) [3]
-\openout2 = `"Inhalt/Fachliche Grundlagen.aux"'.
-
- (./Inhalt/Fachliche Grundlagen.tex
-chapter 2.
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-
-Overfull \hbox (6.97186pt too wide) in paragraph at lines 20--21
-[]\T1/ntxtlf/m/n/12 Die In-ter-ak-ti-on zwi-schen Agent und Um-ge-bung er-folgt
- in dis-kre-ten Zeit-schrit-ten $\OML/ntxmi/m/it/12 t \U/ntxmia/m/it/12 = \OT1/
-minntx/m/n/12 0\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 1\OML/ntxmi/m/it/12 ; \O
-T1/minntx/m/n/12 2\OML/ntxmi/m/it/12 ; [] $\T1/ntxtlf/m/n/12 .
- []
-
-
-
-pdfTeX warning: pdflatex (file ./Bilder/mdp_agent_environment.pdf): PDF inclusi
-on: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/mdp_agent_environment.pdf, id=311, 398.99063pt x 248.42813pt>
-File: Bilder/mdp_agent_environment.pdf Graphic file (type pdf)
-<use Bilder/mdp_agent_environment.pdf>
-Package pdftex.def Info: Bilder/mdp_agent_environment.pdf  used on input line 2
-8.
-(pdftex.def)             Requested size: 286.65883pt x 178.49283pt.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 29.
-[4
-
-
-
-
-] [5 <./Bilder/mdp_agent_environment.pdf>]
-Overfull \hbox (20.8258pt too wide) in paragraph at lines 73--75
-\T1/ntxtlf/m/n/12 TD-Verfahren bil-den die Grund-la-ge der meis-ten mo-der-nen 
-Reinforcement-Learning-Algorithmen:
- []
-
-[6] [7]
-<Bilder/ppo_clipping.pdf, id=375, 368.57701pt x 151.767pt>
-File: Bilder/ppo_clipping.pdf Graphic file (type pdf)
-<use Bilder/ppo_clipping.pdf>
-Package pdftex.def Info: Bilder/ppo_clipping.pdf  used on input line 130.
-(pdftex.def)             Requested size: 374.86775pt x 154.3626pt.
- [8 <./Bilder/ppo_clipping.pdf>]) [9]
-\openout2 = `"Inhalt/Stand der Forschung.aux"'.
-
- (./Inhalt/Stand der Forschung.tex
-chapter 3.
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-[10
-
-
-
-
-] [11] [12] [13] [14] [15] [16]
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
-(Font)              scaled to size 10.95pt on input line 67.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 69.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.3pt on input line 75.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.5pt on input line 75.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 92.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.2pt on input line 93.
- [17]) [18]
-\openout2 = `Inhalt/Methodik.aux'.
-
- (./Inhalt/Methodik.tex
-chapter 4.
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-
-Overfull \hbox (5.59299pt too wide) in paragraph at lines 22--34
-\T1/ntxtlf/m/n/12 und Ter-mi-nie-rungs-be-din-gun-gen. Ab-schnitt [][]4.3[][] b
-e-schreibt die CNN-MLP-Netzwerkarchitektur,
- []
-
-
-Overfull \hbox (25.00272pt too wide) in paragraph at lines 22--34
-\T1/ntxtlf/m/n/12 schnitt [][]4.6[][]), dem Trai-nings-pro-zess (Ab-schnitt [][
-]4.7[][]) und dem Eva-lua-ti-ons-pro-to-koll (Ab-schnitt [][]4.8[][]). 
- []
-
-[19
-
-
-
-
-]
-
-pdfTeX warning: pdflatex (file ./Bilder/pipeline.pdf): PDF inclusion: found PDF
- version <1.7>, but at most version <1.5> allowed
-<Bilder/pipeline.pdf, id=604, 587.19376pt x 96.36pt>
-File: Bilder/pipeline.pdf Graphic file (type pdf)
-<use Bilder/pipeline.pdf>
-Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 84.
-(pdftex.def)             Requested size: 441.01773pt x 72.37125pt.
-[20 <./Bilder/pipeline.pdf>]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 130.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 163.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 163.
- [21] [22]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
-e 227.
-
-(/usr/share/texlive/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
-)
-LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 227.
- [23{/usr/share/texmf/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
-Overfull \hbox (7.49359pt too wide) in paragraph at lines 276--279
-\T1/ntxtlf/b/n/12 Absturz.\T1/ntxtlf/m/n/12 Die Ab-sturz-stra-fe wird bei Ver-l
-et-zung ei-ner Ab-bruch-be-din-gung (vgl. Ab-schnitt [][]4.2.5[][])
- []
-
-[24]
-
-pdfTeX warning: pdflatex (file ./Bilder/architecture.pdf): PDF inclusion: found
- PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/architecture.pdf, id=716, 782.925pt x 199.49532pt>
-File: Bilder/architecture.pdf Graphic file (type pdf)
-<use Bilder/architecture.pdf>
-Package pdftex.def Info: Bilder/architecture.pdf  used on input line 390.
-(pdftex.def)             Requested size: 441.01773pt x 112.37411pt.
-[25] [26 <./Bilder/architecture.pdf>]
-Overfull \hbox (1.27885pt too wide) in paragraph at lines 453--455
-[]\T1/ntxtlf/m/n/12 Statt Clip-ping wird da-her ei-ne in-ver-tier-ba-re, dif-fe
--ren-zier-ba-re Trans-for-ma-ti-on ver-wen-det ([]Haar-
- []
-
-
-Overfull \hbox (32.50314pt too wide) in paragraph at lines 464--468
-\T1/ntxtlf/m/n/12 Der Kor-rek-tur-term $\LMS/ntxsy/m/n/12 ^^@ [][] []π\OT1/minn
-tx/m/n/12 1 \LMS/ntxsy/m/n/12 ^^@ [][]π\OML/ntxmi/m/it/12 u[]\LMS/ntxsy/m/n/12 
-∫∫$ \T1/ntxtlf/m/n/12 ist die Log-Jacobi-Determinante der Tanh-Transformation
- []
-
-[27] [28]
-<Bilder/corridor_geometry.pdf, id=895, 346.69325pt x 292.20067pt>
-File: Bilder/corridor_geometry.pdf Graphic file (type pdf)
-<use Bilder/corridor_geometry.pdf>
-Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 581.
-(pdftex.def)             Requested size: 374.86775pt x 315.95099pt.
-
-Overfull \hbox (35.45345pt too wide) in paragraph at lines 592--599
-\T1/ntxtlf/m/n/12 Als Hin-der-nis-se die-nen sechs 3D-Objekte aus dem Goo-gle S
-can-ned Ob-jects Da-ten-satz (GSO) ([]Downs
- []
-
-[29] [30 <./Bilder/corridor_geometry.pdf>] [31] [32] [33]
-Overfull \hbox (13.80922pt too wide) in paragraph at lines 819--829
-[]\T1/ntxtlf/m/n/12 Die Kol-li-si-ons-er-ken-nung wird ge-gen-¸ber der Trai-nin
-gs-um-ge-bung an-ge-passt: Aus dem Weinberg-
- []
-
-<Bilder/vineyard_targets.pdf, id=969, 454.4552pt x 423.02669pt>
-File: Bilder/vineyard_targets.pdf Graphic file (type pdf)
-<use Bilder/vineyard_targets.pdf>
-Package pdftex.def Info: Bilder/vineyard_targets.pdf  used on input line 842.
-(pdftex.def)             Requested size: 330.76329pt x 307.89677pt.
-[34]) [35 <./Bilder/vineyard_targets.pdf>]
-\openout2 = `Inhalt/Ergebnisse.aux'.
-
- (./Inhalt/Ergebnisse.tex
-chapter 5.
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-<Bilder/figures/training/Train_mean_reward.pdf, id=1035, 520.86116pt x 342.0184
-pt>
-File: Bilder/figures/training/Train_mean_reward.pdf Graphic file (type pdf)
-<use Bilder/figures/training/Train_mean_reward.pdf>
-Package pdftex.def Info: Bilder/figures/training/Train_mean_reward.pdf  used on
- input line 19.
-(pdftex.def)             Requested size: 211.68661pt x 139.00203pt.
-<Bilder/figures/training/Policy_mean_std.pdf, id=1036, 515.12096pt x 342.0184pt
->
-File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
-<use Bilder/figures/training/Policy_mean_std.pdf>
-Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on i
-nput line 21.
-(pdftex.def)             Requested size: 211.68661pt x 140.55202pt.
-<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=1042, 520.86116pt x 342.
-0184pt>
-File: Bilder/figures/training/Episode_rew_crash_raw.pdf Graphic file (type pdf)
-
-<use Bilder/figures/training/Episode_rew_crash_raw.pdf>
-Package pdftex.def Info: Bilder/figures/training/Episode_rew_crash_raw.pdf  use
-d on input line 51.
-(pdftex.def)             Requested size: 211.68661pt x 139.00203pt.
-<Bilder/figures/training/Episode_rew_success_raw.pdf, id=1043, 511.60783pt x 34
-2.0184pt>
-File: Bilder/figures/training/Episode_rew_success_raw.pdf Graphic file (type pd
-f)
-<use Bilder/figures/training/Episode_rew_success_raw.pdf>
-Package pdftex.def Info: Bilder/figures/training/Episode_rew_success_raw.pdf  u
-sed on input line 53.
-(pdftex.def)             Requested size: 211.68661pt x 141.51749pt.
-[36
-
-
-
-
- <./Bilder/figures/training/Train_mean_reward.pdf> <./Bilder/figures/training/P
-olicy_mean_std.pdf>]
-<Bilder/figures/eval/phase1_outcomes.pdf, id=1128, 263.52515pt x 200.07372pt>
-File: Bilder/figures/eval/phase1_outcomes.pdf Graphic file (type pdf)
-<use Bilder/figures/eval/phase1_outcomes.pdf>
-Package pdftex.def Info: Bilder/figures/eval/phase1_outcomes.pdf  used on input
- line 110.
-(pdftex.def)             Requested size: 286.65883pt x 217.65471pt.
- [37 <./Bilder/figures/training/Episode_rew_crash_raw.pdf> <./Bilder/figures/tr
-aining/Episode_rew_success_raw.pdf>]
-<Bilder/figures/eval/trajectory_ep1.pdf, id=1213, 459.6372pt x 475.57175pt>
-File: Bilder/figures/eval/trajectory_ep1.pdf Graphic file (type pdf)
-<use Bilder/figures/eval/trajectory_ep1.pdf>
-Package pdftex.def Info: Bilder/figures/eval/trajectory_ep1.pdf  used on input 
-line 141.
-(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
-<Bilder/figures/eval/trajectory_ep2.pdf, id=1214, 459.6372pt x 475.57175pt>
-File: Bilder/figures/eval/trajectory_ep2.pdf Graphic file (type pdf)
-<use Bilder/figures/eval/trajectory_ep2.pdf>
-Package pdftex.def Info: Bilder/figures/eval/trajectory_ep2.pdf  used on input 
-line 143.
-(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
-<Bilder/figures/eval/trajectory_ep3.pdf, id=1215, 459.6372pt x 475.57175pt>
-File: Bilder/figures/eval/trajectory_ep3.pdf Graphic file (type pdf)
-<use Bilder/figures/eval/trajectory_ep3.pdf>
-Package pdftex.def Info: Bilder/figures/eval/trajectory_ep3.pdf  used on input 
-line 145.
-(pdftex.def)             Requested size: 141.12889pt x 146.01793pt.
- [38 <./Bilder/figures/eval/phase1_outcomes.pdf>]
-<Bilder/figures/eval/phase2_outcomes.pdf, id=1265, 263.52515pt x 200.07372pt>
-File: Bilder/figures/eval/phase2_outcomes.pdf Graphic file (type pdf)
-<use Bilder/figures/eval/phase2_outcomes.pdf>
-Package pdftex.def Info: Bilder/figures/eval/phase2_outcomes.pdf  used on input
- line 202.
-(pdftex.def)             Requested size: 286.65883pt x 217.65471pt.
- [39 <./Bilder/figures/eval/trajectory_ep1.pdf> <./Bilder/figures/eval/trajecto
-ry_ep2.pdf> <./Bilder/figures/eval/trajectory_ep3.pdf>] [40 <./Bilder/figures/e
-val/phase2_outcomes.pdf>]
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.0pt on input line 290.
-) [41] [42]
-\openout2 = `Inhalt/Diskussion.aux'.
-
-
-(./Inhalt/Diskussion.tex
-chapter 6.
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-
-LaTeX Warning: Citation 'moallaNoRepresentationNoTrust2024' on page 43 undefine
-d on input line 33.
-
-[43
-
-
-
-
-]
-Overfull \hbox (19.80084pt too wide) in paragraph at lines 66--89
-\T1/ntxtlf/m/n/12 Bo-den-kol-li-sio-nen tre-ten nicht auf. Mit ober-fl‰-chen-ba
--sier-ter Kol-li-si-ons-er-ken-nung (Ab-schnitt [][]5.2.1[][])
- []
-
-[44] [45]
-<Bilder/perceptual_aliasing/depth_comparison.pdf, id=1503, 572.73152pt x 578.28
-847pt>
-File: Bilder/perceptual_aliasing/depth_comparison.pdf Graphic file (type pdf)
-<use Bilder/perceptual_aliasing/depth_comparison.pdf>
-Package pdftex.def Info: Bilder/perceptual_aliasing/depth_comparison.pdf  used 
-on input line 174.
-(pdftex.def)             Requested size: 374.86775pt x 378.50375pt.
- [46]
-
-LaTeX Warning: Citation 'singlaMemorybasedDeepReinforcement2021' on page 47 und
-efined on input line 191.
-
-[47 <./Bilder/perceptual_aliasing/depth_comparison.pdf>] [48]
-Overfull \hbox (34.10481pt too wide) in paragraph at lines 294--306
-\T1/ntxtlf/m/n/12 Alle Er-geb-nis-se ba-sie-ren auf ei-nem ein-zi-gen Trai-ning
-s-lauf (Seed). Die Bootstrap-Konfidenzintervalle
- []
-
-[49]) [50]
-\openout2 = `"Inhalt/Fazit und Ausblick.aux"'.
-
- (./Inhalt/Fazit und Ausblick.tex
-chapter 7.
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-[51
-
-
-
-
-]
-
-! Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.57 \paragraph{Architekturerweiterungen.}
-                                          
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.57 \paragraph{Architekturerweiterungen.}
-                                          
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.57 \paragraph{Architekturerweiterungen.}
-                                          
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.57 \paragraph{Architekturerweiterungen.}
-                                          
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.57 \paragraph{Architekturerweiterungen.}
-                                          
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-! Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 \paragraph{Trainingssetup.}
-                                
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.68 \paragraph{Trainingssetup.}
-                                
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.68 \paragraph{Trainingssetup.}
-                                
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.68 \paragraph{Trainingssetup.}
-                                
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.68 \paragraph{Trainingssetup.}
-                                
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-
-! Package titlesec Error: No format for this command.
-
-See the titlesec package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.75 ...ungsdiversit√§t und Sim-to-Real-Transfer.}
-                                                  
-If you (re)set the class of a sectioning command, you may
-you may need to (re)define its format with \titleformat
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.75 ...ungsdiversit√§t und Sim-to-Real-Transfer.}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.75 ...ungsdiversit√§t und Sim-to-Real-Transfer.}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Missing number, treated as zero.
-<to be read again> 
-                   }
-l.75 ...ungsdiversit√§t und Sim-to-Real-Transfer.}
-                                                  
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.75 ...ungsdiversit√§t und Sim-to-Real-Transfer.}
-                                                  
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-) [52] [53]
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-(./Bachelorarbeit.loah)
-\tf@loah=\write11
-\openout11 = `Bachelorarbeit.loah'.
-
- [7
-
-
-
-]
-\openout2 = `Inhalt/Anhang.aux'.
-
- (./Inhalt/Anhang.tex
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-<Bilder/figures/training/Train_mean_episode_length.pdf, id=1618, 522.1472pt x 3
-42.0184pt>
-File: Bilder/figures/training/Train_mean_episode_length.pdf Graphic file (type 
-pdf)
-<use Bilder/figures/training/Train_mean_episode_length.pdf>
-Package pdftex.def Info: Bilder/figures/training/Train_mean_episode_length.pdf 
- used on input line 6.
-(pdftex.def)             Requested size: 211.68661pt x 138.6576pt.
-<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1619, 504.58159pt x 342.
-0184pt>
-File: Bilder/figures/training/Episode_rew_close_raw.pdf Graphic file (type pdf)
-
-<use Bilder/figures/training/Episode_rew_close_raw.pdf>
-Package pdftex.def Info: Bilder/figures/training/Episode_rew_close_raw.pdf  use
-d on input line 8.
-(pdftex.def)             Requested size: 211.68661pt x 143.48495pt.
-<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1620, 524.3
-7428pt x 342.0184pt>
-File: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf Graphic fi
-le (type pdf)
-<use Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>
-Package pdftex.def Info: Bilder/figures/training/Episode_rew_obstacle_proximity
-_raw.pdf  used on input line 18.
-(pdftex.def)             Requested size: 211.68661pt x 138.07309pt.
-File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
-<use Bilder/figures/training/Policy_mean_std.pdf>
-Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on i
-nput line 20.
-(pdftex.def)             Requested size: 211.68661pt x 140.55202pt.
-[8
-
-
-
- <./Bilder/figures/training/Train_mean_episode_length.pdf> <./Bilder/figures/tr
-aining/Episode_rew_close_raw.pdf> <./Bilder/figures/training/Episode_rew_obstac
-le_proximity_raw.pdf>]
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-[9
-
-
-]
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-[10
-
-
-]
-
-Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makeschapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makeschapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-) [11
-
-
-]
-chapter without number
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 245.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 24
-5.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [12
-
-
-
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/sh
-are/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}] [13] [14] [15] [16]
-Overfull \hbox (1.98267pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 Stig Pe-ter-sen, Charles Be-at-tie, Amir Sa-dik, Io-an-nis An
--to-no-glou, He-len King, Dharshan
- []
-
-
-Overfull \hbox (0.10036pt too wide) in paragraph at lines 246--246
-[][]\T1/ntxtlf/m/n/12 Polvara, Ric-car-do, Mas-si-mi-lia-no Pa-ta-c-chio-la, Ma
-rc Han-hei-de und Ger-hard Neu-mann (25. Feb.
- []
-
-
-Overfull \hbox (55.5361pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 main Ran-do-mi-za-ti-on^^P. In: \T1/ntxtlf/m/it/12 Ro-bo-tics
- \T1/ntxtlf/m/n/12 9.1. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2218-6581. \
-T1/ntxtlf/m/sc/12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / roboti
-cs9010008$[][]\T1/ntxtlf/m/n/12 .
- []
-
-
-Overfull \hbox (4.1798pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/sc/12 url\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 https : / / www .
- mdpi . com / 2218 -[] 6581 / 9 / 1 / 8$[][] \T1/ntxtlf/m/n/12 (be-sucht am 07.
-02.2026). 
- []
-
-[17] [18] [19]
-Overfull \hbox (19.9172pt too wide) in paragraph at lines 246--246
-\T1/pcr/m/n/12 www . sciencedirect . com / science / article / pii / S016816992
-5009081$[][]
- []
-
-
-Overfull \hbox (19.39218pt too wide) in paragraph at lines 246--246
-\T1/ntxtlf/m/n/12 ments^^P. In: \T1/ntxtlf/m/it/12 Elec-tro-nics \T1/ntxtlf/m/n
-/12 7.5. \T1/ntxtlf/m/sc/12 issn\T1/ntxtlf/m/n/12 : 2079-9292. \T1/ntxtlf/m/sc/
-12 doi\T1/ntxtlf/m/n/12 : [][]$\T1/pcr/m/n/12 10 . 3390 / electronics7050073$[]
-[]\T1/ntxtlf/m/n/12 .
- []
-
-[20] [21]
-\openout2 = `Inhalt/Erklaerung.aux'.
-
- (./Inhalt/Erklaerung.tex
-chapter without number
-
-Class scrreprt Warning: Redefinition of \@makechapterhead detected.
-(scrreprt)              Note: KOMA-Script does use styles for commands like
-(scrreprt)              \chapter. Currently it internally still provides and
-(scrreprt)              uses \@makechapterhead, but a completely different
-(scrreprt)              definition compared to the standard classes.
-(scrreprt)              So redefining or using internal \@makechapterhead
-(scrreprt)              by users or package authors may already break
-(scrreprt)              KOMA-Script and will not work with a coming version,
-(scrreprt)              that will remove this deprecated code.
-
-) [22
-
-
-]
-
-Package caption Warning: Unused \captionsetup[algocf] on input line 218.
-See the caption package documentation for explanation.
-
-(./Bachelorarbeit.aux (./Deckblatt.aux) (./Inhalt/Abstract.aux)
-(./Inhalt/Einleitung.aux) (./Inhalt/Fachliche Grundlagen.aux)
-(./Inhalt/Stand der Forschung.aux) (./Inhalt/Methodik.aux)
-(./Inhalt/Ergebnisse.aux) (./Inhalt/Diskussion.aux)
-(./Inhalt/Fazit und Ausblick.aux) (./Inhalt/Anhang.aux)
-(./Inhalt/Erklaerung.aux))
- ***********
-LaTeX2e <2023-11-01> patch level 1
-L3 programming layer <2020/03/25>
- ***********
-Package rerunfilecheck Info: File `Bachelorarbeit.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
-\openout1 = `Bachelorarbeit.run.xml'.
-
- ) 
-Here is how much of TeX's memory you used:
- 36501 strings out of 474222
- 680544 string characters out of 5748733
- 1948975 words of memory out of 5000000
- 57774 multiletter control sequences out of 15000+600000
- 719424 words of font info for 304 fonts, out of 8000000 for 9000
- 1146 hyphenation exceptions out of 8191
- 108i,20n,125p,10909b,4026s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/tex-gy
-re/qtmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ne
-wtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (78 pages, 2477381 bytes).
-PDF statistics:
- 2330 PDF objects out of 2487 (max. 8388607)
- 1625 compressed objects within 17 object streams
- 280 named destinations out of 1000 (max. 500000)
- 717 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacr

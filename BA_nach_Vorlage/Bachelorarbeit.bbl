@@ -3106,6 +3106,57 @@
       \endverb
       \keyw{Computer science}
     \endentry
+    \entry{moallaNoRepresentationNo}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f701e0d41900a34dfdf2a9e51698dde7}{%
+           family={Moalla},
+           familyi={M\bibinitperiod},
+           given={Skander},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c89bb5388b2749a3eeb110f7345d8fb}{%
+           family={Miele},
+           familyi={M\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53ed64b3d984e2a3141c6ad64c81eda8}{%
+           family={Pyatko},
+           familyi={P\bibinitperiod},
+           given={Daniil},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7045b009b04d57bd2e19b5dfa0864d4f}{%
+           family={Pascanu},
+           familyi={P\bibinitperiod},
+           given={Razvan},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2adc0c92c308f233c731321d55efe58f}{%
+           family={Gulcehre},
+           familyi={G\bibinitperiod},
+           given={Caglar},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c87e25e25a2cd9965e03edcbf09ebc84}
+      \strng{fullhash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \strng{bibnamehash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \strng{authorbibnamehash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \strng{authornamehash}{c87e25e25a2cd9965e03edcbf09ebc84}
+      \strng{authorfullhash}{8c3dd9317d7c43cbd2f1e79d74e04247}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labeldatesource}{nodate}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Reinforcement learning (RL) is inherently rife with non-stationarity since the states and rewards the agent observes during training depend on its changing policy. Therefore, networks in deep RL must be capable of adapting to new observations and fitting new targets. However, previous works have observed that networks trained under non-stationarity exhibit an inability to continue learning, termed loss of plasticity, and eventually a collapse in performance. For off-policy deep value-based RL methods, this phenomenon has been correlated with a decrease in representation rank and the ability to fit random targets, termed capacity loss. Although this correlation has generally been attributed to neural network learning under non-stationarity, the connection to representation dynamics has not been carefully studied in on-policy policy optimization methods. In this work, we empirically study representation dynamics in Proximal Policy Optimization (PPO) on the Atari and MuJoCo environments, revealing that PPO agents are also affected by feature rank deterioration and capacity loss. We show that this is aggravated by stronger non-stationarity, ultimately driving the actor’s performance to collapse, regardless of the performance of the critic. We ask why the trust region, specific to methods like PPO, cannot alleviate or prevent the collapse and find a connection between representation collapse and the degradation of the trust region, one exacerbating the other. Finally, we present Proximal Feature Optimization (PFO), a novel auxiliary loss that, along with other interventions, shows that regularizing the representation dynamics mitigates the performance collapse of PPO agents. Code and run histories are available at https://github.com/CLAIRE-Labo/no-representation-no-trust.}
+      \field{langid}{english}
+      \field{title}{No {{Representation}}, {{No Trust}}: {{Connecting Representation}}, {{Collapse}}, and {{Trust Issues}} in {{PPO}}}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/YWV6XI96/Moalla et al. - No Representation, No Trust Connecting Representation, Collapse, and Trust Issues in PPO.pdf
+      \endverb
+    \endentry
     \entry{ngPolicyInvarianceReward1999}{inproceedings}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=49e889356ff39df159461bc2895c7e16}{%
@@ -3841,6 +3892,63 @@
       \verb https://doi.org/10.1007/s10846-025-02314-4
       \endverb
       \keyw{Autonomous landing,Computer vision,Deep learning,Edge computing,Embedded AI,Fiducial markers,Marker detection,Multi-sensor fusion,UAV,Vision-based navigation}
+    \endentry
+    \entry{singlaMemorybasedDeepReinforcement2018}{online}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=341fdc38a89792d4db4af7f482fd86c3}{%
+           family={Singla},
+           familyi={S\bibinitperiod},
+           given={Abhik},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=67e63ee3781c1ed2811dbf9aead49461}{%
+           family={Padakandla},
+           familyi={P\bibinitperiod},
+           given={Sindhu},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=28ce21b29d3236824f36bf3f2877629b}{%
+           family={Bhatnagar},
+           familyi={B\bibinitperiod},
+           given={Shalabh},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{organization}{1}{%
+        {arXiv.org}%
+      }
+      \strng{namehash}{0c2ceac68df745a35afb123a5917077c}
+      \strng{fullhash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \strng{bibnamehash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \strng{authorbibnamehash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \strng{authornamehash}{0c2ceac68df745a35afb123a5917077c}
+      \strng{authorfullhash}{cd4040241ab5bcdbb3ceb379bdde2d4e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This paper presents our method for enabling a UAV quadrotor, equipped with a monocular camera, to autonomously avoid collisions with obstacles in unstructured and unknown indoor environments. When compared to obstacle avoidance in ground vehicular robots, UAV navigation brings in additional challenges because the UAV motion is no more constrained to a well-defined indoor ground or street environment. Horizontal structures in indoor and outdoor environments like decorative items, furnishings, ceiling fans, sign-boards, tree branches etc., also become relevant obstacles unlike those for ground vehicular robots. Thus, methods of obstacle avoidance developed for ground robots are clearly inadequate for UAV navigation. Current control methods using monocular images for UAV obstacle avoidance are heavily dependent on environment information. These controllers do not fully retain and utilize the extensively available information about the ambient environment for decision making. We propose a deep reinforcement learning based method for UAV obstacle avoidance (OA) and autonomous exploration which is capable of doing exactly the same. The crucial idea in our method is the concept of partial observability and how UAVs can retain relevant information about the environment structure to make better future navigation decisions. Our OA technique uses recurrent neural networks with temporal attention and provides better results compared to prior works in terms of distance covered during navigation without collisions. In addition, our technique has a high inference rate (a key factor in robotic applications) and is energy-efficient as it minimizes oscillatory motion of UAV and reduces power wastage.}
+      \field{day}{8}
+      \field{langid}{english}
+      \field{month}{11}
+      \field{title}{Memory-Based {{Deep Reinforcement Learning}} for {{Obstacle Avoidance}} in {{UAV}} with {{Limited Environment Knowledge}}}
+      \field{urlday}{30}
+      \field{urlmonth}{5}
+      \field{urlyear}{2026}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/VGVKTKMM/Singla et al. - 2018 - Memory-based Deep Reinforcement Learning for Obstacle Avoidance in UAV with Limited Environment Know.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1811.03307v1
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1811.03307v1
+      \endverb
     \endentry
     \entry{suttonReinforcementLearningIntroduction2020}{book}{}
       \name{author}{2}{}{%
@@ -4639,8 +4747,6 @@
       \keyw{autonomous landing area selection,monocular visual SLAM,UAV automatic landing}
     \endentry
   \enddatalist
-  \missing{moallaNoRepresentationNoTrust2024}
-  \missing{singlaMemorybasedDeepReinforcement2021}
 \endrefsection
 \endinput
 
