@@ -274,6 +274,69 @@
       \endverb
       \keyw{Agriculture,Ecology,Environmental sciences,Plant sciences}
     \endentry
+    \entry{botschParametrischeMethoden2023}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=391fb690a081426094e45f4ffc0c372e}{%
+           family={Botsch},
+           familyi={B\bibinitperiod},
+           given={Benny},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=391fb690a081426094e45f4ffc0c372e}{%
+           family={Botsch},
+           familyi={B\bibinitperiod},
+           given={Benny},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{fullhash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{bibnamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{authorbibnamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{authornamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{authorfullhash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{editorbibnamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{editornamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{editorfullhash}{391fb690a081426094e45f4ffc0c372e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Maschinelle Lernverfahren können auf unterschiedliche Art und Weise unterteilt werden. In den Abschn.~1.2 bis 1.5 haben wir uns bereits mit einer Unterteilung von Lernverfahren beschäftigt. Diese Verfahren beschreiben, wie und vor allem welche Daten beim Lernvorgang zur Verfügung stehen. Eine weitere Unterteilung erfolgt in sogenannte parametrische und nichtparametrische Verfahren. Bei parametrischen Lernverfahren stehen vor dem Training die Anzahl der Parameter und die grundsätzliche Struktur fest. Bei nichtparametrischen Lernverfahren wird die Anzahl an Parametern erst zur Laufzeit des Trainings bestimmt. Wir beginnen zunächst mit den parametrischen Lernverfahren.}
+      \field{booktitle}{Maschinelles Lernen - Grundlagen und Anwendungen: Mit Beispielen in Python}
+      \field{isbn}{978-3-662-67277-8}
+      \field{langid}{ngerman}
+      \field{title}{Parametrische Methoden}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{61\bibrangedash 102}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1007/978-3-662-67277-8_5
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/V9AHC7B8/Botsch - 2023 - Parametrische Methoden.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-662-67277-8_5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-662-67277-8_5
+      \endverb
+    \endentry
     \entry{calvinIPCC2023Climate2023}{report}{}
       \name{author}{85}{}{%
         {{un=0,uniquepart=base,hash=3a199d2c5300b48b1da4168691cbf005}{%
@@ -2452,6 +2515,72 @@
       \endverb
       \keyw{aerial systems: Applications,AI-enabled robotics,Cameras,Deep reinforcement learning,Feature extraction,reinforcement learning,Reinforcement learning,Training,Velocity control,vision-based navigation,Visual servoing}
     \endentry
+    \entry{lecunDeepLearning2015}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a8750ccdb2a4cf14d2655face1ce016}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{bibnamehash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{authorbibnamehash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep learning allows computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved the state-of-the-art in speech recognition, visual object recognition, object detection and many other domains such as drug discovery and genomics. Deep learning discovers intricate structure in large data sets by using the backpropagation algorithm to indicate how a machine should change its internal parameters that are used to compute the representation in each layer from the representation in the previous layer. Deep convolutional nets have brought about breakthroughs in processing images, video, speech and audio, whereas recurrent nets have shone light on sequential data such as text and speech.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{7553}
+      \field{title}{Deep Learning}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{521}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{436\bibrangedash 444}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1038/nature14539
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/TISDDZPN/LeCun et al. - 2015 - Deep learning.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nature14539
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nature14539
+      \endverb
+      \keyw{Computer science,Mathematics and computing}
+    \endentry
     \entry{loquercioLearningHighspeedFlight2021}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=ac29e4e32ee2a5bcaa325934a585b06f}{%
@@ -2863,89 +2992,8 @@
       \verb http://ieeexplore.ieee.org/document/7140074/
       \endverb
     \endentry
-    \entry{mnihAsynchronousMethodsDeep2016}{online}{}
-      \name{author}{8}{ul=2}{%
-        {{un=0,uniquepart=base,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
-           family={Mnih},
-           familyi={M\bibinitperiod},
-           given={Volodymyr},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=db6afdf70ea61bf8ed973a75b90ff818}{%
-           family={Badia},
-           familyi={B\bibinitperiod},
-           given={Adrià\bibnamedelima Puigdomènech},
-           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9e80f4779b032f68a6106e1424345450}{%
-           family={Mirza},
-           familyi={M\bibinitperiod},
-           given={Mehdi},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dfca94b0427da7f9088af596e23b46c0}{%
-           family={Graves},
-           familyi={G\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2a321a868e44d49baf52b5e2d816fb71}{%
-           family={Lillicrap},
-           familyi={L\bibinitperiod},
-           given={Timothy\bibnamedelima P.},
-           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b63b9b2d91f6ba1b1739563edc0432ab}{%
-           family={Harley},
-           familyi={H\bibinitperiod},
-           given={Tim},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=89dbd30410c2085cd059f32c57d4593e}{%
-           family={Silver},
-           familyi={S\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=481308b301166b521c74fde6566e97e6}{%
-           family={Kavukcuoglu},
-           familyi={K\bibinitperiod},
-           given={Koray},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{720d3e12e18ccd830e708e04ef703276}
-      \strng{fullhash}{e067addbfefbaf06a859610fa608b21e}
-      \strng{bibnamehash}{e067addbfefbaf06a859610fa608b21e}
-      \strng{authorbibnamehash}{e067addbfefbaf06a859610fa608b21e}
-      \strng{authornamehash}{720d3e12e18ccd830e708e04ef703276}
-      \strng{authorfullhash}{e067addbfefbaf06a859610fa608b21e}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{16}
-      \field{eprintclass}{cs.LG}
-      \field{eprinttype}{arXiv}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{title}{Asynchronous {{Methods}} for {{Deep Reinforcement Learning}}}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \verb{eprint}
-      \verb 1602.01783
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1602.01783
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1602.01783
-      \endverb
-    \endentry
     \entry{mnihHumanlevelControlDeep2015}{article}{}
-      \name{author}{19}{ul=2}{%
+      \name{author}{19}{}{%
         {{un=0,uniquepart=base,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
            family={Mnih},
            familyi={M\bibinitperiod},
@@ -3064,11 +3112,11 @@
       \list{publisher}{1}{%
         {Nature Publishing Group}%
       }
-      \strng{namehash}{89d8ce0a1075e76fee7b82aecc72eb47}
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
       \strng{fullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{bibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{authorbibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
-      \strng{authornamehash}{89d8ce0a1075e76fee7b82aecc72eb47}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
       \strng{authorfullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
