@@ -8,85 +8,42 @@ autonome Drohne befähigen kann, mithilfe lokaler Tiefensensorik in
 hindernisreichen Umgebungen sicher zu landen.
 
 Der trainierte Agent erlernt eine reaktive Ausweichstrategie, deren
-Leistung nicht primär durch das Lernverfahren begrenzt wird, sondern
-durch strukturelle Entwurfsentscheidungen: Sensorhorizont,
-Entscheidungsintervall und Belohnungsgewichtung bestimmen gemeinsam,
-wie knapp der Agent Hindernisse passiert
-(Abschnitt~\ref{sec:disk_nf1}). Das beobachtete Flugverhalten legt
-eine funktionale Rollenverteilung nahe: Das Tiefenbild liefert die
-Hindernisinformation für laterale Ausweichmanöver, der Zustandsvektor
-steuert Zielnavigation und Abstieg. Die Wahl der Kollisionsmetrik erweist
-sich dabei als entscheidender Faktor für die berichtete Leistung: Der
-Unterschied zwischen konservativer und geometrisch exakter Erkennung
-(Tabelle~\ref{tab:phase1_mesh_contacts}) übersteigt den Unterschied
-zwischen den verglichenen Verfahren und verändert die Bewertung der
-Navigationsleistung qualitativ.
+Leistung primär durch strukturelle Entwurfsentscheidungen begrenzt wird:
+Sensorhorizont, Entscheidungsintervall und Belohnungsgewichtung bestimmen,
+wie knapp der Agent Hindernisse passiert. Die Wahl der Kollisionsmetrik
+erweist sich als entscheidender Faktor: Unter oberflächenbasierter
+Erkennung erreicht der Agent 98,4\,\% und übertrifft damit den
+privilegierten Pfadplaner (82,0\,\%).
 
 Die Transferuntersuchung zeigt eine klare Trennung zweier
-Teilfähigkeiten: Hindernisnavigation generalisiert auf eine
-geometrisch verschiedenartige Umgebung; die terminale Landephase
-hingegen scheitert an einer im Training nie erfahrenen Konfiguration
-(Abschnitt~\ref{sec:disk_nf2}). Die Sensitivitätsanalyse des
-Erfolgsradius bestätigt, dass der Leistungsabfall die Feinsteuerung
-in Zielnähe betrifft, nicht die Navigation selbst. Die Ursache liegt
-im Zusammenspiel von Perceptual Aliasing und fehlendem zeitlichen
-Gedächtnis, das die Gültigkeit der erlernten Strategie auf
-strukturell vertraute Szenarien beschränkt.
+Teilfähigkeiten: Hindernisnavigation generalisiert auf die
+Weinbergumgebung (69,7\,\% bei erweitertem Erfolgsradius); die terminale
+Landephase scheitert an der im Training nie erfahrenen Konfiguration von
+Vegetation in der Landezone, verstärkt durch Perceptual Aliasing und
+fehlendes zeitliches Gedächtnis.
 
-Der Vergleich mit dem privilegierten Pfadplaner quantifiziert, welchen
-Vorteil vollständige Umgebungskenntnis gegenüber lokaler Sensorik
-bietet (Abschnitt~\ref{sec:disk_nf3}). Unter fairer
-Kollisionsmetrik löst der lernbasierte Ansatz das Navigationsproblem
-im Korridor erfolgreicher als der vollständig informierte Planer, bei
-um Größenordnungen niedrigerer Inferenzzeit.
-Im Weinberg kehrt sich dieses Verhältnis um, da der Agent an der
-beschriebenen Transfergrenze scheitert. Die Leistungslücke
-reflektiert somit die begrenzte
-Trainingsdiversität dieses konkreten Agenten, nicht eine
-grundsätzliche Unterlegenheit lernbasierter Ansätze.
+Der Vergleich mit dem privilegierten Pfadplaner quantifiziert den Vorteil
+vollständiger Umgebungskenntnis. Unter fairer Kollisionsmetrik löst der
+lernbasierte Ansatz das Navigationsproblem im Korridor erfolgreicher als
+der Planer, bei um Größenordnungen niedrigerer Inferenzzeit. Im Weinberg
+kehrt sich dieses Verhältnis um; die Leistungslücke reflektiert die
+begrenzte Trainingsdiversität.
 
-Insgesamt zeigt die Arbeit, dass ein RL-Agent mit minimaler
-Sensorik die kombinierte Aufgabe aus Zielnavigation und
-Hindernisvermeidung in einer abstrakten Simulationsumgebung lösen
-kann. Die erlernte Strategie lässt sich teilweise auf ein
-realistisches Szenario mit natürlicher Vegetation übertragen.
-Gleichzeitig werden die Grenzen des Ansatzes sichtbar: Die
-verbleibenden Leistungsgrenzen liegen weniger im Lernverfahren als
-in den Randbedingungen des Systems. Die folgenden Perspektiven
-zeigen Wege auf, diese zu überwinden.
+Insgesamt zeigt die Arbeit, dass ein RL-Agent mit minimaler Sensorik die
+kombinierte Aufgabe aus Zielnavigation und Hindernisvermeidung in
+Simulation lösen kann und die erlernte Strategie sich teilweise auf ein
+realistisches Szenario übertragen lässt.
 
 \section{Perspektiven für zukünftige Forschung}
 
-\subsection{Trainingssetup}
-\todo{Multi-Seed streichen, falls Ergebnisse vorliegen.}
-Eine Multi-Seed-Validierung würde die statistische Belastbarkeit der
-Ergebnisse erhöhen. Eine Skalierung auf größere Trainingsbatches
-(z.\,B.\ 4\,096 Umgebungen über mehrere GPUs) könnte sowohl die
-Konvergenzgeschwindigkeit als auch die Strategiequalität verbessern.
-Darüber hinaus könnte eine systematische Optimierung der
-Belohnungsgewichte die manuelle Abstimmung ersetzen und den in
-Abschnitt~\ref{sec:disk_nf1} beschriebenen Schwebe-Anreiz gezielt
-adressieren.
-
-\subsection{Architekturerweiterungen}
-Eine rekurrente Architektur (LSTM) oder ein Tiefenbild-Stapel würde dem
-Agenten zeitliches Gedächtnis verleihen und könnte das in
-Abschnitt~\ref{sec:disk_nf2} beschriebene Problem benachbarter
-Hindernisse außerhalb des Sichtfelds adressieren. Eine
-Ablationsstudie, in der ein Modell ohne Tiefenbild unter identischen
-Bedingungen trainiert wird, würde den individuellen Beitrag beider
-Eingabemodalitäten quantifizieren.
-
-\subsection{Umgebungsdiversität und Sim-to-Real-Transfer}
-Domain Randomization, insbesondere Sensorrauschen, Windstörungen und
-variable Zielpositionen, könnte sowohl die Robustheit als auch den
-Transfer auf reale Hardware vorbereiten. Die Einführung dynamischer
-Hindernisse würde zudem prüfen, ob die reaktive, schrittweise
-Entscheidungsstruktur des RL-Agenten den in
-Abschnitt~\ref{sec:disk_nf3} beschriebenen prinzipiellen Vorteil
-gegenüber globaler Pfadplanung auch empirisch einlöst. Langfristig
-stellt der Sim-to-Real-Transfer den entscheidenden nächsten Schritt
-dar, um die gezeigte Leistungsfähigkeit in realen Einsatzszenarien zu
-validieren. Die vorliegende Arbeit liefert dafür eine Grundlage,
-indem sie zeigt, unter welchen Bedingungen lernbasierte Landung mit
-minimaler Sensorik gelingt und wo ihre Grenzen liegen.
+Eine Multi-Seed-Validierung und eine Skalierung auf größere
+Trainingsbatches könnten die statistische Belastbarkeit und die
+Strategiequalität verbessern. Eine rekurrente Architektur oder ein
+Tiefenbild-Stapel würde dem Agenten zeitliches Gedächtnis verleihen und
+das Perceptual-Aliasing-Problem adressieren. Eine Ablationsstudie könnte
+den individuellen Beitrag von Tiefenbild und Zustandsvektor
+quantifizieren. Domain Randomization, insbesondere Sensorrauschen und
+variable Zielpositionen, könnte die Robustheit und den Transfer auf reale
+Hardware vorbereiten. Langfristig stellt der Sim-to-Real-Transfer den
+entscheidenden nächsten Schritt dar, um die gezeigte Leistungsfähigkeit
+in realen Einsatzszenarien zu validieren.

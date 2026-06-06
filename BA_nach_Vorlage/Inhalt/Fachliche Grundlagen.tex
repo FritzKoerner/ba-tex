@@ -1,18 +1,17 @@
 \chapter{Fachliche Grundlagen}
 \label{cha:Fachliche Grundlagen}
 
-Dieses Kapitel führt die theoretischen Grundlagen ein, auf denen das in dieser Arbeit entwickelte System aufbaut. Abschnitt~\ref{sec:reinforcement_learning} behandelt Reinforcement Learning als Lernparadigma und formalisiert das Problem als Markov Decision Process. Abschnitt~\ref{sec:ppo} stellt Lösungsverfahren vor, ausgehend von tabellarischen Methoden über Funktionsapproximation bis hin zu Proximal Policy Optimization, dem in dieser Arbeit eingesetzten Trainingsalgorithmus. Abschnitt~\ref{sec:cnn} beschreibt Convolutional Neural Networks als Architektur zur Verarbeitung räumlicher Sensordaten. Abschnitt~\ref{sec:aabb} definiert achsenparallele Begrenzungsboxen, die in dieser Arbeit zur Kollisionserkennung verwendet werden.
+Dieses Kapitel führt die theoretischen Grundlagen ein, auf denen das
+entwickelte System aufbaut.
 
 \section{Reinforcement Learning}
 \label{sec:reinforcement_learning}
 
-Reinforcement Learning bezeichnet das Lernen aus Interaktionen mit einer Umgebung, um ein Ziel zu erreichen. Ein Agent wählt in aufeinanderfolgenden Situationen Aktionen und erhält dafür numerische Belohnungen. Aus diesen Erfahrungen muss er eigenständig ableiten, welche Aktionen nicht nur unmittelbar, sondern auch langfristig den höchsten Ertrag erzielen. Sofern nicht anders angegeben, folgt die Darstellung in diesem Abschnitt \textcite{suttonReinforcementLearningIntroduction2020}.
+Reinforcement Learning bezeichnet das Lernen aus Interaktionen mit einer Umgebung, um ein Ziel zu erreichen. Ein Agent wählt in aufeinanderfolgenden Situationen Aktionen und erhält dafür ein skalares Belohnungssignal. Aus diesen Erfahrungen muss er eigenständig ableiten, welche Aktionen langfristig den höchsten Ertrag erzielen. Sofern nicht anders angegeben, folgt die Darstellung in diesem Abschnitt \textcite{suttonReinforcementLearningIntroduction2020}.
 
 \subsection{Markov Decision Process}
 \label{subsec:mdp}
-Ein \Fachbegriff{Markov Decision Process} (MDP) ist ein Modell, mit dem Reinforcement Learning Probleme präzise formalisiert werden können. Der Lerner und Entscheider wird als \NeuerBegriff{Agent} bezeichnet; alles außerhalb, womit der Agent interagiert und was er nicht willkürlich verändern kann, bildet die \NeuerBegriff{Umgebung}.
-
-Die Interaktion zwischen Agent und Umgebung erfolgt in diskreten Zeitschritten $t = 0, 1, 2, \dots$. In jedem Schritt beobachtet der Agent einen \NeuerBegriff{Zustand} $S_t \in \mathcal{S}$, wählt auf dessen Grundlage eine \NeuerBegriff{Aktion} $A_t \in \mathcal{A}$ und erhält einen Zeitschritt später eine numerische \NeuerBegriff{Belohnung} $R_{t+1} \in \mathcal{R}$ sowie einen neuen Zustand $S_{t+1}$ (Abbildung~\ref{fig:mdp_agent_environment}).
+Ein \Fachbegriff{Markov Decision Process} (MDP) formalisiert Reinforcement Learning Probleme als Interaktion zwischen einem \NeuerBegriff{Agent}en und einer \NeuerBegriff{Umgebung} in diskreten Zeitschritten $t = 0, 1, 2, \dots$. Der Agent beobachtet einen \NeuerBegriff{Zustand} $S_t \in \mathcal{S}$, wählt eine \NeuerBegriff{Aktion} $A_t \in \mathcal{A}$ und erhält eine \NeuerBegriff{Belohnung} $R_{t+1} \in \mathcal{R}$ sowie einen neuen Zustand $S_{t+1}$ (Abbildung~\ref{fig:mdp_agent_environment}).
 
 \begin{figure}[H]
     \centering
@@ -21,64 +20,57 @@ Die Interaktion zwischen Agent und Umgebung erfolgt in diskreten Zeitschritten $
     \label{fig:mdp_agent_environment}
 \end{figure}
 
-Die Übergangsdynamik der Umgebung wird durch die Funktion
+Die Übergangsdynamik
 \begin{equation} \label{eq:mdp_dynamics}
     p(s', r \mid s, a) = \Pr\{S_{t+1} = s',\, R_{t+1} = r \mid S_t = s, A_t = a\}
 \end{equation}
-vollständig charakterisiert, welche die Wahrscheinlichkeit angibt, ausgehend vom Zustand $s$ bei gewählter Aktion $a$ in den Folgezustand $s'$ überzugehen und dabei die Belohnung $r$ zu erhalten. Wesentlich ist dabei die \Fachbegriff{Markov-Eigenschaft}: Folgezustand und Belohnung hängen ausschließlich vom gegenwärtigen Zustand-Aktions-Paar $(s,a)$ ab.
+charakterisiert die Umgebung vollständig. Wesentlich ist die \Fachbegriff{Markov-Eigenschaft}: Folgezustand und Belohnung hängen ausschließlich vom gegenwärtigen Zustand-Aktions-Paar ab. Das Ziel des Agenten ist eine \NeuerBegriff{optimale Strategie}~$\pi_*$, die die kumulierte Belohnung maximiert.
 
-Das Ziel des Agenten besteht darin, durch Interaktion mit der Umgebung eine Strategie $\pi(a \mid s)$ zu identifizieren, welche die über die Zeit kumulierte Belohnung maximiert. Eine solche Strategie wird als \NeuerBegriff{optimale Strategie} bezeichnet und mit $\pi_*$ gekennzeichnet.
-
-
-
-\section{Lösungen von MDPs}
+\section{Strategieoptimierung}
 \label{sec:ppo}
 
 Welche Verfahren zur Bestimmung einer optimalen Strategie geeignet sind, hängt maßgeblich von der Formulierung des Reinforcement-Learning-Problems ab. Die klassische Theorie liefert exakte Lösungen ausschließlich für endliche MDPs mit vollständig bekanntem Übergangsmodell; ihre Grundideen lassen sich jedoch auf komplexere Problemklassen verallgemeinern.
-Dieser Abschnitt behandelt die Lösung von MDPs. Eingeführt werden zunächst tabellarische Verfahren, anschließend Funktionsapproximation und schließlich Policy-Gradient-Methoden, die in das Verfahren der \Fachbegriff{Proximal Policy Optimization} (PPO) münden.
-
-\subsection{Dynamische Programmierung}
-\label{subsec:dp}
-
-Das Ziel des Agenten besteht in der Maximierung des erwarteten Ertrags $G_t = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}$ mit Diskontierungsfaktor $\gamma \in [0,1)$. Die Güte einer Strategie $\pi$ wird durch die Zustandswertfunktion $v_\pi(s) = \mathbb{E}_\pi[G_t \mid S_t = s]$ charakterisiert, die den erwarteten Ertrag ausgehend von einem Zustand angibt. Die Zustandswertfunktion der optimalen Strategie $\pi_*$ wird als $v_*$ bezeichnet. Ihre direkte Berechnung setzt jedoch ein vollständig bekanntes Übergangsmodell und einen abzählbaren Zustandsraum voraus. In der Praxis sind beide Voraussetzungen selten gleichzeitig erfüllt: Das Übergangsmodell physikalischer Systeme ist in der Regel nicht vollständig bekannt, und selbst bei bekanntem Modell übersteigt der Zustandsraum realistischer Probleme typischerweise jene Dimensionen, in denen eine exakte Lösung mit vertretbarem Rechenaufwand möglich wäre.
-
-\subsection{Monte-Carlo- und Temporal-Difference-Verfahren}
-\label{subsec:mc_td}
-
-Das fehlende Modell als erste Einschränkung wird durch \Fachbegriff{sample-basierte} Verfahren wie Monte-Carlo- und Temporal-Difference-Methoden (TD) aufgehoben. Monte-Carlo-Methoden benötigen den vollständigen Episodenertrag $G_t$ und können die Wertschätzung daher erst nach Abschluss einer Episode aktualisieren. TD-Verfahren hingegen nutzen \Fachbegriff{Bootstrapping} und korrigieren ihre Schätzung nach jedem einzelnen Zeitschritt anhand der geschätzten Bewertung des Folgezustands:
-\begin{equation} \label{eq:td_update}
-    V(S_t) \leftarrow V(S_t) + \alpha \bigl[R_{t+1} + \gamma\, V(S_{t+1}) - V(S_t)\bigr].
-\end{equation}
-TD-Verfahren bilden die Grundlage der meisten modernen Reinforcement-Learning-Algorithmen: Sie können online angewandt werden, benötigen wenig Rechenaufwand und lassen sich mit Funktionsapproximation auf große Zustandsräume skalieren.
-
-\subsection{Funktionsapproximation}
-\label{subsec:function_approximation}
-
-
-Die Dimensionalität des Zustandsraums als zweite Einschränkung kann durch \NeuerBegriff{Funktionsapproximation} überwunden werden. Statt jeden Zustand mit einem eigenen Eintrag zu versehen, wird die Wertfunktion durch eine parametrisierte Funktion $\hat{v}(s, \mathbf{w})$ mit $\mathbf{w} \in \mathbb{R}^d$ und $d \ll |\mathcal{S}|$ dargestellt und in Richtung~$v_\pi$ optimiert.
-Parametrisierte Funktionen erlauben Generalisierung: Erfahrungen, die über einen Zustand gemacht wurden, lassen sich auf benachbarte Zustände übertragen; gleichzeitig werden kontinuierliche Zustandsräume handhabbar. Als Parametrisierung eignen sich insbesondere neuronale Netze, da diese als universelle Funktionsapproximatoren in der Lage sind, beliebige stetige Funktionen auf kompakten Teilmengen beliebig genau anzunähern \autocite{hornikMultilayerFeedforwardNetworks1989}.
-
-Während die Funktionsapproximation das Problem kontinuierlicher Zustandsräume löst, bleibt ein zweites Hindernis bei kontinuierlichen \emph{Aktionsräumen} bestehen. Wertbasierte Verfahren wählen Aktionen gemäß $a = \arg\max_{a'} \hat{q}(s, a', \mathbf{w})$; dieses Maximum ist in kontinuierlichen Aktionsräumen jedoch im Allgemeinen nicht effizient berechenbar.
 
 \subsection{Policy-Gradient-Methoden}
 \label{subsec:policy_gradient}
 
-Eine Alternative ist, die Strategie nicht über eine Wert-Funktion abzuleiten, sondern direkt als parametrisierte Funktion $\pi(a \mid s, \boldsymbol{\theta})$ zu beschreiben und ihre Parameter $\boldsymbol{\theta}$ durch Gradientenaufstieg zu optimieren. Der entscheidende Vorteil für diese Arbeit: Policy-Gradient-Methoden können auf natürliche Weise kontinuierliche Aktionsräume handhaben, wie sie in der Drohnensteuerung auftreten.
+Die kumulierte Belohnung wird formal als erwarteter
+diskontierter Ertrag
+\begin{equation} \label{eq:return}
+    G_t = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}
+\end{equation}
+mit Diskontierungsfaktor $\gamma \in [0,1)$ ausgedrückt. Die
+Güte einer Strategie wird durch die
+\NeuerBegriff{Zustandswertfunktion}
+\begin{equation} \label{eq:state_value}
+    v_\pi(s) = \mathbb{E}_\pi[G_t \mid S_t = s]
+\end{equation}
+charakterisiert. Insbesondere bei hochdimensionalen
+Zustandsräumen und kontinuierlichen Aktionsräumen, wie sie in
+der Drohnensteuerung auftreten, stoßen klassische Verfahren an
+ihre Grenzen.
 
-In der Praxis wird der Policy-Gradient-Ansatz häufig als \Fachbegriff{Actor-Critic-Architektur} umgesetzt: Ein \Fachbegriff{Actor}-Netz repräsentiert die Strategie $\pi(\cdot \mid \cdot, \boldsymbol{\theta})$, ein \Fachbegriff{Critic}-Netz schätzt eine Wert-Funktion $\hat v(\cdot, \mathbf{w})$. Die Wertschätzung des Critics dient als Referenzniveau, das die Varianz der Gradientenschätzung reduziert, ohne sie zu verzerren.
+Policy-Gradient-Methoden umgehen diese Beschränkungen, indem
+sie die Strategie direkt als $\pi(a \mid s,
+\boldsymbol{\theta})$ parametrisieren und durch
+Gradientenaufstieg optimieren. Dies ermöglicht sowohl die
+Verwendung neuronaler Netze als Funktionsapproximatoren als
+auch die direkte Handhabung kontinuierlicher Aktionsräume, wie
+sie in der Drohnensteuerung auftreten. In der Praxis wird dies
+als \Fachbegriff{Actor-Critic-Architektur} umgesetzt: Ein
+\Fachbegriff{Actor} $\pi(a \mid s, \boldsymbol{\theta})$
+repräsentiert die Strategie und wählt Aktionen; ein
+\Fachbegriff{Critic} $\hat{v}(s, \mathbf{w})$ schätzt die
+Zustandswertfunktion und bewertet die gewählten Aktionen. Der
+Critic dient dabei als varianzreduzierendes Referenzniveau
+für den Policy-Gradienten, da der Agent nicht mehr auf den
+verrauschten Episodenertrag $G_t$ angewiesen ist, sondern die
+gelernte Wertschätzung als stabilere Grundlage nutzt.
 
 \subsection{Proximal Policy Optimization}
 \label{subsec:ppo_clip}
 
-Eine moderne und in der Praxis weit verbreitete Variante des Policy-Gradient-Ansatzes ist \Fachbegriff{Proximal Policy Optimization} (PPO) \autocite{schulmanProximalPolicyOptimization2017}, ein Actor-Critic-Verfahren, das die Trainingsstabilität von Trust-Region-Methoden erreicht und dabei wesentlich einfacher zu implementieren ist.
-
-Zu große Strategieänderungen pro Optimierungsschritt können Policy-Gradient-Verfahren
-destabilisieren, da die gesammelten Trajektorien für die veränderte Strategie nicht mehr
-repräsentativ sind \autocite{schulmanProximalPolicyOptimization2017}. Trust-Region-Methoden
-wie TRPO \autocite{schulmanTrustRegionPolicy2015} begrenzen daher die KL-Divergenz
-zwischen aufeinanderfolgenden Strategien, erfordern dafür jedoch Approximationen zweiter
-Ordnung. PPO erzielt eine vergleichbare Stabilisierung allein durch eine geklippte
-Zielfunktion:
+Policy-Gradient-Verfahren können durch zu große Strategieänderungen pro Optimierungsschritt destabilisiert werden, da die unter der alten Strategie gesammelten Erfahrungsdaten das Verhalten der aktualisierten Strategie nicht mehr abbilden \autocite{schulmanProximalPolicyOptimization2017}. Trust-Region-Methoden wie TRPO \autocite{schulmanTrustRegionPolicy2015} begrenzen daher die Schrittweite über eine KL-Divergenz-Schranke zwischen alter und neuer Strategie, erfordern dafür jedoch Approximationen zweiter Ordnung. \Fachbegriff{Proximal Policy Optimization} (PPO) \autocite{schulmanProximalPolicyOptimization2017} erzielt eine vergleichbare Stabilisierung allein durch eine geklippte Zielfunktion:
 \begin{equation} \label{eq:ppo_clip}
     L^{\mathrm{CLIP}}(\boldsymbol{\theta}) = \hat{\mathbb{E}}_t\!\left[
         \min\!\left(
@@ -90,8 +82,9 @@ Zielfunktion:
 \end{equation}
 wobei $r_t(\boldsymbol{\theta}) = \pi_{\boldsymbol{\theta}}(a_t \mid s_t)\,/\,
 \pi_{\boldsymbol{\theta}_{\mathrm{alt}}}(a_t \mid s_t)$ das
-Wahrscheinlichkeitsverhältnis zwischen neuer und alter Strategie ist, $\hat{A}_t$ der
-Vorteilsschätzer und $\varepsilon$ die Clipping-Grenze.
+Wahrscheinlichkeitsverhältnis zwischen neuer und alter Strategie ist, $\hat{A}_t$ der geschätzte Vorteil, berechnet mittels
+\Fachbegriff{Generalized Advantage Estimation}
+(GAE) \autocite{schulmanHighDimensionalContinuousControl2016}, und $\varepsilon$ die Clipping-Grenze.
 Das Clipping bewirkt \emph{pessimistische} Updates: Verbessert eine Strategieänderung
 das Objective, wird der Anreiz bei $r_t > 1 + \varepsilon$ gekappt; verschlechtert sie
 es, greift die Minimumbildung und die Korrektur bleibt uneingeschränkt
@@ -108,7 +101,7 @@ Erfahrungen gebremst, während schlechte Aktionen voll korrigiert werden.
     \label{fig:ppo_clip}
 \end{figure}
 
-Das vollständige PPO-Objective kombiniert das Clipping mit zwei weiteren Termen:
+Die vollständige Verlustfunktion von PPO kombiniert das Clipping mit zwei weiteren Termen:
 \begin{equation} \label{eq:ppo_full}
     L(\boldsymbol{\theta}) =
     L^{\mathrm{CLIP}}(\boldsymbol{\theta})
@@ -118,14 +111,7 @@ Das vollständige PPO-Objective kombiniert das Clipping mit zwei weiteren Termen
 wobei $L^{VF} = (V_{\boldsymbol{\theta}}(s_t) - V_t^{\mathrm{targ}})^2$ der quadratische
 Fehler der Wertfunktionsschätzung des Critics ist und
 $H[\pi_{\boldsymbol{\theta}}]$ einen Entropie-Bonus bezeichnet, der vorzeitige
-Konvergenz der Aktionsverteilung verhindert. Ohne diesen Term kann die
-Standardabweichung gegen null konvergieren (\Fachbegriff{Std-Collapse}), was die Strategie
-irreversibel auf eine deterministische Aktion festlegt.
-
-Für die Schätzung des Vorteils~$\hat{A}_t$ wird \Fachbegriff{Generalized Advantage Estimation}
-(GAE) \autocite{schulmanHighDimensionalContinuousControl2016} eingesetzt, das über den
-Parameter~$\lambda$ einen Kompromiss zwischen Bias und Varianz der Vorteilsschätzung
-steuert.
+Konvergenz der Aktionsverteilung verhindert.
 
 \section{Convolutional Neural Networks}
 \label{sec:cnn}

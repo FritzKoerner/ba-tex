@@ -1,319 +1,169 @@
 \chapter{Diskussion}
 \label{cha:Diskussion}
 
-Dieses Kapitel interpretiert die in Kapitel~\ref{cha:Ergebnisse} berichteten
-Ergebnisse im Kontext der vier Nebenfragestellungen. Jeder Abschnitt schließt
-mit einer expliziten Antwort auf die zugehörige Fragestellung.
+Dieses Kapitel interpretiert die Ergebnisse im Kontext der
+Nebenfragestellungen.
 
 \section{Leistungsfähigkeit in der Trainingsumgebung}
 \label{sec:disk_nf1}
 
 \subsection{Trainingsverhalten und Konvergenz}
 
-Die zwei beobachteten Phasen im Belohnungsverlauf lassen sich auf die
-Belohnungsstruktur zurückführen, die dichte Komponenten mit
-ereignisbasierten Boni kombiniert. In der Konvergenzphase (Iteration~0
+Die zwei Phasen im Belohnungsverlauf lassen sich auf die
+Belohnungsstruktur zurückführen. In der Konvergenzphase (Iteration~0
 bis~441) ermöglichen die dichten Komponenten ($r_{\mathrm{prog}}$,
-$r_{\mathrm{nah}}$, $r_{\mathrm{prox}}$) den initialen Anstieg, indem
-sie bereits für Teilfortschritte Signal liefern. Ab circa Iteration~200
-setzt zusätzlich die Erfolgsbelohnung $r_{\mathrm{erf}}$ ein, sobald der
-Agent erstmals konsistente Landungen erreicht, und beschleunigt den
-Belohnungsanstieg. Ohne die dichten Komponenten würde dem Agenten in der
-frühen Trainingsphase das Gradientensignal für Teilfortschritte fehlen,
-was die Konvergenz vermutlich erheblich verzögern würde.
+$r_{\mathrm{nah}}$, $r_{\mathrm{prox}}$) den initialen Anstieg; ab circa
+Iteration~200 setzt die Erfolgsbelohnung ein und beschleunigt den
+Anstieg. Ohne die dichten Komponenten würde dem Agenten das
+Gradientensignal für Teilfortschritte fehlen.
 
 Der abrupte Kollaps ab Iteration~442 betrifft ausschließlich die
 Mittelwerte der Strategie bei nahezu unveränderter Standardabweichung
 ($0{,}193 \rightarrow 0{,}194$), was auf eine katastrophale
-Strategieaktualisierung hindeutet, nicht auf einen graduellen
-Stabilitätsverlust. Obwohl der Clipping-Mechanismus von
+Strategieaktualisierung hindeutet. Obwohl der Clipping-Mechanismus von
 PPO~\autocite{schulmanProximalPolicyOptimization2017} große
-Strategieänderungen pro Iteration begrenzen soll, reicht er nicht aus,
-um solche abrupten Einbrüche zu verhindern. Eine mögliche Erklärung
-bieten \textcite{moallaNoRepresentationNo}, die zeigen, dass
-eine schleichende Verschlechterung des Feature-Ranks im
-Actor-Netzwerk den Clipping-Mechanismus unterlaufen und zu
-unumkehrbaren Leistungseinbrüchen führen kann, wobei die
-Standardabweichung als globaler Parameter unbeeinflusst bleibt. Ob
-dieser Mechanismus den beobachteten Kollaps erklärt, lässt sich ohne
-Analyse des Feature-Ranks nicht abschließend beurteilen. Als
-Eine schrittweise Reduktion der Lernrate (linear und kosinusförmig)
-sowie ein Weitertraining mit reduzierter Lernrate verhinderten den
-Kollaps nicht; weitergehende Ansätze wie \textit{Proximal Feature
-Optimization}~\autocite{moallaNoRepresentationNo} wurden nicht
-evaluiert.
+Strategieänderungen begrenzen soll, reicht er nicht aus, um solche
+Einbrüche zu verhindern. Eine mögliche Erklärung bieten
+\textcite{moallaNoRepresentationNo}, die zeigen, dass eine schleichende
+Verschlechterung des Feature-Ranks den Clipping-Mechanismus unterlaufen
+kann. Eine schrittweise Reduktion der Lernrate verhinderte den Kollaps
+nicht; weitergehende Ansätze wie \textit{Proximal Feature
+Optimization}~\autocite{moallaNoRepresentationNo} wurden nicht evaluiert.
 
 Die im Trainingsverlauf ansteigende Landezeit lässt sich auf die
-Struktur der Belohnungsfunktion zurückführen. Die beiden dominanten
-Komponenten Fortschritt $r_{\mathrm{prog}}$ (Gewicht~$1{,}0$) und Nähe
-$r_{\mathrm{nah}}$ (Gewicht~$2{,}0$) werden bei steilem Sinkflug
-maximiert, da die 3D-Distanz zum Ziel pro Schritt am stärksten abnimmt.
-Entscheidend ist dabei die unterschiedliche Natur beider Komponenten:
-$r_{\mathrm{prog}} = d_{t} - d_{t+1}$ misst die Distanzverringerung pro
-Schritt und ist damit potentialbasiert im Sinne von
-\textcite{ngPolicyInvarianceReward1999}; solches Reward Shaping
-verändert die optimale Strategie nicht.
-$r_{\mathrm{nah}} = \exp(-d_{t+1})$ hingegen ist nicht potentialbasiert,
-sondern ein zustandsabhängiger Pro-Schritt-Reward: Jeder Zeitschritt in
-Zielnähe liefert Belohnung, unabhängig davon, ob der Agent sich dem Ziel
-weiter nähert. Da es keine Zeitstrafe gibt und die Erfolgsbelohnung $r_{\mathrm{erf}}$
-nur einmalig ausgelöst wird, überwiegt der akkumulierte Schwebe-Anreiz. Dieses Phänomen
-ist in der Literatur bekannt: \textcite{randlovLearningDriveBicycle1998}
-dokumentieren, dass ein nicht-potentialbasierter Shaping-Reward einen
-Agenten dazu bringt, Kreise zu fahren statt das Ziel zu erreichen, da
-die akkumulierte Zwischenbelohnung die Zielbelohnung übersteigt.
-Der Agent lernt folglich eine Strategie, die steilen Abstieg mit
-ausgedehntem Schweben in Zielnähe kombiniert, was die beobachtete
-Zunahme der Episodenlänge im Trainingsverlauf erklärt.
+Belohnungsstruktur zurückführen. $r_{\mathrm{prog}} = d_{t} - d_{t+1}$
+ist potentialbasiert im Sinne von
+\textcite{ngPolicyInvarianceReward1999} und verändert die optimale
+Strategie nicht. $r_{\mathrm{nah}} = \exp(-d_{t+1})$ hingegen ist
+nicht potentialbasiert: Jeder Zeitschritt in Zielnähe liefert Belohnung,
+unabhängig von weiterer Annäherung. Da es keine Zeitstrafe gibt, überwiegt
+der akkumulierte Schwebe-Anreiz. Dieses Phänomen dokumentieren auch
+\textcite{randlovLearningDriveBicycle1998}: Ein nicht-potentialbasierter
+Shaping-Reward kann dazu führen, dass die akkumulierte Zwischenbelohnung
+die Zielbelohnung übersteigt.
 
 \subsection{Dominante Fehlerart und Flugverhalten}
 
-Hinderniskollisionen (28,8\,\%) sind die einzig relevante Fehlerart;
-Zeitüberschreitungen und Bodenkollisionen treten nicht auf. Mit
+Hinderniskollisionen (28,8\,\%) sind die einzig relevante Fehlerart. Mit
 oberflächenbasierter Kollisionserkennung
-(Abschnitt~\ref{subsec:phase1_mesh_contacts}) steigt die Erfolgsrate
-auf 98,4\,\%. Die Diskrepanz erklärt sich aus dem Zusammenspiel dreier
-Faktoren: Erstens begünstigt die Belohnungsstruktur knappes Passieren,
-da die Hindernisproximität ($w_{\mathrm{prox}} = -0{,}2$) deutlich
-schwächer gewichtet ist als Fortschritt und Nähe
-($w_{\mathrm{prog}} = 1{,}0$, $w_{\mathrm{nah}} = 2{,}0$). Der Agent
-lernt rational, Hindernisnähe in Kauf zu nehmen, solange er Fortschritt
-erzielt. Zweitens beschränkt das Entscheidungsintervall von 3\,s die
-Reaktionszeit: Erkennt der Agent ein Hindernis, kann er erst beim
-nächsten Entscheidungsschritt ausweichen, was bei ungünstigen
-Konfigurationen nicht ausreicht. Drittens erzwingt die nach unten
-gerichtete Kamera ein reaktives Flugverhalten, bei dem Hindernisse erst
-bei Annäherung erkannt werden. Das resultierende Muster (direkter
-Abstieg, spätes Abbremsen, laterales Ausweichen mit geringem
-Sicherheitsabstand von im Mittel 0,52\,m) ist präzise genug, um die
-tatsächliche Objektoberfläche zuverlässig zu verfehlen, durchdringt
-jedoch regelmäßig die konservative AABB-Hülle. Die AABB-Kollision
-während des Trainings wirkt dabei als implizite Sicherheitsreserve: Der
-Agent lernt, die größere Begrenzungsbox zu meiden, und hält dadurch zur
-tatsächlichen Oberfläche mehr Abstand als nötig.
+(Abschnitt~\ref{subsec:phase1_mesh_contacts}) steigt die Erfolgsrate auf
+98,4\,\%. Die Diskrepanz erklärt sich aus drei Faktoren: Erstens ist die
+Hindernisproximität ($w_{\mathrm{prox}} = -0{,}2$) deutlich schwächer
+gewichtet als Fortschritt und Nähe, sodass der Agent knappes Passieren
+rational in Kauf nimmt. Zweitens beschränkt das Entscheidungsintervall von
+3\,s die Reaktionszeit. Drittens erzwingt die nach unten gerichtete Kamera
+ein reaktives Flugverhalten, bei dem Hindernisse erst bei Annäherung
+erkannt werden. Das Flugmuster (direkter Abstieg, spätes Abbremsen,
+laterales Ausweichen mit mittlerem Minimalabstand von 0,52\,m) ist präzise
+genug, um die tatsächliche Oberfläche zu verfehlen, durchdringt jedoch
+regelmäßig die konservative AABB-Hülle.
 
-Der trainierte Agent erreicht in der Korridorumgebung eine Erfolgsrate
-von 71,0\,\% unter der konservativen AABB-Kollisionsmetrik; mit
-oberflächenbasierter Kontakterkennung steigt dieser Wert auf 98,4\,\%.
 Zur Einordnung: \textcite{bartolomeiAutonomousEmergencyLanding2022}
 berichten vergleichbare Raten (über 70\,\%) für ein RL-System mit
-Tiefenbildeingabe, allerdings für die Selektion sicherer Landezonen in
-offenem Gelände, nicht für die Navigation durch enge
-Hindernispassagen. Der Agent erlernt eine reaktive Ausweichstrategie,
-deren Leistungsgrenze primär durch den begrenzten Sensorhorizont, das
-Entscheidungsintervall von 3\,s und die schwache Gewichtung der
-Hindernisproximität bestimmt wird. Das beobachtete Flugverhalten legt
-dabei eine funktionale Rollenverteilung der Eingabemodalitäten nahe:
-Die lateralen Ausweichmanöver setzen Hindernisinformation voraus, die
-ausschließlich im Tiefenbild enthalten ist, da der Zustandsvektor
-keine Hindernispositionen kodiert. Ohne Tiefenbild könnte der Agent
-lediglich den direkten Abstieg zum Ziel erlernen. Der Zustandsvektor
-steuert hingegen die Zielnavigation und den kontrollierten Abstieg.
+Tiefenbildeingabe, allerdings für die Selektion sicherer Landezonen,
+nicht für die Navigation durch enge Hindernispassagen. Das Flugverhalten
+legt eine funktionale Rollenverteilung nahe: Die lateralen
+Ausweichmanöver setzen Hindernisinformation aus dem Tiefenbild voraus;
+der Zustandsvektor steuert Zielnavigation und Abstieg.
 
 \section{Transferleistung auf den Weinberg}
 \label{sec:disk_nf2}
 
 \subsection{Leistungsabfall und Verschiebung der Fehlerarten}
 
-Der Leistungsabfall von 71,0\,\% auf 10,4\,\% ist erwartbar, da der
-Agent die Weinberggeometrie erstmals zur Evaluationszeit sieht.
-Aufschlussreich ist die Zusammensetzung: Während in Phase~1
-Hinderniskollisionen dominieren (28,8\,\%), verschiebt sich die
-Fehlerverteilung in Phase~2 zu Zeitüberschreitungen (73,7\,\%) bei
-geringer Terrain-Kollisionsrate (15,9\,\%). Der Agent erreicht die
-Zielumgebung (mediane finale Distanz 1,19\,m; 59,7\,\% der
-Timeout-Episoden innerhalb von 1,5\,m), kann dort jedoch nicht
-konvergieren. Mit erweitertem Erfolgsradius von 1,5\,m steigt die
-Erfolgsrate auf 69,7\,\%, was dem Phase-1-Niveau entspricht.
+Der Leistungsabfall von 71,0\,\% auf 10,4\,\% ist erwartbar. Aufschlussreich
+ist die Fehlerverschiebung: Während in Phase~1 Hinderniskollisionen
+dominieren, verschiebt sich die Verteilung in Phase~2 zu
+Zeitüberschreitungen (73,7\,\%) bei geringer Terrain-Kollisionsrate
+(15,9\,\%). Der Agent erreicht die Zielumgebung (mediane finale Distanz
+1,19\,m), kann dort jedoch nicht konvergieren. Mit erweitertem
+Erfolgsradius von 1,5\,m steigt die Erfolgsrate auf 69,7\,\%.
 
-Das fehlende Konvergieren ist weder ein Präzisions- noch ein
-Zeitproblem: In Phase~1 passiert der Agent Hindernisse mit 0,52\,m
-Minimalabstand, und 180\,s Zeitlimit bieten circa
-60~Entscheidungsschritte. Die Ursache liegt in der strukturell
-veränderten Landesituation: Im Korridor ist die Landezone hindernisfrei;
-im Weinberg ragen Rebenreihen direkt in die Landeumgebung, eine
-Konfiguration, die im Training nie auftrat. Dass die Aufgabe
-grundsätzlich lösbar ist, zeigt der RRT-Connect-Planer, der im selben
-Weinberg 85,7\,\% erreicht und bei erweitertem Erfolgsradius
-(1,5\,m) auf 98,4\,\% steigt
-(vgl.\ Abschnitt~\ref{sec:disk_nf3}). Der Leistungsabfall ist somit
-kein Artefakt der Umgebung, sondern eine Eigenschaft des lernbasierten
-Ansatzes.
+Die Ursache liegt in der strukturell veränderten Landesituation: Im
+Korridor ist die Landezone hindernisfrei; im Weinberg ragen Rebenreihen
+direkt in die Landeumgebung. Dass die Aufgabe grundsätzlich lösbar ist,
+zeigt der RRT-Connect-Planer mit 85,7\,\%
+(vgl.\ Abschnitt~\ref{sec:disk_nf3}).
 
 \subsection{Einordnung als Sim-to-Sim Transfer}
 
-Die Phase-2-Evaluation ist als Zero-Shot Sim-to-Sim Transfer
-einzuordnen: Der Agent wird ohne Fine-Tuning und ohne Domain
-Randomization in einer geometrisch verschiedenartigen Umgebung
-evaluiert. Dass die Navigationsleistung dennoch transferiert (69,7\,\%
-bei erweitertem Erfolgsradius), lässt sich auf die
-umgebungsagnostische Beobachtungsstruktur zurückführen: Der
-Zustandsvektor kodiert relative Positionen, und das Tiefenbild enthält
-keine texturbasierten Merkmale, die an die Korridorgeometrie gebunden
-wären. Dass die Hindernisumgehung auch auf zuvor unbekannte
-Hindernisformen generalisiert (Phase~1), zeigt zudem, dass das CNN
-geometrische Strukturen erkennt, die über die Trainingsumgebung hinaus
-transferieren; die Grenzen dieser Repräsentation offenbart das im
-Folgenden diskutierte Perceptual Aliasing.
-Sim-to-Real-Arbeiten berichten vergleichbare Einbußen bei
-Umgebungswechseln, selbst mit Domain Randomization:
+Dass die Navigationsleistung dennoch transferiert (69,7\,\% bei erweitertem
+Radius), lässt sich auf die umgebungsagnostische Beobachtungsstruktur
+zurückführen: Der Zustandsvektor kodiert relative Positionen, und das
+Tiefenbild enthält keine texturbasierten Merkmale. Sim-to-Real-Arbeiten
+berichten vergleichbare Einbußen:
 \textcite{polvaraSimtoRealQuadrotorLanding2020} verlieren
 28~Prozentpunkte, \textcite{ladoszAutonomousLandingMoving2024}
 27~Prozentpunkte. Der hier beobachtete nominale Abfall von
 61~Prozentpunkten relativiert sich bei erweitertem Radius auf
 1,3~Prozentpunkte, was zeigt, dass der Umgebungswechsel die terminale
-Landephase betrifft, nicht die Navigation. Sim-to-Sim Transfer unter
-kontrollierten Bedingungen ist dabei ein schwächeres Ergebnis als
-Sim-to-Real Transfer oder Generalisierung über diverse
-Trainingsumgebungen; die Übertragbarkeit sollte daher nicht
-überbewertet werden.
+Landephase betrifft, nicht die Navigation.
+
 \subsection{Perceptual Aliasing als Erklärung für die Terrain-Kollisionen}
 
-Ein möglicher Mechanismus hinter den verbleibenden 15,9\,\%
-Terrain-Kollisionen ist Perceptual Aliasing im Sinne von
-\textcite{whiteheadLearningPerceiveAct1991}: Die Kamera erzeugt für
-Boden und Vegetation bei Annäherung ähnliche Signaturen
-(Abbildung~\ref{fig:perceptual_aliasing}), sodass unterschiedliche
-Zustände aus der Wahrnehmung allein nicht unterscheidbar sind. In der Trainingsumgebung ist diese Ambiguität unproblematisch, da die
-Landezone hindernisfrei ist und der Agent das Tiefenbild in der
-terminalen Phase gefahrlos ignorieren kann. Im Weinberg bricht diese Strategie:
-Rebenreihen ragen direkt in die Landezone, sodass ein Agent, der das
-Tiefenbild in Zielnähe zu ignorieren gelernt hat, mit Vegetation
-kollidiert.
-\textcite{bartolomeiAutonomousEmergencyLanding2022} adressieren dieses
-Problem durch zusätzliche semantische Segmentierungen als Eingabe; im
-vorliegenden System steht eine solche Unterscheidung nicht zur
-Verfügung.
+Ein möglicher Mechanismus hinter den 15,9\,\% Terrain-Kollisionen ist
+Perceptual Aliasing~\autocite{whiteheadLearningPerceiveAct1991}: Die
+Kamera erzeugt für Boden und Vegetation bei Annäherung ähnliche
+Signaturen (Abbildung~\ref{fig:perceptual_aliasing}). In der
+Trainingsumgebung ist diese Ambiguität unproblematisch, da die Landezone
+hindernisfrei ist. Im Weinberg bricht diese Strategie: Rebenreihen ragen
+in die Landezone, sodass ein Agent, der das Tiefenbild in Zielnähe zu
+ignorieren gelernt hat, mit Vegetation kollidiert.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.85\textwidth]{Bilder/perceptual_aliasing/depth_comparison.pdf}
-  \caption[Perceptual Aliasing im Tiefenbild]{Tiefenbilder der nach
-  unten gerichteten Kamera bei drei Distanzen ($d = 0{,}5$, $1{,}0$,
-  $2{,}0$\,m). Links: Korridorhindernis mit klar erkennbarer Kontur.
-  Mitte: Boden. Rechts: Rebenreihe im Weinberg. Boden und Rebenreihe
-  erzeugen deutlich ähnlichere Signaturen als Korridorhindernisse, deren
-  Konturen bei allen Distanzen klar hervortreten.}
+  \caption[Perceptual Aliasing im Tiefenbild]{Tiefenbilder der nach unten
+  gerichteten Kamera bei drei Distanzen. Boden und Rebenreihe erzeugen
+  deutlich ähnlichere Signaturen als Korridorhindernisse.}
   \label{fig:perceptual_aliasing}
 \end{figure}
 
 Verschärft wird das Problem durch die fehlende zeitliche
 Gedächtnisstruktur: Der Agent verarbeitet nur das aktuelle Tiefenbild.
-Erkennt er eine Rebenreihe unter sich und weicht lateral aus, fehlt
-ihm die Repräsentation benachbarter Reihen außerhalb des nach unten
-gerichteten Sichtfelds. In der Trainingsumgebung sind Hindernisse isolierte Objekte mit freiem
-Umgebungsraum; im Weinberg führt laterales Ausweichen
-systematisch in die nächste Rebenreihe.
-\textcite{singlaMemorybasedDeepReinforcement2018} zeigen, dass
-rekurrente Architekturen mit einem Aufmerksamkeitsmechanismus über vergangene Beobachtungen dieses Problem
-adressieren können, indem sie vergangene Tiefenbeobachtungen über die
-Zeit integrieren und so das begrenzte Sichtfeld kompensieren.
-
-Die erlernte Navigationsleistung lässt sich partiell auf die
-Weinbergumgebung übertragen: Die Erfolgsrate sinkt von 71,0\,\% auf
-10,4\,\%, wobei sich die dominante Fehlerart von Hinderniskollisionen
-zu Zeitüberschreitungen verschiebt. Bei erweitertem Erfolgsradius
-(1,5\,m) erreicht der Agent 69,7\,\%, was zeigt, dass die
-Hindernisnavigation ohne Fine-Tuning generalisiert. Die terminale
-Landephase scheitert an der im Training nie erfahrenen Konfiguration
-von Vegetation in der Landezone, verstärkt durch Perceptual Aliasing
-zwischen Boden- und Hindernissignaturen im Tiefenbild.
+Laterales Ausweichen führt im Weinberg systematisch in die nächste
+Rebenreihe, da benachbarte Reihen außerhalb des Sichtfelds liegen.
+\textcite{singlaMemorybasedDeepReinforcement2018} zeigen, dass rekurrente
+Architekturen dieses Problem adressieren können.
 
 \section{Leistungslücke zum Pfadplaner}
 \label{sec:disk_nf3}
 
 \subsection{Informationsasymmetrie und Erfolgsrate}
 
-Der RRT-Connect-Planer übertrifft den RL-Agenten in der Erfolgsrate
-beider Umgebungen: um 11~Prozentpunkte im Korridor (82,0\,\%
-gegenüber 71,0\,\%) und um 75~Prozentpunkte im Weinberg (85,7\,\%
-gegenüber 10,4\,\%). Angesichts der in
-Abschnitt~\ref{subsec:meth_versuch1} beschriebenen
-Informationsasymmetrie quantifiziert dieser Vergleich nicht die
-algorithmische Überlegenheit des Planers, sondern den Preis minimaler
-Sensorik. Unter oberflächenbasierter Kollisionserkennung
-(Abschnitt~\ref{sec:disk_nf1}) erreicht der RL-Agent im Korridor
-98,4\,\% ($n = 1\,000$) und liegt damit über der Planerleistung von
-82,0\,\% ($n = 1\,000$).
-
-Das vorliegende System operiert bewusst am unteren Ende des in der
-Literatur eingesetzten Sensorspektrums. Dass der RL-Agent unter fairer
-Kollisionsmetrik das Navigationsproblem vergleichbar mit einem
-vollständig informierten Planer löst, bestätigt den von
+Der RRT-Connect-Planer übertrifft den RL-Agenten in der Erfolgsrate: um
+11~Prozentpunkte im Korridor und 75~Prozentpunkte im Weinberg. Dieser
+Vergleich quantifiziert den Preis minimaler Sensorik, nicht die
+algorithmische Überlegenheit des Planers. Unter oberflächenbasierter
+Kollisionserkennung erreicht der RL-Agent 98,4\,\% und liegt damit über
+der Planerleistung von 82,0\,\%. Dies bestätigt den von
 \textcite{semerikovVisionBasedAutonomousUAV2025} beschriebenen Trend,
 dass lernbasierte Ansätze begrenzte Sensorausstattung algorithmisch
-kompensieren können. Die Grenzen dieses Prinzips zeigt der
-Weinberg-Transfer (vgl.\ Abschnitt~\ref{sec:disk_nf2}).
+kompensieren können.
 
 \subsection{Landezeit und Rechenzeit}
 
-Der RL-Agent landet in beiden Umgebungen schneller als der RRT-Planer
-(30,0\,s gegenüber 42,0\,s im Korridor). Dies erklärt sich durch die
-in Abschnitt~\ref{sec:disk_nf1} beschriebene Flugstrategie: Der Agent
-lernt direkte Abstiegstrajektorien mit knappem Ausweichen, während der
-Planer konservativere Pfade mit größeren Sicherheitsabständen
-berechnet, was sich in der höheren Pfadeffizienz des Planers
-widerspiegelt (1,09 gegenüber 1,19). Der deutlichste Unterschied zeigt
-sich in der Rechenzeit: Ein Forward-Pass benötigt 0,21\,ms, während
-RRT-Connect 80,4\,ms pro Episode für die Pfadplanung benötigt. Für
-eingebettete Hardware, wie sie in realen Drohnenanwendungen eingesetzt
-wird, ist dieser Unterschied ein relevanter praktischer Vorteil.
-
-Die Leistungslücke zum privilegierten RRT-Connect-Planer beträgt
-11~Prozentpunkte im Korridor und 75~Prozentpunkte im Weinberg. Im
-Korridor zeigt die oberflächenbasierte Kollisionserkennung
-(98,4\,\% gegenüber 82,0\,\%, jeweils $n = 1\,000$), dass der
-lernbasierte Ansatz mit lokaler Sensorik das Navigationsproblem nicht
-nur vergleichbar, sondern erfolgreicher löst als der privilegierte
-Planer. Der RL-Agent
-kompensiert die geringere Erfolgsrate durch kürzere Landezeiten und
-deutlich niedrigere Rechenzeit. Zudem entscheidet
-der RL-Agent lokal pro Zeitschritt, was ihn im Gegensatz zum global
-planenden RRT-Connect prinzipiell für dynamische Umgebungen
-geeignet macht.
+Der RL-Agent landet schneller (30,0\,s gegenüber 42,0\,s im Korridor),
+da er direkte Abstiegstrajektorien mit knappem Ausweichen lernt, während
+der Planer konservativere Pfade berechnet. Der deutlichste Unterschied
+zeigt sich in der Rechenzeit: Ein Forward-Pass benötigt 0,21\,ms,
+RRT-Connect 80,4\,ms pro Episode. Der RL-Agent entscheidet zudem lokal
+pro Zeitschritt, was ihn prinzipiell für dynamische Umgebungen geeignet
+macht.
 
 \section{Limitationen}
 \label{sec:disk_limitationen}
 
-\subsection{Trainingssetup}
-
-Alle Ergebnisse basieren auf einem einzigen Trainingslauf (Seed). Die
-Bootstrap-Konfidenzintervalle quantifizieren die Evaluationsvarianz
-über Hinderniskonfigurationen und Startpositionen, nicht die
-Trainingsvarianz; ein anderer Seed könnte zu qualitativ anderem
-Verhalten führen. Die Belohnungsgewichte wurden manuell in
-Vorversuchen abgestimmt, wobei bereits kleine Änderungen das
-Flugverhalten qualitativ verändern können
-(vgl.\ Abschnitt~\ref{sec:disk_nf1}). Zudem nutzt das Training
-512~parallele Umgebungen auf einer einzelnen GPU; eine höhere
-Parallelisierung kann sowohl die Konvergenzgeschwindigkeit als auch
-die Strategiequalität verbessern
-\autocite{xuNavRLLearningSafe2024}.
-
-\subsection{Sensorik und Architektur}
-
-Die AABB-Kollisionserkennung überschätzt das Hindernisvolumen
-systematisch; die Diskrepanz zwischen 71,0\,\% (AABB) und 98,4\,\%
-(oberflächenbasiert) zeigt, dass die berichtete Erfolgsrate die
-tatsächliche Navigationsleistung unterschätzt. Wie in
-Abschnitt~\ref{sec:meth_trainingsumgebung} dargelegt, war die
-oberflächenbasierte Variante im Training aufgrund des Rechenaufwands
-nicht einsetzbar; die AABB-Metrik stellt daher einen bewussten
-Trade-off zwischen Genauigkeit und Trainingseffizienz dar. Der Agent verarbeitet
-nur das aktuelle Tiefenbild ohne zeitliches Gedächtnis, sodass
-Strukturen außerhalb des Sichtfelds nicht über mehrere Zeitschritte
-akkumuliert werden können (vgl.\ Abschnitt~\ref{sec:disk_nf2}). Der
-individuelle Beitrag von Tiefenwahrnehmung und Zustandsvektor wurde
-nicht durch eine Ablationsstudie quantifiziert; die Schlussfolgerungen
-über die gelernten CNN-Repräsentationen sind indirekt aus Trajektorien
-und Transferleistung abgeleitet.
-
-\subsection{Umgebungsdiversität}
-
-Im Training und in Phase~1 ist das Landeziel in allen Episoden
-identisch; erst die Weinberg-Evaluation nutzt 20~verschiedene
-Zielpositionen. Die vierfache Skalierung des Weinberg-Modells vergrößert zudem die
-Reihenabstände relativ zur Drohne. Die Simulation bietet perfekte
-Sensorik ohne Rauschen, keine Motorverzögerung und keine
-Kommunikationslatenz; Ergebnisse sind nicht direkt auf reale Drohnen
-übertragbar.
+Alle Ergebnisse basieren auf einem einzigen Trainingslauf (Seed); die
+Bootstrap-Konfidenzintervalle quantifizieren die Evaluations-, nicht die
+Trainingsvarianz. Die Belohnungsgewichte wurden manuell abgestimmt, wobei
+kleine Änderungen das Flugverhalten qualitativ verändern können. Die
+AABB-Kollisionserkennung überschätzt das Hindernisvolumen systematisch
+(71,0\,\% vs.\ 98,4\,\%); die oberflächenbasierte Variante war im
+Training aufgrund des Rechenaufwands nicht einsetzbar. Der Agent
+verarbeitet nur das aktuelle Tiefenbild ohne zeitliches Gedächtnis; der
+individuelle Beitrag beider Eingabemodalitäten wurde nicht durch eine
+Ablationsstudie quantifiziert. Im Training ist das Landeziel in allen
+Episoden identisch. Die Simulation bietet perfekte Sensorik ohne
+Rauschen und keine Motorverzögerung; Ergebnisse sind nicht direkt auf
+reale Drohnen übertragbar.

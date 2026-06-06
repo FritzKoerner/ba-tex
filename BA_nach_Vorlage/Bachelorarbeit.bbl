@@ -1856,53 +1856,6 @@
       \endverb
       \keyw{Deep neural network,Deep reinforcement learning,drone,Navigation,Safety assurance,UAV}
     \endentry
-    \entry{hornikMultilayerFeedforwardNetworks1989}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=bec8dd1340457a82c21b54971e4c9417}{%
-           family={Hornik},
-           familyi={H\bibinitperiod},
-           given={Kurt},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
-           family={Stinchcombe},
-           familyi={S\bibinitperiod},
-           given={Maxwell},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=426e452a5ec8e692f7740ce0d3e3655c}{%
-           family={White},
-           familyi={W\bibinitperiod},
-           given={Halbert},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a8d7f46f242b5a2ff80ecb656326c2de}
-      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \strng{authornamehash}{a8d7f46f242b5a2ff80ecb656326c2de}
-      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0893-6080}
-      \field{journaltitle}{Neural Networks}
-      \field{langid}{english}
-      \field{number}{5}
-      \field{title}{Multilayer Feedforward Networks Are Universal Approximators}
-      \field{volume}{2}
-      \field{year}{1989}
-      \field{dateera}{ce}
-      \field{pages}{359\bibrangedash 366}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1016/0893-6080(89)90020-8
-      \endverb
-    \endentry
     \entry{hultgrenImpactsClimateChange2025}{article}{}
       \name{author}{16}{}{%
         {{un=0,uniquepart=base,hash=c98b376966766c3e05ce404c21e8e956}{%

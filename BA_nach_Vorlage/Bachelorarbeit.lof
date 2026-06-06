@@ -1,22 +1,22 @@
 \babel@toc {ngerman}{}\relax 
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Interaktion zwischen Agent und Umgebung in einem MDP (nach \blx@tocontentsinit {0}\cite {suttonReinforcementLearningIntroduction2020}, S.~48).}}{5}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces $L^{\mathrm {CLIP}}$ als Funktion des Wahrscheinlichkeitsverhältnisses~$r$. Links ($\hat {A}_t > 0$): der Anreiz wird bei $1 + \varepsilon $ gekappt. Rechts ($\hat {A}_t < 0$): die Korrektur bleibt uneingeschränkt (nach \blx@tocontentsinit {0}\autocite {schulmanProximalPolicyOptimization2017}, Fig.~1).}}{8}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Interaktion zwischen Agent und Umgebung in einem MDP (nach \blx@tocontentsinit {0}\cite {suttonReinforcementLearningIntroduction2020}, S.~48).}}{4}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces $L^{\mathrm {CLIP}}$ als Funktion des Wahrscheinlichkeitsverhältnisses~$r$. Links ($\hat {A}_t > 0$): der Anreiz wird bei $1 + \varepsilon $ gekappt. Rechts ($\hat {A}_t < 0$): die Korrektur bleibt uneingeschränkt (nach \blx@tocontentsinit {0}\autocite {schulmanProximalPolicyOptimization2017}, Fig.~1).}}{6}{figure.caption.25}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um.}}{21}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Netzwerkarchitektur: Das Tiefenbild durchläuft einen geteilten CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und abschließendem Global Max Pooling). Der resultierende 128-dimensionale Merkmalsvektor wird mit dem empirisch normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe von Actor und Critic weitergegeben.}}{27}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene. Die gestrichelten Rechtecke markieren die Korridorgrenzen, graue Flächen die schematischen Hindernis-Begrenzungsboxen.}}{31}{figure.caption.73}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Zielpositionen in der Weinbergumgebung}}{36}{figure.caption.86}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um.}}{16}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Netzwerkarchitektur: Geteilter CNN-Encoder (drei Faltungsschichten mit Batch-Normalisierung, ELU und Global Max Pooling) erzeugt einen 128-dimensionalen Merkmalsvektor, der mit dem normalisierten Zustandsvektor konkateniert und an die getrennten MLP-Köpfe weitergegeben wird.}}{20}{figure.caption.54}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene.}}{22}{figure.caption.66}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Zielpositionen in der Weinbergumgebung}}{24}{figure.caption.76}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Kumulative Belohnung und Standardabweichung der Aktionsverteilung}}{37}{figure.caption.89}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Absturzstrafe und Erfolgsbelohnung}}{38}{figure.caption.90}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Episodenergebnisse Phase~1}}{39}{figure.caption.93}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Exemplarische 3D-Trajektorien in Phase~1}}{40}{figure.caption.94}%
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Episodenergebnisse Phase~2}}{41}{figure.caption.98}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Kumulative Belohnung und Standardabweichung der Aktionsverteilung}}{25}{figure.caption.79}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Absturzstrafe und Erfolgsbelohnung}}{25}{figure.caption.80}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Episodenergebnisse Phase~1}}{26}{figure.caption.83}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Exemplarische 3D-Trajektorien in Phase~1}}{27}{figure.caption.84}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Episodenergebnisse Phase~2}}{28}{figure.caption.88}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Perceptual Aliasing im Tiefenbild}}{48}{figure.caption.112}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Perceptual Aliasing im Tiefenbild}}{32}{figure.caption.102}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
