@@ -157,29 +157,36 @@ keinem erkennbaren navigatorischen Zweck dienen.
 Das knappe Passieren der Hindernisse bei gleichzeitig hoher Kollisionsrate
 legte nahe, dass die konservative AABB-Kollisionserkennung
 (vgl.\ Abschnitt~\ref{subsec:meth_hindernisse}) einen Teil der Fehlschläge
-verursacht. Um dies zu prüfen, wurde eine Nachuntersuchung mit 100~Episoden
+verursacht. Um dies zu prüfen, wurde eine Nachuntersuchung mit 1\,000~Episoden
 durchgeführt, in der die Kollisionserkennung durch die geometrisch exakte
 Oberflächenkollisionsprüfung des Simulators ersetzt wurde.
 
-Mit oberflächenbasierter Kontakterkennung steigt die Erfolgsrate auf 98,0\,\%
-(Tabelle~\ref{tab:phase1_mesh_contacts}). Ein erheblicher Anteil der unter der AABB-Metrik
-registrierten Kollisionen sind demnach Fehlalarme: Die Drohne durchfliegt die
-Begrenzungsbox, ohne die tatsächliche Objektoberfläche zu berühren.
+Mit oberflächenbasierter Kontakterkennung steigt die Erfolgsrate auf
+98,4\,\% (Tabelle~\ref{tab:phase1_mesh_contacts}). Ein erheblicher Anteil
+der unter der AABB-Metrik registrierten Kollisionen sind demnach Fehlalarme:
+Die Drohne durchfliegt die Begrenzungsbox, ohne die tatsächliche
+Objektoberfläche zu berühren. Die verbleibenden 1,6\,\% Fehlschläge
+verteilen sich auf Hinderniskollisionen (1,2\,\%), Verlassen des
+Korridors (0,2\,\%) und Timeouts (0,2\,\%).
+Tabelle~\ref{tab:phase1_mesh_results} im Anhang listet alle Metriken
+mit Konfidenzintervallen.
 
 \begin{table}[H]
   \centering
   \caption[Vergleich AABB- und oberflächenbasierte Kollisionserkennung]{Vergleich
-  der Evaluationsergebnisse mit AABB-Distanz ($n = 1\,000$) und
-  oberflächenbasierter Kontakterkennung ($n = 100$).}
+  der Evaluationsergebnisse mit AABB-Distanz und
+  oberflächenbasierter Kontakterkennung (jeweils $n = 1\,000$~Episoden).}
   \label{tab:phase1_mesh_contacts}
   \small
   \renewcommand{\arraystretch}{1.1}
   \begin{tabular}{l r r}
     \toprule
-    \textbf{Metrik} & \textbf{AABB ($n = 1\,000$)} & \textbf{Oberfläche ($n = 100$)} \\
+    \textbf{Metrik} & \textbf{AABB} & \textbf{Oberfläche} \\
     \midrule
-    Erfolgsrate                       & 71,0\,\%    & 98,0\,\% \\
-    Hinderniskollision                & 28,8\,\%    & 2,0\,\% \\
+    Erfolgsrate                       & 71,0\,\%    & 98,4\,\% \\
+    Hinderniskollision                & 28,8\,\%    & 1,2\,\% \\
+    Verlassen des Korridors           & 0,2\,\%     & 0,2\,\% \\
+    Timeout                           & 0,0\,\%     & 0,2\,\% \\
     \bottomrule
   \end{tabular}
 \end{table}

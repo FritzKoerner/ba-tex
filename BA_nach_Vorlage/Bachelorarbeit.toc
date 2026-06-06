@@ -71,11 +71,10 @@
 \contentsline {subsection}{\numberline {6.4.3}Umgebungsdiversität}{51}{subsection.119}%
 \contentsline {chapter}{\numberline {7}Fazit und Ausblick}{52}{chapter.120}%
 \contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{52}{section.121}%
-\contentsline {section}{\numberline {7.2}Limitationen der Arbeit}{53}{section.122}%
-\contentsline {section}{\numberline {7.3}Perspektiven für zukünftige Forschung}{53}{section.123}%
-\contentsline {subsection}{\numberline {7.3.1}Architekturerweiterungen}{53}{subsection.124}%
-\contentsline {subsection}{\numberline {7.3.2}Trainingssetup}{53}{subsection.125}%
-\contentsline {subsection}{\numberline {7.3.3}Umgebungsdiversität und Sim-to-Real-Transfer}{53}{subsection.126}%
-\contentsline {chapter}{Anhang}{VII}{chapter*.127}%
-\contentsline {chapter}{\nonumberline Literatur}{XII}{chapter*.141}%
-\contentsline {chapter}{\nonumberline Erklärung}{XXII}{chapter*.142}%
+\contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{53}{section.122}%
+\contentsline {subsection}{\numberline {7.2.1}Trainingssetup}{53}{subsection.123}%
+\contentsline {subsection}{\numberline {7.2.2}Architekturerweiterungen}{53}{subsection.124}%
+\contentsline {subsection}{\numberline {7.2.3}Umgebungsdiversität und Sim-to-Real-Transfer}{53}{subsection.125}%
+\contentsline {chapter}{Anhang}{VII}{chapter*.126}%
+\contentsline {chapter}{\nonumberline Literatur}{XIII}{chapter*.143}%
+\contentsline {chapter}{\nonumberline Erklärung}{XXIII}{chapter*.144}%

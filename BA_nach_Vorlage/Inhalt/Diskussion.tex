@@ -72,7 +72,7 @@ Hinderniskollisionen (28,8\,\%) sind die einzig relevante Fehlerart;
 Zeitüberschreitungen und Bodenkollisionen treten nicht auf. Mit
 oberflächenbasierter Kollisionserkennung
 (Abschnitt~\ref{subsec:phase1_mesh_contacts}) steigt die Erfolgsrate
-auf 98,0\,\%. Die Diskrepanz erklärt sich aus dem Zusammenspiel dreier
+auf 98,4\,\%. Die Diskrepanz erklärt sich aus dem Zusammenspiel dreier
 Faktoren: Erstens begünstigt die Belohnungsstruktur knappes Passieren,
 da die Hindernisproximität ($w_{\mathrm{prox}} = -0{,}2$) deutlich
 schwächer gewichtet ist als Fortschritt und Nähe
@@ -94,7 +94,7 @@ tatsächlichen Oberfläche mehr Abstand als nötig.
 
 Der trainierte Agent erreicht in der Korridorumgebung eine Erfolgsrate
 von 71,0\,\% unter der konservativen AABB-Kollisionsmetrik; mit
-oberflächenbasierter Kontakterkennung steigt dieser Wert auf 98,0\,\%.
+oberflächenbasierter Kontakterkennung steigt dieser Wert auf 98,4\,\%.
 Zur Einordnung: \textcite{bartolomeiAutonomousEmergencyLanding2022}
 berichten vergleichbare Raten (über 70\,\%) für ein RL-System mit
 Tiefenbildeingabe, allerdings für die Selektion sicherer Landezonen in
@@ -233,9 +233,8 @@ Informationsasymmetrie quantifiziert dieser Vergleich nicht die
 algorithmische Überlegenheit des Planers, sondern den Preis minimaler
 Sensorik. Unter oberflächenbasierter Kollisionserkennung
 (Abschnitt~\ref{sec:disk_nf1}) erreicht der RL-Agent im Korridor
-98,0\,\% ($n = 100$) und liegt damit über der Planerleistung von
-82,0\,\% ($n = 1\,000$). Aufgrund der unterschiedlichen
-Stichprobengrößen ist dieser Vergleich als vorläufig zu werten.
+98,4\,\% ($n = 1\,000$) und liegt damit über der Planerleistung von
+82,0\,\% ($n = 1\,000$).
 
 Das vorliegende System operiert bewusst am unteren Ende des in der
 Literatur eingesetzten Sensorspektrums. Dass der RL-Agent unter fairer
@@ -262,12 +261,11 @@ wird, ist dieser Unterschied ein relevanter praktischer Vorteil.
 
 Die Leistungslücke zum privilegierten RRT-Connect-Planer beträgt
 11~Prozentpunkte im Korridor und 75~Prozentpunkte im Weinberg. Im
-Korridor deutet die oberflächenbasierte Kollisionserkennung
-(98,0\,\%, $n = 100$, gegenüber 82,0\,\%, $n = 1\,000$) darauf hin,
-dass der lernbasierte Ansatz mit lokaler Sensorik das
-Navigationsproblem vergleichbar lösen kann; die unterschiedlichen
-Stichprobengrößen schränken die Belastbarkeit dieses Vergleichs
-jedoch ein. Der RL-Agent
+Korridor zeigt die oberflächenbasierte Kollisionserkennung
+(98,4\,\% gegenüber 82,0\,\%, jeweils $n = 1\,000$), dass der
+lernbasierte Ansatz mit lokaler Sensorik das Navigationsproblem nicht
+nur vergleichbar, sondern erfolgreicher löst als der privilegierte
+Planer. Der RL-Agent
 kompensiert die geringere Erfolgsrate durch kürzere Landezeiten und
 deutlich niedrigere Rechenzeit. Zudem entscheidet
 der RL-Agent lokal pro Zeitschritt, was ihn im Gegensatz zum global
@@ -295,7 +293,7 @@ die Strategiequalität verbessern
 \subsection{Sensorik und Architektur}
 
 Die AABB-Kollisionserkennung überschätzt das Hindernisvolumen
-systematisch; die Diskrepanz zwischen 71,0\,\% (AABB) und 98,0\,\%
+systematisch; die Diskrepanz zwischen 71,0\,\% (AABB) und 98,4\,\%
 (oberflächenbasiert) zeigt, dass die berichtete Erfolgsrate die
 tatsächliche Navigationsleistung unterschätzt. Wie in
 Abschnitt~\ref{sec:meth_trainingsumgebung} dargelegt, war die
