@@ -2432,10 +2432,9 @@
     <bcf:citekey order="54" intorder="1">martiniPositionAgnosticAutonomousNavigation2022</bcf:citekey>
     <bcf:citekey order="55" intorder="1">polvaraSimtoRealQuadrotorLanding2020</bcf:citekey>
     <bcf:citekey order="55" intorder="2">kimMonocularVisionbasedAutonomous2022</bcf:citekey>
-    <bcf:citekey order="55" intorder="3">ladoszAutonomousLandingMoving2024</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">loquercioLearningHighspeedFlight2021</bcf:citekey>
-    <bcf:citekey order="56" intorder="2">bartolomeiAutonomousEmergencyLanding2022</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">xuNavRLLearningSafe2024</bcf:citekey>
+    <bcf:citekey order="55" intorder="3">bartolomeiAutonomousEmergencyLanding2022</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">ladoszAutonomousLandingMoving2024</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">loquercioLearningHighspeedFlight2021</bcf:citekey>
     <bcf:citekey order="58" intorder="1">esserActionSpaceDesign</bcf:citekey>
     <bcf:citekey order="59" intorder="1">kaufmannBenchmarkComparisonLearned2022</bcf:citekey>
     <bcf:citekey order="60" intorder="1">rudinLearningWalkMinutes2022</bcf:citekey>

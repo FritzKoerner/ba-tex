@@ -1,20 +1,20 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Bachelorarbeit.blg'
-[84] biber:340> INFO - === Sa Jun  6, 2026, 19:03:23
-[101] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
-[190] Biber.pm:979> INFO - Found 59 citekeys in bib section 0
-[204] Biber.pm:4419> INFO - Processing section 0
-[214] Biber.pm:4610> INFO - Looking for bibtex file 'quellen.bib' for section 0
-[225] bibtex.pm:1713> INFO - LaTeX decoding ...
-[360] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
-[1264] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1264] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1265] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
-[1265] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
-[1393] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
-[1490] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
-[1490] Biber.pm:131> WARN - Duplicate entry key: 'wubbenAccurateLandingUnmanned2019' in file 'quellen.bib', skipping ...
-[1490] Biber.pm:131> WARN - Duplicate entry key: 'moallaNoRepresentationNo' in file 'quellen.bib', skipping ...
-[1492] Biber.pm:131> WARN - Duplicate entry key: 'singlaMemorybasedDeepReinforcement2018' in file 'quellen.bib', skipping ...
-[1492] Biber.pm:131> WARN - legacy year field '2016--2021' in entry 'coumansPybulletPythonModule2016' is not an integer - this will probably not sort properly.
-[1492] Biber.pm:133> INFO - WARNINGS: 4
+[71] biber:340> INFO - === So Jun  7, 2026, 21:10:00
+[87] Biber.pm:419> INFO - Reading 'Bachelorarbeit.bcf'
+[172] Biber.pm:979> INFO - Found 59 citekeys in bib section 0
+[185] Biber.pm:4419> INFO - Processing section 0
+[193] Biber.pm:4610> INFO - Looking for bibtex file 'quellen.bib' for section 0
+[204] bibtex.pm:1713> INFO - LaTeX decoding ...
+[322] bibtex.pm:1519> INFO - Found BibTeX data source 'quellen.bib'
+[1186] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1187] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1187] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'de-DE'
+[1187] Biber.pm:4245> INFO - No sort tailoring available for locale 'de-DE'
+[1314] bbl.pm:660> INFO - Writing 'Bachelorarbeit.bbl' with encoding 'UTF-8'
+[1407] bbl.pm:763> INFO - Output to Bachelorarbeit.bbl
+[1407] Biber.pm:131> WARN - Duplicate entry key: 'wubbenAccurateLandingUnmanned2019' in file 'quellen.bib', skipping ...
+[1407] Biber.pm:131> WARN - Duplicate entry key: 'moallaNoRepresentationNo' in file 'quellen.bib', skipping ...
+[1408] Biber.pm:131> WARN - Duplicate entry key: 'singlaMemorybasedDeepReinforcement2018' in file 'quellen.bib', skipping ...
+[1408] Biber.pm:131> WARN - legacy year field '2016--2021' in entry 'coumansPybulletPythonModule2016' is not an integer - this will probably not sort properly.
+[1408] Biber.pm:133> INFO - WARNINGS: 4
