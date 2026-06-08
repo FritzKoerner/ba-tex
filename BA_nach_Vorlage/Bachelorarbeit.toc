@@ -48,9 +48,9 @@
 \contentsline {section}{\numberline {5.1}Trainingsverhalten}{26}{section.79}%
 \contentsline {section}{\numberline {5.2}Phase 1: Korridornavigation}{27}{section.83}%
 \contentsline {subsection}{\numberline {5.2.1}Nachuntersuchung: Oberflächenbasierte Kollisionserkennung}{28}{subsection.86}%
-\contentsline {section}{\numberline {5.3}Phase 2: Weinberg-Transfer}{28}{section.88}%
+\contentsline {section}{\numberline {5.3}Phase 2: Weinberg-Transfer}{29}{section.88}%
 \contentsline {subsection}{\numberline {5.3.1}Sensitivitätsanalyse des Erfolgskriteriums}{29}{subsection.90}%
-\contentsline {section}{\numberline {5.4}Vergleich RL vs.\ RRT-Connect}{29}{section.92}%
+\contentsline {section}{\numberline {5.4}Vergleich RL vs.\ RRT-Connect}{30}{section.92}%
 \contentsline {chapter}{\numberline {6}Diskussion}{31}{chapter.95}%
 \contentsline {section}{\numberline {6.1}Leistungsfähigkeit in der Trainingsumgebung}{31}{section.96}%
 \contentsline {subsection}{\numberline {6.1.1}Trainingsverhalten und Konvergenz}{31}{subsection.97}%
@@ -60,13 +60,13 @@
 \contentsline {subsection}{\numberline {6.2.2}Einordnung als Sim-to-Sim Transfer}{32}{subsection.101}%
 \contentsline {subsection}{\numberline {6.2.3}Perceptual Aliasing als Erklärung für die Terrain-Kollisionen}{33}{subsection.102}%
 \contentsline {section}{\numberline {6.3}Leistungslücke zum Pfadplaner}{34}{section.104}%
-\contentsline {section}{\numberline {6.4}Limitationen}{34}{section.105}%
-\contentsline {subsection}{\numberline {6.4.1}Trainingssetup}{34}{subsection.106}%
-\contentsline {subsection}{\numberline {6.4.2}Sensorik und Architektur}{34}{subsection.107}%
-\contentsline {subsection}{\numberline {6.4.3}Umgebungsdiversität}{35}{subsection.108}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{36}{chapter.109}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{36}{section.110}%
-\contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{36}{section.111}%
+\contentsline {section}{\numberline {6.4}Limitationen}{35}{section.105}%
+\contentsline {subsection}{\numberline {6.4.1}Trainingssetup}{35}{subsection.106}%
+\contentsline {subsection}{\numberline {6.4.2}Sensorik und Architektur}{35}{subsection.107}%
+\contentsline {subsection}{\numberline {6.4.3}Umgebungsdiversität}{36}{subsection.108}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{37}{chapter.109}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{37}{section.110}%
+\contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{37}{section.111}%
 \contentsline {chapter}{Anhang}{VII}{chapter*.112}%
 \contentsline {chapter}{\nonumberline Literatur}{XIII}{chapter*.129}%
 \contentsline {chapter}{\nonumberline Erklärung}{XXIII}{chapter*.130}%

@@ -5,7 +5,7 @@ Dieses Kapitel beschreibt das entwickelte System zur autonomen Drohnenlandung
 mit Hindernisvermeidung. Ein RL-Agent trifft Navigationsentscheidungen auf
 hoher Abstraktionsebene, während ein kaskadierender PID-Regler diese in
 Motorkommandos umsetzt. Training und Evaluation finden vollständig in
-Simulation statt; ein Sim-to-Real-Transfer liegt außerhalb des Rahmens
+Simulation statt. Ein Sim-to-Real-Transfer liegt außerhalb des Rahmens
 dieser Arbeit.
 
 \section{Systemüberblick}
@@ -23,7 +23,7 @@ Der Agent erhält einen normalisierten Zustandsvektor
 $\mathbf{o}_t \in \mathbb{R}^{17}$ und ein Tiefenbild
 $\mathbf{D}_t \in [0,1]^{64 \times 64}$ einer vertikal nach unten
 gerichteten Kamera mit $90^{\circ}$~Sichtfeld. Ein geteilter CNN-Encoder
-extrahiert Hindernismerkmale aus dem Tiefenbild; der resultierende
+extrahiert Hindernismerkmale aus dem Tiefenbild. Der resultierende
 Merkmalsvektor wird mit dem Zustandsvektor konkateniert und an die
 MLP-Köpfe (Multilayer Perceptron) von Actor und Critic weitergegeben.
 Der Actor sampelt eine vierdimensionale Aktion
@@ -136,11 +136,7 @@ $3{,}0$\,s); dazwischen steuert der PID-Regler die Drohne zum Sollzustand.
 \subsection{Belohnungsfunktion}
 \label{subsec:meth_belohnung}
 
-Eine zentrale Herausforderung beim Einsatz von Deep Reinforcement Learning
-in der Robotik liegt in der Spärlichkeit der Belohnungssignale: Der Agent muss
-große Zustands- und Aktionsräume explorieren, erhält jedoch nur selten
-informatives Feedback~\autocite{polvaraSimtoRealQuadrotorLanding2020}.
-Die Belohnungsfunktion kombiniert daher dichte Signale, die den Fortschritt
+Die Belohnungsfunktion kombiniert dichte Signale, die den Fortschritt
 zur Zielerreichung messen, mit spärlichen terminalen Signalen, die das
 eigentliche Ziel kodieren. Die Fortschrittskomponente ist dabei als
 potentialbasiertes Reward Shaping im Sinne von
@@ -192,7 +188,7 @@ Landeziels.
 \medskip
 Die Gewichte (Tabelle~\ref{tab:reward_weights}) wurden experimentell
 abgestimmt. Eine zu hohe Gewichtung der Strafterme führte in Vorversuchen
-zu stagnierendem Schwebeverhalten; eine Timeout-Strafe wurde bewusst
+zu stagnierendem Schwebeverhalten. Eine Timeout-Strafe wurde bewusst
 ausgelassen, da der Agent ohne Zeitbeobachtung im Zustandsvektor den
 Episodenabbruch nicht antizipieren
 kann~\autocite{rudinLearningWalkMinutes2022}.
@@ -231,7 +227,7 @@ nicht-terminale Übergänge behandelt.
 Es wird eine Actor-Critic-Architektur verwendet. (vgl.\ Abschnitt~\ref{subsec:policy_gradient}). Der CNN-Encoder besteht aus drei
 Faltungsschichten mit aufsteigender Kanalzahl (32, 64, 128), abnehmenden
 Kernelgrößen ($8 \times 8$, $4 \times 4$, $3 \times 3$) und Schrittweiten
-(4, 2, 1), jeweils gefolgt von Batch-Normalisierung und ELU-Aktivierung.
+(4, 2, 1), jeweils gefolgt von Batch-Normalisierung und Exponential Linear Unit (ELU) Aktivierungsfunktion.
 Ein abschließendes Global Max Pooling erzeugt einen 128-dimensionalen
 Merkmalsvektor. Der Zustandsvektor durchläuft eine laufende empirische
 Normalisierung. Der resultierende Vektor wird an die MLP-Köpfe
@@ -387,7 +383,7 @@ aufeinanderfolgende Schichten wechseln die Seite.
 \section{Kaskadierender PID-Regler}
 \label{subsec:meth_pid}
 
-Der RL-Agent gibt Sollposition und Sollgierwinkel vor; ein dreistufiger
+Der RL-Agent gibt Sollposition und Sollgierwinkel vor. Ein dreistufiger
 kaskadierender PID-Regler (Proportional-Integral-Derivative; Position
 $\rightarrow$ Geschwindigkeit $\rightarrow$ Lage) setzt diese in
 Motordrehzahlen um. Die Verstärkungen sind in
@@ -478,7 +474,7 @@ vierfache Skalierung). Die Kollisionserkennung erfolgt über ein
 vorberechnetes Höhenraster mit einem Sicherheitsabstand von $0{,}5$\,m;
 die AABB-basierte Hinderniskollision und die Korridorgrenzenprüfung
 entfallen. Als Landeziele dienen 20~vordefinierte Positionen
-(15~zwischen Rebenreihen, 5~auf offenem Gelände); die Drohne wird in
+(15~zwischen Rebenreihen, 5~auf offenem Gelände). Die Drohne wird in
 variabler Höhe ($10$ bis $15$\,m) über dem Ziel initialisiert.
 Abbildung~\ref{fig:meth_vineyard_targets} zeigt die Zielpositionen.
 

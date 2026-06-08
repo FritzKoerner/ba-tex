@@ -23,7 +23,7 @@ Abbildung~\ref{fig:reward_training} zeigt den Belohnungsverlauf.
 \end{figure}
 
 Der Trainingsverlauf lässt sich in zwei Phasen unterteilen. In der ersten
-Phase (Iteration~0 bis~441) steigt die kumulative Belohnung kontinuierlich
+Phase (Iteration~0 bis~390) steigt die kumulative Belohnung kontinuierlich
 an. Der Agent lernt zunächst die Zielnavigation; ab circa Iteration~200
 erscheint erstmals die Erfolgsbelohnung
 (Abbildung~\ref{fig:rew_crash_success}), und gleichzeitig sinkt die
@@ -49,12 +49,15 @@ Anhang).
 Ab Iteration~442 bricht die kumulative Belohnung abrupt ein: Innerhalb einer
 einzigen Iteration fällt sie von 29,2 auf $-6{,}1$. Die
 Standardabweichung bleibt nahezu unverändert ($0{,}193 \rightarrow
-0{,}194$); der Kollaps betrifft die Mittelwerte der Strategie, nicht die
+0{,}194$). Der Kollaps betrifft die Mittelwerte der Strategie, nicht die
 Explorationsbreite.
 
-Der beste Checkpoint liegt bei Iteration~400 (Tabelle~\ref{tab:konvergenz}).
-Auf Basis des Belohnungsverlaufs wurde dieser für alle Evaluierungen
-ausgewählt (\emph{Early Stopping}).
+Tabelle~\ref{tab:konvergenz} fasst die Laufzeiten zusammen. Der beste
+Checkpoint liegt bei Iteration~400 (10,4~Stunden Trainingszeit, kumulative
+Belohnung 23,0). Auf Basis des Belohnungsverlaufs wurde dieser Checkpoint für
+alle nachfolgenden Evaluierungen ausgewählt (\emph{Early Stopping}). Die
+verbleibenden 14~Stunden Trainingszeit (Iteration~400 bis~957) produzieren
+kein Modell, das die Leistung von Checkpoint~400 übertrifft.
 
 \begin{table}[H]
   \centering
@@ -193,7 +196,7 @@ wird. Der Timeout-Anteil sinkt von 73,7\,\% auf 27,7\,\%.
   \renewcommand{\arraystretch}{1.1}
   \begin{tabular}{l r r}
     \toprule
-    \textbf{Metrik} & \textbf{$r = 0{,}5$\,m} & \textbf{$r = 1{,}5$\,m} \\
+    \textbf{Metrik} & \textbf{$r = 0{,}5$\,}m & \textbf{$r = 1{,}5$\,}m \\
     \midrule
     Erfolgsrate           & 10,4\,\%    & 69,7\,\% \\
     Terrain-Kollision     & 15,9\,\%    & 9,4\,\% \\

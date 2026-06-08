@@ -1,9 +1,6 @@
 \chapter{Diskussion}
 \label{cha:Diskussion}
 
-Dieses Kapitel interpretiert die Ergebnisse im Kontext der
-Forschungsfragen.
-
 \section{Leistungsfähigkeit in der Trainingsumgebung}
 \label{sec:disk_nf1}
 
@@ -38,12 +35,14 @@ Strategie nicht. $r_{\mathrm{nah}} = \exp(-d_{t+1})$ hingegen ist
 nicht potentialbasiert: Jeder Zeitschritt in Zielnähe liefert Belohnung,
 unabhängig von weiterer Annäherung. Da es keine Zeitstrafe gibt, überwiegt
 der akkumulierte Schwebe-Anreiz. Dieses Phänomen dokumentieren auch
-\textcite{randlovLearningDriveBicycle1998}: ein nicht-potentialbasierter Shaping-Reward kann einen
-Agenten dazu bringen, eine nicht optimale Strategie zu lernen, da
+\textcite{randlovLearningDriveBicycle1998}: dass eine nicht-potentialbasierte Zwischenbelohnung einen
+Agenten dazu bringt, Kreise zu fahren statt das Ziel zu erreichen, da
 die akkumulierte Zwischenbelohnung die Zielbelohnung übersteigt.
 Entsprechend lernt der Agent eine Strategie, die steilen Abstieg mit
 ausgedehntem Schweben in Zielnähe kombiniert, was die beobachtete
-Zunahme der Episodenlänge im Trainingsverlauf erklärt.
+Zunahme der Episodenlänge im Trainingsverlauf erklärt. Eine Umformulierung 
+von $r_{\text{nah}}$ als potentialbasierte Belohnung würde den Schwebe-Anreiz 
+beseitigen, ohne die Lernbeschleunigung aufzugeben. 
 
 \subsection{Dominante Fehlerart und Flugverhalten}
 
@@ -59,15 +58,15 @@ ein reaktives Flugverhalten, bei dem Hindernisse erst bei Annäherung
 erkannt werden. Das Flugmuster (direkter Abstieg, spätes Abbremsen,
 laterales Ausweichen mit mittlerem Minimalabstand von 0,52\,m) ist präzise
 genug, um die tatsächliche Oberfläche zu verfehlen, durchdringt jedoch
-regelmäßig die konservative AABB-Hülle.
+regelmäßig die konservative AABB-Hülle. Das Flugverhalten
+legt eine funktionale Rollenverteilung nahe: Die lateralen
+Ausweichmanöver setzen Hindernisinformation aus dem Tiefenbild voraus.
+Der Zustandsvektor steuert Zielnavigation und Abstieg.
 
 Zur Einordnung: \textcite{bartolomeiAutonomousEmergencyLanding2022}
 berichten vergleichbare Raten (über 70\,\%) für ein RL-System mit
 Tiefenbildeingabe, allerdings für die Selektion sicherer Landezonen,
-nicht für die Navigation durch enge Hindernispassagen. Das Flugverhalten
-legt eine funktionale Rollenverteilung nahe: Die lateralen
-Ausweichmanöver setzen Hindernisinformation aus dem Tiefenbild voraus;
-der Zustandsvektor steuert Zielnavigation und Abstieg.
+nicht für die Navigation durch enge Hindernispassagen. 
 
 \section{Transferleistung auf den Weinberg}
 \label{sec:disk_nf2}
@@ -112,10 +111,11 @@ Ein möglicher Mechanismus hinter den 15,9\,\% Terrain-Kollisionen ist
 Perceptual Aliasing~\autocite{whiteheadLearningPerceiveAct1991}: Die
 Kamera erzeugt für Boden und Vegetation bei Annäherung ähnliche
 Signaturen (Abbildung~\ref{fig:perceptual_aliasing}). In der
-Trainingsumgebung ist diese Ambiguität unproblematisch, da die Landezone
+Trainingsumgebung ist diese Mehrdeutigkeit unproblematisch, da die Landezone
 hindernisfrei ist. Im Weinberg bricht diese Strategie: Rebenreihen ragen
 in die Landezone, sodass ein Agent, der das Tiefenbild in Zielnähe zu
-ignorieren gelernt hat, mit Vegetation kollidiert.
+ignorieren gelernt hat, mit Vegetation kollidiert. \textcite{bartolomeiAutonomousEmergencyLanding2022} adressieren dieses
+Problem durch zusätzliche semantische Segmentierungen als Eingabe, welche es dem Agenten erlauben Hindernisse und Boden zu unterscheiden.
 
 \begin{figure}[H]
   \centering
@@ -130,8 +130,10 @@ Verschärft wird das Problem durch die fehlende zeitliche
 Gedächtnisstruktur: Der Agent verarbeitet nur das aktuelle Tiefenbild.
 Laterales Ausweichen führt im Weinberg systematisch in die nächste
 Rebenreihe, da benachbarte Reihen außerhalb des Sichtfelds liegen.
-\textcite{singlaMemorybasedDeepReinforcement2018} zeigen, dass rekurrente
-Architekturen dieses Problem adressieren können.
+\textcite{singlaMemorybasedDeepReinforcement2018} zeigen, dass
+rekurrente Architekturen mit einem Aufmerksamkeitsmechanismus über vergangene Beobachtungen dieses Problem
+adressieren können, indem sie vergangene Tiefenbeobachtungen über die
+Zeit integrieren und so das begrenzte Sichtfeld kompensieren.
 
 \section{Leistungslücke zum Pfadplaner}
 \label{sec:disk_nf3}
@@ -145,9 +147,7 @@ der Planerleistung von 82,0\,\%.
 
 Der RL-Agent landet zudem schneller (30,0\,s gegenüber 42,0\,s im
 Korridor), da er direkte Abstiegspfade mit knappem Ausweichen
-lernt, während der Planer konservativere Pfade berechnet. Der RL-Agent 
-entscheidet zudem lokal pro Zeitschritt, was ihn prinipiell für dynamische
-Umgebungen geeignet macht.
+lernt, während der Planer konservativere Pfade berechnet. 
 
 Dass der RL-Agent unter fairer
 Kollisionsmetrik das Navigationsproblem vergleichbar mit einem
@@ -164,12 +164,12 @@ kompensieren können.
 Alle Ergebnisse basieren auf einem einzigen Trainingslauf (Seed). Die
 Bootstrap-Konfidenzintervalle quantifizieren die Evaluationsvarianz
 über Hinderniskonfigurationen und Startpositionen, nicht die
-Trainingsvarianz; ein anderer Seed könnte zu qualitativ anderem
+Trainingsvarianz. Ein anderer Seed könnte zu qualitativ anderem
 Verhalten führen. Die Belohnungsgewichte wurden manuell in
 Vorversuchen abgestimmt, wobei bereits kleine Änderungen das
 Flugverhalten qualitativ verändern können
 (vgl.\ Abschnitt~\ref{sec:disk_nf1}). Zudem nutzt das Training
-512~parallele Umgebungen auf einer einzelnen GPU; eine höhere
+512~parallele Umgebungen auf einer einzelnen GPU. Eine höhere
 Parallelisierung kann sowohl die Konvergenzgeschwindigkeit als auch
 die Strategiequalität verbessern
 \autocite{xuNavRLLearningSafe2024}.
@@ -182,22 +182,21 @@ systematisch; die Diskrepanz zwischen 71,0\,\% (AABB) und 98,4\,\%
 tatsächliche Navigationsleistung unterschätzt. Wie in
 Abschnitt~\ref{sec:meth_trainingsumgebung} dargelegt, war die
 oberflächenbasierte Variante im Training aufgrund des Rechenaufwands
-nicht einsetzbar; die AABB-Metrik stellt daher einen bewussten
+nicht einsetzbar. Die AABB-Metrik stellt daher einen bewussten
 Trade-off zwischen Genauigkeit und Trainingseffizienz dar. Der Agent verarbeitet
 nur das aktuelle Tiefenbild ohne zeitliches Gedächtnis, sodass
 Strukturen außerhalb des Sichtfelds nicht über mehrere Zeitschritte
 akkumuliert werden können (vgl.\ Abschnitt~\ref{sec:disk_nf2}). Der
 individuelle Beitrag von Tiefenwahrnehmung und Zustandsvektor wurde
-nicht durch eine Ablationsstudie quantifiziert; die Schlussfolgerungen
+nicht durch eine Ablationsstudie quantifiziert. Die Schlussfolgerungen
 über die gelernten CNN-Repräsentationen sind indirekt aus Trajektorien
 und Transferleistung abgeleitet.
 
 \subsection{Umgebungsdiversität}
 
 Im Training und in Phase~1 ist das Landeziel in allen Episoden
-identisch; erst die Weinberg-Evaluation nutzt 20~verschiedene
-Zielpositionen. Die vierfache Skalierung des Weinberg-Modells vergrößert zudem die
-Reihenabstände relativ zur Drohne. Die Simulation bietet perfekte
+identisch. Erst die Weinberg-Evaluation nutzt 20~verschiedene
+Zielpositionen. Die Simulation bietet perfekte
 Sensorik ohne Rauschen, keine Motorverzögerung und keine
-Kommunikationslatenz; Ergebnisse sind nicht direkt auf reale Drohnen
-übertragbar.
+Kommunikationslatenz. Die Ergebnisse sind nicht direkt auf reale Drohnen
+übertragbar. Die Einführung von Domain Randomization, etwa durch simuliertes Sensorrauschen und variierte Dynamikparameter, könnte einen künftigen Sim-to-Real-Transfer vorbereiten \autocite{ladoszAutonomousLandingMoving2024,polvaraSimtoRealQuadrotorLanding2020}.
