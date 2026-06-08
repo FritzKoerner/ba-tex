@@ -8,7 +8,7 @@ Trotz umfangreicher Forschung zu Drohnensystemen bleibt autonomes Landen eine of
 
 Reinforcement Learning (RL) hat sich in jüngerer Zeit als wirksame Lösungsstrategie für Drohnenaufgaben etabliert \autocite{kaufmannChampionlevelDroneRacing2023, hodgeDeepReinforcementLearning2021, amendolaDroneLandingReinforcement2024}: Ein RL-Agent erlernt eine Steuerungsstrategie durch Interaktion mit einer simulierten Umgebung, ohne dass ein explizites Umgebungsmodell oder manuell definierte Steuerungsregeln benötigt werden. In Kombination mit Convolutional Neural Networks (CNNs) können aufgabenrelevante Merkmale direkt aus Sensordaten extrahiert werden \autocite{mnihHumanlevelControlDeep2015}, was eine bildbasierte Hindernisvermeidung ohne manuelle Merkmalsdefinition ermöglicht.
 
-Drohnen unterliegen engen Gewichts- und Energiebeschränkungen, die die verfügbare Sensorausstattung limitieren; gleichzeitig können lernbasierte Ansätze begrenzte Sensorik algorithmisch kompensieren \autocite{semerikovVisionBasedAutonomousUAV2025}. Die vorliegende Arbeit greift dieses Prinzip auf.
+Da Drohnen engen Gewichts- und Energiebeschränkungen unterliegen \autocite{semerikovVisionBasedAutonomousUAV2025}, beschränkt sich die vorliegende Arbeit auf eine minimale Sensorkonfiguration aus Tiefenkamera und propriozeptivem Zustandsvektor und setzt auf einen lernbasierten Ansatz, um diese begrenzte Sensorik für die autonome Landung in hindernisreichen Umgebungen auszunutzen.
 
 \section{Zielstellung}
 
