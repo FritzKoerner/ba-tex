@@ -2,7 +2,7 @@
 \label{cha:Diskussion}
 
 Dieses Kapitel interpretiert die Ergebnisse im Kontext der
-Nebenfragestellungen.
+Forschungsfragen.
 
 \section{Leistungsfähigkeit in der Trainingsumgebung}
 \label{sec:disk_nf1}
@@ -38,9 +38,12 @@ Strategie nicht. $r_{\mathrm{nah}} = \exp(-d_{t+1})$ hingegen ist
 nicht potentialbasiert: Jeder Zeitschritt in Zielnähe liefert Belohnung,
 unabhängig von weiterer Annäherung. Da es keine Zeitstrafe gibt, überwiegt
 der akkumulierte Schwebe-Anreiz. Dieses Phänomen dokumentieren auch
-\textcite{randlovLearningDriveBicycle1998}: Ein nicht-potentialbasierter
-Shaping-Reward kann dazu führen, dass die akkumulierte Zwischenbelohnung
-die Zielbelohnung übersteigt.
+\textcite{randlovLearningDriveBicycle1998}: ein nicht-potentialbasierter Shaping-Reward kann einen
+Agenten dazu bringen, eine nicht optimale Strategie zu lernen, da
+die akkumulierte Zwischenbelohnung die Zielbelohnung übersteigt.
+Entsprechend lernt der Agent eine Strategie, die steilen Abstieg mit
+ausgedehntem Schweben in Zielnähe kombiniert, was die beobachtete
+Zunahme der Episodenlänge im Trainingsverlauf erklärt.
 
 \subsection{Dominante Fehlerart und Flugverhalten}
 
@@ -71,7 +74,8 @@ der Zustandsvektor steuert Zielnavigation und Abstieg.
 
 \subsection{Leistungsabfall und Verschiebung der Fehlerarten}
 
-Der Leistungsabfall von 71,0\,\% auf 10,4\,\% ist erwartbar. Aufschlussreich
+Ein Leistungsabfall beim Leistungsabfall ist erwartbar, da der
+Agent die Weinberggeometrie erstmals zur Evaluationszeit sieht. Aufschlussreich
 ist die Fehlerverschiebung: Während in Phase~1 Hinderniskollisionen
 dominieren, verschiebt sich die Verteilung in Phase~2 zu
 Zeitüberschreitungen (73,7\,\%) bei geringer Terrain-Kollisionsrate
@@ -88,9 +92,12 @@ zeigt der RRT-Connect-Planer mit 85,7\,\%
 \subsection{Einordnung als Sim-to-Sim Transfer}
 
 Dass die Navigationsleistung dennoch transferiert (69,7\,\% bei erweitertem
-Radius), lässt sich auf die umgebungsagnostische Beobachtungsstruktur
+Radius), lässt sich auf die umgebungsunabhängige Beobachtungsstruktur
 zurückführen: Der Zustandsvektor kodiert relative Positionen, und das
-Tiefenbild enthält keine texturbasierten Merkmale. Sim-to-Real-Arbeiten
+Tiefenbild als abstrakte Zwischenrepräsentation den
+Domänenunterschied zwischen Umgebungen
+reduziert~\autocite{bartolomeiAutonomousEmergencyLanding2022,
+loquercioLearningHighspeedFlight2021}. Sim-to-Real-Arbeiten
 berichten vergleichbare Einbußen:
 \textcite{polvaraSimtoRealQuadrotorLanding2020} verlieren
 28~Prozentpunkte, \textcite{ladoszAutonomousLandingMoving2024}
@@ -129,41 +136,68 @@ Architekturen dieses Problem adressieren können.
 \section{Leistungslücke zum Pfadplaner}
 \label{sec:disk_nf3}
 
-\subsection{Informationsasymmetrie und Erfolgsrate}
-
 Der RRT-Connect-Planer übertrifft den RL-Agenten in der Erfolgsrate: um
 11~Prozentpunkte im Korridor und 75~Prozentpunkte im Weinberg. Dieser
 Vergleich quantifiziert den Preis minimaler Sensorik, nicht die
 algorithmische Überlegenheit des Planers. Unter oberflächenbasierter
 Kollisionserkennung erreicht der RL-Agent 98,4\,\% und liegt damit über
-der Planerleistung von 82,0\,\%. Dies bestätigt den von
-\textcite{semerikovVisionBasedAutonomousUAV2025} beschriebenen Trend,
+der Planerleistung von 82,0\,\%.
+
+Der RL-Agent landet zudem schneller (30,0\,s gegenüber 42,0\,s im
+Korridor), da er direkte Abstiegspfade mit knappem Ausweichen
+lernt, während der Planer konservativere Pfade berechnet. Der RL-Agent 
+entscheidet zudem lokal pro Zeitschritt, was ihn prinipiell für dynamische
+Umgebungen geeignet macht.
+
+Dass der RL-Agent unter fairer
+Kollisionsmetrik das Navigationsproblem vergleichbar mit einem
+vollständig informierten Planer löst, zeigt
 dass lernbasierte Ansätze begrenzte Sensorausstattung algorithmisch
 kompensieren können.
-
-\subsection{Landezeit und Rechenzeit}
-
-Der RL-Agent landet schneller (30,0\,s gegenüber 42,0\,s im Korridor),
-da er direkte Abstiegstrajektorien mit knappem Ausweichen lernt, während
-der Planer konservativere Pfade berechnet. Der deutlichste Unterschied
-zeigt sich in der Rechenzeit: Ein Forward-Pass benötigt 0,21\,ms,
-RRT-Connect 80,4\,ms pro Episode. Der RL-Agent entscheidet zudem lokal
-pro Zeitschritt, was ihn prinzipiell für dynamische Umgebungen geeignet
-macht.
 
 \section{Limitationen}
 \label{sec:disk_limitationen}
 
-Alle Ergebnisse basieren auf einem einzigen Trainingslauf (Seed); die
-Bootstrap-Konfidenzintervalle quantifizieren die Evaluations-, nicht die
-Trainingsvarianz. Die Belohnungsgewichte wurden manuell abgestimmt, wobei
-kleine Änderungen das Flugverhalten qualitativ verändern können. Die
-AABB-Kollisionserkennung überschätzt das Hindernisvolumen systematisch
-(71,0\,\% vs.\ 98,4\,\%); die oberflächenbasierte Variante war im
-Training aufgrund des Rechenaufwands nicht einsetzbar. Der Agent
-verarbeitet nur das aktuelle Tiefenbild ohne zeitliches Gedächtnis; der
-individuelle Beitrag beider Eingabemodalitäten wurde nicht durch eine
-Ablationsstudie quantifiziert. Im Training ist das Landeziel in allen
-Episoden identisch. Die Simulation bietet perfekte Sensorik ohne
-Rauschen und keine Motorverzögerung; Ergebnisse sind nicht direkt auf
-reale Drohnen übertragbar.
+
+\subsection{Trainingssetup}
+
+Alle Ergebnisse basieren auf einem einzigen Trainingslauf (Seed). Die
+Bootstrap-Konfidenzintervalle quantifizieren die Evaluationsvarianz
+über Hinderniskonfigurationen und Startpositionen, nicht die
+Trainingsvarianz; ein anderer Seed könnte zu qualitativ anderem
+Verhalten führen. Die Belohnungsgewichte wurden manuell in
+Vorversuchen abgestimmt, wobei bereits kleine Änderungen das
+Flugverhalten qualitativ verändern können
+(vgl.\ Abschnitt~\ref{sec:disk_nf1}). Zudem nutzt das Training
+512~parallele Umgebungen auf einer einzelnen GPU; eine höhere
+Parallelisierung kann sowohl die Konvergenzgeschwindigkeit als auch
+die Strategiequalität verbessern
+\autocite{xuNavRLLearningSafe2024}.
+
+\subsection{Sensorik und Architektur}
+
+Die AABB-Kollisionserkennung überschätzt das Hindernisvolumen
+systematisch; die Diskrepanz zwischen 71,0\,\% (AABB) und 98,4\,\%
+(oberflächenbasiert) zeigt, dass die berichtete Erfolgsrate die
+tatsächliche Navigationsleistung unterschätzt. Wie in
+Abschnitt~\ref{sec:meth_trainingsumgebung} dargelegt, war die
+oberflächenbasierte Variante im Training aufgrund des Rechenaufwands
+nicht einsetzbar; die AABB-Metrik stellt daher einen bewussten
+Trade-off zwischen Genauigkeit und Trainingseffizienz dar. Der Agent verarbeitet
+nur das aktuelle Tiefenbild ohne zeitliches Gedächtnis, sodass
+Strukturen außerhalb des Sichtfelds nicht über mehrere Zeitschritte
+akkumuliert werden können (vgl.\ Abschnitt~\ref{sec:disk_nf2}). Der
+individuelle Beitrag von Tiefenwahrnehmung und Zustandsvektor wurde
+nicht durch eine Ablationsstudie quantifiziert; die Schlussfolgerungen
+über die gelernten CNN-Repräsentationen sind indirekt aus Trajektorien
+und Transferleistung abgeleitet.
+
+\subsection{Umgebungsdiversität}
+
+Im Training und in Phase~1 ist das Landeziel in allen Episoden
+identisch; erst die Weinberg-Evaluation nutzt 20~verschiedene
+Zielpositionen. Die vierfache Skalierung des Weinberg-Modells vergrößert zudem die
+Reihenabstände relativ zur Drohne. Die Simulation bietet perfekte
+Sensorik ohne Rauschen, keine Motorverzögerung und keine
+Kommunikationslatenz; Ergebnisse sind nicht direkt auf reale Drohnen
+übertragbar.

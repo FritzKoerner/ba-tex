@@ -10,10 +10,10 @@ hindernisreichen Umgebungen sicher zu landen.
 Der trainierte Agent erlernt eine reaktive Ausweichstrategie, deren
 Leistung primär durch strukturelle Entwurfsentscheidungen begrenzt wird:
 Sensorhorizont, Entscheidungsintervall und Belohnungsgewichtung bestimmen,
-wie knapp der Agent Hindernisse passiert. Die Wahl der Kollisionsmetrik
-erweist sich als entscheidender Faktor: Unter oberflächenbasierter
-Erkennung erreicht der Agent 98,4\,\% und übertrifft damit den
-privilegierten Pfadplaner (82,0\,\%).
+wie knapp der Agent Hindernisse passiert. Trotz Training unter der konservativen
+AABB-Kollisionsmetrik erlernt der Agent eine Strategie, die unter
+oberflächenbasierter Erkennung 98,4\,\% erreicht und damit den
+privilegierten Pfadplaner (82,0\,\%) übertrifft.
 
 Die Transferuntersuchung zeigt eine klare Trennung zweier
 Teilfähigkeiten: Hindernisnavigation generalisiert auf die
@@ -25,14 +25,19 @@ fehlendes zeitliches Gedächtnis.
 Der Vergleich mit dem privilegierten Pfadplaner quantifiziert den Vorteil
 vollständiger Umgebungskenntnis. Unter fairer Kollisionsmetrik löst der
 lernbasierte Ansatz das Navigationsproblem im Korridor erfolgreicher als
-der Planer, bei um Größenordnungen niedrigerer Inferenzzeit. Im Weinberg
+der Planer. Im Weinberg
 kehrt sich dieses Verhältnis um; die Leistungslücke reflektiert die
 begrenzte Trainingsdiversität.
 
-Insgesamt zeigt die Arbeit, dass ein RL-Agent mit minimaler Sensorik die
-kombinierte Aufgabe aus Zielnavigation und Hindernisvermeidung in
-Simulation lösen kann und die erlernte Strategie sich teilweise auf ein
-realistisches Szenario übertragen lässt.
+Insgesamt zeigt die Arbeit, dass ein RL-Agent mit minimaler
+Sensorik die kombinierte Aufgabe aus Zielnavigation und
+Hindernisvermeidung in einer abstrakten Simulationsumgebung lösen
+kann. Die erlernte Strategie lässt sich teilweise auf ein
+realistisches Szenario mit natürlicher Vegetation übertragen.
+Gleichzeitig werden die Grenzen des Ansatzes sichtbar: Die
+verbleibenden Leistungsgrenzen liegen weniger im Lernverfahren als
+in den Randbedingungen des Systems. Die folgenden Perspektiven
+zeigen Wege auf, diese zu überwinden.
 
 \section{Perspektiven für zukünftige Forschung}
 

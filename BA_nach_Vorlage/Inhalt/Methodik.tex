@@ -64,8 +64,8 @@ Der Zustandsvektor
 \begin{equation} \label{eq:meth_obs_vector}
   \mathbf{o}_t = \bigl(\,\tilde{\mathbf{p}}_{\mathrm{rel},t},\;\;
   \mathbf{q}_t,\;\;
-  \tilde{\mathbf{v}}_t^{\,B},\;\;
-  \tilde{\boldsymbol{\omega}}_t^{\,B},\;\;
+  \tilde{\mathbf{v}}_t,\;\;
+  \tilde{\boldsymbol{\omega}}_t,\;\;
   \mathbf{a}_{t-1}\,\bigr)
 \end{equation}
 enthält die in Tabelle~\ref{tab:meth_obs} aufgeschlüsselten Größen.
@@ -78,22 +78,23 @@ Die Tilde kennzeichnet skalierte und auf $[-1,1]$ geklippte Werte.
 \small
 \begin{tabular}{l c l c}
 \toprule
-\textbf{Größe} & \textbf{Dim.} & \textbf{Beschreibung} & \textbf{Skalierung} \\
+\textbf{Größe} & \textbf{Dimension} & \textbf{Beschreibung} & \textbf{Skalierung} \\
 \midrule
 $\tilde{\mathbf{p}}_{\mathrm{rel},t}$ & $3$ & Relative Position zum Ziel
   & $\times\tfrac{1}{15}$, ${\in}\,[-1,1]$ \\[2pt]
 $\mathbf{q}_t$ & $4$ & Orientierungsquaternion $(w,x,y,z)$ & --- \\[2pt]
-$\tilde{\mathbf{v}}_t^{\,B}$ & $3$ & Lineargeschwindigkeit
+$\tilde{\mathbf{v}}_t$ & $3$ & Lineargeschwindigkeit
   & $\times\,0{,}4$, ${\in}\,[-1,1]$ \\[2pt]
-$\tilde{\boldsymbol{\omega}}_t^{\,B}$ & $3$ & Winkelgeschwindigkeit
+$\tilde{\boldsymbol{\omega}}_t$ & $3$ & Winkelgeschwindigkeit
   & $\times\tfrac{1}{\pi}$, ${\in}\,[-1,1]$ \\[2pt]
 $\mathbf{a}_{t-1}$ & $4$ & Aktion des vorherigen Zeitschritts & --- \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-Das Tiefenbild wird von einer am Drohnenkörper vertikal nach unten
-gerichteten Kamera erzeugt:
+Eine am Drohnenkörper vertikal nach unten gerichtete Kamera liefert
+ein Tiefenbild~$\mathbf{d}_{\mathrm{roh}}$, welches auf $[0,1]$
+normalisiert wird:
 \begin{equation} \label{eq:meth_depth}
   \mathbf{D}_t = \min\!\left(\max\!\left(\frac{\mathbf{d}_{\mathrm{roh}}}{d_{\max}},
   \; 0\right),\; 1\right), \quad d_{\max} = 20\,\text{m}.
@@ -109,7 +110,8 @@ Der Aktionsraum ist vierdimensional und kontinuierlich:
   \mathbf{a}_t = (a_x,\; a_y,\; a_z,\; a_\psi) \in [-1,\; 1]^4.
 \end{equation}
 Die ersten drei Komponenten definieren einen Positionsversatz relativ zur
-aktuellen Drohnenposition:
+aktuellen Drohnenposition~$\mathbf{p}_t$ und ergeben die
+Sollposition~$\mathbf{p}_{\mathrm{soll}}$:
 \begin{equation} \label{eq:meth_target_pos}
   \mathbf{p}_{\mathrm{soll}} = \mathbf{p}_t +
   \begin{pmatrix} a_x \cdot \sigma_x \\ a_y \cdot \sigma_y \\ a_z \cdot \sigma_z \end{pmatrix},
@@ -126,7 +128,7 @@ einem kaskadierenden PID-Regler in Motordrehzahlen umgesetzt
 \subsection{Übergangsmodell}
 \label{subsec:meth_uebergangsmodell}
 
-Die Übergangsdynamik wird deterministisch durch den Physiksimulator
+Die Übergangsdynamik~$p$ wird deterministisch durch den Physiksimulator
 bestimmt (Schrittweite $\Delta t = 0{,}01$\,s, 100\,Hz). Der RL-Agent
 trifft alle 300~Schritte eine Entscheidung (Entscheidungsintervall
 $3{,}0$\,s); dazwischen steuert der PID-Regler die Drohne zum Sollzustand.
@@ -134,13 +136,23 @@ $3{,}0$\,s); dazwischen steuert der PID-Regler die Drohne zum Sollzustand.
 \subsection{Belohnungsfunktion}
 \label{subsec:meth_belohnung}
 
-Die Belohnungsfunktion kombiniert dichte Signale, die den Fortschritt
-zur Zielerreichung messen, mit spärlichen terminalen
-Signalen~\autocite{polvaraSimtoRealQuadrotorLanding2020}. Die
-Fortschrittskomponente ist als potentialbasiertes Reward Shaping im Sinne
-von \textcite{ngPolicyInvarianceReward1999} konstruiert; die übrigen
-dichten Komponenten weichen bewusst davon ab. Die Belohnungsfunktion
-setzt sich als gewichtete Summe aus fünf Komponenten zusammen:
+Eine zentrale Herausforderung beim Einsatz von Deep Reinforcement Learning
+in der Robotik liegt in der Spärlichkeit der Belohnungssignale: Der Agent muss
+große Zustands- und Aktionsräume explorieren, erhält jedoch nur selten
+informatives Feedback~\autocite{polvaraSimtoRealQuadrotorLanding2020}.
+Die Belohnungsfunktion kombiniert daher dichte Signale, die den Fortschritt
+zur Zielerreichung messen, mit spärlichen terminalen Signalen, die das
+eigentliche Ziel kodieren. Die Fortschrittskomponente ist dabei als
+potentialbasiertes Reward Shaping im Sinne von
+\textcite{ngPolicyInvarianceReward1999} konstruiert ($\Phi(s) = -d(s)$);
+die übrigen dichten Komponenten weichen bewusst davon ab, da in
+Vorversuchen eine rein potentialbasierte Belohnungsfunktion zu
+langsamerer Konvergenz führte. Die Belohnungsfunktion
+setzt sich als gewichtete Summe aus fünf Komponenten zusammen\footnote{Das
+Symbol $r_t$ bezeichnet hier die skalare Belohnung; das in
+Abschnitt~\ref{subsec:ppo_clip} eingeführte
+Wahrscheinlichkeitsverhältnis wird durch das Argument~$\boldsymbol{\theta}$
+als $r_t(\boldsymbol{\theta})$ unterschieden.}:
 \begin{equation} \label{eq:meth_reward}
   r_t =\;
     w_{\mathrm{prog}}\, r_{\mathrm{prog}}
@@ -149,8 +161,7 @@ setzt sich als gewichtete Summe aus fünf Komponenten zusammen:
   + w_{\mathrm{crash}}\, r_{\mathrm{crash}}
   + w_{\mathrm{erf}}\, r_{\mathrm{erf}}
 \end{equation}
-Dabei bezeichnet $d_t = \lVert\mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_t\rVert$
-den euklidischen Abstand zum Ziel.
+
 
 \noindent\textbf{Fortschritt.}\enspace
 $r_{\mathrm{prog}} = d_t - d_{t+1}$ misst die Annäherung an das Ziel pro
@@ -160,13 +171,16 @@ Zeitschritt.
 $r_{\mathrm{nah}} = \exp(-d_{t+1})$ liefert ein exponentiell ansteigendes
 Signal in Zielnähe und belohnt das Verbleiben nahe dem Ziel.
 
+Dabei bezeichnet $d_t = \lVert\mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_t\rVert$
+den euklidischen Abstand zum Ziel.
+
 \noindent\textbf{Hindernisproximität.}\enspace
 \begin{equation}
-  r_{\mathrm{prox}} = \max\!\left(1 - \frac{d_{\mathrm{min}}}{d_{\mathrm{s}}},\; 0\right),
-  \quad d_{\mathrm{s}} = 3{,}0\,\text{m}
+  r_{\mathrm{prox}} = \max\!\left(1 - \frac{\delta_{\mathrm{min}}}{\delta_{\mathrm{s}}},\; 0\right),
+  \quad \delta_{\mathrm{s}} = 3{,}0\,\text{m}
 \end{equation}
 bestraft das Eindringen in einen Sicherheitsradius um Hindernisse, wobei
-$d_{\mathrm{min}}$ den minimalen AABB-Abstand bezeichnet.
+$\delta_{\mathrm{min}}$ den minimalen AABB-Abstand bezeichnet.
 
 \noindent\textbf{Absturz.}\enspace $r_{\mathrm{crash}} = 1$ bei Verletzung
 einer Abbruchbedingung
@@ -214,8 +228,7 @@ nicht-terminale Übergänge behandelt.
 \section{Netzwerkarchitektur}
 \label{sec:meth_architektur}
 
-PPO verwendet eine Actor-Critic-Architektur
-(vgl.\ Abschnitt~\ref{subsec:ppo_clip}). Der CNN-Encoder besteht aus drei
+Es wird eine Actor-Critic-Architektur verwendet. (vgl.\ Abschnitt~\ref{subsec:policy_gradient}). Der CNN-Encoder besteht aus drei
 Faltungsschichten mit aufsteigender Kanalzahl (32, 64, 128), abnehmenden
 Kernelgrößen ($8 \times 8$, $4 \times 4$, $3 \times 3$) und Schrittweiten
 (4, 2, 1), jeweils gefolgt von Batch-Normalisierung und ELU-Aktivierung.
@@ -224,10 +237,11 @@ Merkmalsvektor. Der Zustandsvektor durchläuft eine laufende empirische
 Normalisierung. Der resultierende Vektor wird an die MLP-Köpfe
 weitergegeben: Actor mit drei Schichten à~64~Neuronen, Critic mit zwei
 Schichten à~32~Neuronen (beide ELU). Actor und Critic teilen sich den
-CNN-Encoder. Der Actor gibt pro Aktionsdimension $\mu$ und $\log\sigma$
-aus und parametrisiert eine Tanh-Gaußverteilung
-(Abschnitt~\ref{subsubsec:meth_tanh_squashing}); der Critic gibt einen
-skalaren State-Value aus.
+CNN-Encoder. Der Actor gibt pro Aktionsdimension einen Erwartungswert~$\mu$ und eine
+Log-Standardabweichung~$\log\sigma$ aus. Aus diesen wird eine Aktion
+gemäß der Tanh-Gaußverteilung gezogen
+(Abschnitt~\ref{subsec:meth_tanh_squashing}). Der Critic gibt einen
+skalaren Zustandswert aus.
 Abbildung~\ref{fig:meth_architecture} zeigt die vollständige Architektur.
 
 \begin{figure}[ht]
@@ -248,27 +262,21 @@ Abbildung~\ref{fig:meth_architecture} zeigt die vollständige Architektur.
 \subsection{Proximal Policy Optimization}
 \label{subsec:meth_ppo}
 
-Als Trainingsalgorithmus wird PPO~\autocite{schulmanProximalPolicyOptimization2017}
-eingesetzt (vgl.\ Abschnitt~\ref{subsec:ppo_clip}). PPO hat sich als
-Standardverfahren für kontinuierliche Drohnensteuerung
-etabliert~\autocite{bartolomeiAutonomousEmergencyLanding2022,
-xuNavRLLearningSafe2024, kaufmannChampionlevelDroneRacing2023} und eignet
-sich als On-Policy-Verfahren für GPU-parallele (Graphics Processing Unit) Simulation, da es die
-parallel erzeugten Daten direkt verarbeitet und keinen Replay Buffer
-benötigt~\autocite{rudinLearningWalkMinutes2022}. Neuere Varianten wie
-Phasic Policy Gradient~\autocite{cobbePhrasicPolicyGradient2021} wurden
-nicht evaluiert, da die verwendete Trainingsumgebung rsl-rl ausschließlich
-Standard-PPO bereitstellt.
+Als Trainingsalgorithmus wird PPO~\autocite{schulmanProximalPolicyOptimization2017} eingesetzt (vgl.\ Abschnitte~\ref{subsec:ppo_clip} und~\ref{sec:architektur}). Neuere Varianten wie Phasic Policy Gradient~\autocite{cobbePhrasicPolicyGradient2021} wurden nicht evaluiert, da die verwendete RL-Bibliothek rsl-rl \autocite{schwarke2025rslrl} ausschließlich Standard-PPO bereitstellt.
 
-\subsubsection{Aktionsverteilung und Tanh-Squashing}
-\label{subsubsec:meth_tanh_squashing}
+\subsection{Aktionsverteilung und Tanh-Squashing}
+\label{subsec:meth_tanh_squashing}
 
-Der Aktionsraum ist auf $[-1,1]^4$ beschränkt. Ein naives Clipping würde
-die Log-Wahrscheinlichkeit auf dem unbeschnittenen Rohwert berechnen, was
-zu verzerrten Gradienten führt, da PPO das Wahrscheinlichkeitsverhältnis
-$r_t(\theta)$ nutzt (vgl.\ Abschnitt~\ref{subsec:ppo_clip}). Statt
+Der Aktionsraum ist auf $[-1,1]^4$
+beschränkt (vgl.\ Abschnitt~\ref{subsec:meth_aktionsraum}). Ein naives
+Clipping $a_i = \mathrm{clip}(u_i, -1, 1)$ würde die Aktionswerte korrekt
+begrenzen, die zugehörige Log-Wahrscheinlichkeit jedoch weiterhin auf dem
+unbeschnittenen Wert~$u_i$ berechnen. Diese Diskrepanz
+zwischen ausgeführter und bewerteter Aktion führt zu verzerrten Gradienten.
+
+Statt
 Clipping wird eine invertierbare
-Transformation~\autocite{haarnojaOffPolicyMaximumEntropy2017} verwendet:
+Transformation~\autocite{haarnojaSoftActorCriticOffPolicy2018S} verwendet:
 \begin{equation} \label{eq:meth_tanh_squashing}
   a_i = \tanh(u_i), \quad u_i \sim \mathcal{N}(\mu_i, \sigma_i^2).
 \end{equation}
@@ -282,15 +290,13 @@ Substitutionsregel:
 Zusätzlich erzwingt ein Floor $\log\sigma_i \geq -2{,}0$
 ($\sigma_i \geq 0{,}135$) eine Mindestexploration.
 
-\subsubsection{Hyperparameter}
-\label{subsubsec:meth_hyperparams}
+\subsection{Hyperparameter}
+\label{subsec:meth_hyperparams}
 
 Tabelle~\ref{tab:meth_ppo_hyperparams} fasst die PPO-Hyperparameter zusammen.
 Die Werte für $\varepsilon$, $\gamma$, $\lambda$ und $K$ entsprechen den
 Standardwerten~\autocite{schulmanProximalPolicyOptimization2017,
-schulmanHighDimensionalContinuousControl2016}. Der
-Entropie-Koeffizient~$c_2 = 0{,}003$ wurde niedrig gewählt, da die
-Tanh-Verteilung empfindlich auf hohe Entropie-Anreize reagiert.
+schulmanHighDimensionalContinuousControl2016}.S
 
 \begin{table}[ht]
 \centering
@@ -322,12 +328,11 @@ Gradient-Clipping           & $1{,}0$ \\
 
 Die vorliegende Arbeit verwendet
 Genesis~\autocite{xianGenesisUniversalGenerative2024}, einen quelloffenen,
-GPU-parallelisierten Physiksimulator für Robotik. Genesis führt bis zu
-4096~Umgebungen GPU-parallel aus, stellt Tiefenkameras bereit und
-importiert beliebige 3D-Meshes. Gegenüber
+GPU-parallelisierten Physiksimulator für Robotik. Genesis führt Simulation tausender Umgebungen GPU-parallel aus, stellt Tiefenkameras bereit und
+importiert beliebige 3D-Meshes. Gegenüber anderer gängiger Simulatoren wie
 Gazebo~\autocite{koenigDesignUseParadigms2004} und
 PyBullet~\autocite{coumansPybulletPythonModule2016} bietet Genesis
-GPU-Parallelisierung; gegenüber dem proprietären Isaac
+GPU-Parallelisierung. Gegenüber dem proprietären Isaac
 Gym~\autocite{makoviychukIsaacGymHigh2021} eine geringere
 Einstiegskomplexität.
 
@@ -366,7 +371,7 @@ $z \approx 2$\,m und $z \approx 7$\,m.
 
 Als Hindernisse dienen sechs 3D-Objekte aus dem Google Scanned Objects
 Datensatz~(GSO)~\autocite{downsGoogleScannedObjects2022}, jeweils um den
-Faktor~$21$ bis~$63$ skaliert, sodass ihre horizontale Ausdehnung die
+Faktor~$13$ bis~$63$ skaliert, sodass ihre horizontale Ausdehnung die
 gesamte $y$-Breite des Korridors abdeckt. Für die Kollisionserkennung
 und die Hindernisproximität
 (vgl.\ Abschnitt~\ref{subsec:meth_belohnung}) wird die achsenparallele
@@ -417,7 +422,7 @@ zu vermeiden~\autocite{rudinLearningWalkMinutes2022}.
 Parallele Umgebungen $N$        & $512$ \\
 Schritte pro Umgebung $T$      & $60$ \\
 Batch-Größe $N \times T$       & $30\,720$ \\
-Lernrate $\alpha$               & $1 \times 10^{-3}$ (konstant) \\
+Lernrate $\alpha$               & $1 \times 10^{-3} \to 0$ (linearer Abfall) \\
 Optimizer                       & Adam \\
 Trainingsiterationen            & $1\,000$ \\
 GPU                             & NVIDIA A30 (24\,GB) \\
@@ -450,8 +455,7 @@ Minimum), \textbf{Pfadeffizienz}
   \eta_{\mathrm{Pfad}} = \frac{\sum_{t=0}^{T-1} \lVert \mathbf{p}_{t+1} - \mathbf{p}_t \rVert}
   {\lVert \mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_0 \rVert}
 \end{equation}
-(Median mit IQR, nur erfolgreiche Episoden) und \textbf{Rechenzeit pro
-Episode} (Median mit IQR).
+(Median mit IQR, nur erfolgreiche Episoden).
 
 \subsection{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}
 \label{subsec:meth_versuch1}
@@ -459,8 +463,8 @@ Episode} (Median mit IQR).
 Die erste Versuchsreihe prüft die Generalisierung auf zuvor ungesehene
 Hindernisformen: Die sechs Trainingsobjekte werden durch sechs neue
 GSO-Objekte gleicher Skalierung ersetzt; alle übrigen Parameter bleiben
-identisch. Als Vergleichsverfahren dient ein RRT-Connect-Pfadplaner, der
-auf der vollständigen Kollisionsgeometrie operiert. Die
+identisch. Als Vergleichsverfahren dient ein RRT-Connect-Pfadplaner mit
+vollständigem Umgebungswissen (wahre Hindernispositionen und -geometrien). Die
 Leistungsdifferenz quantifiziert den Preis eingeschränkter Sensorik, da
 der RL-Agent ausschließlich ein lokales Tiefenbild und den
 propriozeptiven Zustandsvektor erhält.

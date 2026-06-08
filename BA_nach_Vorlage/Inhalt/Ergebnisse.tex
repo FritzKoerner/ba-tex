@@ -206,7 +206,18 @@ wird. Der Timeout-Anteil sinkt von 73,7\,\% auf 27,7\,\%.
 \section{Vergleich RL vs.\ RRT-Connect}
 \label{sec:vergleich_rl_rrt}
 
-Tabelle~\ref{tab:vergleich_rl_rrt} stellt die Ergebnisse beider Verfahren
+Der RRT-Planer übertrifft den RL-Agenten in der Erfolgsrate beider
+Umgebungen, wobei der Abstand im Weinberg deutlich größer ausfällt. Im
+Korridor dominieren bei beiden Verfahren Hinderniskollisionen; im Weinberg
+scheitert der RL-Agent überwiegend an Timeouts (73,7\,\%), während der
+RRT-Planer diese auf 7,9\,\% begrenzt. Der RL-Agent landet schneller
+(30,0\,s gegenüber 42,0\,s im Korridor).\footnote{Einzelne
+Pfadeffizienzwerte knapp unter 1,0 sind ein Implementierungsartefakt:
+Das letzte Flugsegment wird aufgrund des automatischen Zurücksetzens der
+Umgebung nicht erfasst.} Dem steht ein einmaliger Trainingsaufwand von
+circa 24~Stunden gegenüber. Detaillierte Metriken mit
+Konfidenzintervallen finden sich in den
+Anhangstabellen~\ref{tab:phase1_results} und~\ref{tab:phase2_results}. Tabelle~\ref{tab:vergleich_rl_rrt} stellt die Ergebnisse beider Verfahren
 gegenüber.
 
 \begin{table}[H]
@@ -248,23 +259,6 @@ gegenüber.
     Min.\ Abstand (Mittel)
       & 0,52\,m         & 0,48\,m
       & 1,02\,m         & 0,46\,m \\
-    Rechenzeit/Ep.\ (Median)
-      & 0,21\,ms        & 80,4\,ms
-      & 0,25\,ms        & 18,7\,ms \\
     \bottomrule
   \end{tabular}
 \end{table}
-
-Der RRT-Planer übertrifft den RL-Agenten in der Erfolgsrate beider
-Umgebungen, wobei der Abstand im Weinberg deutlich größer ausfällt. Im
-Korridor dominieren bei beiden Verfahren Hinderniskollisionen; im Weinberg
-scheitert der RL-Agent überwiegend an Timeouts (73,7\,\%), während der
-RRT-Planer diese auf 7,9\,\% begrenzt. Der RL-Agent landet schneller
-(30,0\,s gegenüber 42,0\,s im Korridor) und benötigt deutlich weniger
-Rechenzeit (0,21\,ms gegenüber 80,4\,ms).\footnote{Einzelne
-Pfadeffizienzwerte knapp unter 1,0 sind ein Implementierungsartefakt:
-Das letzte Flugsegment wird aufgrund des automatischen Zurücksetzens der
-Umgebung nicht erfasst.} Dem steht ein einmaliger Trainingsaufwand von
-circa 24~Stunden gegenüber. Detaillierte Metriken mit
-Konfidenzintervallen finden sich in den
-Anhangstabellen~\ref{tab:phase1_results} und~\ref{tab:phase2_results}.
