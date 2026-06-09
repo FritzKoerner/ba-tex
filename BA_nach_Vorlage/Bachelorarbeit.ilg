@@ -7,8 +7,8 @@ Scanning style file /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist.
 ** Input style error (file = /usr/share/texlive/texmf-dist/makeindex/nomencl/nomencl.ist, line = 38):
    -- Unknown specifier lethead_flag.
 ....done (12 attributes redefined, 3 ignored).
-Scanning input file Bachelorarbeit.nlo....done (14 entries accepted, 0 rejected).
-Sorting entries....done (46 comparisons).
-Generating output file Bachelorarbeit.nls....done (19 lines written, 0 warnings).
+Scanning input file Bachelorarbeit.nlo....done (28 entries accepted, 0 rejected).
+Sorting entries....done (117 comparisons).
+Generating output file Bachelorarbeit.nls....done (33 lines written, 0 warnings).
 Output written in Bachelorarbeit.nls.
 Transcript written in Bachelorarbeit.ilg.

@@ -34,16 +34,19 @@ Sensorik die kombinierte Aufgabe aus Zielnavigation und
 Hindernisvermeidung in einer abstrakten Simulationsumgebung lösen
 kann. Die erlernte Strategie lässt sich teilweise auf ein
 realistisches Szenario mit natürlicher Vegetation übertragen.
-Gleichzeitig werden die Grenzen des Ansatzes sichtbar: Die
+Gleichzeitig erfordert das Training eine Checkpoint-Selektion über
+mehrere Seeds: 4 von 6~Seeds konvergieren, wobei die Mehrzahl einen
+katastrophalen Leistungseinbruch nach dem Optimum zeigt. Die
 verbleibenden Leistungsgrenzen liegen weniger im Lernverfahren als
 in den Randbedingungen des Systems. Die folgenden Perspektiven
 zeigen Wege auf, diese zu überwinden.
 
 \section{Perspektiven für zukünftige Forschung}
 
-Eine Multi-Seed-Validierung und eine Skalierung auf größere
-Trainingsbatches könnten die statistische Belastbarkeit und die
-Strategiequalität verbessern. Eine rekurrente Architektur oder ein
+Die durchgeführte Multi-Seed-Validierung bestätigt den Kollaps als
+systematisches Phänomen und die Notwendigkeit von Early Stopping. Eine
+Skalierung auf größere Trainingsbatches könnte die Strategiequalität
+verbessern. Eine rekurrente Architektur oder ein
 Tiefenbild-Stapel würde dem Agenten zeitliches Gedächtnis verleihen und
 das Perceptual-Aliasing-Problem adressieren. Eine Ablationsstudie könnte
 den individuellen Beitrag von Tiefenbild und Zustandsvektor

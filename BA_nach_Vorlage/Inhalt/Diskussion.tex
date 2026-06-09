@@ -14,18 +14,32 @@ Iteration~200 setzt die Erfolgsbelohnung ein und beschleunigt den
 Anstieg. Ohne die dichten Komponenten würde dem Agenten das
 Gradientensignal für Teilfortschritte fehlen.
 
-Der abrupte Kollaps ab Iteration~442 betrifft ausschließlich die
-Mittelwerte der Strategie bei nahezu unveränderter Standardabweichung
-($0{,}193 \rightarrow 0{,}194$), was auf eine katastrophale
-Strategieaktualisierung hindeutet. Obwohl der Clipping-Mechanismus von
-PPO~\autocite{schulmanProximalPolicyOptimization2017} große
-Strategieänderungen begrenzen soll, reicht er nicht aus, um solche
-Einbrüche zu verhindern. Eine mögliche Erklärung bieten
-\textcite{moallaNoRepresentationNo}, die zeigen, dass eine schleichende
-Verschlechterung des Feature-Ranks den Clipping-Mechanismus unterlaufen
-kann. Eine schrittweise Reduktion der Lernrate verhinderte den Kollaps
-nicht; weitergehende Ansätze wie \textit{Proximal Feature
-Optimization}~\autocite{moallaNoRepresentationNo} wurden nicht evaluiert.
+Der abrupte Kollaps tritt bei 3 von 6~Seeds auf (Iterationen~445, 484,
+897), jeweils 50--85~Iterationen nach dem Belohnungsmaximum, bei nahezu
+unveränderter Standardabweichung. Die Reproduzierbarkeit des Musters
+spricht für den von \textcite{moallaNoRepresentationNo} beschriebenen
+Mechanismus: Eine schleichende Verschlechterung des Feature-Ranks im
+Actor-Netzwerk untergräbt den Clipping-Mechanismus von
+PPO~\autocite{schulmanProximalPolicyOptimization2017}, bis eine einzelne
+Aktualisierung die Strategie irreversibel destabilisiert. Dass die
+Standardabweichung als globaler Parameter unbeeinflusst bleibt, ist mit
+diesem Mechanismus konsistent. Eine schrittweise Reduktion der Lernrate
+verhinderte den Kollaps nicht.
+\textcite{moallaNoRepresentationNo} schlagen mit \textit{Proximal Feature
+Optimization} eine Regularisierung vor, die die Feature-Diversität im
+Netzwerk aktiv erhält und den Rang-Verfall adressiert.
+
+Die zwei nicht-konvergierenden Seeds zeigen eine andere Problematik:
+Sie lernen Absturzvermeidung, erreichen jedoch nie eine erfolgreiche
+Landung. Die Erfolgsbelohnung ($+20$) wirkt als Phasenübergang: Seeds,
+die bis circa Iteration~300 keine Landung erzielen, erhalten das
+selbstverstärkende Gradientensignal nie.
+\textcite{nikishinPrimacyBiasDeep2022} beschreiben einen verwandten
+Effekt, bei dem frühe Erfahrungssequenzen die Repräsentation
+überproportional formen und späteres Lernen blockieren. Als
+Gegenmaßnahme schlagen sie periodische Reinitialisierungen der letzten
+Netzwerkschichten vor, die den festgefahrenen Repräsentationen eine
+erneute Anpassung ermöglichen.
 
 Die im Trainingsverlauf ansteigende Landezeit lässt sich auf die
 Belohnungsstruktur zurückführen. $r_{\mathrm{prog}} = d_{t} - d_{t+1}$
@@ -73,7 +87,7 @@ nicht für die Navigation durch enge Hindernispassagen.
 
 \subsection{Leistungsabfall und Verschiebung der Fehlerarten}
 
-Ein Leistungsabfall beim Leistungsabfall ist erwartbar, da der
+Ein Leistungsabfall beim Umgebungswechsel ist erwartbar, da der
 Agent die Weinberggeometrie erstmals zur Evaluationszeit sieht. Aufschlussreich
 ist die Fehlerverschiebung: Während in Phase~1 Hinderniskollisionen
 dominieren, verschiebt sich die Verteilung in Phase~2 zu
@@ -115,7 +129,7 @@ Trainingsumgebung ist diese Mehrdeutigkeit unproblematisch, da die Landezone
 hindernisfrei ist. Im Weinberg bricht diese Strategie: Rebenreihen ragen
 in die Landezone, sodass ein Agent, der das Tiefenbild in Zielnähe zu
 ignorieren gelernt hat, mit Vegetation kollidiert. \textcite{bartolomeiAutonomousEmergencyLanding2022} adressieren dieses
-Problem durch zusätzliche semantische Segmentierungen als Eingabe, welche es dem Agenten erlauben Hindernisse und Boden zu unterscheiden.
+Problem durch zusätzliche semantische Segmentierungen als Eingabe, welche es dem Agenten erlauben, Hindernisse und Boden zu unterscheiden.
 
 \begin{figure}[H]
   \centering
@@ -151,7 +165,7 @@ lernt, während der Planer konservativere Pfade berechnet.
 
 Dass der RL-Agent unter fairer
 Kollisionsmetrik das Navigationsproblem vergleichbar mit einem
-vollständig informierten Planer löst, zeigt
+vollständig informierten Planer löst, zeigt,
 dass lernbasierte Ansätze begrenzte Sensorausstattung algorithmisch
 kompensieren können.
 
@@ -161,18 +175,14 @@ kompensieren können.
 
 \subsection{Trainingssetup}
 
-Alle Ergebnisse basieren auf einem einzigen Trainingslauf (Seed). Die
-Bootstrap-Konfidenzintervalle quantifizieren die Evaluationsvarianz
-über Hinderniskonfigurationen und Startpositionen, nicht die
-Trainingsvarianz. Ein anderer Seed könnte zu qualitativ anderem
-Verhalten führen. Die Belohnungsgewichte wurden manuell in
-Vorversuchen abgestimmt, wobei bereits kleine Änderungen das
-Flugverhalten qualitativ verändern können
-(vgl.\ Abschnitt~\ref{sec:disk_nf1}). Zudem nutzt das Training
-512~parallele Umgebungen auf einer einzelnen GPU. Eine höhere
-Parallelisierung kann sowohl die Konvergenzgeschwindigkeit als auch
-die Strategiequalität verbessern
-\autocite{xuNavRLLearningSafe2024}.
+Die Multi-Seed-Analyse (6~Seeds, identische Hyperparameter) zeigt eine
+Konvergenzrate von 67\,\% mit hoher Varianz zwischen den Seeds
+(95\,\%-Bootstrap-CI-Breite bis 14,8~Punkte bei Iteration~400). Seed~0
+liegt als leistungsstärkster Seed im oberen Bereich der Verteilung. Die
+Evaluationsergebnisse stellen daher eine günstige, nicht die erwartete
+Leistung dar. Die Belohnungsgewichte wurden manuell in Vorversuchen abgestimmt. Bereits
+kleine Änderungen können das Flugverhalten qualitativ verändern
+(vgl.\ Abschnitt~\ref{sec:disk_nf1}).
 
 \subsection{Sensorik und Architektur}
 

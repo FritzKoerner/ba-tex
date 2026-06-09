@@ -3089,6 +3089,81 @@
       \verb /home/fritz-sfl/Zotero/storage/SLRSFE97/NgHaradaRussell-shaping-ICML1999.pdf
       \endverb
     \endentry
+    \entry{nikishinPrimacyBiasDeep2022}{online}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=9d078365da0923eced35cd9345318ca0}{%
+           family={Nikishin},
+           familyi={N\bibinitperiod},
+           given={Evgenii},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e724d9aa88c5bd77b7e95a500cd9ec3}{%
+           family={Schwarzer},
+           familyi={S\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e09d377eb804fa206349bcc1d7162ddf}{%
+           family={D'Oro},
+           familyi={D\bibinitperiod},
+           given={Pierluca},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9417eec56d7db4d07719bbb7fe3bcdd}{%
+           family={Bacon},
+           familyi={B\bibinitperiod},
+           given={Pierre-Luc},
+           giveni={P\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8022d4c3e28ae8c50ebf185095ebf41d}
+      \strng{fullhash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \strng{bibnamehash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \strng{authorbibnamehash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \strng{authornamehash}{8022d4c3e28ae8c50ebf185095ebf41d}
+      \strng{authorfullhash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work identifies a common flaw of deep reinforcement learning (RL) algorithms: a tendency to rely on early interactions and ignore useful evidence encountered later. Because of training on progressively growing datasets, deep RL agents incur a risk of overfitting to earlier experiences, negatively affecting the rest of the learning process. Inspired by cognitive science, we refer to this effect as the primacy bias. Through a series of experiments, we dissect the algorithmic aspects of deep RL that exacerbate this bias. We then propose a simple yet generally-applicable mechanism that tackles the primacy bias by periodically resetting a part of the agent. We apply this mechanism to algorithms in both discrete (Atari 100k) and continuous action (DeepMind Control Suite) domains, consistently improving their performance.}
+      \field{day}{16}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{pubstate}{prepublished}
+      \field{title}{The {{Primacy Bias}} in {{Deep Reinforcement Learning}}}
+      \field{urlday}{8}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2205.07802
+      \endverb
+      \verb{eprint}
+      \verb 2205.07802
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/EDF4WNRR/Nikishin et al. - 2022 - The Primacy Bias in Deep Reinforcement Learning.pdf;/home/fritz-sfl/Zotero/storage/E57YWKME/2205.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2205.07802
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2205.07802
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning}
+    \endentry
     \entry{patrikGNSSbasedNavigationSystems2019}{article}{}
       \name{author}{7}{}{%
         {{un=0,uniquepart=base,hash=6d3d7a19f1bf011128f5e27f1a956762}{%

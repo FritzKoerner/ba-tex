@@ -3,17 +3,31 @@
 \nomgroup{A}
   \item [{AABB}]\begingroup Axis-Aligned Bounding Box\nomeqref {0.0}\nompageref{VI}
   \item [{CNN}]\begingroup Convolutional Neural Network\nomeqref {0.0}\nompageref{VI}
+  \item [{DQN}]\begingroup Deep Q-Network\nomeqref {0.0}\nompageref{VI}
+  \item [{DRL}]\begingroup Deep Reinforcement Learning\nomeqref {0.0}\nompageref{VI}
+  \item [{ELU}]\begingroup Exponential Linear Unit\nomeqref {0.0}\nompageref{VI}
+  \item [{EMA}]\begingroup Exponential Moving Average\nomeqref {0.0}\nompageref{VI}
+  \item [{GAE}]\begingroup Generalized Advantage Estimation\nomeqref {0.0}\nompageref{VI}
+  \item [{GNC}]\begingroup Guidance, Navigation and Control\nomeqref {0.0}\nompageref{VI}
   \item [{GNSS}]\begingroup Global Navigation Satellite System\nomeqref {0.0}\nompageref{VI}
   \item [{GPU}]\begingroup Graphics Processing Unit\nomeqref {0.0}\nompageref{VI}
   \item [{GSO}]\begingroup Google Scanned Objects\nomeqref {0.0}\nompageref{VI}
   \item [{HPC}]\begingroup High-Performance Computing\nomeqref {0.0}\nompageref{VI}
   \item [{IMU}]\begingroup Inertial Measurement Unit\nomeqref {0.0}\nompageref{VI}
+  \item [{IQR}]\begingroup Interquartile Range\nomeqref {0.0}\nompageref{VI}
+  \item [{KL}]\begingroup Kullback-Leibler\nomeqref {0.0}\nompageref{VI}
   \item [{MDP}]\begingroup Markov Decision Process\nomeqref {0.0}\nompageref{VI}
-  \item [{ML}]\begingroup Machine Learning\nomeqref {0.0}\nompageref{VI}
   \item [{MLP}]\begingroup Multilayer Perceptron\nomeqref {0.0}\nompageref{VI}
   \item [{PID}]\begingroup Proportional-Integral-Derivative\nomeqref {0.0}\nompageref{VI}
   \item [{PPO}]\begingroup Proximal Policy Optimization\nomeqref {0.0}\nompageref{VI}
   \item [{RL}]\begingroup Reinforcement Learning\nomeqref {0.0}\nompageref{VI}
+  \item [{RRT}]\begingroup Rapidly-exploring Random Tree\nomeqref {0.0}\nompageref{VI}
+  \item [{RTK}]\begingroup Real Time Kinematic\nomeqref {0.0}\nompageref{VI}
+  \item [{SAC}]\begingroup Soft Actor-Critic\nomeqref {0.0}\nompageref{VI}
+  \item [{SLAM}]\begingroup Simultaneous Localization and Mapping\nomeqref {0.0}\nompageref{VI}
+  \item [{TD3}]\begingroup Twin Delayed Deep Deterministic Policy Gradient\nomeqref {0.0}\nompageref{VI}
+  \item [{TRPO}]\begingroup Trust Region Policy Optimization\nomeqref {0.0}\nompageref{VI}
   \item [{URDF}]\begingroup Unified Robot Description Format\nomeqref {0.0}\nompageref{VI}
+  \item [{VRAM}]\begingroup Video Random Access Memory\nomeqref {0.0}\nompageref{VI}
 
 \end{thenomenclature}

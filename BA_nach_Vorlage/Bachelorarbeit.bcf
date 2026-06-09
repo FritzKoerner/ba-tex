@@ -2483,11 +2483,11 @@
     <bcf:citekey order="95" intorder="1">coumansPybulletPythonModule2016</bcf:citekey>
     <bcf:citekey order="96" intorder="1">makoviychukIsaacGymHigh2021</bcf:citekey>
     <bcf:citekey order="97" intorder="1">downsGoogleScannedObjects2022</bcf:citekey>
-    <bcf:citekey order="98" intorder="1">rudinLearningWalkMinutes2022</bcf:citekey>
-    <bcf:citekey order="99" intorder="1">efronIntroductionBootstrap1994</bcf:citekey>
+    <bcf:citekey order="98" intorder="1">efronIntroductionBootstrap1994</bcf:citekey>
+    <bcf:citekey order="99" intorder="1">moallaNoRepresentationNo</bcf:citekey>
     <bcf:citekey order="100" intorder="1">schulmanProximalPolicyOptimization2017</bcf:citekey>
     <bcf:citekey order="101" intorder="1">moallaNoRepresentationNo</bcf:citekey>
-    <bcf:citekey order="102" intorder="1">moallaNoRepresentationNo</bcf:citekey>
+    <bcf:citekey order="102" intorder="1">nikishinPrimacyBiasDeep2022</bcf:citekey>
     <bcf:citekey order="103" intorder="1">ngPolicyInvarianceReward1999</bcf:citekey>
     <bcf:citekey order="104" intorder="1">randlovLearningDriveBicycle1998</bcf:citekey>
     <bcf:citekey order="105" intorder="1">bartolomeiAutonomousEmergencyLanding2022</bcf:citekey>
@@ -2498,9 +2498,8 @@
     <bcf:citekey order="109" intorder="1">whiteheadLearningPerceiveAct1991</bcf:citekey>
     <bcf:citekey order="110" intorder="1">bartolomeiAutonomousEmergencyLanding2022</bcf:citekey>
     <bcf:citekey order="111" intorder="1">singlaMemorybasedDeepReinforcement2018</bcf:citekey>
-    <bcf:citekey order="112" intorder="1">xuNavRLLearningSafe2024</bcf:citekey>
-    <bcf:citekey order="113" intorder="1">ladoszAutonomousLandingMoving2024</bcf:citekey>
-    <bcf:citekey order="113" intorder="2">polvaraSimtoRealQuadrotorLanding2020</bcf:citekey>
+    <bcf:citekey order="112" intorder="1">ladoszAutonomousLandingMoving2024</bcf:citekey>
+    <bcf:citekey order="112" intorder="2">polvaraSimtoRealQuadrotorLanding2020</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

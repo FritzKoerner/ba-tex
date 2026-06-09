@@ -4,36 +4,57 @@
 \section{Trainingsverhalten}
 \label{sec:trainingsverhalten}
 
-Das Training wurde mit 512 parallelen Umgebungen auf einer NVIDIA A30 GPU
-durchgeführt (341\,FPS Durchsatz) und nach 957~Iterationen durch die
-24-Stunden-GPU-Zeitbegrenzung beendet.
-Abbildung~\ref{fig:reward_training} zeigt den Belohnungsverlauf.
+Das Training erreicht einen Durchsatz von 341\,FPS. Jeder der sechs
+Läufe (vgl.\ Abschnitt~\ref{sec:meth_trainingsprozess}) wurde nach
+24~Stunden durch die GPU-Zeitbegrenzung beendet.
+Abbildung~\ref{fig:seed_analysis} zeigt die Belohnungsverläufe aller
+sechs Seeds.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.48\textwidth]{figures/training/Train_mean_reward.pdf}
-    \hfill
-    \includegraphics[width=0.48\textwidth]{figures/training/Policy_mean_std.pdf}
-    \caption[Kumulative Belohnung und Standardabweichung der
-    Aktionsverteilung]{Kumulative Belohnung (links) und mittlere
-    Standardabweichung der Aktionsverteilung (rechts) über 957
-    Trainingsiterationen. Geglättet mit EMA $\alpha = 0{,}9$,
-    transparenter Hintergrund: Rohwerte.}
-    \label{fig:reward_training}
+    \includegraphics[width=\textwidth]{figures/seed_analysis/reward_seeds_overview.pdf}
+    \caption[Belohnungsverlauf über 6~Seeds]{Kumulative Belohnung über
+    6~Seeds mit identischen Hyperparametern. Schattierte Fläche:
+    95\,\%-Bootstrap-Konfidenzintervall des Mittelwerts
+    ($10\,000$~Resamples). EMA $\alpha = 0{,}9$.}
+    \label{fig:seed_analysis}
 \end{figure}
 
-Der Trainingsverlauf lässt sich in zwei Phasen unterteilen. In der ersten
-Phase (Iteration~0 bis~390) steigt die kumulative Belohnung kontinuierlich
-an. Der Agent lernt zunächst die Zielnavigation; ab circa Iteration~200
-erscheint erstmals die Erfolgsbelohnung
-(Abbildung~\ref{fig:rew_crash_success}), und gleichzeitig sinkt die
-Absturzrate. Die kumulative Belohnung erreicht ihren Höchstwert von 24,8
-bei Iteration~390. Die Standardabweichung der Aktionsverteilung fällt
-monoton von 0,99 auf 0,15, was die Konvergenz zu einer deterministischen
-Strategie zeigt. Die übrigen Belohnungskomponenten bestätigen den
-Lernfortschritt
-(Abbildungen~\ref{fig:rew_eplen_close} und~\ref{fig:rew_prox_std} im
-Anhang).
+Von den sechs Seeds konvergieren vier zu einer funktionsfähigen Strategie
+(Tabelle~\ref{tab:seed_classification}). Zwei Seeds (3 und~4) erzielen
+in über 900~Iterationen keine einzige erfolgreiche Landung, obwohl sie
+Absturzvermeidung erlernen (sinkende Absturzrate). Die konvergierenden
+Seeds zeigen einen charakteristischen Verlauf: Die kumulative Belohnung
+steigt zunächst durch die dichten Belohnungskomponenten. Ab der ersten
+erfolgreichen Landung (zwischen Iteration~202 und~594, je nach Seed)
+beschleunigt die Erfolgsbelohnung den Anstieg. Die Standardabweichung
+der Aktionsverteilung fällt bei allen sechs Seeds nahezu identisch von
+0,99 auf circa 0,15, unabhängig vom Belohnungsverlauf
+(Abbildung~\ref{fig:rew_prox_std} im Anhang).
+
+\begin{table}[H]
+  \centering
+  \caption[Konvergenzergebnis der 6~Trainingsseeds]{Konvergenzergebnis
+  der 6~Seeds. Höchstwert: höchste EMA-geglättete Belohnung
+  ($\alpha = 0{,}95$). Kollaps: Iteration des abrupten
+  Belohnungseinbruchs ($> 10$~Punkte innerhalb von 50~Iterationen).}
+  \label{tab:seed_classification}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r l l}
+    \toprule
+    \textbf{Seed} & \textbf{Höchstwert} & \textbf{Iter.}
+      & \textbf{Konvergenz} & \textbf{Kollaps} \\
+    \midrule
+    0 (Final) & 23,5 & 391 & ja & Iter.\ 445 \\
+    1         & 11,8 & 654 & ja & -- \\
+    2         & 19,0 & 429 & ja & Iter.\ 484 \\
+    3         & $-0{,}7$ & -- & nein & -- \\
+    4         & $-0{,}7$ & -- & nein & -- \\
+    5         & 16,2 & 811 & ja & Iter.\ 897 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
 
 \begin{figure}[H]
     \centering
@@ -41,27 +62,29 @@ Anhang).
     \hfill
     \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_success_raw.pdf}
     \caption[Absturzstrafe und Erfolgsbelohnung]{Unskalierte Absturzstrafe
-    (links) und Erfolgsbelohnung (rechts). Geglättet mit EMA
-    $\alpha = 0{,}9$.}
+    (links) und Erfolgsbelohnung (rechts), exemplarisch für Seed~0.
+    Geglättet mit EMA $\alpha = 0{,}9$.}
     \label{fig:rew_crash_success}
 \end{figure}
 
-Ab Iteration~442 bricht die kumulative Belohnung abrupt ein: Innerhalb einer
-einzigen Iteration fällt sie von 29,2 auf $-6{,}1$. Die
-Standardabweichung bleibt nahezu unverändert ($0{,}193 \rightarrow
-0{,}194$). Der Kollaps betrifft die Mittelwerte der Strategie, nicht die
-Explorationsbreite.
+Drei der vier konvergierenden Seeds zeigen einen abrupten
+Belohnungseinbruch, jeweils 50--85~Iterationen nach dem Höchstwert. Bei Seed~0
+fällt die Belohnung innerhalb einer Iteration von 29,2 auf $-6{,}1$.
+Die Standardabweichung bleibt dabei nahezu unverändert ($0{,}193
+\rightarrow 0{,}194$). Der Kollaps betrifft die Mittelwerte der
+Strategie, nicht die Explorationsbreite.
 
-Tabelle~\ref{tab:konvergenz} fasst die Laufzeiten zusammen. Der beste
-Checkpoint liegt bei Iteration~400 (10,4~Stunden Trainingszeit, kumulative
-Belohnung 23,0). Auf Basis des Belohnungsverlaufs wurde dieser Checkpoint für
-alle nachfolgenden Evaluierungen ausgewählt (\emph{Early Stopping}). Die
-verbleibenden 14~Stunden Trainingszeit (Iteration~400 bis~957) produzieren
-kein Modell, das die Leistung von Checkpoint~400 übertrifft.
+Der beste Checkpoint liegt bei Iteration~400 von Seed~0 (10,4~Stunden
+Trainingszeit, kumulative Belohnung 23,0). Seed~0 stellt den
+leistungsstärksten der sechs Seeds dar. Die Evaluationsergebnisse in den
+folgenden Abschnitten bilden daher eine günstige, nicht die erwartete
+Leistung ab. Auf Basis des Belohnungsverlaufs wurde dieser Checkpoint
+für alle nachfolgenden Evaluierungen ausgewählt (\emph{Early Stopping}).
 
 \begin{table}[H]
   \centering
-  \caption[Konvergenzgeschwindigkeit und Checkpoint-Selektion]{Konvergenzgeschwindigkeit und Checkpoint-Selektion (512 Umgebungen, NVIDIA A30, 341\,FPS).}
+  \caption[Checkpoint-Selektion]{Checkpoint-Selektion für Seed~0
+  (512 Umgebungen, NVIDIA A30, 341\,FPS).}
   \label{tab:konvergenz}
   \small
   \renewcommand{\arraystretch}{1.1}
