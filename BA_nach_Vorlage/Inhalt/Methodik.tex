@@ -338,7 +338,16 @@ Einstiegskomplexität.
 Die Drohne wird als URDF-Modell (Unified Robot Description Format) mit
 vier Rotoren simuliert (Masse $0{,}714$\,kg,
 Schub-Gewicht-Verhältnis $2{,}25$, Hover-Drehzahl $1789$\,RPM, maximale
-Drehzahl $2700$\,RPM).
+Drehzahl $2700$\,RPM). Abbildung~\ref{fig:drone_model} zeigt das
+simulierte Drohnenmodell.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.225\linewidth]{Bilder/drone_model.pdf}
+    \caption[Simuliertes Drohnenmodell]{Simuliertes Drohnenmodell
+    mit Schutzkäfig und vier Rotoren.}
+    \label{fig:drone_model}
+\end{figure}
 
 \subsection{Korridorgeometrie}
 \label{subsec:meth_korridor}
@@ -357,8 +366,8 @@ $z \approx 2$\,m und $z \approx 7$\,m.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{Bilder/corridor_geometry.pdf}
-    \caption{Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene
-    (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene.}
+    \caption[Korridorgeometrie]{Schematische Seitenansicht der
+    Korridorgeometrie ($xz$-Ebene) mit Slalom-Flugbahn.}
     \label{fig:meth_corridor}
 \end{figure}
 
@@ -378,6 +387,17 @@ Platzierung folgt einem erzwungenen Slalom entlang der $x$-Achse: Pro
 Hindernisschicht wird ein zufällig gewähltes Objekt auf einer Seite der
 Korridormitte positioniert ($0{,}6$ bis $1{,}2$\,m Versatz);
 aufeinanderfolgende Schichten wechseln die Seite.
+Abbildung~\ref{fig:meth_corridor_sim} zeigt eine Simulationsansicht
+während eines Abstiegs.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.55\linewidth]{Bilder/corridor_screenshot.pdf}
+    \caption[Simulationsansicht des Korridors]{Simulationsansicht mit
+    GSO-Hindernissen während eines Abstiegs. Die Drohne navigiert
+    zwischen zwei skalierten Mesh-Objekten zum Landeziel (rot).}
+    \label{fig:meth_corridor_sim}
+\end{figure}
 
 %% ==========================================================================
 \section{Kaskadierender PID-Regler}

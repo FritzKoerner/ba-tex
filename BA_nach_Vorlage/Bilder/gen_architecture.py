@@ -1,11 +1,8 @@
 #!/usr/bin/env python3
-"""Generate network architecture diagram (SVG → PDF) for thesis.
+"""Generate architecture diagram (SVG → PDF) for thesis Abbildung 4.2.
 
-Shows: Input → Shared CNN Encoder → Actor/Critic MLP heads → Output,
-with all layer dimensions visible.
-
-Usage:  python gen_architecture.py
-Output: architecture.svg (+ architecture.pdf if cairosvg/inkscape available)
+Depth → Shared CNN → Concat with State → Actor/Critic MLP heads.
+Style matches pipeline diagram (Abbildung 4.1).
 """
 
 import os
@@ -13,20 +10,11 @@ import subprocess
 
 OUT_DIR = os.path.dirname(os.path.abspath(__file__))
 
-W, H = 1040, 265
-BH = 36
-CONV_BH = 42
-RX = 5
+W, H = 700, 200
 FONT = "'Segoe UI', 'Helvetica Neue', Arial, sans-serif"
 
-# Row Y-centres
-Y_D = 66       # depth / CNN path
-Y_S = 218      # state path
-Y_M = 142      # merge / concat midpoint
-Y_A = 90       # actor branch (after split)
-Y_C = 194      # critic branch (after split)
-
-GRAD_DEFS = """
+DEFS = """\
+  <defs>
     <linearGradient id="gp" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#8752f6" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#8752f6" stop-opacity="0.06"/>
@@ -42,254 +30,238 @@ GRAD_DEFS = """
     <linearGradient id="gg" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#60aa64" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#60aa64" stop-opacity="0.06"/>
-    </linearGradient>"""
-
-ARROW_MARKER = """
+    </linearGradient>
     <marker id="arr" viewBox="0 0 10 7" refX="10" refY="3.5"
       markerWidth="10" markerHeight="7" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#888"/>
-    </marker>"""
+    </marker>
+  </defs>"""
 
-COLORS = {
+C = {
     "purple": ("#8752f6", "#4a2a8a", "gp"),
     "blue":   ("#5698f9", "#2a5a9a", "gb"),
-    "orange": ("#e8a340", "#8a6420", "go"),
+    "orange": ("#e8a340", "#e8a340", "go"),
     "green":  ("#60aa64", "#3a6a3e", "gg"),
 }
 
 
-def box(x, y, w, h, color="purple"):
-    stroke, _, grad = COLORS[color]
-    sw = 1.6 if color in ("blue", "green") else 1.4
-    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" '
-            f'rx="{RX}" fill="url(#{grad})" stroke="{stroke}" '
-            f'stroke-width="{sw}"/>')
+def rbox(x, y, w, h, color, sw=1.6):
+    s, _, g = C[color]
+    return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="6" '
+            f'fill="url(#{g})" stroke="{s}" stroke-width="{sw}"/>')
 
 
-def txt(x, y, text, size=13, weight="600", color="purple"):
-    _, fill, _ = COLORS.get(color, COLORS["purple"])
+def txt(x, y, text, color="purple", size=11, weight="600"):
+    _, fill, _ = C[color]
     return (f'<text x="{x}" y="{y}" text-anchor="middle" '
-            f'font-size="{size}" fill="{fill}" '
-            f'font-weight="{weight}">{text}</text>')
+            f'font-size="{size}" fill="{fill}" font-weight="{weight}">'
+            f'{text}</text>')
 
 
-def sub(x, y, text, fill="#888"):
+def note(x, y, text, fill="#888", size=9):
     return (f'<text x="{x}" y="{y}" text-anchor="middle" '
-            f'font-size="9.5" fill="{fill}">{text}</text>')
+            f'font-size="{size}" fill="{fill}">{text}</text>')
 
 
-def arr(x1, y1, x2, y2):
+def arrow(x1, y1, x2, y2):
     return (f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" '
-            f'stroke="#888" stroke-width="1.2" marker-end="url(#arr)"/>')
+            f'stroke="#888" stroke-width="1.3" marker-end="url(#arr)"/>')
 
 
-def ln(x1, y1, x2, y2, dashed=False):
-    d = ' stroke-dasharray="5,3"' if dashed else ""
+def ln(x1, y1, x2, y2, color="#aaa", sw=1.2):
     return (f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" '
-            f'stroke="#888" stroke-width="1.2"{d}/>')
+            f'stroke="{color}" stroke-width="{sw}"/>')
 
-
-def cx(x, w):
-    return x + w / 2
-
-
-# ── Box widths ─────────────────────────────────────────────────
-INP_W = 62
-CONV_W = 78
-POOL_W = 68
-NORM_W = 102
-CONCAT_W = 66
-FC_W = 52
-TANH_W = 70
-OUT_W = 48
-V_W = 54
 
 parts = []
 p = parts.append
 
-# ══════════════════════════════════════════════════════════════
-# DEPTH PATH (top row)
-# ══════════════════════════════════════════════════════════════
+# Y positions
+Y_C = 52      # critic / CNN path
+Y_A = 152     # actor / state path
+Y_M = 102     # merge midpoint
 
-# ── Input D_t ──────────────────────────────────────────────
-inp_x = 12
-p(box(inp_x, Y_D - BH // 2, INP_W, BH))
-inp_d_cx = cx(inp_x, INP_W)
-p(txt(inp_d_cx - 4, Y_D - 2, "D", size=14))
-p(f'<text x="{inp_d_cx + 7}" y="{Y_D + 1}" text-anchor="middle" '
-  f'font-size="9" fill="#4a2a8a" font-weight="600">t</text>')
-p(sub(inp_d_cx, Y_D + 12, "64×64"))
-inp_end = inp_x + INP_W  # 74
+# == INPUTS ================================================================
 
-p(arr(inp_end, Y_D, inp_end + 18, Y_D))
+# Depth image thumbnail
+DI_X, DI_W, DI_H = 15, 65, 48
+di_y = Y_C - DI_H // 2
+p(f'<rect x="{DI_X}" y="{di_y}" width="{DI_W}" height="{DI_H}" '
+  f'rx="4" fill="#ddd" stroke="#bbb" stroke-width="1"/>')
+bands = ["#333", "#555", "#777", "#999", "#bbb"]
+bh = (DI_H - 4) // len(bands)
+by = di_y + 2
+for shade in bands:
+    p(f'<rect x="{DI_X + 2}" y="{by}" width="{DI_W - 4}" height="{bh}" '
+      f'rx="1" fill="{shade}"/>')
+    by += bh
+p(note(DI_X + DI_W // 2, di_y - 5, "Tiefenbild"))
+p(note(DI_X + DI_W // 2, di_y + DI_H + 11, "64 × 64"))
 
-# ── Conv 1 ─────────────────────────────────────────────────
-c1x = inp_end + 26  # 100
-p(box(c1x, Y_D - CONV_BH // 2, CONV_W, CONV_BH, "blue"))
-p(txt(cx(c1x, CONV_W), Y_D - 5, "Conv 32", size=11, color="blue"))
-p(sub(cx(c1x, CONV_W), Y_D + 9, "8×8, stride 4"))
+# State vector box
+ST_W, ST_H = 100, 28
+st_y = Y_A - ST_H // 2
+p(rbox(DI_X, st_y, ST_W, ST_H, "purple"))
+p(txt(DI_X + ST_W // 2, Y_A + 4, "Zustandsvektor", "purple", size=9.5))
 
-p(arr(c1x + CONV_W, Y_D, c1x + CONV_W + 14, Y_D))
+INP_R = DI_X + DI_W  # 80
+ST_R = DI_X + ST_W   # right edge of state box
 
-# ── Conv 2 ─────────────────────────────────────────────────
-c2x = c1x + CONV_W + 22  # 200
-p(box(c2x, Y_D - CONV_BH // 2, CONV_W, CONV_BH, "blue"))
-p(txt(cx(c2x, CONV_W), Y_D - 5, "Conv 64", size=11, color="blue"))
-p(sub(cx(c2x, CONV_W), Y_D + 9, "4×4, stride 2"))
+# Arrow from depth image
+p(arrow(INP_R, Y_C, INP_R + 22, Y_C))
 
-p(arr(c2x + CONV_W, Y_D, c2x + CONV_W + 14, Y_D))
+# == CONV LAYERS (tall narrow blue rectangles, decreasing height) ==========
 
-# ── Conv 3 ─────────────────────────────────────────────────
-c3x = c2x + CONV_W + 22  # 300
-p(box(c3x, Y_D - CONV_BH // 2, CONV_W, CONV_BH, "blue"))
-p(txt(cx(c3x, CONV_W), Y_D - 5, "Conv 128", size=11, color="blue"))
-p(sub(cx(c3x, CONV_W), Y_D + 9, "3×3, stride 1"))
+CX0 = INP_R + 36   # 116
+CW = 30
+CGAP = 14
 
-p(arr(c3x + CONV_W, Y_D, c3x + CONV_W + 14, Y_D))
+convs = [
+    ("Conv 32", "8×8, stride 4", 80),
+    ("Conv 64", "4×4, stride 2", 68),
+    ("Conv 128", "3×3, stride 1", 56),
+]
 
-# ── Global Max Pool ────────────────────────────────────────
-pool_x = c3x + CONV_W + 22  # 400
-p(box(pool_x, Y_D - BH // 2, POOL_W, BH, "blue"))
-p(txt(cx(pool_x, POOL_W), Y_D - 3, "Max Pool", size=10.5, color="blue"))
-p(sub(cx(pool_x, POOL_W), Y_D + 10, "global → 128"))
-pool_end = pool_x + POOL_W  # 468
+cx = CX0
+for label, sub_label, h in convs:
+    y_top = Y_C - h // 2
+    s, _, g = C["blue"]
+    p(f'<rect x="{cx}" y="{y_top}" width="{CW}" height="{h}" rx="4" '
+      f'fill="url(#{g})" stroke="{s}" stroke-width="1.4"/>')
+    tcx = cx + CW // 2
+    p(f'<text x="{tcx - 5}" y="{Y_C}" text-anchor="middle" '
+      f'font-size="9" fill="#2a5a9a" font-weight="600" '
+      f'transform="rotate(-90, {tcx - 5}, {Y_C})">{label}</text>')
+    p(f'<text x="{tcx + 5}" y="{Y_C}" text-anchor="middle" '
+      f'font-size="7.5" fill="#2a5a9a" '
+      f'transform="rotate(-90, {tcx + 5}, {Y_C})">{sub_label}</text>')
+    cx += CW + CGAP
 
-# ── BN + ELU annotation ───────────────────────────────────
-bn_y = Y_D + CONV_BH // 2 + 14
-mid_conv = cx(c1x, c3x + CONV_W - c1x)
-p(f'<text x="{mid_conv}" y="{bn_y}" text-anchor="middle" '
-  f'font-size="9" fill="#999" font-style="italic">'
-  f'+ Batch-Norm + ELU je Schicht</text>')
+# Small connector lines between convs
+for i in range(len(convs) - 1):
+    lx = CX0 + (i + 1) * (CW + CGAP) - CGAP
+    p(ln(lx, Y_C, lx + CGAP, Y_C, "#888"))
 
-# ── Shared CNN bracket (dashed green) ──────────────────────
-br_x = c1x - 8       # 92
-br_end = pool_end + 8  # 476
-br_w = br_end - br_x   # 384
-br_y = Y_D - CONV_BH // 2 - 20  # 25
-br_h = (bn_y + 6) - br_y  # 107 - 25 = 82
-p(f'<rect x="{br_x}" y="{br_y}" width="{br_w}" height="{br_h}" '
-  f'rx="4" fill="none" stroke="#60aa64" '
-  f'stroke-width="1.2" stroke-dasharray="5,3"/>')
-p(f'<text x="{cx(br_x, br_w)}" y="{br_y - 5}" '
-  f'text-anchor="middle" font-size="9.5" fill="#3a6a3e" '
-  f'font-weight="600">Geteilter CNN-Encoder</text>')
+# Line to MaxPool (no arrowhead inside CNN bracket)
+last_r = CX0 + len(convs) * (CW + CGAP) - CGAP
+p(ln(last_r, Y_C, last_r + 12 + CGAP, Y_C, "#888"))
 
-# ══════════════════════════════════════════════════════════════
-# STATE PATH (bottom row)
-# ══════════════════════════════════════════════════════════════
+# Max Pool (tall narrow, rotated text like conv layers)
+MP_X = last_r + 12 + CGAP
+MP_W, MP_H = CW, 46
+mp_y = Y_C - MP_H // 2
+s, _, g = C["blue"]
+p(f'<rect x="{MP_X}" y="{mp_y}" width="{MP_W}" height="{MP_H}" rx="4" '
+  f'fill="url(#{g})" stroke="{s}" stroke-width="1.4"/>')
+mp_cx = MP_X + MP_W // 2
+p(f'<text x="{mp_cx}" y="{Y_C}" text-anchor="middle" '
+  f'dominant-baseline="central" '
+  f'font-size="9" fill="#2a5a9a" font-weight="600" '
+  f'transform="rotate(-90, {mp_cx}, {Y_C})">MaxPool</text>')
+MP_R = MP_X + MP_W
 
-# ── Input o_t ──────────────────────────────────────────────
-p(box(inp_x, Y_S - BH // 2, INP_W, BH))
-inp_s_cx = cx(inp_x, INP_W)
-p(txt(inp_s_cx - 3, Y_S - 2, "o", size=14))
-p(f'<text x="{inp_s_cx + 6}" y="{Y_S + 1}" text-anchor="middle" '
-  f'font-size="9" fill="#4a2a8a" font-weight="600">t</text>')
-p(sub(inp_s_cx, Y_S + 12, "ℝ¹⁷"))
+# Shared CNN bracket (green dashed) with label inside
+br_x, br_r = CX0 - 6, MP_R + 6
+br_y = Y_C - convs[0][2] // 2 - 12
+br_bottom = Y_C + convs[0][2] // 2 + 10
+br_h = br_bottom - br_y
+p(f'<rect x="{br_x}" y="{br_y}" width="{br_r - br_x}" height="{br_h}" '
+  f'rx="4" fill="none" stroke="#60aa64" stroke-width="1.1" '
+  f'stroke-dasharray="5,3"/>')
+p(txt((br_x + br_r) // 2, br_bottom - 4, "CNN", "green", size=9, weight="700"))
 
-p(arr(inp_end, Y_S, inp_end + 18, Y_S))
+# == STATE PATH: Emp. Norm =================================================
 
-# ── Empirical Normalization ────────────────────────────────
-norm_x = inp_end + 26  # 100 — same column as Conv1
-p(box(norm_x, Y_S - BH // 2, NORM_W, BH))
-p(txt(cx(norm_x, NORM_W), Y_S - 3, "Emp. Norm.", size=11))
-p(sub(cx(norm_x, NORM_W), Y_S + 10, "laufend μ, σ²"))
-norm_end = norm_x + NORM_W  # 202
+EN_X = CX0 + 50
+EN_W, EN_H = 100, 26
+p(arrow(ST_R, Y_A, EN_X - 14, Y_A))
+p(rbox(EN_X, Y_A - EN_H // 2, EN_W, EN_H, "purple"))
+p(txt(EN_X + EN_W // 2, Y_A + 4, "Normalisierung", "purple", size=9))
+EN_R = EN_X + EN_W
 
-# ══════════════════════════════════════════════════════════════
-# MERGE BUS
-# ══════════════════════════════════════════════════════════════
+# == MERGE BUS =============================================================
 
-merge_x = pool_end + 20  # 488
-p(ln(pool_end, Y_D, merge_x, Y_D))
-p(ln(norm_end, Y_S, merge_x, Y_S))
-p(ln(merge_x, Y_D, merge_x, Y_S))
-p(arr(merge_x, Y_M, merge_x + 18, Y_M))
+BUS = MP_R + 28
+p(ln(MP_R, Y_C, BUS, Y_C))
+p(ln(EN_R, Y_A, BUS, Y_A))
+p(ln(BUS, Y_C, BUS, Y_A))
+# == SPLIT BUS =============================================================
 
-# ── Concat ─────────────────────────────────────────────────
-concat_x = merge_x + 26  # 514
-p(box(concat_x, Y_M - BH // 2, CONCAT_W, BH))
-p(txt(cx(concat_x, CONCAT_W), Y_M - 3, "Concat", size=11))
-p(sub(cx(concat_x, CONCAT_W), Y_M + 10, "145-dim"))
-concat_end = concat_x + CONCAT_W  # 580
+SP = BUS + 18
+p(ln(BUS, Y_M, SP, Y_M, "#888"))
+p(ln(SP, Y_C, SP, Y_A))
+p(arrow(SP, Y_C, SP + 26, Y_C))
+p(arrow(SP, Y_A, SP + 26, Y_A))
 
-# ══════════════════════════════════════════════════════════════
-# SPLIT BUS → ACTOR / CRITIC
-# ══════════════════════════════════════════════════════════════
+# == FC CHAIN HELPERS ======================================================
 
-split_x = concat_end + 20  # 600
-p(ln(concat_end, Y_M, split_x, Y_M))
-p(ln(split_x, Y_A, split_x, Y_C))
-p(arr(split_x, Y_A, split_x + 18, Y_A))
-p(arr(split_x, Y_C, split_x + 18, Y_C))
+FC_W, FC_H, FC_GAP = 48, 24, 16
 
-# ── Helper: draw 3 FC layers in a row ─────────────────────
-def fc_chain(start_x, y):
-    """Draw FC 128 → FC 128 → FC 128 and return x after last box."""
-    x = start_x
-    for i in range(3):
-        p(box(x, y - BH // 2, FC_W, BH, "blue"))
-        p(txt(cx(x, FC_W), y - 3, "FC 128", size=10.5, color="blue"))
-        p(sub(cx(x, FC_W), y + 10, "ELU"))
-        x += FC_W
-        if i < 2:
-            p(arr(x, y, x + 10, y))
-            x += 16
-    return x  # end of last FC box
 
-# ── Actor: 3× FC 128 ──────────────────────────────────────
-fc_start = split_x + 26  # 626
-fc_a_end = fc_chain(fc_start, Y_A)
+def fc_box(x, y, label, color="blue"):
+    p(rbox(x, y - FC_H // 2, FC_W, FC_H, color))
+    p(txt(x + FC_W // 2, y + 4, label, color, size=9))
+    return x + FC_W
 
-# "Actor" label above FC chain
-fc_mid = cx(fc_start, fc_a_end - fc_start)
-p(f'<text x="{fc_mid}" y="{Y_A - BH // 2 - 7}" text-anchor="middle" '
-  f'font-size="9.5" fill="#2a5a9a" font-weight="600">Actor</text>')
 
-p(arr(fc_a_end, Y_A, fc_a_end + 14, Y_A))
+# == CRITIC BRANCH (y = Y_C) ===============================================
 
-# ── Tanh-Gaussian distribution ─────────────────────────────
-tanh_x = fc_a_end + 22
-p(box(tanh_x, Y_A - BH // 2, TANH_W, BH))
-p(txt(cx(tanh_x, TANH_W), Y_A - 3, "Tanh-Gauss.", size=10.5))
-p(sub(cx(tanh_x, TANH_W), Y_A + 10, "μ, log σ → tanh"))
-tanh_end = tanh_x + TANH_W
+fc_x0 = SP + 46
 
-p(arr(tanh_end, Y_A, tanh_end + 14, Y_A))
+# Background box
+critic_fc_w = 2 * FC_W + FC_GAP
+p(f'<rect x="{fc_x0 - 10}" y="{Y_C - FC_H // 2 - 20}" '
+  f'width="{critic_fc_w + 20}" height="{FC_H + 34}" rx="6" '
+  f'fill="#5698f9" fill-opacity="0.04" stroke="#5698f9" '
+  f'stroke-width="0.7" stroke-opacity="0.25"/>')
+p(txt(fc_x0 + critic_fc_w // 2, Y_C - FC_H // 2 - 8, "Critic",
+      "blue", size=10, weight="700"))
 
-# ── a_t output ─────────────────────────────────────────────
-out_a_x = tanh_end + 22
-p(box(out_a_x, Y_A - BH // 2, OUT_W, BH, "orange"))
-out_a_cx = cx(out_a_x, OUT_W)
-p(txt(out_a_cx - 4, Y_A - 1, "a", size=14, color="orange"))
-p(f'<text x="{out_a_cx + 7}" y="{Y_A + 2}" text-anchor="middle" '
-  f'font-size="9" fill="#8a6420" font-weight="600">t</text>')
-p(sub(out_a_cx, Y_A + 12, "(−1, 1)⁴"))
+# FC(32) → FC(32)
+x = fc_box(fc_x0, Y_C, "FC (32)")
+p(ln(x, Y_C, x + FC_GAP, Y_C, "#888"))
+x = fc_box(x + FC_GAP, Y_C, "FC (32)")
 
-# ── Critic: 3× FC 128 ─────────────────────────────────────
-fc_c_end = fc_chain(fc_start, Y_C)
+# → V(s) output
+p(arrow(x, Y_C, x + 32, Y_C))
+p(txt(x + 46, Y_C + 4, "V(s)", "orange", size=10, weight="700"))
 
-# "Critic" label above FC chain
-p(f'<text x="{fc_mid}" y="{Y_C - BH // 2 - 7}" text-anchor="middle" '
-  f'font-size="9.5" fill="#2a5a9a" font-weight="600">Critic</text>')
+# == ACTOR BRANCH (y = Y_A) ================================================
 
-p(arr(fc_c_end, Y_C, fc_c_end + 14, Y_C))
+# Background box
+actor_fc_w = 3 * FC_W + 2 * FC_GAP + FC_GAP + 56  # 3 FC + Tanh
+p(f'<rect x="{fc_x0 - 10}" y="{Y_A - FC_H // 2 - 20}" '
+  f'width="{actor_fc_w + 20}" height="{FC_H + 34}" rx="6" '
+  f'fill="#5698f9" fill-opacity="0.04" stroke="#5698f9" '
+  f'stroke-width="0.7" stroke-opacity="0.25"/>')
+p(txt(fc_x0 + actor_fc_w // 2, Y_A - FC_H // 2 - 8, "Actor",
+      "blue", size=10, weight="700"))
 
-# ── V(s) output ────────────────────────────────────────────
-v_x = fc_c_end + 22
-p(box(v_x, Y_C - BH // 2, V_W, BH, "orange"))
-v_cx = cx(v_x, V_W)
-p(txt(v_cx, Y_C - 3, "V(s)", size=13, color="orange"))
-p(sub(v_cx, Y_C + 10, "skalar"))
+# FC(64) → FC(64) → FC(64) → Tanh
+x = fc_box(fc_x0, Y_A, "FC (64)")
+p(ln(x, Y_A, x + FC_GAP, Y_A, "#888"))
+x = fc_box(x + FC_GAP, Y_A, "FC (64)")
+p(ln(x, Y_A, x + FC_GAP, Y_A, "#888"))
+x = fc_box(x + FC_GAP, Y_A, "FC (64)")
+p(ln(x, Y_A, x + FC_GAP, Y_A, "#888"))
 
-# ══════════════════════════════════════════════════════════════
-# ASSEMBLE SVG
-# ══════════════════════════════════════════════════════════════
+# Tanh-Gaussian box (slightly wider)
+TW = 56
+p(rbox(x + FC_GAP, Y_A - FC_H // 2, TW, FC_H, "blue"))
+p(txt(x + FC_GAP + TW // 2, Y_A + 4, "Tanh", "blue", size=9))
+x = x + FC_GAP + TW
 
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"
+# → a_t output
+p(arrow(x, Y_A, x + 32, Y_A))
+p(txt(x + 44, Y_A + 4, "a_t", "orange", size=10, weight="700"))
+
+# == ASSEMBLE ==============================================================
+
+svg = f"""\
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}"
      font-family="{FONT}">
-  <defs>{GRAD_DEFS}{ARROW_MARKER}
-  </defs>
-  <rect width="{W}" height="{H}" fill="#fafafa" rx="4"/>
+{DEFS}
+  <rect width="{W}" height="{H}" fill="white" rx="6"/>
   {"".join(parts)}
 </svg>"""
 
@@ -298,17 +270,14 @@ with open(svg_path, "w", encoding="utf-8") as f:
     f.write(svg)
 print(f"Saved {svg_path}")
 
-# ── PDF conversion ─────────────────────────────────────────
 pdf_path = os.path.join(OUT_DIR, "architecture.pdf")
 converted = False
-
 try:
     import cairosvg
     cairosvg.svg2pdf(url=svg_path, write_to=pdf_path)
     converted = True
 except ImportError:
     pass
-
 if not converted:
     try:
         subprocess.run(
@@ -319,7 +288,6 @@ if not converted:
         converted = True
     except (FileNotFoundError, subprocess.CalledProcessError):
         pass
-
 if converted:
     print(f"Saved {pdf_path}")
 else:

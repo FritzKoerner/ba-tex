@@ -10,8 +10,8 @@
 \newlabel{sec:meth_ueberblick}{{4.1}{16}{Systemüberblick}{section.35}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um.}}{16}{figure.caption.36}\protected@file@percent }
 \newlabel{fig:meth_pipeline}{{4.1}{16}{Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über 300~Simulationsschritte in Motordrehzahlen um}{figure.caption.36}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Formulierung als Markov-Entscheidungsprozess}{16}{section.37}\protected@file@percent }
-\newlabel{sec:meth_mdp}{{4.2}{16}{Formulierung als Markov-Entscheidungsprozess}{section.37}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Formulierung als Markov-Entscheidungsprozess}{17}{section.37}\protected@file@percent }
+\newlabel{sec:meth_mdp}{{4.2}{17}{Formulierung als Markov-Entscheidungsprozess}{section.37}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2.1}Zustandsraum}{17}{subsection.38}\protected@file@percent }
 \newlabel{subsec:meth_zustandsraum}{{4.2.1}{17}{Zustandsraum}{subsection.38}{}}
 \newlabel{eq:meth_state}{{4.1}{17}{Zustandsraum}{equation.39}{}}
@@ -54,31 +54,35 @@
 \newlabel{subsec:meth_simulator}{{4.5.1}{21}{Physiksimulator}{subsection.63}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.5.2}Drohnenmodell}{21}{subsection.64}\protected@file@percent }
 \newlabel{subsec:meth_drohne}{{4.5.2}{21}{Drohnenmodell}{subsection.64}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Korridorgeometrie}{22}{subsection.65}\protected@file@percent }
-\newlabel{subsec:meth_korridor}{{4.5.3}{22}{Korridorgeometrie}{subsection.65}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene.}}{22}{figure.caption.66}\protected@file@percent }
-\newlabel{fig:meth_corridor}{{4.3}{22}{Seitenansichten der Korridorgeometrie. Links: $xz$-Ebene (Slalom-Achse) mit schematischer Flugbahn. Rechts: $yz$-Ebene}{figure.caption.66}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Hindernisse}{22}{subsection.67}\protected@file@percent }
-\newlabel{subsec:meth_hindernisse}{{4.5.4}{22}{Hindernisse}{subsection.67}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.6}Kaskadierender PID-Regler}{23}{section.68}\protected@file@percent }
-\newlabel{subsec:meth_pid}{{4.6}{23}{Kaskadierender PID-Regler}{section.68}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.7}Trainingsprozess}{23}{section.69}\protected@file@percent }
-\newlabel{sec:meth_trainingsprozess}{{4.7}{23}{Trainingsprozess}{section.69}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{23}{table.caption.70}\protected@file@percent }
-\newlabel{tab:meth_training}{{4.4}{23}{Trainingsparameter}{table.caption.70}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.8}Evaluation}{23}{section.71}\protected@file@percent }
-\newlabel{sec:meth_evaluation}{{4.8}{23}{Evaluation}{section.71}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Evaluationsmetriken}{23}{subsection.72}\protected@file@percent }
-\newlabel{subsec:meth_metriken}{{4.8.1}{23}{Evaluationsmetriken}{subsection.72}{}}
-\newlabel{eq:meth_path_efficiency}{{4.10}{24}{Evaluationsmetriken}{equation.73}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{24}{subsection.74}\protected@file@percent }
-\newlabel{subsec:meth_versuch1}{{4.8.2}{24}{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{subsection.74}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.3}Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{24}{subsection.75}\protected@file@percent }
-\newlabel{subsec:meth_versuch2}{{4.8.3}{24}{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{subsection.75}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Zielpositionen in der Weinbergumgebung}}{25}{figure.caption.76}\protected@file@percent }
-\newlabel{fig:meth_vineyard_targets}{{4.4}{25}{Zielpositionen in der Weinbergumgebung}{figure.caption.76}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Simuliertes Drohnenmodell}}{22}{figure.caption.65}\protected@file@percent }
+\newlabel{fig:drone_model}{{4.3}{22}{Simuliertes Drohnenmodell}{figure.caption.65}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.3}Korridorgeometrie}{22}{subsection.66}\protected@file@percent }
+\newlabel{subsec:meth_korridor}{{4.5.3}{22}{Korridorgeometrie}{subsection.66}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5.4}Hindernisse}{22}{subsection.68}\protected@file@percent }
+\newlabel{subsec:meth_hindernisse}{{4.5.4}{22}{Hindernisse}{subsection.68}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Kaskadierender PID-Regler}{22}{section.70}\protected@file@percent }
+\newlabel{subsec:meth_pid}{{4.6}{22}{Kaskadierender PID-Regler}{section.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Korridorgeometrie}}{23}{figure.caption.67}\protected@file@percent }
+\newlabel{fig:meth_corridor}{{4.4}{23}{Korridorgeometrie}{figure.caption.67}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.7}Trainingsprozess}{23}{section.71}\protected@file@percent }
+\newlabel{sec:meth_trainingsprozess}{{4.7}{23}{Trainingsprozess}{section.71}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Simulationsansicht des Korridors}}{24}{figure.caption.69}\protected@file@percent }
+\newlabel{fig:meth_corridor_sim}{{4.5}{24}{Simulationsansicht des Korridors}{figure.caption.69}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{24}{table.caption.72}\protected@file@percent }
+\newlabel{tab:meth_training}{{4.4}{24}{Trainingsparameter}{table.caption.72}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.8}Evaluation}{24}{section.73}\protected@file@percent }
+\newlabel{sec:meth_evaluation}{{4.8}{24}{Evaluation}{section.73}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.1}Evaluationsmetriken}{24}{subsection.74}\protected@file@percent }
+\newlabel{subsec:meth_metriken}{{4.8.1}{24}{Evaluationsmetriken}{subsection.74}{}}
+\newlabel{eq:meth_path_efficiency}{{4.10}{24}{Evaluationsmetriken}{equation.75}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.2}Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{25}{subsection.76}\protected@file@percent }
+\newlabel{subsec:meth_versuch1}{{4.8.2}{25}{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{subsection.76}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8.3}Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{25}{subsection.77}\protected@file@percent }
+\newlabel{subsec:meth_versuch2}{{4.8.3}{25}{Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{subsection.77}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Zielpositionen in der Weinbergumgebung}}{26}{figure.caption.78}\protected@file@percent }
+\newlabel{fig:meth_vineyard_targets}{{4.6}{26}{Zielpositionen in der Weinbergumgebung}{figure.caption.78}{}}
 \@setckpt{Inhalt/Methodik}{
-\setcounter{page}{26}
+\setcounter{page}{27}
 \setcounter{equation}{10}
 \setcounter{enumi}{3}
 \setcounter{enumii}{0}
@@ -93,7 +97,7 @@
 \setcounter{subsubsection}{0}
 \setcounter{paragraph}{0}
 \setcounter{subparagraph}{0}
-\setcounter{figure}{4}
+\setcounter{figure}{6}
 \setcounter{table}{4}
 \setcounter{parentequation}{0}
 \setcounter{r@tfl@t}{0}

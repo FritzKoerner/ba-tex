@@ -7,13 +7,13 @@
 \contentsline {table}{\numberline {4.1}{\ignorespaces Komponenten des Zustandsvektors $\mathbf {o}_t \in \mathbb {R}^{17}$.}}{17}{table.caption.41}%
 \contentsline {table}{\numberline {4.2}{\ignorespaces Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}}{19}{table.caption.51}%
 \contentsline {table}{\numberline {4.3}{\ignorespaces PPO-Hyperparameter.}}{21}{table.caption.61}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{23}{table.caption.70}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Trainingsparameter.}}{24}{table.caption.72}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Konvergenzergebnis der 6~Trainingsseeds}}{27}{table.caption.80}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Checkpoint-Selektion}}{27}{table.caption.82}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Vergleich AABB- und oberflächenbasierte Kollisionserkennung}}{29}{table.caption.87}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Sensitivitätsanalyse des Erfolgsradius in Phase~2}}{30}{table.caption.91}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Vergleich RL-Agent und RRT-Connect}}{31}{table.caption.94}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Konvergenzergebnis der 6~Trainingsseeds}}{28}{table.caption.82}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Checkpoint-Selektion}}{28}{table.caption.83}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Vergleich AABB- und oberflächenbasierte Kollisionserkennung}}{30}{table.caption.88}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Sensitivitätsanalyse des Erfolgsradius in Phase~2}}{31}{table.caption.92}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Vergleich RL-Agent und RRT-Connect}}{31}{table.caption.95}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

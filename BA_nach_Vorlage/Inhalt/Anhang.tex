@@ -1,27 +1,60 @@
-\appsection{Ergänzende Trainingsverläufe}
+\appsection{Ergänzende Trainingsverläufe Seed 0}
 \label{app:training_curves}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.48\textwidth]{figures/training/Train_mean_episode_length.pdf}
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_progress_raw.pdf}
     \hfill
     \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_close_raw.pdf}
-    \caption[Episodenlänge und Näherungsbelohnung]{Mittlere Episodenlänge
-    (links) und Näherungsbelohnung (rechts). Die Episodenlänge gibt die Anzahl
-    der Entscheidungsschritte pro Episode an. Die Näherungsbelohnung steigt mit
-    abnehmender Distanz zum Ziel. Geglättet mit EMA $\alpha = 0{,}9$.}
-    \label{fig:rew_eplen_close}
+    \caption[Fortschrittsbelohnung und SNäherungsbelohnung]{Fortschrittsbelohnung
+    (links) und Näherungsbelohnung (rechts). Beide Komponenten steigen mit
+    zunehmender Annäherung an das Ziel. WGeglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:rew_progress_close}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_obstacle_proximity_raw.pdf}
     \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_crash_raw.pdf}
+    \caption[Hindernisabstandsstrafe und Absturzstrafe]{Hindernisabstandsstrafe
+    (links) und Absturzstrafe (rechts). Beide Strafkomponenten fallen mit
+    zunehmender Kollisionsvermeidung. Geglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:rew_prox_crash}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_success_raw.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Train_mean_episode_length.pdf}
+    \caption[Erfolgsbelohnung und Episodenlänge]{Erfolgsbelohnung (links) und
+    mittlere Episodenlänge (rechts). Der Anstieg der Erfolgsbelohnung markiert
+    den Beginn erfolgreicher Landungen. Die Episodenlänge gibt die Anzahl der
+    Entscheidungsschritte pro Episode an. Geglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:rew_success_eplen}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
     \includegraphics[width=0.48\textwidth]{figures/training/Policy_mean_std.pdf}
-    \caption[Hindernisabstandsstrafe und Standardabweichung der
-    Policy]{Hindernisabstandsstrafe (links) und mittlere Standardabweichung
-    der Aktionsverteilung (rechts). Geglättet mit EMA $\alpha = 0{,}9$.}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Loss_entropy.pdf}
+    \caption[Standardabweichung und Entropie]{Mittlere Standardabweichung der
+    Aktionsverteilung (links) und Entropie (rechts). Beide Maße fallen
+    monoton und spiegeln die abnehmende Exploration wider.
+    Geglättet mit EMA $\alpha = 0{,}9$.}
     \label{fig:rew_prox_std}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.48\textwidth]{figures/training/Loss_surrogate.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{figures/training/Loss_value.pdf}
+    \caption[Surrogatverlust und Wertverlust]{PPO-Surrogatverlust (links) und
+    Wertverlust (rechts). Geglättet mit EMA $\alpha = 0{,}9$.}
+    \label{fig:loss_surrogate_value}
 \end{figure}
 
 

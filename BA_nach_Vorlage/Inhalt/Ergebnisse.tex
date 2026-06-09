@@ -12,11 +12,14 @@ sechs Seeds.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{figures/seed_analysis/reward_seeds_overview.pdf}
-    \caption[Belohnungsverlauf über 6~Seeds]{Kumulative Belohnung über
-    6~Seeds mit identischen Hyperparametern. Schattierte Fläche:
-    95\,\%-Bootstrap-Konfidenzintervall des Mittelwerts
-    ($10\,000$~Resamples). EMA $\alpha = 0{,}9$.}
+    \includegraphics[width=0.48\textwidth]{Bilder/seed_analysis/reward_seeds_overview.pdf}
+    \hfill
+    \includegraphics[width=0.48\textwidth]{Bilder/seed_analysis/reward_mean_ci_truncated.pdf}
+    \caption[Belohnungsverlauf über 6~Seeds]{Mittlere Episodenbelohnung über
+    6~Seeds mit identischen Hyperparametern. Links: Einzelne Seeds mit
+    vollständigem Trainingsverlauf bis zum jeweiligen Abbruch. Rechts: Mittelwert mit
+    95\,\%-Bootstrap-Konfidenzintervall ($10\,000$~Resamples); die gestrichelte
+    Linie markiert das Ende des kürzesten Laufs. EMA $\alpha = 0{,}9$.}
     \label{fig:seed_analysis}
 \end{figure}
 
@@ -56,16 +59,6 @@ der Aktionsverteilung fällt bei allen sechs Seeds nahezu identisch von
   \end{tabular}
 \end{table}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_crash_raw.pdf}
-    \hfill
-    \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_success_raw.pdf}
-    \caption[Absturzstrafe und Erfolgsbelohnung]{Unskalierte Absturzstrafe
-    (links) und Erfolgsbelohnung (rechts), exemplarisch für Seed~0.
-    Geglättet mit EMA $\alpha = 0{,}9$.}
-    \label{fig:rew_crash_success}
-\end{figure}
 
 Drei der vier konvergierenden Seeds zeigen einen abrupten
 Belohnungseinbruch, jeweils 50--85~Iterationen nach dem Höchstwert. Bei Seed~0
@@ -115,7 +108,7 @@ Konfidenzintervallen.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{figures/eval/phase1_outcomes.pdf}
+    \includegraphics[width=0.65\textwidth]{Bilder/eval/phase1_outcomes.pdf}
     \caption[Episodenergebnisse Phase~1]{Episodenergebnisse der
     Phase-1-Evaluation (1\,000~Episoden). Fehlerbalken zeigen
     95\,\%-Bootstrap-Konfidenzintervalle.}
@@ -190,7 +183,7 @@ Tabelle~\ref{tab:phase2_results} im Anhang listet alle Metriken.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.65\textwidth]{figures/eval/phase2_outcomes.pdf}
+    \includegraphics[width=0.65\textwidth]{Bilder/eval/phase2_outcomes.pdf}
     \caption[Episodenergebnisse Phase~2]{Episodenergebnisse der
     Phase-2-Evaluation (1\,000~Episoden, Zero-Shot-Transfer).
     Fehlerbalken zeigen 95\,\%-Bootstrap-Konfidenzintervalle.}

@@ -35,28 +35,26 @@ CZ = (0.0, 15.0)
 SX, SY, SZ = (-1.5, 1.5), (-0.5, 0.5), 12.0
 TARGET = (0.0, 0.0, 1.0)
 
-# Schematic obstacle AABBs (approximate typical GSO mesh after scaling)
+# Schematic obstacle AABBs (typical GSO mesh after scaling, clipped to 2m height)
+# X offset: slalom_offset 0.6–1.2 m, alternating sides.
+# Typical AABB: X~3m, Y~2m (spans full corridor Y), Z clipped to 2m.
 OBS = [
-    {"cx":  1.0, "wx": 2.5, "h": 1.8, "z": 2.0},   # lower slice, +X
-    {"cx": -1.0, "wx": 2.5, "h": 1.8, "z": 7.0},   # upper slice, -X
+    {"cx":  0.9, "wx": 3.0, "wy": 2.0, "h": 2.0, "z": 3.0},   # lower slice, +X
+    {"cx": -0.9, "wx": 3.0, "wy": 2.0, "h": 2.0, "z": 7.0},   # upper slice, -X
 ]
 
 # ── Colours ─────────────────────────────────────────────────────────
 C = dict(
     corridor="#aaaaaa", ground="#777777", ground_f="#f0f0f0",
-    spawn="#5a9bd5", target="#3d8b52", obs="#d2d2d2", obs_e="#999999",
-    path="#555555", drone="#333333", dim="#aaaaaa",
+    spawn="#5698f9", target="#8752f6", obs="#60aa64", obs_e="#3a6a3e",
+    path="#e8a340", drone="#5698f9", dim="#aaaaaa",
 )
 
 # ── Figure ──────────────────────────────────────────────────────────
-fig, (ax_xz, ax_yz) = plt.subplots(
-    1, 2, figsize=(5.2, 4.2),
-    gridspec_kw={"width_ratios": [3, 1.4], "wspace": 0.42},
-)
+fig, ax_xz = plt.subplots(1, 1, figsize=(3.8, 4.2))
 
 for ax, axis, hr, sr in [
     (ax_xz, "x", CX, SX),
-    (ax_yz, "y", CY, SY),
 ]:
     cw, ch = hr[1] - hr[0], CZ[1] - CZ[0]
 
@@ -74,7 +72,7 @@ for ax, axis, hr, sr in [
     # Spawn region
     sw = sr[1] - sr[0]
     ax.add_patch(mpatches.Rectangle(
-        (sr[0], SZ - 0.2), sw, 0.4,
+        (sr[0], SZ - 0.35), sw, 0.7,
         fc=C["spawn"], alpha=0.22, ec=C["spawn"], lw=0.6, zorder=4,
     ))
 
@@ -83,20 +81,20 @@ for ax, axis, hr, sr in [
         if axis == "x":
             ox, ow = ob["cx"] - ob["wx"] / 2, ob["wx"]
         else:
-            ox, ow = CY[0], CY[1] - CY[0]
+            ox, ow = -ob["wy"] / 2, ob["wy"]
         ax.add_patch(mpatches.FancyBboxPatch(
             (ox, ob["z"] - ob["h"] / 2), ow, ob["h"],
             boxstyle="round,pad=0.06",
-            fc=C["obs"], ec=C["obs_e"], lw=0.6, zorder=5,
+            fc=C["obs"], alpha=0.25, ec=C["obs_e"], lw=0.8, zorder=5,
         ))
 
     # Target
     th = 0 if axis == "x" else 1
-    ax.plot(TARGET[th], TARGET[2], "*",
-            color=C["target"], ms=10, zorder=10, mew=0.4)
+    ax.plot(TARGET[th], TARGET[2], "o",
+            color=C["target"], ms=7, zorder=10)
 
     # Drone at spawn
-    ax.plot(0, SZ, "^", color=C["drone"], ms=7, zorder=10)
+    ax.plot(0, SZ, "v", color=C["drone"], ms=7, zorder=10)
 
     # Axes
     ax.set_xlabel(f"${axis}$ (m)")
@@ -104,14 +102,18 @@ for ax, axis, hr, sr in [
     ax.set_xlim(hr[0] - 0.6, hr[1] + 0.6)
     ax.set_ylim(-0.8, CZ[1] + 1.8)
     ax.set_yticks([0, 1, 2, 7, 12, 15])
+    ax.set_facecolor("#ffffff")
     ax.spines["top"].set_visible(False)
     ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_color("black")
+    ax.spines["bottom"].set_color("black")
+    ax.tick_params(colors="black")
 
 # ── Slalom path (XZ) ───────────────────────────────────────────────
-z_wp = np.array([1.0, 1.8, 2.0, 4.5, 6.0, 7.0, 8.5, 10.5, 12.0])
-x_wp = np.array([0.0, -0.6, -1.0, -0.3, 0.6, 1.0, 0.7, 0.2, 0.0])
+z_wp = np.array([1.0, 2.0, 3.0, 5.0, 6.0, 7.0, 8.5, 10.5, 11.6])
+x_wp = np.array([0.0, -1.0, -1.3, 0.0, 1.0, 1.3, 0.5, 0.1, 0.0])
 cs = CubicSpline(z_wp, x_wp)
-z_f = np.linspace(1.0, 12.0, 250)
+z_f = np.linspace(1.0, 11.6, 250)
 x_f = cs(z_f)
 ax_xz.plot(x_f, z_f, color=C["path"], lw=1.0, ls="--", alpha=0.6, zorder=8)
 
@@ -125,18 +127,8 @@ for frac in (0.35, 0.70):
         zorder=9,
     )
 
-# ── Vertical descent path (YZ) ─────────────────────────────────────
-ax_yz.plot([0, 0], [SZ, TARGET[2]], color=C["path"], lw=1.0,
-           ls="--", alpha=0.6, zorder=8)
-ax_yz.annotate(
-    "", xy=(0, 6), xytext=(0, 8),
-    arrowprops=dict(arrowstyle="-|>", color=C["path"], lw=0,
-                    mutation_scale=9),
-    zorder=9,
-)
-
 # ── Dimension annotations ──────────────────────────────────────────
-for ax, rng, label in [(ax_xz, CX, "5\\,m"), (ax_yz, CY, "2\\,m")]:
+for ax, rng, label in [(ax_xz, CX, "5\\,m")]:
     dz = CZ[1] + 0.4
     ax.annotate(
         "", xy=(rng[1], dz), xytext=(rng[0], dz),
@@ -145,9 +137,6 @@ for ax, rng, label in [(ax_xz, CX, "5\\,m"), (ax_yz, CY, "2\\,m")]:
     ax.text((rng[0] + rng[1]) / 2, dz + 0.55,
             label, ha="center", fontsize=7.5, color="#888888")
 
-# ── Panel titles ────────────────────────────────────────────────────
-ax_xz.set_title("Seitenansicht ($xz$-Ebene)", fontsize=9, pad=10)
-ax_yz.set_title("Seitenansicht ($yz$-Ebene)", fontsize=9, pad=10)
 
 # ── Legend (XZ panel, upper left) ───────────────────────────────────
 legend_handles = [
@@ -155,20 +144,22 @@ legend_handles = [
            label="Korridorgrenze"),
     mpatches.Patch(fc=C["spawn"], alpha=0.22, ec=C["spawn"], lw=0.6,
                    label="Startbereich"),
-    mpatches.Patch(fc=C["obs"], ec=C["obs_e"], lw=0.6,
+    mpatches.Patch(fc=C["obs"], alpha=0.25, ec=C["obs_e"], lw=0.8,
                    label="Hindernis (AABB)"),
-    Line2D([0], [0], marker="*", color=C["target"], ls="None", ms=8,
+    Line2D([0], [0], marker="o", color=C["target"], ls="None", ms=6,
            label="Landeziel"),
-    Line2D([0], [0], marker="^", color=C["drone"], ls="None", ms=5,
+    Line2D([0], [0], marker="v", color=C["drone"], ls="None", ms=5,
            label="Drohne (Start)"),
     Line2D([0], [0], color=C["path"], ls="--", lw=0.8, alpha=0.6,
            label="Flugbahn (Slalom)"),
 ]
-ax_xz.legend(
-    handles=legend_handles, loc="upper left", fontsize=6.5,
+fig.legend(
+    handles=legend_handles, loc="lower center", ncol=3, fontsize=6.5,
     framealpha=0.92, borderpad=0.5, handletextpad=0.4, handlelength=1.6,
+    bbox_to_anchor=(0.5, -0.12),
 )
 
+fig.patch.set_facecolor("#ffffff")
 fig.tight_layout()
 out = os.path.join(os.path.dirname(os.path.abspath(__file__)),
                    "corridor_geometry.pdf")
