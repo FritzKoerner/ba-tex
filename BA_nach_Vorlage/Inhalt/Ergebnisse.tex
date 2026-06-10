@@ -28,12 +28,13 @@ Von den sechs Seeds konvergieren vier zu einer funktionsfähigen Strategie
 in über 900~Iterationen keine einzige erfolgreiche Landung, obwohl sie
 Absturzvermeidung erlernen (sinkende Absturzrate). Die konvergierenden
 Seeds zeigen einen charakteristischen Verlauf: Die kumulative Belohnung
-steigt zunächst durch die dichten Belohnungskomponenten. Ab der ersten
+steigt zunächst durch die dichten Belohnungskomponenten
+(Anhang~\ref{app:training_curves} zeigt die Einzelverläufe für Seed~0). Ab der ersten
 erfolgreichen Landung (zwischen Iteration~202 und~594, je nach Seed)
 beschleunigt die Erfolgsbelohnung den Anstieg. Die Standardabweichung
 der Aktionsverteilung fällt bei allen sechs Seeds nahezu identisch von
 0,99 auf circa 0,15, unabhängig vom Belohnungsverlauf
-(Abbildung~\ref{fig:rew_prox_std} im Anhang).
+(Abbildung~\ref{fig:policy_std_seeds} im Anhang).
 
 \begin{table}[H]
   \centering
@@ -68,7 +69,7 @@ Die Standardabweichung bleibt dabei nahezu unverändert ($0{,}193
 Strategie, nicht die Explorationsbreite.
 
 Der beste Checkpoint liegt bei Iteration~400 von Seed~0 (10,4~Stunden
-Trainingszeit, kumulative Belohnung 23,0). Seed~0 stellt den
+Trainingszeit, kumulative Belohnung 23,0; Tabelle~\ref{tab:konvergenz}). Seed~0 stellt den
 leistungsstärksten der sechs Seeds dar. Die Evaluationsergebnisse in den
 folgenden Abschnitten bilden daher eine günstige, nicht die erwartete
 Leistung ab. Auf Basis des Belohnungsverlaufs wurde dieser Checkpoint
@@ -123,14 +124,14 @@ geringem Sicherheitsabstand aus (mittlerer Minimalabstand 0,52\,m).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.32\textwidth]{figures/eval/trajectory_ep1.pdf}%
+    \includegraphics[width=0.48\textwidth]{Bilder/trajectories/trajectory_success.pdf}%
     \hfill
-    \includegraphics[width=0.32\textwidth]{figures/eval/trajectory_ep2.pdf}%
-    \hfill
-    \includegraphics[width=0.32\textwidth]{figures/eval/trajectory_ep3.pdf}
-    \caption[Exemplarische 3D-Trajektorien in Phase~1]{Exemplarische
-    3D-Trajektorien dreier erfolgreicher Episoden. Graue Quader: AABB der
-    Hindernisse. Grünes Dreieck: Startposition, roter Punkt: Landeziel.}
+    \includegraphics[width=0.48\textwidth]{Bilder/trajectories/trajectory_crash.pdf}
+    \caption[Simulationsansicht erfolgreicher und gescheiterter
+    Episode]{Simulationsansicht einer erfolgreichen Landung (links) und
+    einer Hinderniskollision (rechts). Die Flugbahn ist als farbige Linie
+    dargestellt; GSO-Hindernisse sind in ihrer tatsächlichen Geometrie
+    sichtbar.}
     \label{fig:phase1_trajectories}
 \end{figure}
 
@@ -236,7 +237,9 @@ Das letzte Flugsegment wird aufgrund des automatischen Zurücksetzens der
 Umgebung nicht erfasst.} Dem steht ein einmaliger Trainingsaufwand von
 circa 24~Stunden gegenüber. Detaillierte Metriken mit
 Konfidenzintervallen finden sich in den
-Anhangstabellen~\ref{tab:phase1_results} und~\ref{tab:phase2_results}. Tabelle~\ref{tab:vergleich_rl_rrt} stellt die Ergebnisse beider Verfahren
+Anhangstabellen~\ref{tab:phase1_results} und~\ref{tab:phase2_results}
+(RL) sowie~\ref{tab:phase1_rrt_results}
+und~\ref{tab:phase2_rrt_results} (RRT-Connect). Tabelle~\ref{tab:vergleich_rl_rrt} stellt die Ergebnisse beider Verfahren
 gegenüber.
 
 \begin{table}[H]

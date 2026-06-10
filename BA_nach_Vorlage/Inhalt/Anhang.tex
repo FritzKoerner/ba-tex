@@ -1,14 +1,16 @@
 \appsection{Ergänzende Trainingsverläufe Seed 0}
 \label{app:training_curves}
 
+Alle Verläufe sind mit exponentiellem gleitendem Mittelwert (EMA, $\alpha = 0{,}9$) geglättet.
+
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_progress_raw.pdf}
     \hfill
     \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_close_raw.pdf}
-    \caption[Fortschrittsbelohnung und SNäherungsbelohnung]{Fortschrittsbelohnung
+    \caption[Fortschrittsbelohnung und Näherungsbelohnung]{Fortschrittsbelohnung
     (links) und Näherungsbelohnung (rechts). Beide Komponenten steigen mit
-    zunehmender Annäherung an das Ziel. WGeglättet mit EMA $\alpha = 0{,}9$.}
+    zunehmender Annäherung an das Ziel.}
     \label{fig:rew_progress_close}
 \end{figure}
 
@@ -19,7 +21,7 @@
     \includegraphics[width=0.48\textwidth]{figures/training/Episode_rew_crash_raw.pdf}
     \caption[Hindernisabstandsstrafe und Absturzstrafe]{Hindernisabstandsstrafe
     (links) und Absturzstrafe (rechts). Beide Strafkomponenten fallen mit
-    zunehmender Kollisionsvermeidung. Geglättet mit EMA $\alpha = 0{,}9$.}
+    zunehmender Kollisionsvermeidung.}
     \label{fig:rew_prox_crash}
 \end{figure}
 
@@ -31,7 +33,7 @@
     \caption[Erfolgsbelohnung und Episodenlänge]{Erfolgsbelohnung (links) und
     mittlere Episodenlänge (rechts). Der Anstieg der Erfolgsbelohnung markiert
     den Beginn erfolgreicher Landungen. Die Episodenlänge gibt die Anzahl der
-    Entscheidungsschritte pro Episode an. Geglättet mit EMA $\alpha = 0{,}9$.}
+    Entscheidungsschritte pro Episode an.}
     \label{fig:rew_success_eplen}
 \end{figure}
 
@@ -42,8 +44,7 @@
     \includegraphics[width=0.48\textwidth]{figures/training/Loss_entropy.pdf}
     \caption[Standardabweichung und Entropie]{Mittlere Standardabweichung der
     Aktionsverteilung (links) und Entropie (rechts). Beide Maße fallen
-    monoton und spiegeln die abnehmende Exploration wider.
-    Geglättet mit EMA $\alpha = 0{,}9$.}
+    monoton und spiegeln die abnehmende Exploration wider.}
     \label{fig:rew_prox_std}
 \end{figure}
 
@@ -53,8 +54,23 @@
     \hfill
     \includegraphics[width=0.48\textwidth]{figures/training/Loss_value.pdf}
     \caption[Surrogatverlust und Wertverlust]{PPO-Surrogatverlust (links) und
-    Wertverlust (rechts). Geglättet mit EMA $\alpha = 0{,}9$.}
+    Wertverlust (rechts).}
     \label{fig:loss_surrogate_value}
+\end{figure}
+
+
+\appsection{Standardabweichung über alle Seeds}
+\label{app:std_seeds}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Bilder/seed_analysis/policy_std_seeds.pdf}
+    \caption[Standardabweichung der Aktionsverteilung]{Mittlere
+    Standardabweichung der Aktionsverteilung über alle sechs Seeds. Der
+    Verlauf ist nahezu identisch und fällt von 0,99 auf circa 0,15,
+    unabhängig vom jeweiligen Belohnungsverlauf. Geglättet mit EMA
+    $\alpha = 0{,}9$.}
+    \label{fig:policy_std_seeds}
 \end{figure}
 
 
@@ -85,12 +101,8 @@
     Landezeit (Median)                & 30,0\,s            & IQR [27,0;\; 36,0] \\
     Pfadeffizienz (Median)            & 1,19               & IQR [1,13;\; 1,25] \\
     Min.\ Hindernisabstand (Mittel)   & 0,52\,m            & [0,50;\; 0,54] \\
-    Min.\ Hindernisabstand (global)\textsuperscript{*}   & 0,00\,m            & — \\
     \bottomrule
   \end{tabular}
-
-  \smallskip
-  \textsuperscript{*}Stammt aus Episoden, die mit Kollision endeten (Distanz~$= 0$ bei Kontakt).
 \end{table}
 
 
@@ -122,12 +134,40 @@
     Landezeit (Median)                & 33,0\,s            & IQR [30,0;\; 36,0] \\
     Pfadeffizienz (Median)            & 1,19               & IQR [1,13;\; 1,25] \\
     Min.\ Hindernisabstand (Mittel)   & 0,51\,m            & [0,49;\; 0,53] \\
-    Min.\ Hindernisabstand (global)\textsuperscript{*}   & 0,00\,m            & — \\
     \bottomrule
   \end{tabular}
+\end{table}
 
-  \smallskip
-  \textsuperscript{*}Stammt aus Episoden, die mit Kollision endeten (Distanz~$= 0$ bei Kontakt).
+
+\appsection{Phase-1-Evaluationsmetriken (RRT-Connect)}
+\label{app:phase1_rrt_metrics}
+
+\begin{table}[H]
+  \centering
+  \caption[Phase-1-Ergebnisse des RRT-Connect-Planers]{Phase-1-Ergebnisse des
+  RRT-Connect-Planers ($1\,000$~Episoden, Checkpoint~400, ungesehene Hindernisse).
+  Konfidenzintervalle: 95\,\%-Bootstrap (Perzentilmethode, $B = 10\,000$).
+  Landezeit und Pfadeffizienz beziehen sich ausschließlich auf
+  erfolgreiche Episoden ($n = 820$).}
+  \label{tab:phase1_rrt_results}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r}
+    \toprule
+    \textbf{Metrik} & \textbf{Wert} & \textbf{95\,\%-KI / IQR} \\
+    \midrule
+    Erfolgsrate                       & 82,0\,\%          & [79,6;\; 84,4] \\
+    \addlinespace
+    Hinderniskollision                & 18,0\,\% (180)    & [15,6;\; 20,4] \\
+    Verlassen des Korridors           & 0,0\,\% (0)       & — \\
+    Bodenkollision                    & 0,0\,\% (0)       & — \\
+    Timeout                           & 0,0\,\% (0)       & — \\
+    \addlinespace
+    Landezeit (Median)                & 42,0\,s            & IQR [42,0;\; 48,0] \\
+    Pfadeffizienz (Median)            & 1,09               & IQR [1,07;\; 1,20] \\
+    Min.\ Hindernisabstand (Mittel)   & 0,48\,m            & [0,47;\; 0,49] \\
+    \bottomrule
+  \end{tabular}
 \end{table}
 
 
@@ -160,12 +200,41 @@
     Pfadeffizienz (Median)            & 1,07               & IQR [1,05;\; 1,09] \\
     Finale Zieldistanz (Median)       & 1,19\,m            & — \\
     Min.\ Terrain-Abstand (Mittel)    & 1,02\,m            & [0,98;\; 1,06] \\
-    Min.\ Terrain-Abstand (global)\textsuperscript{*}    & 0,00\,m            & — \\
     \bottomrule
   \end{tabular}
+\end{table}
 
-  \smallskip
-  \textsuperscript{*}Stammt aus Episoden, die mit Terrain-Kollision endeten (Distanz~$= 0$ bei Kontakt).
+
+\appsection{Phase-2-Evaluationsmetriken (RRT-Connect)}
+\label{app:phase2_rrt_metrics}
+
+\begin{table}[H]
+  \centering
+  \caption[Phase-2-Ergebnisse des RRT-Connect-Planers]{Phase-2-Ergebnisse des
+  RRT-Connect-Planers ($1\,000$~Episoden, Checkpoint~400, Weinberg-Transfer,
+  Erfolgsradius $0{,}5$\,m).
+  Konfidenzintervalle: 95\,\%-Bootstrap (Perzentilmethode, $B = 10\,000$).
+  Landezeit und Pfadeffizienz beziehen sich ausschließlich auf
+  erfolgreiche Episoden ($n = 857$).}
+  \label{tab:phase2_rrt_results}
+  \small
+  \renewcommand{\arraystretch}{1.1}
+  \begin{tabular}{l r r}
+    \toprule
+    \textbf{Metrik} & \textbf{Wert} & \textbf{95\,\%-KI / IQR} \\
+    \midrule
+    Erfolgsrate                       & 85,7\,\%          & [83,5;\; 87,9] \\
+    \addlinespace
+    Terrain-Kollision                 & 7,1\,\% (71)      & [5,6;\; 8,7] \\
+    Timeout                           & 7,9\,\% (79)      & [6,3;\; 9,6] \\
+    Bodenkollision                    & \multicolumn{2}{c}{entfällt (kein fester Bodenkollisions-Check)} \\
+    Verlassen des Korridors           & \multicolumn{2}{c}{entfällt (kein Korridorbegrenzungsrahmen)} \\
+    \addlinespace
+    Landezeit (Median)                & 42,0\,s            & IQR [39,0;\; 48,0] \\
+    Pfadeffizienz (Median)            & 0,99               & IQR [0,97;\; 1,00] \\
+    Min.\ Terrain-Abstand (Mittel)    & 0,46\,m            & [0,45;\; 0,47] \\
+    \bottomrule
+  \end{tabular}
 \end{table}
 
 

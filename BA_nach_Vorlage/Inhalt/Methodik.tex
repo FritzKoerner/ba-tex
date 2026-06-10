@@ -34,10 +34,9 @@ ausschließlich lernen, \emph{wohin} die Drohne fliegen soll.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{Bilder/pipeline.pdf}
-    \caption{Systemarchitektur mit zwei Steuerungsebenen: Der RL-Agent
-    (oben) erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und
-    gibt Sollwerte vor. Der PID-Regler (unten) setzt diese über
-    300~Simulationsschritte in Motordrehzahlen um.}
+    \caption[Systemarchitektur]{Architektur des vorgestellten Systems: Der RL-Agent
+    erhält Tiefenbild und Zustandsvektor, sampelt eine Aktion und
+    gibt Sollwerte vor. Der PID-Regler setzt diese über in Motordrehzahlen um.}
     \label{fig:meth_pipeline}
 \end{figure}
 
@@ -73,7 +72,7 @@ Die Tilde kennzeichnet skalierte und auf $[-1,1]$ geklippte Werte.
 
 \begin{table}[ht]
 \centering
-\caption{Komponenten des Zustandsvektors $\mathbf{o}_t \in \mathbb{R}^{17}$.}
+\caption[Komponenten des Zustandsvektors]{Komponenten des Zustandsvektors $\mathbf{o}_t \in \mathbb{R}^{17}$.}
 \label{tab:meth_obs}
 \small
 \begin{tabular}{l c l c}
@@ -123,7 +122,7 @@ Sollgierwinkel fest:
 $\psi_{\mathrm{soll}} = a_\psi \cdot 180^{\circ}$.
 Die Sollwerte werden nicht direkt an die Motoren übergeben, sondern von
 einem kaskadierenden PID-Regler in Motordrehzahlen umgesetzt
-(vgl.\ Abschnitt~\ref{subsec:meth_pid}).
+(vgl.\ Abschnitt~\ref{sec:meth_pid}).
 
 \subsection{Übergangsmodell}
 \label{subsec:meth_uebergangsmodell}
@@ -243,7 +242,7 @@ Abbildung~\ref{fig:meth_architecture} zeigt die vollständige Architektur.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=\linewidth]{Bilder/architecture.pdf}
-    \caption{Netzwerkarchitektur: Geteilter CNN-Encoder (drei
+    \caption[Netzwerkarchitektur]{Netzwerkarchitektur: Geteilter CNN-Encoder (drei
     Faltungsschichten mit Batch-Normalisierung, ELU und Global Max Pooling)
     erzeugt einen 128-dimensionalen Merkmalsvektor, der mit dem
     normalisierten Zustandsvektor konkateniert und an die getrennten
@@ -272,7 +271,7 @@ zwischen ausgeführter und bewerteter Aktion führt zu verzerrten Gradienten.
 
 Statt
 Clipping wird eine invertierbare
-Transformation~\autocite{haarnojaSoftActorCriticOffPolicy2018S} verwendet:
+Transformation~\autocite{haarnojaSoftActorCriticOffPolicy2018} verwendet:
 \begin{equation} \label{eq:meth_tanh_squashing}
   a_i = \tanh(u_i), \quad u_i \sim \mathcal{N}(\mu_i, \sigma_i^2).
 \end{equation}
@@ -296,7 +295,7 @@ schulmanHighDimensionalContinuousControl2016}.
 
 \begin{table}[ht]
 \centering
-\caption{PPO-Hyperparameter.}
+\caption{Hyperparameter des PPO-Algorithmus.}
 \label{tab:meth_ppo_hyperparams}
 \small
 \begin{tabular}{l l}
@@ -365,7 +364,7 @@ $z \approx 2$\,m und $z \approx 7$\,m.
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.85\linewidth]{Bilder/corridor_geometry.pdf}
+    \includegraphics[width=0.6\linewidth]{Bilder/corridor_geometry.pdf}
     \caption[Korridorgeometrie]{Schematische Seitenansicht der
     Korridorgeometrie ($xz$-Ebene) mit Slalom-Flugbahn.}
     \label{fig:meth_corridor}
@@ -382,7 +381,11 @@ und die Hindernisproximität
 (vgl.\ Abschnitt~\ref{subsec:meth_belohnung}) wird die achsenparallele
 Begrenzungsbox (AABB) jedes Objekts herangezogen. Diese konservative
 Approximation umschließt das Mesh vollständig, sodass die Drohne bereits
-vor Berührung der tatsächlichen Oberfläche als kollidiert gilt. Die
+vor Berührung der tatsächlichen Oberfläche als kollidiert gilt.
+Eine oberflächenbasierte Kontakterkennung wäre geometrisch präziser,
+erfordert jedoch pro Zeitschritt Kollisionsabfragen gegen die vollständigen
+Mesh-Geometrien aller Hindernisse, was bei 512 parallelen Umgebungen den
+Trainingsdurchsatz erheblich reduziert. Die
 Platzierung folgt einem erzwungenen Slalom entlang der $x$-Achse: Pro
 Hindernisschicht wird ein zufällig gewähltes Objekt auf einer Seite der
 Korridormitte positioniert ($0{,}6$ bis $1{,}2$\,m Versatz);
@@ -394,14 +397,14 @@ während eines Abstiegs.
     \centering
     \includegraphics[width=0.55\linewidth]{Bilder/corridor_screenshot.pdf}
     \caption[Simulationsansicht des Korridors]{Simulationsansicht mit
-    GSO-Hindernissen während eines Abstiegs. Die Drohne navigiert
+    GSO-Hindernissen während des Trainings. Die Drohne navigiert
     zwischen zwei skalierten Mesh-Objekten zum Landeziel (rot).}
     \label{fig:meth_corridor_sim}
 \end{figure}
 
 %% ==========================================================================
 \section{Kaskadierender PID-Regler}
-\label{subsec:meth_pid}
+\label{sec:meth_pid}
 
 Der RL-Agent gibt Sollposition und Sollgierwinkel vor. Ein dreistufiger
 kaskadierender PID-Regler (Proportional-Integral-Derivative; Position
@@ -426,7 +429,7 @@ anhand des Belohnungsverlaufs (Early Stopping).
 
 \begin{table}[ht]
 \centering
-\caption{Trainingsparameter.}
+\caption{Konfiguration des Trainingsprozesses.}
 \label{tab:meth_training}
 \small
 \begin{tabular}{l l}
@@ -463,8 +466,7 @@ Perzentilmethode)~\autocite{efronIntroductionBootstrap1994} versehen.
 Erhoben werden: \textbf{Erfolgsrate}, \textbf{Fehlerartenverteilung}
 (Hinderniskollision, Bodenkollision, Korridorverlassen, Timeout),
 \textbf{Landezeit} (Median mit Interquartilsabstand (IQR), nur erfolgreiche Episoden),
-\textbf{minimaler Hindernisabstand} (AABB-basiert, Mittelwert und globales
-Minimum), \textbf{Pfadeffizienz}
+\textbf{minimaler Hindernisabstand} (AABB-basiert, Mittelwert), \textbf{Pfadeffizienz}
 \begin{equation} \label{eq:meth_path_efficiency}
   \eta_{\mathrm{Pfad}} = \frac{\sum_{t=0}^{T-1} \lVert \mathbf{p}_{t+1} - \mathbf{p}_t \rVert}
   {\lVert \mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_0 \rVert}
@@ -488,13 +490,24 @@ propriozeptiven Zustandsvektor erhält.
 
 Die zweite Versuchsreihe untersucht den Zero-Shot-Transfer in eine
 photogrammetrisch erfasste Weinbergumgebung (Eltville, Deutschland,
-vierfache Skalierung). Die Kollisionserkennung erfolgt über ein
-vorberechnetes Höhenraster mit einem Sicherheitsabstand von $0{,}5$\,m;
-die AABB-basierte Hinderniskollision und die Korridorgrenzenprüfung
-entfallen. Als Landeziele dienen 20~vordefinierte Positionen
-(15~zwischen Rebenreihen, 5~auf offenem Gelände). Die Drohne wird in
-variabler Höhe ($10$ bis $15$\,m) über dem Ziel initialisiert.
+vierfache Skalierung, Abbildung~\ref{fig:vineyard_mesh}). Die
+Kollisionserkennung erfolgt über ein vorberechnetes Höhenraster mit
+einem Sicherheitsabstand von $0{,}5$\,m; die AABB-basierte
+Hinderniskollision und die Korridorgrenzenprüfung entfallen. Als
+Landeziele dienen 20~vordefinierte Positionen (15~zwischen Rebenreihen,
+5~auf offenem Gelände). Die Drohne wird in variabler Höhe ($10$ bis
+$15$\,m) über dem Ziel initialisiert.
 Abbildung~\ref{fig:meth_vineyard_targets} zeigt die Zielpositionen.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{Bilder/vineyard_mesh.pdf}
+    \caption[Photogrammetrisches Weinberg-Mesh]{Photogrammetrisch
+    erfasstes Weinberg-Mesh (Eltville, Deutschland) in vierfacher
+    Skalierung. Die diagonalen Strukturen sind die Rebenreihen,
+    zwischen denen die Landeziele platziert sind.}
+    \label{fig:vineyard_mesh}
+\end{figure}
 
 \begin{figure}[H]
     \centering

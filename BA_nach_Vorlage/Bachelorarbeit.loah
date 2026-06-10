@@ -1,5 +1,8 @@
-\contentsline {anhang}{\numberline {A}Ergänzende Trainingsverläufe Seed 0}{VIII}{chapter*.115}%
-\contentsline {anhang}{\numberline {B}Phase-1-Evaluationsmetriken}{X}{chapter*.122}%
-\contentsline {anhang}{\numberline {C}Phase-1-Evaluationsmetriken (oberflächenbasierte Kollisionserkennung)}{XI}{chapter*.125}%
-\contentsline {anhang}{\numberline {D}Phase-2-Evaluationsmetriken}{XII}{chapter*.128}%
-\contentsline {anhang}{\numberline {E}PID-Reglerparameter}{XIII}{chapter*.131}%
+\contentsline {anhang}{\numberline {A}Ergänzende Trainingsverläufe Seed 0}{VIII}{chapter*.116}%
+\contentsline {anhang}{\numberline {B}Standardabweichung über alle Seeds}{X}{chapter*.123}%
+\contentsline {anhang}{\numberline {C}Phase-1-Evaluationsmetriken}{XI}{chapter*.126}%
+\contentsline {anhang}{\numberline {D}Phase-1-Evaluationsmetriken (oberflächenbasierte Kollisionserkennung)}{XII}{chapter*.129}%
+\contentsline {anhang}{\numberline {E}Phase-1-Evaluationsmetriken (RRT-Connect)}{XIII}{chapter*.132}%
+\contentsline {anhang}{\numberline {F}Phase-2-Evaluationsmetriken}{XIV}{chapter*.135}%
+\contentsline {anhang}{\numberline {G}Phase-2-Evaluationsmetriken (RRT-Connect)}{XV}{chapter*.138}%
+\contentsline {anhang}{\numberline {H}PID-Reglerparameter}{XVI}{chapter*.141}%

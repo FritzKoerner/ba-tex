@@ -16,7 +16,7 @@ Ein \Fachbegriff{Markov Decision Process} (MDP) formalisiert Reinforcement Learn
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.65\linewidth]{Bilder/mdp_agent_environment.pdf}
-    \caption{Interaktion zwischen Agent und Umgebung in einem MDP (nach \cite{suttonReinforcementLearningIntroduction2020}, S.~48).}
+    \caption[Agent-Umgebung-Interaktion im MDP]{Interaktion zwischen Agent und Umgebung in einem MDP (nach \cite{suttonReinforcementLearningIntroduction2020}, S.~48).}
     \label{fig:mdp_agent_environment}
 \end{figure}
 
@@ -94,7 +94,7 @@ Erfahrungen gebremst, während schlechte Aktionen voll korrigiert werden.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.85\linewidth]{Bilder/ppo_clipping.pdf}
-    \caption{$L^{\mathrm{CLIP}}$ als Funktion des
+    \caption[PPO-Clipping-Funktion]{$L^{\mathrm{CLIP}}$ als Funktion des
     Wahrscheinlichkeitsverhältnisses~$r$. Links ($\hat{A}_t > 0$): der Anreiz wird bei
     $1 + \varepsilon$ gekappt. Rechts ($\hat{A}_t < 0$): die Korrektur bleibt
     uneingeschränkt (nach \autocite{schulmanProximalPolicyOptimization2017}, Fig.~1).}

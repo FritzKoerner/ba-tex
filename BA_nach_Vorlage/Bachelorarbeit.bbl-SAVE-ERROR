@@ -80,72 +80,6 @@
       \endverb
       \keyw{autonomous landing,Autonomous systems,Classification algorithms,Deep reinforcement learning,drones,Drones,Heuristic algorithms,overview,Q-learning,Reinforcement learning,Vehicle dynamics}
     \endentry
-    \entry{arafatVisionBasedNavigationTechniques2023}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=ad9674929b2c322a3a38f1495f84da83}{%
-           family={Arafat},
-           familyi={A\bibinitperiod},
-           given={Muhammad\bibnamedelima Yeasir},
-           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=db1adc05975a2376f4003361cb1052a7}{%
-           family={Alam},
-           familyi={A\bibinitperiod},
-           given={Muhammad\bibnamedelima Morshed},
-           giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=5ca6fbfbd0da38d8216d256415e788a0}{%
-           family={Moh},
-           familyi={M\bibinitperiod},
-           given={Sangman},
-           giveni={S\bibinitperiod},
-           givenun=0}}%
-      }
-      \list{publisher}{1}{%
-        {Multidisciplinary Digital Publishing Institute}%
-      }
-      \strng{namehash}{e2f5e168a6034c078260bb646c6c6e91}
-      \strng{fullhash}{65074bb7f14cb24acbbe7620b245da49}
-      \strng{bibnamehash}{65074bb7f14cb24acbbe7620b245da49}
-      \strng{authorbibnamehash}{65074bb7f14cb24acbbe7620b245da49}
-      \strng{authornamehash}{e2f5e168a6034c078260bb646c6c6e91}
-      \strng{authorfullhash}{65074bb7f14cb24acbbe7620b245da49}
-      \field{sortinit}{A}
-      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{shorttitle}
-      \field{abstract}{In recent years, unmanned aerial vehicles (UAVs), commonly known as drones, have gained increasing interest in both academia and industries. The evolu...}
-      \field{day}{27}
-      \field{issn}{2504-446X}
-      \field{journaltitle}{Drones}
-      \field{langid}{english}
-      \field{month}{1}
-      \field{number}{2}
-      \field{shorttitle}{Vision-{{Based Navigation Techniques}} for {{Unmanned Aerial Vehicles}}}
-      \field{title}{Vision-{{Based Navigation Techniques}} for {{Unmanned Aerial Vehicles}}: {{Review}} and {{Challenges}}}
-      \field{urlday}{13}
-      \field{urlmonth}{5}
-      \field{urlyear}{2026}
-      \field{volume}{7}
-      \field{year}{2023}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \verb{doi}
-      \verb 10.3390/drones7020089
-      \endverb
-      \verb{file}
-      \verb /home/fritz-sfl/Zotero/storage/Z73G6ESX/Arafat et al. - 2023 - Vision-Based Navigation Techniques for Unmanned Aerial Vehicles Review and Challenges.pdf
-      \endverb
-      \verb{urlraw}
-      \verb https://www.mdpi.com/2504-446X/7/2/89
-      \endverb
-      \verb{url}
-      \verb https://www.mdpi.com/2504-446X/7/2/89
-      \endverb
-      \keyw{computer vision,drone,localization,mapping,navigation,obstacle avoidance,path planning,unmanned aerial vehicle}
-    \endentry
     \entry{bartolomeiAutonomousEmergencyLanding2022}{inproceedings}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=6d32bbe0bffb37cc564df8adb6c87702}{%
@@ -273,6 +207,69 @@
       \verb https://www.nature.com/articles/s41893-020-0510-0
       \endverb
       \keyw{Agriculture,Ecology,Environmental sciences,Plant sciences}
+    \endentry
+    \entry{botschParametrischeMethoden2023}{incollection}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=391fb690a081426094e45f4ffc0c372e}{%
+           family={Botsch},
+           familyi={B\bibinitperiod},
+           given={Benny},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{1}{}{%
+        {{hash=391fb690a081426094e45f4ffc0c372e}{%
+           family={Botsch},
+           familyi={B\bibinitperiod},
+           given={Benny},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{fullhash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{bibnamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{authorbibnamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{authornamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{authorfullhash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{editorbibnamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{editornamehash}{391fb690a081426094e45f4ffc0c372e}
+      \strng{editorfullhash}{391fb690a081426094e45f4ffc0c372e}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Maschinelle Lernverfahren können auf unterschiedliche Art und Weise unterteilt werden. In den Abschn.~1.2 bis 1.5 haben wir uns bereits mit einer Unterteilung von Lernverfahren beschäftigt. Diese Verfahren beschreiben, wie und vor allem welche Daten beim Lernvorgang zur Verfügung stehen. Eine weitere Unterteilung erfolgt in sogenannte parametrische und nichtparametrische Verfahren. Bei parametrischen Lernverfahren stehen vor dem Training die Anzahl der Parameter und die grundsätzliche Struktur fest. Bei nichtparametrischen Lernverfahren wird die Anzahl an Parametern erst zur Laufzeit des Trainings bestimmt. Wir beginnen zunächst mit den parametrischen Lernverfahren.}
+      \field{booktitle}{Maschinelles Lernen - Grundlagen und Anwendungen: Mit Beispielen in Python}
+      \field{isbn}{978-3-662-67277-8}
+      \field{langid}{ngerman}
+      \field{title}{Parametrische Methoden}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{61\bibrangedash 102}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1007/978-3-662-67277-8_5
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/V9AHC7B8/Botsch - 2023 - Parametrische Methoden.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-662-67277-8_5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-662-67277-8_5
+      \endverb
     \endentry
     \entry{calvinIPCC2023Climate2023}{report}{}
       \name{author}{85}{}{%
@@ -1671,7 +1668,7 @@
       \verb /home/fritz-sfl/Zotero/storage/RZ75LXEZ/Guebsi et al. - 2024 - Drones in precision agriculture a comprehensive review of applications, technologies, and challenge.pdf
       \endverb
     \endentry
-    \entry{haarnojaOffPolicyMaximumEntropy2017}{inproceedings}{}
+    \entry{haarnojaSoftActorCriticOffPolicy2018}{online}{}
       \name{author}{4}{}{%
         {{un=0,uniquepart=base,hash=45b14f55dd7ae28cb6cb2e23e4a168b9}{%
            family={Haarnoja},
@@ -1698,9 +1695,6 @@
            giveni={S\bibinitperiod},
            givenun=0}}%
       }
-      \list{publisher}{1}{%
-        {PMLR}%
-      }
       \strng{namehash}{b8c131de85c5000ff50df59a4d062227}
       \strng{fullhash}{951e86110020d3107317b3e819f3d92d}
       \strng{bibnamehash}{951e86110020d3107317b3e819f3d92d}
@@ -1712,21 +1706,37 @@
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
       \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Proceedings of the 35th {{International Conference}} on {{Machine Learning}}}
-      \field{series}{Proceedings of {{Machine Learning Research}}}
-      \field{title}{Off-{{Policy Maximum Entropy Deep Reinforcement Learning}} with a {{Stochastic Actor}}}
-      \field{volume}{80}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Model-free deep reinforcement learning (RL) algorithms have been demonstrated on a range of challenging decision making and control tasks. However, these methods typically suffer from two major challenges: very high sample complexity and brittle convergence properties, which necessitate meticulous hyperparameter tuning. Both of these challenges severely limit the applicability of such methods to complex, real-world domains. In this paper, we propose soft actor-critic, an off-policy actor-critic deep RL algorithm based on the maximum entropy reinforcement learning framework. In this framework, the actor aims to maximize expected reward while also maximizing entropy. That is, to succeed at the task while acting as randomly as possible. Prior deep RL methods based on this framework have been formulated as Q-learning methods. By combining off-policy updates with a stable stochastic actor-critic formulation, our method achieves state-of-the-art performance on a range of continuous control benchmark tasks, outperforming prior on-policy and off-policy methods. Furthermore, we demonstrate that, in contrast to other off-policy algorithms, our approach is very stable, achieving very similar performance across different random seeds.}
+      \field{day}{8}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{month}{8}
+      \field{pubstate}{prepublished}
+      \field{shorttitle}{Soft {{Actor-Critic}}}
+      \field{title}{Soft {{Actor-Critic}}: {{Off-Policy Maximum Entropy Deep Reinforcement Learning}} with a {{Stochastic Actor}}}
+      \field{urlday}{8}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
       \field{year}{2018}
       \field{dateera}{ce}
-      \field{pages}{1861\bibrangedash 1870}
-      \range{pages}{10}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.1801.01290
+      \endverb
+      \verb{eprint}
+      \verb 1801.01290
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/IWZNQUUG/Haarnoja et al. - 2018 - Soft Actor-Critic Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor.pdf;/home/fritz-sfl/Zotero/storage/4HT92PGJ/1801.html
+      \endverb
       \verb{urlraw}
-      \verb https://proceedings.mlr.press/v80/haarnoja18b.html
+      \verb http://arxiv.org/abs/1801.01290
       \endverb
       \verb{url}
-      \verb https://proceedings.mlr.press/v80/haarnoja18b.html
+      \verb http://arxiv.org/abs/1801.01290
       \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{hodgeDeepReinforcementLearning2021}{article}{}
       \name{author}{3}{}{%
@@ -1792,53 +1802,6 @@
       \verb https://doi.org/10.1007/s00521-020-05097-x
       \endverb
       \keyw{Deep neural network,Deep reinforcement learning,drone,Navigation,Safety assurance,UAV}
-    \endentry
-    \entry{hornikMultilayerFeedforwardNetworks1989}{article}{}
-      \name{author}{3}{}{%
-        {{un=0,uniquepart=base,hash=bec8dd1340457a82c21b54971e4c9417}{%
-           family={Hornik},
-           familyi={H\bibinitperiod},
-           given={Kurt},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=17a26ba07299c37a45cc2475a9f3bc8d}{%
-           family={Stinchcombe},
-           familyi={S\bibinitperiod},
-           given={Maxwell},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=426e452a5ec8e692f7740ce0d3e3655c}{%
-           family={White},
-           familyi={W\bibinitperiod},
-           given={Halbert},
-           giveni={H\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{a8d7f46f242b5a2ff80ecb656326c2de}
-      \strng{fullhash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \strng{bibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \strng{authorbibnamehash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \strng{authornamehash}{a8d7f46f242b5a2ff80ecb656326c2de}
-      \strng{authorfullhash}{31166c18fa8ee825c1eb4693189f9e2a}
-      \field{sortinit}{H}
-      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{issn}{0893-6080}
-      \field{journaltitle}{Neural Networks}
-      \field{langid}{english}
-      \field{number}{5}
-      \field{title}{Multilayer Feedforward Networks Are Universal Approximators}
-      \field{volume}{2}
-      \field{year}{1989}
-      \field{dateera}{ce}
-      \field{pages}{359\bibrangedash 366}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1016/0893-6080(89)90020-8
-      \endverb
     \endentry
     \entry{hultgrenImpactsClimateChange2025}{article}{}
       \name{author}{16}{}{%
@@ -2452,6 +2415,72 @@
       \endverb
       \keyw{aerial systems: Applications,AI-enabled robotics,Cameras,Deep reinforcement learning,Feature extraction,reinforcement learning,Reinforcement learning,Training,Velocity control,vision-based navigation,Visual servoing}
     \endentry
+    \entry{lecunDeepLearning2015}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=6a1aa6b7eab12b931ca7c7e3f927231d}{%
+           family={LeCun},
+           familyi={L\bibinitperiod},
+           given={Yann},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=40a8e4774982146adc2688546f54efb2}{%
+           family={Bengio},
+           familyi={B\bibinitperiod},
+           given={Yoshua},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9a8750ccdb2a4cf14d2655face1ce016}{%
+           family={Hinton},
+           familyi={H\bibinitperiod},
+           given={Geoffrey},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Nature Publishing Group}%
+      }
+      \strng{namehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{fullhash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{bibnamehash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{authorbibnamehash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \strng{authornamehash}{9e4c6012409dc8dd9b2aa198a2059804}
+      \strng{authorfullhash}{c6c75bd00ce5a488e91a749d8383b3df}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Deep learning allows computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved the state-of-the-art in speech recognition, visual object recognition, object detection and many other domains such as drug discovery and genomics. Deep learning discovers intricate structure in large data sets by using the backpropagation algorithm to indicate how a machine should change its internal parameters that are used to compute the representation in each layer from the representation in the previous layer. Deep convolutional nets have brought about breakthroughs in processing images, video, speech and audio, whereas recurrent nets have shone light on sequential data such as text and speech.}
+      \field{issn}{1476-4687}
+      \field{journaltitle}{Nature}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{7553}
+      \field{title}{Deep Learning}
+      \field{urlday}{6}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{volume}{521}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{436\bibrangedash 444}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1038/nature14539
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/TISDDZPN/LeCun et al. - 2015 - Deep learning.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.nature.com/articles/nature14539
+      \endverb
+      \verb{url}
+      \verb https://www.nature.com/articles/nature14539
+      \endverb
+      \keyw{Computer science,Mathematics and computing}
+    \endentry
     \entry{loquercioLearningHighspeedFlight2021}{article}{}
       \name{author}{6}{}{%
         {{un=0,uniquepart=base,hash=ac29e4e32ee2a5bcaa325934a585b06f}{%
@@ -2863,89 +2892,8 @@
       \verb http://ieeexplore.ieee.org/document/7140074/
       \endverb
     \endentry
-    \entry{mnihAsynchronousMethodsDeep2016}{online}{}
-      \name{author}{8}{ul=2}{%
-        {{un=0,uniquepart=base,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
-           family={Mnih},
-           familyi={M\bibinitperiod},
-           given={Volodymyr},
-           giveni={V\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=db6afdf70ea61bf8ed973a75b90ff818}{%
-           family={Badia},
-           familyi={B\bibinitperiod},
-           given={Adrià\bibnamedelima Puigdomènech},
-           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=9e80f4779b032f68a6106e1424345450}{%
-           family={Mirza},
-           familyi={M\bibinitperiod},
-           given={Mehdi},
-           giveni={M\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=dfca94b0427da7f9088af596e23b46c0}{%
-           family={Graves},
-           familyi={G\bibinitperiod},
-           given={Alex},
-           giveni={A\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=2a321a868e44d49baf52b5e2d816fb71}{%
-           family={Lillicrap},
-           familyi={L\bibinitperiod},
-           given={Timothy\bibnamedelima P.},
-           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=b63b9b2d91f6ba1b1739563edc0432ab}{%
-           family={Harley},
-           familyi={H\bibinitperiod},
-           given={Tim},
-           giveni={T\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=89dbd30410c2085cd059f32c57d4593e}{%
-           family={Silver},
-           familyi={S\bibinitperiod},
-           given={David},
-           giveni={D\bibinitperiod},
-           givenun=0}}%
-        {{un=0,uniquepart=base,hash=481308b301166b521c74fde6566e97e6}{%
-           family={Kavukcuoglu},
-           familyi={K\bibinitperiod},
-           given={Koray},
-           giveni={K\bibinitperiod},
-           givenun=0}}%
-      }
-      \strng{namehash}{720d3e12e18ccd830e708e04ef703276}
-      \strng{fullhash}{e067addbfefbaf06a859610fa608b21e}
-      \strng{bibnamehash}{e067addbfefbaf06a859610fa608b21e}
-      \strng{authorbibnamehash}{e067addbfefbaf06a859610fa608b21e}
-      \strng{authornamehash}{720d3e12e18ccd830e708e04ef703276}
-      \strng{authorfullhash}{e067addbfefbaf06a859610fa608b21e}
-      \field{sortinit}{M}
-      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{day}{16}
-      \field{eprintclass}{cs.LG}
-      \field{eprinttype}{arXiv}
-      \field{langid}{english}
-      \field{month}{6}
-      \field{title}{Asynchronous {{Methods}} for {{Deep Reinforcement Learning}}}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \verb{eprint}
-      \verb 1602.01783
-      \endverb
-      \verb{urlraw}
-      \verb https://arxiv.org/abs/1602.01783
-      \endverb
-      \verb{url}
-      \verb https://arxiv.org/abs/1602.01783
-      \endverb
-    \endentry
     \entry{mnihHumanlevelControlDeep2015}{article}{}
-      \name{author}{19}{ul=2}{%
+      \name{author}{19}{}{%
         {{un=0,uniquepart=base,hash=f7d23cfe4ca0e6bf7a8c251bfa78aca6}{%
            family={Mnih},
            familyi={M\bibinitperiod},
@@ -3064,11 +3012,11 @@
       \list{publisher}{1}{%
         {Nature Publishing Group}%
       }
-      \strng{namehash}{89d8ce0a1075e76fee7b82aecc72eb47}
+      \strng{namehash}{aff24b211b34cdd515b2fd148ce0c920}
       \strng{fullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{bibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \strng{authorbibnamehash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
-      \strng{authornamehash}{89d8ce0a1075e76fee7b82aecc72eb47}
+      \strng{authornamehash}{aff24b211b34cdd515b2fd148ce0c920}
       \strng{authorfullhash}{29e1f598b04c2ec7e97aaeb02f70e0c8}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
@@ -3210,6 +3158,81 @@
       \verb{file}
       \verb /home/fritz-sfl/Zotero/storage/SLRSFE97/NgHaradaRussell-shaping-ICML1999.pdf
       \endverb
+    \endentry
+    \entry{nikishinPrimacyBiasDeep2022}{online}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=9d078365da0923eced35cd9345318ca0}{%
+           family={Nikishin},
+           familyi={N\bibinitperiod},
+           given={Evgenii},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5e724d9aa88c5bd77b7e95a500cd9ec3}{%
+           family={Schwarzer},
+           familyi={S\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e09d377eb804fa206349bcc1d7162ddf}{%
+           family={D'Oro},
+           familyi={D\bibinitperiod},
+           given={Pierluca},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b9417eec56d7db4d07719bbb7fe3bcdd}{%
+           family={Bacon},
+           familyi={B\bibinitperiod},
+           given={Pierre-Luc},
+           giveni={P\bibinithyphendelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ccec1ccd2e1aa86960eb2e872c6b7020}{%
+           family={Courville},
+           familyi={C\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{8022d4c3e28ae8c50ebf185095ebf41d}
+      \strng{fullhash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \strng{bibnamehash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \strng{authorbibnamehash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \strng{authornamehash}{8022d4c3e28ae8c50ebf185095ebf41d}
+      \strng{authorfullhash}{3f03d94b497bbe1b29c0e9621e0fcbd7}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{This work identifies a common flaw of deep reinforcement learning (RL) algorithms: a tendency to rely on early interactions and ignore useful evidence encountered later. Because of training on progressively growing datasets, deep RL agents incur a risk of overfitting to earlier experiences, negatively affecting the rest of the learning process. Inspired by cognitive science, we refer to this effect as the primacy bias. Through a series of experiments, we dissect the algorithmic aspects of deep RL that exacerbate this bias. We then propose a simple yet generally-applicable mechanism that tackles the primacy bias by periodically resetting a part of the agent. We apply this mechanism to algorithms in both discrete (Atari 100k) and continuous action (DeepMind Control Suite) domains, consistently improving their performance.}
+      \field{day}{16}
+      \field{eprintclass}{cs.LG}
+      \field{eprinttype}{arXiv}
+      \field{month}{5}
+      \field{pubstate}{prepublished}
+      \field{title}{The {{Primacy Bias}} in {{Deep Reinforcement Learning}}}
+      \field{urlday}{8}
+      \field{urlmonth}{6}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2205.07802
+      \endverb
+      \verb{eprint}
+      \verb 2205.07802
+      \endverb
+      \verb{file}
+      \verb /home/fritz-sfl/Zotero/storage/EDF4WNRR/Nikishin et al. - 2022 - The Primacy Bias in Deep Reinforcement Learning.pdf;/home/fritz-sfl/Zotero/storage/E57YWKME/2205.html
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/2205.07802
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/2205.07802
+      \endverb
+      \keyw{Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning}
     \endentry
     \entry{patrikGNSSbasedNavigationSystems2019}{article}{}
       \name{author}{7}{}{%
@@ -3814,6 +3837,55 @@
       \verb{url}
       \verb https://arxiv.org/abs/1707.06347
       \endverb
+    \endentry
+    \entry{schwarke2025rslrl}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=95bb69c75a90df2b02bba1f2797d3225}{%
+           family={Schwarke},
+           familyi={S\bibinitperiod},
+           given={Clemens},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bcd0212c86db330416d9bfa6f4eb7982}{%
+           family={Mittal},
+           familyi={M\bibinitperiod},
+           given={Mayank},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5ac29b212261fe3d27e4d51cf14a990e}{%
+           family={Rudin},
+           familyi={R\bibinitperiod},
+           given={Nikita},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=93c4a2b776cc893ccb2f86e35e82fcd7}{%
+           family={Hoeller},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=164607f9daa616a03bed0e2bf6531a8d}{%
+           family={Hutter},
+           familyi={H\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4de6e708b3081385ea039ce4e43ef5f4}
+      \strng{fullhash}{a6757d955f5624cad8b691138f478b5e}
+      \strng{bibnamehash}{a6757d955f5624cad8b691138f478b5e}
+      \strng{authorbibnamehash}{a6757d955f5624cad8b691138f478b5e}
+      \strng{authornamehash}{4de6e708b3081385ea039ce4e43ef5f4}
+      \strng{authorfullhash}{a6757d955f5624cad8b691138f478b5e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:2509.10771}
+      \field{title}{RSL-RL: A Learning Library for Robotics Research}
+      \field{year}{2025}
     \endentry
     \entry{semerikovVisionBasedAutonomousUAV2025}{article}{}
       \name{author}{5}{}{%
