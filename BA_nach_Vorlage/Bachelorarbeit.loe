@@ -1,0 +1,15 @@
+\contentsline {formeln}{\numberline {2.1}Übergangsdynamik des MDP}{4}{equation.17}%
+\contentsline {formeln}{\numberline {2.2}Diskontierter Ertrag}{5}{equation.20}%
+\contentsline {formeln}{\numberline {2.3}Zustandswertfunktion}{5}{equation.21}%
+\contentsline {formeln}{\numberline {2.4}PPO-Clipping-Zielfunktion}{6}{equation.23}%
+\contentsline {formeln}{\numberline {2.5}Vollständige PPO-Verlustfunktion}{7}{equation.25}%
+\contentsline {formeln}{\numberline {4.1}Zusammensetzung des Zustandsraums}{17}{equation.38}%
+\contentsline {formeln}{\numberline {4.2}Zustandsvektor}{17}{equation.39}%
+\contentsline {formeln}{\numberline {4.3}Normalisierung des Tiefenbilds}{17}{equation.41}%
+\contentsline {formeln}{\numberline {4.4}Aktionsraum}{18}{equation.43}%
+\contentsline {formeln}{\numberline {4.5}Berechnung der Sollposition}{18}{equation.44}%
+\contentsline {formeln}{\numberline {4.6}Belohnungsfunktion}{18}{equation.48}%
+\contentsline {formeln}{\numberline {4.7}Hindernisproximität}{19}{equation.49}%
+\contentsline {formeln}{\numberline {4.8}Tanh-Squashing der Aktionen}{21}{equation.57}%
+\contentsline {formeln}{\numberline {4.9}Log-Wahrscheinlichkeit unter Tanh-Transformation}{21}{equation.58}%
+\contentsline {formeln}{\numberline {4.10}Pfadeffizienz}{24}{equation.74}%

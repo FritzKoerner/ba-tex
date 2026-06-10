@@ -24,6 +24,7 @@ Die Übergangsdynamik
 \begin{equation} \label{eq:mdp_dynamics}
     p(s', r \mid s, a) = \Pr\{S_{t+1} = s',\, R_{t+1} = r \mid S_t = s, A_t = a\}
 \end{equation}
+\eqcaption{Übergangsdynamik des MDP}
 charakterisiert die Umgebung vollständig. Wesentlich ist die \Fachbegriff{Markov-Eigenschaft}: Folgezustand und Belohnung hängen ausschließlich vom gegenwärtigen Zustand-Aktions-Paar ab. Das Ziel des Agenten ist eine \NeuerBegriff{optimale Strategie}~$\pi_*$, die die kumulierte Belohnung maximiert.
 
 \section{Strategieoptimierung}
@@ -39,12 +40,14 @@ diskontierter Ertrag
 \begin{equation} \label{eq:return}
     G_t = \sum_{k=0}^{\infty} \gamma^k R_{t+k+1}
 \end{equation}
+\eqcaption{Diskontierter Ertrag}
 mit Diskontierungsfaktor $\gamma \in [0,1)$ ausgedrückt. Die
 Güte einer Strategie wird durch die
 \NeuerBegriff{Zustandswertfunktion}
 \begin{equation} \label{eq:state_value}
     v_\pi(s) = \mathbb{E}_\pi[G_t \mid S_t = s]
 \end{equation}
+\eqcaption{Zustandswertfunktion}
 charakterisiert. Insbesondere bei hochdimensionalen
 Zustandsräumen und kontinuierlichen Aktionsräumen, wie sie in
 der Drohnensteuerung auftreten, stoßen klassische Verfahren an
@@ -80,6 +83,7 @@ Policy-Gradient-Verfahren können durch zu große Strategieänderungen pro Optim
         \right)
     \right],
 \end{equation}
+\eqcaption{PPO-Clipping-Zielfunktion}
 wobei $r_t(\boldsymbol{\theta}) = \pi_{\boldsymbol{\theta}}(a_t \mid s_t)\,/\,
 \pi_{\boldsymbol{\theta}_{\mathrm{alt}}}(a_t \mid s_t)$ das
 Wahrscheinlichkeitsverhältnis zwischen neuer und alter Strategie ist, $\hat{A}_t$ der geschätzte Vorteil, berechnet mittels
@@ -108,6 +112,7 @@ Die vollständige Verlustfunktion von PPO kombiniert das Clipping mit zwei weite
     - c_1\, L^{VF}(\boldsymbol{\theta})
     + c_2\, H\!\left[\pi_{\boldsymbol{\theta}}\right]\!(s_t),
 \end{equation}
+\eqcaption{Vollständige PPO-Verlustfunktion}
 wobei $L^{VF} = (V_{\boldsymbol{\theta}}(s_t) - V_t^{\mathrm{targ}})^2$ der quadratische
 Fehler der Wertfunktionsschätzung des Critics ist und
 $H[\pi_{\boldsymbol{\theta}}]$ einen Entropie-Bonus bezeichnet, der vorzeitige

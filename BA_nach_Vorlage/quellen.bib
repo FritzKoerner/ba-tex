@@ -4,51 +4,43 @@
 % In diesem Abschnitt können BibLaTeX-Quellen ergänzt werden.
 % Die Einträge werden im Literaturverzeichnis automatisch verarbeitet.
 
-@inproceedings{cobbePhrasicPolicyGradient2021,
-  title = {Phasic {{Policy Gradient}}},
-  booktitle = {Proceedings of the 38th {{International Conference}} on {{Machine Learning}}},
-  author = {Cobbe, Karl and Hilton, Jacob and Klimov, Oleg and Schulman, John},
-  year = {2021},
-  series = {Proceedings of {{Machine Learning Research}}},
-  volume = {139},
-  pages = {2020--2027},
-  publisher = {PMLR}
+@InProceedings{cobbePhasicPolicyGradient2020,
+  title = 	 {Phasic Policy Gradient},
+  author =       {Cobbe, Karl W and Hilton, Jacob and Klimov, Oleg and Schulman, John},
+  booktitle = 	 {Proceedings of the 38th International Conference on Machine Learning},
+  pages = 	 {2020--2027},
+  year = 	 {2021},
+  editor = 	 {Meila, Marina and Zhang, Tong},
+  volume = 	 {139},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {7},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v139/cobbe21a/cobbe21a.pdf},
+  url = 	 {https://proceedings.mlr.press/v139/cobbe21a.html},
+  urldate = {2026-06-10},
+  abstract = 	 {We introduce Phasic Policy Gradient (PPG), a reinforcement learning framework which modifies traditional on-policy actor-critic methods by separating policy and value function training into distinct phases. In prior methods, one must choose between using a shared network or separate networks to represent the policy and value function. Using separate networks avoids interference between objectives, while using a shared network allows useful features to be shared. PPG is able to achieve the best of both worlds by splitting optimization into two phases, one that advances training and one that distills features. PPG also enables the value function to be more aggressively optimized with a higher level of sample reuse. Compared to PPO, we find that PPG significantly improves sample efficiency on the challenging Procgen Benchmark.}
 }
 
-@inproceedings{rudinLearningWalkMinutes2022,
-  title = {Learning to {{Walk}} in {{Minutes Using Massively Parallel Deep Reinforcement Learning}}},
-  booktitle = {Proceedings of the 5th {{Conference}} on {{Robot Learning}}},
-  author = {Rudin, Nikita and Hoeller, David and Reist, Philipp and Hutter, Marco},
-  year = {2022},
-  series = {Proceedings of {{Machine Learning Research}}},
-  volume = {164},
-  pages = {91--100},
-  publisher = {PMLR}
+
+@InProceedings{rudinLearningWalkMinutes2022,
+  title = 	 {Learning to Walk in Minutes Using Massively Parallel Deep Reinforcement Learning},
+  author =       {Rudin, Nikita and Hoeller, David and Reist, Philipp and Hutter, Marco},
+  booktitle = 	 {Proceedings of the 5th Conference on Robot Learning},
+  pages = 	 {91--100},
+  year = 	 {2022},
+  editor = 	 {Faust, Aleksandra and Hsu, David and Neumann, Gerhard},
+  volume = 	 {164},
+  series = 	 {Proceedings of Machine Learning Research},
+  month = 	 {11},
+  publisher =    {PMLR},
+  pdf = 	 {https://proceedings.mlr.press/v164/rudin22a/rudin22a.pdf},
+  url = 	 {https://proceedings.mlr.press/v164/rudin22a.html},
+  urldate = {2026-06-10},
+  abstract = 	 {In this work, we present and study a training set-up that achieves fast policy generation for real-world robotic tasks by using massive parallelism on a single workstation GPU. We analyze and discuss the impact of different training algorithm components in the massively parallel regime on the final policy performance and training times. In addition, we present a novel game-inspired curriculum that is well suited for training with thousands of simulated robots in parallel. We evaluate the approach by training the quadrupedal robot ANYmal to walk on challenging terrain. The parallel approach allows training policies for flat terrain in under four minutes, and in twenty minutes for uneven terrain. This represents a speedup of multiple orders of magnitude compared to previous work. Finally, we transfer the policies to the real robot to validate the approach. We open-source our training code to help accelerate further research in the field of learned legged locomotion: https://leggedrobotics.github.io/legged_gym/.}
 }
+
+
 % ======================================================================
-
-@online{WhatClimateChange2022,
-  title = {What {{Is Climate Change}}? - {{NASA Science}}},
-  shorttitle = {What {{Is Climate Change}}?},
-  date = {2022-06-15T22:38:19-04:00},
-  url = {https://science.nasa.gov/climate-change/what-is-climate-change/},
-  urldate = {2026-03-30},
-  abstract = {Climate change is a long-term change in the average weather patterns that have come to define Earth’s local, regional and global climates. These changes have},
-  langid = {american},
-  file = {/home/fritz-sfl/Zotero/storage/RLGCL3SC/what-is-climate-change.html}
-}
-
-@online{nationsWhatClimateChange,
-  title = {What {{Is Climate Change}}?},
-  author = {Nations, United},
-  publisher = {United Nations},
-  url = {https://www.un.org/en/climatechange/what-is-climate-change},
-  urldate = {2026-03-30},
-  abstract = {Climate change refers to long-term shifts in temperatures and weather patterns. Such shifts can be natural, due to changes in the sun’s activity or large volcanic eruptions. But since the 1800s, human activities have been the main driver of climate change, primarily due to the burning of fossil fuels like coal, oil and gas.},
-  langid = {english},
-  organization = {United Nations},
-  file = {/home/fritz-sfl/Zotero/storage/KHQMAMZV/what-is-climate-change.html}
-}
 
 @report{calvinIPCC2023Climate2023,
   title = {{{IPCC}}, 2023: {{Climate Change}} 2023: {{Synthesis Report}}. {{Contribution}} of {{Working Groups I}}, {{II}} and {{III}} to the {{Sixth Assessment Report}} of the {{Intergovernmental Panel}} on {{Climate Change}} [{{Core Writing Team}}, {{H}}. {{Lee}} and {{J}}. {{Romero}} (Eds.)]. {{IPCC}}, {{Geneva}}, {{Switzerland}}.},
@@ -71,61 +63,63 @@
 @article{hultgrenImpactsClimateChange2025,
   title = {Impacts of Climate Change on Global Agriculture Accounting for Adaptation},
   author = {Hultgren, Andrew and Carleton, Tamma and Delgado, Michael and Gergel, Diana R. and Greenstone, Michael and Houser, Trevor and Hsiang, Solomon and Jina, Amir and Kopp, Robert E. and Malevich, Steven B. and McCusker, Kelly E. and Mayer, Terin and Nath, Ishan and Rising, James and Rode, Ashwin and Yuan, Jiacan},
-  date = {2025-06},
+  date = {2025-06-01},
   journaltitle = {Nature},
+  shortjournal = {Nature},
   volume = {642},
   number = {8068},
   pages = {644--652},
-  publisher = {Nature Publishing Group},
   issn = {1476-4687},
   doi = {10.1038/s41586-025-09085-w},
-  url = {https://www.nature.com/articles/s41586-025-09085-w},
-  urldate = {2026-04-01},
-  abstract = {Climate change threatens global food systems1, but the extent to which adaptation will reduce losses remains unknown and controversial2. Even within the well-studied context of US agriculture, some analyses argue that adaptation will be widespread and climate damages small3,4, whereas others conclude that adaptation will be limited and losses severe5,6. Scenario-based analyses indicate that adaptation should have notable consequences on global agricultural productivity7–9, but there has been no systematic study of how extensively real-world producers actually adapt at the global scale. Here we empirically estimate the impact of global producer adaptations using longitudinal data on six staple crops spanning 12,658 regions, capturing two-thirds of global crop calories. We estimate that global production declines 5.5~×\,1014\,kcal annually per 1 °C global mean surface temperature (GMST) rise (120\,kcal per person per day or 4.4\% of recommended consumption per 1 °C; P\,{$<$}\,0.001). We project that adaptation and income growth alleviate 23\% of global losses in 2050 and 34\% at the end of the century (6\% and 12\%, respectively; moderate-emissions scenario), but substantial residual losses remain for all staples except rice. In contrast to analyses of other outcomes that project the greatest damages to the global poor10,11, we find that global impacts are dominated by losses to modern-day breadbaskets with favourable climates and limited present adaptation, although~losses in low-income~regions losses are also substantial. These results indicate a scale of innovation, cropland expansion or further adaptation that might be necessary to ensure food security in a changing climate.},
-  langid = {english},
-  keywords = {Agriculture,Climate-change adaptation,Climate-change impacts,Environmental economics,Interdisciplinary studies}
+  url = {https://doi.org/10.1038/s41586-025-09085-w},
+  urldate = {2026-06-10},
+  abstract = {Climate change threatens global food systems1, but the extent to which adaptation will reduce losses remains unknown and controversial2. Even within the well-studied context of US agriculture, some analyses argue that adaptation will be widespread and climate damages small3,4, whereas others conclude that adaptation will be limited and losses severe5,6. Scenario-based analyses indicate that adaptation should have notable consequences on global agricultural productivity7–9, but there has been no systematic study of how extensively real-world producers actually adapt at the global scale. Here we empirically estimate the impact of global producer adaptations using longitudinal data on six staple crops spanning 12,658 regions, capturing two-thirds of global crop calories. We estimate that global production declines 5.5~×\,1014\,kcal annually per 1 °C global mean surface temperature (GMST) rise (120\,kcal per person per day or 4.4\% of recommended consumption per 1 °C; P\,{$<$}\,0.001). We project that adaptation and income growth alleviate 23\% of global losses in 2050 and 34\% at the end of the century (6\% and 12\%, respectively; moderate-emissions scenario), but substantial residual losses remain for all staples except rice. In contrast to analyses of other outcomes that project the greatest damages to the global poor10,11, we find that global impacts are dominated by losses to modern-day breadbaskets with favourable climates and limited present adaptation, although~losses in low-income~regions losses are also substantial. These results indicate a scale of innovation, cropland expansion or further adaptation that might be necessary to ensure food security in a changing climate.}
 }
 
-@online{ClimateChangeTrends,
-  title = {Climate {{Change Trends}} and {{Impacts}} on {{California Agriculture}}: {{A Detailed Review}} | {{MDPI}}},
-  url = {https://www.mdpi.com/2073-4395/8/3/25#Conclusions},
-  urldate = {2026-04-01},
-  file = {/home/fritz-sfl/Zotero/storage/Z9CN5CPG/25.html}
+@article{pathakClimateChangeTrends2018,
+  title = {Climate Change Trends and Impacts on California Agriculture: A Detailed Review},
+  author = {Pathak, Tapan B. and Maskey, Mahesh L. and Dahlberg, Jeffery A. and Kearns, Faith and Bali, Khaled M. and Zaccaria, Daniele},
+  date = {2018},
+  journaltitle = {Agronomy},
+  volume = {8},
+  number = {25},
+  issn = {2073-4395},
+  doi = {10.3390/agronomy8030025},
+  url = {https://www.mdpi.com/2073-4395/8/3/25},
+  urldate = {2026-06-10},
+  abstract = {California is a global leader in the agricultural sector and produces more than 400 types of commodities. The state produces over a third of the country’s vegetables and two-thirds of its fruits and nuts. Despite being highly productive, current and future climate change poses many challenges to the agricultural sector. This paper provides a summary of the current state of knowledge on historical and future trends in climate and their impacts on California agriculture. We present a synthesis of climate change impacts on California agriculture in the context of: (1) historic trends and projected changes in temperature, precipitation, snowpack, heat waves, drought, and flood events; and (2) consequent impacts on crop yields, chill hours, pests and diseases, and agricultural vulnerability to climate risks. Finally, we highlight important findings and directions for future research and implementation. The detailed review presented in this paper provides sufficient evidence that the climate in California has changed significantly and is expected to continue changing in the future, and justifies the urgency and importance of enhancing the adaptive capacity of agriculture and reducing vulnerability to climate change. Since agriculture in California is very diverse and each crop responds to climate differently, climate adaptation research should be locally focused along with effective stakeholder engagement and systematic outreach efforts for effective adoption and implementation. The expected readership of this paper includes local stakeholders, researchers, state and national agencies, and international communities interested in learning about climate change and California’s agriculture.},
+  issue = {3}
 }
 
 @article{amendolaDroneLandingReinforcement2024,
-  title = {Drone {{Landing}} and {{Reinforcement Learning}}: {{State-of-Art}}, {{Challenges}} and {{Opportunities}}},
-  shorttitle = {Drone {{Landing}} and {{Reinforcement Learning}}},
-  author = {Amendola, José and Cenkeramaddi, Linga Reddy and Jha, Ajit},
-  date = {2024},
-  journaltitle = {IEEE Open Journal of Intelligent Transportation Systems},
-  volume = {5},
-  pages = {520--539},
-  issn = {2687-7813},
-  doi = {10.1109/OJITS.2024.3444487},
+  author={Amendola, José and Cenkeramaddi, Linga Reddy and Jha, Ajit},
+  journal={IEEE Open Journal of Intelligent Transportation Systems}, 
+  title={Drone Landing and Reinforcement Learning: State-of-Art, Challenges and Opportunities}, 
+  year={2024},
+  volume={5},
+  number={},
+  pages={520-539},
+  keywords={Drones;Reinforcement learning;Vehicle dynamics;Heuristic algorithms;Q-learning;Classification algorithms;Deep reinforcement learning;Autonomous systems;Deep reinforcement learning;drones;autonomous landing},
+  doi={10.1109/OJITS.2024.3444487},
   url = {https://ieeexplore.ieee.org/document/10637701},
-  urldate = {2025-12-18},
-  abstract = {Unmanned aerial vehicles, and special multirotor drones, have shown great relevance in a plethora of missions that require high affordance, field of view, and precision. Their limited payload capacity and autonomy make its landing a crucial task. Despite many attempts in the literature to address drone landing, challenges and open gaps still exist. Reinforcement Learning has gained notoriety in a variety of control problems, with recent proposals for drone landing applications. This work aims to present a systematic literature review on works employing Deep Reinforcement Learning for multirotor drone landing in both static and dynamic platforms. It also revisits Reinforcement Learning Algorithms, the main frameworks and simulators adopted for specific landing operations. The comprehensive analysis performed on reviewed works revealed that there are important untackled challenges when it comes to wind disturbances, unpredictability of moving landing targets, sensor latency, and sim-to-real gap. Finally, we present our critical analysis of how recent state-of-the-art deep learning concepts can be combined with reinforcement learning to leverage the latter in addressing the open gaps in future works.},
-  keywords = {autonomous landing,Autonomous systems,Classification algorithms,Deep reinforcement learning,drones,Drones,Heuristic algorithms,overview,Q-learning,Reinforcement learning,Vehicle dynamics},
+  urldate = {2026-06-10},
   file = {/home/fritz-sfl/Zotero/storage/WK55RAGU/Amendola et al. - 2024 - Drone Landing and Reinforcement Learning State-of-Art, Challenges and Opportunities.pdf}
 }
-
+ 
 @article{kaufmannChampionlevelDroneRacing2023,
   title = {Champion-Level Drone Racing Using Deep Reinforcement Learning},
   author = {Kaufmann, Elia and Bauersfeld, Leonard and Loquercio, Antonio and Müller, Matthias and Koltun, Vladlen and Scaramuzza, Davide},
-  date = {2023-08},
+  date = {2023-08-31},
   journaltitle = {Nature},
+  shortjournal = {Nature},
   volume = {620},
   number = {7976},
   pages = {982--987},
-  publisher = {Nature Publishing Group},
   issn = {1476-4687},
   doi = {10.1038/s41586-023-06419-4},
-  url = {https://www.nature.com/articles/s41586-023-06419-4},
-  urldate = {2025-12-18},
+  url = {https://doi.org/10.1038/s41586-023-06419-4},
+  urldate = {2026-06-10},
   abstract = {First-person view (FPV) drone racing is a televised sport in which professional competitors pilot high-speed aircraft through a 3D circuit. Each pilot sees the environment from the perspective of their drone by means of video streamed from an onboard camera. Reaching the level of professional pilots with an autonomous drone is challenging because the robot needs to fly at its physical limits while estimating its speed and location in the circuit exclusively from onboard sensors1. Here we introduce Swift, an autonomous system that can race physical vehicles at the level of the human world champions. The system combines deep reinforcement learning (RL) in simulation with data collected in the physical world. Swift competed against three human champions, including the world champions of two international leagues, in real-world head-to-head races. Swift won several races against each of the human champions and demonstrated the fastest recorded race time. This work represents a milestone for mobile robotics and machine intelligence2, which may inspire the deployment of hybrid learning-based solutions in other physical systems.},
-  langid = {english},
-  keywords = {Aerospace engineering,Computer science,Electrical and electronic engineering,Mechanical engineering,model-free,on policy,READ,Reinforcement learning,vision-based navigation},
   file = {/home/fritz-sfl/Zotero/storage/2FB58CHR/Kaufmann et al. - 2023 - Champion-level drone racing using deep reinforcement learning.pdf}
 }
 
@@ -134,17 +128,15 @@
   author = {Hodge, Victoria J. and Hawkins, Richard and Alexander, Rob},
   date = {2021-03-01},
   journaltitle = {Neural Computing and Applications},
-  shortjournal = {Neural Comput \& Applic},
+  shortjournal = {Neural Computing and Applications},
   volume = {33},
   number = {6},
   pages = {2015--2033},
   issn = {1433-3058},
   doi = {10.1007/s00521-020-05097-x},
   url = {https://doi.org/10.1007/s00521-020-05097-x},
-  urldate = {2026-04-15},
+  urldate = {2026-06-10},
   abstract = {Mobile robots such as unmanned aerial vehicles (drones) can be used for surveillance, monitoring and data collection in buildings, infrastructure and environments. The importance of accurate and multifaceted monitoring is well known to identify problems early and prevent them escalating. This motivates the need for flexible, autonomous and powerful decision-making mobile robots. These systems need to be able to learn through fusing data from multiple sources. Until very recently, they have been task specific. In this paper, we describe a generic navigation algorithm that uses data from sensors on-board the drone to guide the drone to the site of the problem. In hazardous and safety-critical situations, locating problems accurately and rapidly is vital. We use the proximal policy optimisation deep reinforcement learning algorithm coupled with incremental curriculum learning and long short-term memory neural networks to implement our generic and adaptable navigation algorithm. We evaluate different configurations against a heuristic technique to demonstrate its accuracy and efficiency. Finally, we consider how safety of the drone could be assured by assessing how safely the drone would perform using our navigation algorithm in real-world scenarios.},
-  langid = {english},
-  keywords = {Deep neural network,Deep reinforcement learning,drone,Navigation,Safety assurance,UAV},
   file = {/home/fritz-sfl/Zotero/storage/KMPG6SPH/Hodge et al. - 2021 - Deep reinforcement learning for drone navigation using sensor data.pdf}
 }
 
@@ -154,28 +146,34 @@
   author = {Sutton, Richard S. and Barto, Andrew},
   date = {2020},
   series = {Adaptive Computation and Machine Learning},
-  edition = {Second edition},
+  edition = {second edition},
   publisher = {The MIT Press},
   location = {Cambridge, Massachusetts London, England},
   abstract = {"Reinforcement learning, one of the most active research areas in artificial intelligence, is a computational approach to learning whereby an agent tries to maximize the total amount of reward it receives while interacting with a complex, uncertain environment. In Reinforcement Learning, Richard Sutton and Andrew Barto provide a clear and simple account of the field's key ideas and algorithms."--},
-  isbn = {978-0-262-03924-6},
+  isbn = {9780262039246},
   langid = {english},
   pagetotal = {526},
   file = {/home/fritz-sfl/Zotero/storage/YLQ328AW/Sutton and Barto - 2020 - Reinforcement learning an introduction.pdf}
 }
 
-@inproceedings{schulmanTrustRegionPolicy2015,
-  title = {Trust {{Region Policy Optimization}}},
-  author = {Schulman, John and Levine, Sergey and Moritz, Philipp and Jordan, Michael I. and Abbeel, Pieter},
-  date = {2015},
-  booktitle = {Proceedings of the 32nd {{International Conference}} on {{Machine Learning}} ({{ICML}})},
-  series = {Proceedings of Machine Learning Research},
-  volume = {37},
-  pages = {1889--1897},
-  publisher = {PMLR},
-  url = {https://proceedings.mlr.press/v37/schulman15.html},
-  langid = {english}
+@InProceedings{schulmanTrustRegionPolicy2015,
+  title = 	 {Trust Region Policy Optimization},
+  author = 	 {Schulman, John and Levine, Sergey and Abbeel, Pieter and Jordan, Michael and Moritz, Philipp},
+  booktitle = 	 {Proceedings of the 32nd International Conference on Machine Learning},
+  pages = 	 {1889--1897},
+  year = 	 {2015},
+  editor = 	 {Bach, Francis and Blei, David},
+  volume = 	 {37},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {Lille, France},
+  month = 	 {7},
+  publisher =    {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v37/schulman15.pdf},
+  url = 	 {https://proceedings.mlr.press/v37/schulman15.html},
+  urldate = {2026-06-10},
+  abstract = 	 {In this article, we describe a method for optimizing control policies, with guaranteed monotonic improvement. By making several approximations to the theoretically-justified scheme, we develop a practical algorithm, called Trust Region Policy Optimization (TRPO). This algorithm is effective for optimizing large nonlinear policies such as neural networks. Our experiments demonstrate its robust performance on a wide variety of tasks: learning simulated robotic swimming, hopping, and walking gaits; and playing Atari games using images of the screen as input. Despite its approximations that deviate from the theory, TRPO tends to give monotonic improvement, with little tuning of hyperparameters.}
 }
+
 
 @online{schulmanProximalPolicyOptimization2017,
   title = {Proximal {{Policy Optimization Algorithms}}},
@@ -183,39 +181,37 @@
   date = {2017-08-28},
   eprint = {1707.06347},
   eprinttype = {arXiv},
+  eprintclass = {cs},
+  doi = {10.48550/arXiv.1707.06347},
+  url = {http://arxiv.org/abs/1707.06347},
+  urldate = {2026-06-10},
+  abstract = {We propose a new family of policy gradient methods for reinforcement learning, which alternate between sampling data through interaction with the environment, and optimizing a "surrogate" objective function using stochastic gradient ascent. Whereas standard policy gradient methods perform one gradient update per data sample, we propose a novel objective function that enables multiple epochs of minibatch updates. The new methods, which we call proximal policy optimization (PPO), have some of the benefits of trust region policy optimization (TRPO), but they are much simpler to implement, more general, and have better sample complexity (empirically). Our experiments test PPO on a collection of benchmark tasks, including simulated robotic locomotion and Atari game playing, and we show that PPO outperforms other online policy gradient methods, and overall strikes a favorable balance between sample complexity, simplicity, and wall-time.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning},
+  file = {/home/fritz-sfl/Zotero/storage/5PB68X98/Schulman et al. - 2017 - Proximal Policy Optimization Algorithms.pdf;/home/fritz-sfl/Zotero/storage/SITHTTVU/1707.html}
+}
+
+@online{schulmanHighDimensionalContinuousControl2016,
+  title = {High-Dimensional Continuous Control Using Generalized Advantage Estimation},
+  author = {Schulman, John and Moritz, Philipp and Levine, Sergey and Jordan, Michael and Abbeel, Pieter},
+  date = {2015-06-20},
+  eprint = {1506.02438},
+  eprinttype = {arXiv},
   eprintclass = {cs.LG},
-  url = {https://arxiv.org/abs/1707.06347},
-  langid = {english}
-}
-
-@inproceedings{schulmanHighDimensionalContinuousControl2016,
-  title = {High-{{Dimensional Continuous Control Using Generalized Advantage Estimation}}},
-  author = {Schulman, John and Moritz, Philipp and Levine, Sergey and Jordan, Michael I. and Abbeel, Pieter},
-  date = {2016},
-  booktitle = {4th {{International Conference}} on {{Learning Representations}} ({{ICLR}})},
+  pages = {14},
+  doi = {10.48550/arXiv.1506.02438},
   url = {https://arxiv.org/abs/1506.02438},
-  langid = {english}
+  urldate = {2026-06-10},
 }
 
-@article{hornikMultilayerFeedforwardNetworks1989,
-  title = {Multilayer Feedforward Networks Are Universal Approximators},
-  author = {Hornik, Kurt and Stinchcombe, Maxwell and White, Halbert},
-  date = {1989},
-  journaltitle = {Neural Networks},
-  volume = {2},
-  number = {5},
-  pages = {359--366},
-  doi = {10.1016/0893-6080(89)90020-8},
-  issn = {0893-6080},
-  langid = {english}
-}
 
 @book{foodandagricultureorganizationoftheunitednationsFutureFoodAgriculture2017,
-  title = {The Future of Food and Agriculture: Trends and Challenges},
+  title = {The future of food and agriculture: Trends and challenges},
   shorttitle = {The Future of Food and Agriculture},
+  author = {FAO},
   editor = {{Food and Agriculture Organization of the United Nations}},
   date = {2017},
-  publisher = {{Food and Agriculture Organization of the United Nations}},
+  publisher = {Food and Agriculture Organization of the United Nations},
   location = {Rome},
   abstract = {"The purpose of this report is to increase understanding of the nature of the challenges that agriculture and food systems are facing now and will face into the 21st century. Its analysis of 15 global trends provides insights into what is at stake and what needs to be done. Most of the trends are strongly interdependent and, combined, inform a set of 10 challenges to achieving food security and nutrition for all and making agriculture sustainable. 'Business-as-usual' is not an option. Major transformations in agricultural systems, rural economies and natural resource management will be needed if we are to realize the full potential of food and agriculture to ensure a secure and healthy future for all people and the entire planet."},
   isbn = {978-92-5-109551-5},
@@ -225,10 +221,17 @@
   file = {/home/fritz-sfl/Zotero/storage/ENM36IKN/Food and Agriculture Organization of the United Nations - 2017 - The future of food and agriculture trends and challenges.pdf}
 }
 
-@online{WorldPopulationProspects,
-  title = {World {{Population Prospects}}},
-  url = {https://population.un.org/wpp/},
+@report{WorldPopulationProspects,
+  title = {World {{Population Prospects}} 2024: {{Summary}} of {{Results}}},
+  author = {United Nations},
+  date = {2024},
+  number = {UN DESA/POP/2024/TR/NO. 9},
+  pages = {64},
+  institution = {United Nations},
+  location = {New York, NY, USA},
+  url = {https://population.un.org/wpp/assets/Files/WPP2024_Summary-of-Results.pdf},
   urldate = {2026-05-03},
+  isbn = {978-92-1-003169-1},
   file = {/home/fritz-sfl/Zotero/storage/7LAX7PNT/wpp.html}
 }
 
@@ -252,75 +255,20 @@
 @article{bassoDigitalAgricultureDesign2020,
   title = {Digital Agriculture to Design Sustainable Agricultural Systems},
   author = {Basso, Bruno and Antle, John},
-  date = {2020-04},
+  date = {2020-04-01},
   journaltitle = {Nature Sustainability},
-  shortjournal = {Nat Sustain},
+  shortjournal = {Nature Sustainability},
   volume = {3},
   number = {4},
   pages = {254--256},
-  publisher = {Nature Publishing Group},
   issn = {2398-9629},
   doi = {10.1038/s41893-020-0510-0},
-  url = {https://www.nature.com/articles/s41893-020-0510-0},
-  urldate = {2026-05-03},
+  url = {https://doi.org/10.1038/s41893-020-0510-0},
+  urldate = {2026-06-10},
   abstract = {The global food system must become more sustainable. Digital agriculture — digital and geospatial technologies to monitor, assess and manage soil, climatic and genetic resources — illustrates how to meet this challenge so as to balance the economic, environmental and social dimensions of sustainable food production.},
-  langid = {english},
-  keywords = {Agriculture,Ecology,Environmental sciences,Plant sciences},
   file = {/home/fritz-sfl/Zotero/storage/7PZK3F2F/Basso and Antle - 2020 - Digital agriculture to design sustainable agricultural systems.pdf}
 }
 
-@article{rodriguezUseDronesDelivery2026,
-  title = {Use of Drones for the Delivery of Medical Supplies: A Scoping Review of Case Studies},
-  shorttitle = {Use of Drones for the Delivery of Medical Supplies},
-  author = {Rodríguez, Sebastián and León-Prieto, Catalina and Rodríguez-Jaime, María Fernanda},
-  date = {2026-05-02},
-  journaltitle = {Case Studies on Transport Policy},
-  shortjournal = {Case Studies on Transport Policy},
-  pages = {101833},
-  issn = {2213-624X},
-  doi = {10.1016/j.cstp.2026.101833},
-  url = {https://www.sciencedirect.com/science/article/pii/S2213624X2600129X},
-  urldate = {2026-05-03},
-  abstract = {Objective Synthesize existing evidence on drones for the distribution of medical supplies. Methodology Scoping review conducted according to Joanna Briggs Institute guidelines and reported in accordance with the PRISMA extension for scoping reviews. A systematic search was conducted in PubMed, Scopus, Web of Science, Bireme, EBSCO, and TRID through January 20, 2025, to identify case studies worldwide that use drones to distribute medical supplies. Record selection, performed in Rayyan, included a two-stage review of titles and abstracts and full texts, carried out by two reviewers in a blinded and independent manner. Data extraction followed the same approach, and results were synthesized descriptively. Results A total of 452 records were identified; 21 case studies (2018–2025) were finally selected, with experiences on five continents. Drones reduced the average transport time to 45\,min (range 10–120) compared to 305\,min with conventional methods (60\,min–5\,days), equivalent to an absolute average reduction of 260\,min (4.3\,h) and a relative average reduction of 72\% (35–95\% depending on context); In extreme cases, Malawi and Vanuatu, journeys of several days were reduced to {$<$}2\,h. Of 16 records with costs, the median was \$16.07 (2025 USD), the mean was \$93.29 (range 1.16–613.41), with a strongly biased distribution; most were ≤\$20, while a few reflected aggregate costs/CapEx. Conclusion Drones substantially reduce delivery times (median 45\,min vs. 305\,min) and show mainly low unit costs (median \$16.07), but high heterogeneity and the presence of capital costs require standardizing reports and evaluating cost-effectiveness according to scale.},
-  keywords = {Drug delivery systems,Equipment and supplies,Health services accessibility,Unmanned aerial vehicles},
-  file = {/home/fritz-sfl/Zotero/storage/QLGQFJ3W/Rodríguez et al. - 2026 - Use of drones for the delivery of medical supplies a scoping review of case studies.pdf;/home/fritz-sfl/Zotero/storage/JAGUHL47/S2213624X2600129X.html}
-}
-
-@article{silvagniMultipurposeUAVSearch2017,
-  title = {Multipurpose {{UAV}} for Search and Rescue Operations in Mountain Avalanche Events},
-  author = {Silvagni, Mario and Tonoli, Andrea and Zenerino, Enrico and Chiaberge, Marcello},
-  date = {2017-01-01},
-  journaltitle = {Geomatics, Natural Hazards and Risk},
-  volume = {8},
-  number = {1},
-  pages = {18--33},
-  publisher = {Taylor \& Francis},
-  issn = {1947-5705},
-  doi = {10.1080/19475705.2016.1238852},
-  url = {https://doi.org/10.1080/19475705.2016.1238852},
-  urldate = {2026-05-03},
-  abstract = {This paper presents a multipurpose UAV (unmanned aerial vehicle) for mountain rescue operations. The multi-rotors based flying platform and its embedded avionics are designed to meet environmental requirements for mountainous terrain such as low temperatures, high altitude and strong winds, assuring the capability of carrying different payloads (separately or together) such as: avalanche beacon (ARTVA) with automatic signal recognition and path following algorithms for the rapid location of snow-covered body; camera (visible and thermal) for search and rescue of missing persons on snow and in woods during the day or night; payload deployment to drop emergency kits or specific explosive cartridge for controlled avalanche detachment. The resulting small (less than 5 kg) UAV is capable of full autonomous flight (including take-off and landing) of a pre-programmed, or easily configurable, custom mission. Furthermore, the autopilot manages the sensors measurements (i.e. beacons or cameras) to update the flying mission automatically in flight. Specific functionalities such as terrain following were developed and implemented. Ground station programming of the UAV is not needed, except compulsory monitoring, as the rescue mission can be accomplished in a full automatic mode.},
-  keywords = {Avalanche,beacon,search and rescue,UAV},
-  file = {/home/fritz-sfl/Zotero/storage/Z7267LVE/Silvagni et al. - 2017 - Multipurpose UAV for search and rescue operations in mountain avalanche events.pdf}
-}
-
-@article{jordanStateoftheartTechnologiesUAV2018,
-  title = {State-of-the-Art Technologies for {{UAV}} Inspections},
-  author = {Jordan, Sophie and Moore, Julian and Hovet, Sierra and Box, John and Perry, Jason and Kirsche, Kevin and Lewis, Dexter and Tse, Zion Tsz Ho},
-  date = {2018},
-  journaltitle = {IET Radar, Sonar \& Navigation},
-  volume = {12},
-  number = {2},
-  pages = {151--164},
-  issn = {1751-8792},
-  doi = {10.1049/iet-rsn.2017.0251},
-  url = {https://onlinelibrary.wiley.com/doi/abs/10.1049/iet-rsn.2017.0251},
-  urldate = {2026-05-03},
-  abstract = {Visual condition inspections serve as the basis for determining the need and schedule for service tasks such as maintenance and remediation projects to preserve the proper functioning of power facilities and infrastructure. An increasing accumulation of service projects has recently surfaced due to the lengthy, labour-intensive and subjective qualities of the current method for inspection. These processes are also costly due to the temporary closure of the infrastructure as well as the requirement of special inspection equipment. Unmanned aerial vehicles (UAVs), commonly known as drones, offer potential as a useful tool for infrastructure inspections. UAVs provide visual assessments of structures while eliminating the need for manual inspections. Thus, aerial systems have the potential to reduce the cost of inspections as well as limit the disruption of the public while allowing engineers to have a better three-dimensional understanding of the system. However, the implementation of UAV inspection includes several difficulties such as flight stability, control accuracy, and safety. This study summarises the context for UAV inspection of power facilities and structures. Technologies to address the hindrances preventing UAV integration into the current practice are reviewed. Existing challenges and future work in research for UAV inspections are also presented.},
-  langid = {english},
-  keywords = {autonomous aerial vehicles,drones,inspection,power facilities,power structures,state-of-the-art technologies,UAV inspections,unmanned aerial vehicles},
-  file = {/home/fritz-sfl/Zotero/storage/LJ7TBCFH/Jordan et al. - 2018 - State-of-the-art technologies for UAV inspections.pdf;/home/fritz-sfl/Zotero/storage/2M9IY4EB/iet-rsn.2017.html}
-}
 
 @article{mashoriRemoteSensingUAVs2026,
   title = {Remote {{Sensing}} through {{UAVs}} for Precision Agriculture: {{Applications}}, Technical Foundations, Current Barriers, and Future Opportunities},
@@ -340,6 +288,7 @@
   file = {/home/fritz-sfl/Zotero/storage/DJFEVX2S/Mashori et al. - 2026 - Remote Sensing through UAVs for precision agriculture Applications, technical foundations, current.pdf;/home/fritz-sfl/Zotero/storage/ZAAUSH64/S2772375526002959.html}
 }
 
+
 @article{radoglou-grammatikisCompilationUAVApplications2020,
   title = {A Compilation of {{UAV}} Applications for Precision Agriculture},
   author = {Radoglou-Grammatikis, Panagiotis and Sarigiannidis, Panagiotis and Lagkas, Thomas and Moscholios, Ioannis},
@@ -347,6 +296,7 @@
   journaltitle = {Computer Networks},
   shortjournal = {Computer Networks},
   volume = {172},
+  publisher = {Elsevier},
   pages = {107148},
   issn = {1389-1286},
   doi = {10.1016/j.comnet.2020.107148},
@@ -356,7 +306,6 @@
   keywords = {Precision agriculture (PA),Remote sensing (RS),Unmanned aerial vehicle (UAV)},
   file = {/home/fritz-sfl/Zotero/storage/DHBJQ82K/Radoglou-Grammatikis et al. - 2020 - A compilation of UAV applications for precision agriculture.pdf;/home/fritz-sfl/Zotero/storage/L2886T5L/S138912862030116X.html}
 }
-
 @article{undeExpandingRoleMultirotor2025,
   title = {The Expanding Role of Multirotor {{UAVs}} in Precision Agriculture with Applications {{AI}} Integration and Future Prospects},
   author = {Unde, Sanket S. and Kurkute, V. K. and Chavan, Sachin S. and Mohite, Dadaso D. and Harale, Akshay A. and Chougle, Ayaan},
@@ -381,10 +330,14 @@
   author = {Guebsi, Ridha and Mami, Sonia and Chokmani, Karem},
   date = {2024},
   journaltitle = {Drones},
+  publisher = {MDPI},
   volume = {8},
   number = {11},
   pages = {686},
   doi = {10.3390/drones8110686},
+  url = {https://www.mdpi.com/2504-446X/8/11/686},
+  urldate = {2026-06-10},
+  issn = {2504-446X},
   file = {/home/fritz-sfl/Zotero/storage/RZ75LXEZ/Guebsi et al. - 2024 - Drones in precision agriculture a comprehensive review of applications, technologies, and challenge.pdf}
 }
 
@@ -393,10 +346,10 @@
   author = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Rusu, Andrei A. and Veness, Joel and Bellemare, Marc G. and Graves, Alex and Riedmiller, Martin and Fidjeland, Andreas K. and Ostrovski, Georg and Petersen, Stig and Beattie, Charles and Sadik, Amir and Antonoglou, Ioannis and King, Helen and Kumaran, Dharshan and Wierstra, Daan and Legg, Shane and Hassabis, Demis},
   date = {2015-02},
   journaltitle = {Nature},
+  shortjournal = {Nature},
   volume = {518},
   number = {7540},
   pages = {529--533},
-  publisher = {Nature Publishing Group},
   issn = {1476-4687},
   doi = {10.1038/nature14236},
   url = {https://www.nature.com/articles/nature14236},
@@ -407,6 +360,7 @@
   file = {/home/fritz-sfl/Zotero/storage/S6WZAWW4/Mnih et al. - 2015 - Human-level control through deep reinforcement learning.pdf}
 }
 
+
 @article{loquercioLearningHighspeedFlight2021,
   title = {Learning High-Speed Flight in the Wild},
   author = {Loquercio, Antonio and Kaufmann, Elia and Ranftl, René and Müller, Matthias and Koltun, Vladlen and Scaramuzza, Davide},
@@ -415,30 +369,13 @@
   volume = {6},
   number = {59},
   pages = {eabg5810},
-  publisher = {American Association for the Advancement of Science},
+  publisher = {AAAS},
   doi = {10.1126/scirobotics.abg5810},
   url = {https://www.science.org/doi/10.1126/scirobotics.abg5810},
-  urldate = {2026-05-03},
+  eprint = {https://www.science.org/doi/pdf/10.1126/scirobotics.abg5810},
+  urldate = {2026-06-10},
   abstract = {Quadrotors are agile. Unlike most other machines, they can traverse extremely complex environments at high speeds. To date, only expert human pilots have been able to fully exploit their capabilities. Autonomous operation with onboard sensing and computation has been limited to low speeds. State-of-the-art methods generally separate the navigation problem into subtasks: sensing, mapping, and planning. Although this approach has proven successful at low speeds, the separation it builds upon can be problematic for high-speed navigation in cluttered environments. The subtasks are executed sequentially, leading to increased processing latency and a compounding of errors through the pipeline. Here, we propose an end-to-end approach that can autonomously fly quadrotors through complex natural and human-made environments at high speeds with purely onboard sensing and computation. The key principle is to directly map noisy sensory observations to collision-free trajectories in a receding-horizon fashion. This direct mapping drastically reduces processing latency and increases robustness to noisy and incomplete perception. The sensorimotor mapping is performed by a convolutional network that is trained exclusively in simulation via privileged learning: imitating an expert with access to privileged information. By simulating realistic sensor noise, our approach achieves zero-shot transfer from simulation to challenging real-world environments that were never experienced during training: dense forests, snow-covered terrain, derailed trains, and collapsed buildings. Our work demonstrates that end-to-end policies trained in simulation enable high-speed autonomous flight through challenging environments, outperforming traditional obstacle avoidance pipelines.},
   file = {/home/fritz-sfl/Zotero/storage/NU9BDLMS/Loquercio et al. - 2021 - Learning high-speed flight in the wild.pdf}
-}
-
-@article{alamSurveyQLearningBasedPositionAware2022,
-  title = {Survey on {{Q-Learning-Based Position-Aware Routing Protocols}} in {{Flying Ad Hoc Networks}}},
-  author = {Alam, Muhammad Morshed and Moh, Sangman},
-  date = {2022-03-30},
-  journaltitle = {Electronics},
-  volume = {11},
-  number = {7},
-  publisher = {Multidisciplinary Digital Publishing Institute},
-  issn = {2079-9292},
-  doi = {10.3390/electronics11071099},
-  url = {https://www.mdpi.com/2079-9292/11/7/1099},
-  urldate = {2026-05-13},
-  abstract = {A flying ad hoc network (FANETs), also known as a swarm of unmanned aerial vehicles (UAVs), can be deployed in a wide range of applications including ...},
-  langid = {english},
-  keywords = {FANET,multi-objective optimization,position-aware routing,Q-learning,reinforcement learning,routing protocol,UAV network},
-  file = {/home/fritz-sfl/Zotero/storage/3J76ZUM6/Alam and Moh - 2022 - Survey on Q-Learning-Based Position-Aware Routing Protocols in Flying Ad Hoc Networks.pdf}
 }
 
 @inproceedings{voosNonlinearTrackingLanding2010,
@@ -453,62 +390,26 @@
   url = {http://ieeexplore.ieee.org/document/5611204/},
   urldate = {2026-05-13},
   abstract = {Quadrotor UAVs are one of the most preferred type of small unmanned aerial vehicles because of the very simple mechanical construction and propulsion principle. However, the nonlinear dynamic behavior requires a more advanced stabilizing control and guidance of these vehicles. In addition, the small payload reduces the amount of batteries that can be carried and thus also limits the operating range of the UAV. One possible solution for a range extension is the application of a base station for recharging purpose even during operation. In order to increase the efficiency of the overall system further, a mobile base station will be applied here. However, landing on a moving base station requires autonomous tracking and landing control of the UAV. In this paper, a novel nonlinear autopilot for quadrotor UAVs is extended with a tracking and landing controller to fulfil the required task. First simulation and experimental results underline the performance of this new control approach for the current realization.},
-  eventtitle = {Control ({{MSC}})},
   isbn = {978-1-4244-5362-7},
   langid = {english},
   file = {/home/fritz-sfl/Zotero/storage/8PXCZPFA/Voos and Bou-Ammar - 2010 - Nonlinear tracking and landing controller for quadrotor aerial robots.pdf}
 }
 
-@article{famigliettiTestPotentialLow2021,
-  title = {A {{Test}} on the {{Potential}} of a {{Low Cost Unmanned Aerial Vehicle RTK}}/{{PPK Solution}} for {{Precision Positioning}}},
-  author = {Famiglietti, Nicola Angelo and Cecere, Gianpaolo and Grasso, Carmine and Memmolo, Antonino and Vicari, Annamaria},
-  date = {2021-06-04},
-  journaltitle = {Sensors},
-  volume = {21},
-  number = {11},
-  publisher = {Multidisciplinary Digital Publishing Institute},
-  issn = {1424-8220},
-  doi = {10.3390/s21113882},
-  url = {https://www.mdpi.com/1424-8220/21/11/3882},
-  urldate = {2026-05-13},
-  abstract = {This paper investigated the achievable accuracy from a low-cost RTK (Real Time Kinematic)/PPK (Post Processing Kinematic) GNSS (Global Navigation Sate...},
-  langid = {english},
-  keywords = {drone,GNSS,Multi-Base GNSS,photogrammetry,PPK,precision positioning,remote sensing,RTK,UAV},
-  file = {/home/fritz-sfl/Zotero/storage/KAMEQFZX/Famiglietti et al. - 2021 - A Test on the Potential of a Low Cost Unmanned Aerial Vehicle RTKPPK Solution for Precision Positio.pdf}
-}
-
-@article{arafatVisionBasedNavigationTechniques2023,
-  title = {Vision-{{Based Navigation Techniques}} for {{Unmanned Aerial Vehicles}}: {{Review}} and {{Challenges}}},
-  shorttitle = {Vision-{{Based Navigation Techniques}} for {{Unmanned Aerial Vehicles}}},
-  author = {Arafat, Muhammad Yeasir and Alam, Muhammad Morshed and Moh, Sangman},
-  date = {2023-01-27},
-  journaltitle = {Drones},
-  volume = {7},
-  number = {2},
-  publisher = {Multidisciplinary Digital Publishing Institute},
-  issn = {2504-446X},
-  doi = {10.3390/drones7020089},
-  url = {https://www.mdpi.com/2504-446X/7/2/89},
-  urldate = {2026-05-13},
-  abstract = {In recent years, unmanned aerial vehicles (UAVs), commonly known as drones, have gained increasing interest in both academia and industries. The evolu...},
-  langid = {english},
-  keywords = {computer vision,drone,localization,mapping,navigation,obstacle avoidance,path planning,unmanned aerial vehicle},
-  file = {/home/fritz-sfl/Zotero/storage/Z73G6ESX/Arafat et al. - 2023 - Vision-Based Navigation Techniques for Unmanned Aerial Vehicles Review and Challenges.pdf}
-}
-
-@online{wangVisionBasedDeepReinforcement2024,
+@article{wangVisionBasedDeepReinforcement2024,
   title = {Vision-{{Based Deep Reinforcement Learning}} of {{UAV Autonomous Navigation Using Privileged Information}}},
   author = {Wang, Junqiao and Yu, Zhongliang and Zhou, Dong and Shi, Jiaqi and Deng, Runran},
-  date = {2024-12-09},
-  eprint = {2412.06313},
-  eprinttype = {arXiv},
-  eprintclass = {cs},
-  doi = {10.48550/arXiv.2412.06313},
-  url = {http://arxiv.org/abs/2412.06313},
-  urldate = {2026-04-03},
+  date = {2024-12-22},
+  journal = {Drones},
+  publisher = {MDPI},
+  VOLUME = {8},
+  YEAR = {2024},
+  NUMBER = {12},
+  ARTICLE-NUMBER = {782},
+  doi = {10.3390/drones8120782},
+  url = {https://www.mdpi.com/2504-446X/8/12/782},
+  urldate = {2026-06-10},
   abstract = {The capability of UAVs for efficient autonomous navigation and obstacle avoidance in complex and unknown environments is critical for applications in agricultural irrigation, disaster relief and logistics. In this paper, we propose the DPRL (Distributed Privileged Reinforcement Learning) navigation algorithm, an end-to-end policy designed to address the challenge of high-speed autonomous UAV navigation under partially observable environmental conditions. Our approach combines deep reinforcement learning with privileged learning to overcome the impact of observation data corruption caused by partial observability. We leverage an asymmetric Actor-Critic architecture to provide the agent with privileged information during training, which enhances the model's perceptual capabilities. Additionally, we present a multi-agent exploration strategy across diverse environments to accelerate experience collection, which in turn expedites model convergence. We conducted extensive simulations across various scenarios, benchmarking our DPRL algorithm against the state-of-the-art navigation algorithms. The results consistently demonstrate the superior performance of our algorithm in terms of flight efficiency, robustness and overall success rate.},
-  pubstate = {prepublished},
-  version = {1},
+  ISSN = {2504-446X},
   keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Computer Science - Robotics},
   file = {/home/fritz-sfl/Zotero/storage/KGU2UMEA/Wang et al. - 2024 - Vision-Based Deep Reinforcement Learning of UAV Autonomous Navigation Using Privileged Information.pdf;/home/fritz-sfl/Zotero/storage/P3RCXY3A/2412.html}
 }
@@ -533,10 +434,11 @@
   file = {/home/fritz-sfl/Zotero/storage/HTPYW3TC/Kanellakis and Nikolakopoulos - 2017 - Survey on Computer Vision for UAVs Current Developments and Trends.pdf}
 }
 
+
 @article{patrikGNSSbasedNavigationSystems2019,
   title = {{{GNSS-based}} Navigation Systems of Autonomous Drone for Delivering Items},
   author = {Patrik, Aurello and Utama, Gaudi and Gunawan, Alexander Agung Santoso and Chowanda, Andry and Suroso, Jarot S. and Shofiyanti, Rizatus and Budiharto, Widodo},
-  date = {2019-12},
+  date = {2019-06-14},
   journaltitle = {Journal of Big Data},
   shortjournal = {J Big Data},
   volume = {6},
@@ -577,7 +479,8 @@
   journaltitle = {Sensors},
   volume = {24},
   number = {18},
-  publisher = {Multidisciplinary Digital Publishing Institute},
+  ARTICLE-NUMBER = {6096},
+  publisher = {MDPI},
   issn = {1424-8220},
   doi = {10.3390/s24186096},
   url = {https://www.mdpi.com/1424-8220/24/18/6096},
@@ -595,7 +498,8 @@
   journaltitle = {Electronics},
   volume = {8},
   number = {12},
-  publisher = {Multidisciplinary Digital Publishing Institute},
+  article-number = {1532},
+  publisher = {MDPI},
   issn = {2079-9292},
   doi = {10.3390/electronics8121532},
   url = {https://www.mdpi.com/2079-9292/8/12/1532},
@@ -604,16 +508,6 @@
   langid = {english},
   keywords = {ArduSim,ArUco marker,autonomous landing,UAV,vision-based},
   file = {/home/fritz-sfl/Zotero/storage/73L8S2HH/Wubben et al. - 2019 - Accurate Landing of Unmanned Aerial Vehicles Using Ground Pattern Recognition.pdf}
-}
-
-@online{PrecisionLanding,
-  title = {Precision {{Landing}}},
-  url = {https://docs.px4.io/main/en/advanced_features/precland},
-  urldate = {2026-05-14},
-  abstract = {Open-source flight stack for drones and autonomous vehicles.},
-  langid = {american},
-  organization = {PX4 Autopilot},
-  file = {/home/fritz-sfl/Zotero/storage/3YBDMQSA/precland.html}
 }
 
 @inproceedings{meierPX4NodebasedMultithreaded2015,
@@ -629,7 +523,6 @@
   url = {http://ieeexplore.ieee.org/document/7140074/},
   urldate = {2026-05-14},
   abstract = {We present a novel, deeply embedded robotics middleware and programming environment. It uses a multithreaded, publish-subscribe design pattern and provides a Unixlike software interface for micro controller applications. We improve over the state of the art in deeply embedded open source systems by providing a modular and standards-oriented platform. Our system architecture is centered around a publishsubscribe object request broker on top of a POSIX application programming interface. This allows to reuse common Unix knowledge and experience, including a bash-like shell. We demonstrate with a vertical takeoff and landing (VTOL) use case that the system modularity is well suited for novel and experimental vehicle platforms. We also show how the system architecture allows a direct interface to ROS and to run individual processes either as native ROS nodes on Linux or nodes on the micro controller, maximizing interoperability. Our microcontroller-based execution environment has substantially lower latency and better hardware connectivity than a typical Robotics Linux system and is therefore well suited for fast, high rate control tasks.},
-  eventtitle = {2015 {{IEEE International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}})},
   isbn = {978-1-4799-6923-4},
   langid = {english},
   file = {/home/fritz-sfl/Zotero/storage/6BQ6B43M/Meier et al. - 2015 - PX4 A node-based multithreaded open source robotics framework for deeply embedded platforms.pdf}
@@ -659,33 +552,16 @@
   journaltitle = {Robotics},
   volume = {9},
   number = {1},
-  publisher = {publisher},
-  issn = {2218-6581},
+  article-number = {8},
+  publisher = {MDPI},
+  ISSN = {2218-6581},
   doi = {10.3390/robotics9010008},
   url = {https://www.mdpi.com/2218-6581/9/1/8},
-  urldate = {2026-02-07},
+  urldate = {2026-06-10},
   abstract = {The autonomous landing of an Unmanned Aerial Vehicle (UAV) on a marker is one of the most challenging problems in robotics. Many solutions have been p...},
   langid = {english},
   keywords = {aerial vehicles,deep reinforcement learning,Sim-to-Real},
   file = {/home/fritz-sfl/Zotero/storage/M543LNQJ/Polvara et al. - 2020 - Sim-to-Real Quadrotor Landing via Sequential Deep Q-Networks and Domain Randomization.pdf}
-}
-
-@article{wubbenAccurateLandingUnmanned2019,
-  title = {Accurate {{Landing}} of {{Unmanned Aerial Vehicles Using Ground Pattern Recognition}}},
-  author = {Wubben, Jamie and Fabra, Francisco and Calafate, Carlos T. and Krzeszowski, Tomasz and Marquez-Barja, Johann M. and Cano, Juan-Carlos and Manzoni, Pietro},
-  date = {2019-12-12},
-  journaltitle = {Electronics},
-  volume = {8},
-  number = {12},
-  publisher = {Multidisciplinary Digital Publishing Institute},
-  issn = {2079-9292},
-  doi = {10.3390/electronics8121532},
-  url = {https://www.mdpi.com/2079-9292/8/12/1532},
-  urldate = {2026-05-14},
-  abstract = {Over the last few years, several researchers have been developing protocols and applications in order to autonomously land unmanned aerial vehicles (U...},
-  langid = {english},
-  keywords = {ArduSim,ArUco marker,autonomous landing,UAV,vision-based},
-  file = {/home/fritz-sfl/Zotero/storage/73L8S2HH/Wubben et al. - 2019 - Accurate Landing of Unmanned Aerial Vehicles Using Ground Pattern Recognition.pdf}
 }
 
 @inproceedings{bartolomeiAutonomousEmergencyLanding2022,
@@ -694,33 +570,33 @@
   author = {Bartolomei, Luca and Kompis, Yves and Teixeira, Lucas and Chli, Margarita},
   date = {2022-10},
   pages = {3392--3399},
+  location = {Kyoto, Japan},
   issn = {2153-0866},
   doi = {10.1109/IROS47612.2022.9981152},
   url = {https://ieeexplore.ieee.org/document/9981152},
-  urldate = {2025-12-18},
+  urldate = {2026-06-10},
   abstract = {This work presents a pipeline for autonomous emergency landing for multicopters, such as rotary wing Unmanned Aerial Vehicles (UAVs), using deep Reinforcement Learning (RL). Mechanical malfunctions, strong winds, sudden battery life drops (e.g, due to cold weather), failure in localization or GPS jamming are not uncommon and all constitute emergency situations that require a UAV to abort its mission early and land as quickly as possible in the immediate vicinity. To this end, it is crucial for a UAV that is deployed in real missions to be able to detect a safe landing spot efficiently and proceed to land autonomously, avoiding damage to both its integrity and the surroundings. Driven by the advances in semantic segmentation and depth completion using machine learning, the proposed architecture uses deep RL to infer actions from semantic and depth information, flying the robot towards secure areas, while respecting safety constraints. Thanks to our robust training strategy and the choice of these mid-level representations as input to the RL agent, we show that our policy can directly transfer to the real world, without the need for any additional fine-tuning. In a series of challenging experiments both in simulation and with a real platform, we demonstrate that our planner guides a rotorcraft UAV to a safe landing spot up to 1.5 times faster and with double success rate than the state of the art (including a commercially available solution), paving the way towards realistically deployable UAVs.},
-  eventtitle = {2022 {{IEEE}}/{{RSJ International Conference}} on {{Intelligent Robots}} and {{Systems}} ({{IROS}})},
   keywords = {Deep learning,Location awareness,Pipelines,READ,Semantic segmentation,Semantics,Training,Wind},
   file = {/home/fritz-sfl/Zotero/storage/F85Q3N52/Bartolomei et al. - 2022 - Autonomous Emergency Landing for Multicopters using Deep Reinforcement Learning.pdf}
 }
 
-@online{peterTornadoDroneBioinspiredDRLbased2024,
+@inproceedings{peterTornadoDroneBioinspiredDRLbased2024,
   title = {{{TornadoDrone}}: {{Bio-inspired DRL-based Drone Landing}} on {{6D Platform}} with {{Wind Force Disturbances}}},
   shorttitle = {{{TornadoDrone}}},
+  booktitle = {Proceedings of the 2024 {{IEEE International Conference}} on {{Robotics}} and {{Biomimetics}} ({{ROBIO}})},
   author = {Peter, Robinroy and Ratnabala, Lavanya and Aschu, Demetros and Fedoseev, Aleksey and Tsetserukou, Dzmitry},
-  date = {2024-06-25},
-  eprint = {2406.16164},
-  eprinttype = {arXiv},
-  eprintclass = {cs},
-  doi = {10.48550/arXiv.2406.16164},
-  url = {http://arxiv.org/abs/2406.16164},
+  date = {2024-12},
+  pages = {516--521},
+  issn = {2994-3574},
+  doi = {10.1109/ROBIO64047.2024.10907520},
+  url = {https://ieeexplore.ieee.org/document/10907520/},
   urldate = {2026-03-07},
   abstract = {Autonomous drone navigation faces a critical challenge in achieving accurate landings on dynamic platforms, especially under unpredictable conditions such as wind turbulence. Our research introduces TornadoDrone, a novel Deep Reinforcement Learning (DRL) model that adopts bio-inspired mechanisms to adapt to wind forces, mirroring the natural adaptability seen in birds. This model, unlike traditional approaches, derives its adaptability from indirect cues such as changes in position and velocity, rather than direct wind force measurements. TornadoDrone was rigorously trained in the gym-pybullet-drone simulator, which closely replicates the complexities of wind dynamics in the real world. Through extensive testing with Crazyflie 2.1 drones in both simulated and real windy conditions, TornadoDrone demonstrated a high performance in maintaining high-precision landing accuracy on moving platforms, surpassing conventional control methods such as PID controllers with Extended Kalman Filters. The study not only highlights the potential of DRL to tackle complex aerodynamic challenges but also paves the way for advanced autonomous systems that can adapt to environmental changes in real-time. The success of TornadoDrone signifies a leap forward in drone technology, particularly for critical applications such as surveillance and emergency response, where reliability and precision are paramount.},
-  pubstate = {prepublished},
-  version = {2},
+  venue = {Bangkok, Thailand},
   keywords = {Computer Science - Multiagent Systems,Computer Science - Robotics},
   file = {/home/fritz-sfl/Zotero/storage/HHA5FPBB/Peter et al. - 2024 - TornadoDrone Bio-inspired DRL-based Drone Landing on 6D Platform with Wind Force Disturbances.pdf;/home/fritz-sfl/Zotero/storage/RTCKKH77/2406.html}
 }
+
 
 @article{yangMonocularVisionSLAMBased2018,
   title = {Monocular {{Vision SLAM-Based UAV Autonomous Landing}} in {{Emergencies}} and {{Unknown Environments}}},
@@ -729,7 +605,8 @@
   journaltitle = {Electronics},
   volume = {7},
   number = {5},
-  publisher = {publisher},
+  article-number = {73},
+  publisher = {MDPI},
   issn = {2079-9292},
   doi = {10.3390/electronics7050073},
   url = {https://www.mdpi.com/2079-9292/7/5/73},
@@ -741,7 +618,7 @@
 }
 
 @article{kimMonocularVisionbasedAutonomous2022,
-  title = {Towards Monocular Vision-Based Autonomous Flight through Deep Reinforcement Learning},
+  title = {Towards monocular vision-based autonomous flight through deep reinforcement learning},
   author = {Kim, Minwoo and Kim, Jongyun and Jung, Minjae and Oh, Hyondong},
   date = {2022-07-15},
   journaltitle = {Expert Systems with Applications},
@@ -757,47 +634,42 @@
   file = {/home/fritz-sfl/Zotero/storage/YR62IAUL/Kim et al. - 2022 - Towards monocular vision-based autonomous flight through deep reinforcement learning.pdf;/home/fritz-sfl/Zotero/storage/FQ6M26LP/S0957417422002111.html}
 }
 
-
-@online{mnihAsynchronousMethodsDeep2016,
-  title = {Asynchronous {{Methods}} for {{Deep Reinforcement Learning}}},
-  author = {Mnih, Volodymyr and Badia, Adri{\`a} Puigdom{\`e}nech and Mirza, Mehdi and Graves, Alex and Lillicrap, Timothy P. and Harley, Tim and Silver, David and Kavukcuoglu, Koray},
-  date = {2016-06-16},
-  eprint = {1602.01783},
-  eprinttype = {arXiv},
-  eprintclass = {cs.LG},
-  url = {https://arxiv.org/abs/1602.01783},
-  langid = {english}
-}
-
 @article{xuNavRLLearningSafe2024,
-  title = {{{NavRL}}: Learning Safe Flight in Dynamic Environments},
+  title = {{{NavRL}}: {{Learning Safe Flight}} in {{Dynamic Environments}}},
+  shorttitle = {{{NavRL}}},
   author = {Xu, Zhefan and Han, Xinming and Shen, Haoyu and Jin, Hanyu and Shimada, Kenji},
-  date = {2024-09-24},
-  journaltitle = {arXiv preprint},
-  eprint = {2409.15634},
-  eprinttype = {arxiv},
-  eprintclass = {cs.RO},
-  doi = {10.48550/arXiv.2409.15634},
-  langid = {english}
+  date = {2025-04},
+  journaltitle = {IEEE Robotics and Automation Letters},
+  volume = {10},
+  number = {4},
+  pages = {3668--3675},
+  issn = {2377-3766},
+  doi = {10.1109/LRA.2025.3546069},
+  url = {https://ieeexplore.ieee.org/document/10904341},
+  urldate = {2026-06-10},
+  abstract = {Safe flight in dynamic environments requires unmanned aerial vehicles (UAVs) to make effective decisions when navigating cluttered spaces with moving obstacles. Traditional approaches often decompose decision-making into hierarchical modules for prediction and planning. Although these handcrafted systems can perform well in specific settings, they might fail if environmental conditions change and often require careful parameter tuning. Additionally, their solutions could be suboptimal due to the use of inaccurate mathematical model assumptions and simplifications aimed at achieving computational efficiency. To overcome these limitations, this letter introduces the NavRL framework, a deep reinforcement learning-based navigation method built on the Proximal Policy Optimization (PPO) algorithm. NavRL utilizes our carefully designed state and action representations, allowing the learned policy to make safe decisions in the presence of both static and dynamic obstacles, with zero-shot transfer from simulation to real-world flight. Furthermore, the proposed method adopts a simple but effective safety shield for the trained policy, inspired by the concept of velocity obstacles, to mitigate potential failures associated with the black-box nature of neural networks. To accelerate the convergence, we implement the training pipeline using NVIDIA Isaac Sim, enabling parallel training with thousands of quadcopters. Simulation and physical experiments show that our method ensures safe navigation in dynamic environments and results in the fewest collisions compared to benchmarks.},
+  keywords = {Aerial systems: Perception and autonomy,Autonomous aerial vehicles,collision avoidance,Collision avoidance,Detectors,Heuristic algorithms,Learning systems,Navigation,reinforcement learning,Robots,Safety,Training,Vehicle dynamics},
+  file = {/home/fritz-sfl/Zotero/storage/5UVZJ29P/10904341.html}
 }
 
-@online{haarnojaSoftActorCriticOffPolicy2018,
+@inproceedings{haarnojaSoftActorCriticOffPolicy2018,
   title = {Soft {{Actor-Critic}}: {{Off-Policy Maximum Entropy Deep Reinforcement Learning}} with a {{Stochastic Actor}}},
   shorttitle = {Soft {{Actor-Critic}}},
+  booktitle = {Proceedings of the 35th {{International Conference}} on {{Machine Learning}}},
   author = {Haarnoja, Tuomas and Zhou, Aurick and Abbeel, Pieter and Levine, Sergey},
-  date = {2018-08-08},
-  eprint = {1801.01290},
-  eprinttype = {arXiv},
-  eprintclass = {cs.LG},
-  doi = {10.48550/arXiv.1801.01290},
-  url = {http://arxiv.org/abs/1801.01290},
-  urldate = {2026-06-08},
+  date = {2018-07-03},
+  pages = {1861--1870},
+  publisher = {PMLR},
+  issn = {2640-3498},
+  series = 	 {Proceedings of Machine Learning Research},
+  editor = 	 {Dy, Jennifer and Krause, Andreas},
+  volume = 	 {80},
+  url = {https://proceedings.mlr.press/v80/haarnoja18b.html},
+  urldate = {2026-06-10},
   abstract = {Model-free deep reinforcement learning (RL) algorithms have been demonstrated on a range of challenging decision making and control tasks. However, these methods typically suffer from two major challenges: very high sample complexity and brittle convergence properties, which necessitate meticulous hyperparameter tuning. Both of these challenges severely limit the applicability of such methods to complex, real-world domains. In this paper, we propose soft actor-critic, an off-policy actor-critic deep RL algorithm based on the maximum entropy reinforcement learning framework. In this framework, the actor aims to maximize expected reward while also maximizing entropy. That is, to succeed at the task while acting as randomly as possible. Prior deep RL methods based on this framework have been formulated as Q-learning methods. By combining off-policy updates with a stable stochastic actor-critic formulation, our method achieves state-of-the-art performance on a range of continuous control benchmark tasks, outperforming prior on-policy and off-policy methods. Furthermore, we demonstrate that, in contrast to other off-policy algorithms, our approach is very stable, achieving very similar performance across different random seeds.},
-  pubstate = {prepublished},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
-  file = {/home/fritz-sfl/Zotero/storage/IWZNQUUG/Haarnoja et al. - 2018 - Soft Actor-Critic Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor.pdf;/home/fritz-sfl/Zotero/storage/4HT92PGJ/1801.html}
+  langid = {english},
+  file = {/home/fritz-sfl/Zotero/storage/GN3H29CK/Haarnoja et al. - 2018 - Soft Actor-Critic Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor.pdf;/home/fritz-sfl/Zotero/storage/U3BJM3U2/Haarnoja et al. - 2018 - Soft Actor-Critic Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor.pdf}
 }
-
 
 @article{semerikovVisionBasedAutonomousUAV2025,
   title = {Vision-{{Based Autonomous UAV Landing}}: {{A Comprehensive Review}} of {{Technologies}}, {{Techniques}}, and {{Applications}}},
@@ -825,7 +697,7 @@
   year = {2024},
   month = dec,
   url = {https://github.com/Genesis-Embodied-AI/Genesis},
-  urldate = {2026-05-20}
+  urldate = {2026-05-20},
 }
 
 @inproceedings{makoviychukIsaacGymHigh2021,
@@ -833,34 +705,43 @@
   title = {Isaac Gym: High Performance GPU-Based Physics Simulation for Robot Learning},
   booktitle = {Thirty-fifth Conference on Neural Information Processing Systems Datasets and Benchmarks Track (Round 2)},
   year = {2021},
-  url = {https://openreview.net/forum?id=fgFBtYgJQX_}
+  url = {https://openreview.net/forum?id=fgFBtYgJQX_},
+  urldate = {2026-06-10}
 }
 
-@misc{coumansPybulletPythonModule2016,
-  author = {Coumans, Erwin and Bai, Yunfei},
-  title = {PyBullet, a Python Module for Physics Simulation for Games, Robotics and Machine Learning},
-  year = {2016--2021},
-  url = {http://pybullet.org},
-  urldate = {2026-05-20}
+@online{paneratiLearningFlyGym2021b,
+  title = {Learning to {{Fly}} -- a {{Gym Environment}} with {{PyBullet Physics}} for {{Reinforcement Learning}} of {{Multi-agent Quadcopter Control}}},
+  author = {Panerati, Jacopo and Zheng, Hehui and Zhou, SiQi and Xu, James and Prorok, Amanda and Schoellig, Angela P.},
+  date = {2021-07-25},
+  eprint = {2103.02142},
+  eprinttype = {arXiv},
+  eprintclass = {cs.RO},
+  doi = {10.48550/arXiv.2103.02142},
+  url = {http://arxiv.org/abs/2103.02142},
+  urldate = {2026-06-10},
+  abstract = {Robotic simulators are crucial for academic research and education as well as the development of safety-critical applications. Reinforcement learning environments -- simple simulations coupled with a problem specification in the form of a reward function -- are also important to standardize the development (and benchmarking) of learning algorithms. Yet, full-scale simulators typically lack portability and parallelizability. Vice versa, many reinforcement learning environments trade-off realism for high sample throughputs in toy-like problems. While public data sets have greatly benefited deep learning and computer vision, we still lack the software tools to simultaneously develop -- and fairly compare -- control theory and reinforcement learning approaches. In this paper, we propose an open-source OpenAI Gym-like environment for multiple quadcopters based on the Bullet physics engine. Its multi-agent and vision based reinforcement learning interfaces, as well as the support of realistic collisions and aerodynamic effects, make it, to the best of our knowledge, a first of its kind. We demonstrate its use through several examples, either for control (trajectory tracking with PID control, multi-robot flight with downwash, etc.) or reinforcement learning (single and multi-agent stabilization tasks), hoping to inspire future research that combines control theory and machine learning.},
+  pubstate = {prepublished},
+  keywords = {Computer Science - Machine Learning,Computer Science - Robotics},
+  file = {/home/fritz-sfl/Zotero/storage/TAX7IMQ7/Panerati et al. - 2021 - Learning to Fly -- a Gym Environment with PyBullet Physics for Reinforcement Learning of Multi-agent.pdf;/home/fritz-sfl/Zotero/storage/MCNNM5NI/2103.html}
 }
 
 @inproceedings{koenigDesignUseParadigms2004,
+  title = {Design and Use Paradigms for {{Gazebo}}, an Open-Source Multi-Robot Simulator},
+  booktitle = {2004 {{IEEE}}/{{RSJ International Conference}} on {{Intelligent Robots}} and {{Systems}} ({{IROS}}) (IEEE Cat. No.04CH37566)},
   author = {Koenig, Nathan and Howard, Andrew},
-  title = {Design and Use Paradigms for Gazebo, an Open-Source Multi-Robot Simulator},
-  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-  year = {2004},
-  pages = {2149--2154},
+  date = {2004-09},
+  location = {Sendai, Japan},
   volume = {3},
-  doi = {10.1109/IROS.2004.1389727}
+  pages = {2149-2154},
+  doi = {10.1109/IROS.2004.1389727},
+  isbn = {0-7803-8463-6},
+  url = {https://ieeexplore.ieee.org/document/1389727},
+  urldate = {2026-06-10},
+  abstract = {Simulators have played a critical role in robotics research as tools for quick and efficient testing of new concepts, strategies, and algorithms. To date, most simulators have been restricted to 2D worlds, and few have matured to the point where they are both highly capable and easily adaptable. Gazebo is designed to fill this niche by creating a 3D dynamic multi-robot environment capable of recreating the complex worlds that would be encountered by the next generation of mobile robots. Its open source status, fine grained control, and high fidelity place Gazebo in a unique position to become more than just a stepping stone between the drawing board and real hardware: data visualization, simulation of remote environments, and even reverse engineering of blackbox systems are all possible applications. Gazebo is developed in cooperation with the Player and Stage projects (Gerkey, B. P., et al., July 2003), (Gerkey, B. P., et al., May 2001), (Vaughan, R. T., et al., Oct. 2003), and is available from http://playerstage.sourceforge.net/gazebo/ gazebo.html.},
+  keywords = {Computational modeling,Educational robots,Friction,Mobile robots,Open source software,Packaging,Robot sensing systems,Service robots,Testing,Vehicle dynamics},
+  file = {/home/fritz-sfl/Zotero/storage/QKDLZCSF/1389727.html}
 }
 
-@online{px4ControllerDiagrams,
-  title   = {Controller Diagrams},
-  author  = {{PX4 Development Team}},
-  url     = {https://docs.px4.io/main/en/flight_stack/controller_diagrams.html},
-  urldate = {2026-05-23},
-  year    = {2026},
-}
 
 @inproceedings{ngPolicyInvarianceReward1999,
   title = {Policy {{Invariance Under Reward Transformations}}: {{Theory}} and {{Application}} to {{Reward Shaping}}},
@@ -872,55 +753,63 @@
   pages = {278--287},
   publisher = {Morgan Kaufmann Publishers Inc.},
   location = {San Francisco, CA, USA},
-  isbn = {978-1-55860-612-8},
+  isbn = {1558606122},
   file = {/home/fritz-sfl/Zotero/storage/SLRSFE97/NgHaradaRussell-shaping-ICML1999.pdf}
 }
 
-% TODO: noch lesen
 @book{efronIntroductionBootstrap1994,
-  author    = {Efron, Bradley and Tibshirani, Robert J.},
-  title     = {An Introduction to the Bootstrap},
-  year      = {1994},
-  publisher = {Chapman \& Hall/CRC},
-  location  = {New York},
-  isbn      = {978-0-412-04231-7},
-  note      = {noch lesen},
+  title = {An {{Introduction}} to the {{Bootstrap}}},
+  author = {Efron, Bradley and Tibshirani, R. J.},
+  date = {1994-05-15},
+  publisher = {{Chapman and Hall/CRC}},
+  location = {New York},
+  doi = {10.1201/9780429246593},
+  abstract = {An Introduction to the Bootstrap arms scientists and engineers as well as statisticians with the computational techniques they need to analyze and understand},
+  isbn = {978-0-429-24659-3},
+  pagetotal = {456}
 }
 
-@online{downsGoogleScannedObjects2022,
-  title = {Google {{Scanned Objects}}: {{A High-Quality Dataset}} of {{3D Scanned Household Items}}},
-  shorttitle = {Google {{Scanned Objects}}},
-  author = {Downs, Laura and Francis, Anthony and Koenig, Nate and Kinman, Brandon and Hickman, Ryan and Reymann, Krista and McHugh, Thomas B. and Vanhoucke, Vincent},
-  date = {2022-04-25},
-  eprint = {2204.11918},
-  eprinttype = {arXiv},
-  eprintclass = {cs.RO},
-  doi = {10.48550/arXiv.2204.11918},
-  url = {http://arxiv.org/abs/2204.11918},
-  urldate = {2026-05-23},
-  abstract = {Interactive 3D simulations have enabled breakthroughs in robotics and computer vision, but simulating the broad diversity of environments needed for deep learning requires large corpora of photo-realistic 3D object models. To address this need, we present Google Scanned Objects, an open-source collection of over one thousand 3D-scanned household items released under a Creative Commons license; these models are preprocessed for use in Ignition Gazebo and the Bullet simulation platforms, but are easily adaptable to other simulators. We describe our object scanning and curation pipeline, then provide statistics about the contents of the dataset and its usage. We hope that the diversity, quality, and flexibility of Google Scanned Objects will lead to advances in interactive simulation, synthetic perception, and robotic learning.},
-  pubstate = {prepublished},
-  keywords = {Computer Science - Graphics,Computer Science - Robotics},
-  file = {/home/fritz-sfl/Zotero/storage/W9NPLMZ2/Downs et al. - 2022 - Google Scanned Objects A High-Quality Dataset of 3D Scanned Household Items.pdf}
+@inproceedings{downsGoogleScannedObjects2022,
+author = {Downs, Laura and Francis, Anthony and Koenig, Nate and Kinman, Brandon and Hickman, Ryan and Reymann, Krista and McHugh, Thomas B. and Vanhoucke, Vincent},
+title = {Google Scanned Objects: A High-Quality Dataset of 3D Scanned Household Items},
+date = {2022-05-23},
+publisher = {IEEE Press},
+url = {https://doi.org/10.1109/ICRA46639.2022.9811809},
+urldate = {2026-06-10},
+doi = {10.1109/ICRA46639.2022.9811809},
+abstract = {Interactive 3D simulations have enabled break-throughs in robotics and computer vision, but simulating the broad diversity of environments needed for deep learning requires large corpora of photo-realistic 3D object models. To address this need, we present Google Scanned Objects, an open-source collection of over one thousand 3D-scanned household items released under a Creative Commons license; these models are preprocessed for use in Ignition Gazebo and the Bullet simulation platforms, but are easily adaptable to other simulators. We describe our object scanning and curation pipeline, then provide statistics about the contents of the dataset and its usage. We hope that the diversity, quality, and flexibility of Google Scanned Objects will lead to advances in interactive simulation, synthetic perception, and robotic learning.},
+booktitle = {2022 International Conference on Robotics and Automation (ICRA)},
+pages = {2553–2560},
+numpages = {8},
+location = {Philadelphia, PA, USA}
 }
 
-@book{randlovLearningDriveBicycle1998,
-  title = {Learning to {{Drive}} a {{Bicycle Using Reinforcement Learning}} and {{Shaping}}.},
-  author = {Randlov, Jette and Alstrøm, Preben},
-  date = {1998-01-01},
-  journaltitle = {Proceedings of the 15th International Conference on Machine Learning},
-  pages = {471},
-  abstract = {We present and solve a real-world problem of learning to drive a bicycle. We solve the prob- lem by online reinforcement learning using the Sarsa(A)-algorithm. Then we solve the compos- ite problem of learning to balance a bicycle and then drive to 'It goal. In our approach the rein- forcement function is independent of the task the agent tries to learn to solve.},
-  pagetotal = {463},
-  file = {/home/fritz-sfl/Zotero/storage/6SQR97C5/Randlov and Alstrøm - 1998 - Learning to Drive a Bicycle Using Reinforcement Learning and Shaping..pdf}
+@inproceedings{randlovLearningDriveBicycle1998,
+author = {Randløv, Jette and Alstrøm, Preben},
+title = {Learning to Drive a Bicycle Using Reinforcement Learning and Shaping},
+date = {1998-07-24},
+isbn = {1558605568},
+publisher = {Morgan Kaufmann Publishers Inc.},
+address = {San Francisco, CA, USA},
+booktitle = {Proceedings of the Fifteenth International Conference on Machine Learning},
+pages = {463–471},
+numpages = {9},
+series = {ICML '98}
 }
 
-@article{moallaNoRepresentationNo,
-  title = {No {{Representation}}, {{No Trust}}: {{Connecting Representation}}, {{Collapse}}, and {{Trust Issues}} in {{PPO}}},
+@inproceedings{moallaNoRepresentationNo,
+  title = {No Representation, No Trust: {{Connecting}} Representation, Collapse, and Trust Issues in {{PPO}}},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
   author = {Moalla, Skander and Miele, Andrea and Pyatko, Daniil and Pascanu, Razvan and Gulcehre, Caglar},
-  abstract = {Reinforcement learning (RL) is inherently rife with non-stationarity since the states and rewards the agent observes during training depend on its changing policy. Therefore, networks in deep RL must be capable of adapting to new observations and fitting new targets. However, previous works have observed that networks trained under non-stationarity exhibit an inability to continue learning, termed loss of plasticity, and eventually a collapse in performance. For off-policy deep value-based RL methods, this phenomenon has been correlated with a decrease in representation rank and the ability to fit random targets, termed capacity loss. Although this correlation has generally been attributed to neural network learning under non-stationarity, the connection to representation dynamics has not been carefully studied in on-policy policy optimization methods. In this work, we empirically study representation dynamics in Proximal Policy Optimization (PPO) on the Atari and MuJoCo environments, revealing that PPO agents are also affected by feature rank deterioration and capacity loss. We show that this is aggravated by stronger non-stationarity, ultimately driving the actor’s performance to collapse, regardless of the performance of the critic. We ask why the trust region, specific to methods like PPO, cannot alleviate or prevent the collapse and find a connection between representation collapse and the degradation of the trust region, one exacerbating the other. Finally, we present Proximal Feature Optimization (PFO), a novel auxiliary loss that, along with other interventions, shows that regularizing the representation dynamics mitigates the performance collapse of PPO agents. Code and run histories are available at https://github.com/CLAIRE-Labo/no-representation-no-trust.},
-  langid = {english},
-  file = {/home/fritz-sfl/Zotero/storage/YWV6XI96/Moalla et al. - No Representation, No Trust Connecting Representation, Collapse, and Trust Issues in PPO.pdf}
+  editor = {Globerson, A. and Mackey, L. and Belgrave, D. and Fan, A. and Paquet, U. and Tomczak, J. and Zhang, C.},
+  date = {2024},
+  volume = {37},
+  pages = {69652--69699},
+  publisher = {Curran Associates, Inc.},
+  doi = {10.52202/079017-2226},
+  url = {https://proceedings.neurips.cc/paper_files/paper/2024/file/81166fbd9cc5adf14031cdb69d3fd6a8-Paper-Conference.pdf},
+  file = {/home/fritz-sfl/Zotero/storage/YWV6XI96/Moalla et al. - No Representation, No Trust Connecting Representation, Collapse, and Trust Issues in PPO.pdf},
+  urldate = {2026-06-10}
 }
 
 @article{whiteheadLearningPerceiveAct1991,
@@ -942,36 +831,54 @@
   file = {/home/fritz-sfl/Zotero/storage/4XTWQG43/Whitehead and Ballard - 1991 - Learning to Perceive and Act by Trial and Error.pdf}
 }
 
-@online{singlaMemorybasedDeepReinforcement2018,
-  title = {Memory-Based {{Deep Reinforcement Learning}} for {{Obstacle Avoidance}} in {{UAV}} with {{Limited Environment Knowledge}}},
+@article{singlaMemoryBasedDeepReinforcement2021,
+  title = {Memory-{{Based Deep Reinforcement Learning}} for {{Obstacle Avoidance}} in {{UAV With Limited Environment Knowledge}}},
   author = {Singla, Abhik and Padakandla, Sindhu and Bhatnagar, Shalabh},
-  date = {2018-11-08},
-  url = {https://arxiv.org/abs/1811.03307v1},
-  urldate = {2026-05-30},
-  abstract = {This paper presents our method for enabling a UAV quadrotor, equipped with a monocular camera, to autonomously avoid collisions with obstacles in unstructured and unknown indoor environments. When compared to obstacle avoidance in ground vehicular robots, UAV navigation brings in additional challenges because the UAV motion is no more constrained to a well-defined indoor ground or street environment. Horizontal structures in indoor and outdoor environments like decorative items, furnishings, ceiling fans, sign-boards, tree branches etc., also become relevant obstacles unlike those for ground vehicular robots. Thus, methods of obstacle avoidance developed for ground robots are clearly inadequate for UAV navigation. Current control methods using monocular images for UAV obstacle avoidance are heavily dependent on environment information. These controllers do not fully retain and utilize the extensively available information about the ambient environment for decision making. We propose a deep reinforcement learning based method for UAV obstacle avoidance (OA) and autonomous exploration which is capable of doing exactly the same. The crucial idea in our method is the concept of partial observability and how UAVs can retain relevant information about the environment structure to make better future navigation decisions. Our OA technique uses recurrent neural networks with temporal attention and provides better results compared to prior works in terms of distance covered during navigation without collisions. In addition, our technique has a high inference rate (a key factor in robotic applications) and is energy-efficient as it minimizes oscillatory motion of UAV and reduces power wastage.},
-  langid = {english},
-  organization = {arXiv.org},
-  file = {/home/fritz-sfl/Zotero/storage/VGVKTKMM/Singla et al. - 2018 - Memory-based Deep Reinforcement Learning for Obstacle Avoidance in UAV with Limited Environment Know.pdf}
+  date = {2021-01},
+  journaltitle = {IEEE Transactions on Intelligent Transportation Systems},
+  volume = {22},
+  number = {1},
+  pages = {107--118},
+  issn = {1558-0016},
+  doi = {10.1109/TITS.2019.2954952},
+  url = {https://ieeexplore.ieee.org/document/8917687},
+  urldate = {2026-06-10},
+  abstract = {This paper presents our method for enabling a UAV quadrotor, equipped with a monocular camera, to autonomously avoid collisions with obstacles in unstructured and unknown indoor environments. When compared to obstacle avoidance in ground vehicular robots, UAV navigation brings in additional challenges because the UAV motion is no more constrained to a well-defined indoor ground or street environment. Unlike ground vehicular robots, a UAV has to navigate across more types of obstacles - for e.g., objects like decorative items, furnishings, ceiling fans, sign-boards, tree branches, etc., are also potential obstacles for a UAV. Thus, methods of obstacle avoidance developed for ground robots are clearly inadequate for UAV navigation. Current control methods using monocular images for UAV obstacle avoidance are heavily dependent on environment information. These controllers do not fully retain and utilize the extensively available information about the ambient environment for decision making. We propose a deep reinforcement learning based method for UAV obstacle avoidance (OA) which is capable of doing exactly the same. The crucial idea in our method is the concept of partial observability and how UAVs can retain relevant information about the environment structure to make better future navigation decisions. Our OA technique uses recurrent neural networks with temporal attention and provides better results compared to prior works in terms of distance covered without collisions. In addition, our technique has a high inference rate and reduces power wastage as it minimizes oscillatory motion of UAV.},
+  keywords = {Cameras,Collision avoidance,deep Q-networks (DQN),deep reinforcement learning (DRL),Navigation,partial observability,Simultaneous localization and mapping,Unmanned aerial vehicle (UAV) obstacle avoidance (OA),Unmanned aerial vehicles,Visualization},
+  file = {/home/fritz-sfl/Zotero/storage/S64M9JPQ/Singla et al. - 2021 - Memory-Based Deep Reinforcement Learning for Obstacle Avoidance in UAV With Limited Environment Know.pdf;/home/fritz-sfl/Zotero/storage/TJKALYB7/8917687.html}
 }
 
-@online{kaufmannBenchmarkComparisonLearned2022,
+@inproceedings{kaufmannBenchmarkComparisonLearned2022,
   title = {A {{Benchmark Comparison}} of {{Learned Control Policies}} for {{Agile Quadrotor Flight}}},
+  booktitle = {2022 {{International Conference}} on {{Robotics}} and {{Automation}} ({{ICRA}})},
   author = {Kaufmann, Elia and Bauersfeld, Leonard and Scaramuzza, Davide},
-  date = {2022-02-22},
-  url = {https://arxiv.org/abs/2202.10796v1},
-  urldate = {2026-06-03},
-  abstract = {Quadrotors are highly nonlinear dynamical systems that require carefully tuned controllers to be pushed to their physical limits. Recently, learning-based control policies have been proposed for quadrotors, as they would potentially allow learning direct mappings from high-dimensional raw sensory observations to actions. Due to sample inefficiency, training such learned controllers on the real platform is impractical or even impossible. Training in simulation is attractive but requires to transfer policies between domains, which demands trained policies to be robust to such domain gap. In this work, we make two contributions: (i) we perform the first benchmark comparison of existing learned control policies for agile quadrotor flight and show that training a control policy that commands body-rates and thrust results in more robust sim-to-real transfer compared to a policy that directly specifies individual rotor thrusts, (ii) we demonstrate for the first time that such a control policy trained via deep reinforcement learning can control a quadrotor in real-world experiments at speeds over 45km/h.},
+  date = {2022-05-23},
+  pages = {10504--10510},
+  publisher = {IEEE},
+  location = {Philadelphia, PA, USA},
+  doi = {10.1109/ICRA46639.2022.9811564},
+  url = {https://ieeexplore.ieee.org/document/9811564/},
+  urldate = {2026-06-10},
+  abstract = {Quadrotors are highly nonlinear dynamical systems that require carefully tuned controllers to be pushed to their physical limits. Recently, learning-based control policies have been proposed for quadrotors, as they would potentially allow learning direct mappings from high-dimensional raw sensory observations to actions. Due to sample inefficiency, training such learned controllers on the real platform is impractical or even impossible. Training in simulation is attractive but requires to transfer policies between domains, which demands trained policies to be robust to such domain gap. In this work, we make two contributions: (i) we perform the first benchmark comparison of existing learned control policies for agile quadrotor flight and show that training a control policy that commands body-rates and thrust results in more robust sim-to-real transfer compared to a policy that directly specifies individual rotor thrusts, (ii) we demonstrate for the first time that such a control policy trained via deep reinforcement learning can control a quadrotor in real-world experiments at speeds over 45 km/h.},
+  isbn = {978-1-7281-9681-7},
   langid = {english},
-  organization = {arXiv.org},
-  file = {/home/fritz-sfl/Zotero/storage/6ALUWF95/Kaufmann et al. - 2022 - A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight.pdf}
+  file = {/home/fritz-sfl/Zotero/storage/CERL4YZ3/Kaufmann et al. - 2022 - A Benchmark Comparison of Learned Control Policies for Agile Quadrotor Flight.pdf}
 }
 
-@article{esserActionSpaceDesign,
+@inproceedings{esserActionSpaceDesign2025,
   title = {Action {{Space Design}} in {{Reinforcement Learning}} for {{Robot Motor Skills}}},
-  author = {Eßer, Julian and Margolis, Gabriel B and Urbann, Oliver and Kerner, Soren and Agrawal, Pulkit},
-  abstract = {Practitioners often rely on intuition to select action spaces for learning. The choice can substantially impact final performance even when choosing among configuration-space representations such as joint position, velocity, and torque commands. We examine action space selection considering a wheeledlegged robot, a quadruped robot, and a simulated suite of locomotion, manipulation, and control tasks. We analyze the mechanisms by which action space can improve performance and conclude that the action space can influence learning performance substantially in a task-dependent way. Moreover, we find that much of the practical impact of action space selection on learning dynamics can be explained by improved policy initialization and behavior between timesteps.},
+  booktitle = {Proceedings of {{The}} 8th {{Conference}} on {{Robot Learning}}},
+  author = {Eßer, Julian and Margolis, Gabriel B. and Urbann, Oliver and Kerner, Sören and Agrawal, Pulkit},
+  date = {2025-01-12},
+  pages = {4021--4032},
+  publisher = {PMLR},
+  issn = {2640-3498},
+  url = {https://proceedings.mlr.press/v270/esser25a.html},
+  urldate = {2026-06-10},
+  abstract = {Practitioners often rely on intuition to select action spaces for learning. The choice can substantially impact final performance even when choosing among configuration-space representations such as joint position, velocity, and torque commands. We examine action space selection considering a wheeled-legged robot, a quadruped robot, and a simulated suite of locomotion, manipulation, and control tasks. We analyze the mechanisms by which action space can improve performance and conclude that the action space can influence learning performance substantially in a task-dependent way. Moreover, we find that much of the practical impact of action space selection on learning dynamics can be explained by improved policy initialization and behavior between timesteps.},
   langid = {english},
-  file = {/home/fritz-sfl/Zotero/storage/3NI26AEE/Eßer et al. - Action Space Design in Reinforcement Learning for Robot Motor Skills.pdf}
+  file = {/home/fritz-sfl/Zotero/storage/UA8WHCFA/Eßer et al. - 2025 - Action Space Design in Reinforcement Learning for Robot Motor Skills.pdf},
+  editor = {Agrawal, Pulkit and Kroemer, Oliver and Burgard, Wolfram},
 }
 
 @inproceedings{martiniPositionAgnosticAutonomousNavigation2022,
@@ -981,21 +888,19 @@
   date = {2022-08},
   pages = {477--484},
   issn = {2161-8089},
+  location = {Mexico City, Mexico},
   doi = {10.1109/CASE49997.2022.9926582},
   url = {https://ieeexplore.ieee.org/abstract/document/9926582},
   urldate = {2026-06-03},
   abstract = {Precision agriculture is rapidly attracting research to efficiently introduce automation and robotics solutions to support agricultural activities. Robotic navigation in vineyards and orchards offers competitive advantages in autonomously monitoring and easily accessing crops for harvesting, spraying and performing time-consuming necessary tasks. Nowadays, autonomous navigation algorithms exploit expensive sensors which also require heavy computational cost for data processing. Nonetheless, vineyard rows represent a challenging outdoor scenario where GPS and Visual Odometry techniques often struggle to provide reliable positioning information. In this work, we combine Edge AI with Deep Reinforcement Learning to propose a cutting-edge lightweight solution to tackle the problem of autonomous vineyard navigation with-out exploiting precise localization data and overcoming task-tailored algorithms with a flexible learning-based approach. We train an end-to-end sensorimotor agent which directly maps noisy depth images and position-agnostic robot state information to velocity commands and guides the robot to the end of a row, continuously adjusting its heading for a collision-free central trajectory. Our extensive experimentation in realistic simulated vineyards demonstrates the effectiveness of our solution and the generalization capabilities of our agent.},
-  eventtitle = {2022 {{IEEE}} 18th {{International Conference}} on {{Automation Science}} and {{Engineering}} ({{CASE}})},
   keywords = {Agriculture,Automation,Navigation,Reinforcement learning,Robot sensing systems,Task analysis,Trajectory}
 }
 
 @article{weiVisionbasedNavigationUnmanned2025,
-  title = {Vision-Based Navigation of Unmanned Aerial Vehicles in Orchards: {{An}} Imitation Learning Approach},
-  shorttitle = {Vision-Based Navigation of Unmanned Aerial Vehicles in Orchards},
+  title = {Vision-based navigation of unmanned aerial vehicles in orchards: An imitation learning approach},
   author = {Wei, Peng and Ragbir, Prabhash and Vougioukas, Stavros G. and Kong, Zhaodan},
   date = {2025-11-01},
   journaltitle = {Computers and Electronics in Agriculture},
-  shortjournal = {Computers and Electronics in Agriculture},
   volume = {238},
   pages = {110802},
   issn = {0168-1699},
@@ -1007,38 +912,21 @@
   file = {/home/fritz-sfl/Zotero/storage/IFY6F78G/Wei et al. - 2025 - Vision-based navigation of unmanned aerial vehicles in orchards An imitation learning approach.pdf;/home/fritz-sfl/Zotero/storage/9N2JRXP4/S0168169925009081.html}
 }
 
-@online{tayarAutonomousUAVFlight2025,
+@inproceedings{tayarAutonomousUAVFlight2025,
   title = {Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}: {{A Reinforcement Learning Approach}}},
   shorttitle = {Autonomous {{UAV Flight Navigation}} in {{Confined Spaces}}},
+  booktitle = {2025 {{Latin American Robotics Symposium}} ({{LARS}})},
   author = {Tayar, Marco S. and family=Oliveira, given=Lucas K., prefix=de, useprefix=true and Tommaselli, Felipe Andrade G. and Negri, Juliano D. and Segreto, Thiago H. and Godoy, Ricardo V. and Becker, Marcelo},
-  date = {2025-08-22},
+  date = {2025-10},
+  pages = {1--6},
+  issn = {2643-685X},
+  location = {Monterrey, Mexico},
   doi = {10.1109/LARS69345.2025.11273007},
-  url = {https://arxiv.org/abs/2508.16807v2},
-  urldate = {2026-06-03},
+  url = {https://ieeexplore.ieee.org/document/11273007},
+  urldate = {2026-06-10},
   abstract = {Autonomous UAV inspection of confined industrial infrastructure, such as ventilation ducts, demands robust navigation policies where collisions are unacceptable. While Deep Reinforcement Learning (DRL) offers a powerful paradigm for developing such policies, it presents a critical trade-off between on-policy and off-policy algorithms. Off-policy methods promise high sample efficiency, a vital trait for minimizing costly and unsafe real-world fine-tuning. In contrast, on-policy methods often exhibit greater training stability, which is essential for reliable convergence in hazard-dense environments. This paper directly investigates this trade-off by comparing a leading on-policy algorithm, Proximal Policy Optimization (PPO), against an off-policy counterpart, Soft Actor-Critic (SAC), for precision flight in procedurally generated ducts within a high-fidelity simulator. Our results show that PPO consistently learned a stable, collision-free policy that completed the entire course. In contrast, SAC failed to find a complete solution, converging to a suboptimal policy that navigated only the initial segments before failure. This work provides evidence that for high-precision, safety-critical navigation tasks, the reliable convergence of a well-established on-policy method can be more decisive than the nominal sample efficiency of an off-policy algorithm.},
-  langid = {english},
-  organization = {arXiv.org},
-  file = {/home/fritz-sfl/Zotero/storage/7SLN6EHE/Tayar et al. - 2025 - Autonomous UAV Flight Navigation in Confined Spaces A Reinforcement Learning Approach.pdf}
-}
-
-@article{moallaNoRepresentationNo,
-  title = {No {{Representation}}, {{No Trust}}: {{Connecting Representation}}, {{Collapse}}, and {{Trust Issues}} in {{PPO}}},
-  author = {Moalla, Skander and Miele, Andrea and Pyatko, Daniil and Pascanu, Razvan and Gulcehre, Caglar},
-  abstract = {Reinforcement learning (RL) is inherently rife with non-stationarity since the states and rewards the agent observes during training depend on its changing policy. Therefore, networks in deep RL must be capable of adapting to new observations and fitting new targets. However, previous works have observed that networks trained under non-stationarity exhibit an inability to continue learning, termed loss of plasticity, and eventually a collapse in performance. For off-policy deep value-based RL methods, this phenomenon has been correlated with a decrease in representation rank and the ability to fit random targets, termed capacity loss. Although this correlation has generally been attributed to neural network learning under non-stationarity, the connection to representation dynamics has not been carefully studied in on-policy policy optimization methods. In this work, we empirically study representation dynamics in Proximal Policy Optimization (PPO) on the Atari and MuJoCo environments, revealing that PPO agents are also affected by feature rank deterioration and capacity loss. We show that this is aggravated by stronger non-stationarity, ultimately driving the actor’s performance to collapse, regardless of the performance of the critic. We ask why the trust region, specific to methods like PPO, cannot alleviate or prevent the collapse and find a connection between representation collapse and the degradation of the trust region, one exacerbating the other. Finally, we present Proximal Feature Optimization (PFO), a novel auxiliary loss that, along with other interventions, shows that regularizing the representation dynamics mitigates the performance collapse of PPO agents. Code and run histories are available at https://github.com/CLAIRE-Labo/no-representation-no-trust.},
-  langid = {english},
-  file = {/home/fritz-sfl/Zotero/storage/YWV6XI96/Moalla et al. - No Representation, No Trust Connecting Representation, Collapse, and Trust Issues in PPO.pdf}
-}
-
-@online{singlaMemorybasedDeepReinforcement2018,
-  title = {Memory-Based {{Deep Reinforcement Learning}} for {{Obstacle Avoidance}} in {{UAV}} with {{Limited Environment Knowledge}}},
-  author = {Singla, Abhik and Padakandla, Sindhu and Bhatnagar, Shalabh},
-  date = {2018-11-08},
-  url = {https://arxiv.org/abs/1811.03307v1},
-  urldate = {2026-05-30},
-  abstract = {This paper presents our method for enabling a UAV quadrotor, equipped with a monocular camera, to autonomously avoid collisions with obstacles in unstructured and unknown indoor environments. When compared to obstacle avoidance in ground vehicular robots, UAV navigation brings in additional challenges because the UAV motion is no more constrained to a well-defined indoor ground or street environment. Horizontal structures in indoor and outdoor environments like decorative items, furnishings, ceiling fans, sign-boards, tree branches etc., also become relevant obstacles unlike those for ground vehicular robots. Thus, methods of obstacle avoidance developed for ground robots are clearly inadequate for UAV navigation. Current control methods using monocular images for UAV obstacle avoidance are heavily dependent on environment information. These controllers do not fully retain and utilize the extensively available information about the ambient environment for decision making. We propose a deep reinforcement learning based method for UAV obstacle avoidance (OA) and autonomous exploration which is capable of doing exactly the same. The crucial idea in our method is the concept of partial observability and how UAVs can retain relevant information about the environment structure to make better future navigation decisions. Our OA technique uses recurrent neural networks with temporal attention and provides better results compared to prior works in terms of distance covered during navigation without collisions. In addition, our technique has a high inference rate (a key factor in robotic applications) and is energy-efficient as it minimizes oscillatory motion of UAV and reduces power wastage.},
-  langid = {english},
-  organization = {arXiv.org},
-  file = {/home/fritz-sfl/Zotero/storage/VGVKTKMM/Singla et al. - 2018 - Memory-based Deep Reinforcement Learning for Obstacle Avoidance in UAV with Limited Environment Know.pdf}
+  keywords = {Autonomous aerial vehicles,Convergence,Deep reinforcement learning,Ducts,Navigation,Robots,Stability analysis,Training,Uncertainty,Ventilation},
+  file = {/home/fritz-sfl/Zotero/storage/ZWVBWNP4/Tayar et al. - 2025 - Autonomous UAV Flight Navigation in Confined Spaces A Reinforcement Learning Approach.pdf;/home/fritz-sfl/Zotero/storage/CCMTWLCI/11273007.html}
 }
 
 @incollection{botschParametrischeMethoden2023,
@@ -1062,7 +950,7 @@
 @article{lecunDeepLearning2015,
   title = {Deep Learning},
   author = {LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
-  date = {2015-05},
+  date = {2015-05-01},
   journaltitle = {Nature},
   volume = {521},
   number = {7553},
@@ -1070,7 +958,7 @@
   publisher = {Nature Publishing Group},
   issn = {1476-4687},
   doi = {10.1038/nature14539},
-  url = {https://www.nature.com/articles/nature14539},
+  url = {https://doi.org/10.1038/nature14539},
   urldate = {2026-06-06},
   abstract = {Deep learning allows computational models that are composed of multiple processing layers to learn representations of data with multiple levels of abstraction. These methods have dramatically improved the state-of-the-art in speech recognition, visual object recognition, object detection and many other domains such as drug discovery and genomics. Deep learning discovers intricate structure in large data sets by using the backpropagation algorithm to indicate how a machine should change its internal parameters that are used to compute the representation in each layer from the representation in the previous layer. Deep convolutional nets have brought about breakthroughs in processing images, video, speech and audio, whereas recurrent nets have shone light on sequential data such as text and speech.},
   langid = {english},
@@ -1078,24 +966,39 @@
   file = {/home/fritz-sfl/Zotero/storage/TISDDZPN/LeCun et al. - 2015 - Deep learning.pdf}
 }
 
-@article{schwarke2025rslrl,
-  title={RSL-RL: A Learning Library for Robotics Research},
-  author={Schwarke, Clemens and Mittal, Mayank and Rudin, Nikita and Hoeller, David and Hutter, Marco},
-  journal={arXiv preprint arXiv:2509.10771},
-  year={2025}
-}
-@online{nikishinPrimacyBiasDeep2022,
+@inproceedings{nikishinPrimacyBiasDeep2022,
   title = {The {{Primacy Bias}} in {{Deep Reinforcement Learning}}},
-  author = {Nikishin, Evgenii and Schwarzer, Max and D'Oro, Pierluca and Bacon, Pierre-Luc and Courville, Aaron},
-  date = {2022-05-16},
-  eprint = {2205.07802},
-  eprinttype = {arXiv},
-  eprintclass = {cs.LG},
-  doi = {10.48550/arXiv.2205.07802},
-  url = {http://arxiv.org/abs/2205.07802},
-  urldate = {2026-06-08},
+  booktitle = {Proceedings of the 39th {{International Conference}} on {{Machine Learning}} (ICML)},
+  author = {Nikishin, Evgenii and Schwarzer, Max and D’Oro, Pierluca and Bacon, Pierre-Luc and Courville, Aaron},
+  date = {2022-07},
+  pages = {16828--16847},
+  publisher = {PMLR},
+  volume = 	 {162},
+  issn = {2640-3498},
+  series = 	 {Proceedings of Machine Learning Research},
+  editor = 	 {Chaudhuri, Kamalika and Jegelka, Stefanie and Song, Le and Szepesvari, Csaba and Niu, Gang and Sabato, Sivan},
+  url = {https://proceedings.mlr.press/v162/nikishin22a.html},
+  pdf = 	 {https://proceedings.mlr.press/v162/nikishin22a/nikishin22a.pdf},
+  urldate = {2026-06-10},
   abstract = {This work identifies a common flaw of deep reinforcement learning (RL) algorithms: a tendency to rely on early interactions and ignore useful evidence encountered later. Because of training on progressively growing datasets, deep RL agents incur a risk of overfitting to earlier experiences, negatively affecting the rest of the learning process. Inspired by cognitive science, we refer to this effect as the primacy bias. Through a series of experiments, we dissect the algorithmic aspects of deep RL that exacerbate this bias. We then propose a simple yet generally-applicable mechanism that tackles the primacy bias by periodically resetting a part of the agent. We apply this mechanism to algorithms in both discrete (Atari 100k) and continuous action (DeepMind Control Suite) domains, consistently improving their performance.},
+  langid = {english},
+  file = {/home/fritz-sfl/Zotero/storage/9UCEDTU5/Nikishin et al. - 2022 - The Primacy Bias in Deep Reinforcement Learning.pdf}
+}
+
+@online{schwarke2025rslrl,
+  title = {{{RSL-RL}}: {{A Learning Library}} for {{Robotics Research}}},
+  shorttitle = {{{RSL-RL}}},
+  author = {Schwarke, Clemens and Mittal, Mayank and Rudin, Nikita and Hoeller, David and Hutter, Marco},
+  date = {2025-09-13},
+  eprint = {2509.10771},
+  eprinttype = {arXiv},
+  eprintclass = {cs.RO},
+  doi = {10.48550/arXiv.2509.10771},
+  url = {http://arxiv.org/abs/2509.10771},
+  urldate = {2026-06-10},
+  abstract = {RSL-RL is an open-source Reinforcement Learning library tailored to the specific needs of the robotics community. Unlike broad general-purpose frameworks, its design philosophy prioritizes a compact and easily modifiable codebase, allowing researchers to adapt and extend algorithms with minimal overhead. The library focuses on algorithms most widely adopted in robotics, together with auxiliary techniques that address robotics-specific challenges. Optimized for GPU-only training, RSL-RL achieves high-throughput performance in large-scale simulation environments. Its effectiveness has been validated in both simulation benchmarks and in real-world robotic experiments, demonstrating its utility as a lightweight, extensible, and practical framework to develop learning-based robotic controllers. The library is open-sourced at: https://github.com/leggedrobotics/rsl\_rl.},
   pubstate = {prepublished},
-  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Statistics - Machine Learning},
-  file = {/home/fritz-sfl/Zotero/storage/EDF4WNRR/Nikishin et al. - 2022 - The Primacy Bias in Deep Reinforcement Learning.pdf;/home/fritz-sfl/Zotero/storage/E57YWKME/2205.html}
+  version = {1},
+  keywords = {Computer Science - Machine Learning,Computer Science - Robotics},
+  file = {/home/fritz-sfl/Zotero/storage/QVNRQEHK/Schwarke et al. - 2025 - RSL-RL A Learning Library for Robotics Research.pdf;/home/fritz-sfl/Zotero/storage/3GFHIMN2/2509.html}
 }

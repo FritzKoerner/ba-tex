@@ -58,6 +58,7 @@ $\mathbf{D}_t \in [0,1]^{64 \times 64}$ zusammen:
 \begin{equation} \label{eq:meth_state}
   s_t = \bigl(\mathbf{o}_t,\;\mathbf{D}_t\bigr).
 \end{equation}
+\eqcaption{Zusammensetzung des Zustandsraums}
 
 Der Zustandsvektor
 \begin{equation} \label{eq:meth_obs_vector}
@@ -67,6 +68,7 @@ Der Zustandsvektor
   \tilde{\boldsymbol{\omega}}_t,\;\;
   \mathbf{a}_{t-1}\,\bigr)
 \end{equation}
+\eqcaption{Zustandsvektor}
 enthält die in Tabelle~\ref{tab:meth_obs} aufgeschlüsselten Größen.
 Die Tilde kennzeichnet skalierte und auf $[-1,1]$ geklippte Werte.
 
@@ -98,6 +100,7 @@ normalisiert wird:
   \mathbf{D}_t = \min\!\left(\max\!\left(\frac{\mathbf{d}_{\mathrm{roh}}}{d_{\max}},
   \; 0\right),\; 1\right), \quad d_{\max} = 20\,\text{m}.
 \end{equation}
+\eqcaption{Normalisierung des Tiefenbilds}
 Das Tiefenbild liefert die einzige Information über Hindernisse; der
 Zustandsvektor enthält keine explizite Hindernisrepräsentation.
 
@@ -108,6 +111,7 @@ Der Aktionsraum ist vierdimensional und kontinuierlich:
 \begin{equation} \label{eq:meth_action}
   \mathbf{a}_t = (a_x,\; a_y,\; a_z,\; a_\psi) \in [-1,\; 1]^4.
 \end{equation}
+\eqcaption{Aktionsraum}
 Die ersten drei Komponenten definieren einen Positionsversatz relativ zur
 aktuellen Drohnenposition~$\mathbf{p}_t$ und ergeben die
 Sollposition~$\mathbf{p}_{\mathrm{soll}}$:
@@ -116,6 +120,7 @@ Sollposition~$\mathbf{p}_{\mathrm{soll}}$:
   \begin{pmatrix} a_x \cdot \sigma_x \\ a_y \cdot \sigma_y \\ a_z \cdot \sigma_z \end{pmatrix},
   \quad \boldsymbol{\sigma} = (1{,}0;\; 1{,}0;\; 2{,}0)\,\text{m}.
 \end{equation}
+\eqcaption{Berechnung der Sollposition}
 Die erhöhte $z$-Skala ermöglicht größere vertikale Schritte für den
 vorwiegend vertikalen Abstieg. Die vierte Komponente legt den
 Sollgierwinkel fest:
@@ -156,6 +161,7 @@ als $r_t(\boldsymbol{\theta})$ unterschieden.}:
   + w_{\mathrm{crash}}\, r_{\mathrm{crash}}
   + w_{\mathrm{erf}}\, r_{\mathrm{erf}}
 \end{equation}
+\eqcaption{Belohnungsfunktion}
 
 
 \noindent\textbf{Fortschritt.}\enspace
@@ -170,10 +176,11 @@ Dabei bezeichnet $d_t = \lVert\mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_t\rVert$
 den euklidischen Abstand zum Ziel.
 
 \noindent\textbf{Hindernisproximität.}\enspace
-\begin{equation}
+\begin{equation} \label{eq:meth_proximity}
   r_{\mathrm{prox}} = \max\!\left(1 - \frac{\delta_{\mathrm{min}}}{\delta_{\mathrm{s}}},\; 0\right),
   \quad \delta_{\mathrm{s}} = 3{,}0\,\text{m}
 \end{equation}
+\eqcaption{Hindernisproximität}
 bestraft das Eindringen in einen Sicherheitsradius um Hindernisse, wobei
 $\delta_{\mathrm{min}}$ den minimalen AABB-Abstand bezeichnet.
 
@@ -194,7 +201,7 @@ kann~\autocite{rudinLearningWalkMinutes2022}.
 
 \begin{table}[ht]
   \centering
-  \caption{Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}
+  \caption[Gewichte der Belohnungskomponenten]{Gewichte der Belohnungskomponenten. Negative Gewichte kennzeichnen Strafterme.}
   \label{tab:reward_weights}
   \begin{tabular}{l c r}
     \toprule
@@ -257,7 +264,7 @@ Abbildung~\ref{fig:meth_architecture} zeigt die vollständige Architektur.
 \subsection{Proximal Policy Optimization}
 \label{subsec:meth_ppo}
 
-Als Trainingsalgorithmus wird PPO~\autocite{schulmanProximalPolicyOptimization2017} eingesetzt (vgl.\ Abschnitte~\ref{subsec:ppo_clip} und~\ref{sec:architektur}). Neuere Varianten wie Phasic Policy Gradient~\autocite{cobbePhrasicPolicyGradient2021} wurden nicht evaluiert, da die verwendete RL-Bibliothek rsl-rl \autocite{schwarke2025rslrl} ausschließlich Standard-PPO bereitstellt.
+Als Trainingsalgorithmus wird PPO~\autocite{schulmanProximalPolicyOptimization2017} eingesetzt (vgl.\ Abschnitte~\ref{subsec:ppo_clip} und~\ref{sec:architektur}). Neuere Varianten wie Phasic Policy Gradient~\autocite{cobbePhasicPolicyGradient2020} wurden nicht evaluiert, da die verwendete RL-Bibliothek rsl-rl \autocite{schwarke2025rslrl} ausschließlich Standard-PPO bereitstellt.
 
 \subsection{Aktionsverteilung und Tanh-Squashing}
 \label{subsec:meth_tanh_squashing}
@@ -275,6 +282,7 @@ Transformation~\autocite{haarnojaSoftActorCriticOffPolicy2018} verwendet:
 \begin{equation} \label{eq:meth_tanh_squashing}
   a_i = \tanh(u_i), \quad u_i \sim \mathcal{N}(\mu_i, \sigma_i^2).
 \end{equation}
+\eqcaption{Tanh-Squashing der Aktionen}
 Die zugehörige Log-Wahrscheinlichkeit ergibt sich über die
 Substitutionsregel:
 \begin{equation} \label{eq:meth_tanh_logprob}
@@ -282,6 +290,7 @@ Substitutionsregel:
   = \log\mathcal{N}(\mathbf{u} \mid \boldsymbol{\mu}, \boldsymbol{\sigma}^2)
   - \sum_{i=1}^{4} \log\!\bigl(1 - \tanh^2(u_i)\bigr).
 \end{equation}
+\eqcaption{Log-Wahrscheinlichkeit unter Tanh-Transformation}
 Zusätzlich erzwingt ein Floor $\log\sigma_i \geq -2{,}0$
 ($\sigma_i \geq 0{,}135$) eine Mindestexploration.
 
@@ -326,7 +335,7 @@ Genesis~\autocite{xianGenesisUniversalGenerative2024}, einen quelloffenen,
 GPU-parallelisierten Physiksimulator für Robotik. Genesis führt Simulation tausender Umgebungen GPU-parallel aus, stellt Tiefenkameras bereit und
 importiert beliebige 3D-Meshes. Gegenüber anderen gängigen Simulatoren wie
 Gazebo~\autocite{koenigDesignUseParadigms2004} und
-PyBullet~\autocite{coumansPybulletPythonModule2016} bietet Genesis
+PyBullet~\autocite{paneratiLearningFlyGym2021b} bietet Genesis
 GPU-Parallelisierung. Gegenüber dem proprietären Isaac
 Gym~\autocite{makoviychukIsaacGymHigh2021} bietet Genesis eine geringere
 Einstiegskomplexität.
@@ -412,7 +421,7 @@ $\rightarrow$ Geschwindigkeit $\rightarrow$ Lage) setzt diese in
 Motordrehzahlen um. Die Verstärkungen sind in
 Tabelle~\ref{tab:app_pid_gains} im Anhang aufgeführt. Der Regler wurde
 eigens für diese Simulationsumgebung entwickelt, da ein etablierter
-Flugreglerstack wie PX4 im verwendeten Simulator nicht zur Verfügung
+Flugreglerstack wie PX4 \autocite{meierPX4NodebasedMultithreaded2015} im verwendeten Simulator nicht zur Verfügung
 stand.
 
 %% ==========================================================================
@@ -471,6 +480,7 @@ Erhoben werden: \textbf{Erfolgsrate}, \textbf{Fehlerartenverteilung}
   \eta_{\mathrm{Pfad}} = \frac{\sum_{t=0}^{T-1} \lVert \mathbf{p}_{t+1} - \mathbf{p}_t \rVert}
   {\lVert \mathbf{p}_{\mathrm{ziel}} - \mathbf{p}_0 \rVert}
 \end{equation}
+\eqcaption{Pfadeffizienz}
 (Median mit IQR, nur erfolgreiche Episoden).
 
 \subsection{Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}

@@ -210,13 +210,18 @@
 % ======================================================================
 \usepackage[
   backend=biber,
-  style=authoryear,
-  sorting=nyt,
+  style=numeric,
+  sorting=none,
   natbib=false,
   maxcitenames=2,
   maxbibnames=20
 ]{biblatex}
 \addbibresource{quellen.bib}
+
+% URL-Umbruch in der Bibliographie: Umbruch an Ziffern, Groß- und Kleinbuchstaben
+\setcounter{biburlnumpenalty}{100}
+\setcounter{biburlucpenalty}{100}
+\setcounter{biburllcpenalty}{100}
 
 % APA-Layout: Hängender Einzug und Abstand zwischen Einträgen
 \setlength{\bibhang}{1.27cm}

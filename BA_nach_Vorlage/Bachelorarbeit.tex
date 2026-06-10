@@ -114,17 +114,6 @@
 \endgroup
 
 
-% ======================================================================
-% Abstract / Zusammenfassung
-% ----------------------------------------------------------------------
-% Ohne Kopfzeile, Fußzeile mit Seitenzahl bleibt erhalten.
-% ======================================================================
-\begingroup
-  \pagestyle{empty}
-  \include{Inhalt/Abstract}
-\endgroup
-
-
 % Ab hier gilt wieder der reguläre Seitenstil
 \pagestyle{scrheadings}
 
@@ -183,6 +172,8 @@
 % Arabische Seitennummerierung für den Hauptteil
 % ======================================================================
 \clearpage
+\newcounter{savepageRoman}
+\setcounter{savepageRoman}{\value{page}}
 \pagenumbering{arabic}
 
 
@@ -199,11 +190,23 @@
 
 
 % ======================================================================
+% Kurzzusammenfassung (nach Haupttext, gemäß Fakultätsvorgabe)
+% ======================================================================
+\include{Inhalt/Abstract}
+
+
+% ======================================================================
+% Literaturverzeichnis
+% ======================================================================
+\printbibliography
+
+
+% ======================================================================
 % Anhang
 % ======================================================================
 \pagenumbering{Roman}
+\setcounter{page}{\value{savepageRoman}}
 \chapter*{Anhang}
-\setcounter{page}{7}
 \addcontentsline{toc}{chapter}{Anhang}
 \markboth{Anhang}{Anhang}
 
@@ -238,12 +241,9 @@
 
 
 % ======================================================================
-% Literaturverzeichnis
-% ----------------------------------------------------------------------
-% Erstellt mit biblatex aus der zugehörigen Datenbank.
+% Offenlegung KI-Nutzung
 % ======================================================================
-\printbibliography
-
+\include{Inhalt/Offenlegung_KI}
 
 % ======================================================================
 % Selbstständigkeitserklärung

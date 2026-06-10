@@ -268,15 +268,15 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/blx-compat.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/authoryear.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/numeric.bbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/bbx/standard.bbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
-INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/authoryear.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
+INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/cbx/numeric.cbx
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/biblatex/biblatex.cfg
@@ -379,9 +379,6 @@ INPUT Bachelorarbeit.aux
 INPUT ./Deckblatt.aux
 INPUT ./Deckblatt.aux
 INPUT Deckblatt.aux
-INPUT ./Inhalt/Abstract.aux
-INPUT ./Inhalt/Abstract.aux
-INPUT Inhalt/Abstract.aux
 INPUT ./Inhalt/Einleitung.aux
 INPUT ./Inhalt/Einleitung.aux
 INPUT Inhalt/Einleitung.aux
@@ -403,9 +400,15 @@ INPUT Inhalt/Diskussion.aux
 INPUT ./Inhalt/Fazit und Ausblick.aux
 INPUT ./Inhalt/Fazit und Ausblick.aux
 INPUT Inhalt/Fazit und Ausblick.aux
+INPUT ./Inhalt/Abstract.aux
+INPUT ./Inhalt/Abstract.aux
+INPUT Inhalt/Abstract.aux
 INPUT ./Inhalt/Anhang.aux
 INPUT ./Inhalt/Anhang.aux
 INPUT Inhalt/Anhang.aux
+INPUT ./Inhalt/Offenlegung_KI.aux
+INPUT ./Inhalt/Offenlegung_KI.aux
+INPUT Inhalt/Offenlegung_KI.aux
 INPUT ./Inhalt/Erklaerung.aux
 INPUT ./Inhalt/Erklaerung.aux
 INPUT Inhalt/Erklaerung.aux
@@ -524,25 +527,19 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
-INPUT ./Inhalt/Abstract.tex
-INPUT ./Inhalt/Abstract.tex
-OUTPUT Inhalt/Abstract.aux
-INPUT ./Inhalt/Abstract.tex
-INPUT ./Inhalt/Abstract.tex
-INPUT Inhalt/Abstract.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/arimo/T1Arimo-TLF.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/arimo/T1Arimo-TLF.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/arimo/T1Arimo-TLF.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/arimo/Arimo-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/arimo/Arimo-Bold-tlf-t1.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/arimo/Arimo-Bold-tlf-t1.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/google/arimo/Arimo-Bold-tlf-t1.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/arimo/Arimo-Bold-tlf-t1--base.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc
 INPUT ./Bachelorarbeit.toc
 INPUT ./Bachelorarbeit.toc
 INPUT Bachelorarbeit.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/google/arimo/Arimo-Bold-tlf-t1.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/arimo/Arimo-Bold-tlf-t1--base.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/arimo/arm_l3opzb.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/vf/google/arimo/Arimo-Bold-tlf-t1.vf
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/google/arimo/Arimo-Bold-tlf-t1--base.tfm
 OUTPUT Bachelorarbeit.toc
@@ -962,6 +959,21 @@ OUTPUT Inhalt/Fazit und Ausblick.aux
 INPUT ./Inhalt/Fazit und Ausblick.tex
 INPUT ./Inhalt/Fazit und Ausblick.tex
 INPUT Inhalt/Fazit und Ausblick.tex
+INPUT ./Inhalt/Abstract.tex
+INPUT ./Inhalt/Abstract.tex
+OUTPUT Inhalt/Abstract.aux
+INPUT ./Inhalt/Abstract.tex
+INPUT ./Inhalt/Abstract.tex
+INPUT Inhalt/Abstract.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
 INPUT ./Bachelorarbeit.loah
 INPUT ./Bachelorarbeit.loah
 INPUT Bachelorarbeit.loah
@@ -1017,15 +1029,12 @@ INPUT ./Bilder/seed_analysis/policy_std_seeds.pdf
 INPUT ./Bilder/seed_analysis/policy_std_seeds.pdf
 INPUT ./Bilder/seed_analysis/policy_std_seeds.pdf
 INPUT ./Bilder/seed_analysis/policy_std_seeds.pdf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-sc-t1.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8t.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc
-INPUT /usr/share/texlive/texmf-dist/fonts/vf/adobe/courier/pcrr8t.vf
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT ./Inhalt/Offenlegung_KI.tex
+INPUT ./Inhalt/Offenlegung_KI.tex
+OUTPUT Inhalt/Offenlegung_KI.aux
+INPUT ./Inhalt/Offenlegung_KI.tex
+INPUT ./Inhalt/Offenlegung_KI.tex
+INPUT Inhalt/Offenlegung_KI.tex
 INPUT ./Inhalt/Erklaerung.tex
 INPUT ./Inhalt/Erklaerung.tex
 OUTPUT Inhalt/Erklaerung.aux
@@ -1036,9 +1045,6 @@ INPUT Bachelorarbeit.aux
 INPUT ./Deckblatt.aux
 INPUT ./Deckblatt.aux
 INPUT Deckblatt.aux
-INPUT ./Inhalt/Abstract.aux
-INPUT ./Inhalt/Abstract.aux
-INPUT Inhalt/Abstract.aux
 INPUT ./Inhalt/Einleitung.aux
 INPUT ./Inhalt/Einleitung.aux
 INPUT Inhalt/Einleitung.aux
@@ -1060,9 +1066,15 @@ INPUT Inhalt/Diskussion.aux
 INPUT ./Inhalt/Fazit und Ausblick.aux
 INPUT ./Inhalt/Fazit und Ausblick.aux
 INPUT Inhalt/Fazit und Ausblick.aux
+INPUT ./Inhalt/Abstract.aux
+INPUT ./Inhalt/Abstract.aux
+INPUT Inhalt/Abstract.aux
 INPUT ./Inhalt/Anhang.aux
 INPUT ./Inhalt/Anhang.aux
 INPUT Inhalt/Anhang.aux
+INPUT ./Inhalt/Offenlegung_KI.aux
+INPUT ./Inhalt/Offenlegung_KI.aux
+INPUT Inhalt/Offenlegung_KI.aux
 INPUT ./Inhalt/Erklaerung.aux
 INPUT ./Inhalt/Erklaerung.aux
 INPUT Inhalt/Erklaerung.aux
