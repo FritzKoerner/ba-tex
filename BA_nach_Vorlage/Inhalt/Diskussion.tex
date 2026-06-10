@@ -110,7 +110,7 @@ zurückführen: Der Zustandsvektor kodiert relative Positionen, und das
 Tiefenbild als abstrakte Zwischenrepräsentation den
 Domänenunterschied zwischen Umgebungen
 reduziert~\autocite{bartolomeiAutonomousEmergencyLanding2022,
-loquercioLearningHighspeedFlight2021}. Sim-to-Real-Arbeiten
+loquercioLearningHighspeedFlight2021}. \textit{Sim-to-Real}-Arbeiten
 berichten vergleichbare Einbußen:
 \textcite{polvaraSimtoRealQuadrotorLanding2020} verlieren
 28~Prozentpunkte, \textcite{ladoszAutonomousLandingMoving2024}
@@ -122,7 +122,7 @@ Landephase betrifft, nicht die Navigation.
 \subsection{Perceptual Aliasing als Erklärung für die Terrain-Kollisionen}
 
 Ein möglicher Mechanismus hinter den 15,9\,\% Terrain-Kollisionen ist
-Perceptual Aliasing~\autocite{whiteheadLearningPerceiveAct1991}: Die
+\textit{Perceptual Aliasing}~\autocite{whiteheadLearningPerceiveAct1991}: Die
 Kamera erzeugt für Boden und Vegetation bei Annäherung ähnliche
 Signaturen (Abbildung~\ref{fig:perceptual_aliasing}). In der
 Trainingsumgebung ist diese Mehrdeutigkeit unproblematisch, da die Landezone
@@ -209,4 +209,4 @@ identisch. Erst die Weinberg-Evaluation nutzt 20~verschiedene
 Zielpositionen. Die Simulation bietet perfekte
 Sensorik ohne Rauschen, keine Motorverzögerung und keine
 Kommunikationslatenz. Die Ergebnisse sind nicht direkt auf reale Drohnen
-übertragbar. Die Einführung von Domain Randomization, etwa durch simuliertes Sensorrauschen und variierte Dynamikparameter, könnte einen künftigen Sim-to-Real-Transfer vorbereiten \autocite{ladoszAutonomousLandingMoving2024,polvaraSimtoRealQuadrotorLanding2020}.
+übertragbar. Die Einführung von \textit{Domain Randomization}, etwa durch simuliertes Sensorrauschen und variierte Dynamikparameter, könnte einen künftigen \textit{Sim-to-Real}-Transfer vorbereiten \autocite{ladoszAutonomousLandingMoving2024,polvaraSimtoRealQuadrotorLanding2020}.
