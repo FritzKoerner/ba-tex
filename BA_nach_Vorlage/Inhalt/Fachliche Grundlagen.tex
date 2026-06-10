@@ -11,7 +11,7 @@ Reinforcement Learning bezeichnet das Lernen aus Interaktionen mit einer Umgebun
 
 \subsection{Markov Decision Process}
 \label{subsec:mdp}
-Ein \Fachbegriff{Markov Decision Process} (MDP) formalisiert Reinforcement Learning Probleme als Interaktion zwischen einem \NeuerBegriff{Agent}en und einer \NeuerBegriff{Umgebung} in diskreten Zeitschritten $t = 0, 1, 2, \dots$. Der Agent beobachtet einen \NeuerBegriff{Zustand} $S_t \in \mathcal{S}$, wählt eine \NeuerBegriff{Aktion} $A_t \in \mathcal{A}$ und erhält eine \NeuerBegriff{Belohnung} $R_{t+1} \in \mathcal{R}$ sowie einen neuen Zustand $S_{t+1}$ (Abbildung~\ref{fig:mdp_agent_environment}).
+Ein Markov Decision Process (MDP) formalisiert Reinforcement Learning Probleme als Interaktion zwischen einem Agenten und einer Umgebung in diskreten Zeitschritten $t = 0, 1, 2, \dots$. Der Agent beobachtet einen Zustand $S_t \in \mathcal{S}$, wählt eine Aktion $A_t \in \mathcal{A}$ und erhält eine Belohnung $R_{t+1} \in \mathcal{R}$ sowie einen neuen Zustand $S_{t+1}$ (Abbildung~\ref{fig:mdp_agent_environment}).
 
 \begin{figure}[H]
     \centering
@@ -25,7 +25,7 @@ Die Übergangsdynamik
     p(s', r \mid s, a) = \Pr\{S_{t+1} = s',\, R_{t+1} = r \mid S_t = s, A_t = a\}
 \end{equation}
 \eqcaption{Übergangsdynamik des MDP}
-charakterisiert die Umgebung vollständig. Wesentlich ist die \Fachbegriff{Markov-Eigenschaft}: Folgezustand und Belohnung hängen ausschließlich vom gegenwärtigen Zustand-Aktions-Paar ab. Das Ziel des Agenten ist eine \NeuerBegriff{optimale Strategie}~$\pi_*$, die die kumulierte Belohnung maximiert.
+charakterisiert die Umgebung vollständig. Wesentlich ist die Markov-Eigenschaft: Folgezustand und Belohnung hängen ausschließlich vom gegenwärtigen Zustand-Aktions-Paar ab. Das Ziel des Agenten ist eine optimale Strategie~$\pi_*$, die die kumulierte Belohnung maximiert.
 
 \section{Strategieoptimierung}
 \label{sec:ppo}
@@ -43,7 +43,7 @@ diskontierter Ertrag
 \eqcaption{Diskontierter Ertrag}
 mit Diskontierungsfaktor $\gamma \in [0,1)$ ausgedrückt. Die
 Güte einer Strategie wird durch die
-\NeuerBegriff{Zustandswertfunktion}
+Zustandswertfunktion
 \begin{equation} \label{eq:state_value}
     v_\pi(s) = \mathbb{E}_\pi[G_t \mid S_t = s]
 \end{equation}
@@ -60,10 +60,10 @@ Gradientenaufstieg optimieren. Dies ermöglicht sowohl die
 Verwendung neuronaler Netze als Funktionsapproximatoren als
 auch die direkte Handhabung kontinuierlicher Aktionsräume, wie
 sie in der Drohnensteuerung auftreten. In der Praxis wird dies
-als \Fachbegriff{Actor-Critic-Architektur} umgesetzt: Ein
-\Fachbegriff{Actor} $\pi(a \mid s, \boldsymbol{\theta})$
+als Actor-Critic-Architektur umgesetzt: Ein
+Actor $\pi(a \mid s, \boldsymbol{\theta})$
 repräsentiert die Strategie und wählt Aktionen; ein
-\Fachbegriff{Critic} $\hat{v}(s, \mathbf{w})$ schätzt die
+Critic $\hat{v}(s, \mathbf{w})$ schätzt die
 Zustandswertfunktion und bewertet die gewählten Aktionen. Der
 Critic dient dabei als varianzreduzierendes Referenzniveau
 für den Policy-Gradienten, da der Agent nicht mehr auf den
@@ -73,7 +73,7 @@ gelernte Wertschätzung als stabilere Grundlage nutzt.
 \subsection{Proximal Policy Optimization}
 \label{subsec:ppo_clip}
 
-Policy-Gradient-Verfahren können durch zu große Strategieänderungen pro Optimierungsschritt destabilisiert werden, da die unter der alten Strategie gesammelten Erfahrungsdaten das Verhalten der aktualisierten Strategie nicht mehr abbilden \autocite{schulmanProximalPolicyOptimization2017}. Trust-Region-Methoden wie \Fachbegriff{Trust Region Policy Optimization} (TRPO) \autocite{schulmanTrustRegionPolicy2015} begrenzen daher die Schrittweite über eine Kullback-Leibler-Divergenz-Schranke (KL) zwischen alter und neuer Strategie, erfordern dafür jedoch Approximationen zweiter Ordnung. \Fachbegriff{Proximal Policy Optimization} (PPO) \autocite{schulmanProximalPolicyOptimization2017} erzielt eine vergleichbare Stabilisierung allein durch eine geklippte Zielfunktion:
+Policy-Gradient-Verfahren können durch zu große Strategieänderungen pro Optimierungsschritt destabilisiert werden, da die unter der alten Strategie gesammelten Erfahrungsdaten das Verhalten der aktualisierten Strategie nicht mehr abbilden \autocite{schulmanProximalPolicyOptimization2017}. Trust-Region-Methoden wie Trust Region Policy Optimization (TRPO) \autocite{schulmanTrustRegionPolicy2015} begrenzen daher die Schrittweite über eine Kullback-Leibler-Divergenz-Schranke (KL) zwischen alter und neuer Strategie, erfordern dafür jedoch Approximationen zweiter Ordnung. Proximal Policy Optimization (PPO) \autocite{schulmanProximalPolicyOptimization2017} erzielt eine vergleichbare Stabilisierung allein durch eine geklippte Zielfunktion:
 \begin{equation} \label{eq:ppo_clip}
     L^{\mathrm{CLIP}}(\boldsymbol{\theta}) = \hat{\mathbb{E}}_t\!\left[
         \min\!\left(
@@ -87,7 +87,7 @@ Policy-Gradient-Verfahren können durch zu große Strategieänderungen pro Optim
 wobei $r_t(\boldsymbol{\theta}) = \pi_{\boldsymbol{\theta}}(a_t \mid s_t)\,/\,
 \pi_{\boldsymbol{\theta}_{\mathrm{alt}}}(a_t \mid s_t)$ das
 Wahrscheinlichkeitsverhältnis zwischen neuer und alter Strategie ist, $\hat{A}_t$ der geschätzte Vorteil, berechnet mittels
-\Fachbegriff{Generalized Advantage Estimation}
+Generalized Advantage Estimation
 (GAE) \autocite{schulmanHighDimensionalContinuousControl2016}, und $\varepsilon$ die Clipping-Grenze.
 Das Clipping bewirkt \emph{pessimistische} Updates: Verbessert eine Strategieänderung
 das Objective, wird der Anreiz bei $r_t > 1 + \varepsilon$ gekappt; verschlechtert sie
@@ -121,17 +121,17 @@ Konvergenz der Aktionsverteilung verhindert.
 \section{Convolutional Neural Networks}
 \label{sec:cnn}
 
-\NeuerBegriff{Convolutional Neural Networks} (CNNs) sind eine Klasse neuronaler Netze, die speziell für die Verarbeitung von Daten mit räumlicher Struktur entwickelt wurden, etwa Bilder in Form zweidimensionaler Pixelarrays. Sofern nicht anders angegeben, folgt die Darstellung in diesem Abschnitt \textcite{lecunDeepLearning2015}.
+Convolutional Neural Networks (CNNs) sind eine Klasse neuronaler Netze, die speziell für die Verarbeitung von Daten mit räumlicher Struktur entwickelt wurden, etwa Bilder in Form zweidimensionaler Pixelarrays. Sofern nicht anders angegeben, folgt die Darstellung in diesem Abschnitt \textcite{lecunDeepLearning2015}.
 
-Die Architektur eines CNN besteht aus einer Kaskade von Faltungs- und Pooling-Schichten. In einer \Fachbegriff{Faltungsschicht} sind die Einheiten in sogenannten \Fachbegriff{Feature Maps} organisiert. Jede Einheit ist nur mit einem lokalen Ausschnitt der vorherigen Schicht verbunden und verrechnet diesen mit einem \Fachbegriff{Filter} (auch \Fachbegriff{Kernel}) \autocite{botschParametrischeMethoden2023}. Alle Einheiten innerhalb einer Feature Map teilen denselben Filter. Verschiedene Feature Maps innerhalb einer Schicht verwenden unterschiedliche Filter und erkennen dadurch unterschiedliche lokale Muster. Die Filtergewichte werden nicht manuell festgelegt, sondern während des Trainings gelernt \autocite{botschParametrischeMethoden2023}. Die gemeinsame Nutzung der Gewichte beruht auf zwei Eigenschaften natürlicher Bilddaten: Benachbarte Werte bilden häufig korrelierte lokale Muster, und diese Muster treten unabhängig von ihrer Position im Bild auf.
+Die Architektur eines CNN besteht aus einer Kaskade von Faltungs- und Pooling-Schichten. In einer Faltungsschicht sind die Einheiten in sogenannten Feature Maps organisiert. Jede Einheit ist nur mit einem lokalen Ausschnitt der vorherigen Schicht verbunden und verrechnet diesen mit einem Filter (auch Kernel) \autocite{botschParametrischeMethoden2023}. Alle Einheiten innerhalb einer Feature Map teilen denselben Filter. Verschiedene Feature Maps innerhalb einer Schicht verwenden unterschiedliche Filter und erkennen dadurch unterschiedliche lokale Muster. Die Filtergewichte werden nicht manuell festgelegt, sondern während des Trainings gelernt \autocite{botschParametrischeMethoden2023}. Die gemeinsame Nutzung der Gewichte beruht auf zwei Eigenschaften natürlicher Bilddaten: Benachbarte Werte bilden häufig korrelierte lokale Muster, und diese Muster treten unabhängig von ihrer Position im Bild auf.
 
-\Fachbegriff{Pooling-Schichten} fassen die Aktivierungen benachbarter Einheiten zusammen, typischerweise durch Auswahl des Maximums innerhalb eines lokalen Fensters (\Fachbegriff{Max-Pooling}) \autocite{botschParametrischeMethoden2023}. Dies reduziert die räumliche Auflösung der Repräsentation und erzeugt eine gewisse Invarianz gegenüber kleinen Verschiebungen im Eingabebild.
+Pooling-Schichten fassen die Aktivierungen benachbarter Einheiten zusammen, typischerweise durch Auswahl des Maximums innerhalb eines lokalen Fensters (Max-Pooling) \autocite{botschParametrischeMethoden2023}. Dies reduziert die räumliche Auflösung der Repräsentation und erzeugt eine gewisse Invarianz gegenüber kleinen Verschiebungen im Eingabebild.
 
 Durch das Stapeln mehrerer Faltungs- und Pooling-Stufen entsteht eine hierarchische Merkmalsextraktion: Frühe Schichten erkennen einfache lokale Strukturen wie Kanten, mittlere Schichten kombinieren diese zu komplexeren Motiven, und tiefe Schichten repräsentieren ganze Objektteile. Die resultierende kompakte Repräsentation kann als Eingabe für nachgeschaltete Netzwerkkomponenten dienen. \textcite{mnihHumanlevelControlDeep2015} zeigten erstmals, dass ein CNN in dieser Rolle als Merkmalsextraktor innerhalb eines Reinforcement-Learning-Systems eingesetzt werden kann, indem sie eine Strategie direkt aus hochdimensionalen Bilddaten lernten.
 
 \section{Achsenparallele Begrenzungsboxen}
 \label{sec:aabb}
 
-Eine \NeuerBegriff{achsenparallele Begrenzungsbox} (\Fachbegriff{Axis-Aligned Bounding Box}, AABB) ist das kleinste achsenparallele Quader, das ein gegebenes Objekt vollständig umschließt. Daher wird jede tatsächliche Kollision mit dem Objekt auch als Kollision mit der AABB erkannt. Im Umkehrschluss kann ein Punkt jedoch innerhalb der AABB liegen, ohne das eingeschlossene Objekt zu berühren. Der Approximationsfehler wächst mit der Abweichung der Objektgeometrie von einer quaderförmigen Gestalt; bei konkaven oder stark unregelmäßigen Formen kann die AABB ein erheblich größeres Volumen als das Objekt selbst einnehmen.
+Eine achsenparallele Begrenzungsbox (Axis-Aligned Bounding Box, AABB) ist das kleinste achsenparallele Quader, das ein gegebenes Objekt vollständig umschließt. Daher wird jede tatsächliche Kollision mit dem Objekt auch als Kollision mit der AABB erkannt. Im Umkehrschluss kann ein Punkt jedoch innerhalb der AABB liegen, ohne das eingeschlossene Objekt zu berühren. Der Approximationsfehler wächst mit der Abweichung der Objektgeometrie von einer quaderförmigen Gestalt; bei konkaven oder stark unregelmäßigen Formen kann die AABB ein erheblich größeres Volumen als das Objekt selbst einnehmen.
 
 Für die Kollisionserkennung in Echtzeitsystemen bietet die AABB einen günstigen Kompromiss: Der Abstandstest reduziert sich auf sechs skalare Vergleiche pro Achse und ist damit wesentlich effizienter als Distanzberechnungen auf der tatsächlichen Objektgeometrie. Dem steht die beschriebene konservative Approximation gegenüber, die zu falsch-positiven Kollisionserkennungen führen kann.
