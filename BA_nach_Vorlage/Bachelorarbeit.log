@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  11 JUN 2026 01:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  14 JUN 2026 21:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1924,12 +1924,20 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [40
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 10.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+))
+Overfull \hbox (110.98204pt too wide) in paragraph at lines 9--195
+[][]$\T1/pcr/m/n/12 https : / / github . com / FritzKoerner / autonomous _ landing _ drones _ rl _ bachelorthesis$[][] 
+ []
+
+[40
 
 
 
 
-]
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}]
 chapter without number
 
 Class scrreprt Warning: Redefinition of \@makechapterhead detected.
@@ -1944,14 +1952,11 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 12.0pt on input line 201.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 201.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-) [41
+[41
 
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}] [42] [43] [44] [45] [46] [47] [48] [49] [50] [8]
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [42] [43] [44] [45] [46] [47] [48] [49] [50] [8]
 
 Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              Note: KOMA-Script does use styles for commands like
@@ -1984,42 +1989,42 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/figures/training/Episode_rew_progress_raw.pdf, id=1331, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_progress_raw.pdf, id=1334, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_progress_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_progress_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_progress_raw.pdf  used on input line 8.
 (pdftex.def)             Requested size: 211.68661pt x 157.7245pt.
-<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1332, 264.12274pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1335, 264.12274pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_close_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_close_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_close_raw.pdf  used on input line 10.
 (pdftex.def)             Requested size: 211.68661pt x 162.03394pt.
-<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1333, 278.56572pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1336, 278.56572pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf  used on input line 19.
 (pdftex.def)             Requested size: 211.68661pt x 153.62793pt.
-<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=1334, 275.98607pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=1337, 275.98607pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_crash_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_crash_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_crash_raw.pdf  used on input line 21.
 (pdftex.def)             Requested size: 211.68661pt x 155.06235pt.
-<Bilder/figures/training/Episode_rew_success_raw.pdf, id=1335, 268.76509pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_success_raw.pdf, id=1338, 268.76509pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_success_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_success_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_success_raw.pdf  used on input line 30.
 (pdftex.def)             Requested size: 211.68661pt x 159.23604pt.
-<Bilder/figures/training/Train_mean_episode_length.pdf, id=1336, 277.10126pt x 202.16428pt>
+<Bilder/figures/training/Train_mean_episode_length.pdf, id=1339, 277.10126pt x 202.16428pt>
 File: Bilder/figures/training/Train_mean_episode_length.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Train_mean_episode_length.pdf>
 Package pdftex.def Info: Bilder/figures/training/Train_mean_episode_length.pdf  used on input line 32.
 (pdftex.def)             Requested size: 211.68661pt x 154.4423pt.
-<Bilder/figures/training/Policy_mean_std.pdf, id=1337, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Policy_mean_std.pdf, id=1340, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Policy_mean_std.pdf>
 Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on input line 42.
 (pdftex.def)             Requested size: 211.68661pt x 157.7245pt.
-<Bilder/figures/training/Loss_entropy.pdf, id=1338, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Loss_entropy.pdf, id=1341, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Loss_entropy.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Loss_entropy.pdf>
 Package pdftex.def Info: Bilder/figures/training/Loss_entropy.pdf  used on input line 44.
@@ -2029,12 +2034,12 @@ Package pdftex.def Info: Bilder/figures/training/Loss_entropy.pdf  used on input
 
 
  <./Bilder/figures/training/Episode_rew_progress_raw.pdf> <./Bilder/figures/training/Episode_rew_close_raw.pdf> <./Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf> <./Bilder/figures/training/Episode_rew_crash_raw.pdf> <./Bilder/figures/training/Episode_rew_success_raw.pdf> <./Bilder/figures/training/Train_mean_episode_length.pdf>]
-<Bilder/figures/training/Loss_surrogate.pdf, id=1423, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Loss_surrogate.pdf, id=1426, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Loss_surrogate.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Loss_surrogate.pdf>
 Package pdftex.def Info: Bilder/figures/training/Loss_surrogate.pdf  used on input line 53.
 (pdftex.def)             Requested size: 211.68661pt x 157.7245pt.
-<Bilder/figures/training/Loss_value.pdf, id=1424, 273.40645pt x 202.16428pt>
+<Bilder/figures/training/Loss_value.pdf, id=1427, 273.40645pt x 202.16428pt>
 File: Bilder/figures/training/Loss_value.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Loss_value.pdf>
 Package pdftex.def Info: Bilder/figures/training/Loss_value.pdf  used on input line 55.
@@ -2051,7 +2056,7 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/seed_analysis/policy_std_seeds.pdf, id=1479, 363.61647pt x 237.21523pt>
+<Bilder/seed_analysis/policy_std_seeds.pdf, id=1482, 363.61647pt x 237.21523pt>
 File: Bilder/seed_analysis/policy_std_seeds.pdf Graphic file (type pdf)
 <use Bilder/seed_analysis/policy_std_seeds.pdf>
 Package pdftex.def Info: Bilder/seed_analysis/policy_std_seeds.pdf  used on input line 67.
@@ -2151,7 +2156,22 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [18
+[18
+
+
+]
+
+Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
+(scrreprt)              Note: KOMA-Script does use styles for commands like
+(scrreprt)              \chapter. Currently it internally still provides and
+(scrreprt)              uses \@makeschapterhead, but a completely different
+(scrreprt)              definition compared to the standard classes.
+(scrreprt)              So redefining or using internal \@makeschapterhead
+(scrreprt)              by users or package authors may already break
+(scrreprt)              KOMA-Script and will not work with a coming version,
+(scrreprt)              that will remove this deprecated code.
+
+) [19
 
 
 ]
@@ -2170,7 +2190,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [19
+) [20
 
 
 
@@ -2191,7 +2211,7 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [20
+) [21
 
 
 
@@ -2213,18 +2233,18 @@ Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36398 strings out of 474222
- 682614 string characters out of 5748733
- 1963975 words of memory out of 5000000
- 57669 multiletter control sequences out of 15000+600000
+ 36402 strings out of 474222
+ 682660 string characters out of 5748733
+ 1962975 words of memory out of 5000000
+ 57670 multiletter control sequences out of 15000+600000
  729456 words of font info for 326 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,20n,125p,10969b,2542s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (71 pages, 2021568 bytes).
+Output written on Bachelorarbeit.pdf (72 pages, 2023714 bytes).
 PDF statistics:
- 1903 PDF objects out of 2073 (max. 8388607)
- 1623 compressed objects within 17 object streams
- 277 named destinations out of 1000 (max. 500000)
+ 1913 PDF objects out of 2073 (max. 8388607)
+ 1632 compressed objects within 17 object streams
+ 280 named destinations out of 1000 (max. 500000)
  717 words of extra memory for PDF output out of 10000 (max. 10000000)
 

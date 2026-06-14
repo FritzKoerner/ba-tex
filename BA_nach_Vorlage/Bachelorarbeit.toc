@@ -69,5 +69,5 @@
 \contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{39}{section.112}%
 \contentsline {chapter}{\nonumberline Literatur}{41}{chapter*.114}%
 \contentsline {chapter}{Anhang}{IX}{chapter*.115}%
-\contentsline {chapter}{\nonumberline Offenlegung der Benutzung von generativer KI}{XIX}{chapter*.144}%
-\contentsline {chapter}{\nonumberline Erklärung}{XX}{chapter*.146}%
+\contentsline {chapter}{\nonumberline Offenlegung der Benutzung von generativer KI}{XX}{chapter*.146}%
+\contentsline {chapter}{\nonumberline Erklärung}{XXI}{chapter*.148}%
