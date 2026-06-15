@@ -13,9 +13,9 @@
 \contentsline {subsection}{\numberline {2.1.1}Markov Decision Process}{4}{subsection.15}%
 \contentsline {section}{\numberline {2.2}Strategieoptimierung}{5}{section.18}%
 \contentsline {subsection}{\numberline {2.2.1}Policy-Gradient-Methoden}{5}{subsection.19}%
-\contentsline {subsection}{\numberline {2.2.2}Proximal Policy Optimization}{6}{subsection.22}%
-\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{7}{section.26}%
-\contentsline {section}{\numberline {2.4}Achsenparallele Begrenzungsboxen}{8}{section.27}%
+\contentsline {subsection}{\numberline {2.2.2}Proximal Policy Optimization}{5}{subsection.22}%
+\contentsline {section}{\numberline {2.3}Convolutional Neural Networks}{6}{section.26}%
+\contentsline {section}{\numberline {2.4}Achsenparallele Begrenzungsboxen}{7}{section.27}%
 \contentsline {chapter}{\numberline {3}Stand der Forschung}{9}{chapter.28}%
 \contentsline {section}{\numberline {3.1}Autonomes Landen von Drohnen}{9}{section.29}%
 \contentsline {section}{\numberline {3.2}Tiefenbildbasierte Hindernisvermeidung}{11}{section.30}%
@@ -23,7 +23,7 @@
 \contentsline {chapter}{\numberline {4}Methodik}{16}{chapter.33}%
 \contentsline {section}{\numberline {4.1}Systemüberblick}{16}{section.34}%
 \contentsline {section}{\numberline {4.2}Formulierung als Markov-Entscheidungsprozess}{16}{section.36}%
-\contentsline {subsection}{\numberline {4.2.1}Zustandsraum}{17}{subsection.37}%
+\contentsline {subsection}{\numberline {4.2.1}Zustandsraum}{16}{subsection.37}%
 \contentsline {subsection}{\numberline {4.2.2}Aktionsraum}{17}{subsection.42}%
 \contentsline {subsection}{\numberline {4.2.3}Übergangsmodell}{18}{subsection.45}%
 \contentsline {subsection}{\numberline {4.2.4}Belohnungsfunktion}{18}{subsection.46}%
@@ -32,43 +32,43 @@
 \contentsline {section}{\numberline {4.4}Algorithmus}{20}{section.54}%
 \contentsline {subsection}{\numberline {4.4.1}Proximal Policy Optimization}{20}{subsection.55}%
 \contentsline {subsection}{\numberline {4.4.2}Aktionsverteilung und Tanh-Squashing}{20}{subsection.56}%
-\contentsline {subsection}{\numberline {4.4.3}Hyperparameter}{21}{subsection.59}%
+\contentsline {subsection}{\numberline {4.4.3}Hyperparameter}{20}{subsection.59}%
 \contentsline {section}{\numberline {4.5}Trainingsumgebung}{21}{section.61}%
 \contentsline {subsection}{\numberline {4.5.1}Physiksimulator}{21}{subsection.62}%
 \contentsline {subsection}{\numberline {4.5.2}Drohnenmodell}{21}{subsection.63}%
-\contentsline {subsection}{\numberline {4.5.3}Korridorgeometrie}{22}{subsection.65}%
+\contentsline {subsection}{\numberline {4.5.3}Korridorgeometrie}{21}{subsection.65}%
 \contentsline {subsection}{\numberline {4.5.4}Hindernisse}{22}{subsection.67}%
 \contentsline {section}{\numberline {4.6}Kaskadierender PID-Regler}{23}{section.69}%
 \contentsline {section}{\numberline {4.7}Trainingsprozess}{23}{section.70}%
-\contentsline {section}{\numberline {4.8}Evaluation}{24}{section.72}%
+\contentsline {section}{\numberline {4.8}Evaluation}{23}{section.72}%
 \contentsline {subsection}{\numberline {4.8.1}Evaluationsmetriken}{24}{subsection.73}%
 \contentsline {subsection}{\numberline {4.8.2}Versuchsreihe~1: Generalisierung auf unbekannte Hindernisformen}{24}{subsection.75}%
-\contentsline {subsection}{\numberline {4.8.3}Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{25}{subsection.76}%
-\contentsline {chapter}{\numberline {5}Ergebnisse}{27}{chapter.79}%
-\contentsline {section}{\numberline {5.1}Trainingsverhalten}{27}{section.80}%
-\contentsline {section}{\numberline {5.2}Phase 1: Korridornavigation}{28}{section.84}%
-\contentsline {subsection}{\numberline {5.2.1}Nachuntersuchung: Oberflächenbasierte Kollisionserkennung}{29}{subsection.87}%
-\contentsline {section}{\numberline {5.3}Phase 2: Weinberg-Transfer}{30}{section.89}%
-\contentsline {subsection}{\numberline {5.3.1}Sensitivitätsanalyse des Erfolgskriteriums}{31}{subsection.91}%
-\contentsline {section}{\numberline {5.4}Vergleich RL vs.\ RRT-Connect}{31}{section.93}%
-\contentsline {chapter}{\numberline {6}Diskussion}{32}{chapter.96}%
-\contentsline {section}{\numberline {6.1}Leistungsfähigkeit in der Trainingsumgebung}{32}{section.97}%
-\contentsline {subsection}{\numberline {6.1.1}Trainingsverhalten und Konvergenz}{32}{subsection.98}%
-\contentsline {subsection}{\numberline {6.1.2}Dominante Fehlerart und Flugverhalten}{33}{subsection.99}%
-\contentsline {section}{\numberline {6.2}Transferleistung auf den Weinberg}{33}{section.100}%
-\contentsline {subsection}{\numberline {6.2.1}Leistungsabfall und Verschiebung der Fehlerarten}{33}{subsection.101}%
-\contentsline {subsection}{\numberline {6.2.2}Einordnung als Sim-to-Sim Transfer}{34}{subsection.102}%
-\contentsline {subsection}{\numberline {6.2.3}Perceptual Aliasing als Erklärung für die Terrain-Kollisionen}{34}{subsection.103}%
-\contentsline {section}{\numberline {6.3}Leistungslücke zum Pfadplaner}{35}{section.105}%
-\contentsline {section}{\numberline {6.4}Limitationen}{36}{section.106}%
-\contentsline {subsection}{\numberline {6.4.1}Trainingssetup}{36}{subsection.107}%
-\contentsline {subsection}{\numberline {6.4.2}Sensorik und Architektur}{36}{subsection.108}%
-\contentsline {subsection}{\numberline {6.4.3}Umgebungsdiversität}{36}{subsection.109}%
-\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{38}{chapter.110}%
-\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{38}{section.111}%
-\contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{39}{section.112}%
-\contentsline {chapter}{Zusammenfassung}{40}{chapter*.113}%
-\contentsline {chapter}{\nonumberline Literatur}{41}{chapter*.114}%
+\contentsline {subsection}{\numberline {4.8.3}Versuchsreihe~2: Transfer in eine realistische Agrarumgebung}{24}{subsection.76}%
+\contentsline {chapter}{\numberline {5}Ergebnisse}{26}{chapter.79}%
+\contentsline {section}{\numberline {5.1}Trainingsverhalten}{26}{section.80}%
+\contentsline {section}{\numberline {5.2}Phase 1: Korridornavigation}{27}{section.84}%
+\contentsline {subsection}{\numberline {5.2.1}Nachuntersuchung: Oberflächenbasierte Kollisionserkennung}{28}{subsection.87}%
+\contentsline {section}{\numberline {5.3}Phase 2: Weinberg-Transfer}{29}{section.89}%
+\contentsline {subsection}{\numberline {5.3.1}Sensitivitätsanalyse des Erfolgskriteriums}{30}{subsection.91}%
+\contentsline {section}{\numberline {5.4}Vergleich RL vs.\ RRT-Connect}{30}{section.93}%
+\contentsline {chapter}{\numberline {6}Diskussion}{31}{chapter.96}%
+\contentsline {section}{\numberline {6.1}Leistungsfähigkeit in der Trainingsumgebung}{31}{section.97}%
+\contentsline {subsection}{\numberline {6.1.1}Trainingsverhalten und Konvergenz}{31}{subsection.98}%
+\contentsline {subsection}{\numberline {6.1.2}Dominante Fehlerart und Flugverhalten}{32}{subsection.99}%
+\contentsline {section}{\numberline {6.2}Transferleistung auf den Weinberg}{32}{section.100}%
+\contentsline {subsection}{\numberline {6.2.1}Leistungsabfall und Verschiebung der Fehlerarten}{32}{subsection.101}%
+\contentsline {subsection}{\numberline {6.2.2}Einordnung als Sim-to-Sim Transfer}{33}{subsection.102}%
+\contentsline {subsection}{\numberline {6.2.3}Perceptual Aliasing als Erklärung für die Terrain-Kollisionen}{33}{subsection.103}%
+\contentsline {section}{\numberline {6.3}Leistungslücke zum Pfadplaner}{34}{section.105}%
+\contentsline {section}{\numberline {6.4}Limitationen}{35}{section.106}%
+\contentsline {subsection}{\numberline {6.4.1}Trainingssetup}{35}{subsection.107}%
+\contentsline {subsection}{\numberline {6.4.2}Sensorik und Architektur}{35}{subsection.108}%
+\contentsline {subsection}{\numberline {6.4.3}Umgebungsdiversität}{35}{subsection.109}%
+\contentsline {chapter}{\numberline {7}Fazit und Ausblick}{37}{chapter.110}%
+\contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{37}{section.111}%
+\contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{38}{section.112}%
+\contentsline {chapter}{Zusammenfassung}{39}{chapter*.113}%
+\contentsline {chapter}{\nonumberline Literatur}{40}{chapter*.114}%
 \contentsline {chapter}{Anhang}{IX}{chapter*.115}%
 \contentsline {chapter}{\nonumberline Offenlegung der Benutzung von generativer KI}{XX}{chapter*.146}%
 \contentsline {chapter}{\nonumberline Erklärung}{XXI}{chapter*.148}%

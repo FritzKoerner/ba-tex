@@ -9,11 +9,11 @@
 \contentsline {table}{\numberline {4.3}{\ignorespaces Hyperparameter des PPO-Algorithmus.}}{21}{table.caption.60}%
 \contentsline {table}{\numberline {4.4}{\ignorespaces Konfiguration des Trainingsprozesses.}}{24}{table.caption.71}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Konvergenzergebnis der 6~Trainingsseeds}}{28}{table.caption.82}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Checkpoint-Selektion}}{28}{table.caption.83}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Vergleich AABB- und oberflächenbasierte Kollisionserkennung}}{30}{table.caption.88}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Sensitivitätsanalyse des Erfolgsradius in Phase~2}}{31}{table.caption.92}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Vergleich RL-Agent und RRT-Connect}}{31}{table.caption.95}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Konvergenzergebnis der 6~Trainingsseeds}}{27}{table.caption.82}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Checkpoint-Selektion}}{27}{table.caption.83}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Vergleich AABB- und oberflächenbasierte Kollisionserkennung}}{29}{table.caption.88}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Sensitivitätsanalyse des Erfolgsradius in Phase~2}}{30}{table.caption.92}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Vergleich RL-Agent und RRT-Connect}}{30}{table.caption.95}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  15 JUN 2026 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.24)  15 JUN 2026 14:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1669,22 +1669,22 @@ pdfTeX warning: pdflatex (file ./Bilder/mdp_agent_environment.pdf): PDF inclusio
 <Bilder/mdp_agent_environment.pdf, id=340, 398.99063pt x 248.42813pt>
 File: Bilder/mdp_agent_environment.pdf Graphic file (type pdf)
 <use Bilder/mdp_agent_environment.pdf>
-Package pdftex.def Info: Bilder/mdp_agent_environment.pdf  used on input line 18.
+Package pdftex.def Info: Bilder/mdp_agent_environment.pdf  used on input line 15.
 (pdftex.def)             Requested size: 286.65883pt x 178.49283pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.95pt on input line 19.
+(Font)              scaled to size 10.95pt on input line 16.
 [4
 
 
 
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./Bilder/mdp_agent_environment.pdf>] [5]
-<Bilder/ppo_clipping.pdf, id=396, 368.57701pt x 151.767pt>
+<Bilder/ppo_clipping.pdf, id=398, 368.57701pt x 151.767pt>
 File: Bilder/ppo_clipping.pdf Graphic file (type pdf)
 <use Bilder/ppo_clipping.pdf>
-Package pdftex.def Info: Bilder/ppo_clipping.pdf  used on input line 100.
+Package pdftex.def Info: Bilder/ppo_clipping.pdf  used on input line 97.
 (pdftex.def)             Requested size: 374.86775pt x 154.3626pt.
- [6 <./Bilder/ppo_clipping.pdf>] [7]) [8]
+ [6 <./Bilder/ppo_clipping.pdf>]) [7] [8]
 \openout2 = `"Inhalt/Stand der Forschung.aux"'.
 
  (./Inhalt/Stand der Forschung.tex
@@ -1745,7 +1745,7 @@ pdfTeX warning: pdflatex (file ./Bilder/pipeline.pdf): PDF inclusion: found PDF 
 <Bilder/pipeline.pdf, id=587, 528.97626pt x 122.4575pt>
 File: Bilder/pipeline.pdf Graphic file (type pdf)
 <use Bilder/pipeline.pdf>
-Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 36.
+Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 29.
 (pdftex.def)             Requested size: 441.01773pt x 102.09561pt.
 [16
 
@@ -1754,21 +1754,21 @@ Package pdftex.def Info: Bilder/pipeline.pdf  used on input line 36.
 
  <./Bilder/pipeline.pdf>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 79.
+(Font)              scaled to size 10.95pt on input line 72.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 101.
+(Font)              scaled to size 8.8pt on input line 94.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 101.
- [17] [18] [19]
+(Font)              scaled to size 6.6pt on input line 94.
+ [17] [18]
 
 pdfTeX warning: pdflatex (file ./Bilder/architecture.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Bilder/architecture.pdf, id=659, 526.96875pt x 150.5625pt>
+<Bilder/architecture.pdf, id=655, 526.96875pt x 150.5625pt>
 File: Bilder/architecture.pdf Graphic file (type pdf)
 <use Bilder/architecture.pdf>
-Package pdftex.def Info: Bilder/architecture.pdf  used on input line 251.
+Package pdftex.def Info: Bilder/architecture.pdf  used on input line 244.
 (pdftex.def)             Requested size: 441.01773pt x 126.01215pt.
-
-Overfull \hbox (18.67952pt too wide) in paragraph at lines 272--278
+[19]
+Overfull \hbox (18.67952pt too wide) in paragraph at lines 265--271
 []\LMS/ntxsy/m/n/12 ¹\OML/ntxmi/m/it/12 u[]; \LMS/ntxsy/m/n/12 ^^@\OT1/minntx/m/n/12 1\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 1\LMS/ntxsy/m/n/12 º$ \T1/ntxtlf/m/n/12 wür-de die Ak-ti-ons-wer-te kor-rekt be-gren-zen, die zu-ge-hö-ri-ge Log-Wahrscheinlichkeit
  []
 
@@ -1776,37 +1776,36 @@ Overfull \hbox (18.67952pt too wide) in paragraph at lines 272--278
 <Bilder/drone_model.pdf, id=768, 302.5704pt x 208.6194pt>
 File: Bilder/drone_model.pdf Graphic file (type pdf)
 <use Bilder/drone_model.pdf>
-Package pdftex.def Info: Bilder/drone_model.pdf  used on input line 354.
+Package pdftex.def Info: Bilder/drone_model.pdf  used on input line 347.
 (pdftex.def)             Requested size: 99.23167pt x 68.41805pt.
- [21]
-<Bilder/corridor_geometry.pdf, id=778, 269.5671pt x 341.39345pt>
+<Bilder/corridor_geometry.pdf, id=770, 269.5671pt x 341.39345pt>
 File: Bilder/corridor_geometry.pdf Graphic file (type pdf)
 <use Bilder/corridor_geometry.pdf>
-Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 376.
+Package pdftex.def Info: Bilder/corridor_geometry.pdf  used on input line 369.
 (pdftex.def)             Requested size: 264.61333pt x 335.12068pt.
-
-Overfull \hbox (20.33344pt too wide) in paragraph at lines 385--404
+ [21 <./Bilder/drone_model.pdf>]
+Overfull \hbox (20.33344pt too wide) in paragraph at lines 378--397
 \T1/ntxtlf/m/n/12 Als Hin-der-nis-se die-nen sechs 3D-Objekte aus dem \T1/ntxtlf/m/it/12 Goo-gle Scan-ned Ob-jects \T1/ntxtlf/m/n/12 Da-ten-satz (GSO) [[][]53[][]],
  []
 
-[22 <./Bilder/drone_model.pdf> <./Bilder/corridor_geometry.pdf>]
-<Bilder/corridor_screenshot.pdf, id=820, 258.9675pt x 208.1376pt>
+<Bilder/corridor_screenshot.pdf, id=784, 258.9675pt x 208.1376pt>
 File: Bilder/corridor_screenshot.pdf Graphic file (type pdf)
 <use Bilder/corridor_screenshot.pdf>
-Package pdftex.def Info: Bilder/corridor_screenshot.pdf  used on input line 407.
+Package pdftex.def Info: Bilder/corridor_screenshot.pdf  used on input line 400.
 (pdftex.def)             Requested size: 242.5611pt x 194.96019pt.
- [23 <./Bilder/corridor_screenshot.pdf>] [24]
-<Bilder/vineyard_mesh.pdf, id=841, 391.70338pt x 144.29909pt>
+[22 <./Bilder/corridor_geometry.pdf>] [23 <./Bilder/corridor_screenshot.pdf>]
+<Bilder/vineyard_mesh.pdf, id=835, 391.70338pt x 144.29909pt>
 File: Bilder/vineyard_mesh.pdf Graphic file (type pdf)
 <use Bilder/vineyard_mesh.pdf>
-Package pdftex.def Info: Bilder/vineyard_mesh.pdf  used on input line 514.
+Package pdftex.def Info: Bilder/vineyard_mesh.pdf  used on input line 507.
 (pdftex.def)             Requested size: 441.01773pt x 162.47037pt.
+ [24]
 <Bilder/vineyard_targets.pdf, id=842, 454.13264pt x 426.39299pt>
 File: Bilder/vineyard_targets.pdf Graphic file (type pdf)
 <use Bilder/vineyard_targets.pdf>
-Package pdftex.def Info: Bilder/vineyard_targets.pdf  used on input line 524.
+Package pdftex.def Info: Bilder/vineyard_targets.pdf  used on input line 517.
 (pdftex.def)             Requested size: 330.76329pt x 310.56161pt.
-) [25 <./Bilder/vineyard_mesh.pdf>] [26 <./Bilder/vineyard_targets.pdf>]
+) [25 <./Bilder/vineyard_mesh.pdf> <./Bilder/vineyard_targets.pdf>]
 \openout2 = `Inhalt/Ergebnisse.aux'.
 
  (./Inhalt/Ergebnisse.tex
@@ -1822,48 +1821,48 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/seed_analysis/reward_seeds_overview.pdf, id=881, 368.2588pt x 237.21523pt>
+<Bilder/seed_analysis/reward_seeds_overview.pdf, id=877, 368.2588pt x 237.21523pt>
 File: Bilder/seed_analysis/reward_seeds_overview.pdf Graphic file (type pdf)
 <use Bilder/seed_analysis/reward_seeds_overview.pdf>
 Package pdftex.def Info: Bilder/seed_analysis/reward_seeds_overview.pdf  used on input line 15.
 (pdftex.def)             Requested size: 211.68661pt x 136.3615pt.
-<Bilder/seed_analysis/reward_mean_ci_truncated.pdf, id=882, 368.2588pt x 237.21523pt>
+<Bilder/seed_analysis/reward_mean_ci_truncated.pdf, id=878, 368.2588pt x 237.21523pt>
 File: Bilder/seed_analysis/reward_mean_ci_truncated.pdf Graphic file (type pdf)
 <use Bilder/seed_analysis/reward_mean_ci_truncated.pdf>
 Package pdftex.def Info: Bilder/seed_analysis/reward_mean_ci_truncated.pdf  used on input line 17.
 (pdftex.def)             Requested size: 211.68661pt x 136.3615pt.
-[27
+[26
 
 
 
 
  <./Bilder/seed_analysis/reward_seeds_overview.pdf> <./Bilder/seed_analysis/reward_mean_ci_truncated.pdf>]
-<Bilder/eval/phase1_outcomes.pdf, id=934, 261.62743pt x 198.51164pt>
+<Bilder/eval/phase1_outcomes.pdf, id=930, 261.62743pt x 198.51164pt>
 File: Bilder/eval/phase1_outcomes.pdf Graphic file (type pdf)
 <use Bilder/eval/phase1_outcomes.pdf>
 Package pdftex.def Info: Bilder/eval/phase1_outcomes.pdf  used on input line 112.
 (pdftex.def)             Requested size: 286.65883pt x 217.5032pt.
- [28]
-<Bilder/trajectories/trajectory_success.pdf, id=941, 277.51682pt x 221.14621pt>
+ [27]
+<Bilder/trajectories/trajectory_success.pdf, id=937, 277.51682pt x 221.14621pt>
 File: Bilder/trajectories/trajectory_success.pdf Graphic file (type pdf)
 <use Bilder/trajectories/trajectory_success.pdf>
 Package pdftex.def Info: Bilder/trajectories/trajectory_success.pdf  used on input line 127.
 (pdftex.def)             Requested size: 211.68661pt x 168.687pt.
-<Bilder/trajectories/trajectory_crash.pdf, id=942, 277.51682pt x 221.14621pt>
+<Bilder/trajectories/trajectory_crash.pdf, id=938, 277.51682pt x 221.14621pt>
 File: Bilder/trajectories/trajectory_crash.pdf Graphic file (type pdf)
 <use Bilder/trajectories/trajectory_crash.pdf>
 Package pdftex.def Info: Bilder/trajectories/trajectory_crash.pdf  used on input line 129.
 (pdftex.def)             Requested size: 211.68661pt x 168.687pt.
- [29 <./Bilder/eval/phase1_outcomes.pdf> <./Bilder/trajectories/trajectory_success.pdf> <./Bilder/trajectories/trajectory_crash.pdf>]
-<Bilder/eval/phase2_outcomes.pdf, id=967, 261.62743pt x 198.51164pt>
+ [28 <./Bilder/eval/phase1_outcomes.pdf> <./Bilder/trajectories/trajectory_success.pdf> <./Bilder/trajectories/trajectory_crash.pdf>]
+<Bilder/eval/phase2_outcomes.pdf, id=961, 261.62743pt x 198.51164pt>
 File: Bilder/eval/phase2_outcomes.pdf Graphic file (type pdf)
 <use Bilder/eval/phase2_outcomes.pdf>
 Package pdftex.def Info: Bilder/eval/phase2_outcomes.pdf  used on input line 187.
 (pdftex.def)             Requested size: 286.65883pt x 217.5032pt.
- [30 <./Bilder/eval/phase2_outcomes.pdf>]
+ [29 <./Bilder/eval/phase2_outcomes.pdf>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 10.0pt on input line 254.
-) [31]
+) [30]
 \openout2 = `Inhalt/Diskussion.aux'.
 
  (./Inhalt/Diskussion.tex
@@ -1879,18 +1878,18 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-[32
+[31
 
 
 
 
-] [33]
-<Bilder/perceptual_aliasing/depth_comparison.pdf, id=1024, 300.79475pt x 271.16005pt>
+] [32]
+<Bilder/perceptual_aliasing/depth_comparison.pdf, id=1020, 300.79475pt x 271.16005pt>
 File: Bilder/perceptual_aliasing/depth_comparison.pdf Graphic file (type pdf)
 <use Bilder/perceptual_aliasing/depth_comparison.pdf>
-Package pdftex.def Info: Bilder/perceptual_aliasing/depth_comparison.pdf  used on input line 136.
+Package pdftex.def Info: Bilder/perceptual_aliasing/depth_comparison.pdf  used on input line 135.
 (pdftex.def)             Requested size: 374.86775pt x 337.94792pt.
- [34] [35 <./Bilder/perceptual_aliasing/depth_comparison.pdf>]) [36] [37]
+ [33] [34 <./Bilder/perceptual_aliasing/depth_comparison.pdf>]) [35] [36]
 \openout2 = `"Inhalt/Fazit und Ausblick.aux"'.
 
  (./Inhalt/Fazit und Ausblick.tex
@@ -1906,12 +1905,12 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-) [38
+) [37
 
 
 
 
-] [39]
+] [38]
 \openout2 = `Inhalt/Abstract.aux'.
 
  (./Inhalt/Abstract.tex
@@ -1929,7 +1928,7 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 11.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)) [40
+)) [39
 
 
 
@@ -1949,11 +1948,11 @@ Class scrreprt Warning: Redefinition of \@makechapterhead detected.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sc' will be
 (Font)              scaled to size 12.0pt on input line 201.
-[41
+[40
 
 
 
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [42] [43] [44] [45] [46] [47] [48] [49] [50] [8]
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf-pc.enc}] [41] [42] [43] [44] [45] [46] [47] [48] [49] [8]
 
 Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              Note: KOMA-Script does use styles for commands like
@@ -1986,42 +1985,42 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/figures/training/Episode_rew_progress_raw.pdf, id=1336, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_progress_raw.pdf, id=1332, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_progress_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_progress_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_progress_raw.pdf  used on input line 8.
 (pdftex.def)             Requested size: 211.68661pt x 157.7245pt.
-<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1337, 264.12274pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_close_raw.pdf, id=1333, 264.12274pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_close_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_close_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_close_raw.pdf  used on input line 10.
 (pdftex.def)             Requested size: 211.68661pt x 162.03394pt.
-<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1338, 278.56572pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf, id=1334, 278.56572pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf  used on input line 19.
 (pdftex.def)             Requested size: 211.68661pt x 153.62793pt.
-<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=1339, 275.98607pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_crash_raw.pdf, id=1335, 275.98607pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_crash_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_crash_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_crash_raw.pdf  used on input line 21.
 (pdftex.def)             Requested size: 211.68661pt x 155.06235pt.
-<Bilder/figures/training/Episode_rew_success_raw.pdf, id=1340, 268.76509pt x 202.16428pt>
+<Bilder/figures/training/Episode_rew_success_raw.pdf, id=1336, 268.76509pt x 202.16428pt>
 File: Bilder/figures/training/Episode_rew_success_raw.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Episode_rew_success_raw.pdf>
 Package pdftex.def Info: Bilder/figures/training/Episode_rew_success_raw.pdf  used on input line 30.
 (pdftex.def)             Requested size: 211.68661pt x 159.23604pt.
-<Bilder/figures/training/Train_mean_episode_length.pdf, id=1341, 277.10126pt x 202.16428pt>
+<Bilder/figures/training/Train_mean_episode_length.pdf, id=1337, 277.10126pt x 202.16428pt>
 File: Bilder/figures/training/Train_mean_episode_length.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Train_mean_episode_length.pdf>
 Package pdftex.def Info: Bilder/figures/training/Train_mean_episode_length.pdf  used on input line 32.
 (pdftex.def)             Requested size: 211.68661pt x 154.4423pt.
-<Bilder/figures/training/Policy_mean_std.pdf, id=1342, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Policy_mean_std.pdf, id=1338, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Policy_mean_std.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Policy_mean_std.pdf>
 Package pdftex.def Info: Bilder/figures/training/Policy_mean_std.pdf  used on input line 42.
 (pdftex.def)             Requested size: 211.68661pt x 157.7245pt.
-<Bilder/figures/training/Loss_entropy.pdf, id=1343, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Loss_entropy.pdf, id=1339, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Loss_entropy.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Loss_entropy.pdf>
 Package pdftex.def Info: Bilder/figures/training/Loss_entropy.pdf  used on input line 44.
@@ -2031,12 +2030,12 @@ Package pdftex.def Info: Bilder/figures/training/Loss_entropy.pdf  used on input
 
 
  <./Bilder/figures/training/Episode_rew_progress_raw.pdf> <./Bilder/figures/training/Episode_rew_close_raw.pdf> <./Bilder/figures/training/Episode_rew_obstacle_proximity_raw.pdf> <./Bilder/figures/training/Episode_rew_crash_raw.pdf> <./Bilder/figures/training/Episode_rew_success_raw.pdf> <./Bilder/figures/training/Train_mean_episode_length.pdf>]
-<Bilder/figures/training/Loss_surrogate.pdf, id=1428, 271.34372pt x 202.16428pt>
+<Bilder/figures/training/Loss_surrogate.pdf, id=1423, 271.34372pt x 202.16428pt>
 File: Bilder/figures/training/Loss_surrogate.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Loss_surrogate.pdf>
 Package pdftex.def Info: Bilder/figures/training/Loss_surrogate.pdf  used on input line 53.
 (pdftex.def)             Requested size: 211.68661pt x 157.7245pt.
-<Bilder/figures/training/Loss_value.pdf, id=1429, 273.40645pt x 202.16428pt>
+<Bilder/figures/training/Loss_value.pdf, id=1424, 273.40645pt x 202.16428pt>
 File: Bilder/figures/training/Loss_value.pdf Graphic file (type pdf)
 <use Bilder/figures/training/Loss_value.pdf>
 Package pdftex.def Info: Bilder/figures/training/Loss_value.pdf  used on input line 55.
@@ -2053,7 +2052,7 @@ Class scrreprt Warning: Redefinition of \@makeschapterhead detected.
 (scrreprt)              KOMA-Script and will not work with a coming version,
 (scrreprt)              that will remove this deprecated code.
 
-<Bilder/seed_analysis/policy_std_seeds.pdf, id=1484, 363.61647pt x 237.21523pt>
+<Bilder/seed_analysis/policy_std_seeds.pdf, id=1480, 363.61647pt x 237.21523pt>
 File: Bilder/seed_analysis/policy_std_seeds.pdf Graphic file (type pdf)
 <use Bilder/seed_analysis/policy_std_seeds.pdf>
 Package pdftex.def Info: Bilder/seed_analysis/policy_std_seeds.pdf  used on input line 67.
@@ -2230,18 +2229,18 @@ Package logreq Info: Writing requests to 'Bachelorarbeit.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36427 strings out of 474222
- 683232 string characters out of 5748733
- 1964975 words of memory out of 5000000
+ 36426 strings out of 474222
+ 683225 string characters out of 5748733
+ 1963975 words of memory out of 5000000
  57691 multiletter control sequences out of 15000+600000
  729456 words of font info for 326 fonts, out of 8000000 for 9000
  1146 hyphenation exceptions out of 8191
  108i,20n,125p,10969b,2542s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Bold.pfb></usr/share/texlive/texmf-dist/fonts/type1/gnome/cantarell/Cantarell-Regular.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txexs.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsym.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmb.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmbi.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on Bachelorarbeit.pdf (72 pages, 2023949 bytes).
+Output written on Bachelorarbeit.pdf (71 pages, 2022579 bytes).
 PDF statistics:
- 1918 PDF objects out of 2073 (max. 8388607)
- 1637 compressed objects within 17 object streams
- 280 named destinations out of 1000 (max. 500000)
+ 1914 PDF objects out of 2073 (max. 8388607)
+ 1634 compressed objects within 17 object streams
+ 279 named destinations out of 1000 (max. 500000)
  725 words of extra memory for PDF output out of 10000 (max. 10000000)
 

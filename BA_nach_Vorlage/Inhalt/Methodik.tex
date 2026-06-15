@@ -1,13 +1,6 @@
 \chapter{Methodik}
 \label{cha:Methodik}
 
-Dieses Kapitel beschreibt das entwickelte System zur autonomen Drohnenlandung
-mit Hindernisvermeidung. Ein RL-Agent trifft Navigationsentscheidungen auf
-hoher Abstraktionsebene, während ein kaskadierender PID-Regler diese in
-Motorkommandos umsetzt. Training und Evaluation finden vollständig in
-Simulation statt. Ein \textit{Sim-to-Real}-Transfer liegt außerhalb des Rahmens
-dieser Arbeit.
-
 \section{Systemüberblick}
 \label{sec:meth_ueberblick}
 
@@ -144,8 +137,8 @@ Die Belohnungsfunktion kombiniert dichte Signale, die den Fortschritt
 zur Zielerreichung messen, mit spärlichen terminalen Signalen, die das
 eigentliche Ziel kodieren. Die Fortschrittskomponente ist dabei als
 potentialbasiertes \textit{Reward Shaping} im Sinne von
-\textcite{ngPolicyInvarianceReward1999} konstruiert ($\Phi(s) = -d(s)$);
-die übrigen dichten Komponenten weichen bewusst davon ab, da in
+\textcite{ngPolicyInvarianceReward1999} konstruiert.
+Die übrigen dichten Komponenten weichen bewusst davon ab, da in
 Vorversuchen eine rein potentialbasierte Belohnungsfunktion zu
 langsamerer Konvergenz führte. Die Belohnungsfunktion
 setzt sich als gewichtete Summe aus fünf Komponenten zusammen\footnote{Das
@@ -363,7 +356,7 @@ simulierte Drohnenmodell.
 Die Trainingsumgebung bildet einen vertikalen Korridor der Ausdehnung
 $5 \times 2 \times 15$\,m ($x \times y \times z$) ab
 (Abbildung~\ref{fig:meth_corridor}). Der Korridor besitzt keine physischen
-Wände; das Verlassen des Begrenzungsrahmens wird als Absturz gewertet.
+Wände: das Verlassen des Begrenzungsrahmens wird als Absturz gewertet.
 Die Drohne wird bei $z = 12$\,m mit zufälliger horizontaler Position
 innerhalb von $\pm 1{,}5$\,m ($x$) bzw.\ $\pm 0{,}5$\,m ($y$)
 initialisiert. Das Landeziel ist fixiert bei
@@ -488,7 +481,7 @@ Erhoben werden: \textbf{Erfolgsrate}, \textbf{Fehlerartenverteilung}
 
 Die erste Versuchsreihe prüft die Generalisierung auf zuvor ungesehene
 Hindernisformen: Die sechs Trainingsobjekte werden durch sechs neue
-GSO-Objekte gleicher Skalierung ersetzt; alle übrigen Parameter bleiben
+GSO-Objekte gleicher Skalierung ersetzt. Alle übrigen Parameter bleiben
 identisch. Als Vergleichsverfahren dient ein RRT-Connect-Pfadplaner mit
 vollständigem Umgebungswissen (wahre Hindernispositionen und -geometrien). Die
 Leistungsdifferenz quantifiziert den Preis eingeschränkter Sensorik, da
