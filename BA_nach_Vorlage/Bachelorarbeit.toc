@@ -67,6 +67,7 @@
 \contentsline {chapter}{\numberline {7}Fazit und Ausblick}{38}{chapter.110}%
 \contentsline {section}{\numberline {7.1}Beantwortung der Forschungsfragen}{38}{section.111}%
 \contentsline {section}{\numberline {7.2}Perspektiven für zukünftige Forschung}{39}{section.112}%
+\contentsline {chapter}{Zusammenfassung}{40}{chapter*.113}%
 \contentsline {chapter}{\nonumberline Literatur}{41}{chapter*.114}%
 \contentsline {chapter}{Anhang}{IX}{chapter*.115}%
 \contentsline {chapter}{\nonumberline Offenlegung der Benutzung von generativer KI}{XX}{chapter*.146}%
